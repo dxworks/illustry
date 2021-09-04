@@ -31,3 +31,8 @@ export function addIllustrationFromOtherSource(projectName: string, illustration
     return Promise.resolve()
         .then(() => { return illustrationLib.addIllustrationFromOtherSource(projectName, illustrationName, illustrationType, tags, illustrationData, next)})
 }
+
+export function getAllIllustriesOfTheSameType(projectName: string, illustrationType: string, next:any) {
+    return Promise.resolve()
+        .then(() => {  return illustrationLib.getAllIllustriesOfTheSameType(projectName,illustrationType,next)})
+}

@@ -17,4 +17,6 @@ router.get('/project/:projectName/illustration/:illustrationName', illustrationM
 router.delete('/project/:projectName/illustration/:illustrationName', illustrationMiddleware.deteleIllustration)
 
 router.post('/project/:projectName/illustration/git',illustrationMiddleware.addIllustrationFromOtherSource)
+
+router.get('/project/:projectName/illustration/type/:illustrationType',illustrationMiddleware.getAllIllustriesOfTheSameType)
 export default router

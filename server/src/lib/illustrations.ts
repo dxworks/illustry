@@ -128,4 +128,14 @@ export const deleteIllustration = (projectName: string, illustrationNameFromReq:
         .catch((err: any) => next(err, null))
 }
 
+export const getAllIllustriesOfTheSameType = (projectName: string, illustrationType: string, next: any ) => {
+    let query = {
+        ProjectName: { $eq: projectName },
+        IllustrationType: { $eq: illustrationType }
+    };
 
+    return IllustrationTable
+        .find(query)
+        .then((doc: any) => { next(null, doc); return doc })
+        .catch((err: any) => next(err, null))
+}

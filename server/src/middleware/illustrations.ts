@@ -68,3 +68,11 @@ export const findOneIllustration = (req: any, res: any, next: any) => {
         helper.returnResponse(res, err, data, next)
     })
  }
+
+ export const getAllIllustriesOfTheSameType = (req:any, res: any, next: any) => {
+    let projectName = req.params.projectName
+    let illustrationType = req.params.illustrationType
+    illustrationApi.getAllIllustriesOfTheSameType(projectName,illustrationType, (err: any, data: any) => {
+        helper.returnResponse(res, err, data, next)
+    })
+ }
