@@ -6,13 +6,15 @@ const router = Router();
 const multer = require('multer')
 const storage = multer.diskStorage({destination: null})
 var upload = multer({storage: storage, limits: { fileSize: 10* 1024 * 1024 } })
-router.post('/project/:id/illustration',upload.single('File'), illustrationMiddleware.addIllustration)
+router.post('/project/:projectName/illustration',upload.single('File'), illustrationMiddleware.addIllustration)
 
-router.put('/project/:prjid/illustration/:id', upload.single('File'), illustrationMiddleware.updateIllustration)
+router.put('/project/:projectName/illustration/:illustrationName', upload.single('File'), illustrationMiddleware.updateIllustration)
 
-router.get('/project/:prjid/illustration', illustrationMiddleware.findAllIllustration)
+router.get('/project/:projectName/illustration', illustrationMiddleware.findAllIllustration)
 
-router.get('/project/:prjid/illustration/:id', illustrationMiddleware.findOneIllustration)
+router.get('/project/:projectName/illustration/:illustrationName', illustrationMiddleware.findOneIllustration)
 
-router.delete('/project/:prjid/illustration/:id', illustrationMiddleware.deteleIllustration)
+router.delete('/project/:projectName/illustration/:illustrationName', illustrationMiddleware.deteleIllustration)
+
+router.post('/project/:projectName/illustration/git',illustrationMiddleware.addIllustrationFromOtherSource)
 export default router

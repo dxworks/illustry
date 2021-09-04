@@ -7,7 +7,7 @@ router.post('/add/git/project', projectMiddleware.createGitProject)
 
 router.get('/projects', projectMiddleware.query)
 
-router.get('/project/:id', projectMiddleware.findOne)
+router.get('/project/:projectName', projectMiddleware.findOne)
  
 
 const multer = require('multer')
@@ -16,9 +16,9 @@ var upload = multer({storage: storage, limits: { fileSize: 10* 1024 * 1024 } })
 router.post('/project', upload.single('File'), projectMiddleware.createIllustryProject)
 
 var uploadEmpty = multer()
-router.put('/project/:id', uploadEmpty.none(),projectMiddleware.updateProject)
+router.put('/project/:projectName', uploadEmpty.none(),projectMiddleware.updateProject)
 
-router.delete('/project/:id', projectMiddleware.deleteProject )
+router.delete('/project/:projectName', projectMiddleware.deleteProject )
 
 
 export default router

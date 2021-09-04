@@ -5,10 +5,11 @@ import { promisify } from 'bluebird';
 import IllustrationTable from "../models/Illustrations"
 import { readFile } from "../utils/reader";
 import { FileProperties } from "../types/fileproperties";
+import { Illustration } from "../types/illustrations.";
 
-export const addIllustration = (projectId: string, file: FileProperties, illustrationName: string,illustrationType:string, next: any) => {
+export const addIllustration = (projectName: string, file: FileProperties, illustrationName: string, illustrationType: string, tags: string, next: any) => {
 
-    let query = { _id: { $eq: projectId } };
+    let query = { ProjectName: { $eq: projectName } };
 
     return promisify(readFile)(file, {})
         .then((projectJson) => {
@@ -22,7 +23,8 @@ export const addIllustration = (projectId: string, file: FileProperties, illustr
                         ProjectName: doc.ProjectName,
                         IllustrationName: illustrationName,
                         IllustrationType: illustrationType,
-                        ProjectId: doc._id
+                        ProjectId: doc._id,
+                        Tags: tags
                     }
 
                     return Promise.resolve(illustrationModel)
@@ -30,24 +32,53 @@ export const addIllustration = (projectId: string, file: FileProperties, illustr
                             let illustrationTable = new IllustrationTable(res)
                             illustrationTable.save((err: any) => {
                                 if (err)
-                                    next(err,null)
+                                    next(err, null)
                             })
                         })
-                        .catch((err: any) => next(err,null))
+                        .catch((err: any) => next(err, null))
                 })
         })
 }
 
-export const updateIllustration = (projectId: string, illustrationId: string, file: FileProperties, illustrationName: string,illustrationType:string, next: any) => {
+export const addIllustrationFromOtherSource = (projectName: string, illustrationName: string, illustrationType: string, tags: string, illustrationData: Illustration, next: any) => {
+    let query = { ProjectName: { $eq: projectName } };
+
+    return ProjectTable.find(query)
+        .cursor()
+        .eachAsync((doc: any) => {
+            if (doc)
+                next(null, { result: 'Illustration created' })
+            let illustrationModel = {
+                IllustrationData: illustrationData,
+                ProjectName: doc.ProjectName,
+                IllustrationName: illustrationName,
+                IllustrationType: illustrationType,
+                ProjectId: doc._id,
+                Tags: tags
+            }
+
+            return Promise.resolve(illustrationModel)
+                .then((res) => {
+                    let illustrationTable = new IllustrationTable(res)
+                    illustrationTable.save((err: any) => {
+                        if (err)
+                            next(err, null)
+                    })
+                })
+                .catch((err: any) => next(err, null))
+        })
+}
+
+export const updateIllustration = (projectName: string, illustrationNameFromReq: string, file: FileProperties, illustrationName: string, tags:string, next: any) => {
 
     let query = {
-        _id: { $eq: illustrationId },
-        ProjectId: { $eq: projectId }
+        ProjectName: { $eq: projectName },
+        IllustrationName: { $eq: illustrationNameFromReq }
     };
-    let update = { IllustrationName: illustrationName }
+    let update = { IllustrationName: illustrationName, Tags: tags }
     return promisify(readFile)(file, {})
         .then((projectJson) => {
-            _.assign(update, { IllustrationData: _.get(projectJson,'IllustrationData') }) 
+            _.assign(update, { IllustrationData: _.get(projectJson, 'IllustrationData') })
             return IllustrationTable
                 .findOneAndUpdate(query, update, { new: true })
                 .select('-_id')
@@ -55,46 +86,46 @@ export const updateIllustration = (projectId: string, illustrationId: string, fi
                     return Promise.resolve(doc)
                         .then((doc) => { next(null, doc) })
                 })
-                .catch((err: any) => next(err,null))
+                .catch((err: any) => next(err, null))
         })
 }
 
-export const findAllIllustration = (projectId: string, next: any) => {
-    let query = { ProjectId: { $eq: projectId } }
+export const findAllIllustration = (projectName: string, next: any) => {
+    let query = { ProjectName: { $eq: projectName } }
 
     return IllustrationTable
         .find(query)
         .then((doc: any) => { next(null, doc); return doc })
-        .catch((err: any) => next(err,null))
+        .catch((err: any) => next(err, null))
 }
 
-export const findOneIllustration = (projectId: string, illustrationId: string, next: any) => {
+export const findOneIllustration = (projectName: string, illustrationNameFromReq: string, next: any) => {
     let query = {
-        _id: { $eq: illustrationId },
-        ProjectId: { $eq: projectId }
+        ProjectName: { $eq: projectName },
+        IllustrationName: { $eq: illustrationNameFromReq }
     };
 
     return IllustrationTable
         .find(query)
         .cursor()
         .eachAsync((doc: any) => { next(null, doc); return doc })
-        .catch((err: any) => next(err,null))
+        .catch((err: any) => next(err, null))
 }
 
-export const deleteIllustration = (projectId: string, illustrationId: string, next: any) => {
+export const deleteIllustration = (projectName: string, illustrationNameFromReq: string, next: any) => {
     let query = {
-        _id: { $eq: illustrationId },
-        ProjectId: { $eq: projectId }
+        ProjectName: { $eq: projectName },
+        IllustrationName: { $eq: illustrationNameFromReq }
     };
 
     return IllustrationTable
-    .deleteOne(query)
-    .then((doc: any) => {
-        return Promise.resolve(doc)
-            .then((doc) => { next(null, { IllustrationId: illustrationId }) })
-            .catch((err: any) => next(err,null))
-    })
-    .catch((err: any) => next(err,null))
+        .deleteOne(query)
+        .then((doc: any) => {
+            return Promise.resolve(doc)
+                .then((doc) => { next(null, { IllustrationId: illustrationNameFromReq }) })
+                .catch((err: any) => next(err, null))
+        })
+        .catch((err: any) => next(err, null))
 }
 
 

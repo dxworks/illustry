@@ -3,57 +3,68 @@ import _ from 'lodash'
 import * as helper from '../utils/helper'
 
  export const addIllustration = (req:any,res:any,next:any) => {
-    let projectId = req.params.id
+    let projectName = req.params.projectName
     let illustrationName = _.get(req, 'body.IllustrationName')
     let filePath = _.get(req, 'file.path')
     let fileType = _.get(req, 'file.mimetype')
     let illustrationType = _.get(req,'body.IllustrationType')
+    let tags = _.get(req,'body.Tags')
     if (_.isNil(filePath)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
     let file = {
         filePath: filePath,
         type: fileType
     }
-    illustrationApi.addIllustration(projectId, file, illustrationName,illustrationType,  (err: any, data: any) => {
+    illustrationApi.addIllustration(projectName, file, illustrationName,illustrationType,tags,  (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
  }
 
+ export const addIllustrationFromOtherSource = (req:any, res:any, next:any) => {
+     let projectName = req.params.projectName
+     let illustrationName =  _.get(req, 'body.IllustrationName')
+     let illustrationType = _.get(req,'body.IllustrationType')
+     let tags = _.get(req,'body.Tags')
+     let illustrationData = _.get(req, 'body.IllustrationData')
+     illustrationApi.addIllustrationFromOtherSource(projectName,illustrationName,illustrationType,tags,illustrationData,(err: any, data: any) => {
+        helper.returnResponse(res, err, data, next)
+    })
+}
  export const updateIllustration = (req:any,res:any,next:any) => {
-    let projectId = req.params.prjid
-    let illustrationId = req.params.id
+    let projectName = req.params.projectName
+    let illustrationNameFromReq = req.params.illustrationName
     let illustrationName = _.get(req, 'body.IllustrationName')
     let filePath = _.get(req, 'file.path')
     let fileType = _.get(req, 'file.mimetype');
-    let illustrationType = _.get(req,'body.IllustrationType')
+    let tags = _.get(req,'body.Tags')
     if (_.isNil(filePath)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
     let file = {
         filePath: filePath,
         type: fileType
     }
-    illustrationApi.updateIllustration(projectId, illustrationId, file, illustrationName,illustrationType, (err: any, data: any) => {
+    illustrationApi.updateIllustration(projectName, illustrationNameFromReq, file, illustrationName,tags, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
  }
 
  export const findAllIllustration = (req: any, res: any, next: any) => {
-    let projectId = req.params.prjid
-    illustrationApi.findAllIllustration(projectId, (err: any, data: any) => {
+    let projectName = req.params.projectName
+    illustrationApi.findAllIllustration(projectName, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
  }
 
 export const findOneIllustration = (req: any, res: any, next: any) => {
-    let projectId = req.params.prjid
-    let illustrationId = req.params.id
-    illustrationApi.findOneIllustration(projectId, illustrationId, (err: any, data: any) => {
+    let projectName = req.params.projectName
+    let illustrationNameFromReq = req.params.illustrationName
+    illustrationApi.findOneIllustration(projectName, illustrationNameFromReq, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
  }
 
  export const deteleIllustration = (req: any, res: any, next: any) => {
-    let projectId = req.params.prjid
-    let illustrationId = req.params.id
-    illustrationApi.deteleIllustration(projectId, illustrationId, (err: any, data: any) => {
+    let projectName = req.params.projectName
+    let illustrationNameFromReq = req.params.illustrationName
+    illustrationApi.deteleIllustration(projectName, illustrationNameFromReq, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
  }

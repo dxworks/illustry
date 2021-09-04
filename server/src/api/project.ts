@@ -13,9 +13,9 @@ export function createIllustryProject(file: FileProperties, project: Project, ne
         .then(() => { return projectLib.createIllustryProject(file, project, next) })
 }
 
-export function findOneProject(id: string, next: any) {
+export function findOneProject(projectName: string, next: any) {
     return Promise.resolve()
-        .then(() => { return projectLib.findOneProject(id, next) })
+        .then(() => { return projectLib.findOneProject(projectName, next) })
 }
 
 export function queryAllProjects(next: any) {
@@ -23,12 +23,12 @@ export function queryAllProjects(next: any) {
         .then(() => { return projectLib.queryAllProjects(next) })
 }
 
-export function updateProject(id: string, projectDescription: string, next: any) {
+export function updateProject(projectName: string, projectDescription: string, next: any) {
     return Promise.resolve()
-        .then(() => { return projectLib.updateProject(id, projectDescription, next) })
+        .then(() => { return projectLib.updateProject(projectName, projectDescription, next) })
 }
 
-export function deleteProject(id: string, next: any) {
+export function deleteProject(projectName: string, next: any) {
     return Promise.resolve()
-        .then(() => { return projectLib.deleteProject(id, next) })
+        .then(() => { return projectLib.deleteProject(projectName, next) })
 }

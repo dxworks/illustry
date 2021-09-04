@@ -1,27 +1,33 @@
 import * as illustrationLib from '../lib/illustrations'
 import { FileProperties } from '../types/fileproperties'
+import { Illustration } from '../types/illustrations.'
 
-export function addIllustration(projectId: string, file: FileProperties, illustrationName: string,illustrationType: string, next: any) {
+export function addIllustration(projectName: string, file: FileProperties, illustrationName: string,illustrationType: string,tags:string, next: any) {
     return Promise.resolve()
-        .then(() => { return illustrationLib.addIllustration(projectId, file, illustrationName,illustrationType, next) })
+        .then(() => { return illustrationLib.addIllustration(projectName, file, illustrationName,illustrationType,tags, next) })
 }
 
-export function updateIllustration(projectId: string, illustrationId: string, file: FileProperties, illustrationName: string,illustrationType:string, next: any) {
+export function updateIllustration(projectName: string, illustrationNameFromReq: string, file: FileProperties, illustrationName: string, tags:string, next: any) {
     return Promise.resolve()
-        .then(() => { return illustrationLib.updateIllustration(projectId,illustrationId, file, illustrationName,illustrationType, next) })
+        .then(() => { return illustrationLib.updateIllustration(projectName,illustrationNameFromReq, file, illustrationName,tags, next) })
 }
 
-export function findAllIllustration(projectId: string, next: any) {
+export function findAllIllustration(projectName: string, next: any) {
     return Promise.resolve()
-        .then(() => {  return illustrationLib.findAllIllustration(projectId, next) })
+        .then(() => {  return illustrationLib.findAllIllustration(projectName, next) })
 }
 
-export function findOneIllustration(projectId: string, illustrationId: string, next: any) {
+export function findOneIllustration(projectName: string, illustrationNameFromReq: string, next: any) {
     return Promise.resolve()
-        .then(() => {  return illustrationLib.findOneIllustration(projectId, illustrationId, next) })
+        .then(() => {  return illustrationLib.findOneIllustration(projectName, illustrationNameFromReq, next) })
 }
 
-export function deteleIllustration(projectId: string, illustrationId: string, next: any) {
+export function deteleIllustration(projectName: string, illustrationNameFromReq: string, next: any) {
     return Promise.resolve()
-        .then(() => {  return illustrationLib.deleteIllustration(projectId, illustrationId, next) })
+        .then(() => {  return illustrationLib.deleteIllustration(projectName, illustrationNameFromReq, next) })
+}
+
+export function addIllustrationFromOtherSource(projectName: string, illustrationName: string, illustrationType: string, tags: string, illustrationData: Illustration, next: any) {
+    return Promise.resolve()
+        .then(() => { return illustrationLib.addIllustrationFromOtherSource(projectName, illustrationName, illustrationType, tags, illustrationData, next)})
 }

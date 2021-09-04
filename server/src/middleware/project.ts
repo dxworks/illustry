@@ -17,6 +17,7 @@ export const createIllustryProject = (req: any, res: any, next: any) => {
     let projectDescription = _.get(req, 'body.ProjectDescription')
     let illustrationName = _.get(req, 'body.IllustrationName')
     let illustrationType = _.get(req, 'body.IllustrationType')
+    let tags = _.get(req, 'body.Tags')
     // Validate file path
     if (_.isNil(filePath)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
     let file = {
@@ -27,7 +28,8 @@ export const createIllustryProject = (req: any, res: any, next: any) => {
         ProjectName: projectName,
         ProjectDescription: projectDescription,
         IllustrationName: illustrationName,
-        IllustrationType: illustrationType
+        IllustrationType: illustrationType,
+        Tags: tags
     }
     projectApi.createIllustryProject(file, fields, (errGPC: any, data: any) => {
 
@@ -42,29 +44,30 @@ export const query = (req: any, res: any, next: any) => {
 }
 
 export const findOne = (req: any, res: any, next: any) => {
-    let projectId = req.params.id
+    let projectName = req.params.projectName
     {
-        projectApi.findOneProject(projectId, (err: any, data: any) => {
+        projectApi.findOneProject(projectName, (err: any, data: any) => {
             helper.returnResponse(res, err, data, next)
         })
     }
 }
 
 export const updateProject = (req: any, res: any, next: any) => {
-    let projectId = req.params.id
+    let projectName = req.params.projectName
+    console.log(projectName)
     let projectDescription = _.get(req, 'body.ProjectDescription')
 
     {
-        projectApi.updateProject(projectId, projectDescription, (err: any, data: any) => {
+        projectApi.updateProject(projectName, projectDescription, (err: any, data: any) => {
             helper.returnResponse(res, err, data, next)
         })
     }
 }
 
 export const deleteProject = (req: any, res: any, next: any) => {
-    let projectId = req.params.id
+    let projectName = req.params.projectName
     {
-        projectApi.deleteProject(projectId, (err: any, data: any) => {
+        projectApi.deleteProject(projectName, (err: any, data: any) => {
             helper.returnResponse(res, err, data, next)
         })
     }

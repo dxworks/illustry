@@ -17,7 +17,8 @@ export const createGitProject = (project: any, next:any) => {
         ProjectName: _.get(project, 'ProjectName', ''),
         IllustrationName: _.get(project, 'IllustrationName', ''),
         IllustrationData: _.get(project, 'IllustrationData', ''),
-        IllustrationType: _.get(project, 'IllustrationType', '')
+        IllustrationType: _.get(project, 'IllustrationType', ''),
+        Tags: _.get(project, 'Tags')
     }
     let projectTable = new ProjectTable(projectModel)
     projectTable.save((err: any) => {
@@ -40,10 +41,10 @@ export const createIllustryProject = (file: FileProperties, project: Project, ne
         })
 }
 
-export const updateIllustryProject = (project: Project, projectId: string) => {
+export const updateIllustryProject = (project: Project, projectName: string) => {
     return Promise.resolve({})
         .then(() => {
-            let query = { _id: { $eq: projectId } };
+            let query = { ProjectName: { $eq: projectName } };
             let projectUpdate = { ProjectDescription: _.get(project, 'ProjectDescription') }
             return ProjectTable.findOneAndUpdate({ query }, projectUpdate, { new: true });
         })
@@ -54,8 +55,8 @@ export const queryAllProjects = (next: any) => {
         .then((doc: any) => { next(null, doc); return doc })
 }
 
-export const findOneProject = (id: string, next: any) => {
-    let query = { _id: { $eq: id } }
+export const findOneProject = (projectName: string, next: any) => {
+    let query = { ProjectName: { $eq: projectName } }
     return ProjectTable
         .find(query)
         .select(' -_id ProjectName ProjectDescription')
@@ -63,9 +64,9 @@ export const findOneProject = (id: string, next: any) => {
         .eachAsync((doc: any) => { next(null, doc); return doc })
 }
 
-export const updateProject = (id: string, projectDescription: string, next: any) => {
+export const updateProject = (projectName: string, projectDescription: string, next: any) => {
     let update = { ProjectDescription: projectDescription }
-    let query = { _id: { $eq: id } }
+    let query = { ProjectName: { $eq: projectName } }
     return ProjectTable
         .findOneAndUpdate(query, update, { new: true })
         .select(' -_id ProjectName ProjectDescription')
@@ -78,9 +79,9 @@ export const updateProject = (id: string, projectDescription: string, next: any)
         .catch((err:any) => { next(err, null) })
 }
 
-export const deleteProject = (id: string, next: any) => {
-    let queryProject = { _id: { $eq: id } }
-    let queryIllustration = { ProjectId: { $eq: id } }
+export const deleteProject = (projectName: string, next: any) => {
+    let queryProject = { ProjectName: { $eq: projectName } }
+    let queryIllustration = { ProjectName: { $eq: projectName } }
     return IllustrationTable
         .deleteMany(queryIllustration)
         .then((doc:any) => {
@@ -88,7 +89,7 @@ export const deleteProject = (id: string, next: any) => {
                 .deleteOne(queryProject)
                 .then((doc: any) => {
                     return Promise.resolve(doc)
-                        .then((doc) => { next(null, { ProjectId: id }) })
+                        .then((doc) => { next(null, { ProjectName: projectName }) })
                 })
                 .catch((err:any) => next(err, null) )
         })
