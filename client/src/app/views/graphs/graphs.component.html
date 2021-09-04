@@ -1,0 +1,6 @@
+<div [ngSwitch]=currentIllustration.IllustrationType>
+  <app-chart  *ngSwitchCase="'charts'" [data] = currentIllustration.IllustrationData></app-chart>
+  <app-d3-force-layout-graph *ngSwitchCase="'flg'" [data] = currentIllustration.IllustrationData></app-d3-force-layout-graph>
+  <app-hiearchical-edge-bundling *ngSwitchCase="'heb'" [data] = currentIllustration.IllustrationData></app-hiearchical-edge-bundling>
+  <app-sanky-diagram *ngSwitchCase="'sankeydiagram'" [data] = currentIllustration.IllustrationData></app-sanky-diagram>
+</div>

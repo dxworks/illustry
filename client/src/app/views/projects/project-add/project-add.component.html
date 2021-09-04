@@ -1,0 +1,51 @@
+<form [formGroup]="form" (ngSubmit)="uploadProject()">
+
+  <div class="form-group">
+    <label for="projectName">ProjectName</label>
+    <input
+      formControlName="ProjectName"
+      id="projectName"
+      type="text"
+      class="form-control">
+
+    </div>
+
+  <div class="form-group">
+    <label for="projectDescription">ProjectDescription</label>
+    <input
+      formControlName="ProjectDescription"
+      id="projectDescription"
+      type="text"
+      class="form-control">
+
+    </div>
+
+  <div class="form-group">
+    <label for="illustrationName">IllustrationName</label>
+    <input
+      formControlName="IllustrationName"
+      id="illustrationName"
+      type="text"
+      class="form-control">
+
+    </div>
+
+  <div class="form-group">
+    <label for="illustrationType">IllustrationType</label>
+    <input
+      formControlName="IllustrationType"
+      id="illustrationType"
+      type="text"
+      class="form-control">
+
+  </div>
+
+  <div class="form-group">
+    <input type="file" (change)="selectFile($event)" />
+
+    </div>
+
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+
+</form>

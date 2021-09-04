@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-xs-12">
+    <app-project-item
+      *ngFor="let project of projects;"
+      [project]="project"
+      [index]="project._id"
+    ></app-project-item>
+  </div>
+</div>

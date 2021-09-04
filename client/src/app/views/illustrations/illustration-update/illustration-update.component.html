@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="updateIllustration()">
+
+  <div class="form-group">
+    <label for="illustrationName">IllustrationName</label>
+    <input
+      formControlName="IllustrationName"
+      id="illustrationName"
+      type="text"
+      class="form-control">
+
+  </div>
+  <div class="form-group">
+    <label for="illustrationType">illustrationType</label>
+    <input
+      formControlName="IllustrationType"
+      id="illustrationType"
+      type="text"
+      class="form-control">
+
+  </div>
+  <div class="form-group">
+    <input type="file" (change)="selectFile($event)" />
+
+  </div>
+
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+
+</form>
