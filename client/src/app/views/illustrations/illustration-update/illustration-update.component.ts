@@ -10,12 +10,13 @@ import {throwError} from "rxjs";
   styleUrls: ['./illustration-update.component.css']
 })
 export class IllustrationUpdateComponent implements OnInit {
-  id = '';
-  illId = ''
+  projectName = '';
+  illustrationName = '';
   form: FormGroup = new FormGroup({
     File: new FormControl('',[Validators.required]),
     IllustrationName: new FormControl('',[Validators.required]),
-    IllustrationType: new FormControl('')
+    IllustrationType: new FormControl(''),
+    Tags: new FormControl('')
   });
 
   constructor(private illustrationService: IllustrationService,
@@ -23,11 +24,11 @@ export class IllustrationUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     // @ts-ignore
-    this.id = this.route.parent.snapshot.paramMap.get('id');
+    this.projectName = this.route.parent.snapshot.paramMap.get('projectName');
     this.route.params
       .subscribe(
         (params: Params) => {
-          this.illId = params['illId'];
+          this.illustrationName = params['illustrationName'];
         }
       );
   }
@@ -48,8 +49,9 @@ export class IllustrationUpdateComponent implements OnInit {
 
     formData.append('File', this.form.value.File);
     formData.append('IllustrationName',this.form.value.IllustrationName);
-    formData.append('IllustrationType', this.form.value.IllustrationType)
-    this.illustrationService.updateIllustration(this.id,this.illId,formData)
+    formData.append('IllustrationType', this.form.value.IllustrationType);
+    formData.append('Tags',this.form.value.Tags);
+    this.illustrationService.updateIllustration(this.projectName,this.illustrationName,formData)
       .subscribe(response => {
         console.log(response)
       }, error => {

@@ -10,23 +10,29 @@ export class IllustrationService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getAllIllustrations(id:string) {
-    return this.httpClient.get<Illustration[]>(`${projectUrl}/${id}/illustration`)
+  getAllIllustrations(projectName:string) {
+    return this.httpClient.get<Illustration[]>(`${projectUrl}/${projectName}/illustration`)
   }
 
-  getIllustration(id: string, illustrationId:string) {
-    return this.httpClient.get<Illustration>(`${projectUrl}/${id}/illustration/${illustrationId}`)
+  getIllustration(projectName: string, illustrationName:string) {
+    return this.httpClient.get<Illustration>(`${projectUrl}/${projectName}/illustration/${illustrationName}`)
   }
 
-  createIllustration(id:string,data:any) {
-    return this.httpClient.post(`${projectUrl}/${id}/illustration`, data)
+  createIllustration(projectName:string,data:any) {
+    return this.httpClient.post(`${projectUrl}/${projectName}/illustration`, data)
   }
 
-  updateIllustration(id: string, illustrationId:string, data:any) {
-    return this.httpClient.put(`${projectUrl}/${id}/illustration/${illustrationId}`, data)
+  updateIllustration(projectName: string, illustrationName:string, data:any) {
+    return this.httpClient.put(`${projectUrl}/${projectName}/illustration/${illustrationName}`, data)
   }
 
-  deleteIllustration(id:string, illustrationId:string) {
-    return this.httpClient.delete(`${projectUrl}/${id}/illustration/${illustrationId}`)
+  deleteIllustration(projectName:string, illustrationName:string) {
+    return this.httpClient.delete(`${projectUrl}/${projectName}/illustration/${illustrationName}`)
+  }
+
+  getAllIllustrationOfTheSameType(projectName:string, type: string) {
+    return this.httpClient.get<Illustration[]>(`${projectUrl}/${projectName}/illustration/type/${type}`)
   }
 }
+
+

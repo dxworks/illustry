@@ -66,16 +66,16 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-                // @ts-ignore
-                this.links = this.data[0].links;
-                console.log(this.links)
-                // @ts-ignore
-                this.nodes = this.data[0].nodes;
-                console.log(this.nodes)
-                //@ts-ignore
-                this.graph = {links:this.links, nodes: this.nodes}
-                console.log("This graph" + JSON.stringify(this.graph))
-                this.createForcedLayeredGraph()
+    // @ts-ignore
+    this.links = this.data.links;
+    console.log(this.links)
+    // @ts-ignore
+    this.nodes = this.data.nodes;
+    console.log(this.nodes)
+    //@ts-ignore
+    this.graph = {links:this.links, nodes: this.nodes}
+    console.log("This graph" + JSON.stringify(this.graph))
+    this.createForcedLayeredGraph()
 
 
   }
@@ -110,7 +110,7 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
     const labelLayout = d3.forceSimulation(label.nodes)
       .force('charge', d3.forceManyBody().strength(-50))
       .force('link', d3.forceLink(label.links).distance(0).strength(2));
-
+    console.log(d3.forceLink(this.graph.links))
     const graphLayout = d3.forceSimulation(this.graph.nodes)
       .force('charge', d3.forceManyBody().strength(-3000))
       .force('center', d3.forceCenter(width / 2, height / 2))

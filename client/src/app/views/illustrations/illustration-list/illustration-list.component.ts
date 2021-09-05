@@ -9,14 +9,14 @@ import {IllustrationService} from "../../../services/illustration.service";
 })
 export class IllustrationListComponent implements OnInit {
   @Input()
-  id: string = '';
+  projectName: string = '';
 
   illustrations: Illustration[] = [];
   constructor(private illustrationService: IllustrationService) { }
 
   ngOnInit(): void {
-    console.log(this.id)
-    this.illustrationService.getAllIllustrations(this.id).subscribe((illustrations: Illustration[]) => {console.log(illustrations); this.illustrations = illustrations});
+    console.log(this.projectName)
+    this.illustrationService.getAllIllustrations(this.projectName).subscribe((illustrations: Illustration[]) => {console.log(illustrations); this.illustrations = illustrations});
   }
 
 }

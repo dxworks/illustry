@@ -9,16 +9,17 @@ import {throwError} from "rxjs";
   styleUrls: ['./project-update.component.css']
 })
 export class ProjectUpdateComponent implements OnInit {
-  id = '';
-  projectDescription=''
+  projectName = '';
+  projectDescription='';
   constructor(private route: ActivatedRoute,private router: Router, private projectService: ProjectsService) { }
 
   ngOnInit(): void {
     this.route.params
       .subscribe(
         (params: Params) => {
-          this.id = params['id'];
-          console.log(this.id)
+          console.log(params)
+          this.projectName = params['projectName'];
+          console.log(this.projectName)
         })
   }
 
@@ -26,7 +27,7 @@ export class ProjectUpdateComponent implements OnInit {
     const formData: FormData = new FormData();
     formData.append('ProjectDescription', this.projectDescription)
 
-    this.projectService.updateProject(this.id,formData)
+    this.projectService.updateProject(this.projectName,formData)
       .subscribe(response => {
       console.log(response)
     }, error => {

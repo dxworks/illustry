@@ -31,7 +31,7 @@ export class ChartComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.data)
-    this.createChart(this.data)
+    this.createChart(this.data.chart)
 
   }
 

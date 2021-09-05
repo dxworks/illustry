@@ -16,20 +16,20 @@ export class ProjectsService {
     return this.httpClient.get<Project[]>(baseUrl)
   }
 
-  getProject(id: string) {
-    return this.httpClient.get<Project>(`${projectUrl}/${id}`)
+  getProject(projectName: string) {
+    return this.httpClient.get<Project>(`${projectUrl}/${projectName}`)
   }
 
   createProject(data:any) {
     return this.httpClient.post(projectUrl, data)
   }
 
-  updateProject(id: string, data:any) {
-    return this.httpClient.put<Project>(`${projectUrl}/${id}`, data)
+  updateProject(projectName: string, data:any) {
+    return this.httpClient.put<Project>(`${projectUrl}/${projectName}`, data)
   }
 
-  deleteProject(id:string) {
-    return this.httpClient.delete(`${projectUrl}/${id}`)
+  deleteProject(projectName:string) {
+    return this.httpClient.delete(`${projectUrl}/${projectName}`)
   }
 
 }

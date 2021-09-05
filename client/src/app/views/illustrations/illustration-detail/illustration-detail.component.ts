@@ -9,8 +9,8 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
   styleUrls: ['./illustration-detail.component.css']
 })
 export class IllustrationDetailComponent implements OnInit {
-  id = '';
-  illId = '';
+  projectName = '';
+  illustrationName = '';
   currentIllustration:Illustration = {
     _id :'',
     IllustrationName: '',
@@ -21,12 +21,12 @@ export class IllustrationDetailComponent implements OnInit {
 
   ngOnInit(): void {
     // @ts-ignore
-    this.id = this.route.parent.snapshot.paramMap.get('id');
+    this.projectName = this.route.parent.snapshot.paramMap.get('projectName');
     this.route.params
       .subscribe(
         (params: Params) => {
-          this.illId = params['illId'];
-          this.illustrationService.getIllustration(this.id,this.illId)
+          this.illustrationName = params['illustrationName'];
+          this.illustrationService.getIllustration(this.projectName,this.illustrationName)
             .subscribe(illustration => {
                 this.currentIllustration = illustration;
               },
@@ -37,14 +37,14 @@ export class IllustrationDetailComponent implements OnInit {
   }
 
   deleteIllustration() {
-    this.illustrationService.deleteIllustration(this.id,this.illId).subscribe(()=>console.log(this.illId),error => {throw Error(error)})
+    this.illustrationService.deleteIllustration(this.projectName,this.illustrationName).subscribe(()=>console.log(this.illustrationName),error => {throw Error(error)})
   }
 
   updateIllustration() {
-    this.router.navigate([`projects/${this.id}/illustrations/${this.illId}/update`])
+    this.router.navigate([`projects/${this.projectName}/illustrations/${this.illustrationName}/update`])
   }
 
   showIllustration() {
-    this.router.navigate([`projects/${this.id}/illustrations/${this.illId}/illustration`])
+    this.router.navigate([`projects/${this.projectName}/illustrations/${this.illustrationName}/illustration`])
   }
 }

@@ -17,7 +17,7 @@ export class ProjectDetailComponent implements OnInit {
   };
 
   message: string = '';
-  id: string = '';
+  projectName: string = '';
   constructor(private projectService: ProjectsService,
               private route: ActivatedRoute, private router: Router) {
   }
@@ -27,8 +27,8 @@ export class ProjectDetailComponent implements OnInit {
     this.route.params
       .subscribe(
         (params: Params) => {
-          this.id = params['id'];
-          this.projectService.getProject(this.id)
+          this.projectName = params['projectName'];
+          this.projectService.getProject(this.projectName)
             .subscribe(project => {
                 this.currentProject = project;
               },
@@ -39,19 +39,19 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   showIllustrations() {
-    this.router.navigate([`/projects/${this.id}/illustrations`]);
+    this.router.navigate([`/projects/${this.projectName}/illustrations`]);
   }
   updateProject() {
-    this.router.navigate([`/projects/${this.id}/update`]);
+    this.router.navigate([`/projects/${this.projectName}/update`]);
   }
 
   addIllustration() {
-    this.router.navigate([`/projects/${this.id}/addIllustration`])
+    this.router.navigate([`/projects/${this.projectName}/addIllustration`])
   }
 
   deleteProject() {
-    console.log(this.id);
-    this.projectService.deleteProject(this.id)
+    console.log(this.projectName);
+    this.projectService.deleteProject(this.projectName)
       .subscribe(
         response => {
           console.log(response);

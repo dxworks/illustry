@@ -8,11 +8,7 @@ import {IllustrationsComponent} from "./views/illustrations/illustrations.compon
 import {IllustrationDetailComponent} from "./views/illustrations/illustration-detail/illustration-detail.component";
 import {IllustrationAddComponent} from "./views/illustrations/illustration-add/illustration-add.component";
 import {IllustrationUpdateComponent} from "./views/illustrations/illustration-update/illustration-update.component";
-import {ForceLayoutGraphComponent} from "./views/graphs/force-layout-graph/force-layout-graph.component";
-import {HiearchicalEdgeBundlingComponent} from "./views/graphs/hiearchical-edge-bundling/hiearchical-edge-bundling.component";
-import {ChartComponent} from "./views/graphs/chart/chart.component";
 import {GraphsComponent} from "./views/graphs/graphs.component";
-//import {SankyDiagramComponent} from "./views/graphs/sanky-diagram/sanky-diagram.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'projects', pathMatch: 'full' },
@@ -21,36 +17,36 @@ const routes: Routes = [
     component: ProjectsComponent,
     children: [
       {
-        path: ':id',
+        path: ':projectName',
         component: ProjectDetailComponent
       },
       {
-        path: ':id/update',
+        path: ':projectName/update',
         component: ProjectUpdateComponent
       },
       {
-        path:':id/addIllustration',
+        path:':projectName/addIllustration',
         component: IllustrationAddComponent
       }
         ]
       },
 
   {
-    path: 'projects/:id/illustrations',
+    path: 'projects/:projectName/illustrations',
     component: IllustrationsComponent,
     children: [
       {
-        path: ':illId',
+        path: ':illustrationName',
         component: IllustrationDetailComponent
       },
       {
-        path: ':illId/update',
+        path: ':illustrationName/update',
         component: IllustrationUpdateComponent
       },
     ]
   },
   {
-    path: 'projects/:id/illustrations/:illId/illustration',
+    path: 'projects/:projectName/illustrations/:illustrationName/illustration',
     component: GraphsComponent
   },
 

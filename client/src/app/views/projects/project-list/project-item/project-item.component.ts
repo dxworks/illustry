@@ -10,7 +10,7 @@ export class ProjectItemComponent implements OnInit {
   @Input()
   project: Project = <Project>{};
   @Input()
-  index: string = "";
+  projectName: string = "";
   constructor() { }
 
   ngOnInit(): void {

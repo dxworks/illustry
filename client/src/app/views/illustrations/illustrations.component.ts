@@ -8,7 +8,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./illustrations.component.css']
 })
 export class IllustrationsComponent implements OnInit {
-  projectId: string = '';
+  projectName: string = '';
 
   file: File = <File>{};
 
@@ -18,7 +18,7 @@ export class IllustrationsComponent implements OnInit {
     this.route.params
       .subscribe(
         (params: Params) => {
-          this.projectId = params['id'];
+          this.projectName = params['projectName'];
         })
   }
 

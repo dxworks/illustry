@@ -10,7 +10,7 @@ export class IllustrationItemComponent implements OnInit {
   @Input()
   illustration: Illustration = <Illustration>{};
   @Input()
-  index: string = "";
+  illustrationName: string = "";
 
   constructor() { }
 

@@ -24,10 +24,10 @@ export class SankyDiagramComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.links = this.data[0].links;
+    this.links = this.data.links;
     console.log(this.links);
     // @ts-ignore
-    this.nodes = this.data[0].nodes;
+    this.nodes = this.data.nodes;
     console.log(this.nodes);
     //@ts-ignore
     this.graph = {links:this.links, nodes: this.nodes}

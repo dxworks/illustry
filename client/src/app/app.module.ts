@@ -27,7 +27,7 @@ import { BarchartComponent } from './views/barchart/barchart.component';
 import { ChartComponent } from './views/graphs/chart/chart.component';
 import { GraphsComponent } from './views/graphs/graphs.component';
 import {SankyDiagramComponent} from "./views/graphs/sanky-diagram/sanky-diagram.component";
-// import { SankyDiagramComponent } from './views/graphs/sanky-diagram/sanky-diagram.component';
+
 
 @NgModule({
   declarations: [

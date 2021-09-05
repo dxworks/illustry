@@ -9,13 +9,14 @@ import {IllustrationService} from "../../services/illustration.service";
   styleUrls: ['./graphs.component.css']
 })
 export class GraphsComponent implements OnInit {
-  illId = "";
-  id = "";
+  projectName = "";
+  illustrationName = "";
   currentIllustration: Illustration = {
     _id: '',
     IllustrationName: '',
     IllustrationData: [],
-    IllustrationType: ''
+    IllustrationType: '',
+    Tags: ''
   };
 
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) { }
@@ -24,9 +25,9 @@ export class GraphsComponent implements OnInit {
     this.route.params
       .subscribe(
         (params: Params) => {
-          this.illId = params['illId'];
-          this.id = params['id'];
-          this.illustrationService.getIllustration(this.id, this.illId)
+          this.projectName = params['projectName'];
+          this.illustrationName = params['illustrationName'];
+          this.illustrationService.getIllustration(this.projectName, this.illustrationName)
             .subscribe(illustration => {
                 this.currentIllustration = illustration;
                 console.log(this.currentIllustration)

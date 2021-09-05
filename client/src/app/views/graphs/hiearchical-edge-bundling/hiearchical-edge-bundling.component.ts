@@ -23,10 +23,10 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.links = this.data[0].links;
+    this.links = this.data.links;
     console.log(this.links)
     // @ts-ignore
-    this.nodes = this.data[0].nodes;
+    this.nodes = this.data.nodes;
     console.log(this.nodes)
     //@ts-ignore
     this.graph = {links:this.links, nodes: this.nodes}
@@ -280,12 +280,12 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
       links.forEach(lnk => {
         let _import;
         console.log(lnk);
-        if (lnk.sourceName=== null || lnk.sourceName ===undefined) {
-          _import = map[lnk.sourceName].path(map[lnk.targetName]);
+        if (lnk.source=== null || lnk.source ===undefined) {
+          _import = map[lnk.source].path(map[lnk.target]);
 
         } else {
-          const source = map[lnk.sourceName];
-          const target = map[lnk.targetName];
+          const source = map[lnk.source];
+          const target = map[lnk.target];
           _import = source.path(target);
         }
         _import.value = lnk.value;

@@ -12,11 +12,12 @@ import {throwError} from "rxjs";
 })
 export class IllustrationAddComponent implements OnInit {
 
-  id ='';
+  projectName ='';
   form: FormGroup = new FormGroup({
     File: new FormControl('',[Validators.required]),
     IllustrationName: new FormControl('',[Validators.required]),
     IllustrationType: new FormControl('',[Validators.required]),
+    Tags: new FormControl('', [])
   });
 
   constructor(private illustrationService: IllustrationService,
@@ -26,8 +27,8 @@ export class IllustrationAddComponent implements OnInit {
     this.route.params
       .subscribe(
         (params: Params) => {
-          this.id = params['id'];
-          console.log(this.id)
+          this.projectName = params['projectName'];
+          console.log(this.projectName)
         })
   }
 
@@ -49,7 +50,8 @@ export class IllustrationAddComponent implements OnInit {
     formData.append('File', this.form.value.File);
     formData.append('IllustrationName',this.form.value.IllustrationName)
     formData.append('IllustrationType',this.form.value.IllustrationType)
-    this.illustrationService.createIllustration(this.id,formData)
+    formData.append('Tags', this.form.value.Tags)
+    this.illustrationService.createIllustration(this.projectName,formData)
       .subscribe(response => {
         console.log(response)
       }, error => {
