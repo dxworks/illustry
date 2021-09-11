@@ -1,8 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import * as d3 from 'd3'
-import {Illustration} from "../../../../types/illustration.model";
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {IllustrationService} from "../../../services/illustration.service";
 import * as d3Sankey from 'd3-sankey'
 
 @Component({
@@ -16,7 +13,7 @@ export class SankyDiagramComponent implements OnInit {
   links = [];
   nodes = [];
   color:any;
-  graph = {nodes: [], links: [], units:""};
+  graph = {nodes: [], "links": [], units:""};
 
   @Input()
   data: any;
@@ -30,62 +27,9 @@ export class SankyDiagramComponent implements OnInit {
     this.nodes = this.data.nodes;
     console.log(this.nodes);
     //@ts-ignore
-    this.graph = {links:this.links, nodes: this.nodes}
-    console.log("This graph" + JSON.stringify(this.graph))
-    this.DrawChart(  {
-      nodes: [{
-        nodeId: 0,
-        name: "node0"
-      }, {
-        nodeId: 1,
-        name: "node1"
-      }, {
-        nodeId: 2,
-        name: "node2"
-      }, {
-        nodeId: 3,
-        name: "node3"
-      }, {
-        nodeId: 4,
-        name: "node4"
-      }],
-      links: [{
-        source: 0,
-        target: 2,
-        value: 2,
-        uom: 'Widget(s)'
-      }, {
-        source: 1,
-        target: 2,
-        value: 2,
-        uom: 'Widget(s)'
-      }, {
-        source: 1,
-        target: 3,
-        value: 2,
-        uom: 'Widget(s)'
-      }, {
-        source: 0,
-        target: 4,
-        value: 2,
-        uom: 'Widget(s)'
-      }, {
-        source: 2,
-        target: 3,
-        value: 2,
-        uom: 'Widget(s)'
-      }, {
-        source: 2,
-        target: 4,
-        value: 2,
-        uom: 'Widget(s)'
-      }, {
-        source: 3,
-        target: 4,
-        value: 4,
-        uom: 'Widget(s)'
-      }]
-    })
+    this.graph = {links:this.links, nodes: this.nodes};
+    console.log(this.graph)
+    this.DrawChart(this.graph)
   }
 
 
@@ -120,16 +64,18 @@ export class SankyDiagramComponent implements OnInit {
 
     sankey(energy);
 
+
     // @ts-ignore
     link = link
       .data(energy.links)
       .enter().append("path")
       // @ts-ignore
       .attr("d", d3Sankey.sankeyLinkHorizontal())
-      .attr("stroke-width", function (d: any) { return Math.max(1, d.width); });
+      .attr("stroke-width", function (d: any) { return Math.max(1, d.width); })
+      .style("mix-blend-mode", "multiply");
 
     link.append("title")
-      .text(function (d: any) { return d.source.name + " → " + d.target.name + "\n" + format(d.value); });
+      .text(function (d: any) { return d.source.name +  "→" + d.target.name + "\n" + format(d.value); });
 
     // @ts-ignore
     node = node
@@ -159,21 +105,3 @@ export class SankyDiagramComponent implements OnInit {
   }
 }
 
-interface SNodeExtra {
-  nodeId: number;
-  name: string;
-}
-
-interface SLinkExtra {
-  source: number;
-  target: number;
-  value: number;
-  uom: string;
-}
-type SNode = d3Sankey.SankeyNode<SNodeExtra, SLinkExtra>;
-type SLink = d3Sankey.SankeyLink<SNodeExtra, SLinkExtra>;
-
-interface DAG {
-  nodes: SNode[];
-  links: SLink[];
-}

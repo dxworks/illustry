@@ -23,10 +23,13 @@ import { IllustrationUpdateComponent } from './views/illustrations/illustration-
 import { IllustrationDetailComponent } from './views/illustrations/illustration-detail/illustration-detail.component';
 import { ForceLayoutGraphComponent } from './views/graphs/force-layout-graph/force-layout-graph.component';
 import { HiearchicalEdgeBundlingComponent } from './views/graphs/hiearchical-edge-bundling/hiearchical-edge-bundling.component';
-import { BarchartComponent } from './views/barchart/barchart.component';
+import { BarchartComponent } from './views/graphs/barchart/barchart.component';
 import { ChartComponent } from './views/graphs/chart/chart.component';
 import { GraphsComponent } from './views/graphs/graphs.component';
 import {SankyDiagramComponent} from "./views/graphs/sanky-diagram/sanky-diagram.component";
+import { HeatmapComponent } from './views/graphs/heatmap/heatmap.component';
+import { StackedChartComponent } from './views/stacked-chart/stacked-chart.component';
+import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizontal-chart.component';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import {SankyDiagramComponent} from "./views/graphs/sanky-diagram/sanky-diagram.
     BarchartComponent,
     ChartComponent,
     GraphsComponent,
-    SankyDiagramComponent
+    SankyDiagramComponent,
+    HeatmapComponent,
+    StackedChartComponent,
+    HorizontalChartComponent
   ],
   imports: [
     BrowserModule,
