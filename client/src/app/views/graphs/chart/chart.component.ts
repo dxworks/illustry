@@ -30,15 +30,14 @@ export class ChartComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.data)
-    this.createChart(this.data.chart,this.data.domainInterval)
+    this.createChart(this.data.chart,this.verifyMaxDomainInterval(this.data.maxDomainInterval,this.data.chart),this.verifyMinDomainInterval(this.data.minDomainInterval,this.data.chart))
 
   }
 
-  createChart(StatsBarChart:any, domain:number) {
+  createChart(StatsBarChart:any, domainMax:number, domainMin:number) {
     this.initSvg();
-    this.initAxis(StatsBarChart,domain);
-    this.drawBars(StatsBarChart);
+    this.initAxis(StatsBarChart,domainMax,domainMin);
+    this.drawBars(StatsBarChart,domainMin);
     this.createAnimation();
   }
   initSvg() {
@@ -51,7 +50,7 @@ export class ChartComponent implements OnInit {
       .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')');
   }
 
-  initAxis(StatsBarChart: any,domain:number) {
+  initAxis(StatsBarChart: any,domainMax:number, domainMin:number) {
 
     this.x  = d3.scaleBand()
       .range([ 0, this.width ])
@@ -64,13 +63,13 @@ export class ChartComponent implements OnInit {
       .attr("transform", "translate(-10,0)rotate(-45)")
       .style("text-anchor", "end")
     this.y = d3.scaleLinear()
-      .domain([0,domain])
+      .domain([domainMin,domainMax])
       .range([ this.height, 10]);
     this.svg.append("g")
       .call(d3.axisLeft(this.y));
   }
 
-  drawBars(StatsBarChart: any) {
+  drawBars(StatsBarChart: any, minDomain:number) {
     this.svg.selectAll("mybar")
       .data(StatsBarChart)
       .join("rect")
@@ -79,7 +78,7 @@ export class ChartComponent implements OnInit {
       .attr("fill", "#69b3a2")
       // no bar at the beginning thus:
       .attr("height", (d:any) => this.height - this.y(0)) // always equal to 0
-      .attr("y", (d:any) => this.y(0))
+      .attr("y", (d:any) => this.y(minDomain))
   }
   createAnimation() {
     this.svg.selectAll("rect")
@@ -88,5 +87,21 @@ export class ChartComponent implements OnInit {
       .attr("y", (d:any) => this.y(d.value))
       .attr("height", (d:any) => this.height - this.y(d.value))
       .delay((d:any,i:number) => {console.log(i); return i*100})
+  }
+  verifyMaxDomainInterval(maxDomain:number,StatsBarChart:any) {
+    if(maxDomain === undefined || maxDomain === null) {
+      const newMaxDomain = StatsBarChart.sort((a:any,b:any)=>b.value-a.value)[0].value;
+      return newMaxDomain;
+    }
+    else
+      return maxDomain;
+  }
+  verifyMinDomainInterval(minDomain:number,StatsBarChart:any) {
+    if(minDomain === undefined || minDomain === null) {
+      const newMinDomain = StatsBarChart.sort((a:any,b:any)=>a.value-b.value)[0].value;
+      return newMinDomain;
+    }
+    else
+      return minDomain;
   }
 }

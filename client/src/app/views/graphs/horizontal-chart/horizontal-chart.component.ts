@@ -12,30 +12,33 @@ export class HorizontalChartComponent implements OnInit {
 
   private width: number;
   private height: number;
+
   margin = {top: 20, right: 20, bottom: 30, left: 40};
   x: any;
   y: any;
   svg: any;
   g: any;
+
   @Input()
   data: any;
 
-  constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
+  constructor() {
     this.width = 510 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
+
   }
 
 
   ngOnInit(): void {
-    console.log(this.data)
-    this.createChart(this.data.chart,this.data.domainInterval)
+
+    this.createChart(this.data.chart,this.verifyMaxDomainInterval(this.data.maxDomainInterval,this.data.chart),this.verifyMinDomainInterval(this.data.minDomainInterval,this.data.chart))
 
   }
 
-  createChart(StatsBarChart:any,domain:number) {
+  createChart(StatsBarChart:any,domainMax:number, domainMin:number) {
     this.initSvg();
-    this.initAxis(StatsBarChart,domain);
-    this.drawBars(StatsBarChart);
+    this.initAxis(StatsBarChart,domainMax, domainMin);
+    this.drawBars(StatsBarChart,domainMin);
     this.createAnimation();
   }
   initSvg() {
@@ -48,9 +51,10 @@ export class HorizontalChartComponent implements OnInit {
       .attr('transform', 'translate(' + this.margin.left + ',' + this.margin.top + ')');
   }
 
-  initAxis(StatsBarChart: any,domain:number) {
+  initAxis(StatsBarChart: any,domainMax:number, domainMin:number) {
+    console.log(domainMin)
     this.x  = d3.scaleLinear()
-      .domain([0, domain]) //sa faci si cu domeniul
+      .domain([domainMin, domainMax])
       .range([ 0, this.width]);
 
     this.svg.append("g")
@@ -60,20 +64,20 @@ export class HorizontalChartComponent implements OnInit {
       .attr("transform", "translate(-10,0)rotate(-45)")
       .style("text-anchor", "end")
     this.y = d3.scaleBand()
-      .range([ 0, this.width  ])
+      .range([ domainMin, this.width  ])
       .domain(StatsBarChart.map((d:any) => d.name))
       .padding(0.5);
     this.svg.append("g")
       .call(d3.axisLeft(this.y));
   }
 
-  drawBars(StatsBarChart: any) {
+  drawBars(StatsBarChart: any,domainMin:number) {
     this.svg.selectAll("myRect")
       .data(StatsBarChart)
       .join("rect")
-      .attr("x", this.x(0) )
+      .attr("x", this.x(domainMin) )
       .attr("y", (d:any) => this.y(d.name))
-      .attr("width", (d:any) => this.x(d.value)-this.width)
+      .attr("width", (d:any) => domainMin)
       .attr("height", this.y.bandwidth())
       .attr("fill", "#69b3a2")
   }
@@ -84,5 +88,22 @@ export class HorizontalChartComponent implements OnInit {
       .duration(800)
       .attr("width", (d:any) => this.x(d.value))
       .delay((d:any,i:number) => {console.log(i); return i*100})
+  }
+
+  verifyMaxDomainInterval(maxDomain:number,StatsBarChart:any) {
+    if(maxDomain === undefined || maxDomain === null) {
+      const newMaxDomain = StatsBarChart.sort((a:any,b:any)=>b.value-a.value)[0].value;
+    return newMaxDomain;
+    }
+    else
+      return maxDomain;
+  }
+  verifyMinDomainInterval(minDomain:number,StatsBarChart:any) {
+    if(minDomain === undefined || minDomain === null) {
+      const newMinDomain = StatsBarChart.sort((a:any,b:any)=>a.value-b.value)[0].value;
+      return newMinDomain;
+    }
+    else
+      return minDomain;
   }
 }
