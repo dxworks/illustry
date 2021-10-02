@@ -23,7 +23,7 @@ export class ChartComponent implements OnInit {
   @Input()
   data: any;
 
-  constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
+  constructor() {
     this.width = 900 - this.margin.left - this.margin.right;
     this.height = 500 - this.margin.top - this.margin.bottom;
   }
@@ -104,4 +104,5 @@ export class ChartComponent implements OnInit {
     else
       return minDomain;
   }
+
 }
