@@ -29,7 +29,7 @@ import {SankyDiagramComponent} from "./views/graphs/sanky-diagram/sanky-diagram.
 import { HeatmapComponent } from './views/graphs/heatmap/heatmap.component';
 import { StackedChartComponent } from './views/graphs/stacked-chart/stacked-chart.component';
 import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizontal-chart.component';
-
+import { MatrixcalendarComponent } from './views/graphs/matrixcalendar/matrixcalendar.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,8 @@ import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizo
     SankyDiagramComponent,
     HeatmapComponent,
     StackedChartComponent,
-    HorizontalChartComponent
+    HorizontalChartComponent,
+    MatrixcalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +65,8 @@ import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizo
     BrowserAnimationsModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
