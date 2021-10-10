@@ -3,12 +3,15 @@ import {Component, Input, OnInit} from '@angular/core';
 import * as d3 from "d3";
 import {Chart, registerables} from "chart.js";
 import { Chart, registerables } from 'chart.js';
+import {OverviewType} from "../matrixcalendar/matrixcalendar.component";
 
 @Component({
   selector: 'app-stacked-chart',
   templateUrl: './stacked-chart.component.html',
   styleUrls: ['./stacked-chart.component.css']
 })
+
+
 export class StackedChartComponent implements OnInit {
   @Input()
   data: any;
@@ -23,32 +26,25 @@ export class StackedChartComponent implements OnInit {
 
     this.createStacked(this.data)
   }
-
+  private createRandomColor() {
+    const randomNumber =Math.floor(Math.random() * 122);
+    const lastNumber = Math.random()*2;
+    return `rgb(${randomNumber},${randomNumber},${randomNumber},${lastNumber})`
+  }
   private createStacked(data: any) {
+    const labels:string[] = Array.from(new Set(data.chart.map((d:any) => d.group)));
+    const subgroups: string[] = data.subgroups;
+    let datasets : any[] = [];
+    let finalDatasets:any[] = [];
+    subgroups.forEach((subgroup) => { finalDatasets.push({label:subgroup}); datasets[subgroup] = data.chart.map((d:any) => d[subgroup])})
+      console.log(datasets)
+    finalDatasets.forEach((fd) => { finalDatasets.map((d:any) => {d.borderColor =this.createRandomColor(); d.backgroundColor =this.createRandomColor(); d.data =datasets[Object.values(fd)[0]]})})
+    console.log(finalDatasets)
     //@ts-ignore
     var ctx = document.getElementById('myChart').getContext('2d');
     const graphdata = {
-      labels: ['banana','poacee'],
-      datasets: [
-        {
-          label: 'Nitrogen',
-          data: [12, 6, 11, 2],
-          borderColor: 'rgba(255, 99, 132, 0.2)',
-          backgroundColor: 'rgba(255, 99, 132, 1)'
-        },
-        {
-          label: 'ooo',
-          data: [1, 2, 7, 10],
-          borderColor: 'rgba(10, 99, 111, 0.2)',
-          backgroundColor: 'rgba(25, 99, 132, 1)'
-        },
-        {
-          label: 'ooo1',
-          data: [1, 2, 7],
-          borderColor: 'rgba(10, 222, 111, 0.2)',
-          backgroundColor: 'rgba(25, 221, 132, 1)'
-        }
-      ]
+      labels: labels,
+      datasets: finalDatasets
     };
 
 
@@ -56,12 +52,6 @@ export class StackedChartComponent implements OnInit {
       type: 'bar',
       data: graphdata,
       options: {
-        plugins: {
-          title: {
-            display: true,
-            text: 'Chart.js Bar Chart - Stacked'
-          },
-        },
         responsive: true,
         scales: {
           x: {
