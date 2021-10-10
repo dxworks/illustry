@@ -3,9 +3,15 @@ import { FileProperties } from '../types/fileproperties'
 import { Project } from '../types/project'
 
 
-export function createGitProject(project: any, next: any) {
+export function createProjectfromExtern(project: any, next: any) {
     return Promise.resolve()
-    .then(() => { return projectLib.createGitProject(project, next) })
+    .then(() => { return projectLib.createProjectfromExtern(project, next) })
+}
+
+
+export function deleteProjectfromExtern(projectName: any, next: any) {
+    return Promise.resolve()
+    .then(() => { return projectLib.deleteProjectfromExtern(projectName, next) })
 }
 
 export function createIllustryProject(file: FileProperties, project: Project, next: any) {

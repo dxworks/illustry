@@ -2,13 +2,19 @@ import * as projectApi from '../api/project'
 import _ from 'lodash'
 import * as helper from '../utils/helper'
 
-export const createGitProject = (req: any, res: any, next: any) => {
-    projectApi.createGitProject(req.body, (errGPC: any, data: any) => {
+export const createProjectfromExtern = (req: any, res: any, next: any) => {
+    projectApi.createProjectfromExtern(req.body, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)
     })
 }
 
+export const deleteProjectfromExtern = (req: any, res: any, next: any) => {
+    projectApi.deleteProjectfromExtern(req.body, (errGPC: any, data: any) => {
+
+        helper.returnResponse(res, errGPC, data, next)
+    })
+}
 
 export const createIllustryProject = (req: any, res: any, next: any) => {
     let projectName = _.get(req, 'body.ProjectName')

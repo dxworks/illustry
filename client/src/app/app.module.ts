@@ -30,6 +30,7 @@ import { HeatmapComponent } from './views/graphs/heatmap/heatmap.component';
 import { StackedChartComponent } from './views/graphs/stacked-chart/stacked-chart.component';
 import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizontal-chart.component';
 import { MatrixcalendarComponent } from './views/graphs/matrixcalendar/matrixcalendar.component';
+import { MatrixComponent } from './views/graphs/matrix/matrix.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { MatrixcalendarComponent } from './views/graphs/matrixcalendar/matrixcal
     HeatmapComponent,
     StackedChartComponent,
     HorizontalChartComponent,
-    MatrixcalendarComponent
+    MatrixcalendarComponent,
+    MatrixComponent
   ],
   imports: [
     BrowserModule,

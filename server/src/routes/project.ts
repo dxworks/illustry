@@ -3,8 +3,8 @@ import * as projectMiddleware from '../middleware/project';
 
 const router = Router();
 
-router.post('/add/git/project', projectMiddleware.createGitProject)
-
+router.post('/add/external/project', projectMiddleware.createProjectfromExtern)
+router.delete('/delete/external/project', projectMiddleware.deleteProjectfromExtern)
 router.get('/projects', projectMiddleware.query)
 
 router.get('/project/:projectName', projectMiddleware.findOne)
@@ -20,5 +20,6 @@ router.put('/project/:projectName', uploadEmpty.none(),projectMiddleware.updateP
 
 router.delete('/project/:projectName', projectMiddleware.deleteProject )
 
+ 
 
 export default router

@@ -7,7 +7,7 @@ import { Project } from "../types/project";
 import { readFile } from "../utils/reader";
 import { FileProperties } from "../types/fileproperties";
 
-export const createGitProject = (project: any, next:any) => {
+export const createProjectfromExtern = (project: any, next:any) => {
     let projectModel = {
         ProjectName: _.get(project, 'ProjectName', ''),
         ProjectDescription: _.get(project, 'ProjectDescription', '')
@@ -37,7 +37,7 @@ export const createGitProject = (project: any, next:any) => {
 export const createIllustryProject = (file: FileProperties, project: Project, next: any) => {
     return promisify(readFile)(file, project)
         .then((projectJson) => {
-            createGitProject(projectJson, next)
+            createProjectfromExtern(projectJson, next)
         })
 }
 
@@ -79,6 +79,14 @@ export const updateProject = (projectName: string, projectDescription: string, n
         .catch((err:any) => { next(err, null) })
 }
 
+
+export const deleteProjectfromExtern = (project: string, next:any) => {
+    let projectName= _.get(project, 'ProjectName', ' ')
+    console.log(projectName)
+    return Promise.resolve()
+            .then(()=> {return deleteProject(projectName,next)})
+
+}
 export const deleteProject = (projectName: string, next: any) => {
     let queryProject = { ProjectName: { $eq: projectName } }
     let queryIllustration = { ProjectName: { $eq: projectName } }
