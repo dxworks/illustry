@@ -90,6 +90,23 @@ export const updateIllustration = (projectName: string, illustrationNameFromReq:
         })
 }
 
+
+export const updateIllustrationFromOtherSource =(projectName:any,illustrationName:any,illustrationType:any,tags:any,illustrationData:any,next:any) => {
+    let query = {
+        ProjectName: { $eq: projectName },
+        IllustrationName: { $eq: illustrationName }
+    };
+    let update = { IllustrationName: illustrationName, Tags: tags, IllustrationData: illustrationData }
+    return IllustrationTable
+                .findOneAndUpdate(query, update, { new: true })
+                .select('-_id')
+                .then((doc: any) => {
+                    return Promise.resolve(doc)
+                        .then((doc) => { next(null, doc) })
+                })
+                .catch((err: any) => next(err, null))
+}
+
 export const findAllIllustration = (projectName: string, next: any) => {
     let query = { ProjectName: { $eq: projectName } }
 
@@ -128,6 +145,7 @@ export const deleteIllustration = (projectName: string, illustrationNameFromReq:
         .catch((err: any) => next(err, null))
 }
 
+ 
 export const getAllIllustriesOfTheSameType = (projectName: string, illustrationType: string, next: any ) => {
     let query = {
         ProjectName: { $eq: projectName },

@@ -26,7 +26,12 @@ export function deteleIllustration(projectName: string, illustrationNameFromReq:
     return Promise.resolve()
         .then(() => {  return illustrationLib.deleteIllustration(projectName, illustrationNameFromReq, next) })
 }
-
+ 
+ 
+export function updateIllustrationFromOtherSource(projectName:any,illustrationName:any,illustrationType:any,tags:any,illustrationData:any,next:any) {
+    return Promise.resolve()
+    .then(() => {  return illustrationLib.updateIllustrationFromOtherSource(projectName,illustrationName,illustrationType,tags,illustrationData,next) })
+}
 export function addIllustrationFromOtherSource(projectName: string, illustrationName: string, illustrationType: string, tags: string, illustrationData: Illustration, next: any) {
     return Promise.resolve()
         .then(() => { return illustrationLib.addIllustrationFromOtherSource(projectName, illustrationName, illustrationType, tags, illustrationData, next)})

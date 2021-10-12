@@ -34,6 +34,7 @@ export const createProjectfromExtern = (project: any, next:any) => {
     })
 }
 
+ 
 export const createIllustryProject = (file: FileProperties, project: Project, next: any) => {
     return promisify(readFile)(file, project)
         .then((projectJson) => {
@@ -41,20 +42,21 @@ export const createIllustryProject = (file: FileProperties, project: Project, ne
         })
 }
 
-export const updateIllustryProject = (project: Project, projectName: string) => {
-    return Promise.resolve({})
-        .then(() => {
-            let query = { ProjectName: { $eq: projectName } };
-            let projectUpdate = { ProjectDescription: _.get(project, 'ProjectDescription') }
-            return ProjectTable.findOneAndUpdate({ query }, projectUpdate, { new: true });
-        })
-}
 
+export const updateProjectfromEtern = (project:any,next:any) => {
+    const projectToBeUpdated = {
+        ProjectName: _.get(project,"ProjectName"),
+        ProjectDescription: _.get(project,'ProjectDescription')
+    }
+    return Promise.resolve()
+    .then(()=> {return updateProject(projectToBeUpdated.ProjectName,projectToBeUpdated.ProjectDescription,next)})
+
+}
 export const queryAllProjects = (next: any) => {
     return ProjectTable.find({}).select('-__v')
         .then((doc: any) => { next(null, doc); return doc })
 }
-
+ 
 export const findOneProject = (projectName: string, next: any) => {
     let query = { ProjectName: { $eq: projectName } }
     return ProjectTable
@@ -62,6 +64,13 @@ export const findOneProject = (projectName: string, next: any) => {
         .select(' -_id ProjectName ProjectDescription')
         .cursor()
         .eachAsync((doc: any) => { next(null, doc); return doc })
+}
+ 
+export const getOneProjectfromEtern = (project:any,next:any) => {
+    const projectName = _.get(project,"ProjectName")
+    
+    return Promise.resolve()
+    .then(()=> {return findOneProject(projectName,next)})
 }
 
 export const updateProject = (projectName: string, projectDescription: string, next: any) => {
@@ -78,15 +87,8 @@ export const updateProject = (projectName: string, projectDescription: string, n
       
         .catch((err:any) => { next(err, null) })
 }
-
-
-export const deleteProjectfromExtern = (project: string, next:any) => {
-    let projectName= _.get(project, 'ProjectName', ' ')
-    console.log(projectName)
-    return Promise.resolve()
-            .then(()=> {return deleteProject(projectName,next)})
-
-}
+ 
+ 
 export const deleteProject = (projectName: string, next: any) => {
     let queryProject = { ProjectName: { $eq: projectName } }
     let queryIllustration = { ProjectName: { $eq: projectName } }

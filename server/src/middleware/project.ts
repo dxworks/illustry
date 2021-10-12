@@ -10,7 +10,22 @@ export const createProjectfromExtern = (req: any, res: any, next: any) => {
 }
 
 export const deleteProjectfromExtern = (req: any, res: any, next: any) => {
-    projectApi.deleteProjectfromExtern(req.body, (errGPC: any, data: any) => {
+    let projectName = _.get(req,'body.ProjectName')
+    projectApi.deleteProject(projectName, (errGPC: any, data: any) => {
+
+        helper.returnResponse(res, errGPC, data, next)
+    })
+}
+
+export const updateProjectfromEtern = (req: any, res: any, next: any) => {
+    projectApi.updateProjectfromEtern(req.body, (errGPC: any, data: any) => {
+
+        helper.returnResponse(res, errGPC, data, next)
+    })
+}
+
+export const getOneProjectfromEtern = (req: any, res: any, next: any) => {
+    projectApi.getOneProjectfromEtern(req.body, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)
     })

@@ -5,6 +5,8 @@ const router = Router();
 
 router.post('/add/external/project', projectMiddleware.createProjectfromExtern)
 router.delete('/delete/external/project', projectMiddleware.deleteProjectfromExtern)
+router.put('/update/external/project', projectMiddleware.updateProjectfromEtern)
+router.get('/get/external/project', projectMiddleware.getOneProjectfromEtern)
 router.get('/projects', projectMiddleware.query)
 
 router.get('/project/:projectName', projectMiddleware.findOne)
