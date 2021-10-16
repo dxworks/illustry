@@ -5,7 +5,9 @@ import {throwError} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Illustration} from "../../../../types/illustration.model";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatDialog} from "@angular/material/dialog";
+import {AddProjectDialogComponent} from "../../../dialogs/add-project-dialog/add-project-dialog.component";
 @Component({
   selector: 'app-project-add',
   templateUrl: './project-add.component.html',
@@ -31,21 +33,23 @@ export class ProjectAddComponent implements OnInit {
 
   form: FormGroup = new FormGroup({
     ProjectName: new FormControl('',[Validators.required]),
-    ProjectDescription:new FormControl('',[Validators.required]),
+    ProjectDescription:new FormControl('',[]),
     File: new FormControl('',[Validators.required]),
     IllustrationName: new FormControl('',[Validators.required]),
     IllustrationType: new FormControl('',[Validators.required]),
     Tags: new FormControl('',[])
   });
 
-  constructor(private projectService: ProjectsService) {
+  constructor(private projectService: ProjectsService, public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
   }
 
+  openDialog() {
+    this.dialog.open(AddProjectDialogComponent);
+  }
   selectFile(event: any) {
-
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
       console.log(file);
@@ -54,9 +58,12 @@ export class ProjectAddComponent implements OnInit {
       });
     }
   }
-
+  openInput(){
+    // @ts-ignore
+    document.getElementById("fileInput").click();
+  }
   uploadProject() {
-
+  this.openDialog()
     const formData: FormData = new FormData()
 
     formData.append('ProjectName', this.form.value.ProjectName);
@@ -65,7 +72,6 @@ export class ProjectAddComponent implements OnInit {
     formData.append('IllustrationName',this.form.value.IllustrationName);
     formData.append('IllustrationType',this.form.value.IllustrationType);
     formData.append('Tags', this.form.value.Tags)
-    console.log(formData)
     this.projectService.createProject(formData)
       .subscribe(response => {
         console.log(response)

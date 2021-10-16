@@ -1,59 +1,77 @@
-<form [formGroup]="form" (ngSubmit)="uploadProject()">
+<div class="arrange">
+<h2 align="center">Add an Illustry project</h2>
+  <div class="mx-5">
+    <form class="d-flex flex-column" [formGroup]="form" (ngSubmit)="uploadProject()" align="center">
+      <div align="center">
+        <mat-form-field appearance="fill">
+          <mat-label>Project Name</mat-label>
+          <input matInput
+                 formControlName="ProjectName"
+                 id="projectName"
+                 type="text"
+                 required>
+        </mat-form-field>
+      </div>
+      <div align="center">
+        <mat-form-field appearance="fill">
+          <mat-label>Project Description</mat-label>
+          <textarea matInput
+                    formControlName="ProjectDescription"
+                    id="projectDescription"
+                    type="text"
+          ></textarea>
+        </mat-form-field>
+      </div>
+      <div align="center">
+        <mat-form-field appearance="fill">
+          <mat-label>Illustration Name</mat-label>
+          <input matInput
+                 formControlName="IllustrationName"
+                 id="illustrationName"
+                 type="text"
+                 required>
+        </mat-form-field>
+      </div>
+      <div align="center">
+        <mat-form-field appearance="fill">
+          <mat-label>Illustration Type</mat-label>
+          <mat-select
+            formControlName="IllustrationType"
+            id="IllustrationType"
+            required>
+            <mat-option value="charts">Vertical Charts</mat-option>
+            <mat-option value="stackedcharts">Stacked Charts</mat-option>
+            <mat-option value="horizontal charts">Stacked Charts</mat-option>
+            <mat-option value="flg">Force Layout Graphs</mat-option>
+            <mat-option value="heb">Hierarchical Edge Bundling</mat-option>
+            <mat-option value="treemap">TreeMap</mat-option>
+            <mat-option value="sankeydiagram">Sankey Diagram</mat-option>
+            <mat-option value="matrix">Matrix</mat-option>
+            <mat-option value="ganttchart">Gantt Chart</mat-option>
+            <mat-option value="calendarmatrix"> Calendar Matrix</mat-option>
+            <mat-option value="graphiz">Graphiz</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div align="center">
+        <mat-form-field appearance="fill">
+          <mat-label>Tags</mat-label>
+          <textarea matInput
+                    formControlName="Tags"
+                    id="tags"
+                    type="text"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="centerButton">
+      <div class="form-group">
+        <input type="file" name="file" id="file" class="inputfile" (change)="selectFile($event)"/>
+      </div>
+      </div>
 
-  <div class="form-group">
-    <label for="projectName">ProjectName</label>
-    <input
-      formControlName="ProjectName"
-      id="projectName"
-      type="text"
-      class="form-control">
-
-    </div>
-
-  <div class="form-group">
-    <label for="projectDescription">ProjectDescription</label>
-    <input
-      formControlName="ProjectDescription"
-      id="projectDescription"
-      type="text"
-      class="form-control">
-
-    </div>
-
-  <div class="form-group">
-    <label for="illustrationName">IllustrationName</label>
-    <input
-      formControlName="IllustrationName"
-      id="illustrationName"
-      type="text"
-      class="form-control">
-
-    </div>
-
-  <div class="form-group">
-    <label for="illustrationType">IllustrationType</label>
-    <input
-      formControlName="IllustrationType"
-      id="illustrationType"
-      type="text"
-      class="form-control">
-
+      <div align="center">
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+        <button class ="btn btn-danger" (click)="form.reset()">Reset</button>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="tags">Tags</label>
-    <input
-      formControlName="Tags"
-      id="tags"
-      type="text"
-      class="form-control">
-
-  </div>
-  <div class="form-group">
-    <input type="file" (change)="selectFile($event)" />
-
-    </div>
-
-
-  <button class="btn btn-primary" type="submit">Submit</button>
-
-</form>
+</div>

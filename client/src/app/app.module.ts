@@ -31,6 +31,13 @@ import { StackedChartComponent } from './views/graphs/stacked-chart/stacked-char
 import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizontal-chart.component';
 import { MatrixcalendarComponent } from './views/graphs/matrixcalendar/matrixcalendar.component';
 import { MatrixComponent } from './views/graphs/matrix/matrix.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatSelectModule} from "@angular/material/select";
+import {MatIconModule} from "@angular/material/icon";
+import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-project-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -57,7 +64,8 @@ import { MatrixComponent } from './views/graphs/matrix/matrix.component';
     StackedChartComponent,
     HorizontalChartComponent,
     MatrixcalendarComponent,
-    MatrixComponent
+    MatrixComponent,
+    AddProjectDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +76,12 @@ import { MatrixComponent } from './views/graphs/matrix/matrix.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatIconModule,
+    MatDialogModule,
 
   ],
   providers: [],
