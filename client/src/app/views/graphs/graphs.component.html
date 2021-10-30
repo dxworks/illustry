@@ -7,4 +7,5 @@
   <app-stacked-chart *ngSwitchCase="'stackedcharts'" [data] = currentIllustration.IllustrationData ></app-stacked-chart>
   <app-matrix *ngSwitchCase="'matrix'" [data]=currentIllustration.IllustrationData></app-matrix>
   <app-matrixcalendar *ngSwitchCase="'calendarmatrix'" [data]=currentIllustration.IllustrationData></app-matrixcalendar>
+  <app-dot-graph *ngSwitchCase="'graphiz'" [content]=currentIllustration.IllustrationData></app-dot-graph>
 </div>

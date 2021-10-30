@@ -1,0 +1,64 @@
+svg {
+  overflow: hidden;
+  display: inline-block;
+  align-content: center;
+}
+
+rect {
+  pointer-events: all;
+  cursor: pointer;
+  //stroke: #EEEEEE;
+}
+
+.chart {
+  display: block;
+  margin: auto;
+}
+
+::ng-deep .my-treemap-tooltip {
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 10;
+  top: -5px;
+  left: 40%;
+  margin-left: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+span i {
+  color: #868e96;
+}
+
+::ng-deep .d3-context-menu {
+  position: absolute;
+  display: none;
+  background: #fff;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  z-index: 900;
+}
+
+::ng-deep .d3-context-menu ul {
+  list-style-type: none;
+  margin: 4px 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+::ng-deep .d3-context-menu ul li {
+  padding: 4px 16px;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  background: #fff !important;
+}
+
+::ng-deep .d3-context-menu ul li:hover {
+  background: #f8f9fa !important;
+}

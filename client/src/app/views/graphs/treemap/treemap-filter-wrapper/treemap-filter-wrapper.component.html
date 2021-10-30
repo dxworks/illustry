@@ -1,0 +1,59 @@
+<div class="row mx-2 mt-4 mb-2">
+
+  <!--Default treemap options-->
+  <div class="col-2 px-0">
+    <div class="row pl-3">
+      <div class="d-inline-block">
+        <div class="dropdown d-inline-block">
+          <button class="btn btn-outline-secondary dropdown-toggle mt-1 mb-0" type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+            {{selectedCategory ? selectedCategory : 'Select category'}}
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <span *ngFor="let superCategory of superCategories">
+              <h5 class="dropdown-header">{{superCategory}}</h5>
+              <a class="dropdown-item" *ngFor="let cat of superCategoriesMap.get(superCategory)"
+                 (click)="selectCategory(cat.category)">{{cat.category}}</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-10" [class.show]="selectedCategory">
+    <div class="row {{showMoreProperties ? 'show-more-properties' : 'show-less-properties'}} mt-1 pl-0"
+         id="propertiesContainer">
+      <div #propertiesContainer class="col-12 set-auto-width">
+        <span *ngIf="displayShowPropertiesArrow"
+              class="badge badge-secondary mx-1 my-1 property-is-inactive cursor-pointer set-auto-width"
+              (click)="showMoreProperties = !showMoreProperties">
+         <span *ngIf="showMoreProperties" pTooltip="View less properties" tooltipPosition="top"><i
+           class="fa fa-chevron-down"></i></span>
+         <span *ngIf="!showMoreProperties" pTooltip="View more properties" tooltipPosition="top"><i
+           class="fa fa-chevron-right"></i></span>
+       </span>
+        <span
+          #propertySpan
+          class="badge badge-secondary mx-1 my-1 set-auto-width {{selectedProperty && selectedProperty.name === property ? 'property-is-active' : 'property-is-inactive'}}"
+          (click)="selectProperty(property)"
+          *ngFor="let property of categoriesMap.get(selectedCategory)">
+                {{property}}
+              </span>
+      </div>
+    </div>
+  </div>
+  <!--End of default treemap options-->
+
+  <!--Search treemap section-->
+  <div class="col-12 mt-3 px-0">
+    <dx-custom-query (queryResults)="onCustomQueryResults($event)"
+                     [(dxQuery)]="customQueryInputModel"
+                     [defaultQueryStarter]="'file: '"></dx-custom-query>
+  </div>
+  <!--End of search treemap section-->
+</div>
+
+
+

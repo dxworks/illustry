@@ -1,0 +1,55 @@
+/* Table */
+::ng-deep p-table#treemapPropertiesInfo .ui-table-reorder-indicator-down,
+::ng-deep p-table#treemapPropertiesInfo .ui-table-reorder-indicator-up {
+  display: none;
+}
+
+::ng-deep p-table#treemapPropertiesInfo div.ui-table div table thead tr {
+
+  th:first-of-type {
+    width: 90%;
+  }
+
+  th:nth-of-type(2) {
+    text-align: center;
+  }
+}
+
+::ng-deep p-table#treemapPropertiesInfo div.ui-table div table tbody tr {
+  cursor: pointer;
+
+  td:first-of-type {
+    width: 90%;
+  }
+
+  td:nth-of-type(2) {
+    text-align: center;
+  }
+}
+
+::ng-deep #treemapInfoEditor.monaco-code-editor {
+
+  .editor-container {
+    width: 500px !important;
+    height: 500px !important;
+  }
+}
+
+::ng-deep #treemapInfoEditor.monaco-code-editor.hide-editor {
+  visibility: hidden !important;
+}
+
+::ng-deep .codeOverlayPanel {
+  width: 534px !important;
+  height: 520px !important;
+  margin-top: 530px !important;
+}
+
+::ng-deep .myInlineDecoration {
+  cursor: pointer;
+  background-color: #cd39ce !important;
+}
+
+::ng-deep .ui-tooltip.tooltip-style {
+  max-width: 50rem !important;
+}

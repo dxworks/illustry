@@ -1,0 +1,8 @@
+.links {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+.links:hover {
+  stroke-opacity: .5;
+}

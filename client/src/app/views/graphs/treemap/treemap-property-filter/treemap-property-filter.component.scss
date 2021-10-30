@@ -1,0 +1,13 @@
+//.selection-list {
+//  height: 6rem;
+//  overflow-x: hidden;
+//  overflow-y: scroll;
+//}
+
+::ng-deep p-multiselect div.ui-multiselect-filter-container {
+  width: 85%;
+}
+
+::ng-deep p-multiselect .ui-multiselect .ui-multiselect-trigger .fa {
+  color: #868e96;
+}

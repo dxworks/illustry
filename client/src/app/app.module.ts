@@ -38,6 +38,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
 import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-project-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import {DotGraphComponent} from './views/graphs/dot-graph/dot-graph.component'
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     HorizontalChartComponent,
     MatrixcalendarComponent,
     MatrixComponent,
-    AddProjectDialogComponent
+    AddProjectDialogComponent,
+    DotGraphComponent
   ],
   imports: [
     BrowserModule,
