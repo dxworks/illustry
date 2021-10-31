@@ -106,11 +106,9 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
       });
     });
 
-    console.log(label)
     const labelLayout = d3.forceSimulation(label.nodes)
       .force('charge', d3.forceManyBody().strength(-50))
       .force('link', d3.forceLink(label.links).distance(0).strength(2));
-    console.log(d3.forceLink(this.graph.links))
     const graphLayout = d3.forceSimulation(this.graph.nodes)
       .force('charge', d3.forceManyBody().strength(-3000))
       .force('center', d3.forceCenter(width / 2, height / 2))

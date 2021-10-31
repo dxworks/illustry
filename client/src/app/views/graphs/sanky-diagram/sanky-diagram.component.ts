@@ -24,14 +24,12 @@ export class SankyDiagramComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.links = this.data.links;
-    console.log(this.links);
-    // @ts-ignore
     this.nodes = this.data.nodes;
-    console.log(this.nodes);
+    // @ts-ignore
+    this.nodes.map((node,i) => node['index']=i )
+    this.links = modifyLinks(this.nodes,this.data.links);
     //@ts-ignore
     this.graph = {links: this.links, nodes: this.nodes};
-    console.log(this.graph)
     this.nodeAlign = pickNodeAlign("justify")
     this.DrawChart(this.graph,this.nodeAlign)
   }
@@ -79,7 +77,7 @@ export class SankyDiagramComponent implements OnInit {
       .enter().append("path")
       // @ts-ignore
       .attr("d", d3Sankey.sankeyLinkHorizontal())
-      .attr("stroke", (d:any) =>  `${uid}-link-${d.index}`)
+      .attr("stroke", (d:any) =>  color(d.source.group))
       .attr("stroke-width", function (d: any) { return Math.max(1, d.width); })
       .style("mix-blend-mode", "multiply");
 
@@ -148,4 +146,21 @@ function pickNodeAlign(nodeAlign:any) {
     return d3Sankey.sankeyCenter
   else
     return d3Sankey.sankeyJustify
+}
+
+function modifyLinks(nodes:any,links: any) {
+  links.forEach((link:any) => {
+    nodes.forEach((node:any) => {
+      if (link.source === node.name)
+      {
+        link.source = node.index
+      }
+      if(link.target === node.name) {
+        link.target = node.index
+      }
+
+    })
+  })
+  console.log(links)
+  return links;
 }
