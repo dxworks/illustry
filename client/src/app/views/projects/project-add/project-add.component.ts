@@ -29,7 +29,8 @@ export class ProjectAddComponent implements OnInit {
   };
 
   submitted: boolean = false;
-  file: File = <File>{};
+  files: File[] = [];
+
 
   form: FormGroup = new FormGroup({
     ProjectName: new FormControl('',[Validators.required]),
@@ -49,18 +50,32 @@ export class ProjectAddComponent implements OnInit {
   openDialog() {
     this.dialog.open(AddProjectDialogComponent);
   }
-  selectFile(event: any) {
-    if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      console.log(file);
-      this.form.patchValue({
-        File: file
-      });
-    }
+  // selectFile(event: any) {
+  //   if (event.target.files.length > 0) {
+  //     const file = event.target.files[0];
+  //     console.log(file);
+  //     this.form.patchValue({
+  //       File: file
+  //     });
+  //   }
+  // }
+  // openInput(){
+  //   // @ts-ignore
+  //   document.getElementById("fileInput").click();
+  // }
+
+  onSelect(event:any) {
+    console.log(event);
+    this.files.push(...event.addedFiles);
+    const file = this.files[0];
+    this.form.patchValue({
+      File: file
+    });
   }
-  openInput(){
-    // @ts-ignore
-    document.getElementById("fileInput").click();
+
+  onRemove(event:any) {
+    console.log(event);
+    this.files.splice(this.files.indexOf(event), 1);
   }
   uploadProject() {
   this.openDialog()
@@ -76,24 +91,15 @@ export class ProjectAddComponent implements OnInit {
       .subscribe(response => {
         console.log(response)
         this.submitted = true;
+        this.clearForm()
       }, error => {
         throwError(error)
       });
 
   }
 
-  // newProject() {
-  //   this.project = {
-  //     _id: '',
-  //     ProjectName: '',
-  //     ProjectDescription: ''
-  //   };
-  //   this.submitted = false;
-  //   this.illustration = {
-  //     _id: '',
-  //     IllustrationName: '',
-  //     IllustrationData: []
-  //   };
-  //   this.file = <File>{};
-  // }
+  clearForm(){
+    (<HTMLFormElement>document.getElementById("addProjectForm")).reset();
+  }
+
 }

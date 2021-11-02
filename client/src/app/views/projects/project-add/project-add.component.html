@@ -1,7 +1,7 @@
 <div class="arrange">
 <h2 align="center">Add an Illustry project</h2>
   <div class="mx-5">
-    <form class="d-flex flex-column" [formGroup]="form" (ngSubmit)="uploadProject()" align="center">
+    <form id="addProjectForm" class="d-flex flex-column" [formGroup]="form" (ngSubmit)="uploadProject()" align="center">
       <div align="center">
         <mat-form-field appearance="fill">
           <mat-label>Project Name</mat-label>
@@ -62,15 +62,20 @@
                     type="text"></textarea>
         </mat-form-field>
       </div>
-      <div class="centerButton">
+      <div class="centerDrop">
       <div class="form-group">
-        <input type="file" name="file" id="file" class="inputfile" (change)="selectFile($event)"/>
+        <ngx-dropzone  name="file" id="file" [multiple] = false  (change)="onSelect($event)">
+          <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
+          <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+          </ngx-dropzone-preview>
+        </ngx-dropzone>
       </div>
       </div>
 
-      <div align="center">
-        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
-        <button class ="btn btn-danger" (click)="form.reset()">Reset</button>
+      <div class="centerButton">
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid" >Submit</button>
+<!--        <button class ="btn btn-danger" (click)="clearForm()">Reset</button>-->
       </div>
     </form>
   </div>

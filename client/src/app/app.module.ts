@@ -39,6 +39,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-project-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {DotGraphComponent} from './views/graphs/dot-graph/dot-graph.component'
+import {NgxDropzoneModule} from "ngx-dropzone";
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import {DotGraphComponent} from './views/graphs/dot-graph/dot-graph.component'
     MatSelectModule,
     MatIconModule,
     MatDialogModule,
+    NgxDropzoneModule
 
   ],
   providers: [],
