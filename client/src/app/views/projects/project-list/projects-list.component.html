@@ -1,9 +1,57 @@
-<div class="row">
-  <div class="col-xs-12">
-    <app-project-item
-      *ngFor="let project of projects;"
-      [project]="project"
-      [projectName]="project.ProjectName"
-    ></app-project-item>
+<!--<div class="row">-->
+<!--  <div class="col-xs-12">-->
+<!--    <app-project-item-->
+<!--      *ngFor="let project of projects;"-->
+<!--      [project]="project"-->
+<!--      [projectName]="project.ProjectName"-->
+<!--    ></app-project-item>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <div class="md-form">
+
+        <input
+          type="text"
+          [(ngModel)]="searchText"
+          class="form-control"
+          id="search"
+          mdbInput
+          placeholder="Search"
+        />
+      </div>
+    </div>
   </div>
+  <table id="tableSortExample" mdbTable #tableEl="mdbTable" class="z-depth-1">
+    <thead>
+    <tr>
+    <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="projects" [sortBy]="headElements[i]">{{head | titlecase}}
+    </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let el of projects; let i = index">
+
+      <th class="clickable" (click)="showIllustrations(el.ProjectName)" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"
+          scope="row">{{el.index}}</th>
+      <td class="clickable" (click)="showIllustrations(el.ProjectName)" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.ProjectName}}</td>
+      <td class="clickable" (click)="showIllustrations(el.ProjectName)" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.ProjectDescription}}</td>
+      <td><button mat-icon-button color="warn" (click)="deleteProject(el.ProjectName)"><mat-icon>delete_outline</mat-icon></button>
+        <button mat-icon-button ><mat-icon>launch</mat-icon></button>
+        </td>
+    </tr>
+
+    </tbody>
+    <tfoot >
+    <tr >
+      <div class="center">
+        <mdb-table-pagination  [tableEl]="tableEl" [searchDataSource]="projects"></mdb-table-pagination>
+      </div>
+    </tr>
+
+    </tfoot>
+  </table>
 </div>

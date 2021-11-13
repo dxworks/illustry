@@ -40,6 +40,11 @@ import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-proj
 import {MatDialogModule} from "@angular/material/dialog";
 import {DotGraphComponent} from './views/graphs/dot-graph/dot-graph.component'
 import {NgxDropzoneModule} from "ngx-dropzone";
+import { GanttchartComponent } from './views/graphs/ganttchart/ganttchart.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MDBBootstrapModule} from "angular-bootstrap-md";
 
 @NgModule({
   declarations: [
@@ -68,7 +73,8 @@ import {NgxDropzoneModule} from "ngx-dropzone";
     MatrixcalendarComponent,
     MatrixComponent,
     AddProjectDialogComponent,
-    DotGraphComponent
+    DotGraphComponent,
+    GanttchartComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +91,11 @@ import {NgxDropzoneModule} from "ngx-dropzone";
     MatSelectModule,
     MatIconModule,
     MatDialogModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MDBBootstrapModule
 
   ],
   providers: [],

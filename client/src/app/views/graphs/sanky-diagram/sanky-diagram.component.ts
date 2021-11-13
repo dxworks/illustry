@@ -52,87 +52,218 @@ export class SankyDiagramComponent implements OnInit {
       .nodePadding(10)
       .nodeAlign(nodeAlign)
       .extent([[1, 1], [1000 - 1, 500 - 6]]);
-
-    var link = svg.append("g")
-      .attr("class", "links")
-      .attr("fill", "none")
-      .attr("stroke", "#000")
-      .attr("stroke-opacity", 0.2)
-      .selectAll("path");
-
-    var node = svg.append("g")
-      .attr("class", "nodes")
-      .attr("font-family", "sans-serif")
-      .attr("font-size", 10)
-      .selectAll("g");
+    //
+    // var link = svg.append("g")
+    //   .attr("class", "links")
+    //   .attr("fill", "none")
+    //   .attr("stroke", "#000")
+    //   .attr("stroke-opacity", 0.2)
+    //   .selectAll("path");
+    //
+    // var node = svg.append("g")
+    //   .attr("class", "nodes")
+    //   .attr("font-family", "sans-serif")
+    //   .attr("font-size", 10)
+    //   .selectAll("g");
 
     const uid = `O-${Math.random().toString(16).slice(2)}`;
 
+
     sankey(energy);
 
-
-    // @ts-ignore
-    link = link
+    energy.links.forEach((link:any) => {
+      link.gradient = {id:`${uid}${Math.random().toString(16).slice(2)}`}
+      link.path = {id:`${uid}${Math.random().toString(16).slice(2)}`}
+    });
+    energy.nodes.forEach((node:any) => {
+      node.color = color(node.group);
+    });
+    const defs = svg.append("defs");
+    const gradients = defs.selectAll("linearGradient")
       .data(energy.links)
-      .enter().append("path")
+      .enter()
+      .append("linearGradient")
+      .attr("id", (d:any) => d.gradient.id)
+    gradients.append("stop").attr("offset", 0.0).attr("stop-color", (d:any) => d.source.color);
+    gradients.append("stop").attr("offset", 1.0).attr("stop-color", (d:any) => d.target.color);
+  console.log(gradients)
+    const view = svg.append("g")
+      .classed("view", true)
+      .attr("transform", `translate(10, 10)`);
+    const nodes = view.selectAll("rect.node")
+      .data(energy.nodes)
+      .enter()
+      .append("rect")
+      .classed("node", true)
+      .attr("id", (d:any) => `node-${d.index}`)
+      .attr("x", (d:any) => d.x0)
+      .attr("y", (d:any) => d.y0)
+      .attr("width", (d:any) => d.x1 - d.x0)
+      .attr("height", (d:any) => Math.max(1, d.y1 - d.y0))
+      .attr("fill", (d:any) => d.color)
+      .attr("opacity", 0.9);
+
+    nodes.append("title").text((d:any) => `${d.name}\n${format(d.value)}`);
+
+
+    view.selectAll("text.node")
+      .data(energy.nodes)
+      .enter()
+      .append("text")
+      .classed("node",true)
+      .attr("x", (d:any) => d.x1)
+      .attr("dx", 6)
+      .attr("y", (d:any) => (d.y1 + d.y0) / 2)
+      .attr("dy", "0.35em")
+      .attr("fill", "black")
+      .attr("text-anchor", "start")
+      .attr("font-size", 10)
+      .attr("font-family", "Arial, sans-serif")
+      .text((d:any) => d.name)
+      .filter((d:any) => d.x1 > 20 / 2)
+      .attr("x", (d:any) => d.x0)
+      .attr("dx", -6)
+      .attr("text-anchor", "end");
+
+
+    const links = view.selectAll("path.link")
+      .data(energy.links)
+      .enter()
+      .append("path")
+      .classed("link", true)
       // @ts-ignore
       .attr("d", d3Sankey.sankeyLinkHorizontal())
-      .attr("stroke", (d:any) =>  color(d.source.group))
-      .attr("stroke-width", function (d: any) { return Math.max(1, d.width); })
-      .style("mix-blend-mode", "multiply");
+      .attr("stroke", "black")
+      .attr("stroke-opacity", 0.1)
+      .attr("stroke-width", (d:any) => Math.max(1, d.width))
+      .attr("fill", "none");
 
-    link.append("title")
-      .text(function (d: any) { return d.source.name +  "→" + d.target.name + "\n" + format(d.value); });
+    links.append("title").text((d:any) => `${d.source.name} -> ${d.target.name}\n${format(d.value)}`);
 
-    // @ts-ignore
-    node = node
-      .data(energy.nodes)
-      .enter().append("g");
 
-    node.append("rect")
-      .attr("x", function (d: any) { return d.x0; })
-      .attr("y", function (d: any) { return d.y0; })
-      .attr("height", function (d: any) { return d.y1 - d.y0; })
-      .attr("width", function (d: any) { return d.x1 - d.x0; })
-      .attr("fill", function (d: any) { return color(d.name.replace(/ .*/, "")); })
-      .attr("stroke", "#000")
-      .attr("fill", (d:any) => color(d.group));
+    function setDash(link:any) {
+      let el = view.select(`#${link.path.id}`);
 
-    node.append("text")
-      .attr("x", function (d: any) { return d.x0 - 6; })
-      .attr("y", function (d: any) { return (d.y1 + d.y0) / 2; })
-      .attr("dy", "0.35em")
-      .attr("text-anchor", "end")
-      .text(function (d: any) { return d.name; })
-      .filter(function (d: any) { return d.x0 < 1000 / 2; })
-      .attr("x", function (d: any) { return d.x1 + 6; })
-      .attr("text-anchor", "start");
+      // @ts-ignore
+      let length = el.node().getTotalLength();
+      el.attr("stroke-dasharray", `${length}${length}`)
+        .attr("stroke-dashoffset", length);
+    }
 
-    node.append("title")
-      .text(function (d: any) { return d.name + "\n" + format(d.value); });
+    const gradientLinks = view.selectAll("path.gradient-link")
+      .data(energy.links)
+      .enter()
+      .append("path")
+      .classed("gradient-link", true)
+      .attr("id", (d:any) => d.path.id)
+      // @ts-ignore
+      .attr("d", d3Sankey.sankeyLinkHorizontal())
+      //@ts-ignore
+      .attr("stroke", (d:any) =>d.gradient)
+      .attr("stroke-opacity", 0)
+      .attr("stroke-width", (d:any) => Math.max(1, d.width))
+      .attr("fill", "none")
+      .each(setDash);
 
-    link
-      .append("linearGradient")
-    //@ts-ignore
-      .attr("id", (d:any) => `${uid}-link-${d.index}`)
-      .attr("gradientUnits", "userSpaceOnUse")
-      .attr("x1", (d:any) => d.source.x1)
-      .attr("x2", (d:any) => d.target.x0)
-      .call(gradient =>
-      gradient.append("stop")
-        .attr("offset", "0%")
-        // @ts-ignore
-        .attr("stop-color", (d:any) =>{color(d.source.group) }))
-      .call(gradient => gradient.append("stop")
-        .attr("offset", "0%")
-        // @ts-ignore
-        .attr("stop-color", (d:any) => color(d.target.group)))
+    function branchAnimate(node:any) {
 
-    // .call(gradient => gradient.append("stop")
-      //   .attr("offset", "100%")
-      //   // @ts-ignore
-      //   .attr("stop-color", ({target: {index: i}}) => color(G[i])))
-    return Object.assign(svg.node(), {scales: {color}});
+      let links = view.selectAll("path.gradient-link")
+        .filter((link) => {
+          return node.sourceLinks.indexOf(link) !== -1;
+        });
+      let nextNodes:any = [];
+      links.each((link:any) => {
+        nextNodes.push(link.target);
+      });
+      links
+        .attr("stroke",(d:any) =>color(d.source.group) )
+        .attr("stroke-opacity", 0.5)
+        .transition()
+        .duration(900)
+        .ease(d3.easeLinear)
+        .attr("stroke-dashoffset", 0)
+        .on("end", () => {
+          nextNodes.forEach((node:any) => {
+            branchAnimate(node);
+          });
+        });
+    }
+
+    function branchClear() {
+      gradientLinks.transition();
+      gradientLinks
+        .attr("stroke", 0)
+        .attr("stroke-opactiy", 0)
+        .each(setDash);
+    }
+
+    nodes.on("mouseover", branchAnimate)
+      .on("mouseout", branchClear);
+
+    return svg.node();
+    // // @ts-ignore
+    // link = link
+    //   .data(energy.links)
+    //   .enter().append("path")
+    //   // @ts-ignore
+    //   .attr("d", d3Sankey.sankeyLinkHorizontal())
+    //   .attr("stroke", (d:any) =>  color(d.source.group))
+    //   .attr("stroke-width", function (d: any) { return Math.max(1, d.width); })
+    //   .style("mix-blend-mode", "multiply");
+    //
+    // link.append("title")
+    //   .text(function (d: any) { return d.source.name +  "→" + d.target.name + "\n" + format(d.value); });
+    //
+    // // @ts-ignore
+    // node = node
+    //   .data(energy.nodes)
+    //   .enter().append("g");
+    //
+    // node.append("rect")
+    //   .attr("x", function (d: any) { return d.x0; })
+    //   .attr("y", function (d: any) { return d.y0; })
+    //   .attr("height", function (d: any) { return d.y1 - d.y0; })
+    //   .attr("width", function (d: any) { return d.x1 - d.x0; })
+    //   .attr("fill", function (d: any) { return color(d.name.replace(/ .*/, "")); })
+    //   .attr("stroke", "#000")
+    //   .attr("fill", (d:any) => color(d.group));
+    //
+    // node.append("text")
+    //   .attr("x", function (d: any) { return d.x0 - 6; })
+    //   .attr("y", function (d: any) { return (d.y1 + d.y0) / 2; })
+    //   .attr("dy", "0.35em")
+    //   .attr("text-anchor", "end")
+    //   .text(function (d: any) { return d.name; })
+    //   .filter(function (d: any) { return d.x0 < 1000 / 2; })
+    //   .attr("x", function (d: any) { return d.x1 + 6; })
+    //   .attr("text-anchor", "start");
+    //
+    // node.append("title")
+    //   .text(function (d: any) { return d.name + "\n" + format(d.value); });
+    //
+    // link
+    //   .append("linearGradient")
+    // //@ts-ignore
+    //   .attr("id", (d:any) => `${uid}-link-${d.index}`)
+    //   .attr("gradientUnits", "userSpaceOnUse")
+    //   .attr("x1", (d:any) => d.source.x1)
+    //   .attr("x2", (d:any) => d.target.x0)
+    //   .call(gradient =>
+    //   gradient.append("stop")
+    //     .attr("offset", "0%")
+    //     // @ts-ignore
+    //     .attr("stop-color", (d:any) =>{color(d.source.group) }))
+    //   .call(gradient => gradient.append("stop")
+    //     .attr("offset", "0%")
+    //     // @ts-ignore
+    //     .attr("stop-color", (d:any) => color(d.target.group)))
+    //
+    // // .call(gradient => gradient.append("stop")
+    //   //   .attr("offset", "100%")
+    //   //   // @ts-ignore
+    //   //   .attr("stop-color", ({target: {index: i}}) => color(G[i])))
+    // return Object.assign(svg.node(), {scales: {color}});
+
   }
 
 }
