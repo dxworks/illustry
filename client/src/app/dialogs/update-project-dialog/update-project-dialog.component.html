@@ -1,0 +1,16 @@
+
+  <form id="updateDescription" class="d-flex flex-column" [formGroup]="form" (ngSubmit)="updateProject(data.projectName)" >
+
+      <mat-form-field class="maxim" appearance="fill">
+        <mat-label>Project Description</mat-label>
+        <textarea matInput
+                  formControlName="ProjectDescription"
+                  id="projectDescription"
+                  type="text"
+                  class="maxim"
+        ></textarea>
+      </mat-form-field>
+
+
+<button  mat-dialog-close mat-raised-button color="primary" class= "buttonmin" (click)="updateProject(data.projectName)">Done</button>
+  </form>

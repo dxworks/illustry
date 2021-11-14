@@ -47,9 +47,16 @@ export class ProjectAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openDialog() {
-    this.dialog.open(AddProjectDialogComponent);
+  openDialogForAddingProjects() {
+    this.dialog.open(AddProjectDialogComponent,{
+      maxWidth:"100px",
+      minWidth:"50px",
+      maxHeight:"100px",
+      minHeight:"50px"
+    });
   }
+
+
   // selectFile(event: any) {
   //   if (event.target.files.length > 0) {
   //     const file = event.target.files[0];
@@ -78,7 +85,7 @@ export class ProjectAddComponent implements OnInit {
     this.files.splice(this.files.indexOf(event), 1);
   }
   uploadProject() {
-  this.openDialog()
+  this.openDialogForAddingProjects()
     const formData: FormData = new FormData()
 
     formData.append('ProjectName', this.form.value.ProjectName);

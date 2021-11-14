@@ -4,7 +4,10 @@ import { Project } from "../../../../types/projects.model";
 import {ProjectForTableModel} from "../../../../types/projectForTable.model";
 import {MdbTableDirective, MdbTablePaginationComponent} from "angular-bootstrap-md";
 import {Router} from "@angular/router";
-
+import {MatDialog} from "@angular/material/dialog";
+import {DeleteProjectDialogComponent} from "../../../dialogs/delete-project-dialog/delete-project-dialog.component";
+import {UpdateProjectDialogComponent} from "../../../dialogs/update-project-dialog/update-project-dialog.component";
+import {PageEvent} from "@angular/material/paginator";
 
 @Component({
   selector: 'app-projects-list',
@@ -13,13 +16,14 @@ import {Router} from "@angular/router";
 })
 export class ProjectsListComponent implements OnInit,AfterViewInit {
  projects: ProjectForTableModel[] = [];
+
  //@ts-ignore
   @ViewChild(MdbTablePaginationComponent, { static: true }) mdbTablePagination: MdbTablePaginationComponent;
   //@ts-ignore
   @ViewChild(MdbTableDirective, { static: true }) mdbTable: MdbTableDirective
   previous: any = [];
   headElements:string[] = ['id','ProjectName','ProjectDescription','actions'];
-  constructor(private projectService: ProjectsService,private cdRef: ChangeDetectorRef, private router: Router) { }
+  constructor(private projectService: ProjectsService,private cdRef: ChangeDetectorRef, private router: Router, private dialog:MatDialog) { }
   searchText: string = '';
   @HostListener('input') oninput() {
     this.searchItems();
@@ -36,8 +40,8 @@ export class ProjectsListComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.mdbTablePagination.setMaxVisibleItemsNumberTo(20);
-
+    this.mdbTablePagination.hideDescription= true;
+    this.mdbTablePagination.setMaxVisibleItemsNumberTo(100);
     this.mdbTablePagination.calculateFirstItemIndex();
     this.mdbTablePagination.calculateLastItemIndex();
     this.cdRef.detectChanges();
@@ -54,18 +58,31 @@ export class ProjectsListComponent implements OnInit,AfterViewInit {
     }
   }
 
-  deleteProject(projectName:string) {
-
-    this.projectService.deleteProject(projectName)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.router.navigate(['/projects']);
-        },
-        error => {
-          console.log(error);
-        });
+  openDialogForDeletingProjects(projectName:string) {
+    this.dialog.open(DeleteProjectDialogComponent, {
+      data:{ projectName: projectName,
+        maxWidth:"100px",
+        minWidth:"50px",
+        maxHeight:"100px",
+        minHeight:"50px"}
+    })
   }
+
+  openDialogForUpdateProjects(projectName:string) {
+    this.dialog.open(UpdateProjectDialogComponent,{
+      data:{ projectName: projectName},
+      maxWidth:"600px",
+      minWidth:"500px",
+      maxHeight:"600px",
+      minHeight:"500px"
+    })
+  }
+
+  // openDialogForAddingIllustrations() {
+  //   this.dialog.open(AppAddIllustrationDialogComponent)
+  // }
+
+
 
   showIllustrations(projectName:string) {
     this.router.navigate([`/projects/${projectName}/illustrations`]);

@@ -1,14 +1,3 @@
-<!--<div class="row">-->
-<!--  <div class="col-xs-12">-->
-<!--    <app-project-item-->
-<!--      *ngFor="let project of projects;"-->
-<!--      [project]="project"-->
-<!--      [projectName]="project.ProjectName"-->
-<!--    ></app-project-item>-->
-<!--  </div>-->
-<!--</div>-->
-
-
 <div class="container">
   <div class="row">
     <div class="col-md-12 mx-auto">
@@ -28,7 +17,7 @@
   <table id="tableSortExample" mdbTable #tableEl="mdbTable" class="z-depth-1">
     <thead>
     <tr>
-    <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="projects" [sortBy]="headElements[i]">{{head | titlecase}}
+    <th class="clickable"*ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="projects" [sortBy]="headElements[i]">{{head | titlecase}}
     </th>
     </tr>
     </thead>
@@ -37,21 +26,34 @@
 
       <th class="clickable" (click)="showIllustrations(el.ProjectName)" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"
           scope="row">{{el.index}}</th>
-      <td class="clickable" (click)="showIllustrations(el.ProjectName)" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.ProjectName}}</td>
+      <td class="clickable" (click)="showIllustrations(el.ProjectName)"  *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.ProjectName}}</td>
       <td class="clickable" (click)="showIllustrations(el.ProjectName)" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.ProjectDescription}}</td>
-      <td><button mat-icon-button color="warn" (click)="deleteProject(el.ProjectName)"><mat-icon>delete_outline</mat-icon></button>
-        <button mat-icon-button ><mat-icon>launch</mat-icon></button>
+      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click) = "openDialogForUpdateProjects(el.ProjectName)">
+            <mat-icon>update</mat-icon>
+            <span>Update Project</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>add</mat-icon>
+            <span>Add Illustration</span>
+          </button>
+          <button  mat-menu-item color="warn" (click)="openDialogForDeletingProjects(el.ProjectName)"><mat-icon>delete_outline</mat-icon><span>Delete Project</span></button>
+        </mat-menu>
         </td>
     </tr>
 
     </tbody>
-    <tfoot >
-    <tr >
-      <div class="center">
-        <mdb-table-pagination  [tableEl]="tableEl" [searchDataSource]="projects"></mdb-table-pagination>
-      </div>
+    <tfoot class="grey lighten-5 w-100">
+    <tr>
+      <td colspan="10">
+        <mdb-table-pagination paginationAlign="end"  [tableEl]="tableEl" [searchDataSource]="projects"></mdb-table-pagination>
+      </td>
     </tr>
-
     </tfoot>
+
   </table>
 </div>

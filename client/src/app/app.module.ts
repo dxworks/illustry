@@ -37,7 +37,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
 import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-project-dialog.component';
-import {MatDialogModule} from "@angular/material/dialog";
+import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from "@angular/material/dialog";
 import {DotGraphComponent} from './views/graphs/dot-graph/dot-graph.component'
 import {NgxDropzoneModule} from "ngx-dropzone";
 import { GanttchartComponent } from './views/graphs/ganttchart/ganttchart.component';
@@ -45,6 +45,15 @@ import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MDBBootstrapModule} from "angular-bootstrap-md";
+
+import {MatMenuModule} from "@angular/material/menu";
+import { DeleteProjectDialogComponent } from './dialogs/delete-project-dialog/delete-project-dialog.component';
+import { UpdateProjectDialogComponent } from './dialogs/update-project-dialog/update-project-dialog.component';
+import { DeleteIllustrationDialogComponent } from './dialogs/delete-illustration-dialog/delete-illustration-dialog.component';
+import { UpdateIllustrationDialogComponent } from './dialogs/update-illustration-dialog/update-illustration-dialog.component';
+import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialog/add-illustration-dialog.component';
+import { PaginationComponent } from './directives/pagination/pagination.component';
+
 
 @NgModule({
   declarations: [
@@ -74,7 +83,14 @@ import {MDBBootstrapModule} from "angular-bootstrap-md";
     MatrixComponent,
     AddProjectDialogComponent,
     DotGraphComponent,
-    GanttchartComponent
+    GanttchartComponent,
+    DeleteProjectDialogComponent,
+    UpdateProjectDialogComponent,
+    DeleteIllustrationDialogComponent,
+    UpdateIllustrationDialogComponent,
+    AddIllustrationDialogComponent,
+    PaginationComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -95,10 +111,12 @@ import {MDBBootstrapModule} from "angular-bootstrap-md";
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    MatMenuModule,
+
 
   ],
-  providers: [],
+  providers: [ {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
