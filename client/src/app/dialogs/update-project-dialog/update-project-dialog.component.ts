@@ -11,7 +11,7 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./update-project-dialog.component.css']
 })
 export class UpdateProjectDialogComponent implements OnInit {
-  projectDescription='';
+
   form: FormGroup = new FormGroup({   ProjectDescription:new FormControl('',[])});
   constructor(@Inject(MAT_DIALOG_DATA) public data: {projectName: string}, private projectService:ProjectsService, private router: Router) { }
 

@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
 import {DeleteProjectDialogComponent} from "../../../dialogs/delete-project-dialog/delete-project-dialog.component";
 import {UpdateProjectDialogComponent} from "../../../dialogs/update-project-dialog/update-project-dialog.component";
-import {PageEvent} from "@angular/material/paginator";
+import {AddIllustrationDialogComponent} from "../../../dialogs/add-illustration-dialog/add-illustration-dialog.component";
 
 @Component({
   selector: 'app-projects-list',
@@ -22,7 +22,7 @@ export class ProjectsListComponent implements OnInit,AfterViewInit {
   //@ts-ignore
   @ViewChild(MdbTableDirective, { static: true }) mdbTable: MdbTableDirective
   previous: any = [];
-  headElements:string[] = ['id','ProjectName','ProjectDescription','actions'];
+  headElements:string[] = ['Id','ProjectName','ProjectDescription','actions'];
   constructor(private projectService: ProjectsService,private cdRef: ChangeDetectorRef, private router: Router, private dialog:MatDialog) { }
   searchText: string = '';
   @HostListener('input') oninput() {
@@ -60,11 +60,11 @@ export class ProjectsListComponent implements OnInit,AfterViewInit {
 
   openDialogForDeletingProjects(projectName:string) {
     this.dialog.open(DeleteProjectDialogComponent, {
-      data:{ projectName: projectName,
-        maxWidth:"100px",
-        minWidth:"50px",
-        maxHeight:"100px",
-        minHeight:"50px"}
+      data:{ projectName: projectName},
+        maxWidth:"500px",
+        minWidth:"400px",
+        maxHeight:"200px",
+        minHeight:"150px"
     })
   }
 
@@ -78,9 +78,15 @@ export class ProjectsListComponent implements OnInit,AfterViewInit {
     })
   }
 
-  // openDialogForAddingIllustrations() {
-  //   this.dialog.open(AppAddIllustrationDialogComponent)
-  // }
+  openDialogForAddingIllustrations(projectName:string) {
+    this.dialog.open(AddIllustrationDialogComponent,{
+      data:{ projectName: projectName},
+      maxWidth:"750px",
+      minWidth:"700px",
+      maxHeight:"600px",
+      minHeight:"550px"
+    })
+  }
 
 
 

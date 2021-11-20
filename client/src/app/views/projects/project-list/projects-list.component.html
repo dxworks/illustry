@@ -37,7 +37,7 @@
             <mat-icon>update</mat-icon>
             <span>Update Project</span>
           </button>
-          <button mat-menu-item>
+          <button mat-menu-item (click) = "openDialogForAddingIllustrations(el.ProjectName)">
             <mat-icon>add</mat-icon>
             <span>Add Illustration</span>
           </button>
@@ -50,7 +50,7 @@
     <tfoot class="grey lighten-5 w-100">
     <tr>
       <td colspan="10">
-        <mdb-table-pagination paginationAlign="end"  [tableEl]="tableEl" [searchDataSource]="projects"></mdb-table-pagination>
+        <mdb-table-pagination paginationAlign="end" [tableEl]="tableEl" [searchDataSource]="projects"></mdb-table-pagination>
       </td>
     </tr>
     </tfoot>
