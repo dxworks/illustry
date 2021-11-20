@@ -179,7 +179,7 @@ export class SankyDiagramComponent implements OnInit {
         .attr("stroke",(d:any) =>color(d.source.group) )
         .attr("stroke-opacity", 0.5)
         .transition()
-        .duration(900)
+        // .duration(900)
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0)
         .on("end", () => {
@@ -201,69 +201,6 @@ export class SankyDiagramComponent implements OnInit {
       .on("mouseout", branchClear);
 
     return svg.node();
-    // // @ts-ignore
-    // link = link
-    //   .data(energy.links)
-    //   .enter().append("path")
-    //   // @ts-ignore
-    //   .attr("d", d3Sankey.sankeyLinkHorizontal())
-    //   .attr("stroke", (d:any) =>  color(d.source.group))
-    //   .attr("stroke-width", function (d: any) { return Math.max(1, d.width); })
-    //   .style("mix-blend-mode", "multiply");
-    //
-    // link.append("title")
-    //   .text(function (d: any) { return d.source.name +  "→" + d.target.name + "\n" + format(d.value); });
-    //
-    // // @ts-ignore
-    // node = node
-    //   .data(energy.nodes)
-    //   .enter().append("g");
-    //
-    // node.append("rect")
-    //   .attr("x", function (d: any) { return d.x0; })
-    //   .attr("y", function (d: any) { return d.y0; })
-    //   .attr("height", function (d: any) { return d.y1 - d.y0; })
-    //   .attr("width", function (d: any) { return d.x1 - d.x0; })
-    //   .attr("fill", function (d: any) { return color(d.name.replace(/ .*/, "")); })
-    //   .attr("stroke", "#000")
-    //   .attr("fill", (d:any) => color(d.group));
-    //
-    // node.append("text")
-    //   .attr("x", function (d: any) { return d.x0 - 6; })
-    //   .attr("y", function (d: any) { return (d.y1 + d.y0) / 2; })
-    //   .attr("dy", "0.35em")
-    //   .attr("text-anchor", "end")
-    //   .text(function (d: any) { return d.name; })
-    //   .filter(function (d: any) { return d.x0 < 1000 / 2; })
-    //   .attr("x", function (d: any) { return d.x1 + 6; })
-    //   .attr("text-anchor", "start");
-    //
-    // node.append("title")
-    //   .text(function (d: any) { return d.name + "\n" + format(d.value); });
-    //
-    // link
-    //   .append("linearGradient")
-    // //@ts-ignore
-    //   .attr("id", (d:any) => `${uid}-link-${d.index}`)
-    //   .attr("gradientUnits", "userSpaceOnUse")
-    //   .attr("x1", (d:any) => d.source.x1)
-    //   .attr("x2", (d:any) => d.target.x0)
-    //   .call(gradient =>
-    //   gradient.append("stop")
-    //     .attr("offset", "0%")
-    //     // @ts-ignore
-    //     .attr("stop-color", (d:any) =>{color(d.source.group) }))
-    //   .call(gradient => gradient.append("stop")
-    //     .attr("offset", "0%")
-    //     // @ts-ignore
-    //     .attr("stop-color", (d:any) => color(d.target.group)))
-    //
-    // // .call(gradient => gradient.append("stop")
-    //   //   .attr("offset", "100%")
-    //   //   // @ts-ignore
-    //   //   .attr("stop-color", ({target: {index: i}}) => color(G[i])))
-    // return Object.assign(svg.node(), {scales: {color}});
-
   }
 
 }

@@ -1,5 +1,5 @@
 svg.matrixdiagram {
-  font: 10px sans-serif;
+  font: 20px sans-serif;
 }
 svg.matrixdiagram .label {
   fill: #999;
@@ -17,3 +17,8 @@ svg.matrixdiagram rect {
 svg.matrixdiagram rect:hover {
   stroke-width: 1px;
 }
+
+.center{
+  margin:5%
+}
+

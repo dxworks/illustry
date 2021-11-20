@@ -32,6 +32,7 @@ export interface CalendarHeatmapData extends CalendarHeatmapItem {
   selector: 'app-matrixcalendar',
   template: `<div #root></div>`,
   styles: [`
+ 
     :host {
       position: relative;
       user-select: none;
@@ -41,6 +42,11 @@ export interface CalendarHeatmapData extends CalendarHeatmapItem {
     }
     :host >>> .item {
       cursor: pointer;
+    }
+    :host >>> #center {
+        margin-top:3%;
+       margin-right: 3%;
+        margin-bottom: 3%;
     }
     :host >>> .label {
       cursor: pointer;
@@ -324,8 +330,8 @@ export class MatrixcalendarComponent  {
     // Initialize svg element
     this.svg = d3.select(element)
       .append('svg')
-      .attr('class', 'svg');
-
+      .attr('class', 'svg')
+      .attr("id","center");
     // Initialize main svg elements
     this.items = this.svg.append('g');
     this.labels = this.svg.append('g');
@@ -1786,9 +1792,9 @@ export class MatrixcalendarComponent  {
         this.drawChart();
       });
     button.append('circle')
-      .attr('cx', this.label_padding / 2.25)
-      .attr('cy', this.label_padding / 2.5)
-      .attr('r', this.item_size / 2);
+      .attr('cx', this.label_padding / 2)
+      .attr('cy', this.label_padding / 1.75)
+      .attr('r', this.item_size / 3.5);
     button.append('text')
       .attr('x', this.label_padding / 2.25)
       .attr('y', this.label_padding / 2.5)

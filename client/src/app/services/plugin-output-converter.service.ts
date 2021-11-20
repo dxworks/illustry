@@ -14,8 +14,6 @@ export class PluginOutputConverterService {
 
     let result = '';
     const graphJson = pluginGraphOutput;
-    console.log("aici")
-    console.log(graphJson)
     if (isNullOrUndefined(pluginGraphOutput) || isNullOrUndefined(graphJson) || pluginGraphOutput === '') {
       //@ts-ignore
       return null;
@@ -47,7 +45,6 @@ export class PluginOutputConverterService {
         }
       });
     }
-    console.log(nodesText)
     return nodesText;
   }
 
