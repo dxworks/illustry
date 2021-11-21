@@ -15,9 +15,9 @@ import {OverviewType} from "../matrixcalendar/matrixcalendar.component";
 export class StackedChartComponent implements OnInit {
   @Input()
   data: any;
-
+  color:any;
   chart: any[];
-  color: any;
+
   constructor() {
     Chart.register(...registerables)
   }
@@ -31,16 +31,15 @@ export class StackedChartComponent implements OnInit {
     const lastNumber = Math.random()*2;
     return `rgb(${randomNumber},${randomNumber},${randomNumber},${lastNumber})`
   }
-
   private createStacked(data: any) {
     const labels:string[] = Array.from(new Set(data.chart.map((d:any) => d.group)));
     const subgroups: string[] = data.subgroups;
     let datasets : any[] = [];
     let finalDatasets:any[] = [];
     this.color = d3.scaleOrdinal(d3.schemeCategory10)
-    subgroups.forEach((subgroup) => { finalDatasets.push({label:subgroup}); datasets[subgroup] = data.chart.map((d:any) => d[subgroup])})
+    subgroups.forEach((subgroup) => { finalDatasets.push({label:subgroup,color:this.color(subgroup)}); datasets[subgroup] = data.chart.map((d:any) => d[subgroup])})
       console.log(datasets)
-    finalDatasets.forEach((fd) => { console.log(fd);finalDatasets.map((d:any) => {d.borderColor =this.color(fd); d.backgroundColor =this.createRandomColor(); d.data =datasets[Object.values(fd)[0]]})})
+    finalDatasets.forEach((fd) => {console.log(fd); finalDatasets.map((d:any) => {d.borderColor =d.color; d.backgroundColor =d.color; d.data =datasets[Object.values(fd)[0]]})})
     console.log(finalDatasets)
     //@ts-ignore
     var ctx = document.getElementById('myChart').getContext('2d');
