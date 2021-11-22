@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {ProjectAddComponent} from "./views/projects/project-add/project-add.component";
-import {ProjectsComponent} from "./views/projects/projects.component";
-import {IllustrationsComponent} from "./views/illustrations/illustrations.component";
-import {GraphsComponent} from "./views/graphs/graphs.component";
+import { ProjectAddComponent } from "./views/projects/project-add/project-add.component";
+import { ProjectsComponent } from "./views/projects/projects.component";
+import { IllustrationsComponent } from "./views/illustrations/illustrations.component";
+import { GraphsComponent } from "./views/graphs/graphs.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'projects', pathMatch: 'full' },
@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent,
     children: []
-      },
+  },
 
   {
     path: 'projects/:projectName/illustrations',

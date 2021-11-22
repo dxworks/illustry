@@ -8,9 +8,9 @@ describe('StackedChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StackedChartComponent ]
+      declarations: [StackedChartComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from "@angular/router";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from "@angular/router";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-illustrations',
@@ -21,6 +21,4 @@ export class IllustrationsComponent implements OnInit {
           this.projectName = params['projectName'];
         })
   }
-
-
 }

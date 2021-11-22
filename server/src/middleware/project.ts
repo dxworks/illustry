@@ -75,7 +75,6 @@ export const findOne = (req: any, res: any, next: any) => {
 
 export const updateProject = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
-    console.log(projectName)
     let projectDescription = _.get(req, 'body.ProjectDescription')
 
     {

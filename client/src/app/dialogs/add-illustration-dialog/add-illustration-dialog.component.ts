@@ -1,10 +1,10 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
-import {ProjectsService} from "../../services/projects.service";
-import {Router} from "@angular/router";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {throwError} from "rxjs";
-import {IllustrationService} from "../../services/illustration.service";
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { ProjectsService } from "../../services/projects.service";
+import { Router } from "@angular/router";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { throwError } from "rxjs";
+import { IllustrationService } from "../../services/illustration.service";
 
 @Component({
   selector: 'app-add-illustration-dialog',
@@ -13,20 +13,19 @@ import {IllustrationService} from "../../services/illustration.service";
 })
 export class AddIllustrationDialogComponent implements OnInit {
   form: FormGroup = new FormGroup({
-    File: new FormControl('',[Validators.required]),
-    IllustrationName: new FormControl('',[Validators.required]),
-    IllustrationType: new FormControl('',[Validators.required]),
+    File: new FormControl('', [Validators.required]),
+    IllustrationName: new FormControl('', [Validators.required]),
+    IllustrationType: new FormControl('', [Validators.required]),
     Tags: new FormControl('', [])
   });
   files: File[] = [];
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {projectName: string}, private illustrationService:IllustrationService, private router: Router) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { projectName: string }, private illustrationService: IllustrationService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onSelect(event:any) {
-    console.log(event);
+  onSelect(event: any) {
     this.files.push(...event.addedFiles);
     const file = this.files[0];
     this.form.patchValue({
@@ -34,8 +33,7 @@ export class AddIllustrationDialogComponent implements OnInit {
     });
   }
 
-  onRemove(event:any) {
-    console.log(event);
+  onRemove(event: any) {
     this.files.splice(this.files.indexOf(event), 1);
   }
 
@@ -44,12 +42,11 @@ export class AddIllustrationDialogComponent implements OnInit {
     const formData: FormData = new FormData()
 
     formData.append('File', this.form.value.File);
-    formData.append('IllustrationName',this.form.value.IllustrationName)
-    formData.append('IllustrationType',this.form.value.IllustrationType)
+    formData.append('IllustrationName', this.form.value.IllustrationName)
+    formData.append('IllustrationType', this.form.value.IllustrationType)
     formData.append('Tags', this.form.value.Tags)
-    this.illustrationService.createIllustration(this.data.projectName,formData)
+    this.illustrationService.createIllustration(this.data.projectName, formData)
       .subscribe(response => {
-        console.log(response)
       }, error => {
         throwError(error)
       });

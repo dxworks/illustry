@@ -1,4 +1,4 @@
-.project-name-container .mat-form-field + .mat-form-field {
+.project-name-container .mat-form-field+.mat-form-field {
   margin: 8px;
   padding: 8px;
   align-content: center;
@@ -8,40 +8,42 @@
   margin: 50px;
   align-content: center;
 }
+
 .mat-form-field {
   width: 50%;
   align-content: center;
 }
-.d-flex flex-column{
+
+.d-flex flex-column {
   align-content: center;
-  display:block;
-  width:50%;
-  margin:0 auto;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
 }
 
 
 #projectDescription {
   height: 100px;
 }
-/*#tags {*/
-/*  height: 100px;*/
-/*}*/
+
 .center {
   margin-left: auto;
   margin-right: auto;
 }
+
 .centerDrop {
-  margin-left: auto ;
+  margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
 .centerButton {
   margin-bottom: 10px;
-  margin-left: auto ;
+  margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
 }
+
 .file-upload {
   display: inline-flex;
   align-items: center;
@@ -53,14 +55,16 @@
   display: none;
 }
 
-.btn-primary{
-  margin-top: 20px;
- width: 100px;
-}
-.btn-danger{
+.btn-primary {
   margin-top: 20px;
   width: 100px;
 }
+
+.btn-danger {
+  margin-top: 20px;
+  width: 100px;
+}
+
 .file-upload__button {
   -webkit-appearance: none;
   background: #009879;

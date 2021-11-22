@@ -1,15 +1,15 @@
-import {ChangeDetectorRef, Component, HostListener, Input, OnInit, Output, ViewChild} from '@angular/core';
-import {Illustration} from "../../../../types/illustration.model";
-import {IllustrationService} from "../../../services/illustration.service";
-import {IllustrationForTableModel} from "../../../../types/illustrationForTable.model";
-import {MdbTableDirective, MdbTablePaginationComponent} from "angular-bootstrap-md";
-import {Project} from "../../../../types/projects.model";
-import {Router} from "@angular/router";
-import {MatDialog} from "@angular/material/dialog";
-import {DeleteProjectDialogComponent} from "../../../dialogs/delete-project-dialog/delete-project-dialog.component";
-import {UpdateProjectDialogComponent} from "../../../dialogs/update-project-dialog/update-project-dialog.component";
-import {DeleteIllustrationDialogComponent} from "../../../dialogs/delete-illustration-dialog/delete-illustration-dialog.component";
-import {UpdateIllustrationDialogComponent} from "../../../dialogs/update-illustration-dialog/update-illustration-dialog.component";
+import { ChangeDetectorRef, Component, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Illustration } from "../../../../types/illustration.model";
+import { IllustrationService } from "../../../services/illustration.service";
+import { IllustrationForTableModel } from "../../../../types/illustrationForTable.model";
+import { MdbTableDirective, MdbTablePaginationComponent } from "angular-bootstrap-md";
+import { Project } from "../../../../types/projects.model";
+import { Router } from "@angular/router";
+import { MatDialog } from "@angular/material/dialog";
+import { DeleteProjectDialogComponent } from "../../../dialogs/delete-project-dialog/delete-project-dialog.component";
+import { UpdateProjectDialogComponent } from "../../../dialogs/update-project-dialog/update-project-dialog.component";
+import { DeleteIllustrationDialogComponent } from "../../../dialogs/delete-illustration-dialog/delete-illustration-dialog.component";
+import { UpdateIllustrationDialogComponent } from "../../../dialogs/update-illustration-dialog/update-illustration-dialog.component";
 
 @Component({
   selector: 'app-illustration-list',
@@ -26,8 +26,8 @@ export class IllustrationListComponent implements OnInit {
   //@ts-ignore
   @ViewChild(MdbTableDirective, { static: true }) mdbTable: MdbTableDirective
   previous: any = [];
-  headElements:string[] = ['Id','IllustrationName','IllustrationType','Tags','actions'];
-  constructor(private illustrationService: IllustrationService,private cdRef: ChangeDetectorRef, private router: Router, private dialog:MatDialog) { }
+  headElements: string[] = ['Id', 'IllustrationName', 'IllustrationType', 'Tags', 'actions'];
+  constructor(private illustrationService: IllustrationService, private cdRef: ChangeDetectorRef, private router: Router, private dialog: MatDialog) { }
 
 
   searchText: string = '';
@@ -36,8 +36,8 @@ export class IllustrationListComponent implements OnInit {
   }
   ngOnInit(): void {
     this.illustrationService.getAllIllustrations(this.projectName).subscribe((illustrations: Illustration[]) => {
-      illustrations.forEach((illustrations,index) => {
-        this.illustrations.push({index:index+1,IllustrationName:illustrations.IllustrationName,IllustrationType:illustrations.IllustrationType,Tags:illustrations.Tags, IllustrationData: illustrations.IllustrationData})
+      illustrations.forEach((illustrations, index) => {
+        this.illustrations.push({ index: index + 1, IllustrationName: illustrations.IllustrationName, IllustrationType: illustrations.IllustrationType, Tags: illustrations.Tags, IllustrationData: illustrations.IllustrationData })
       });
       this.mdbTable.setDataSource(this.illustrations);
       this.illustrations = this.mdbTable.getDataSource();
@@ -46,7 +46,7 @@ export class IllustrationListComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.mdbTablePagination.hideDescription= true;
+    this.mdbTablePagination.hideDescription = true;
     this.mdbTablePagination.setMaxVisibleItemsNumberTo(10);
     this.mdbTablePagination.calculateFirstItemIndex();
     this.mdbTablePagination.calculateLastItemIndex();
@@ -59,34 +59,38 @@ export class IllustrationListComponent implements OnInit {
       this.illustrations = this.mdbTable.getDataSource();
     }
     if (this.searchText) {
-      this.illustrations = this.mdbTable.searchLocalDataByMultipleFields(this.searchText, [ 'IllustrationName', 'IllustrationType','Tags']);
+      this.illustrations = this.mdbTable.searchLocalDataByMultipleFields(this.searchText, ['IllustrationName', 'IllustrationType', 'Tags']);
       this.mdbTable.setDataSource(prev);
     }
   }
-  openDialogForDeletingIllustration(illustrationName:string) {
+  openDialogForDeletingIllustration(illustrationName: string) {
     this.dialog.open(DeleteIllustrationDialogComponent, {
-      data:{ illustrationName: illustrationName,
-        projectName: this.projectName},
-        maxWidth:"500px",
-        minWidth:"400px",
-        maxHeight:"200px",
-        minHeight:"150px"
-      })
+      data: {
+        illustrationName: illustrationName,
+        projectName: this.projectName
+      },
+      maxWidth: "500px",
+      minWidth: "400px",
+      maxHeight: "200px",
+      minHeight: "150px"
+    })
   }
 
-  openDialogForUpdateIllustration(illustrationName:string) {
-    this.dialog.open(UpdateIllustrationDialogComponent,{
-      data:{ illustrationName: illustrationName,
-      projectName: this.projectName},
-        maxWidth:"700px",
-        minWidth:"700px",
-        maxHeight:"600px",
-        minHeight:"550px"
+  openDialogForUpdateIllustration(illustrationName: string) {
+    this.dialog.open(UpdateIllustrationDialogComponent, {
+      data: {
+        illustrationName: illustrationName,
+        projectName: this.projectName
+      },
+      maxWidth: "700px",
+      minWidth: "700px",
+      maxHeight: "600px",
+      minHeight: "550px"
     })
   }
 
 
-  showGraphic(illustrationName:string) {
+  showGraphic(illustrationName: string) {
     this.router.navigate([`projects/${this.projectName}/illustrations/${illustrationName}/illustration`]);
   }
 }

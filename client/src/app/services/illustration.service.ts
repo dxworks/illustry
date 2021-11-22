@@ -1,36 +1,36 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Illustration} from "../../types/illustration.model";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Illustration } from "../../types/illustration.model";
 
 const projectUrl = 'http://localhost:3000/project';
 
-@Injectable({providedIn:'root'})
+@Injectable({ providedIn: 'root' })
 export class IllustrationService {
 
   constructor(private httpClient: HttpClient) {
   }
 
-  getAllIllustrations(projectName:string) {
+  getAllIllustrations(projectName: string) {
     return this.httpClient.get<Illustration[]>(`${projectUrl}/${projectName}/illustration`)
   }
 
-  getIllustration(projectName: string, illustrationName:string) {
+  getIllustration(projectName: string, illustrationName: string) {
     return this.httpClient.get<Illustration>(`${projectUrl}/${projectName}/illustration/${illustrationName}`)
   }
 
-  createIllustration(projectName:string,data:any) {
+  createIllustration(projectName: string, data: any) {
     return this.httpClient.post(`${projectUrl}/${projectName}/illustration`, data)
   }
 
-  updateIllustration(projectName: string, illustrationName:string, data:any) {
+  updateIllustration(projectName: string, illustrationName: string, data: any) {
     return this.httpClient.put(`${projectUrl}/${projectName}/illustration/${illustrationName}`, data)
   }
 
-  deleteIllustration(projectName:string, illustrationName:string) {
+  deleteIllustration(projectName: string, illustrationName: string) {
     return this.httpClient.delete(`${projectUrl}/${projectName}/illustration/${illustrationName}`)
   }
 
-  getAllIllustrationOfTheSameType(projectName:string, type: string) {
+  getAllIllustrationOfTheSameType(projectName: string, type: string) {
     return this.httpClient.get<Illustration[]>(`${projectUrl}/${projectName}/illustration/type/${type}`)
   }
 }

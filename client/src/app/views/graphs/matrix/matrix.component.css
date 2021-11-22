@@ -1,24 +1,27 @@
 svg.matrixdiagram {
   font: 20px sans-serif;
 }
+
 svg.matrixdiagram .label {
   fill: #999;
   font-size: 8px;
   text-anchor: end;
 }
+
 svg.matrixdiagram .column .label {
   text-anchor: start;
 }
+
 svg.matrixdiagram rect {
   fill: #eee;
   stroke: #d62333;
   stroke-width: 0;
 }
+
 svg.matrixdiagram rect:hover {
   stroke-width: 1px;
 }
 
-.center{
-  margin:5%
+.center {
+  margin: 5%
 }
-

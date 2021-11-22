@@ -1,7 +1,7 @@
 .maxim {
   height: 400px;
   width: 100%;
-  margin-left: auto ;
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -9,19 +9,21 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .centerDrop {
-  margin-left: auto ;
+  margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
 .centerButton {
   margin-bottom: 10px;
-  margin-left: auto ;
+  margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
 }
-.buttonmin{
+
+.buttonmin {
   margin-top: 50px;
   width: 30%;
   margin-left: auto;

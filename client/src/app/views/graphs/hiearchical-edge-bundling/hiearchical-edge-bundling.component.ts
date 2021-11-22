@@ -1,8 +1,8 @@
 // @ts-nocheck
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Illustration} from "../../../../types/illustration.model";
-import {IllustrationService} from "../../../services/illustration.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Illustration } from "../../../../types/illustration.model";
+import { IllustrationService } from "../../../services/illustration.service";
+import { ActivatedRoute, Params, Router } from "@angular/router";
 import * as d3 from 'd3';
 @Component({
   selector: 'app-hiearchical-edge-bundling',
@@ -13,7 +13,7 @@ import * as d3 from 'd3';
 export class HiearchicalEdgeBundlingComponent implements OnInit {
   private links = [];
   private nodes = [];
-  private graph = {nodes: [], links: []};
+  private graph = { nodes: [], links: [] };
   private chartSvg: any;
   private diameter: any;
   private tooltipMaxWidth = 500;
@@ -24,13 +24,10 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
 
   ngOnInit(): void {
     this.links = this.data.links;
-    console.log(this.links)
     // @ts-ignore
     this.nodes = this.data.nodes;
-    console.log(this.nodes)
     //@ts-ignore
-    this.graph = {links:this.links, nodes: this.nodes}
-    console.log("This graph" + JSON.stringify(this.graph))
+    this.graph = { links: this.links, nodes: this.nodes }
     this.createHedge()
   }
 
@@ -49,7 +46,6 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
       .text('tooltip');
     this.computeDimensions();
     const radius = this.diameter / 2;
-    console.log(radius);
     const innerRadius = radius - 200;
     const cluster = d3.cluster()
       .size([360, innerRadius]);
@@ -68,7 +64,6 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
       .append('g')
       .attr('transform', 'translate(' + radius + ',' + radius + ')');
 
-    console.log(this.graph.nodes);
     const root = packageHierarchy(this.graph.nodes)
       .sum((d: any) => d.size);
     cluster(root);
@@ -90,7 +85,8 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
       .on('mouseout', onNodeOrLinkMouseOut)
       .on('mousemove', onMouseMove)
       .on('click', (d: any) => {
-        tooltip.style('visibility', 'hidden'); });
+        tooltip.style('visibility', 'hidden');
+      });
     link = link
       .data(createLinks(root.leaves(), this.graph.links))
       .enter().append('path')
@@ -256,7 +252,6 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
         };
 
         componentNode.children.push(n);
-        console.log(n);
         return n;
       }
 
@@ -264,7 +259,6 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
       nodes.forEach(d => {
         assignToComponents(d);
       });
-      console.log(map);
       return d3.hierarchy(map['@root']);
     }
 
@@ -279,8 +273,7 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
       // For each import, construct a link from the source to target node.
       links.forEach(lnk => {
         let _import;
-        console.log(lnk);
-        if (lnk.source=== null || lnk.source ===undefined) {
+        if (lnk.source === null || lnk.source === undefined) {
           _import = map[lnk.source].path(map[lnk.target]);
 
         } else {

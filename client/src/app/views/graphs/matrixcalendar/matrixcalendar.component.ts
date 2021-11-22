@@ -97,7 +97,7 @@ export interface CalendarHeatmapData extends CalendarHeatmapItem {
   `],
 })
 
-export class MatrixcalendarComponent  {
+export class MatrixcalendarComponent {
 
   constructor() { }
 
@@ -172,10 +172,10 @@ export class MatrixcalendarComponent  {
     // Construct tooltip
     var tooltip_html = '';
     const isDateFuture: boolean = moment(d.date) > moment();
-    if(!isDateFuture)
-    tooltip_html +=  '<div><span><strong>Total time tracked: </strong></span>';
+    if (!isDateFuture)
+      tooltip_html += '<div><span><strong>Total time tracked: </strong></span>';
     else
-      tooltip_html +=  '<div><span><strong>Total time planned: </strong></span>';
+      tooltip_html += '<div><span><strong>Total time planned: </strong></span>';
 
     var sec = d.total;
     var days = Math.floor(sec / 86400);
@@ -331,7 +331,7 @@ export class MatrixcalendarComponent  {
     this.svg = d3.select(element)
       .append('svg')
       .attr('class', 'svg')
-      .attr("id","center");
+      .attr("id", "center");
     // Initialize main svg elements
     this.items = this.svg.append('g');
     this.labels = this.svg.append('g');

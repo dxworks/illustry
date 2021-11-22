@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {isNullOrUndefined} from "@qntm-code/utils";
+import { Injectable } from '@angular/core';
+import { isNullOrUndefined } from "@qntm-code/utils";
 
 
 @Injectable({
@@ -18,14 +18,9 @@ export class PluginOutputConverterService {
       //@ts-ignore
       return null;
     }
-    // const visualTags = graphJson.visualTags;
-    // if (isNullOrUndefined(visualTags))
-    //   return null;
-    // if (visualTags.includes('digraph')) {
+
     result = 'strict digraph G{\n';
-    // } else if (visualTags.includes('graph')) {
-    //   result = 'strict graph G{\n';
-    // }
+
 
     result += '\tcompound=true;\n';
     result += this.extractNodesInfo(graphJson);
@@ -34,11 +29,11 @@ export class PluginOutputConverterService {
     return result;
   }
 
-  private extractNodesInfo(testDataJSON:any): string {
+  private extractNodesInfo(testDataJSON: any): string {
     let nodesText = '';
     const nodes = testDataJSON.nodes;
     if (!isNullOrUndefined(nodes)) {
-      nodes.forEach((node:any) => {
+      nodes.forEach((node: any) => {
         const formatting = node.formatting;
         if (!isNullOrUndefined(formatting)) {
           nodesText += '\t\"' + node.id + '\"' + this.extractFormatting(formatting) + ';\n';
@@ -52,7 +47,7 @@ export class PluginOutputConverterService {
     let linksText = '';
     const links = testDataJSON.links;
     if (!isNullOrUndefined(links)) {
-      links.forEach((link:any) => {
+      links.forEach((link: any) => {
         const formatting = link.formatting;
         const source = link.source;
         const target = link.target;
@@ -63,7 +58,6 @@ export class PluginOutputConverterService {
         linksText += '\t\"' + source + '\" -> \"' + target + '\"' + this.extractFormatting(formatting) + ';\n';
       });
     }
-    console.log(linksText)
     return linksText;
   }
 

@@ -1,11 +1,3 @@
-/*.grid {*/
-/*  display: grid;*/
-/*  width: 80em;*/
-/*  grid-gap: 6rem;*/
-/*  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));*/
-/*  align-items: start;*/
-/*}*/
-
 .table {
   width: 100%;
 }
@@ -20,10 +12,12 @@
   cursor: pointer;
   word-wrap: break-word;
 }
+
 .td {
   word-wrap: break-word;
   max-width: 150px;
 }
+
 .th {
   word-wrap: break-word;
   max-width: 150px;
@@ -37,8 +31,3 @@
   margin-top: 5%;
 
 }
-
-/*.clickableDescription {*/
-/*  cursor:pointer;*/
-/*  max-width: 100px;*/
-/*}*/

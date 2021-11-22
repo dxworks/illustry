@@ -1,13 +1,14 @@
 <form [formGroup]="form" (ngSubmit)="updateIllustration()">
-
   <div align="center">
     <mat-form-field appearance="fill">
       <mat-label>Illustration Name</mat-label>
-      <input matInput
-             formControlName="IllustrationName"
-             id="illustrationName"
-             type="text"
-             required>
+      <input
+        matInput
+        formControlName="IllustrationName"
+        id="illustrationName"
+        type="text"
+        required
+      />
     </mat-form-field>
   </div>
   <div align="center">
@@ -16,7 +17,8 @@
       <mat-select
         formControlName="IllustrationType"
         id="IllustrationType"
-        required>
+        required
+      >
         <mat-option value="charts">Vertical Charts</mat-option>
         <mat-option value="stackedcharts">Stacked Charts</mat-option>
         <mat-option value="horizontal charts">Stacked Charts</mat-option>
@@ -35,28 +37,40 @@
   <div align="center">
     <mat-form-field appearance="fill">
       <mat-label>Tags</mat-label>
-      <input matInput
-             formControlName="Tags"
-             id="Tags"
-             type="text"
-             required>
+      <input matInput formControlName="Tags" id="Tags" type="text" required />
     </mat-form-field>
   </div>
   <div class="centerDrop">
     <div class="form-group">
-      <ngx-dropzone  name="file" id="file" [multiple] = false  (change)="onSelect($event)">
+      <ngx-dropzone
+        name="file"
+        id="file"
+        [multiple]="false"
+        (change)="onSelect($event)"
+      >
         <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
-        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+        <ngx-dropzone-preview
+          *ngFor="let f of files"
+          [removable]="true"
+          (removed)="onRemove(f)"
+        >
           <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
         </ngx-dropzone-preview>
       </ngx-dropzone>
     </div>
   </div>
 
-
   <div align="center">
     <div class="centerButton">
-      <button mat-dialog-close mat-raised-butto class="btn btn-primary" type="submit" [disabled]="!form.valid" >Submit</button>
+      <button
+        mat-dialog-close
+        mat-raised-butto
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Submit
+      </button>
       <!--        <button class ="btn btn-danger" (click)="clearForm()">Reset</button>-->
     </div>
   </div>

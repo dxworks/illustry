@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import * as d3 from 'd3';
-import {isNumber} from "@qntm-code/utils";
+import { isNumber } from "@qntm-code/utils";
 
 @Component({
   selector: 'app-ganttchart',
@@ -11,7 +11,7 @@ export class GanttchartComponent implements OnInit {
   // @Input()
   // data: any;
 
-   dataInput = [
+  dataInput = [
     {
       "c1": "",
       "c2": "<b>2000</b>",
@@ -512,12 +512,12 @@ export class GanttchartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-     console.log("aici")
-    this.tabulate(this.dataInput,["c1", "c2", "c3", "c4", "c5", "c6"])
+    console.log("aici")
+    this.tabulate(this.dataInput, ["c1", "c2", "c3", "c4", "c5", "c6"])
   }
 
 
-  tabulate(data:any, columns:any) {
+  tabulate(data: any, columns: any) {
     var table = d3.select("#med_inc")
       , columnNames = ["", "", "", "", "", ""]
       , thead = table.append("thead")
@@ -537,29 +537,29 @@ export class GanttchartComponent implements OnInit {
       .enter()
       .append("tr");
 
-    let formatMoney = function(n:any) {
+    let formatMoney = function (n: any) {
       return n.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
     };
     // create a cell in each row for each column
     var cells = rows.selectAll("td")
-      .data(function (row:any) {
-        return columns.map(function (column:any) {
+      .data(function (row: any) {
+        return columns.map(function (column: any) {
           return { column: column, value: row[column] };
         });
       })
       .enter()
       .append("td")
       .attr("style", "font-family: 'Lato'")
-      .attr("border-right","1px solid black")
-      .html(function (d:any) {
+      .attr("border-right", "1px solid black")
+      .html(function (d: any) {
         console.log(d)
         if (isNumber(d.value)) {//jQuery function checks if number is numeric, if it is formats it with thousands seporator
-          return  formatMoney(d.value)
+          return formatMoney(d.value)
         } else {
           return d.value;
         };
       });
-  console.log(cells)
+    console.log(cells)
     return table;
   };
 

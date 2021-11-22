@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import * as d3 from 'd3'
 import * as d3Sankey from 'd3-sankey'
-import {range} from "rxjs";
+import { range } from "rxjs";
 
 @Component({
   selector: 'app-sanky-diagram',
@@ -14,9 +14,9 @@ export class SankyDiagramComponent implements OnInit {
   links = [];
   nodes = [];
   color: any;
-  graph = {nodes: [], "links": [], units: ""};
+  graph = { nodes: [], "links": [], units: "" };
   nodeAlign: any;
-  nodeGroup:any;
+
   @Input()
   data: any;
 
@@ -26,18 +26,51 @@ export class SankyDiagramComponent implements OnInit {
   ngOnInit(): void {
     this.nodes = this.data.nodes;
     // @ts-ignore
-    this.nodes.map((node,i) => node['index']=i )
-    this.links = modifyLinks(this.nodes,this.data.links);
+    this.nodes.map((node, i) => node['index'] = i)
+    this.links = modifyLinks(this.nodes, this.data.links);
     //@ts-ignore
-    this.graph = {links: this.links, nodes: this.nodes};
+    this.graph = { links: this.links, nodes: this.nodes };
     this.nodeAlign = pickNodeAlign("justify")
-    this.DrawChart(this.graph,this.nodeAlign)
+    this.DrawChart(this.graph, this.nodeAlign)
+    this.DrawLegend(this.graph.nodes, 70, 20)
   }
 
 
+  private DrawLegend(nodes: any, width: number, height: number) {
+    const groups: string[] = Array.from(new Set(nodes.map((d: any) => d.group)));
+    const color = d3.scaleOrdinal(d3.schemeCategory10)
+
+    const legend = d3.select('#legend')
+      .append('g')
+      .attr('transform', 'translate(' + (width) + ',' + (height) + ')')
+      .selectAll('g')
+      .data(groups)
+      .enter()
+      .append('g');
+    legend.append('rect')
+      .attr('fill', (d, i) => color(d))
+      .attr('height', 15)
+      .attr('width', 15);
+
+    legend.append('text')
+      .attr('x', 18)
+      .attr('y', 10)
+      .attr('dy', '.15em')
+      .style("fill", function (d: any) { return color(d.group) })
+      .text((d, i) => { return `Group:${d}` })
+      .style('text-anchor', 'start')
+      .style('font-size', 12);
+
+    // Now space the groups out after they have been appended:
+    const padding = 10;
+    legend.attr('transform', function (d, i) {
+      return 'translate(' + (d3.sum(groups, function (e, j) {
+        if (j < i) { return legend.nodes()[j].getBBox().width; } else { return 0; }
+      }) + padding * i) + ',0)';
+    });
+  }
   private DrawChart(energy: any, nodeAlign: any) {
 
-    console.log(energy)
     var svg = d3.select('#sankey')
       .append('svg')
       .attr('width', 1000)
@@ -52,30 +85,18 @@ export class SankyDiagramComponent implements OnInit {
       .nodePadding(10)
       .nodeAlign(nodeAlign)
       .extent([[1, 1], [1000 - 1, 500 - 6]]);
-    //
-    // var link = svg.append("g")
-    //   .attr("class", "links")
-    //   .attr("fill", "none")
-    //   .attr("stroke", "#000")
-    //   .attr("stroke-opacity", 0.2)
-    //   .selectAll("path");
-    //
-    // var node = svg.append("g")
-    //   .attr("class", "nodes")
-    //   .attr("font-family", "sans-serif")
-    //   .attr("font-size", 10)
-    //   .selectAll("g");
+
 
     const uid = `O-${Math.random().toString(16).slice(2)}`;
 
 
     sankey(energy);
 
-    energy.links.forEach((link:any) => {
-      link.gradient = {id:`${uid}${Math.random().toString(16).slice(2)}`}
-      link.path = {id:`${uid}${Math.random().toString(16).slice(2)}`}
+    energy.links.forEach((link: any) => {
+      link.gradient = { id: `${uid}${Math.random().toString(16).slice(2)}` }
+      link.path = { id: `${uid}${Math.random().toString(16).slice(2)}` }
     });
-    energy.nodes.forEach((node:any) => {
+    energy.nodes.forEach((node: any) => {
       node.color = color(node.group);
     });
     const defs = svg.append("defs");
@@ -83,10 +104,9 @@ export class SankyDiagramComponent implements OnInit {
       .data(energy.links)
       .enter()
       .append("linearGradient")
-      .attr("id", (d:any) => d.gradient.id)
-    gradients.append("stop").attr("offset", 0.0).attr("stop-color", (d:any) => d.source.color);
-    gradients.append("stop").attr("offset", 1.0).attr("stop-color", (d:any) => d.target.color);
-  console.log(gradients)
+      .attr("id", (d: any) => d.gradient.id)
+    gradients.append("stop").attr("offset", 0.0).attr("stop-color", (d: any) => d.source.color);
+    gradients.append("stop").attr("offset", 1.0).attr("stop-color", (d: any) => d.target.color);
     const view = svg.append("g")
       .classed("view", true)
       .attr("transform", `translate(10, 10)`);
@@ -95,33 +115,33 @@ export class SankyDiagramComponent implements OnInit {
       .enter()
       .append("rect")
       .classed("node", true)
-      .attr("id", (d:any) => `node-${d.index}`)
-      .attr("x", (d:any) => d.x0)
-      .attr("y", (d:any) => d.y0)
-      .attr("width", (d:any) => d.x1 - d.x0)
-      .attr("height", (d:any) => Math.max(1, d.y1 - d.y0))
-      .attr("fill", (d:any) => d.color)
+      .attr("id", (d: any) => `node-${d.index}`)
+      .attr("x", (d: any) => d.x0)
+      .attr("y", (d: any) => d.y0)
+      .attr("width", (d: any) => d.x1 - d.x0)
+      .attr("height", (d: any) => Math.max(1, d.y1 - d.y0))
+      .attr("fill", (d: any) => d.color)
       .attr("opacity", 0.9);
 
-    nodes.append("title").text((d:any) => `${d.name}\n${format(d.value)}`);
+    nodes.append("title").text((d: any) => `${d.name}\n${format(d.value)}`);
 
 
     view.selectAll("text.node")
       .data(energy.nodes)
       .enter()
       .append("text")
-      .classed("node",true)
-      .attr("x", (d:any) => d.x1)
+      .classed("node", true)
+      .attr("x", (d: any) => d.x1)
       .attr("dx", 6)
-      .attr("y", (d:any) => (d.y1 + d.y0) / 2)
+      .attr("y", (d: any) => (d.y1 + d.y0) / 2)
       .attr("dy", "0.35em")
       .attr("fill", "black")
       .attr("text-anchor", "start")
       .attr("font-size", 10)
       .attr("font-family", "Arial, sans-serif")
-      .text((d:any) => d.name)
-      .filter((d:any) => d.x1 > 20 / 2)
-      .attr("x", (d:any) => d.x0)
+      .text((d: any) => d.name)
+      .filter((d: any) => d.x1 > 20 / 2)
+      .attr("x", (d: any) => d.x0)
       .attr("dx", -6)
       .attr("text-anchor", "end");
 
@@ -135,13 +155,13 @@ export class SankyDiagramComponent implements OnInit {
       .attr("d", d3Sankey.sankeyLinkHorizontal())
       .attr("stroke", "black")
       .attr("stroke-opacity", 0.1)
-      .attr("stroke-width", (d:any) => Math.max(1, d.width))
+      .attr("stroke-width", (d: any) => Math.max(1, d.width))
       .attr("fill", "none");
 
-    links.append("title").text((d:any) => `${d.source.name} -> ${d.target.name}\n${format(d.value)}`);
+    links.append("title").text((d: any) => `${d.source.name} -> ${d.target.name}\n${format(d.value)}`);
 
 
-    function setDash(link:any) {
+    function setDash(link: any) {
       let el = view.select(`#${link.path.id}`);
 
       // @ts-ignore
@@ -155,35 +175,35 @@ export class SankyDiagramComponent implements OnInit {
       .enter()
       .append("path")
       .classed("gradient-link", true)
-      .attr("id", (d:any) => d.path.id)
+      .attr("id", (d: any) => d.path.id)
       // @ts-ignore
       .attr("d", d3Sankey.sankeyLinkHorizontal())
       //@ts-ignore
-      .attr("stroke", (d:any) =>d.gradient)
+      .attr("stroke", (d: any) => d.gradient)
       .attr("stroke-opacity", 0)
-      .attr("stroke-width", (d:any) => Math.max(1, d.width))
+      .attr("stroke-width", (d: any) => Math.max(1, d.width))
       .attr("fill", "none")
       .each(setDash);
 
-    function branchAnimate(node:any) {
+    function branchAnimate(node: any) {
 
       let links = view.selectAll("path.gradient-link")
         .filter((link) => {
           return node.sourceLinks.indexOf(link) !== -1;
         });
-      let nextNodes:any = [];
-      links.each((link:any) => {
+      let nextNodes: any = [];
+      links.each((link: any) => {
         nextNodes.push(link.target);
       });
       links
-        .attr("stroke",(d:any) =>color(d.source.group) )
+        .attr("stroke", (d: any) => color(d.source.group))
         .attr("stroke-opacity", 0.5)
         .transition()
         // .duration(900)
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0)
         .on("end", () => {
-          nextNodes.forEach((node:any) => {
+          nextNodes.forEach((node: any) => {
             branchAnimate(node);
           });
         });
@@ -205,9 +225,9 @@ export class SankyDiagramComponent implements OnInit {
 
 }
 
-function pickNodeAlign(nodeAlign:any) {
+function pickNodeAlign(nodeAlign: any) {
   if (nodeAlign === 'left') {
-    return  d3Sankey.sankeyLeft
+    return d3Sankey.sankeyLeft
   } else if (nodeAlign === 'right') {
     return d3Sankey.sankeyRight
   } else if (nodeAlign === 'center')
@@ -216,19 +236,17 @@ function pickNodeAlign(nodeAlign:any) {
     return d3Sankey.sankeyJustify
 }
 
-function modifyLinks(nodes:any,links: any) {
-  links.forEach((link:any) => {
-    nodes.forEach((node:any) => {
-      if (link.source === node.name)
-      {
+function modifyLinks(nodes: any, links: any) {
+  links.forEach((link: any) => {
+    nodes.forEach((node: any) => {
+      if (link.source === node.name) {
         link.source = node.index
       }
-      if(link.target === node.name) {
+      if (link.target === node.name) {
         link.target = node.index
       }
 
     })
   })
-  console.log(links)
   return links;
 }

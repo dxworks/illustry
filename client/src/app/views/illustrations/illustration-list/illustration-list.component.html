@@ -2,7 +2,6 @@
   <div class="row">
     <div class="col-md-12 mx-auto">
       <div class="md-form">
-
         <input
           type="text"
           [(ngModel)]="searchText"
@@ -16,44 +15,106 @@
   </div>
   <table id="tableSortExample" mdbTable #tableEl="mdbTable" class="z-depth-1">
     <thead>
-    <tr>
-      <th class="clickable"*ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="illustrations" [sortBy]="headElements[i]">{{head | titlecase}}
-      </th>
-    </tr>
+      <tr>
+        <th
+          class="clickable"
+          *ngFor="let head of headElements; let i = index"
+          aria-controls="tableSortExample"
+          scope="col"
+          [mdbTableSort]="illustrations"
+          [sortBy]="headElements[i]"
+        >
+          {{ head | titlecase }}
+        </th>
+      </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let el of illustrations; let i = index">
-
-      <th class="clickable"  (click)="showGraphic(el.IllustrationName)"*ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex"
-          scope="row">{{el.index}}</th>
-      <td class="clickable"  (click)="showGraphic(el.IllustrationName)" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.IllustrationName}}</td>
-      <td class="clickable" (click)="showGraphic(el.IllustrationName)" *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.IllustrationType}}</td>
-      <td class="clickable"  (click)="showGraphic(el.IllustrationName)"  *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">{{el.Tags}}</td>
-      <td *ngIf="i+1 >= mdbTablePagination.firstItemIndex && i < mdbTablePagination.lastItemIndex">
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="openDialogForUpdateIllustration(el.IllustrationName)">
-            <mat-icon>update</mat-icon>
-            <span>Update Illustration</span>
+      <tr *ngFor="let el of illustrations; let i = index">
+        <th
+          class="clickable"
+          (click)="showGraphic(el.IllustrationName)"
+          *ngIf="
+            i + 1 >= mdbTablePagination.firstItemIndex &&
+            i < mdbTablePagination.lastItemIndex
+          "
+          scope="row"
+        >
+          {{ el.index }}
+        </th>
+        <td
+          class="clickable"
+          (click)="showGraphic(el.IllustrationName)"
+          *ngIf="
+            i + 1 >= mdbTablePagination.firstItemIndex &&
+            i < mdbTablePagination.lastItemIndex
+          "
+        >
+          {{ el.IllustrationName }}
+        </td>
+        <td
+          class="clickable"
+          (click)="showGraphic(el.IllustrationName)"
+          *ngIf="
+            i + 1 >= mdbTablePagination.firstItemIndex &&
+            i < mdbTablePagination.lastItemIndex
+          "
+        >
+          {{ el.IllustrationType }}
+        </td>
+        <td
+          class="clickable"
+          (click)="showGraphic(el.IllustrationName)"
+          *ngIf="
+            i + 1 >= mdbTablePagination.firstItemIndex &&
+            i < mdbTablePagination.lastItemIndex
+          "
+        >
+          {{ el.Tags }}
+        </td>
+        <td
+          *ngIf="
+            i + 1 >= mdbTablePagination.firstItemIndex &&
+            i < mdbTablePagination.lastItemIndex
+          "
+        >
+          <button
+            mat-icon-button
+            [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu"
+          >
+            <mat-icon>more_vert</mat-icon>
           </button>
+          <mat-menu #menu="matMenu">
+            <button
+              mat-menu-item
+              (click)="openDialogForUpdateIllustration(el.IllustrationName)"
+            >
+              <mat-icon>update</mat-icon>
+              <span>Update Illustration</span>
+            </button>
 
-          <button  mat-menu-item color="warn" (click)="openDialogForDeletingIllustration(el.IllustrationName)">
-            <mat-icon>delete_outline</mat-icon>
-            <span>Delete Illustration</span></button>
-        </mat-menu>
-      </td>
-    </tr>
-
+            <button
+              mat-menu-item
+              color="warn"
+              (click)="openDialogForDeletingIllustration(el.IllustrationName)"
+            >
+              <mat-icon>delete_outline</mat-icon>
+              <span>Delete Illustration</span>
+            </button>
+          </mat-menu>
+        </td>
+      </tr>
     </tbody>
     <tfoot class="grey lighten-5 w-100">
-    <tr>
-      <td colspan="10">
-        <mdb-table-pagination paginationAlign="end" [tableEl]="tableEl" [searchDataSource]="illustrations"></mdb-table-pagination>
-      </td>
-    </tr>
+      <tr>
+        <td colspan="10">
+          <mdb-table-pagination
+            paginationAlign="end"
+            [tableEl]="tableEl"
+            [searchDataSource]="illustrations"
+          ></mdb-table-pagination>
+        </td>
+      </tr>
     </tfoot>
-
   </table>
 </div>

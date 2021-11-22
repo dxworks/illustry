@@ -1,10 +1,10 @@
-import {Component, Input, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 
 import * as d3 from 'd3';
-import {IllustrationService} from "../../../services/illustration.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
-import {Illustration} from "../../../../types/illustration.model";
+import { IllustrationService } from "../../../services/illustration.service";
+import { ActivatedRoute, Params, Router } from "@angular/router";
+import { Illustration } from "../../../../types/illustration.model";
 
 
 export interface Graph {
@@ -47,7 +47,7 @@ export enum FormTypes {
 })
 export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   //@ts-ignore
-  @ViewChild('chart', {static: false}) private chartContainer: Renderer2;
+  @ViewChild('chart', { static: false }) private chartContainer: Renderer2;
   private chartSvg: any;
   private diameter = 100;
   private tooltipMaxWidth = 500;
@@ -55,7 +55,7 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   private node: any;
   private links = [];
   private nodes = [];
-  private graph = {nodes: [], links: []};
+  private graph = { nodes: [], links: [] };
   @Input()
   data: any;
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
@@ -68,22 +68,19 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     // @ts-ignore
     this.links = this.data.links;
-    console.log(this.links)
     // @ts-ignore
     this.nodes = this.data.nodes;
-    console.log(this.nodes)
     //@ts-ignore
-    this.graph = {links:this.links, nodes: this.nodes}
-    console.log("This graph" + JSON.stringify(this.graph))
+    this.graph = { links: this.links, nodes: this.nodes }
     this.createForcedLayeredGraph()
-
+    this.DrawLegend(this.graph.nodes, 70, 20)
 
   }
 
   private createForcedLayeredGraph() {
 
     const width = window.innerWidth;
-    const height = window.innerHeight;
+    const height = 800;
     const color = d3.scaleOrdinal(d3.schemeCategory10);
 
     let label = {
@@ -95,9 +92,9 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
 
     this.graph.nodes.forEach((d, i) => {
       // @ts-ignore
-      label.nodes.push({node: d});
+      label.nodes.push({ node: d });
       // @ts-ignore
-      label.nodes.push({node: d});
+      label.nodes.push({ node: d });
       label.links.push({
         // @ts-ignore
         source: i * 2,
@@ -127,8 +124,6 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
       adjlist[d.target.index + '-' + d.source.index] = true;
     });
     // @ts-ignore
-    console.log(adjlist)
-// @ts-ignore
     function neigh(a, b) {
       // @ts-ignore
       return a === b || adjlist[a + '-' + b];
@@ -181,7 +176,7 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
       .enter()
       .append('text')
       // @ts-ignore
-      .text((d:any, i:any) => i % 2 === 0 ? '' : d.node.id)
+      .text((d: any, i: any) => i % 2 === 0 ? '' : d.node.id)
       .style('fill', '#555')
       .style('font-family', 'Arial')
       .style('font-size', 12)
@@ -205,7 +200,7 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
           d.y = d.node.y;
         } else {
           const b = this.getBBox();
-// @ts-ignore
+          // @ts-ignore
           const diffX = d.x - d.node.x;
           // @ts-ignore
           const diffY = d.y - d.node.y;
@@ -222,14 +217,14 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
 
     }
 
-    function fixna(x:any) {
+    function fixna(x: any) {
       if (isFinite(x)) {
         return x;
       }
       return 0;
     }
 
-    function focus(d:any) {
+    function focus(d: any) {
       // @ts-ignore
       const index = d3.select(d3.event.target).datum().index;
       // @ts-ignore
@@ -246,17 +241,17 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
       link.style('opacity', 1);
     }
 
-    function updateLink(auxLink:any) {
-      auxLink.attr('x1', (d:any) => fixna(d.source.x))
-        .attr('y1', (d:any) => fixna(d.source.y))
-        .attr('x2', (d:any) => fixna(d.target.x))
-        .attr('y2', (d:any) => fixna(d.target.y));
+    function updateLink(auxLink: any) {
+      auxLink.attr('x1', (d: any) => fixna(d.source.x))
+        .attr('y1', (d: any) => fixna(d.source.y))
+        .attr('x2', (d: any) => fixna(d.target.x))
+        .attr('y2', (d: any) => fixna(d.target.y));
     }
 
-    function updateNode(auxNode:any) {
-      auxNode.attr('transform', (d:any) => 'translate(' + fixna(d.x) + ',' + fixna(d.y) + ')');
+    function updateNode(auxNode: any) {
+      auxNode.attr('transform', (d: any) => 'translate(' + fixna(d.x) + ',' + fixna(d.y) + ')');
     }
-// @ts-ignore
+    // @ts-ignore
     function dragstarted(d) {
       d3.event.sourceEvent.stopPropagation();
       if (!d3.event.active) {
@@ -265,12 +260,12 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
       d.fx = d.x;
       d.fy = d.y;
     }
-// @ts-ignore
+    // @ts-ignore
     function dragged(d) {
       d.fx = d3.event.x;
       d.fy = d3.event.y;
     }
-// @ts-ignore
+    // @ts-ignore
     function dragended(d) {
       if (!d3.event.active) {
         graphLayout.alphaTarget(0);
@@ -283,5 +278,38 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
 
   private removeGraph() {
     d3.select('#forced-graph').remove();
+  }
+  private DrawLegend(nodes: any, width: number, height: number) {
+    const groups: string[] = Array.from(new Set(nodes.map((d: any) => d.group)));
+    const color = d3.scaleOrdinal(d3.schemeCategory10)
+
+    const legend = d3.select('#legend')
+      .append('g')
+      .attr('transform', 'translate(' + (width) + ',' + (height) + ')')
+      .selectAll('g')
+      .data(groups)
+      .enter()
+      .append('g');
+    legend.append('rect')
+      .attr('fill', (d, i) => color(d))
+      .attr('height', 15)
+      .attr('width', 15);
+
+    legend.append('text')
+      .attr('x', 18)
+      .attr('y', 10)
+      .attr('dy', '.15em')
+      .style("fill", function (d: any) { return color(d.group) })
+      .text((d, i) => { return `Group:${d}` })
+      .style('text-anchor', 'start')
+      .style('font-size', 12);
+
+    // Now space the groups out after they have been appended:
+    const padding = 10;
+    legend.attr('transform', function (d, i) {
+      return 'translate(' + (d3.sum(groups, function (e, j) {
+        if (j < i) { return legend.nodes()[j].getBBox().width; } else { return 0; }
+      }) + padding * i) + ',0)';
+    });
   }
 }

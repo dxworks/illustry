@@ -1,7 +1,7 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
-import {ProjectsService} from "../../services/projects.service";
-import {Router} from "@angular/router";
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { ProjectsService } from "../../services/projects.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-delete-project-dialog',
@@ -10,17 +10,16 @@ import {Router} from "@angular/router";
 })
 export class DeleteProjectDialogComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {projectName: string}, private projectService:ProjectsService, private router: Router) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { projectName: string }, private projectService: ProjectsService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  deleteProject(projectName:string) {
+  deleteProject(projectName: string) {
 
     this.projectService.deleteProject(projectName)
       .subscribe(
         response => {
-          console.log(response);
           this.router.navigate(['/projects']);
         },
         error => {

@@ -1,9 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {graphviz} from 'd3-graphviz';
+import { Component, Input, OnInit } from '@angular/core';
+import { graphviz } from 'd3-graphviz';
 
-import {PluginOutputConverterService} from '../../../services/plugin-output-converter.service';
-import {GraphData} from "../../../entities/graph-data";
-import {isNullOrUndefined} from "@qntm-code/utils";
+import { PluginOutputConverterService } from '../../../services/plugin-output-converter.service';
+import { GraphData } from "../../../entities/graph-data";
+import { isNullOrUndefined } from "@qntm-code/utils";
 import * as d3 from 'd3';
 
 
@@ -24,15 +24,12 @@ export class DotGraphComponent implements OnInit {
 
   @Input()
   set content(content: any) {
-    console.log(content);
     const copy = JSON.parse(JSON.stringify(content));
-    console.log(copy)
     const newContent = this.pluginOutputConverter.convertToGraph(copy);
 
     if (!isNullOrUndefined(copy) && newContent !== this._content) {
       // @ts-ignore
       this._content = newContent;
-      console.log(this._content)
       // @ts-ignore
       graphviz('#highLevelDiagram').renderDot(this._content);
       this.container = document.getElementById('highLevelDiagram');

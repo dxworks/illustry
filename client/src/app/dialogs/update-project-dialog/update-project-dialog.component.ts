@@ -1,9 +1,9 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA} from "@angular/material/dialog";
-import {ProjectsService} from "../../services/projects.service";
-import {Router} from "@angular/router";
-import {throwError} from "rxjs";
-import {FormControl, FormGroup} from "@angular/forms";
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { ProjectsService } from "../../services/projects.service";
+import { Router } from "@angular/router";
+import { throwError } from "rxjs";
+import { FormControl, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-update-project-dialog',
@@ -12,21 +12,18 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class UpdateProjectDialogComponent implements OnInit {
 
-  form: FormGroup = new FormGroup({   ProjectDescription:new FormControl('',[])});
-  constructor(@Inject(MAT_DIALOG_DATA) public data: {projectName: string}, private projectService:ProjectsService, private router: Router) { }
+  form: FormGroup = new FormGroup({ ProjectDescription: new FormControl('', []) });
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { projectName: string }, private projectService: ProjectsService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  updateProject(projectName:string) {
-    console.log(projectName)
+  updateProject(projectName: string) {
     const formData: FormData = new FormData();
-    console.log(this.form.value.ProjectDescription)
-    formData.append("ProjectDescription" ,this.form.value.ProjectDescription);
+    formData.append("ProjectDescription", this.form.value.ProjectDescription);
 
-    this.projectService.updateProject(projectName,formData)
+    this.projectService.updateProject(projectName, formData)
       .subscribe(response => {
-        console.log(response)
       }, error => {
         throwError(error)
       })

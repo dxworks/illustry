@@ -1,50 +1,49 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProjectsListComponent } from './views/projects/project-list/projects-list.component';
-import {ProjectsComponent} from "./views/projects/projects.component";
-import {MatCardModule} from "@angular/material/card";
+import { ProjectsComponent } from "./views/projects/projects.component";
+import { MatCardModule } from "@angular/material/card";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from "@angular/material/button";
-import {ProjectAddComponent} from "./views/projects/project-add/project-add.component";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { MatButtonModule } from "@angular/material/button";
+import { ProjectAddComponent } from "./views/projects/project-add/project-add.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { IllustrationsComponent } from './views/illustrations/illustrations.component';
 import { IllustrationListComponent } from './views/illustrations/illustration-list/illustration-list.component';
 import { ForceLayoutGraphComponent } from './views/graphs/force-layout-graph/force-layout-graph.component';
 import { HiearchicalEdgeBundlingComponent } from './views/graphs/hiearchical-edge-bundling/hiearchical-edge-bundling.component';
 import { ChartComponent } from './views/graphs/chart/chart.component';
 import { GraphsComponent } from './views/graphs/graphs.component';
-import {SankyDiagramComponent} from "./views/graphs/sanky-diagram/sanky-diagram.component";
+import { SankyDiagramComponent } from "./views/graphs/sanky-diagram/sanky-diagram.component";
 import { HeatmapComponent } from './views/graphs/heatmap/heatmap.component';
 import { StackedChartComponent } from './views/graphs/stacked-chart/stacked-chart.component';
 import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizontal-chart.component';
 import { MatrixcalendarComponent } from './views/graphs/matrixcalendar/matrixcalendar.component';
 import { MatrixComponent } from './views/graphs/matrix/matrix.component';
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {MatExpansionModule} from "@angular/material/expansion";
-import {MatSelectModule} from "@angular/material/select";
-import {MatIconModule} from "@angular/material/icon";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
+import { MatExpansionModule } from "@angular/material/expansion";
+import { MatSelectModule } from "@angular/material/select";
+import { MatIconModule } from "@angular/material/icon";
 import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-project-dialog.component';
-import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from "@angular/material/dialog";
-import {DotGraphComponent} from './views/graphs/dot-graph/dot-graph.component'
-import {NgxDropzoneModule} from "ngx-dropzone";
+import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from "@angular/material/dialog";
+import { DotGraphComponent } from './views/graphs/dot-graph/dot-graph.component'
+import { NgxDropzoneModule } from "ngx-dropzone";
 import { GanttchartComponent } from './views/graphs/ganttchart/ganttchart.component';
-import {MatTableModule} from "@angular/material/table";
-import {MatSortModule} from "@angular/material/sort";
-import {MatPaginatorModule} from "@angular/material/paginator";
-import {MDBBootstrapModule} from "angular-bootstrap-md";
+import { MatTableModule } from "@angular/material/table";
+import { MatSortModule } from "@angular/material/sort";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MDBBootstrapModule } from "angular-bootstrap-md";
 
-import {MatMenuModule} from "@angular/material/menu";
+import { MatMenuModule } from "@angular/material/menu";
 import { DeleteProjectDialogComponent } from './dialogs/delete-project-dialog/delete-project-dialog.component';
 import { UpdateProjectDialogComponent } from './dialogs/update-project-dialog/update-project-dialog.component';
 import { DeleteIllustrationDialogComponent } from './dialogs/delete-illustration-dialog/delete-illustration-dialog.component';
 import { UpdateIllustrationDialogComponent } from './dialogs/update-illustration-dialog/update-illustration-dialog.component';
 import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialog/add-illustration-dialog.component';
-import { PaginationComponent } from './directives/pagination/pagination.component';
 
 
 @NgModule({
@@ -74,7 +73,6 @@ import { PaginationComponent } from './directives/pagination/pagination.componen
     DeleteIllustrationDialogComponent,
     UpdateIllustrationDialogComponent,
     AddIllustrationDialogComponent,
-    PaginationComponent,
 
   ],
   imports: [
@@ -101,7 +99,7 @@ import { PaginationComponent } from './directives/pagination/pagination.componen
 
 
   ],
-  providers: [ {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  providers: [{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
