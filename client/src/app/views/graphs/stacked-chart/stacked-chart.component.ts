@@ -59,7 +59,7 @@ export class StackedChartComponent implements OnInit {
           y: {
             stacked: true
           }
-        }
+        },
       }
     })
   }

@@ -3,7 +3,7 @@ import { FileProperties } from "../types/fileproperties";
 const converter = require('json-2-csv')
 const fs = require("fs");
 export const readFile = (file: FileProperties, project: any, next: any) => {
-
+    console.log(file)
     fs.readFile(_.get(file, 'filePath'), (error: any, data: any) => {
         if (error) {
             next(error,null)
@@ -16,7 +16,7 @@ export const readFile = (file: FileProperties, project: any, next: any) => {
             next(null, { ...project, ...finalJson })
         }
         else
-        if (file.type === 'text/csv') {
+        if (file.type === 'text/csv'|| file.type ==='application/vnd.ms-excel') {
             let illustration = data.toString();
 
             converter.csv2json(illustration, function (err: any, json: any) {
@@ -29,3 +29,11 @@ export const readFile = (file: FileProperties, project: any, next: any) => {
         }
     })
 }
+
+function csvToJson(csv:any) {
+    const content = csv.split('\n');
+    const header = content[0].split(',');
+    return _.tail(content).map((row:any) => {
+      return _.zipObject(header, row.split(','));
+    });
+  }
