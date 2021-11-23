@@ -35,17 +35,18 @@ export class StackedChartComponent implements OnInit {
     const labels: string[] = Array.from(new Set(data.chart.map((d: any) => d.group)));
     const subgroups: string[] = data.subgroups;
     let datasets: any[] = [];
-    let finalDatasets: any[] = [];
+    let preFinalDatasets: any[] = [];
+    let finalDataSets: any[] = []
     this.color = d3.scaleOrdinal(d3.schemeCategory10)
-    subgroups.forEach((subgroup) => { finalDatasets.push({ label: subgroup, color: this.color(subgroup) }); datasets[subgroup] = data.chart.map((d: any) => d[subgroup]) })
-    finalDatasets.forEach((fd) => {finalDatasets.map((d: any) => { d.borderColor = d.color; d.backgroundColor = d.color; d.data = datasets[Object.values(fd)[0]] }) })
+    subgroups.forEach((subgroup) => { preFinalDatasets.push({ label: subgroup, color: this.color(subgroup) }); datasets[subgroup] = data.chart.map((d: any) => d[subgroup]) })
+    preFinalDatasets.forEach((fd) => {
+    finalDataSets.push({ label:fd.label,borderColor:fd.color, backgroundColor:fd.color, data:datasets[fd.label] }) })
     //@ts-ignore
     var ctx = document.getElementById('myChart').getContext('2d');
     const graphdata = {
       labels: labels,
-      datasets: finalDatasets
+      datasets: finalDataSets
     };
-
 
     this.chart = new Chart(ctx, {
       type: 'bar',

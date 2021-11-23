@@ -1,0 +1,697 @@
+{
+    "illustrationData": {
+        "nodes": [{
+                "name": "Captain America: The First Avenger (2011)",
+                "group": "Movie"
+            },
+            {
+                "name": "Captain Marvel (2019)",
+                "group": "Movie"
+            },
+            {
+                "name": "Captain Marvel",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Iron Man (2008)",
+                "group": "Movie"
+            },
+            {
+                "name": "Iron Man",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Iron Man 2 (2010)",
+                "group": "Movie"
+            },
+            {
+                "name": "The Incredible Hulk (2008)",
+                "group": "Hulk Movie"
+            },
+            {
+                "name": "Hulk",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Thor (2011)",
+                "group": "Movie"
+            },
+            {
+                "name": "Thor",
+                "group": "SuperHero"
+            },
+            {
+                "name": "The Avengers (2012)",
+                "group": "Movie"
+            },
+            {
+                "name": "Avengers",
+                "group": "SuperHeroGroup"
+            },
+            {
+                "name": "Captain America",
+                "group": "Avengers Movie"
+            },
+            {
+                "name": "Hawkeye",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Iron Man 3 (2013)",
+                "group": "Movie"
+            },
+            {
+                "name": "Thor: The Dark World (2013)",
+                "group": "Movie"
+            },
+            {
+                "name": "Captain America: The Winter Soldier (2014)",
+                "group": "Movie"
+            },
+            {
+                "name": "Winter Soldier / White Wolf",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Black Wnameow",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Falcon",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Guardians of the Galaxy (2014)",
+                "group": "Movie"
+            },
+            {
+                "name": "Drax",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Groot",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Gamora",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Rocket",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Guardians of the Galaxy Vol. 2 (2017)",
+                "group": "Movie"
+            },
+            {
+                "name": "Peter Quill / Star-Lord",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Avengers: Age of Ultron (2015)",
+                "group": "Movie"
+            },
+            {
+                "name": "Quicksilver",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Scarlet Witch",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Ant-Man (2015)",
+                "group": "Movie"
+            },
+            {
+                "name": "Ant-Man",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Captain America: Civil War (2016)",
+                "group": "Movie"
+            },
+            {
+                "name": "Black Panther",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Vision",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Spider-Man",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Spider-Man: Homecoming (2017)",
+                "group": "Movie"
+            },
+            {
+                "name": "Doctor Strange (2016)",
+                "group": "Movie"
+            },
+            {
+                "name": "Doctor Strange",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Black Panther (2018)",
+                "group": "Movie"
+            },
+            {
+                "name": "Thor: Ragnarok (2017)",
+                "group": "Thor Movie"
+            },
+            {
+                "name": "Ant-Man and The Wasp (2018)",
+                "group": "Movie"
+            },
+            {
+                "name": "Wasp",
+                "group": "SuperHero"
+            },
+            {
+                "name": "Black Wnameow (2020)",
+                "group": "Movie"
+            },
+            {
+                "name": "Avengers: Infinity War (2018)",
+                "group": "Movie"
+            },
+            {
+                "name": "Avengers: Endgame (2019)",
+                "group": "Movie"
+            },
+            {
+                "name": "SpiderMan: Far From Home (2019)",
+                "group": "Movie"
+            },
+            {
+                "name": "Thanos",
+                "group": "Antagonist"
+            }
+
+
+        ],
+        "links": [{
+                "source": "Captain America: The First Avenger (2011)",
+                "target": "Captain America",
+                "value": 1
+            },
+            {
+                "source": "Captain Marvel (2019)",
+                "target": "Captain Marvel",
+                "value": 1
+            },
+            {
+                "source": "Iron Man (2008)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "Iron Man 2 (2010)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "The Incredible Hulk (2008)",
+                "target": "Hulk",
+                "value": 1
+            },
+            {
+                "source": "Thor (2011)",
+                "target": "Thor",
+                "value": 1
+            },
+            {
+                "source": "The Avengers (2012)",
+                "target": "Black Wnameow",
+                "value": 1
+            },
+            {
+                "source": "The Avengers (2012)",
+                "target": "Captain America",
+                "value": 1
+            },
+            {
+                "source": "The Avengers (2012)",
+                "target": "Hawkeye",
+                "value": 1
+            },
+            {
+                "source": "The Avengers (2012)",
+                "target": "Hulk",
+                "value": 1
+            },
+            {
+                "source": "The Avengers (2012)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "The Avengers (2012)",
+                "target": "Thor",
+                "value": 1
+            },
+            {
+                "source": "Iron Man 3 (2013)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "Thor: The Dark World (2013)",
+                "target": "Thor",
+                "value": 1
+            },
+            {
+                "source": "Captain America: The Winter Soldier (2014)",
+                "target": "Winter Soldier / White Wolf",
+                "value": 1
+            },
+            {
+                "source": "Captain America: The Winter Soldier (2014)",
+                "target": "Black Wnameow",
+                "value": 1
+            },
+            {
+                "source": "Captain America: The Winter Soldier (2014)",
+                "target": "Captain America",
+                "value": 1
+            },
+            {
+                "source": "Captain America: The Winter Soldier (2014)",
+                "target": "Falcon",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy (2014)",
+                "target": "Drax",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy (2014)",
+                "target": "Gamora",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy (2014)",
+                "target": "Groot",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy (2014)",
+                "target": "Peter Quill / Star-Lord",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy (2014)",
+                "target": "Rocket",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy Vol. 2 (2017)",
+                "target": "Drax",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy Vol. 2 (2017)",
+                "target": "Gamora",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy Vol. 2 (2017)",
+                "target": "Groot",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy Vol. 2 (2017)",
+                "target": "Peter Quill / Star-Lord",
+                "value": 1
+            },
+            {
+                "source": "Guardians of the Galaxy Vol. 2 (2017)",
+                "target": "Rocket",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Black Wnameow",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Captain America",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Hawkeye",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Hulk",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Quicksilver",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Scarlet Witch",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Falcon",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Thor",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Age of Ultron (2015)",
+                "target": "Vision",
+                "value": 1
+            },
+            {
+                "source": "Ant-Man (2015)",
+                "target": "Ant-Man",
+                "value": 1
+            },
+            {
+                "source": "Ant-Man (2015)",
+                "target": "Falcon",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Ant-Man",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Black Panther",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Black Wnameow",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Captain America",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Falcon",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Hawkeye",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Scarlet Witch",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Winter Soldier / White Wolf",
+                "value": 1
+            },
+            {
+                "source": "Captain America: Civil War (2016)",
+                "target": "Vision",
+                "value": 1
+            },
+            {
+                "source": "Spider-Man: Homecoming (2017)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "Spider-Man: Homecoming (2017)",
+                "target": "Spider-Man",
+                "value": 1
+            },
+            {
+                "source": "Doctor Strange (2016)",
+                "target": "Doctor Strange",
+                "value": 1
+            },
+            {
+                "source": "Black Panther (2018)",
+                "target": "Black Panther",
+                "value": 1
+            },
+            {
+                "source": "Thor: Ragnarok (2017)",
+                "target": "Hulk",
+                "value": 1
+            },
+            {
+                "source": "Thor: Ragnarok (2017)",
+                "target": "Thor",
+                "value": 1
+            },
+            {
+                "source": "Ant-Man and The Wasp (2018)",
+                "target": "Ant-Man",
+                "value": 1
+            },
+            {
+                "source": "Ant-Man and The Wasp (2018)",
+                "target": "Wasp",
+                "value": 1
+            },
+            {
+                "source": "Black Wnameow (2020)",
+                "target": "Black Wnameow",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Black Panther",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Black Wnameow",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Captain America",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Doctor Strange",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Drax",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Falcon",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Gamora",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Groot",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Hulk",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Peter Quill / Star-Lord",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Rocket",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Scarlet Witch",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Spider-Man",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Thor",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Winter Soldier / White Wolf",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Infinity War (2018)",
+                "target": "Vision",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Ant-Man",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Black Panther",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Black Wnameow",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Captain America",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Captain Marvel",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Doctor Strange",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Drax",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Falcon",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Gamora",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Groot",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Hulk",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Iron Man",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Peter Quill / Star-Lord",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Rocket",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Scarlet Witch",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Spider-Man",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Thor",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Wasp",
+                "value": 1
+            },
+            {
+                "source": "Avengers: Endgame (2019)",
+                "target": "Winter Soldier / White Wolf",
+                "value": 1
+            },
+            {
+                "source": "SpiderMan: Far From Home (2019)",
+                "target": "Spider-Man",
+                "value": 1
+            },
+            {
+                "source": "Spider-Man",
+                "target": "Thanos",
+                "value": 1
+            },
+            {
+                "source": "Thor",
+                "target": "Thanos",
+                "value": 1
+            },
+            {
+                "source": "Hulk",
+                "target": "Thanos",
+                "value": 1
+            }
+
+        ]
+    }
+
+}

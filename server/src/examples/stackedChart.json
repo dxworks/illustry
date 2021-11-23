@@ -1,0 +1,33 @@
+{"illustrationData": 
+    {"chart":[{
+           "group": "frontend",
+           "API": 43,
+           "Components": 21,
+           "Services": 13,
+           "Types":20,
+           "Routes":15
+         },
+         {
+           "group": "backend",
+           "API": 43,
+           "BZL": 34,
+           "Types": 20,
+           "MiddleWare":15,
+           "Routes":10
+         },
+         {
+           "group": "database",
+           "Documents":100
+         },
+         {
+           "group": "tests",
+           "Integration": 31,
+           "Unit": 320,
+           "Smoke":10,
+           "Api test":102,
+           "Beta test":12,
+           "Regression":12
+    
+         }],
+         "subgroups":["API","BZL","Components","Services","Types","MiddleWare","Routes","Documents","Integration","Unit","Smoke","Api test","Beta test","Regression"]
+      }}

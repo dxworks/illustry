@@ -74,7 +74,7 @@ export class SankyDiagramComponent implements OnInit {
     var svg = d3.select('#sankey')
       .append('svg')
       .attr('width', 1000)
-      .attr('height', 500);
+      .attr('height', 600);
 
     var formatNumber = d3.format(",.0f"),
       format = function (d: any) { return formatNumber(d) + " TWh"; },
@@ -84,7 +84,7 @@ export class SankyDiagramComponent implements OnInit {
       .nodeWidth(15)
       .nodePadding(10)
       .nodeAlign(nodeAlign)
-      .extent([[1, 1], [1000 - 1, 500 - 6]]);
+      .extent([[300, 10], [1000 - 1, 500 - 6]]);
 
 
     const uid = `O-${Math.random().toString(16).slice(2)}`;
