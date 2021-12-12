@@ -1,6 +1,6 @@
 export interface IllustrationForTableModel {
   index: number;
-   IllustrationData: any[];
+  IllustrationData: any[];
   IllustrationName: string;
   IllustrationType: string;
   Tags?: string;

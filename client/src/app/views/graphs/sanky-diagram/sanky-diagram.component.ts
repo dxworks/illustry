@@ -2,6 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import * as d3 from 'd3'
 import * as d3Sankey from 'd3-sankey'
 import { range } from "rxjs";
+import {SankeyTypes} from "../../../entities/sankey-types";
+import {Link,Node} from "../../../entities/common-types";
+
 
 @Component({
   selector: 'app-sanky-diagram',
@@ -11,10 +14,10 @@ import { range } from "rxjs";
 export class SankyDiagramComponent implements OnInit {
   width = 954;
   height = 600;
-  links = [];
-  nodes = [];
+  links:Link[] = [];
+  nodes:Node[] = [];
   color: any;
-  graph = { nodes: [], "links": [], units: "" };
+  graph:SankeyTypes = { nodes: [], links: []};
   nodeAlign: any;
 
   @Input()
@@ -123,7 +126,7 @@ export class SankyDiagramComponent implements OnInit {
       .attr("fill", (d: any) => d.color)
       .attr("opacity", 0.9);
 
-    nodes.append("title").text((d: any) => `${d.name}\n${format(d.value)}`);
+    nodes.append("title").text((d: any) => `${d.id}\n${format(d.value)}`);
 
 
     view.selectAll("text.node")
@@ -139,7 +142,7 @@ export class SankyDiagramComponent implements OnInit {
       .attr("text-anchor", "start")
       .attr("font-size", 10)
       .attr("font-family", "Arial, sans-serif")
-      .text((d: any) => d.name)
+      .text((d: any) => d.id)
       .filter((d: any) => d.x1 > 20 / 2)
       .attr("x", (d: any) => d.x0)
       .attr("dx", -6)
@@ -158,7 +161,7 @@ export class SankyDiagramComponent implements OnInit {
       .attr("stroke-width", (d: any) => Math.max(1, d.width))
       .attr("fill", "none");
 
-    links.append("title").text((d: any) => `${d.source.name} -> ${d.target.name}\n${format(d.value)}`);
+    links.append("title").text((d: any) => `${d.source.id} -> ${d.target.id}\n${format(d.value)}`);
 
 
     function setDash(link: any) {
@@ -239,10 +242,10 @@ function pickNodeAlign(nodeAlign: any) {
 function modifyLinks(nodes: any, links: any) {
   links.forEach((link: any) => {
     nodes.forEach((node: any) => {
-      if (link.source === node.name) {
+      if (link.source === node.id) {
         link.source = node.index
       }
-      if (link.target === node.name) {
+      if (link.target === node.id) {
         link.target = node.index
       }
 

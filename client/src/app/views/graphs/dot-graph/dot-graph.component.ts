@@ -2,9 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { graphviz } from 'd3-graphviz';
 
 import { PluginOutputConverterService } from '../../../services/plugin-output-converter.service';
-import { GraphData } from "../../../entities/graph-data";
+
 import { isNullOrUndefined } from "@qntm-code/utils";
-import * as d3 from 'd3';
+import {DotTypes} from "../../../entities/dot-types";
 
 
 @Component({
@@ -24,7 +24,7 @@ export class DotGraphComponent implements OnInit {
 
   @Input()
   set content(content: any) {
-    const copy = JSON.parse(JSON.stringify(content));
+    const copy:DotTypes = JSON.parse(JSON.stringify(content));
     const newContent = this.pluginOutputConverter.convertToGraph(copy);
 
     if (!isNullOrUndefined(copy) && newContent !== this._content) {

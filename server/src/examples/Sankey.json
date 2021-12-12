@@ -1,195 +1,195 @@
 {
     "illustrationData": {
         "nodes": [{
-                "name": "Captain America: The First Avenger (2011)",
+                "id": "Captain America: The First Avenger (2011)",
                 "group": "Movie"
             },
             {
-                "name": "Captain Marvel (2019)",
+                "id": "Captain Marvel (2019)",
                 "group": "Movie"
             },
             {
-                "name": "Captain Marvel",
+                "id": "Captain Marvel",
                 "group": "SuperHero"
             },
             {
-                "name": "Iron Man (2008)",
+                "id": "Iron Man (2008)",
                 "group": "Movie"
             },
             {
-                "name": "Iron Man",
+                "id": "Iron Man",
                 "group": "SuperHero"
             },
             {
-                "name": "Iron Man 2 (2010)",
+                "id": "Iron Man 2 (2010)",
                 "group": "Movie"
             },
             {
-                "name": "The Incredible Hulk (2008)",
+                "id": "The Incredible Hulk (2008)",
                 "group": "Hulk Movie"
             },
             {
-                "name": "Hulk",
+                "id": "Hulk",
                 "group": "SuperHero"
             },
             {
-                "name": "Thor (2011)",
+                "id": "Thor (2011)",
                 "group": "Movie"
             },
             {
-                "name": "Thor",
+                "id": "Thor",
                 "group": "SuperHero"
             },
             {
-                "name": "The Avengers (2012)",
+                "id": "The Avengers (2012)",
                 "group": "Movie"
             },
             {
-                "name": "Avengers",
+                "id": "Avengers",
                 "group": "SuperHeroGroup"
             },
             {
-                "name": "Captain America",
+                "id": "Captain America",
                 "group": "Avengers Movie"
             },
             {
-                "name": "Hawkeye",
+                "id": "Hawkeye",
                 "group": "SuperHero"
             },
             {
-                "name": "Iron Man 3 (2013)",
+                "id": "Iron Man 3 (2013)",
                 "group": "Movie"
             },
             {
-                "name": "Thor: The Dark World (2013)",
+                "id": "Thor: The Dark World (2013)",
                 "group": "Movie"
             },
             {
-                "name": "Captain America: The Winter Soldier (2014)",
+                "id": "Captain America: The Winter Soldier (2014)",
                 "group": "Movie"
             },
             {
-                "name": "Winter Soldier / White Wolf",
+                "id": "Winter Soldier / White Wolf",
                 "group": "SuperHero"
             },
             {
-                "name": "Black Wnameow",
+                "id": "Black Widow",
                 "group": "SuperHero"
             },
             {
-                "name": "Falcon",
+                "id": "Falcon",
                 "group": "SuperHero"
             },
             {
-                "name": "Guardians of the Galaxy (2014)",
+                "id": "Guardians of the Galaxy (2014)",
                 "group": "Movie"
             },
             {
-                "name": "Drax",
+                "id": "Drax",
                 "group": "SuperHero"
             },
             {
-                "name": "Groot",
+                "id": "Groot",
                 "group": "SuperHero"
             },
             {
-                "name": "Gamora",
+                "id": "Gamora",
                 "group": "SuperHero"
             },
             {
-                "name": "Rocket",
+                "id": "Rocket",
                 "group": "SuperHero"
             },
             {
-                "name": "Guardians of the Galaxy Vol. 2 (2017)",
+                "id": "Guardians of the Galaxy Vol. 2 (2017)",
                 "group": "Movie"
             },
             {
-                "name": "Peter Quill / Star-Lord",
+                "id": "Peter Quill / Star-Lord",
                 "group": "SuperHero"
             },
             {
-                "name": "Avengers: Age of Ultron (2015)",
+                "id": "Avengers: Age of Ultron (2015)",
                 "group": "Movie"
             },
             {
-                "name": "Quicksilver",
+                "id": "Quicksilver",
                 "group": "SuperHero"
             },
             {
-                "name": "Scarlet Witch",
+                "id": "Scarlet Witch",
                 "group": "SuperHero"
             },
             {
-                "name": "Ant-Man (2015)",
+                "id": "Ant-Man (2015)",
                 "group": "Movie"
             },
             {
-                "name": "Ant-Man",
+                "id": "Ant-Man",
                 "group": "SuperHero"
             },
             {
-                "name": "Captain America: Civil War (2016)",
+                "id": "Captain America: Civil War (2016)",
                 "group": "Movie"
             },
             {
-                "name": "Black Panther",
+                "id": "Black Panther",
                 "group": "SuperHero"
             },
             {
-                "name": "Vision",
+                "id": "Vision",
                 "group": "SuperHero"
             },
             {
-                "name": "Spider-Man",
+                "id": "Spider-Man",
                 "group": "SuperHero"
             },
             {
-                "name": "Spider-Man: Homecoming (2017)",
+                "id": "Spider-Man: Homecoming (2017)",
                 "group": "Movie"
             },
             {
-                "name": "Doctor Strange (2016)",
+                "id": "Doctor Strange (2016)",
                 "group": "Movie"
             },
             {
-                "name": "Doctor Strange",
+                "id": "Doctor Strange",
                 "group": "SuperHero"
             },
             {
-                "name": "Black Panther (2018)",
+                "id": "Black Panther (2018)",
                 "group": "Movie"
             },
             {
-                "name": "Thor: Ragnarok (2017)",
+                "id": "Thor: Ragnarok (2017)",
                 "group": "Thor Movie"
             },
             {
-                "name": "Ant-Man and The Wasp (2018)",
+                "id": "Ant-Man and The Wasp (2018)",
                 "group": "Movie"
             },
             {
-                "name": "Wasp",
+                "id": "Wasp",
                 "group": "SuperHero"
             },
             {
-                "name": "Black Wnameow (2020)",
+                "id": "Black Widow (2020)",
                 "group": "Movie"
             },
             {
-                "name": "Avengers: Infinity War (2018)",
+                "id": "Avengers: Infinity War (2018)",
                 "group": "Movie"
             },
             {
-                "name": "Avengers: Endgame (2019)",
+                "id": "Avengers: Endgame (2019)",
                 "group": "Movie"
             },
             {
-                "name": "SpiderMan: Far From Home (2019)",
+                "id": "SpiderMan: Far From Home (2019)",
                 "group": "Movie"
             },
             {
-                "name": "Thanos",
+                "id": "Thanos",
                 "group": "Antagonist"
             }
 
@@ -227,7 +227,7 @@
             },
             {
                 "source": "The Avengers (2012)",
-                "target": "Black Wnameow",
+                "target": "Black Widow",
                 "value": 1
             },
             {
@@ -272,7 +272,7 @@
             },
             {
                 "source": "Captain America: The Winter Soldier (2014)",
-                "target": "Black Wnameow",
+                "target": "Black Widow",
                 "value": 1
             },
             {
@@ -337,7 +337,7 @@
             },
             {
                 "source": "Avengers: Age of Ultron (2015)",
-                "target": "Black Wnameow",
+                "target": "Black Widow",
                 "value": 1
             },
             {
@@ -407,7 +407,7 @@
             },
             {
                 "source": "Captain America: Civil War (2016)",
-                "target": "Black Wnameow",
+                "target": "Black Widow",
                 "value": 1
             },
             {
@@ -486,8 +486,8 @@
                 "value": 1
             },
             {
-                "source": "Black Wnameow (2020)",
-                "target": "Black Wnameow",
+                "source": "Black Widow (2020)",
+                "target": "Black Widow",
                 "value": 1
             },
             {
@@ -497,7 +497,7 @@
             },
             {
                 "source": "Avengers: Infinity War (2018)",
-                "target": "Black Wnameow",
+                "target": "Black Widow",
                 "value": 1
             },
             {
@@ -587,7 +587,7 @@
             },
             {
                 "source": "Avengers: Endgame (2019)",
-                "target": "Black Wnameow",
+                "target": "Black Widow",
                 "value": 1
             },
             {

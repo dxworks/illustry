@@ -1,9 +1,12 @@
 // @ts-nocheck
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Illustration } from "../../../../types/illustration.model";
+
 import { IllustrationService } from "../../../services/illustration.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
 import * as d3 from 'd3';
+import {Link,Node} from "../../../entities/common-types";
+import {HebTypes} from "../../../entities/heb-types";
+
 @Component({
   selector: 'app-hiearchical-edge-bundling',
   templateUrl: './hiearchical-edge-bundling.component.html',
@@ -11,9 +14,9 @@ import * as d3 from 'd3';
 })
 
 export class HiearchicalEdgeBundlingComponent implements OnInit {
-  private links = [];
-  private nodes = [];
-  private graph = { nodes: [], links: [] };
+  private links:Link[] = [];
+  private nodes:Node[] = [];
+  private graph: HebTypes = { nodes: [], links: [] };
   private chartSvg: any;
   private diameter: any;
   private tooltipMaxWidth = 500;

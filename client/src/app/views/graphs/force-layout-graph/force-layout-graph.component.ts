@@ -4,40 +4,8 @@ import { Component, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angu
 import * as d3 from 'd3';
 import { IllustrationService } from "../../../services/illustration.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
-import { Illustration } from "../../../../types/illustration.model";
-
-
-export interface Graph {
-  nodes: GraphNode[];
-  links: GraphLink[];
-}
-
-export interface GraphNode {
-  name: string;
-  group?: number;
-  formatting?: FormattingRule;
-}
-
-export interface GraphLink {
-  source: string;
-  target: string;
-  value?: number;
-  formatting?: FormattingRule;
-}
-
-export interface FormattingRule {
-  properties: string;
-  color: string;
-  form: FormTypes;
-}
-
-export enum FormTypes {
-  CIRCLE = 'circle',
-  SQUARE = 'square',
-  OVAL = 'oval',
-  RECTANGLE = 'rectangle',
-  RHOMBUS = 'rhombus'
-}
+import {FlgTypes} from "../../../entities/flg-types";
+import {Link, Node} from "../../../entities/common-types";
 
 @Component({
   selector: 'app-d3-force-layout-graph',
@@ -53,9 +21,9 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   private tooltipMaxWidth = 500;
   private toolTip: any;
   private node: any;
-  private links = [];
-  private nodes = [];
-  private graph = { nodes: [], links: [] };
+  private links:Link[] = [];
+  private nodes:Node[] = [];
+  private graph:FlgTypes = { nodes: [], links: [] };
   @Input()
   data: any;
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
@@ -106,6 +74,7 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
     const labelLayout = d3.forceSimulation(label.nodes)
       .force('charge', d3.forceManyBody().strength(-50))
       .force('link', d3.forceLink(label.links).distance(0).strength(2));
+    // @ts-ignore
     const graphLayout = d3.forceSimulation(this.graph.nodes)
       .force('charge', d3.forceManyBody().strength(-3000))
       .force('center', d3.forceCenter(width / 2, height / 2))

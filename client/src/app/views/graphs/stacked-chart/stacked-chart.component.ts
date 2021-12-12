@@ -4,6 +4,7 @@ import * as d3 from "d3";
 import { Chart, registerables } from "chart.js";
 import { Chart, registerables } from 'chart.js';
 import { OverviewType } from "../matrixcalendar/matrixcalendar.component";
+import {StackedChartsTypes} from "../../../entities/stackedchart-types";
 
 @Component({
   selector: 'app-stacked-chart',
@@ -16,7 +17,7 @@ export class StackedChartComponent implements OnInit {
   @Input()
   data: any;
   color: any;
-  chart: any[];
+  chart: StackedChartsTypes[];
 
   constructor() {
     Chart.register(...registerables)

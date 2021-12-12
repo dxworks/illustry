@@ -1,45 +1,68 @@
-{"illustrationData": 
-    {"chart":[
-    { "name": "Smoke testing", "value":30},
-    { "name": "Unit testing", "value":500},
-    { "name": "Component testing", "value":123},
-    { "name": "Sanity testing", "value":32},
-    {
-        "name":"Regression testing", "value":20
-    },
-    {
-        "name":"Integration testing", "value":100
-    },
-    {
-        "name":"API testing", "value":41
-    },
-    {
-        "name":"UI testing", "value":20
-    },
-    {
-        "name":"System testing", "value":3
-    },
-    {
-        "name":"White-box testing", "value":214
-    },
-    {
-        "name":"Black-box testing", "value":312
-    },
-    {
-        "name":"Acceptance testing", "value":56
-    },
-    {
-        "name":"Alpha testing", "value":391
-    },
-    {
-        "name":"Beta testing", "value":153
-    },
-    {
-        "name":"Production testing", "value":420
+{
+    "illustrationData": {
+        "chart": [{
+                "name": "Smoke testing",
+                "value": 30
+            },
+            {
+                "name": "Unit testing",
+                "value": 500
+            },
+            {
+                "name": "Component testing",
+                "value": 123
+            },
+            {
+                "name": "Sanity testing",
+                "value": 32
+            },
+            {
+                "name": "Regression testing",
+                "value": 20
+            },
+            {
+                "name": "Integration testing",
+                "value": 100
+            },
+            {
+                "name": "API testing",
+                "value": 41
+            },
+            {
+                "name": "UI testing",
+                "value": 20
+            },
+            {
+                "name": "System testing",
+                "value": 3
+            },
+            {
+                "name": "White-box testing",
+                "value": 214
+            },
+            {
+                "name": "Black-box testing",
+                "value": 312
+            },
+            {
+                "name": "Acceptance testing",
+                "value": 56
+            },
+            {
+                "name": "Alpha testing",
+                "value": 391
+            },
+            {
+                "name": "Beta testing",
+                "value": 153
+            },
+            {
+                "name": "Production testing",
+                "value": 420
+            }
+        ],
+        "label": "Tests Distribution",
+        "maxDomainInterval": 500
+
     }
-    ],
-    "label": "Tests Distribution",
-    "maxDomainInterval":500
-    
-    }
-    }
+}
