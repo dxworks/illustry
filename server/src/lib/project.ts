@@ -7,7 +7,7 @@ import { Project } from "../types/project";
 import { readFile } from "../utils/reader";
 import { FileProperties } from "../types/fileproperties";
 
-export const createProjectfromExtern = (project: any, next:any) => {
+export const createProjectfromExtern = (project: Project, next:any) => {
     let projectModel = {
         ProjectName: _.get(project, 'ProjectName', ''),
         ProjectDescription: _.get(project, 'ProjectDescription', '')
@@ -38,12 +38,13 @@ export const createProjectfromExtern = (project: any, next:any) => {
 export const createIllustryProject = (file: FileProperties, project: Project, next: any) => {
     return promisify(readFile)(file, project)
         .then((projectJson) => {
-            createProjectfromExtern(projectJson, next)
+            const finalProjectJson:Project = projectJson as Project;
+            createProjectfromExtern(finalProjectJson, next)
         })
 }
 
 
-export const updateProjectfromEtern = (project:any,next:any) => {
+export const updateProjectfromEtern = (project:Project,next:any) => {
     const projectToBeUpdated = {
         ProjectName: _.get(project,"ProjectName"),
         ProjectDescription: _.get(project,'ProjectDescription')
@@ -66,8 +67,7 @@ export const findOneProject = (projectName: string, next: any) => {
         .eachAsync((doc: any) => { next(null, doc); return doc })
 }
  
-export const getOneProjectfromEtern = (project:any,next:any) => {
-    const projectName = _.get(project,"ProjectName")
+export const getOneProjectfromEtern = (projectName:string,next:any) => {
     
     return Promise.resolve()
     .then(()=> {return findOneProject(projectName,next)})

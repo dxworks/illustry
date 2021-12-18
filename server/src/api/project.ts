@@ -3,21 +3,21 @@ import { FileProperties } from '../types/fileproperties'
 import { Project } from '../types/project'
 
 
-export function createProjectfromExtern(project: any, next: any) {
+export function createProjectfromExtern(project: Project, next: any) {
     return Promise.resolve()
     .then(() => { return projectLib.createProjectfromExtern(project, next) })
 }
 
  
 
-export function updateProjectfromEtern(project: any, next: any) {
+export function updateProjectfromEtern(project: Project, next: any) {
     return Promise.resolve()
     .then(() => { return projectLib.updateProjectfromEtern(project, next) })
 }
 
-export function getOneProjectfromEtern(project: any, next: any) {
+export function getOneProjectfromEtern(projectName: string, next: any) {
     return Promise.resolve()
-    .then(() => { return projectLib.getOneProjectfromEtern(project, next) })
+    .then(() => { return projectLib.getOneProjectfromEtern(projectName, next) })
 }
  
 export function createIllustryProject(file: FileProperties, project: Project, next: any) {

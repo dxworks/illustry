@@ -1,9 +1,5 @@
 import { Component, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
-
-
 import * as d3 from 'd3';
-import { IllustrationService } from "../../../services/illustration.service";
-import { ActivatedRoute, Params, Router } from "@angular/router";
 import {FlgTypes} from "../../../entities/flg-types";
 import {Link, Node} from "../../../entities/common-types";
 
@@ -25,15 +21,18 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   private nodes:Node[] = [];
   private graph:FlgTypes = { nodes: [], links: [] };
   @Input()
-  data: any;
-  constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
+  data: FlgTypes | undefined;
+
+  constructor() {
   }
 
   ngOnDestroy() {
+
     this.removeGraph();
   }
 
   ngOnInit(): void {
+    console.log(this.data);
     // @ts-ignore
     this.links = this.data.links;
     // @ts-ignore

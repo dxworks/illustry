@@ -1,4 +1,9 @@
+import { AllIllustrations } from "./illustrations.";
+
 export interface Project {
-    ProjectName: String;
-    ProjectDescription: String;
+    ProjectName: string;
+    ProjectDescription: string;
+    IllustrationName?:string;
+    IllustrationData?: AllIllustrations
+    Tags?: string[]
 }

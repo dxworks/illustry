@@ -1,5 +1,5 @@
 {
-    "illustrationData": {
+    "illustrationData": { "Sankey":{
         "nodes": [{
                 "id": "Captain America: The First Avenger (2011)",
                 "group": "Movie"
@@ -693,5 +693,5 @@
 
         ]
     }
-
+}
 }

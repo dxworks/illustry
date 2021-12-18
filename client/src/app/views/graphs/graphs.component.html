@@ -1,27 +1,27 @@
 <div [ngSwitch]="currentIllustration.IllustrationType">
   <app-chart
     *ngSwitchCase="'charts'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.IllustrationData.VerticalChart"
   ></app-chart>
   <app-d3-force-layout-graph
     *ngSwitchCase="'flg'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.IllustrationData.Flg"
   ></app-d3-force-layout-graph>
   <app-hiearchical-edge-bundling
     *ngSwitchCase="'heb'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.IllustrationData.Heb"
   ></app-hiearchical-edge-bundling>
   <app-sanky-diagram
     *ngSwitchCase="'sankeydiagram'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.IllustrationData.Sankey"
   ></app-sanky-diagram>
   <app-horizontal-chart
     *ngSwitchCase="'horizontal charts'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.IllustrationData.HorizontalChart"
   ></app-horizontal-chart>
   <app-stacked-chart
     *ngSwitchCase="'stackedcharts'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.IllustrationData.StackedCharts"
   ></app-stacked-chart>
   <app-matrix
     *ngSwitchCase="'matrix'"
@@ -29,11 +29,11 @@
   ></app-matrix>
   <app-matrixcalendar
     *ngSwitchCase="'calendarmatrix'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.IllustrationData.CalendarMatrix"
   ></app-matrixcalendar>
   <app-dot-graph
     *ngSwitchCase="'graphiz'"
-    [content]="currentIllustration.IllustrationData"
+    [content]="currentIllustration.IllustrationData.Dot"
   ></app-dot-graph>
   <app-ganttchart *ngSwitchCase="'ganttchart'"></app-ganttchart>
 </div>

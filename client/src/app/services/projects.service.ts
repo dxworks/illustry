@@ -20,11 +20,11 @@ export class ProjectsService {
     return this.httpClient.get<Project>(`${projectUrl}/${projectName}`)
   }
 
-  createProject(data: any) {
+  createProject(data: FormData) {
     return this.httpClient.post(projectUrl, data)
   }
 
-  updateProject(projectName: string, data: any) {
+  updateProject(projectName: string, data: FormData) {
     return this.httpClient.put<Project>(`${projectUrl}/${projectName}`, data)
   }
 

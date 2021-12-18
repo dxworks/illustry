@@ -25,7 +25,8 @@ export const updateProjectfromEtern = (req: any, res: any, next: any) => {
 }
 
 export const getOneProjectfromEtern = (req: any, res: any, next: any) => {
-    projectApi.getOneProjectfromEtern(req.body, (errGPC: any, data: any) => {
+    const projectName = _.get(req, 'body.ProjectName');
+    projectApi.getOneProjectfromEtern(projectName, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)
     })

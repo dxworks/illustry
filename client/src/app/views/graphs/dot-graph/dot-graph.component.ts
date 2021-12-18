@@ -24,7 +24,7 @@ export class DotGraphComponent implements OnInit {
 
   @Input()
   set content(content: any) {
-    const copy:DotTypes = JSON.parse(JSON.stringify(content));
+    const copy:DotTypes|undefined = JSON.parse(JSON.stringify(content));
     const newContent = this.pluginOutputConverter.convertToGraph(copy);
 
     if (!isNullOrUndefined(copy) && newContent !== this._content) {

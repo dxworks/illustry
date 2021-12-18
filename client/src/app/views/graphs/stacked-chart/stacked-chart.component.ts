@@ -15,7 +15,7 @@ import {StackedChartsTypes} from "../../../entities/stackedchart-types";
 
 export class StackedChartComponent implements OnInit {
   @Input()
-  data: any;
+  data: StackedChartsTypes|undefined;
   color: any;
   chart: StackedChartsTypes[];
 

@@ -1,0 +1,9778 @@
+{ 
+    "illustrationData": {"Heb":{
+    "nodes":[
+     {
+       "group": "Test",
+       "id": "MetricsTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "MetricsTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "TopologyTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "TopologyTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "MetricsTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "MetricsTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "TopologyTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "RepartitionOptimizingTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "spotbugs-exclude.xml"
+     },
+     {
+       "group": "Test",
+       "id": "ConsoleProducer.scala"
+     },
+     {
+       "group": "Test",
+       "id": "AdminUtils.scala"
+     },
+     {
+       "group": "Test",
+       "id": "Selector.java"
+     },
+     {
+       "group": "Test",
+       "id": "ProducerStateManagerTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "AbstractResetIntegrationTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamTaskTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "NamedCache.java"
+     },
+     {
+       "group": "Test",
+       "id": "SenderTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "KafkaApis.scala"
+     },
+     {
+       "group": "Test",
+       "id": "KafkaRequestHandler.scala"
+     },
+     {
+       "group": "Test",
+       "id": "ConnectorPluginsResourceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "KStreamImpl.java"
+     },
+     {
+       "group": "Test",
+       "id": "KStreamAggregationIntegrationTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "TimeWindowedKStream.java"
+     },
+     {
+       "group": "Stream",
+       "id": "ConsumerPerformance.scala"
+     },
+     {
+       "group": "Test",
+       "id": "KStreamAggregationDedupIntegrationTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "MockClient.java"
+     },
+     {
+       "group": "Test",
+       "id": "AuthorizerIntegrationTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "RegexSourceIntegrationTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "ProcessorTopologyTest.java"
+     },
+     {
+       "group": "Metadata",
+       "id": "Metadata.java"
+     },
+     {
+       "group": "Test",
+       "id": "SmokeTestDriver.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsMetricsImplTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "Partition.scala"
+     },
+     {
+       "group": "Test",
+       "id": "TaskManagerTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "TopologyTestDriverTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "DescribeConsumerGroupTest.scala"
+     },
+     {
+       "group": "Docker",
+       "id": "DockerOthers"
+     },
+     {
+       "group": "Stream",
+       "id": "MemoryRecordsBuilder.java"
+     },
+     {
+       "group": "Demo",
+       "id": "WordCountProcessorDemo.java"
+     },
+     {
+       "group": "Test",
+       "id": "ProducerBatchTest.java"
+     },
+     {
+       "group": "Web",
+       "id": "processor-api.html"
+     },
+     {
+       "group": "Stream",
+       "id": "DynamicBrokerConfig.scala"
+     },
+     {
+       "group": "SH",
+       "id": "kafka-run-class.sh"
+     },
+     {
+       "group": "Stream",
+       "id": "LogOffsetTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "produce_consume_validate.py"
+     },
+     {
+       "group": "Utils",
+       "id": "PluginUtils.java"
+     },
+     {
+       "group": "Stream",
+       "id": "ClusterConnectionStates.java"
+     },
+     {
+       "group": "BZL",
+       "id": "TopicDeletionManager.scala"
+     },
+     {
+       "group": "Test",
+       "id": "QueryableStateIntegrationTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "RequestQuotaTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "SslSelectorTest.java"
+     },
+     {
+       "group": "BZL",
+       "id": "AssignmentInfo.java"
+     },
+     {
+       "group": "Stream",
+       "id": "TransactionMarkerChannelManager.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "SocketServer.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "ZooKeeperClientTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "KStream.scala"
+     },
+     {
+       "group": "Test",
+       "id": "ConnectorsResourceTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "WorkerSinkTaskThreadedTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StickyAssignorTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StickyTaskAssignorTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "DynamicBrokerReconfigurationTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "SslTransportLayer.java"
+     },
+     {
+       "group": "Test",
+       "id": "RecordAccumulatorTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "StreamsPartitionAssignor.java"
+     },
+     {
+       "group": "Test",
+       "id": "IsrExpirationTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "TimeWindowedKStreamImpl.java"
+     },
+     {
+       "group": "Web",
+       "id": "quickstart.html"
+     },
+     {
+       "group": "Stream",
+       "id": "DumpLogSegments.scala"
+     },
+     {
+       "group": "BZL",
+       "id": "BufferPool.java"
+     },
+     {
+       "group": "Stream",
+       "id": "ConsumerProtocol.java"
+     },
+     {
+       "group": "Doc",
+       "id": "LICENSE"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaConfig.scala"
+     },
+     {
+       "group": "Web",
+       "id": "upgrade.html"
+     },
+     {
+       "group": "Gradle",
+       "id": "gradle.properties"
+     },
+     {
+       "group": "Stream",
+       "id": "ControllerChannelManager.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "StandaloneHerder.java"
+     },
+     {
+       "group": "XML",
+       "id": "pom.xml"
+     },
+     {
+       "group": "Test",
+       "id": "RestServerTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaZkClient.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "ConsoleConsumer.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "StandbyTask.java"
+     },
+     {
+       "group": "BZL",
+       "id": "KTableImpl.java"
+     },
+     {
+       "group": "Test",
+       "id": "CastTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "UtilsTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaEmbedded.java"
+     },
+     {
+       "group": "Bat",
+       "id": "kafka-run-class.bat"
+     },
+     {
+       "group": "Test",
+       "id": "KafkaZkClientTest.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "SslFactory.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsBuilderTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "GroupMetadataTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "SubscriptionStateTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "LogTest.scala"
+     },
+     {
+       "group": "Auth",
+       "id": "SimpleAclAuthorizer.scala"
+     },
+     {
+       "group": "Test",
+       "id": "MetadataTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "CachingSessionStore.java"
+     },
+     {
+       "group": "Stream",
+       "id": "ProducerBatch.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "WorkerTask.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "PartitionStateMachine.scala"
+     },
+     {
+       "group": "Test",
+       "id": "RocksDBStoreTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "TimeIndex.scala"
+     },
+     {
+       "group": "Doc",
+       "id": "README.md"
+     },
+     {
+       "group": "Test",
+       "id": "AclCommandTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "ProcessorStateManagerTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "EmbeddedKafkaCluster.java"
+     },
+     {
+       "group": "Gradle",
+       "id": "dependencies.gradle"
+     },
+     {
+       "group": "Web",
+       "id": "upgrade-guide.html"
+     },
+     {
+       "group": "Bzl",
+       "id": "SubscriptionState.java"
+     },
+     {
+       "group": "Log",
+       "id": "LogCleanerManager.scala"
+     },
+     {
+       "group": "Test",
+       "id": "SchemaBuilderTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "IntegrationTestUtils.java"
+     },
+     {
+       "group": "Test",
+       "id": "GroupCoordinatorTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "RequestResponseTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaServer.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "ProcessorStateManager.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamThreadTest.java"
+     },
+     {
+       "group": "Web",
+       "id": "configuration.html"
+     },
+     {
+       "group": "Bzl",
+       "id": "Coordinator.java"
+     },
+     {
+       "group": "Strean",
+       "id": "OffsetIndex.scala"
+     },
+     {
+       "group": "Test",
+       "id": "compatibility_test_new_broker_test.py"
+     },
+     {
+       "group": "Test",
+       "id": "AbstractFetcherThreadTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "StreamTask.java"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaStreams.java"
+     },
+     {
+       "group": "Test",
+       "id": "CachingKeyValueStoreTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "ReplicaManagerTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "KafkaProducerTest.java"
+     },
+     {
+       "group": "Sh",
+       "id": "run_tests.sh"
+     },
+     {
+       "group": "Test",
+       "id": "streams_upgrade_test.py"
+     },
+     {
+       "group": "Test",
+       "id": "client_compatibility_produce_consume_test.py"
+     },
+     {
+       "group": "Test",
+       "id": "AbstractConfigTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "Fetcher.java"
+     },
+     {
+       "group": "Log",
+       "id": "LogManager.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "ConsumerCoordinator.java"
+     },
+     {
+       "group": "Main",
+       "id": "__init__.py"
+     },
+     {
+       "group": "Web",
+       "id": "design.html"
+     },
+     {
+       "group": "Web",
+       "id": "tutorial.html"
+     },
+     {
+       "group": "Stream",
+       "id": "TransactionsTest.scala"
+     },
+     {
+       "group": "Log",
+       "id": "Log.scala"
+     },
+     {
+       "group": "Test",
+       "id": "LogManagerTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "TransactionCoordinator.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "WorkerSinkTask.java"
+     },
+     {
+       "group": "Test",
+       "id": "ErrorReporterTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "NetworkClient.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "MemoryRecords.java"
+     },
+     {
+       "group": "Stream",
+       "id": "ClientQuotaManagerTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "ConsumerNetworkClientTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "TransactionCoordinatorTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "TransactionManagerTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "StateDirectory.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "LogConfig.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "kafka.py"
+     },
+     {
+       "group": "Test",
+       "id": "PartitionTest.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "TransactionStateManager.scala"
+     },
+     {
+       "group": "Utils",
+       "id": "JsonConverter.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "GlobalStateManagerImplTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "version.py"
+     },
+     {
+       "group": "Test",
+       "id": "LogSegmentTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "ReplicaFetcherThread.scala"
+     },
+     {
+       "group": "Log",
+       "id": "LogCleaner.scala"
+     },
+     {
+       "group": "Test",
+       "id": "KeyValueStoreTestDriver.java"
+     },
+     {
+       "group": "Stream",
+       "id": "MockConsumer.java"
+     },
+     {
+       "group": "Config",
+       "id": "ConfigHandler.scala"
+     },
+     {
+       "group": "Test",
+       "id": "GroupMetadataManagerTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "LogCleanerTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "SessionWindowedKStream.scala"
+     },
+     {
+       "group": "Config",
+       "id": "ProducerConfig.java"
+     },
+     {
+       "group": "Test",
+       "id": "NetworkClientTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StreamsPartitionAssignorTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "Sender.java"
+     },
+     {
+       "group": "Test",
+       "id": "AbstractCoordinatorTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "DelayedOperation.scala"
+     },
+     {
+       "group": "Web",
+       "id": "security.html"
+     },
+     {
+       "group": "Stream",
+       "id": "ReplicaStateMachine.scala"
+     },
+     {
+       "group": "Config",
+       "id": "ConfigDef.java"
+     },
+     {
+       "group": "Stream",
+       "id": "RecordQueue.java"
+     },
+     {
+       "group": "Stream",
+       "id": "GroupMetadataManager.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaClient.java"
+     },
+     {
+       "group": "Stream",
+       "id": "TimeWindowedKStream.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "PageViewgroupdDemo.java"
+     },
+     {
+       "group": "Test",
+       "id": "BaseConsumerTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "KafkaConsumerTest.java"
+     },
+     {
+       "group": "Web",
+       "id": "api.html"
+     },
+     {
+       "group": "Test",
+       "id": "SslTransportLayerTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "ConsumerNetworkClient.java"
+     },
+     {
+       "group": "Auth",
+       "id": "SaslAuthenticatorTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "StandbyTaskTest.java"
+     },
+     {
+       "group": "Config",
+       "id": "DynamicConfigManager.scala"
+     },
+     {
+       "group": "Test",
+       "id": "SelectorTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "ThreadCacheTest.java"
+     },
+     {
+       "group": "Test",
+       "id": "TestUtils.scala"
+     },
+     {
+       "group": "Web",
+       "id": "introduction.html"
+     },
+     {
+       "group": "Test",
+       "id": "SocketServerTest.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "InternalTopologyBuilder.java"
+     },
+     {
+       "group": "Stream",
+       "id": "PlaintextProducerSendTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "ConsumerGroupCommand.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaProducer.java"
+     },
+     {
+       "group": "Test",
+       "id": "PlaintextConsumerTest.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "InternalTopicManager.java"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaClientSupplier.java"
+     },
+     {
+       "group": "Utils",
+       "id": "CoreUtils.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "WorkerSourceTask.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "DelayedJoin.scala"
+     },
+     {
+       "group": "Test",
+       "id": "LogValidatorTest.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "ProducerStateManager.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "ApiVersion.scala"
+     },
+     {
+       "group": "Test",
+       "id": "StoreChangelogReaderTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "KGroupedStream.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "KStream.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "PageViewUngroupdDemo.java"
+     },
+     {
+       "group": "Test",
+       "id": "PlaintextAdminIntegrationTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "client_compatibility_features_test.py"
+     },
+     {
+       "group": "Stream",
+       "id": "MetadataCache.scala"
+     },
+     {
+       "group": "Test",
+       "id": "DelayedOperationTest.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "jmx.py"
+     },
+     {
+       "group": "Config",
+       "id": "StreamsConfig.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "WordCountDemo.java"
+     },
+     {
+       "group": "Stream",
+       "id": "RocksDBStore.java"
+     },
+     {
+       "group": "Test",
+       "id": "ServerGenerateBrokerIdTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "TransactionStateManagerTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "MemoryRecordsBuilderTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "GroupCoordinator.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "AbstractFetcherThread.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "Protocol.java"
+     },
+     {
+       "group": "Test",
+       "id": "ConfigCommandTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "AclCommand.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "verifiable_producer.py"
+     },
+     {
+       "group": "Config",
+       "id": "AssignorConfiguration.java"
+     },
+     {
+       "group": "Test",
+       "id": "TopicCommandTest.scala"
+     },
+     {
+       "group": "Test",
+       "id": "KafkaAdminClientTest.java"
+     },
+     {
+       "group": "Gradle",
+       "id": "build.gradle"
+     },
+     {
+       "group": "Test",
+       "id": "WorkerSourceTaskTest.java"
+     },
+  
+     {
+       "group": "Test",
+       "id": "ProducerFailureHandlingTest.scala"
+     },
+     {
+       "group": "Bzl",
+       "id": "RecordAccumulator.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "ProduceBenchWorker.java"
+     },
+     {
+       "group": "Test",
+       "id": "ResetIntegrationTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "ApiKeys.java"
+     },
+     {
+       "group": "Test",
+       "id": "AbstractHerderTest.java"
+     },
+     {
+       "group": "Bzl",
+       "id": "KafkaAdminClient.java"
+     },
+     {
+       "group": "Test",
+       "id": "RecordCollectorTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "console_consumer.py"
+     },
+     {
+       "group": "Bzl",
+       "id": "TaskManager.java"
+     },
+     {
+       "group": "Stream",
+       "id": "SmokeTestClient.java"
+     },
+     {
+       "group": "Web",
+       "id": "templateData.js"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaConsumer.java"
+     },
+     {
+       "group": "Stream",
+       "id": "kafka-merge-pr.py"
+     },
+     {
+       "group": "Stream",
+       "id": "KafkaApisTest.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "GroupMetadata.scala"
+     },
+     {
+       "group": "Stream",
+       "id": "WorkerTest.java"
+     },
+     {
+       "group": "Stream",
+       "id": "streams.py"
+     },
+     {
+       "group": "Stream",
+       "id": "StoreChangelogReader.java"
+     },
+     {
+       "group": "Test",
+       "id": "LogCleanerManagerTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ops.html"
+     },
+     {
+       "group": "Others",
+       "id": "streams_broker_compatibility_test.py"
+     },
+     {
+       "group": "Others",
+       "id": "DistributedHerder.java"
+     },
+     {
+       "group": "Others",
+       "id": "ZooKeeperTestHarness.scala"
+     },
+     {
+       "group": "Others",
+       "id": "security_config.py"
+     },
+     {
+       "group": "Others",
+       "id": "TransactionManager.java"
+     },
+     {
+       "group": "Others",
+       "id": "upgrade_test.py"
+     },
+     {
+       "group": "Others",
+       "id": "ReplicaManager.scala"
+     },
+     {
+       "group": "Others",
+       "id": "implementation.html"
+     },
+     {
+       "group": "Others",
+       "id": "KafkaStreamsTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "documentation.html"
+     },
+     {
+       "group": "Others",
+       "id": "KStreamImplTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "KStreamTransformValues.java"
+     },
+     {
+       "group": "Others",
+       "id": "PartitionGroupTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "replication_test.py"
+     },
+     {
+       "group": "Others",
+       "id": "RocksDBWindowStoreTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "KafkaController.scala"
+     },
+     {
+       "group": "Others",
+       "id": "PreferredReplicaLeaderElectionCommand.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ReplicaStateMachineTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ResetConsumerGroupOffsetTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "Utils.java"
+     },
+     {
+       "group": "Others",
+       "id": "StandaloneHerderTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "AbstractHerder.java"
+     },
+     {
+       "group": "Others",
+       "id": "TestSslUtils.java"
+     },
+     {
+       "group": "Others",
+       "id": "GlobalKTableIntegrationTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "AbstractCoordinator.java"
+     },
+     {
+       "group": "Others",
+       "id": "RocksDBWindowStore.java"
+     },
+     {
+       "group": "Others",
+       "id": "ConsumerCoordinatorTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "FetcherTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "KafkaConfigTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "KTable.java"
+     },
+     {
+       "group": "Others",
+       "id": "MockClientSupplier.java"
+     },
+     {
+       "group": "Others",
+       "id": "WorkerSinkTaskTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "TopicCommand.scala"
+     },
+     {
+       "group": "Others",
+       "id": "KGroupedStreamImpl.java"
+     },
+     {
+       "group": "Others",
+       "id": "StreamThread.java"
+     },
+     {
+       "group": "Others",
+       "id": "dsl-api.html"
+     },
+     {
+       "group": "Others",
+       "id": "RepartitionWithMergeOptimizingTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "KafkaChannel.java"
+     },
+     {
+       "group": "Others",
+       "id": "LogSegment.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ResetIntegrationWithSslTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "StreamThreadStateStoreProviderTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "AbstractTask.java"
+     },
+     {
+       "group": "Others",
+       "id": "Task.java"
+     },
+     {
+       "group": "Others",
+       "id": "NamedCacheTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "ThreadCache.java"
+     },
+     {
+       "group": "Others",
+       "id": "RequestChannel.scala"
+     },
+     {
+       "group": "Others",
+       "id": "Replica.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ServerShutdownTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "Errors.java"
+     },
+     {
+       "group": "Others",
+       "id": "AbstractResponse.java"
+     },
+     {
+       "group": "Others",
+       "id": "FetchRequestTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "InternalTopicIntegrationTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "PerfConfig.scala"
+     },
+     {
+       "group": "Others",
+       "id": "StreamsSmokeTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "StreamsMetricsImpl.java"
+     },
+     {
+       "group": "Others",
+       "id": "DelayedProduce.scala"
+     },
+     {
+       "group": "Others",
+       "id": "HighwatermarkPersistenceTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "TopologyTestDriver.java"
+     },
+     {
+       "group": "Others",
+       "id": "base.sh"
+     },
+     {
+       "group": "Others",
+       "id": "setup.py"
+     },
+     {
+       "group": "Others",
+       "id": "PipeDemo.java"
+     },
+     {
+       "group": "Others",
+       "id": "interactive-queries.html"
+     },
+     {
+       "group": "Others",
+       "id": "DynamicBrokerConfigTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "PluginUtilsTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "ClusterConnectionStatesTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "AssignmentInfoTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "TransactionMarkerChannelManagerTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ZooKeeperClient.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ConnectorsResource.java"
+     },
+     {
+       "group": "Others",
+       "id": "StickyAssignor.java"
+     },
+     {
+       "group": "Others",
+       "id": "StickyTaskAssignor.java"
+     },
+     {
+       "group": "Others",
+       "id": "PlaintextTransportLayer.java"
+     },
+     {
+       "group": "Others",
+       "id": "TransportLayer.java"
+     },
+     {
+       "group": "Others",
+       "id": "DefaultPartitionGrouper.java"
+     },
+     {
+       "group": "Others",
+       "id": "MockInternalTopicManager.java"
+     },
+     {
+       "group": "Others",
+       "id": "DumpLogSegmentsTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "BufferPoolTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "PartitionAssignor.java"
+     },
+     {
+       "group": "Others",
+       "id": "ConsumerProtocolTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "NOTICE"
+     },
+     {
+       "group": "Others",
+       "id": "LogConfigTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "server.properties"
+     },
+     {
+       "group": "Others",
+       "id": "SslConfigs.java"
+     },
+     {
+       "group": "Others",
+       "id": "LeaderElectionTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "Metrics.java"
+     },
+     {
+       "group": "Others",
+       "id": "RestServer.java"
+     },
+     {
+       "group": "Others",
+       "id": "ZkData.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ConsoleConsumerTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "KTableImplTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "Cast.java"
+     },
+     {
+       "group": "Others",
+       "id": "SslFactoryTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "InternalStreamsBuilder.java"
+     },
+     {
+       "group": "Others",
+       "id": "SimpleAclAuthorizerTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "CachingWindowStore.java"
+     },
+     {
+       "group": "Others",
+       "id": "AbstractIndex.scala"
+     },
+     {
+       "group": "Others",
+       "id": "settings.gradle"
+     },
+     {
+       "group": "Others",
+       "id": "core-concepts.html"
+     },
+     {
+       "group": "Others",
+       "id": "SchemaBuilder.java"
+     },
+     {
+       "group": "Others",
+       "id": "MemberMetadata.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ServerStartupTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "Agent.java"
+     },
+     {
+       "group": "Others",
+       "id": "OffsetIndexTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "PartitionGroup.java"
+     },
+     {
+       "group": "Others",
+       "id": "RecordCollectorImpl.java"
+     },
+     {
+       "group": "Others",
+       "id": "GlobalStreamThread.java"
+     },
+     {
+       "group": "Others",
+       "id": "CachingKeyValueStore.java"
+     },
+     {
+       "group": "Others",
+       "id": "AbstractConfig.java"
+     },
+     {
+       "group": "Others",
+       "id": "quickstart.html"
+     },
+     {
+       "group": "Others",
+       "id": "TransactionMetadata.scala"
+     },
+     {
+       "group": "Others",
+       "id": "SinkTask.java"
+     },
+     {
+       "group": "Others",
+       "id": "WorkerSinkTaskContext.java"
+     },
+     {
+       "group": "Others",
+       "id": "DeadLetterQueueReporter.java"
+     },
+     {
+       "group": "Others",
+       "id": "MemoryRecordsTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "ClientQuotaManager.scala"
+     },
+     {
+       "group": "Others",
+       "id": "StateDirectoryTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "kafka.properties"
+     },
+     {
+       "group": "Others",
+       "id": "zookeeper.py"
+     },
+     {
+       "group": "Others",
+       "id": "security_rolling_upgrade_test.py"
+     },
+     {
+       "group": "Others",
+       "id": "JsonConverterTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "GlobalStateManagerImpl.java"
+     },
+     {
+       "group": "Others",
+       "id": "ReplicaAlterLogDirsThread.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ReplicaFetcherManager.scala"
+     },
+     {
+       "group": "Others",
+       "id": "LogCleanerIntegrationTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "InternalMockProcessorContext.java"
+     },
+     {
+       "group": "Others",
+       "id": "Consumer.java"
+     },
+     {
+       "group": "Others",
+       "id": "MockConsumerTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "DynamicConfigChangeTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "KGroupedStream.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ConsumerConfig.java"
+     },
+     {
+       "group": "Others",
+       "id": "ConfigDefTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "RecordQueueTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "ConsumerBounceTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "NioEchoServer.java"
+     },
+     {
+       "group": "Others",
+       "id": "SaslServerAuthenticator.java"
+     },
+     {
+       "group": "Others",
+       "id": "UncleanLeaderElectionTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "DeleteTopicTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "LogRecoveryTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "uses.html"
+     },
+     {
+       "group": "Others",
+       "id": "InternalTopologyBuilderTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "BaseProducerSendTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "StreamsResetter.java"
+     },
+     {
+       "group": "Others",
+       "id": "ConsumerGroupCommandTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "InternalTopicManagerTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "DefaultKafkaClientSupplier.java"
+     },
+     {
+       "group": "Others",
+       "id": "CoreUtilsTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ReassignPartitionsCommand.scala"
+     },
+     {
+       "group": "Others",
+       "id": "DelayedHeartbeat.scala"
+     },
+     {
+       "group": "Others",
+       "id": "LogValidator.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ApiVersionTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "AdminClient.java"
+     },
+     {
+       "group": "Others",
+       "id": "SaslSslAdminIntegrationTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "AdminManager.scala"
+     },
+     {
+       "group": "Others",
+       "id": "MetadataCacheTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "StreamsConfigTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "AbstractKeyValueStoreTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "MeteredKeyValueStore.java"
+     },
+     {
+       "group": "Others",
+       "id": "MemoryLRUCache.java"
+     },
+     {
+       "group": "Others",
+       "id": "AbstractFetcherManager.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ConfigCommand.scala"
+     },
+     {
+       "group": "Others",
+       "id": "verifiable_consumer.py"
+     },
+     {
+       "group": "Others",
+       "id": "TopicCommandWithZKClientTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "AdminClientUnitTestEnv.java"
+     },
+     {
+       "group": "Others",
+       "id": "import-control.xml"
+     },
+     {
+       "group": "Others",
+       "id": "ProduceBenchSpec.java"
+     },
+     {
+       "group": "Others",
+       "id": "DistributedHerderTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "MockAdminClient.java"
+     },
+     {
+       "group": "Others",
+       "id": "RecordCollector.java"
+     },
+     {
+       "group": "Others",
+       "id": "StreamsRebalanceListener.java"
+     },
+     {
+       "group": "Others",
+       "id": "WorkerGroupMember.java"
+     },
+     {
+       "group": "Others",
+       "id": "Worker.java"
+     },
+     {
+       "group": "Others",
+       "id": "BrokerCompatibilityTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "EmbeddedZookeeper.scala"
+     },
+     {
+       "group": "Others",
+       "id": "DelayedFetch.scala"
+     },
+     {
+       "group": "Others",
+       "id": "KStreamTransformValuesTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "ReplicationUtils.scala"
+     },
+     {
+       "group": "Others",
+       "id": "ControllerState.scala"
+     },
+     {
+       "group": "Others",
+       "id": "WorkerCoordinator.java"
+     },
+     {
+       "group": "Others",
+       "id": "KGroupedTable.java"
+     },
+     {
+       "group": "Others",
+       "id": "TopicCommandWithAdminClientTest.scala"
+     },
+     {
+       "group": "Others",
+       "id": "KGroupedStreamImplTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "config-streams.html"
+     },
+     {
+       "group": "Others",
+       "id": "Kafka.scala"
+     },
+     {
+       "group": "Others",
+       "id": "TimeWindowedKStreamImplTest.java"
+     },
+     {
+       "group": "Others",
+       "id": "Windows.java"
+     },
+     {
+       "group": "Others",
+       "id": "Logging.scala"
+     }
+    ],
+
+        "links":[
+     {
+       
+      
+       "source": "settings.gradle",
+       "target": "README.md",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RecordAccumulator.java",
+       "target": "KafkaProducer.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ControllerChannelManager.scala",
+       "target": "KafkaApis.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ControllerChannelManager.scala",
+       "target": "Partition.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "ControllerChannelManager.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ControllerChannelManager.scala",
+       "target": "Replica.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ControllerChannelManager.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TransactionManagerTest.java",
+       "target": "TransactionManager.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ProducerStateManagerTest.scala",
+       "target": "ProducerStateManager.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TransactionStateManager.scala",
+       "target": "TransactionStateManagerTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "ReplicaFetcherThread.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "Partition.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "TestUtils.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "SocketServerTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "RequestChannel.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "Replica.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "LogManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KStreamImpl.java",
+       "target": "KTableImpl.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KStreamAggregationIntegrationTest.java",
+       "target": "KGroupedStreamImplTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KStreamAggregationIntegrationTest.java",
+       "target": "KGroupedStream.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KStreamAggregationIntegrationTest.java",
+       "target": "KGroupedStreamImpl.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogSegmentTest.scala",
+       "target": "LogSegment.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStream.java",
+       "target": "KStreamAggregationIntegrationTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStream.java",
+       "target": "KGroupedStreamImplTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStream.java",
+       "target": "TimeWindowedKStreamImplTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStream.java",
+       "target": "KGroupedStream.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStream.java",
+       "target": "KGroupedStreamImpl.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStream.java",
+       "target": "TimeWindowedKStreamImpl.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "KafkaProducer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "AbstractCoordinator.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KTableImpl.java",
+       "target": "KStreamImpl.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KTableImpl.java",
+       "target": "KTableImplTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "security.html",
+       "target": "documentation.html",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "KafkaApis.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "Partition.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "Replica.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "KafkaConsumer.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "ConsumerCoordinatorTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "streams.py",
+       "target": "kafka-run-class.sh",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StoreChangelogReader.java",
+       "target": "StoreChangelogReaderTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "ReplicaManager.scala",
+       "value": 23
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "Replica.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TaskManagerTest.java",
+       "target": "TaskManager.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TopologyTestDriverTest.java",
+       "target": "TopologyTestDriver.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogSegmentTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "CoreUtils.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogSegment.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "KafkaServer.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogManager.scala",
+       "value": 25
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "Log.scala",
+       "value": 46
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogManagerTest.scala",
+       "value": 20
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "KafkaConfig.scala",
+       "value": 24
+     },
+     {
+       
+      
+       "source": "processor-api.html",
+       "target": "Windows.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "processor-api.html",
+       "target": "interactive-queries.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "KafkaApis.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "Partition.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "Replica.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "KafkaApis.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "AbstractFetcherManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "PartitionStateMachine.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "Replica.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "kafka-run-class.sh",
+       "target": "kafka-run-class.bat",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaStreamsTest.java",
+       "target": "StreamThread.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "documentation.html",
+       "target": "api.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "ReplicaFetcherThread.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "LeaderElectionTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "SocketServerTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "README.md",
+       "target": "settings.gradle",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KStreamImplTest.java",
+       "target": "KStreamImpl.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "Kafka.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "KafkaServer.scala",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "Logging.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "LogManager.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "Log.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "LogManagerTest.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "KafkaConfig.scala",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "upgrade-guide.html",
+       "target": "upgrade.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "upgrade-guide.html",
+       "target": "Windows.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "upgrade-guide.html",
+       "target": "processor-api.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "upgrade-guide.html",
+       "target": "interactive-queries.html",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "Kafka.scala",
+       "target": "Logging.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImplTest.java",
+       "target": "KStreamAggregationIntegrationTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImplTest.java",
+       "target": "KGroupedStream.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImplTest.java",
+       "target": "KGroupedStreamImpl.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImplTest.java",
+       "target": "TimeWindowedKStreamImpl.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "Partition.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "LeaderElectionTest.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "PartitionStateMachine.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ReplicaManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "TestUtils.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "KafkaConfig.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KGroupedStream.java",
+       "target": "KGroupedStreamImplTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KGroupedStream.java",
+       "target": "KGroupedStreamImpl.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KStream.java",
+       "target": "KStreamImpl.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "interactive-queries.html",
+       "target": "Windows.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "HighwatermarkPersistenceTest.scala",
+       "target": "Replica.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "HighwatermarkPersistenceTest.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StandaloneHerderTest.java",
+       "target": "AbstractHerder.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "KafkaStreamsTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "LogSegment.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "Log.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "Replica.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "StreamTaskTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "StandbyTask.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "KafkaStreamsTest.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "StreamThreadTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "StreamThread.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "KafkaConsumer.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "AbstractCoordinator.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "SocketServer.scala",
+       "target": "RequestChannel.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "FetcherTest.java",
+       "target": "Fetcher.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KTable.java",
+       "target": "KTableImpl.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "ReplicaFetcherThread.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "TestUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RecordAccumulatorTest.java",
+       "target": "RecordAccumulator.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KGroupedStreamImpl.java",
+       "target": "KGroupedStreamImplTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Fetcher.java",
+       "target": "KafkaConsumer.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "KafkaServer.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "LogManagerTest.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImpl.java",
+       "target": "KStreamAggregationIntegrationTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImpl.java",
+       "target": "KGroupedStreamImplTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImpl.java",
+       "target": "KGroupedStream.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImpl.java",
+       "target": "KGroupedStreamImpl.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaAdminClientTest.java",
+       "target": "KafkaAdminClient.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "IntegrationTestUtils.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "ProcessorStateManager.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StreamThreadTest.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StreamTask.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StreamThreadStateStoreProviderTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "settings.gradle",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "kafka-run-class.sh",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "README.md",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "dependencies.gradle",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "dsl-api.html",
+       "target": "Windows.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "dsl-api.html",
+       "target": "processor-api.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "dsl-api.html",
+       "target": "upgrade-guide.html",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "dsl-api.html",
+       "target": "interactive-queries.html",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "KafkaApis.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "LogSegmentTest.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "LogSegment.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "KafkaServer.scala",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "LogManager.scala",
+       "value": 29
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "LogManagerTest.scala",
+       "value": 21
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "KafkaConfig.scala",
+       "value": 26
+     },
+     {
+       
+      
+       "source": "LogManagerTest.scala",
+       "target": "KafkaServer.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "KafkaConfig.scala",
+       "target": "KafkaServer.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "KafkaConfig.scala",
+       "target": "LogManager.scala",
+       "value": 26
+     },
+     {
+       
+      
+       "source": "KafkaConfig.scala",
+       "target": "LogManagerTest.scala",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "TransactionCoordinator.scala",
+       "target": "TransactionCoordinatorTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionCoordinator.scala",
+       "target": "TransactionStateManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionCoordinator.scala",
+       "target": "TransactionStateManagerTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "MetricsTest.scala",
+       "target": "MetricsTest.java",
+       "value": 70
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "MetricsTest.scala",
+       "target": "MetricsTest.scala",
+       "value": 59
+     },
+     {
+       
+      
+       "source": "MetricsTest.scala",
+       "target": "MetricsTest.java",
+       "value": 70
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "TopologyTest.java",
+       "target": "TopologyTest.scala",
+       "value": 86
+     },
+     {
+       
+      
+       "source": "TopologyTest.java",
+       "target": "TopologyTest.java",
+       "value": 69
+     },
+     {
+       
+      
+       "source": "TopologyTest.java",
+       "target": "TopologyTest.scala",
+       "value": 86
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 100
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeTest.java",
+       "target": "StreamsUpgradeTest.java",
+       "value": 102
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 122
+     },
+     {
+       
+      
+       "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+       "value": 124
+     },
+     {
+       
+      
+       "source": "RepartitionOptimizingTest.java",
+       "target": "RepartitionWithMergeOptimizingTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "spotbugs-exclude.xml",
+       "target": "build.gradle",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ConsoleProducer.scala",
+       "target": "ConsoleConsumer.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AdminUtils.scala",
+       "target": "KafkaApis.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "AdminUtils.scala",
+       "target": "TestUtils.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "AdminUtils.scala",
+       "target": "CoreUtils.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "AdminUtils.scala",
+       "target": "TopicCommand.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "Selector.java",
+       "target": "KafkaChannel.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Selector.java",
+       "target": "SslSelectorTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Selector.java",
+       "target": "SslTransportLayer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ProducerStateManagerTest.scala",
+       "target": "LogTest.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ProducerStateManagerTest.scala",
+       "target": "Log.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ProducerStateManagerTest.scala",
+       "target": "ProducerStateManager.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "ProducerStateManagerTest.scala",
+       "target": "LogSegment.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AbstractResetIntegrationTest.java",
+       "target": "ResetIntegrationTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "AbstractResetIntegrationTest.java",
+       "target": "ResetIntegrationWithSslTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamTaskTest.java",
+       "target": "StandbyTask.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "StreamTaskTest.java",
+       "target": "StreamTask.java",
+       "value": 28
+     },
+     {
+       
+      
+       "source": "StreamTaskTest.java",
+       "target": "StreamThreadStateStoreProviderTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamTaskTest.java",
+       "target": "StandbyTaskTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StreamTaskTest.java",
+       "target": "AbstractTask.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "StreamTaskTest.java",
+       "target": "Task.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "NamedCache.java",
+       "target": "NamedCacheTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "NamedCache.java",
+       "target": "ThreadCache.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SenderTest.java",
+       "target": "RecordAccumulatorTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SenderTest.java",
+       "target": "Sender.java",
+       "value": 25
+     },
+     {
+       
+      
+       "source": "SenderTest.java",
+       "target": "KafkaProducer.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "SenderTest.java",
+       "target": "RecordAccumulator.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "SenderTest.java",
+       "target": "TransactionManager.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "KafkaRequestHandler.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "LogOffsetTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "RequestChannel.scala",
+       "value": 26
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "Replica.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "SocketServer.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "KafkaConfig.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "ServerShutdownTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "upgrade.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "RequestResponseTest.java",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "KafkaServer.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "Log.scala",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "ReplicaFetcherThread.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "TestUtils.scala",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "SocketServerTest.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "PlaintextConsumerTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "CoreUtils.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "MetadataCache.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "Errors.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "GroupCoordinator.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "AbstractFetcherThread.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "Protocol.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "ApiKeys.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "AbstractResponse.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaApis.scala",
+       "target": "FetchRequestTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaRequestHandler.scala",
+       "target": "RequestChannel.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaRequestHandler.scala",
+       "target": "MetricsTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ConnectorPluginsResourceTest.java",
+       "target": "AbstractHerder.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KStreamImpl.java",
+       "target": "KTableImpl.java",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "KStreamImpl.java",
+       "target": "KTable.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KStreamAggregationIntegrationTest.java",
+       "target": "InternalTopicIntegrationTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStream.java",
+       "target": "KGroupedStream.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ConsumerPerformance.scala",
+       "target": "PerfConfig.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KStreamAggregationDedupIntegrationTest.java",
+       "target": "KStreamAggregationIntegrationTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "MockClient.java",
+       "target": "KafkaConsumer.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "AuthorizerIntegrationTest.scala",
+       "target": "KafkaApis.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "RegexSourceIntegrationTest.java",
+       "target": "KStreamAggregationIntegrationTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "RegexSourceIntegrationTest.java",
+       "target": "EmbeddedKafkaCluster.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RegexSourceIntegrationTest.java",
+       "target": "InternalTopicIntegrationTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ProcessorTopologyTest.java",
+       "target": "KeyValueStoreTestDriver.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Metadata.java",
+       "target": "NetworkClient.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Metadata.java",
+       "target": "KafkaProducer.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SmokeTestDriver.java",
+       "target": "StreamsSmokeTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "SmokeTestDriver.java",
+       "target": "SmokeTestClient.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "StreamsMetricsImplTest.java",
+       "target": "StreamsMetricsImpl.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "KafkaApis.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "RequestChannel.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "DelayedProduce.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "Replica.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "KafkaConfig.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "PartitionStateMachine.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "Log.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "TestUtils.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "Partition.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TaskManagerTest.java",
+       "target": "TaskManager.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "TopologyTestDriverTest.java",
+       "target": "TopologyTestDriver.java",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "DescribeConsumerGroupTest.scala",
+       "target": "TestUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "DockerOthers",
+       "target": "base.sh",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "DockerOthers",
+       "target": "version.py",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "DockerOthers",
+       "target": "setup.py",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "MemoryRecordsBuilder.java",
+       "target": "ProducerBatch.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "MemoryRecordsBuilder.java",
+       "target": "RecordAccumulator.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "WordCountProcessorDemo.java",
+       "target": "WordCountDemo.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "WordCountProcessorDemo.java",
+       "target": "PipeDemo.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ProducerBatchTest.java",
+       "target": "ProducerBatch.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ProducerBatchTest.java",
+       "target": "Sender.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "processor-api.html",
+       "target": "interactive-queries.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "DynamicBrokerConfig.scala",
+       "target": "KafkaConfig.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "DynamicBrokerConfig.scala",
+       "target": "KafkaServer.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "DynamicBrokerConfig.scala",
+       "target": "DynamicBrokerConfigTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "kafka-run-class.sh",
+       "target": "gradle.properties",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "LogOffsetTest.scala",
+       "target": "LogManagerTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "produce_consume_validate.py",
+       "target": "kafka.py",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "PluginUtils.java",
+       "target": "PluginUtilsTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ClusterConnectionStates.java",
+       "target": "ClusterConnectionStatesTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TopicDeletionManager.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TopicDeletionManager.scala",
+       "target": "PartitionStateMachine.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "TopicDeletionManager.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "QueryableStateIntegrationTest.java",
+       "target": "KStreamAggregationIntegrationTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "QueryableStateIntegrationTest.java",
+       "target": "IntegrationTestUtils.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "QueryableStateIntegrationTest.java",
+       "target": "GlobalKTableIntegrationTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "RequestQuotaTest.scala",
+       "target": "KafkaApis.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "RequestQuotaTest.scala",
+       "target": "ApiKeys.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "RequestQuotaTest.scala",
+       "target": "AbstractResponse.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SslSelectorTest.java",
+       "target": "SslTransportLayer.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SslSelectorTest.java",
+       "target": "SelectorTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "AssignmentInfo.java",
+       "target": "StreamsPartitionAssignor.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AssignmentInfo.java",
+       "target": "AssignmentInfoTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionMarkerChannelManager.scala",
+       "target": "TransactionStateManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionMarkerChannelManager.scala",
+       "target": "TransactionMarkerChannelManagerTest.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SocketServer.scala",
+       "target": "Selector.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SocketServer.scala",
+       "target": "KafkaRequestHandler.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SocketServer.scala",
+       "target": "RequestChannel.scala",
+       "value": 20
+     },
+     {
+       
+      
+       "source": "SocketServer.scala",
+       "target": "KafkaConfig.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SocketServer.scala",
+       "target": "KafkaServer.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "SocketServer.scala",
+       "target": "SocketServerTest.scala",
+       "value": 27
+     },
+     {
+       
+      
+       "source": "ZooKeeperClientTest.scala",
+       "target": "ZooKeeperClient.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KStream.scala",
+       "target": "TopologyTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConnectorsResourceTest.java",
+       "target": "ConnectorsResource.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "WorkerSinkTaskThreadedTest.java",
+       "target": "WorkerSinkTask.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StickyAssignorTest.java",
+       "target": "StickyAssignor.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StickyTaskAssignorTest.java",
+       "target": "StickyTaskAssignor.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "DynamicBrokerReconfigurationTest.scala",
+       "target": "DynamicBrokerConfig.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "DynamicBrokerReconfigurationTest.scala",
+       "target": "SslFactory.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "DynamicBrokerReconfigurationTest.scala",
+       "target": "KafkaServer.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SslTransportLayer.java",
+       "target": "KafkaChannel.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SslTransportLayer.java",
+       "target": "PlaintextTransportLayer.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SslTransportLayer.java",
+       "target": "TransportLayer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "RecordAccumulatorTest.java",
+       "target": "ProducerBatch.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "RecordAccumulatorTest.java",
+       "target": "Sender.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "RecordAccumulatorTest.java",
+       "target": "KafkaProducer.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "RecordAccumulatorTest.java",
+       "target": "RecordAccumulator.java",
+       "value": 24
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignor.java",
+       "target": "AssignmentInfoTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignor.java",
+       "target": "InternalTopicManager.java",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignor.java",
+       "target": "StreamsConfig.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignor.java",
+       "target": "AssignorConfiguration.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignor.java",
+       "target": "DefaultPartitionGrouper.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignor.java",
+       "target": "MockInternalTopicManager.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "IsrExpirationTest.scala",
+       "target": "Partition.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "IsrExpirationTest.scala",
+       "target": "Replica.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImpl.java",
+       "target": "KGroupedStream.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStreamImpl.java",
+       "target": "KGroupedStreamImpl.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "quickstart.html",
+       "target": "upgrade.html",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "quickstart.html",
+       "target": "api.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "quickstart.html",
+       "target": "documentation.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "DumpLogSegments.scala",
+       "target": "DumpLogSegmentsTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "BufferPool.java",
+       "target": "BufferPoolTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ConsumerProtocol.java",
+       "target": "PartitionAssignor.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConsumerProtocol.java",
+       "target": "ConsumerProtocolTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LICENSE",
+       "target": "NOTICE",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaConfig.scala",
+       "target": "LogConfigTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaConfig.scala",
+       "target": "ProducerConfig.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaConfig.scala",
+       "target": "server.properties",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "KafkaConfig.scala",
+       "target": "SslConfigs.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "upgrade.html",
+       "target": "KafkaConfig.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "upgrade.html",
+       "target": "KafkaConfigTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "gradle.properties",
+       "target": "kafka-run-class.bat",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "gradle.properties",
+       "target": "version.py",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "gradle.properties",
+       "target": "kafka-merge-pr.py",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "ControllerChannelManager.scala",
+       "target": "KafkaApis.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "ControllerChannelManager.scala",
+       "target": "LeaderElectionTest.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ControllerChannelManager.scala",
+       "target": "KafkaServer.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "StandaloneHerder.java",
+       "target": "DistributedHerder.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "MetricsTest.java",
+       "target": "Metrics.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "gradle.properties",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "__init__.py",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "version.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "pom.xml",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "pom.xml",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "kafka-merge-pr.py",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "RestServerTest.java",
+       "target": "RestServer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaZkClient.scala",
+       "target": "ZkData.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaZkClient.scala",
+       "target": "KafkaController.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ConsoleConsumer.scala",
+       "target": "ConsoleConsumerTest.scala",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "StandbyTask.java",
+       "target": "TaskManager.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StandbyTask.java",
+       "target": "AbstractTask.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "KTableImpl.java",
+       "target": "KTableImplTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "CastTest.java",
+       "target": "Cast.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "UtilsTest.java",
+       "target": "Utils.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaEmbedded.java",
+       "target": "EmbeddedKafkaCluster.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "kafka-run-class.bat",
+       "target": "kafka-run-class.sh",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "KafkaZkClientTest.scala",
+       "target": "KafkaZkClient.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaZkClientTest.scala",
+       "target": "ZkData.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SslFactory.java",
+       "target": "KafkaConfig.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SslFactory.java",
+       "target": "SslFactoryTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SslFactory.java",
+       "target": "SslConfigs.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StreamsBuilderTest.java",
+       "target": "InternalStreamsBuilder.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "GroupMetadataTest.scala",
+       "target": "GroupMetadata.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SubscriptionStateTest.java",
+       "target": "SubscriptionState.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "SubscriptionStateTest.java",
+       "target": "Fetcher.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SubscriptionStateTest.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SubscriptionStateTest.java",
+       "target": "MockConsumer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SubscriptionStateTest.java",
+       "target": "KafkaConsumer.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SubscriptionStateTest.java",
+       "target": "FetcherTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "KafkaConfig.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogCleanerManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "OffsetIndex.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogManager.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "Log.scala",
+       "value": 66
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogManagerTest.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogSegmentTest.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogCleaner.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogCleanerTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "TestUtils.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "LogTest.scala",
+       "target": "LogSegment.scala",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "SimpleAclAuthorizer.scala",
+       "target": "SimpleAclAuthorizerTest.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "MetadataTest.java",
+       "target": "Metadata.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "CachingSessionStore.java",
+       "target": "CachingWindowStore.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ProducerBatch.java",
+       "target": "Sender.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "WorkerTask.java",
+       "target": "WorkerSourceTaskTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "KafkaApis.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "LeaderElectionTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 24
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "KafkaServer.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PartitionStateMachine.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 36
+     },
+     {
+       
+      
+       "source": "RocksDBStoreTest.java",
+       "target": "RocksDBStore.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "TimeIndex.scala",
+       "target": "AbstractIndex.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "README.md",
+       "target": "kafka-run-class.sh",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "README.md",
+       "target": "gradle.properties",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "README.md",
+       "target": "kafka-run-class.bat",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "AclCommandTest.scala",
+       "target": "security.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ProcessorStateManagerTest.java",
+       "target": "ProcessorStateManager.java",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "EmbeddedKafkaCluster.java",
+       "target": "InternalTopicIntegrationTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "dependencies.gradle",
+       "target": "settings.gradle",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "dependencies.gradle",
+       "target": "base.sh",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "dependencies.gradle",
+       "target": "DockerOthers",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "dependencies.gradle",
+       "target": "kafka-run-class.sh",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "dependencies.gradle",
+       "target": "gradle.properties",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "dependencies.gradle",
+       "target": "kafka-run-class.bat",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "dependencies.gradle",
+       "target": "README.md",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "upgrade-guide.html",
+       "target": "upgrade.html",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "upgrade-guide.html",
+       "target": "core-concepts.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "SubscriptionState.java",
+       "target": "Fetcher.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "SubscriptionState.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "SubscriptionState.java",
+       "target": "MockConsumer.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "SubscriptionState.java",
+       "target": "KafkaConsumer.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "SubscriptionState.java",
+       "target": "FetcherTest.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "LogCleanerManager.scala",
+       "target": "LogManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogCleanerManager.scala",
+       "target": "Log.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "LogCleanerManager.scala",
+       "target": "LogCleaner.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "SchemaBuilderTest.java",
+       "target": "SchemaBuilder.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "IntegrationTestUtils.java",
+       "target": "KStreamAggregationIntegrationTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "IntegrationTestUtils.java",
+       "target": "InternalTopicIntegrationTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "IntegrationTestUtils.java",
+       "target": "StreamThread.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "GroupCoordinatorTest.scala",
+       "target": "KafkaApis.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "GroupCoordinatorTest.scala",
+       "target": "GroupCoordinator.scala",
+       "value": 26
+     },
+     {
+       
+      
+       "source": "GroupCoordinatorTest.scala",
+       "target": "GroupMetadata.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "GroupCoordinatorTest.scala",
+       "target": "MemberMetadata.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "GroupCoordinatorTest.scala",
+       "target": "AbstractCoordinator.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "GroupCoordinatorTest.scala",
+       "target": "ConsumerCoordinatorTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RequestResponseTest.java",
+       "target": "AuthorizerIntegrationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "RequestResponseTest.java",
+       "target": "RequestQuotaTest.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "RequestResponseTest.java",
+       "target": "ApiKeys.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "RequestResponseTest.java",
+       "target": "KafkaAdminClient.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "RequestResponseTest.java",
+       "target": "AbstractResponse.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaServer.scala",
+       "target": "KafkaConfig.scala",
+       "value": 31
+     },
+     {
+       
+      
+       "source": "KafkaServer.scala",
+       "target": "ServerShutdownTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaServer.scala",
+       "target": "ServerStartupTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaServer.scala",
+       "target": "LogConfig.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaServer.scala",
+       "target": "TestUtils.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KafkaServer.scala",
+       "target": "ZooKeeperTestHarness.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaServer.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ProcessorStateManager.java",
+       "target": "StreamsPartitionAssignor.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ProcessorStateManager.java",
+       "target": "StandbyTask.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ProcessorStateManager.java",
+       "target": "AbstractTask.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "StreamTaskTest.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "StreamsPartitionAssignor.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "StandbyTask.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "ProcessorStateManager.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "StreamTask.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "StreamThreadStateStoreProviderTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "StreamsPartitionAssignorTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "StreamsConfig.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "TaskManager.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "AbstractTask.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StreamThreadTest.java",
+       "target": "MockClientSupplier.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "configuration.html",
+       "target": "KafkaConfig.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "configuration.html",
+       "target": "api.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "configuration.html",
+       "target": "build.gradle",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "configuration.html",
+       "target": "documentation.html",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "Coordinator.java",
+       "target": "Agent.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "LogTest.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "TimeIndex.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "AbstractIndex.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "Log.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "LogSegmentTest.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "OffsetIndexTest.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "OffsetIndex.scala",
+       "target": "LogSegment.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "compatibility_test_new_broker_test.py",
+       "target": "DockerOthers",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "compatibility_test_new_broker_test.py",
+       "target": "client_compatibility_produce_consume_test.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "compatibility_test_new_broker_test.py",
+       "target": "client_compatibility_features_test.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThreadTest.scala",
+       "target": "AbstractFetcherThread.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "StandbyTask.java",
+       "value": 20
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "PartitionGroup.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "ProcessorStateManager.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "StandbyTaskTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "RecordCollectorImpl.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "AbstractTask.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "StreamTask.java",
+       "target": "Task.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "StreamThreadTest.java",
+       "value": 20
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "KafkaClientSupplier.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "TaskManager.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "KafkaStreamsTest.java",
+       "value": 30
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "GlobalStreamThread.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "MockClientSupplier.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaStreams.java",
+       "target": "StreamThread.java",
+       "value": 28
+     },
+     {
+       
+      
+       "source": "CachingKeyValueStoreTest.java",
+       "target": "CachingKeyValueStore.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaManagerTest.scala",
+       "target": "Partition.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaManagerTest.scala",
+       "target": "TestUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaManagerTest.scala",
+       "target": "ReplicaManager.scala",
+       "value": 20
+     },
+     {
+       
+      
+       "source": "KafkaProducerTest.java",
+       "target": "KafkaConsumerTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaProducerTest.java",
+       "target": "KafkaProducer.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "run_tests.sh",
+       "target": "DockerOthers",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "streams_upgrade_test.py",
+       "target": "DockerOthers",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "streams_upgrade_test.py",
+       "target": "streams.py",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "client_compatibility_produce_consume_test.py",
+       "target": "DockerOthers",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AbstractConfigTest.java",
+       "target": "AbstractConfig.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "Fetcher.java",
+       "target": "MockClient.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "Fetcher.java",
+       "target": "MockConsumer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Fetcher.java",
+       "target": "BaseConsumerTest.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "Fetcher.java",
+       "target": "KafkaConsumer.java",
+       "value": 25
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "KafkaApis.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "Partition.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "KafkaConfig.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "KafkaServer.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "ReplicaManagerTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "LogManagerTest.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "TestUtils.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "LogManager.scala",
+       "target": "CoreUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinator.java",
+       "target": "MockClient.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinator.java",
+       "target": "Fetcher.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinator.java",
+       "target": "MockConsumer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinator.java",
+       "target": "KafkaConsumer.java",
+       "value": 28
+     },
+     {
+       
+      
+       "source": "__init__.py",
+       "target": "gradle.properties",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "__init__.py",
+       "target": "version.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "__init__.py",
+       "target": "kafka-merge-pr.py",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "design.html",
+       "target": "implementation.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "tutorial.html",
+       "target": "quickstart.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionsTest.scala",
+       "target": "TestUtils.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "KafkaConfig.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "KafkaServer.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "LogManager.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "LogManagerTest.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "LogSegmentTest.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "ReplicaFetcherThread.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "OffsetIndexTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "TestUtils.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "CoreUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "Log.scala",
+       "target": "LogSegment.scala",
+       "value": 23
+     },
+     {
+       
+      
+       "source": "LogManagerTest.scala",
+       "target": "KafkaConfig.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "LogManagerTest.scala",
+       "target": "KafkaServer.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "LogManagerTest.scala",
+       "target": "ReplicaManagerTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "LogManagerTest.scala",
+       "target": "TestUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogManagerTest.scala",
+       "target": "CoreUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogManagerTest.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionCoordinator.scala",
+       "target": "TransactionMetadata.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "TransactionCoordinator.scala",
+       "target": "TransactionCoordinatorTest.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "WorkerSinkTask.java",
+       "target": "SinkTask.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "WorkerSinkTask.java",
+       "target": "WorkerSourceTask.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "WorkerSinkTask.java",
+       "target": "WorkerSinkTaskContext.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "WorkerSinkTask.java",
+       "target": "WorkerSourceTaskTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ErrorReporterTest.java",
+       "target": "DeadLetterQueueReporter.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "NetworkClient.java",
+       "target": "MockClient.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "NetworkClient.java",
+       "target": "ClusterConnectionStates.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "NetworkClient.java",
+       "target": "KafkaClient.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "NetworkClient.java",
+       "target": "KafkaConsumer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "MemoryRecords.java",
+       "target": "MemoryRecordsTest.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "MemoryRecords.java",
+       "target": "RecordAccumulatorTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "MemoryRecords.java",
+       "target": "LogCleaner.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "MemoryRecords.java",
+       "target": "Sender.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "MemoryRecords.java",
+       "target": "RecordAccumulator.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ClientQuotaManagerTest.scala",
+       "target": "ClientQuotaManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClientTest.java",
+       "target": "ConsumerNetworkClient.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClientTest.java",
+       "target": "KafkaConsumer.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClientTest.java",
+       "target": "AbstractCoordinator.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionCoordinatorTest.scala",
+       "target": "TransactionMetadata.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TransactionManagerTest.java",
+       "target": "SenderTest.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "TransactionManagerTest.java",
+       "target": "RecordAccumulatorTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TransactionManagerTest.java",
+       "target": "Sender.java",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "TransactionManagerTest.java",
+       "target": "KafkaProducer.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "TransactionManagerTest.java",
+       "target": "RecordAccumulator.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "TransactionManagerTest.java",
+       "target": "TransactionManager.java",
+       "value": 25
+     },
+     {
+       
+      
+       "source": "StateDirectory.java",
+       "target": "StateDirectoryTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StateDirectory.java",
+       "target": "ProcessorStateManager.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogConfig.scala",
+       "target": "KafkaConfig.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "LogConfig.scala",
+       "target": "LogConfigTest.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "kafka.py",
+       "target": "kafka.properties",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "kafka.py",
+       "target": "zookeeper.py",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "kafka.py",
+       "target": "verifiable_producer.py",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "kafka.py",
+       "target": "console_consumer.py",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "kafka.py",
+       "target": "security_config.py",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "kafka.py",
+       "target": "security_rolling_upgrade_test.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PartitionTest.scala",
+       "target": "Partition.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "PartitionTest.scala",
+       "target": "ReplicaManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionStateManager.scala",
+       "target": "TransactionMetadata.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionStateManager.scala",
+       "target": "TransactionCoordinator.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "TransactionStateManager.scala",
+       "target": "TransactionCoordinatorTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionStateManager.scala",
+       "target": "TransactionStateManagerTest.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "JsonConverter.java",
+       "target": "JsonConverterTest.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "GlobalStateManagerImplTest.java",
+       "target": "GlobalStateManagerImpl.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "version.py",
+       "target": "base.sh",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "version.py",
+       "target": "pom.xml",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "version.py",
+       "target": "dependencies.gradle",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "version.py",
+       "target": "__init__.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "version.py",
+       "target": "pom.xml",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "version.py",
+       "target": "pom.xml",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "version.py",
+       "target": "kafka-merge-pr.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogSegmentTest.scala",
+       "target": "LogSegment.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ReplicaFetcherThread.scala",
+       "target": "KafkaConfig.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaFetcherThread.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaFetcherThread.scala",
+       "target": "ReplicaAlterLogDirsThread.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaFetcherThread.scala",
+       "target": "ReplicaFetcherManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaFetcherThread.scala",
+       "target": "TestUtils.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ReplicaFetcherThread.scala",
+       "target": "ReplicaManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "LogCleaner.scala",
+       "target": "LogCleanerIntegrationTest.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "LogCleaner.scala",
+       "target": "Log.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "LogCleaner.scala",
+       "target": "LogSegment.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KeyValueStoreTestDriver.java",
+       "target": "InternalMockProcessorContext.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "MockConsumer.java",
+       "target": "Consumer.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "MockConsumer.java",
+       "target": "MockConsumerTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ConfigHandler.scala",
+       "target": "DynamicConfigChangeTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "GroupMetadataManagerTest.scala",
+       "target": "GroupMetadataTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "GroupMetadataManagerTest.scala",
+       "target": "GroupCoordinatorTest.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "GroupMetadataManagerTest.scala",
+       "target": "TransactionStateManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "GroupMetadataManagerTest.scala",
+       "target": "GroupCoordinator.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "GroupMetadataManagerTest.scala",
+       "target": "GroupMetadata.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "LogCleanerTest.scala",
+       "target": "Log.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "LogCleanerTest.scala",
+       "target": "LogCleaner.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "SessionWindowedKStream.scala",
+       "target": "KGroupedStream.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SessionWindowedKStream.scala",
+       "target": "TimeWindowedKStream.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ProducerConfig.java",
+       "target": "ConsumerConfig.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "NetworkClientTest.java",
+       "target": "ClusterConnectionStates.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "NetworkClientTest.java",
+       "target": "NetworkClient.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignorTest.java",
+       "target": "StreamsPartitionAssignor.java",
+       "value": 28
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignorTest.java",
+       "target": "StreamsConfig.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignorTest.java",
+       "target": "AssignorConfiguration.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamsPartitionAssignorTest.java",
+       "target": "StreamThread.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "Sender.java",
+       "target": "KafkaProducer.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "AbstractCoordinatorTest.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "AbstractCoordinatorTest.java",
+       "target": "AbstractCoordinator.java",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "AbstractCoordinatorTest.java",
+       "target": "ConsumerCoordinatorTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "DelayedOperation.scala",
+       "target": "ReplicaManager.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "security.html",
+       "target": "quickstart.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "security.html",
+       "target": "upgrade.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "security.html",
+       "target": "configuration.html",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "security.html",
+       "target": "api.html",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "security.html",
+       "target": "implementation.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "security.html",
+       "target": "documentation.html",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "KafkaApis.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "LeaderElectionTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 23
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachine.scala",
+       "target": "KafkaServer.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConfigDef.java",
+       "target": "ConfigDefTest.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "RecordQueue.java",
+       "target": "PartitionGroup.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RecordQueue.java",
+       "target": "StreamTask.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RecordQueue.java",
+       "target": "RecordQueueTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "GroupMetadataManager.scala",
+       "target": "KafkaApis.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "GroupMetadataManager.scala",
+       "target": "GroupMetadataTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "GroupMetadataManager.scala",
+       "target": "GroupCoordinatorTest.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "GroupMetadataManager.scala",
+       "target": "TransactionStateManager.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "GroupMetadataManager.scala",
+       "target": "GroupMetadataManagerTest.scala",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "GroupMetadataManager.scala",
+       "target": "GroupCoordinator.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "GroupMetadataManager.scala",
+       "target": "GroupMetadata.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "GroupMetadataManager.scala",
+       "target": "ReplicaManager.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaClient.java",
+       "target": "MockClient.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TimeWindowedKStream.scala",
+       "target": "KGroupedStream.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PageViewgroupdDemo.java",
+       "target": "WordCountProcessorDemo.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PageViewgroupdDemo.java",
+       "target": "PageViewUngroupdDemo.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "PageViewgroupdDemo.java",
+       "target": "WordCountDemo.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "PageViewgroupdDemo.java",
+       "target": "PipeDemo.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "BaseConsumerTest.scala",
+       "target": "MockConsumer.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "BaseConsumerTest.scala",
+       "target": "KafkaConsumer.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "BaseConsumerTest.scala",
+       "target": "ConsumerCoordinatorTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "BaseConsumerTest.scala",
+       "target": "FetcherTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "BaseConsumerTest.scala",
+       "target": "ConsumerBounceTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "MockClient.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "SubscriptionStateTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "SubscriptionState.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "Fetcher.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "MockConsumer.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "ConsumerConfig.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "KafkaConsumer.java",
+       "value": 40
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "AbstractCoordinator.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "Consumer.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaConsumerTest.java",
+       "target": "FetcherTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "api.html",
+       "target": "upgrade.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "api.html",
+       "target": "documentation.html",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "SslTransportLayerTest.java",
+       "target": "SslSelectorTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SslTransportLayerTest.java",
+       "target": "SslTransportLayer.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SslTransportLayerTest.java",
+       "target": "SslFactory.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "SslTransportLayerTest.java",
+       "target": "NioEchoServer.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SslTransportLayerTest.java",
+       "target": "SslConfigs.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "SslTransportLayerTest.java",
+       "target": "TestSslUtils.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClient.java",
+       "target": "MockClient.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClient.java",
+       "target": "Fetcher.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClient.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClient.java",
+       "target": "NetworkClient.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClient.java",
+       "target": "KafkaConsumer.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClient.java",
+       "target": "AbstractCoordinator.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ConsumerNetworkClient.java",
+       "target": "FetcherTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SaslAuthenticatorTest.java",
+       "target": "SaslServerAuthenticator.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StandbyTaskTest.java",
+       "target": "StandbyTask.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "StandbyTaskTest.java",
+       "target": "ProcessorStateManager.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "StandbyTaskTest.java",
+       "target": "AbstractTask.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "DynamicConfigManager.scala",
+       "target": "DynamicConfigChangeTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SelectorTest.java",
+       "target": "Selector.java",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "ThreadCacheTest.java",
+       "target": "ThreadCache.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "LeaderElectionTest.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "RequestChannel.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "KafkaConfig.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "UncleanLeaderElectionTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "DeleteTopicTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "LogRecoveryTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "CoreUtils.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "TestUtils.scala",
+       "target": "MetricsTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "introduction.html",
+       "target": "uses.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SocketServerTest.scala",
+       "target": "Selector.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "SocketServerTest.scala",
+       "target": "RequestChannel.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "SocketServerTest.scala",
+       "target": "KafkaConfig.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "SocketServerTest.scala",
+       "target": "KafkaServer.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "SocketServerTest.scala",
+       "target": "TestUtils.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "InternalTopologyBuilder.java",
+       "target": "InternalTopologyBuilderTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "PlaintextProducerSendTest.scala",
+       "target": "BaseProducerSendTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConsumerGroupCommand.scala",
+       "target": "DescribeConsumerGroupTest.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ConsumerGroupCommand.scala",
+       "target": "StreamsResetter.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConsumerGroupCommand.scala",
+       "target": "TestUtils.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ConsumerGroupCommand.scala",
+       "target": "ConsumerGroupCommandTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaProducer.java",
+       "target": "ProducerConfig.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "PlaintextConsumerTest.scala",
+       "target": "Fetcher.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PlaintextConsumerTest.scala",
+       "target": "BaseConsumerTest.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "PlaintextConsumerTest.scala",
+       "target": "KafkaConsumer.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PlaintextConsumerTest.scala",
+       "target": "FetcherTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "InternalTopicManager.java",
+       "target": "InternalTopicManagerTest.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "InternalTopicManager.java",
+       "target": "StreamsConfig.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaClientSupplier.java",
+       "target": "DefaultKafkaClientSupplier.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaClientSupplier.java",
+       "target": "MockClientSupplier.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "CoreUtilsTest.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "KafkaConfig.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "KafkaServer.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "ReassignPartitionsCommand.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "CoreUtils.scala",
+       "target": "PreferredReplicaLeaderElectionCommand.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "WorkerSourceTask.java",
+       "target": "WorkerTask.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "DelayedJoin.scala",
+       "target": "DelayedHeartbeat.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "LogValidatorTest.scala",
+       "target": "LogValidator.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ProducerStateManager.scala",
+       "target": "LogTest.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ProducerStateManager.scala",
+       "target": "Log.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ProducerStateManager.scala",
+       "target": "LogSegment.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ApiVersion.scala",
+       "target": "KafkaConfig.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ApiVersion.scala",
+       "target": "ApiVersionTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StoreChangelogReaderTest.java",
+       "target": "StoreChangelogReader.java",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "KGroupedStream.java",
+       "target": "KGroupedStreamImpl.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KStream.java",
+       "target": "KStreamImpl.java",
+       "value": 27
+     },
+     {
+       
+      
+       "source": "KStream.java",
+       "target": "KTableImpl.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KStream.java",
+       "target": "KStreamImplTest.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "PageViewUngroupdDemo.java",
+       "target": "WordCountProcessorDemo.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PageViewUngroupdDemo.java",
+       "target": "WordCountDemo.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "PageViewUngroupdDemo.java",
+       "target": "PipeDemo.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PlaintextAdminIntegrationTest.scala",
+       "target": "AdminClient.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PlaintextAdminIntegrationTest.scala",
+       "target": "SaslSslAdminIntegrationTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PlaintextAdminIntegrationTest.scala",
+       "target": "AdminManager.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "PlaintextAdminIntegrationTest.scala",
+       "target": "TestUtils.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PlaintextAdminIntegrationTest.scala",
+       "target": "KafkaAdminClientTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "client_compatibility_features_test.py",
+       "target": "DockerOthers",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "client_compatibility_features_test.py",
+       "target": "client_compatibility_produce_consume_test.py",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "MetadataCache.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "MetadataCache.scala",
+       "target": "MetadataCacheTest.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "MetadataCache.scala",
+       "target": "ReplicaManager.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "DelayedOperationTest.scala",
+       "target": "DelayedOperation.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "DelayedOperationTest.scala",
+       "target": "ReplicaManager.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "jmx.py",
+       "target": "kafka.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamsConfig.java",
+       "target": "StreamsConfigTest.java",
+       "value": 29
+     },
+     {
+       
+      
+       "source": "StreamsConfig.java",
+       "target": "KafkaStreams.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StreamsConfig.java",
+       "target": "ProducerConfig.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "StreamsConfig.java",
+       "target": "ConsumerConfig.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "StreamsConfig.java",
+       "target": "StreamThread.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "WordCountDemo.java",
+       "target": "PipeDemo.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "RocksDBStore.java",
+       "target": "AbstractKeyValueStoreTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RocksDBStore.java",
+       "target": "MeteredKeyValueStore.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "RocksDBStore.java",
+       "target": "MemoryLRUCache.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ServerGenerateBrokerIdTest.scala",
+       "target": "KafkaServer.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TransactionStateManagerTest.scala",
+       "target": "TransactionCoordinator.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "TransactionStateManagerTest.scala",
+       "target": "TransactionCoordinatorTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "MemoryRecordsBuilderTest.java",
+       "target": "MemoryRecordsBuilder.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "GroupCoordinator.scala",
+       "target": "GroupMetadataTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "GroupCoordinator.scala",
+       "target": "GroupMetadata.scala",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "GroupCoordinator.scala",
+       "target": "MemberMetadata.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "GroupCoordinator.scala",
+       "target": "AbstractCoordinator.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "Partition.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "RequestChannel.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "ReplicaAlterLogDirsThread.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "ReplicaFetcherThread.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "ReplicaFetcherManager.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "TestUtils.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "AbstractFetcherThread.scala",
+       "target": "AbstractFetcherManager.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "Protocol.java",
+       "target": "RequestResponseTest.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "Protocol.java",
+       "target": "ApiKeys.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConfigCommandTest.scala",
+       "target": "ConfigCommand.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "AclCommand.scala",
+       "target": "SimpleAclAuthorizer.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AclCommand.scala",
+       "target": "AclCommandTest.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "AclCommand.scala",
+       "target": "security.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "verifiable_producer.py",
+       "target": "verifiable_consumer.py",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "verifiable_producer.py",
+       "target": "console_consumer.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AssignorConfiguration.java",
+       "target": "StreamsConfig.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TopicCommandTest.scala",
+       "target": "TopicCommandWithZKClientTest.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "KafkaAdminClientTest.java",
+       "target": "AdminClientUnitTestEnv.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaAdminClientTest.java",
+       "target": "KafkaApis.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaAdminClientTest.java",
+       "target": "MockClient.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "settings.gradle",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "DockerOthers",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "kafka-run-class.sh",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "gradle.properties",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "kafka-run-class.bat",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "README.md",
+       "value": 35
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "dependencies.gradle",
+       "value": 41
+     },
+     {
+       
+      
+       "source": "build.gradle",
+       "target": "import-control.xml",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "gradle.properties",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "pom.xml",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "__init__.py",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "version.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "pom.xml",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "kafka-merge-pr.py",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "WorkerSourceTaskTest.java",
+       "target": "WorkerSourceTask.java",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "gradle.properties",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "pom.xml",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "__init__.py",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "version.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "pom.xml",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "pom.xml",
+       "target": "kafka-merge-pr.py",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ProducerFailureHandlingTest.scala",
+       "target": "TestUtils.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ProducerFailureHandlingTest.scala",
+       "target": "BaseProducerSendTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "RecordAccumulator.java",
+       "target": "ProducerBatch.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "RecordAccumulator.java",
+       "target": "Sender.java",
+       "value": 21
+     },
+     {
+       
+      
+       "source": "RecordAccumulator.java",
+       "target": "KafkaProducer.java",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "ProduceBenchWorker.java",
+       "target": "ProduceBenchSpec.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ResetIntegrationTest.java",
+       "target": "StreamsResetter.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ResetIntegrationTest.java",
+       "target": "EmbeddedKafkaCluster.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ResetIntegrationTest.java",
+       "target": "ResetIntegrationWithSslTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ApiKeys.java",
+       "target": "AbstractResponse.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "AbstractHerderTest.java",
+       "target": "DistributedHerderTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AbstractHerderTest.java",
+       "target": "AbstractHerder.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaAdminClient.java",
+       "target": "AdminClientUnitTestEnv.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaAdminClient.java",
+       "target": "KafkaApis.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaAdminClient.java",
+       "target": "MockClient.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaAdminClient.java",
+       "target": "AdminClient.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaAdminClient.java",
+       "target": "RequestQuotaTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaAdminClient.java",
+       "target": "PlaintextAdminIntegrationTest.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "KafkaAdminClient.java",
+       "target": "KafkaAdminClientTest.java",
+       "value": 30
+     },
+     {
+       
+      
+       "source": "KafkaAdminClient.java",
+       "target": "MockAdminClient.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RecordCollectorTest.java",
+       "target": "RecordCollectorImpl.java",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "RecordCollectorTest.java",
+       "target": "RecordCollector.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "console_consumer.py",
+       "target": "jmx.py",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "TaskManager.java",
+       "target": "StreamTaskTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TaskManager.java",
+       "target": "StreamsRebalanceListener.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TaskManager.java",
+       "target": "StreamTask.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "TaskManager.java",
+       "target": "AbstractTask.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "SmokeTestClient.java",
+       "target": "StreamsSmokeTest.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "templateData.js",
+       "target": "gradle.properties",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "WorkerGroupMember.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "MockConsumer.java",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "KafkaProducer.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "ConsumerConfig.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "AbstractCoordinator.java",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "Consumer.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "KafkaConsumer.java",
+       "target": "ConsumerBounceTest.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "kafka-merge-pr.py",
+       "target": "gradle.properties",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "kafka-merge-pr.py",
+       "target": "version.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaApisTest.scala",
+       "target": "KafkaApis.scala",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "GroupMetadata.scala",
+       "target": "MemberMetadata.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "WorkerTest.java",
+       "target": "Worker.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "streams.py",
+       "target": "StreamsSmokeTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StoreChangelogReader.java",
+       "target": "TaskManager.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "StoreChangelogReader.java",
+       "target": "StreamThread.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "LogCleanerManagerTest.scala",
+       "target": "LogCleanerManager.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "ops.html",
+       "target": "upgrade.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ops.html",
+       "target": "configuration.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ops.html",
+       "target": "design.html",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ops.html",
+       "target": "security.html",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ops.html",
+       "target": "api.html",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ops.html",
+       "target": "implementation.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ops.html",
+       "target": "documentation.html",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "streams_broker_compatibility_test.py",
+       "target": "BrokerCompatibilityTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "streams_broker_compatibility_test.py",
+       "target": "streams.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "DistributedHerder.java",
+       "target": "DistributedHerderTest.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "DistributedHerder.java",
+       "target": "StandaloneHerderTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ZooKeeperTestHarness.scala",
+       "target": "EmbeddedZookeeper.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "security_config.py",
+       "target": "kafka.properties",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "TransactionManager.java",
+       "target": "Sender.java",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "TransactionManager.java",
+       "target": "KafkaProducer.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "TransactionManager.java",
+       "target": "RecordAccumulator.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "upgrade_test.py",
+       "target": "base.sh",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "upgrade_test.py",
+       "target": "DockerOthers",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "upgrade_test.py",
+       "target": "compatibility_test_new_broker_test.py",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "upgrade_test.py",
+       "target": "client_compatibility_produce_consume_test.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "upgrade_test.py",
+       "target": "version.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "upgrade_test.py",
+       "target": "client_compatibility_features_test.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "AdminUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "KafkaApis.scala",
+       "value": 36
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "Partition.scala",
+       "value": 47
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "RequestChannel.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "DelayedProduce.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "Replica.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "IsrExpirationTest.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "KafkaConfig.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "DelayedFetch.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "PartitionStateMachine.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "KafkaServer.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "LogManager.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "Log.scala",
+       "value": 19
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "TestUtils.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "AbstractFetcherThread.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "AbstractFetcherManager.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "ReplicaManager.scala",
+       "target": "HighwatermarkPersistenceTest.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "implementation.html",
+       "target": "api.html",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaStreamsTest.java",
+       "target": "StreamThreadTest.java",
+       "value": 15
+     },
+     {
+       
+      
+       "source": "KafkaStreamsTest.java",
+       "target": "TaskManager.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "documentation.html",
+       "target": "upgrade.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "documentation.html",
+       "target": "templateData.js",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KStreamImplTest.java",
+       "target": "KStreamImpl.java",
+       "value": 16
+     },
+     {
+       
+      
+       "source": "KStreamTransformValues.java",
+       "target": "KStreamTransformValuesTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PartitionGroupTest.java",
+       "target": "PartitionGroup.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PartitionGroupTest.java",
+       "target": "RecordQueue.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "PartitionGroupTest.java",
+       "target": "RecordQueueTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "replication_test.py",
+       "target": "kafka.py",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RocksDBWindowStoreTest.java",
+       "target": "KeyValueStoreTestDriver.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "RocksDBWindowStoreTest.java",
+       "target": "RocksDBStore.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "RocksDBWindowStoreTest.java",
+       "target": "RocksDBWindowStore.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "AdminUtils.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "KafkaApis.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "Partition.scala",
+       "value": 20
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "LeaderElectionTest.scala",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "TopicDeletionManager.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "KafkaConfig.scala",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ControllerChannelManager.scala",
+       "value": 32
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "PartitionStateMachine.scala",
+       "value": 37
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "KafkaServer.scala",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 35
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "TestUtils.scala",
+       "value": 14
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "CoreUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ReassignPartitionsCommand.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ReplicationUtils.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ReplicaManager.scala",
+       "value": 22
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "PreferredReplicaLeaderElectionCommand.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KafkaController.scala",
+       "target": "ControllerState.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "PreferredReplicaLeaderElectionCommand.scala",
+       "target": "ReassignPartitionsCommand.scala",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ReplicaStateMachineTest.scala",
+       "target": "ReplicaStateMachine.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ResetConsumerGroupOffsetTest.scala",
+       "target": "ConsumerGroupCommand.scala",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "Utils.java",
+       "target": "Metrics.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StandaloneHerderTest.java",
+       "target": "DistributedHerderTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "StandaloneHerderTest.java",
+       "target": "AbstractHerder.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "AbstractHerder.java",
+       "target": "StandaloneHerder.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AbstractHerder.java",
+       "target": "DistributedHerderTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "AbstractHerder.java",
+       "target": "DistributedHerder.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "TestSslUtils.java",
+       "target": "SslFactory.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "GlobalKTableIntegrationTest.java",
+       "target": "KStreamAggregationIntegrationTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AbstractCoordinator.java",
+       "target": "MockClient.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AbstractCoordinator.java",
+       "target": "WorkerCoordinator.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "AbstractCoordinator.java",
+       "target": "Fetcher.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "AbstractCoordinator.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 28
+     },
+     {
+       
+      
+       "source": "RocksDBWindowStore.java",
+       "target": "RocksDBStore.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "MockClient.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "SubscriptionState.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 42
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "MockConsumer.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "KafkaConsumerTest.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "ConsumerNetworkClient.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "ConsumerConfig.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "KafkaConsumer.java",
+       "value": 26
+     },
+     {
+       
+      
+       "source": "ConsumerCoordinatorTest.java",
+       "target": "AbstractCoordinator.java",
+       "value": 29
+     },
+     {
+       
+      
+       "source": "FetcherTest.java",
+       "target": "MockClient.java",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "FetcherTest.java",
+       "target": "Fetcher.java",
+       "value": 55
+     },
+     {
+       
+      
+       "source": "FetcherTest.java",
+       "target": "ConsumerCoordinator.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "FetcherTest.java",
+       "target": "MockConsumer.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "FetcherTest.java",
+       "target": "KafkaConsumer.java",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "KafkaConfigTest.scala",
+       "target": "KafkaConfig.scala",
+       "value": 26
+     },
+     {
+       
+      
+       "source": "KafkaConfigTest.scala",
+       "target": "KafkaServer.scala",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "KafkaConfigTest.scala",
+       "target": "LogConfig.scala",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KTable.java",
+       "target": "KTableImpl.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "KTable.java",
+       "target": "KGroupedTable.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "KTable.java",
+       "target": "KStream.java",
+       "value": 13
+     },
+     {
+       
+      
+       "source": "MockClientSupplier.java",
+       "target": "DefaultKafkaClientSupplier.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "WorkerSinkTaskTest.java",
+       "target": "WorkerSinkTaskThreadedTest.java",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "WorkerSinkTaskTest.java",
+       "target": "SinkTask.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "WorkerSinkTaskTest.java",
+       "target": "WorkerSinkTask.java",
+       "value": 25
+     },
+     {
+       
+      
+       "source": "WorkerSinkTaskTest.java",
+       "target": "WorkerSourceTask.java",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "WorkerSinkTaskTest.java",
+       "target": "WorkerSourceTaskTest.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "TopicCommand.scala",
+       "target": "TopicCommandWithZKClientTest.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "TopicCommand.scala",
+       "target": "TopicCommandTest.scala",
+       "value": 12
+     },
+     {
+       
+      
+       "source": "TopicCommand.scala",
+       "target": "TopicCommandWithAdminClientTest.scala",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "KGroupedStreamImpl.java",
+       "target": "KGroupedStreamImplTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StreamTaskTest.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "TaskManagerTest.java",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StreamsPartitionAssignor.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StandbyTask.java",
+       "value": 11
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "PartitionGroup.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "ProcessorStateManager.java",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StreamThreadTest.java",
+       "value": 53
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StreamTask.java",
+       "value": 27
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StreamThreadStateStoreProviderTest.java",
+       "value": 9
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "StandbyTaskTest.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "InternalTopicManager.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "TaskManager.java",
+       "value": 17
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "AbstractTask.java",
+       "value": 10
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "KafkaStreamsTest.java",
+       "value": 18
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "GlobalStreamThread.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "StreamThread.java",
+       "target": "MockClientSupplier.java",
+       "value": 5
+     },
+     {
+       
+      
+       "source": "dsl-api.html",
+       "target": "processor-api.html",
+       "value": 6
+     },
+     {
+       
+      
+       "source": "dsl-api.html",
+       "target": "upgrade-guide.html",
+       "value": 7
+     },
+     {
+       
+      
+       "source": "dsl-api.html",
+       "target": "interactive-queries.html",
+       "value": 8
+     },
+     {
+       
+      
+       "source": "dsl-api.html",
+       "target": "config-streams.html",
+       "value": 5
+     }
+    
+    
+    ]
+}
+}
+    
+}

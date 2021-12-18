@@ -20,9 +20,11 @@ export class ProjectAddComponent implements OnInit {
     ProjectName: '',
     ProjectDescription: ''
   };
+
   illustration: Illustration = {
     _id: '',
     IllustrationName: '',
+    // @ts-ignore
     IllustrationData: [],
     IllustrationType: '',
     Tags: ''

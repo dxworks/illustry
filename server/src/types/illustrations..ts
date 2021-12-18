@@ -4,9 +4,19 @@ export interface Illustration {
     IllustrationType: String;
     IllustrationName: String;
     Tags: String[];
-    IllustrationData: CalendarMatrix | FLG | HEB | Sankey | StackedCharts | VerticalChart | HorizontalChart | DOT;
+    // IllustrationData: AllIllustrations;
 }
 
+export interface AllIllustrations {
+    Dot?:DOT
+    CalendarMatrix?: CalendarMatrix
+    Flg?: FLG
+    Heb?: HEB
+    Sankey?: Sankey
+    StackedCharts?: StackedCharts
+    VerticalChart?: VerticalChart
+    HorizontalChart?: HorizontalChart
+}
 interface DOT {
     nodes: Node[];
     links: Link[];

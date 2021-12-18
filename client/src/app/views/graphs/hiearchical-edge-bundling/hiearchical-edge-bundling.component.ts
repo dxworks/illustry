@@ -21,7 +21,7 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
   private diameter: any;
   private tooltipMaxWidth = 500;
   @Input()
-  data: any;
+  data: HebTypes|undefined;
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
   }
 

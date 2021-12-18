@@ -21,15 +21,17 @@ export class SankyDiagramComponent implements OnInit {
   nodeAlign: any;
 
   @Input()
-  data: any;
+  data: SankeyTypes|undefined;
 
   constructor() {
   }
 
   ngOnInit(): void {
+    // @ts-ignore
     this.nodes = this.data.nodes;
     // @ts-ignore
     this.nodes.map((node, i) => node['index'] = i)
+    // @ts-ignore
     this.links = modifyLinks(this.nodes, this.data.links);
     //@ts-ignore
     this.graph = { links: this.links, nodes: this.nodes };

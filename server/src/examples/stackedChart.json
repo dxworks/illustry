@@ -1,4 +1,4 @@
-{"illustrationData": 
+{"illustrationData":{"StackedCharts": 
     {"chart":[{
            "group": "frontend",
            "API": 43,
@@ -31,3 +31,4 @@
          }],
          "subgroups":["API","BZL","Components","Services","Types","MiddleWare","Routes","Documents","Integration","Unit","Smoke","Api test","Beta test","Regression"]
       }}
+         }

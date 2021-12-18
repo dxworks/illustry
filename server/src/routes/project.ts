@@ -8,7 +8,6 @@ router.delete('/delete/external/project', projectMiddleware.deleteProjectfromExt
 router.put('/update/external/project', projectMiddleware.updateProjectfromEtern)
 router.get('/get/external/project', projectMiddleware.getOneProjectfromEtern)
 router.get('/projects', projectMiddleware.query)
-
 router.get('/project/:projectName', projectMiddleware.findOne)
  
 

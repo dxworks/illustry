@@ -1,5 +1,5 @@
 {
-    "illustrationData": {
+    "illustrationData": {"HorizontalChart":{
         "chart": [{
                 "name": "Smoke testing",
                 "value": 30
@@ -65,4 +65,5 @@
         "maxDomainInterval": 500
 
     }
+}
 }

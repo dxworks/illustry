@@ -1,8 +1,9 @@
 import _ from "lodash";
 import { FileProperties } from "../types/fileproperties";
+import { Project } from "../types/project";
 const converter = require('json-2-csv')
 const fs = require("fs");
-export const readFile = (file: FileProperties, project: any, next: any) => {
+export const readFile = (file: FileProperties, project: Project, next: any) => {
     fs.readFile(_.get(file, 'filePath'), (error: any, data: any) => {
         if (error) {
             next(error,null)
@@ -12,6 +13,7 @@ export const readFile = (file: FileProperties, project: any, next: any) => {
             let finalJson = {
                 IllustrationData: _.get(JSON.parse(illustration),'illustrationData')
             }
+            
             next(null, { ...project, ...finalJson })
         }
         else

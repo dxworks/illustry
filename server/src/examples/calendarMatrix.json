@@ -1,5 +1,5 @@
 {
-    "illustrationData": {
+    "illustrationData": { "CalendarMatrix":{
         "calendarData": [{
             "date": "2016-01-01",
             "total": 17164,
@@ -73,4 +73,5 @@
             }]
         }]
     }
+  }
 }

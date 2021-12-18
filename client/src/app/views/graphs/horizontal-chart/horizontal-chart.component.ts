@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as d3 from "d3";
 import { Chart, registerables } from 'chart.js';
+import {HorizontalChartTypes} from "../../../entities/horizontalchart-types";
 
 @Component({
   selector: 'app-horizontal-chart',
@@ -11,7 +12,7 @@ export class HorizontalChartComponent implements OnInit {
 
   chart: any = [];
   @Input()
-  data: any;
+  data: HorizontalChartTypes|undefined;
 
   constructor() {
 
@@ -21,6 +22,7 @@ export class HorizontalChartComponent implements OnInit {
 
   ngOnInit(): void {
 
+    // @ts-ignore
     this.createChart({ chart: this.data.chart, label: this.data.label }, this.verifyMaxDomainInterval(this.data.maxDomainInterval, this.data.chart), this.verifyMinDomainInterval(this.data.minDomainInterval, this.data.chart))
 
   }

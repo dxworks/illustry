@@ -1,6 +1,6 @@
 import * as illustrationLib from '../lib/illustrations'
 import { FileProperties } from '../types/fileproperties'
-import { Illustration } from '../types/illustrations.'
+import { AllIllustrations, Illustration } from '../types/illustrations.'
 
 export function addIllustration(projectName: string, file: FileProperties, illustrationName: string,illustrationType: string,tags:string, next: any) {
     return Promise.resolve()
@@ -32,7 +32,7 @@ export function updateIllustrationFromOtherSource(projectName:any,illustrationNa
     return Promise.resolve()
     .then(() => {  return illustrationLib.updateIllustrationFromOtherSource(projectName,illustrationName,illustrationType,tags,illustrationData,next) })
 }
-export function addIllustrationFromOtherSource(projectName: string, illustrationName: string, illustrationType: string, tags: string, illustrationData: Illustration, next: any) {
+export function addIllustrationFromOtherSource(projectName: string, illustrationName: string, illustrationType: string, tags: string, illustrationData: AllIllustrations, next: any) {
     return Promise.resolve()
         .then(() => { return illustrationLib.addIllustrationFromOtherSource(projectName, illustrationName, illustrationType, tags, illustrationData, next)})
 }
