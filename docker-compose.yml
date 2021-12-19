@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  mongo_db:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_db:/data/db
+    networks:
+      - illustry-networks
+
+  illustry_backend:
+    build: ./server
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/server
+    environment:
+      PORT: 3000
+      MONGODB_CONNECTION_STRING: mongodb+srv://vladimir:password1234@cluster0.zkjem.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+      DB_NAME: my_db
+      Name: Illustry
+    depends_on:
+      - mongo_db
+    networks:
+      - illustry-networks
+
+  illustry_frontend:
+    build: ./client
+    restart: always
+    ports:
+      - 4200:80
+    environment:
+      base: "http://localhost"
+      client: "http://localhost:4200"
+    networks:
+      - illustry-networks
+
+volumes:
+  mongo_db: {}
+networks:
+  illustry-networks:
+    driver: bridge
