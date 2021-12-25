@@ -5,7 +5,7 @@ const config = require('../config')
 export const mongooseConnection =
     mongoose
         .connect(
-            config.MONGODB_CONNECTION_STRING
+            config.MONGODB_CONNECTION_URI
             , { useNewUrlParser: true })
 
 const db = mongoose.connection;
