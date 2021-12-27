@@ -35,5 +35,5 @@
     *ngSwitchCase="'graphiz'"
     [content]="currentIllustration.IllustrationData.Dot"
   ></app-dot-graph>
-  <app-ganttchart *ngSwitchCase="'ganttchart'"></app-ganttchart>
+  <app-ganttchart *ngSwitchCase="'ganttchart'" [data]="currentIllustration.IllustrationData.Gantt"></app-ganttchart>
 </div>

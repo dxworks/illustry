@@ -1,570 +1,220 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 import { isNumber } from "@qntm-code/utils";
-
+//@ts-ignore
+import {Heatmap} from './hheatmap.js';
+import { GanttChartTypes } from 'src/app/entities/gantChart-types.js';
+ 
 @Component({
   selector: 'app-ganttchart',
   templateUrl: './ganttchart.component.html',
   styleUrls: ['./ganttchart.component.css']
 })
 export class GanttchartComponent implements OnInit {
-  // @Input()
-  // data: any;
+//  // Define dimensions of the plot
+//  margin = {top: 120, right: 60, bottom: 60, left: 180};
+ height = 500; 
+ width = 960;
+ @Input()
+  data:GanttChartTypes|undefined 
+// // Define the transition duration
+//  transDur = 500;
+//  stats:any;
+// // Set up a global variable for the names of the stats reported here
+// // (in hopes of making it easier to keep line colors consistent
+//  reportStats = [];
 
-  dataInput = [
-    {
-      "c1": "",
-      "c2": "<b>2000</b>",
-      "c3": "<b>2010</b>",
-      "c4": "<b>2014</b>",
-      "c5": "<b>Change 10-14</b>",
-      "c6": "<b>% Change</b>"
-    },
-    {
-      "c1": "",
-      "c2": "<div>Q1 Q2 Q3 Q4 </div>",
-      "c3": "<br>Q1</br> <br>Q2</br> <br>Q3</br> <br>Q4</br>",
-      "c4": "<br>Q1</br> <br>Q2</br> <br>Q3</br> <br>Q4</br>",
-      "c5": "<br>Q1</br> <br>Q2</br> <br>Q3</br> <br>Q4</br>",
-      "c6": "<br>Q1</br> <br>Q2</br> <br>Q3</br> <br>Q4</br>"
-    },
-    // {
-    //   "c1": "Alabama",
-    //   "c2": 24649,
-    //   "c3": 34073,
-    //   "c4": 37512,
-    //   "c5": 3439,
-    //   "c6": 10.1
-    // },
-    // {
-    //   "c1": "Alaska",
-    //   "c2": 31481,
-    //   "c3": 47773,
-    //   "c4": 54012,
-    //   "c5": 6239,
-    //   "c6": 13.1
-    // },
-    // {
-    //   "c1": "Arizona",
-    //   "c2": 26553,
-    //   "c3": 34185,
-    //   "c4": 37895,
-    //   "c5": 3710,
-    //   "c6": 10.9
-    // },
-    // {
-    //   "c1": "Arkansas",
-    //   "c2": 22803,
-    //   "c3": 31991,
-    //   "c4": 37782,
-    //   "c5": 5791,
-    //   "c6": 18.1
-    // },
-    // {
-    //   "c1": "California",
-    //   "c2": 33391,
-    //   "c3": 42411,
-    //   "c4": 49985,
-    //   "c5": 7574,
-    //   "c6": 17.9
-    // },
-    // {
-    //   "c1": "Colorado",
-    //   "c2": 34234,
-    //   "c3": 41877,
-    //   "c4": 48869,
-    //   "c5": 6992,
-    //   "c6": 16.7
-    // },
-    // {
-    //   "c1": "Connecticut",
-    //   "c2": 42209,
-    //   "c3": 57347,
-    //   "c4": 64864,
-    //   "c5": 7517,
-    //   "c6": 13.1
-    // },
-    // {
-    //   "c1": "Delaware",
-    //   "c2": 32109,
-    //   "c3": 41783,
-    //   "c4": 46378,
-    //   "c5": 4595,
-    //   "c6": 11
-    // },
-    // {
-    //   "c1": "District of Columbia",
-    //   "c2": 43223,
-    //   "c3": 63741,
-    //   "c4": 69838,
-    //   "c5": 6097,
-    //   "c6": 9.6
-    // },
-    // {
-    //   "c1": "Florida",
-    //   "c2": 29597,
-    //   "c3": 38718,
-    //   "c4": 42737,
-    //   "c5": 4019,
-    //   "c6": 10.4
-    // },
-    // {
-    //   "c1": "Georgia",
-    //   "c2": 28693,
-    //   "c3": 34487,
-    //   "c4": 38980,
-    //   "c5": 4493,
-    //   "c6": 13
-    // },
-    // {
-    //   "c1": "Hawaii",
-    //   "c2": 28931,
-    //   "c3": 41594,
-    //   "c4": 46034,
-    //   "c5": 4440,
-    //   "c6": 10.7
-    // },
-    // {
-    //   "c1": "Idaho",
-    //   "c2": 25258,
-    //   "c3": 32050,
-    //   "c4": 36734,
-    //   "c5": 4684,
-    //   "c6": 14.6
-    // },
-    // {
-    //   "c1": "Illinois",
-    //   "c2": 32946,
-    //   "c3": 42154,
-    //   "c4": 47643,
-    //   "c5": 5489,
-    //   "c6": 13
-    // },
-    // {
-    //   "c1": "Indiana",
-    //   "c2": 28122,
-    //   "c3": 34390,
-    //   "c4": 39578,
-    //   "c5": 5188,
-    //   "c6": 15.1
-    // },
-    // {
-    //   "c1": "Iowa",
-    //   "c2": 27561,
-    //   "c3": 38687,
-    //   "c4": 44937,
-    //   "c5": 6250,
-    //   "c6": 16.2
-    // },
-    // {
-    //   "c1": "Kansas",
-    //   "c2": 28744,
-    //   "c3": 39235,
-    //   "c4": 44891,
-    //   "c5": 5656,
-    //   "c6": 14.4
-    // },
-    // {
-    //   "c1": "Kentucky",
-    //   "c2": 24954,
-    //   "c3": 32977,
-    //   "c4": 37396,
-    //   "c5": 4419,
-    //   "c6": 13.4
-    // },
-    // {
-    //   "c1": "Louisiana",
-    //   "c2": 23570,
-    //   "c3": 37227,
-    //   "c4": 42030,
-    //   "c5": 4803,
-    //   "c6": 12.9
-    // },
-    // {
-    //   "c1": "Maine",
-    //   "c2": 27109,
-    //   "c3": 37102,
-    //   "c4": 40745,
-    //   "c5": 3643,
-    //   "c6": 9.8
-    // },
-    // {
-    //   "c1": "Maryland",
-    //   "c2": 35345,
-    //   "c3": 49683,
-    //   "c4": 54176,
-    //   "c5": 4493,
-    //   "c6": 9
-    // },
-    // {
-    //   "c1": "Massachusetts",
-    //   "c2": 38438,
-    //   "c3": 51643,
-    //   "c4": 58737,
-    //   "c5": 7094,
-    //   "c6": 13.7
-    // },
-    // {
-    //   "c1": "Michigan",
-    //   "c2": 30023,
-    //   "c3": 35199,
-    //   "c4": 40740,
-    //   "c5": 5541,
-    //   "c6": 15.7
-    // },
-    // {
-    //   "c1": "Minnesota",
-    //   "c2": 32332,
-    //   "c3": 42567,
-    //   "c4": 48998,
-    //   "c5": 6431,
-    //   "c6": 15.1
-    // },
-    // {
-    //   "c1": "Mississippi",
-    //   "c2": 21582,
-    //   "c3": 30783,
-    //   "c4": 34431,
-    //   "c5": 3648,
-    //   "c6": 11.9
-    // },
-    // {
-    //   "c1": "Missouri",
-    //   "c2": 28015,
-    //   "c3": 36638,
-    //   "c4": 41639,
-    //   "c5": 5001,
-    //   "c6": 13.6
-    // },
-    // {
-    //   "c1": "Montana",
-    //   "c2": 23594,
-    //   "c3": 34737,
-    //   "c4": 39903,
-    //   "c5": 5166,
-    //   "c6": 14.9
-    // },
-    // {
-    //   "c1": "Nebraska",
-    //   "c2": 28978,
-    //   "c3": 40023,
-    //   "c4": 47557,
-    //   "c5": 7534,
-    //   "c6": 18.8
-    // },
-    // {
-    //   "c1": "Nevada",
-    //   "c2": 31230,
-    //   "c3": 36918,
-    //   "c4": 40742,
-    //   "c5": 3824,
-    //   "c6": 10.4
-    // },
-    // {
-    //   "c1": "New Hampshire",
-    //   "c2": 34293,
-    //   "c3": 45308,
-    //   "c4": 52773,
-    //   "c5": 7465,
-    //   "c6": 16.5
-    // },
-    // {
-    //   "c1": "New Jersey",
-    //   "c2": 39165,
-    //   "c3": 51202,
-    //   "c4": 57620,
-    //   "c5": 6418,
-    //   "c6": 12.5
-    // },
-    // {
-    //   "c1": "New Mexico",
-    //   "c2": 23438,
-    //   "c3": 33019,
-    //   "c4": 37091,
-    //   "c5": 4072,
-    //   "c6": 12.3
-    // },
-    // {
-    //   "c1": "New York",
-    //   "c2": 35328,
-    //   "c3": 49283,
-    //   "c4": 55611,
-    //   "c5": 6328,
-    //   "c6": 12.8
-    // },
-    // {
-    //   "c1": "North Carolina",
-    //   "c2": 27876,
-    //   "c3": 35569,
-    //   "c4": 39171,
-    //   "c5": 3602,
-    //   "c6": 10.1
-    // },
-    // {
-    //   "c1": "North Dakota",
-    //   "c2": 25870,
-    //   "c3": 42964,
-    //   "c4": 55802,
-    //   "c5": 12838,
-    //   "c6": 29.9
-    // },
-    // {
-    //   "c1": "Ohio",
-    //   "c2": 28631,
-    //   "c3": 36377,
-    //   "c4": 42236,
-    //   "c5": 5859,
-    //   "c6": 16.1
-    // },
-    // {
-    //   "c1": "Oklahoma",
-    //   "c2": 24801,
-    //   "c3": 35949,
-    //   "c4": 43637,
-    //   "c5": 7688,
-    //   "c6": 21.4
-    // },
-    // {
-    //   "c1": "Oregon",
-    //   "c2": 28878,
-    //   "c3": 35791,
-    //   "c4": 41220,
-    //   "c5": 5429,
-    //   "c6": 15.2
-    // },
-    // {
-    //   "c1": "Pennsylvania",
-    //   "c2": 30493,
-    //   "c3": 41918,
-    //   "c4": 47679,
-    //   "c5": 5761,
-    //   "c6": 13.7
-    // },
-    // {
-    //   "c1": "Rhode Island",
-    //   "c2": 30214,
-    //   "c3": 42737,
-    //   "c4": 48359,
-    //   "c5": 5622,
-    //   "c6": 13.2
-    // },
-    // {
-    //   "c1": "South Carolina",
-    //   "c2": 25143,
-    //   "c3": 32853,
-    //   "c4": 36677,
-    //   "c5": 3824,
-    //   "c6": 11.6
-    // },
-    // {
-    //   "c1": "South Dakota",
-    //   "c2": 27267,
-    //   "c3": 40204,
-    //   "c4": 45279,
-    //   "c5": 5075,
-    //   "c6": 12.6
-    // },
-    // {
-    //   "c1": "Tennessee",
-    //   "c2": 27503,
-    //   "c3": 35601,
-    //   "c4": 40457,
-    //   "c5": 4856,
-    //   "c6": 13.6
-    // },
-    // {
-    //   "c1": "Texas",
-    //   "c2": 28365,
-    //   "c3": 38282,
-    //   "c4": 45669,
-    //   "c5": 7387,
-    //   "c6": 19.3
-    // },
-    // {
-    //   "c1": "Utah",
-    //   "c2": 24781,
-    //   "c3": 32614,
-    //   "c4": 37664,
-    //   "c5": 5050,
-    //   "c6": 15.5
-    // },
-    // {
-    //   "c1": "Vermont",
-    //   "c2": 28556,
-    //   "c3": 40066,
-    //   "c4": 46428,
-    //   "c5": 6362,
-    //   "c6": 15.9
-    // },
-    // {
-    //   "c1": "Virginia",
-    //   "c2": 32465,
-    //   "c3": 45412,
-    //   "c4": 50345,
-    //   "c5": 4933,
-    //   "c6": 10.9
-    // },
-    // {
-    //   "c1": "Washington",
-    //   "c2": 32882,
-    //   "c3": 42821,
-    //   "c4": 49610,
-    //   "c5": 6789,
-    //   "c6": 15.9
-    // },
-    // {
-    //   "c1": "West Virginia",
-    //   "c2": 22110,
-    //   "c3": 32104,
-    //   "c4": 36132,
-    //   "c5": 4028,
-    //   "c6": 12.5
-    // },
-    // {
-    //   "c1": "Wisconsin",
-    //   "c2": 29382,
-    //   "c3": 38815,
-    //   "c4": 44186,
-    //   "c5": 5371,
-    //   "c6": 13.8
-    // },
-    // {
-    //   "c1": "Wyoming",
-    //   "c2": 28959,
-    //   "c3": 44846,
-    //   "c4": 54584,
-    //   "c5": 9738,
-    //   "c6": 21.7
-    // },
-    // {
-    //   "c1": "&nbsp;",
-    //   "c2": "",
-    //   "c3": "",
-    //   "c4": "",
-    //   "c5": "",
-    //   "c6": ""
-    // },
-    // {
-    //   "c1": "New England",
-    //   "c2": 36904,
-    //   "c3": 49994,
-    //   "c4": 56798,
-    //   "c5": 6804,
-    //   "c6": 13.6
-    // },
-    // {
-    //   "c1": "Mideast",
-    //   "c2": 34789,
-    //   "c3": 47781,
-    //   "c4": 53749,
-    //   "c5": 5968,
-    //   "c6": 12.5
-    // },
-    // {
-    //   "c1": "Great Lakes",
-    //   "c2": 30145,
-    //   "c3": 37745,
-    //   "c4": 43274,
-    //   "c5": 5529,
-    //   "c6": 14.6
-    // },
-    // {
-    //   "c1": "Plains",
-    //   "c2": 29138,
-    //   "c3": 39488,
-    //   "c4": 45665,
-    //   "c5": 6177,
-    //   "c6": 15.6
-    // },
-    // {
-    //   "c1": "Southeast",
-    //   "c2": 27393,
-    //   "c3": 36504,
-    //   "c4": 40792,
-    //   "c5": 4288,
-    //   "c6": 11.7
-    // },
-    // {
-    //   "c1": "Southwest",
-    //   "c2": 27389,
-    //   "c3": 37057,
-    //   "c4": 43699,
-    //   "c5": 6642,
-    //   "c6": 17.9
-    // },
-    // {
-    //   "c1": "Rocky Mountain",
-    //   "c2": 29368,
-    //   "c3": 37627,
-    //   "c4": 43787,
-    //   "c5": 6160,
-    //   "c6": 16.4
-    // },
-    // {
-    //   "c1": "Far West",
-    //   "c2": 32767,
-    //   "c3": 41751,
-    //   "c4": 48775,
-    //   "c5": 7024,
-    //   "c6": 16.8
-    // }
-  ]
-  constructor() { }
-
+  
   ngOnInit(): void {
-    console.log("aici")
-    this.tabulate(this.dataInput, ["c1", "c2", "c3", "c4", "c5", "c6"])
-  }
+    console.log(this.data)
+    //@ts-ignore
+    this.createChart(this.data)}
+private createChart=(data:GanttChartTypes) =>{
+  const svg = d3.select('#gantt')
+  .append('svg')
+  .attr('width', window.innerWidth)
+  .attr('height', window.innerHeight);
+    //.attr("viewBox", [0, 0, this.width, this.height]);  
+    
+  const map = new Heatmap()
+    .size(this.width, 640)
+    //@ts-ignore
+    .padding(2)
+    .mapHeight(50)
+    .data(d3.hierarchy(data));
+ 
 
+  const cells = svg.selectAll("g")
+  .data(map.populate())
+  .enter()
+  .append("g")
+    .attr("fill", (d:any) => { return d.color;})
+    .attr("transform", (d:any) => `translate(${d.x0}, 0)`)
+    // .call((g:any) => g.append("title").text((d:any) => d.data ? `${d.data.name}\n${d3.format("$,.2f")(d.data.value)}` : ""));      
+  cells
+    .append("rect")      
+    .attr("rx", 4).attr("ry", 4)
+    .attr("width", (d:any) => d.x1 - d.x0)
+    .attr("height", (d:any) => d.y1 - d.y0);
+ 
+  // if (options.shape === "circle") {
+  //   cells.filter((d:any) => d.height === 0)
+  //     .append("circle")
+  //     .attr("cx", (d:any) => d.cx).attr("cy", (d:any) => d.cy)
+  //     .attr("r", (d:any) => d.r);
+  // }  
+    
+  cells.append("g")
+    .attr("text-anchor", "middle")
+    .attr("transform", (d:any) => `translate(${(d.x1 - d.x0) / 2},${(d.y1 - d.y0) / 2})`)
+    .call(g => g.append("text")
+    .attr("fill", "black")
+    .text((d:any) => d.data ? 
+            (d.height === 0 ? d.data.name.slice(0, 10) : d.data.name) : ""))
+    .call((g:any) => g.append("text")
+          .attr("dy", "1em")
+          .attr("fill", "black")
+          .text((d:any) => d.data&&d.data.value ? (d.data.value) : ""));
+  
+  cells.transition().duration((d:any) => d.depth * 250)
+    .ease(d3.easeBounce)
+    .attr("opacity", 1)
+    .attr("transform",(d:any) => `translate(${d.x0},${d.y0})`)
+    .transition().delay(1000)
+    .on("end", () => {
+      //@ts-ignore
+      cells.on("mouseover", (e: any, d: { data: any; ancestors: () => any; }) => { 
+        if (d.data) {      
+          const a = d.ancestors();
+          cells.transition().duration(500)
+            .attr("opacity", (c: any) => a.includes(c) ? 1 : 0.5);
+        }})
+      .on("mouseout", () => cells.transition().duration(500).attr("opacity", 1));
+    });
+  
+  // svg.append("g").call(g => drawLegend(g, map.legend(9), cells));
 
-  tabulate(data: any, columns: any) {
-    var table = d3.select("#med_inc")
-      , columnNames = ["", "", "", "", "", ""]
-      , thead = table.append("thead")
-      , tbody = table.append("tbody");
-
-    // append the header row
-    thead.append("tr")
-      .selectAll("th")
-      .data(columnNames)
-      .enter()
-      .append("th")
-      .text(function (columnNames) { return columnNames; });
-
-    // create a row for each object in the data
-    var rows = tbody.selectAll("tr")
-      .data(data)
-      .enter()
-      .append("tr");
-
-    let formatMoney = function (n: any) {
-      return n.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
-    };
-    // create a cell in each row for each column
-    var cells = rows.selectAll("td")
-      .data(function (row: any) {
-        return columns.map(function (column: any) {
-          return { column: column, value: row[column] };
-        });
-      })
-      .enter()
-      .append("td")
-      .attr("style", "font-family: 'Lato'")
-      .attr("border-right", "1px solid black")
-      .html(function (d: any) {
-        console.log(d)
-        if (isNumber(d.value)) {//jQuery function checks if number is numeric, if it is formats it with thousands seporator
-          return formatMoney(d.value)
-        } else {
-          return d.value;
-        };
-      });
-    console.log(cells)
-    return table;
-  };
-
-
-
-
-
+  // return svg.node();
 }
+} 
+  // This function creates a table with a row for each statistic in a flat data
+// object and a column for each time period in the data object.
+
+// private makeMultiTable = function(stats:any) {
+
+//   // Set up the column names
+//   // One set for the year supercolumns
+//   var yrCols = d3.nest()
+//       .key(function(d:any) { return d.stat_year; })
+//       .rollup(function(d:any) { return d.length; })
+//       .entries(stats.filter(function(d:any) { return d.stat_name == "Visits"; }));
+
+
+//   // And one for the quarter columns
+//   var qtrCols = d3.keys(
+//       d3.nest()
+//           .key(function(d:any) { return d.datestring; })
+//           .map(stats)
+//   );
+
+//   // Add an empty column for the statistic name
+//   // yrCols.unshift("");
+//   // qtrCols.unshift("");
+
+
+
+
+//   // Nest data within each statistic
+//   var aggstats = d3.nest()
+//       .key(function(d:any) { return d.stat_name; })
+//       .entries(stats)
+
+//   // Create the table
+//   var table = d3.select("#table").append("table");
+//   var thead = table.append("thead");
+//   var tbody = table.append("tbody");
+
+//   // Append the year headers
+//   thead.append("tr")
+//       .selectAll("th")
+//       .data(yrCols)
+//     .enter()
+//       .append("th")
+//           .text(function(d) { return d.key; })
+//           .attr("colspan", function(d) { return d.values; })
+
+//   // Append the quarter headers
+//   thead.append("tr")
+//       .selectAll("th")
+//       .data(qtrCols)
+//     .enter()
+//       .append("th")
+//           .text(function(column) { return column.substr(4, 6); })
+
+
+//   // Bind each statistic to a line of the table
+//   var rows = tbody.selectAll("tr")
+//       .data(aggstats)
+//     .enter()
+//       .append("tr")
+//           .attr("rowstat", function(d) { return d.key; })
+//           .attr("chosen", false)
+//           .attr("onclick", function(d) { 
+//               return "toggleStat('" + d.key + "')"; })
+
+
+//   // Add statistic names to each row
+//   var stat_cells = rows.append("td")
+//           .text(function(d) { return d.key; })
+//           .attr("class", "rowkey")
+
+
+//   // Fill in the cells.  The data -> d.values pulls the value arrays from
+//   // the data assigned above to each row.
+//   // The unshift crap bumps the data cells over one - otherwise, the first
+//   // result value falls under the statistic labels.
+//   var res_cells = rows.selectAll("td")
+//       .data(function(d) { 
+//           var x = d.values;
+//           x.unshift({ qtr_result: ""} );
+//           return x; })
+//     .enter()
+//       .append("td")
+//         .text(function(d:any) { return d3.format(",d")(d.qtr_result); })
+// };
+
+// private loadqtry_stats = (crd:any) =>{
+//   crd.forEach(function(d:any) {
+//     d.stat_year = +d.stat_year;
+//     d.stat_qtr = +d.stat_qtr;
+//     d.datestring = d.stat_year + " Q" + d.stat_qtr;
+//     d.qtr_result = +d.qtr_result;
+// });
+
+// // Subset to two sets of stats:
+// // 1. Active Cases Reported for all metro residents and, separately,
+// // just Denver residents.
+// // 2. Active and latent tx starts and visits, for everyone
+// var other_stats = ["Active Therapy Starts", "LTBI Therapy Starts", 
+//                    "Visits"];
+
+// var qtrly = crd.filter(function(d:any) {
+//     return (d.stat_name == "Active Cases Reported" &&
+//             d.pt_group == "County of Residence: Denver") || 
+
+//            ((other_stats.indexOf(d.stat_name) > -1) && 
+//             d.pt_group == "All Patients")
+        
+//         ; });
+
+
+// // Assign the data outside of the function for later use
+// this.stats = qtrly;
+
+
+// // Load the initial stats table
+// this.makeMultiTable(this.stats);
+
+ 
+ 
+

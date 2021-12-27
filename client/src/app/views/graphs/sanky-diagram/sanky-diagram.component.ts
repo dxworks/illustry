@@ -110,6 +110,7 @@ export class SankyDiagramComponent implements OnInit {
       .enter()
       .append("linearGradient")
       .attr("id", (d: any) => d.gradient.id)
+      console.log(gradients)
     gradients.append("stop").attr("offset", 0.0).attr("stop-color", (d: any) => d.source.color);
     gradients.append("stop").attr("offset", 1.0).attr("stop-color", (d: any) => d.target.color);
     const view = svg.append("g")
@@ -224,7 +225,7 @@ export class SankyDiagramComponent implements OnInit {
 
     nodes.on("mouseover", branchAnimate)
       .on("mouseout", branchClear);
-
+    console.log(svg.nodes())
     return svg.node();
   }
 

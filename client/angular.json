@@ -34,7 +34,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/app/views/graphs/ganttchart/hheatmap.js"]
           },
           "configurations": {
             "production": {

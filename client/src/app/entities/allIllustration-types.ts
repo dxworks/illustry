@@ -8,6 +8,7 @@ import {VerticalChartTypes} from "./verticalchart-types";
 import {HorizontalChartTypes} from "./horizontalchart-types";
 import {CalendarHeatmap} from "angular2-calendar-heatmap";
 import {CalendarHeatmapData} from "../views/graphs/matrixcalendar/matrixcalendar.component";
+import { GanttChartTypes } from "./gantChart-types";
 
 export interface AllIllustrations {
   Dot?:DotTypes
@@ -18,4 +19,5 @@ export interface AllIllustrations {
   StackedCharts?: StackedChartsTypes
   VerticalChart?: VerticalChartTypes
   HorizontalChart?: HorizontalChartTypes
+  Gantt?: GanttChartTypes
 }

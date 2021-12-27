@@ -16,6 +16,13 @@ export interface AllIllustrations {
     StackedCharts?: StackedCharts
     VerticalChart?: VerticalChart
     HorizontalChart?: HorizontalChart
+    Gantt?: Gantt
+}
+
+interface Gantt {
+    name:string;
+    value?: string;
+    children: Gantt[];
 }
 interface DOT {
     nodes: Node[];
