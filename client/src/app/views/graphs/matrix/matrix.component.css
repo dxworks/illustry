@@ -1,27 +1,28 @@
-svg.matrixdiagram {
-  font: 20px sans-serif;
+/* th, td, p, input, h3 {
+  font:15px 'Segoe UI';
+  border: solid 1px;
+  border-width: 1;
+  border-collapse: collapse;
+  padding: 2px 3px;
+  text-align: center;
 }
-
-svg.matrixdiagram .label {
-  fill: #999;
-  font-size: 8px;
-  text-anchor: end;
+ td {
+  border: solid 1px;
+  border-width: 1;
+  border-collapse: collapse;
+  padding: 2px 3px;
+  text-align: center;
 }
+th {  border: solid 1px;
+  border-width: 1;
+  border-collapse: collapse;
+  padding: 2px 3px;
+  text-align: center;
+  font-weight:bold;
+} */
 
-svg.matrixdiagram .column .label {
-  text-anchor: start;
-}
-
-svg.matrixdiagram rect {
-  fill: #eee;
-  stroke: #d62333;
-  stroke-width: 0;
-}
-
-svg.matrixdiagram rect:hover {
-  stroke-width: 1px;
-}
-
-.center {
-  margin: 5%
+td {
+  border: solid 1px;
+  border-width: 1;
+  text-align: center;
 }
