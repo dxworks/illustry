@@ -15,13 +15,15 @@ export class MatrixComponent implements OnInit {
   tableString: string = "";
   divShowData: any;
   switching: any;
+  groups:string[]=[];
   constructor() {
   }
 
   ngOnInit(): void {
     this.switching = -1;
-    this.selectedGroup1 = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { if (d.group === 1) return d }))).filter((el: any) => { return el !== undefined });
-    this.selectedGroup2 = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { if (d.group === 2) return d }))).filter((el: any) => { return el !== undefined });
+    this.groups = Array.from(new Set(this.data.Matrix.nodes.map((d:any) => { return d.group})))
+    this.selectedGroup1 = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { if (d.group === this.groups[0]) return d }))).filter((el: any) => { return el !== undefined });
+    this.selectedGroup2 = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { if (d.group === this.groups[1]) return d }))).filter((el: any) => { return el !== undefined });
     this.links = Array.from(new Set(this.data.Matrix.links.map((d: any) => { return d }))).filter((el: any) => { return el !== undefined })
     this.createMatrix()
   }
