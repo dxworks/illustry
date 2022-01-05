@@ -59,7 +59,7 @@ export class MatrixComponent implements OnInit {
       for (let i = 0; i < spacesForEmptyTd - 1; i++) {
         empty = empty + '<td style= "width: 10%;"></td>';
       }
-      let propCell = empty + `<td class="sortableCol" onclick=() style="font-weight: bold; width: 10%; cursor: pointer;text-align:center;">${prop}</td>`;
+      let propCell = empty + `<td class="sortableCol" style="font-weight: bold; width: 10%; cursor: pointer;text-align:center;">${prop}</td>`;
       finalProduct = finalProduct + propCell + "<td></td>" + this.populateRightPropertiesString(group2, prop) + "</tr>";
     })
     return `${finalProduct}`
@@ -68,10 +68,20 @@ export class MatrixComponent implements OnInit {
   private populateRightPropertiesString(group2: any[], property: any) {
     let finalProduct = ""
     group2.forEach((g2: any) => {
-      let pRow = `<td class="tooltip1"`
+      let pRow = `<td class="tooltipRight"`
       g2.properties.forEach((g2P: any) => {
         if (g2P.label === property && g2P.style) {
-          pRow = pRow + `style=${Object.entries(g2P.style).map(([k, v]) => `${k}:${v}`).join(';')};text-align:center; >${g2P.value}<span class="tooltiptext">${Object.entries(g2P.tooltip).map(([k, v]) => `${k}:${v}</br>`).join(' ')}</span></td>`
+          if (g2P.tooltip) {
+            pRow = pRow + `style=${Object.entries(g2P.style).map(([k, v]) => `${k}:${v}`).join(';')};text-align:center; >${g2P.value}<span class="tooltiptext">${Object.entries(g2P.tooltip).map(([k, v]) => `${k}:${v}</br>`).join(' ')}</span></td>`
+            finalProduct = finalProduct + pRow;
+          }
+          else {
+            pRow = pRow + `style=${Object.entries(g2P.style).map(([k, v]) => `${k}:${v}`).join(';')};text-align:center; >${g2P.value}</td>`
+            finalProduct = finalProduct + pRow;
+          }
+        }
+        else if (!g2P.style) {
+          pRow = pRow + `style = "width:10%;text-align:center;">${g2P.value} </td>`
           finalProduct = finalProduct + pRow;
         }
       })
@@ -85,7 +95,7 @@ export class MatrixComponent implements OnInit {
     let empty = row + `<td style="width: 10%"></td>`
     finalProduct = finalProduct + empty
     propertiesLeftArray.forEach((pLA: any) => {
-      let leftHeaders = `<td class="sortableRow" style ="font-weight:bold;width: 10%; cursor: pointer; text-align:center;">${pLA}</td>`
+      let leftHeaders = `<td class="sortableRow " style ="font-weight:bold;width: 10%; cursor: pointer; text-align:center;">${pLA} </td>`
       finalProduct = finalProduct + leftHeaders;
     })
     return `${finalProduct}</tr>`
@@ -100,8 +110,14 @@ export class MatrixComponent implements OnInit {
       g1.properties.forEach((g1P: any) => {
         propertiesLeftArray.forEach((p: any) => {
           if (g1P.label === p && g1P.style) {
-            let col = `<td style = "${Object.entries(g1P.style).map(([k, v]) => `${k}:${v}`).join(';')} width:10%;text-align:center;" >${g1P.value} </td>`
-            finalProduct = finalProduct + col;
+            if (g1P.tooltip) {
+              let col = `<td class="tooltipLeft" style = "${Object.entries(g1P.style).map(([k, v]) => `${k}:${v}`).join(';')} width:10%;text-align:center;" >${g1P.value}<span class="tooltiptext">${Object.entries(g1P.tooltip).map(([k, v]) => `${k}:${v}</br>`).join(' ')}</span> </td>`
+              finalProduct = finalProduct + col;
+            }
+            else {
+              let col = `<td class="tooltipLeft" style = "${Object.entries(g1P.style).map(([k, v]) => `${k}:${v}`).join(';')} width:10%;text-align:center;" >${g1P.value}</td>`
+              finalProduct = finalProduct + col;
+            }
           }
           else
             if (g1P.label === p) {
@@ -122,11 +138,16 @@ export class MatrixComponent implements OnInit {
 
     let finalProduct = ""
     const link = Array.from(new Set(links)).map((d: any) => { if (d.source === group1Name && d.target === group2Name) return d }).filter((el: any) => { return el !== undefined })[0];
-
     if (link) {
-      let rRow = '<td class="tooltip1"'
-      rRow = rRow + `style= ${Object.entries(link.style).map(([k, v]) => `${k}:${v}`).join(';')};width:10%;text-align:center;>${link.value}<span class="tooltiptext">${Object.entries(link.tooltip).map(([k, v]) => `${k}:${v}</br>`).join(' ')}</span></td>`
-      finalProduct = finalProduct + rRow
+      let rRow = '<td class="tooltipLinks"'
+      if (link.tooltip) {
+        rRow = rRow + `style= ${Object.entries(link.style).map(([k, v]) => `${k}:${v}`).join(';')};width:10%;text-align:center;>${link.value}<span class="tooltiptext">${Object.entries(link.tooltip).map(([k, v]) => `${k}:${v}</br>`).join(' ')}</span></td>`
+        finalProduct = finalProduct + rRow
+      }
+      else {
+        rRow = rRow + `style= ${Object.entries(link.style).map(([k, v]) => `${k}:${v}`).join(';')};width:10%;text-align:center;>${link.value}</td>`
+        finalProduct = finalProduct + rRow
+      }
       if (!link.style) {
         rRow = rRow + ">" + link.value + "</td>";
         finalProduct = finalProduct + rRow
@@ -249,6 +270,13 @@ export class MatrixComponent implements OnInit {
 
     sortable.forEach((s: any, sIndex) => {
       s.addEventListener('click', (event: any) => {
+        var loader = document.getElementById('loader');
+
+
+        //@ts-ignore
+        setTimeout(function () { loader.style.display = 'none'; }, 2000);
+
+
         this.selectedGroup2.sort((el1: any, el2: any) => {
           return el1.properties[sIndex].value - el2.properties[sIndex].value
         })
@@ -257,10 +285,33 @@ export class MatrixComponent implements OnInit {
       })
     })
   }
+  private makeNumbersDissapear() {
+    var numbers = document.querySelectorAll('#magicbutton');
+    var valuesToDissapear = document.querySelectorAll('.tooltipLinks')
+    numbers[0].addEventListener('click', (e: any) => {
+      this.links.forEach((l: any) => {
+        l.value = ""
+        l.tooltip = null
+      })
+      this.createMatrix()
+    })
+
+
+  }
   private sortCollumnsDesc() {
     var sortable = document.querySelectorAll('.sortableCol');
     sortable.forEach((s: any, sIndex) => {
+
       s.addEventListener('click', (event: any) => {
+
+        var loader = document.getElementById('loader');
+
+
+        //@ts-ignore
+        setTimeout(function () { loader.style.display = 'none'; }, 2000);
+
+
+
         this.selectedGroup2.sort((el1: any, el2: any) => {
           return el2.properties[sIndex].value - el1.properties[sIndex].value
         })
@@ -271,10 +322,13 @@ export class MatrixComponent implements OnInit {
   }
   private createMatrix() {
     const style = `<style>
-    .tooltip1 {
+    .tooltipLinks {
     }
-    
-    .tooltip1 .tooltiptext {
+    .tooltipLeft {
+    }
+    .tooltipRight {
+    }
+    .tooltipLinks .tooltiptext {
       visibility: hidden;
       width: 10%;
       background-color: black;
@@ -288,14 +342,107 @@ export class MatrixComponent implements OnInit {
       z-index: 1;
     }
     
-    .tooltip1:hover .tooltiptext {
+    .tooltipLinks:hover .tooltiptext {
       visibility: visible;
     }
+    .tooltipLeft .tooltiptext {
+      visibility: hidden;
+      width: 10%;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+    
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .tooltipLeft:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    .tooltipRight .tooltiptext {
+      visibility: hidden;
+      width: 10%;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+    
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+    }
+    
+    .tooltipRight:hover .tooltiptext {
+      visibility: visible;
+    }
+    .loader {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border: 6px solid lightgrey;
+      border-radius: 100%;
+      border-top: 6px solid skyblue;
+      animation: spin 1s infinite linear;
+  }
+  @keyframes spin {
+      from{
+          transform: rotate(0deg);
+  }
+      to{
+          transform: rotate(360deg);
+  }
+  }
+  .up-arrow {
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    background: transparent;
+    border-bottom: solid 7px black;
+    border-top-width: 0;
+    cursor: pointer;
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    background: transparent;
+    border-top: solid 7px black;
+    border-bottom-width: 0;
+    margin-top:1px;
+    cursor: pointer;
+}
+.buttonCenter {
+   
+    text-align: center;  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+ 
+}
+#magicbutton {
+  padding:2px
+  margin-left: auto;
+  margin-right: auto;
+}
     </style>`
-    this.tableString = `${style}<table id ="myTable" style= "border-spacing: 0;width: 100%;border: 1px solid #ddd";` + this.createHeadersAndPropertiesString(this.selectedGroup1, this.selectedGroup2, this.links);
+    const spinner = `<div class="loader" id="loader"></div>`
+    const button = `<button type="button" id= "magicbutton" class="btn btn-primary magicbutton">Hide values</button>`
+    this.tableString = `${style}<table id ="myTable" style= "border-spacing: 0;width: 100%;border: 1px solid #ddd";>` + this.createHeadersAndPropertiesString(this.selectedGroup1, this.selectedGroup2, this.links) + `</table>` + `<div class="buttonCenter">${button}</div>`;
     this.divShowData = document.getElementById('showData');
     //@ts-ignore
     this.divShowData.innerHTML = this.tableString;
+    this.makeNumbersDissapear()
     this.sortRows()
     if (this.switching === -1) {
       this.sortCollumnsAsc()
