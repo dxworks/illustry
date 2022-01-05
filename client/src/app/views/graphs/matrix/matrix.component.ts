@@ -15,13 +15,14 @@ export class MatrixComponent implements OnInit {
   tableString: string = "";
   divShowData: any;
   switching: any;
-  groups:string[]=[];
+  groups: string[] = [];
+  clicked: boolean = false;
   constructor() {
   }
 
   ngOnInit(): void {
     this.switching = -1;
-    this.groups = Array.from(new Set(this.data.Matrix.nodes.map((d:any) => { return d.group})))
+    this.groups = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { return d.group })))
     this.selectedGroup1 = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { if (d.group === this.groups[0]) return d }))).filter((el: any) => { return el !== undefined });
     this.selectedGroup2 = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { if (d.group === this.groups[1]) return d }))).filter((el: any) => { return el !== undefined });
     this.links = Array.from(new Set(this.data.Matrix.links.map((d: any) => { return d }))).filter((el: any) => { return el !== undefined })
@@ -32,7 +33,8 @@ export class MatrixComponent implements OnInit {
     var thead = "<thead>"
     let firstRow = thead + `<tr id="header" >`
     let empty = firstRow
-    for (let i = 0; i < spacesForEmptyTd + 1; i++) {
+    empty = `<th><button type="button" id= "magicbutton" class="btn btn-primary magicbutton">Hide values</button></th>`
+    for (let i = 0; i < spacesForEmptyTd; i++) {
       empty = empty + `<th style="width: 10%;"> </th>`
     }
     let headerCell = empty;
@@ -140,7 +142,7 @@ export class MatrixComponent implements OnInit {
 
     let finalProduct = ""
     const link = Array.from(new Set(links)).map((d: any) => { if (d.source === group1Name && d.target === group2Name) return d }).filter((el: any) => { return el !== undefined })[0];
-    if (link) {
+    if (link && this.clicked === false) {
       let rRow = '<td class="tooltipLinks"'
       if (link.tooltip) {
         rRow = rRow + `style= ${Object.entries(link.style).map(([k, v]) => `${k}:${v}`).join(';')};width:10%;text-align:center;>${link.value}<span class="tooltiptext">${Object.entries(link.tooltip).map(([k, v]) => `${k}:${v}</br>`).join(' ')}</span></td>`
@@ -155,8 +157,17 @@ export class MatrixComponent implements OnInit {
         finalProduct = finalProduct + rRow
       }
     }
-    else {
+    else if ((!link && (this.clicked === false || this.clicked === true))) {
       finalProduct = finalProduct + "<td></td>"
+    }
+    else if (link && this.clicked === true) {
+      let rRow = '<td class="tooltipLinks"'
+      rRow = rRow + `style= ${Object.entries(link.style).map(([k, v]) => `${k}:${v}`).join(';')};width:10%;text-align:center;></td>`
+      finalProduct = finalProduct + rRow
+      if (!link.style) {
+        rRow = rRow + ">" + "</td>";
+        finalProduct = finalProduct + rRow
+      }
     }
     return finalProduct
   }
@@ -297,9 +308,22 @@ export class MatrixComponent implements OnInit {
       })
       this.createMatrix()
     })
-
-
   }
+  private isClicked() {
+    var numbers = document.querySelectorAll('#magicbutton');
+    numbers[0].addEventListener('click', (e: any) => {
+      this.clicked = true
+      this.createMatrix()
+    })
+  }
+  private isNotClicked() {
+    var numbers = document.querySelectorAll('#magicbutton');
+    numbers[0].addEventListener('click', (e: any) => {
+      this.clicked = false
+      this.createMatrix()
+    })
+  }
+
   private sortCollumnsDesc() {
     var sortable = document.querySelectorAll('.sortableCol');
     sortable.forEach((s: any, sIndex) => {
@@ -433,24 +457,29 @@ export class MatrixComponent implements OnInit {
  
 }
 #magicbutton {
-  padding:2px
   margin-left: auto;
   margin-right: auto;
 }
     </style>`
     const spinner = `<div class="loader" id="loader"></div>`
-    const button = `<button type="button" id= "magicbutton" class="btn btn-primary magicbutton">Hide values</button>`
-    this.tableString = `${style}<table id ="myTable" style= "border-spacing: 0;width: 100%;border: 1px solid #ddd";>` + this.createHeadersAndPropertiesString(this.selectedGroup1, this.selectedGroup2, this.links) + `</table>` + `<div class="buttonCenter">${button}</div>`;
+    //const button = `<button type="button" id= "magicbutton" class="btn btn-primary magicbutton">Hide values</button>`
+    this.tableString = `${style}<table id ="myTable" style= "border-spacing: 0;width: 100%;border: 1px solid #ddd";>` + this.createHeadersAndPropertiesString(this.selectedGroup1, this.selectedGroup2, this.links) //+ `</table>` + `<div class="buttonCenter">${button}</div>`;
     this.divShowData = document.getElementById('showData');
     //@ts-ignore
     this.divShowData.innerHTML = this.tableString;
-    this.makeNumbersDissapear()
+    //this.makeNumbersDissapear()
     this.sortRows()
     if (this.switching === -1) {
       this.sortCollumnsAsc()
     }
     else {
       this.sortCollumnsDesc()
+    }
+    if (this.clicked === false) {
+      this.isClicked()
+    }
+    else {
+      this.isNotClicked()
     }
   }
 }
