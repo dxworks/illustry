@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import path from 'path';
 import ProjectRoutes from './routes/project';
 import IllustrationRoutes from './routes/illustrations'
 import { mongooseConnection } from './utils/dbconnection';
@@ -18,8 +19,17 @@ app.use((req, res, next) => {
     next();
   });
 
+app.use(express.static(path.resolve(__dirname, 'static')))
+
 app.use(IllustrationRoutes);
 app.use(ProjectRoutes);
+
+app.get('/', function (req,res) {
+    res.sendFile(path.resolve(__dirname, 'static', 'index.html'));
+});
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'static', 'index.html'));
+});
 
 
 app.listen(config.ILLUSTRY_SERVER_PORT, () => {

@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Project } from "../../types/projects.model";
+import {environment} from "../../environments/environment";
 
-const baseUrl = 'http://localhost:3000/projects';
-const projectUrl = 'http://localhost:3000/project';
+const baseUrl = `${environment.backendUrl}/projects`;
+const projectUrl = `${environment.backendUrl}/project`;
 
 @Injectable({ providedIn: 'root' })
 export class ProjectsService {

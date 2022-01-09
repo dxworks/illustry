@@ -1,5 +1,5 @@
 
-import ProjectTable from "../models/Project"
+import ProjectTable from '../models/Project'
 import _ from "lodash"
 import { promisify } from 'bluebird';
 import IllustrationTable from "../models/Illustrations"
