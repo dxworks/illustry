@@ -1,46 +1,50 @@
 version: '3.9'
 
 services:
-  mongo_db:
+  illustry_mongo:
     image: mongo:latest
-    restart: always
+    restart: unless-stopped
     ports:
       - 27017:27017
     volumes:
-      - mongo_db:/data/db
+      - illustry_mongo:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootPass
+      MONGO_INITDB_DATABASE: illustry-database
     networks:
-      - illustry-networks
+      - illustry-network
 
-  illustry_backend:
-    build: ./server
+  illustry:
+    image: dxworks/illustry
     restart: always
     ports:
-      - 3000:3000
-    volumes:
-      - .:/server
+      - 7001:7000
     environment:
-      PORT: 3000
-      MONGODB_CONNECTION_STRING: mongodb+srv://vladimir:password1234@cluster0.zkjem.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-      DB_NAME: my_db
-      Name: Illustry
+      MONGODB_CONNECTION_URI: mongodb://illustry_mongo:27017
+      MONGODB_USER: root
+      MONGODB_PASSWORD: rootPass
+      MONGODB_DBNAME: illustry-database
     depends_on:
-      - mongo_db
+      - illustry_mongo
     networks:
-      - illustry-networks
-
-  illustry_frontend:
-    build: ./client
-    restart: always
-    ports:
-      - 4200:80
-    environment:
-      base: "http://localhost"
-      client: "http://localhost:4200"
-    networks:
-      - illustry-networks
+      - illustry-network
+      - traefiknet
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.illustry.entrypoints=web,web-secured
+      - traefik.http.routers.illustry.rule=Host(`illustry.localhost`)
+      - traefik.http.routers.illustry.service=illustry
+      - traefik.http.services.illustry.loadbalancer.server.port=7000
+      - traefik.docker.network=traefiknet
+      - traefik.http.routers.illustry.tls=true
+      - traefik.http.routers.illustry.tls.certresolver=default
 
 volumes:
-  mongo_db: {}
+  illustry_mongo: {}
 networks:
-  illustry-networks:
+  illustry-network:
     driver: bridge
+  traefiknet:
+    external: true
