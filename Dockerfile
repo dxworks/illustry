@@ -23,5 +23,9 @@ COPY --from=server /usr/server /usr/illustry
 RUN rm -rf /usr/illustry/src
 WORKDIR /usr/illustry
 
+LABEL name="Illustry"
+LABEL description="A hub for visualizing data about software systems"
+LABEL stable="false"
+
 CMD ["node", "dist/app.js"]
 
