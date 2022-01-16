@@ -44,7 +44,8 @@ import { UpdateProjectDialogComponent } from './dialogs/update-project-dialog/up
 import { DeleteIllustrationDialogComponent } from './dialogs/delete-illustration-dialog/delete-illustration-dialog.component';
 import { UpdateIllustrationDialogComponent } from './dialogs/update-illustration-dialog/update-illustration-dialog.component';
 import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialog/add-illustration-dialog.component';
-
+import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calendarheatmap.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialo
     DeleteIllustrationDialogComponent,
     UpdateIllustrationDialogComponent,
     AddIllustrationDialogComponent,
+    CalendarheatmapComponent,
 
   ],
   imports: [
@@ -96,7 +98,14 @@ import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialo
     MatPaginatorModule,
     MDBBootstrapModule,
     MatMenuModule,
-
+    NgxEchartsModule.forRoot({
+      /**
+       * This will import all modules from echarts.
+       * If you only need custom modules,
+       * please refer to [Custom Build] section.
+       */
+      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
+    })
 
   ],
   providers: [{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }],

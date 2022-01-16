@@ -2,8 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import * as d3 from 'd3'
 import * as d3Sankey from 'd3-sankey'
 import { range } from "rxjs";
-import {SankeyTypes} from "../../../entities/sankey-types";
-import {Link,Node} from "../../../entities/common-types";
+import { SankeyTypes } from "../../../entities/sankey-types";
+import { Link, Node } from "../../../entities/common-types";
 
 
 @Component({
@@ -14,14 +14,14 @@ import {Link,Node} from "../../../entities/common-types";
 export class SankyDiagramComponent implements OnInit {
   width = 954;
   height = 600;
-  links:Link[] = [];
-  nodes:Node[] = [];
+  links: Link[] = [];
+  nodes: Node[] = [];
   color: any;
-  graph:SankeyTypes = { nodes: [], links: []};
+  graph: SankeyTypes = { nodes: [], links: [] };
   nodeAlign: any;
 
   @Input()
-  data: SankeyTypes|undefined;
+  data: SankeyTypes | undefined;
 
   constructor() {
   }
@@ -110,7 +110,7 @@ export class SankyDiagramComponent implements OnInit {
       .enter()
       .append("linearGradient")
       .attr("id", (d: any) => d.gradient.id)
-      console.log(gradients)
+    console.log(gradients)
     gradients.append("stop").attr("offset", 0.0).attr("stop-color", (d: any) => d.source.color);
     gradients.append("stop").attr("offset", 1.0).attr("stop-color", (d: any) => d.target.color);
     const view = svg.append("g")

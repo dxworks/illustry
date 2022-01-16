@@ -9,7 +9,7 @@ export interface Illustration {
 
 export interface AllIllustrations {
     Dot?:DOT
-    CalendarMatrix?: CalendarMatrix
+    CalendarMatrix?: any
     Flg?: FLG
     Heb?: HEB
     Sankey?: Sankey
