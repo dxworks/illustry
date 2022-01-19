@@ -30,12 +30,6 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
 
-      - name: Build Client
-        run: |
-          npm install
-          npm run build-prod
-        working-directory: 'client'
-
       - name: Setup Client Version
         run: |
           node_modules/.bin/json -I -f package.json -e "this.version='$VERSION'"
@@ -43,14 +37,14 @@ jobs:
         env:
           VERSION: ${{ steps.semver_parser.outputs.semver }}
 
-      - name: Copy Client Dist
-        run: cp -R client/dist/client server/src/static
-
-      - name: Build Server
+      - name: Build Client
         run: |
           npm install
-          npm run build
-        working-directory: 'server'
+          npm run build-prod
+        working-directory: 'client'
+
+      - name: Copy Client Dist
+        run: cp -R client/dist/client server/src/static
 
       - name: Setup Server Version
         run: |
@@ -58,6 +52,12 @@ jobs:
         working-directory: 'server'
         env:
           VERSION: ${{ steps.semver_parser.outputs.semver }}
+
+      - name: Build Server
+        run: |
+          npm install
+          npm run build
+        working-directory: 'server'
 
       - name: Prepare Release Notes
         run: touch ${{ github.workspace }}/releaseNotes/v${{ steps.semver_parser.outputs.semver }}.md
