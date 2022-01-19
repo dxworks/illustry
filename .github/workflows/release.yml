@@ -18,7 +18,7 @@ jobs:
         run: |
           semver=${TAG#"refs/tags/v"}
           echo ::set-output name=semver::$semver
-          currentDate=date +"%Y-%m-%d"
+          currentDate=$(date +"%Y-%m-%d")
           echo ::set-output name=currentDate::$currentDate
         env:
           TAG: ${{ github.ref }}
