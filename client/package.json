@@ -1,6 +1,16 @@
 {
-  "name": "client",
+  "name": "@dxworks/illustry-client",
   "version": "0.0.0",
+  "description": "A hub for visualizing data about software systems",
+  "keywords": [
+    "dxworks",
+    "illustry",
+    "visualisations",
+    "charts"
+  ],
+  "license": "Apache-2.0",
+  "author": "Vladimir Nitu",
+  "main": "dist/index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
@@ -56,6 +66,7 @@
     "@types/lodash": "^4.14.178",
     "@types/node": "^12.20.20",
     "jasmine-core": "~3.7.0",
+    "json": "^11.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",

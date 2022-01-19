@@ -1,0 +1,102 @@
+on:
+  push:
+    tags:
+      - 'v*'
+
+name: Create Release
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Extract Semver
+        id: semver_parser
+        run: |
+          semver=${TAG#"refs/tags/v"}
+          echo ::set-output name=semver::$semver
+          currentDate=date +"%Y-%m-%d"
+          echo ::set-output name=currentDate::$currentDate
+        env:
+          TAG: ${{ github.ref }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'npm'
+
+      - name: Build Client
+        run: |
+          npm install
+          npm run build-prod
+        working-directory: 'client'
+
+      - name: Setup Client Version
+        run: |
+          node_modules/.bin/json -I -f package.json -e "this.version='$VERSION'"
+        working-directory: 'client'
+        env:
+          VERSION: ${{ steps.semver_parser.outputs.semver }}
+
+      - name: Copy Client Dist
+        run: cp -R client/dist/client server/src/static
+
+      - name: Build Server
+        run: |
+          npm install
+          npm run build
+        working-directory: 'server'
+
+      - name: Setup Server Version
+        run: |
+          node_modules/.bin/json -I -f package.json -e "this.version='$VERSION'"
+        working-directory: 'server'
+        env:
+          VERSION: ${{ steps.semver_parser.outputs.semver }}
+
+      - name: Prepare Release Notes
+        run: touch ${{ github.workspace }}/releaseNotes/v${{ steps.semver_parser.outputs.semver }}.md
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: name/app
+          labels: |
+            releaseDate=${{ steps.semver_parser.outputs.currentDate }}
+            version=${{ steps.semver_parser.outputs.semver }}
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: server
+          push: true
+          tags: dxworks/illustry:latest,dxworks/illustry:${{ steps.semver_parser.outputs.semver }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Illustry ${{ steps.semver_parser.outputs.semver }}
+          body_path: ${{ github.workspace }}/releaseNotes/v${{ steps.semver_parser.outputs.semver }}.md
+          body: ""
+          prerelease: false
+          draft: false
+          fail_on_unmatched_files: true
