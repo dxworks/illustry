@@ -1,15 +1,18 @@
 import mongoose from 'mongoose';
+import {config} from "../config";
 
-const config = require('../config')
 
-export const mongooseConnection =
+export function connectMongoose() {
     mongoose
         .connect(
-            config.MONGODB_CONNECTION_URI
-            , {useNewUrlParser: true, dbName: config.MONGODB_DBNAME, user: config.MONGODB_USER, pass: config.MONGODB_PASSWORD})
+            config.MONGODB_CONNECTION_URI, {
+                useNewUrlParser: true,
+                dbName: config.MONGODB_DBNAME,
+                user: config.MONGODB_USER,
+                pass: config.MONGODB_PASSWORD
+            })
+}
 
-const db = mongoose.connection;
-
-db.on('error', (err: any) => {
+mongoose.connection.on('error', (err: any) => {
     console.error(err);
 });
