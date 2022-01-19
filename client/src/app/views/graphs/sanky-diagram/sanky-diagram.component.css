@@ -1,4 +1,4 @@
-.links {
+/* .links {
   fill: none;
   stroke: #000;
   stroke-opacity: .2;
@@ -10,4 +10,7 @@
 
 .center {
   margin: 5%
+} */
+#main {
+  height: 1000px
 }

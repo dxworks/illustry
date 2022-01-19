@@ -27,13 +27,16 @@
     *ngSwitchCase="'matrix'"
     [data]="currentIllustration.IllustrationData"
   ></app-matrix>
-  <app-matrixcalendar
+  <app-calendarheatmap
     *ngSwitchCase="'calendarmatrix'"
     [data]="currentIllustration.IllustrationData.CalendarMatrix"
-  ></app-matrixcalendar>
+  ></app-calendarheatmap>
   <app-dot-graph
     *ngSwitchCase="'graphiz'"
     [content]="currentIllustration.IllustrationData.Dot"
   ></app-dot-graph>
-  <app-ganttchart *ngSwitchCase="'ganttchart'" [data]="currentIllustration.IllustrationData.Gantt"></app-ganttchart>
+  <app-ganttchart
+    *ngSwitchCase="'ganttchart'"
+    [data]="currentIllustration.IllustrationData.Gantt"
+  ></app-ganttchart>
 </div>

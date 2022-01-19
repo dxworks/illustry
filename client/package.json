@@ -47,10 +47,12 @@
     "d3-ng2-service": "^2.2.0",
     "d3-sankey": "^0.12.3",
     "d3-scale-chromatic": "^1.5.0",
+    "echarts": "^5.2.2",
     "lodash": "^4.17.21",
     "mdb-angular-ui-kit": "^1.5.0",
     "moment": "^2.29.1",
     "ngx-dropzone": "^3.0.0",
+    "ngx-echarts": "^8.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
