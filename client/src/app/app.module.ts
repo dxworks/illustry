@@ -37,7 +37,8 @@ import { MatTableModule } from "@angular/material/table";
 import { MatSortModule } from "@angular/material/sort";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MDBBootstrapModule } from "angular-bootstrap-md";
-
+import { NgxEchartsModule } from 'ngx-echarts';
+import * as echarts from 'echarts';
 import { MatMenuModule } from "@angular/material/menu";
 import { DeleteProjectDialogComponent } from './dialogs/delete-project-dialog/delete-project-dialog.component';
 import { UpdateProjectDialogComponent } from './dialogs/update-project-dialog/update-project-dialog.component';
@@ -45,7 +46,7 @@ import { DeleteIllustrationDialogComponent } from './dialogs/delete-illustration
 import { UpdateIllustrationDialogComponent } from './dialogs/update-illustration-dialog/update-illustration-dialog.component';
 import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialog/add-illustration-dialog.component';
 import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calendarheatmap.component';
-import { NgxEchartsModule } from 'ngx-echarts';
+
 
 @NgModule({
   declarations: [
@@ -99,13 +100,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
     MDBBootstrapModule,
     MatMenuModule,
     NgxEchartsModule.forRoot({
-      /**
-       * This will import all modules from echarts.
-       * If you only need custom modules,
-       * please refer to [Custom Build] section.
-       */
-      echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
-    })
+      echarts,
+    }),
 
   ],
   providers: [{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }],
