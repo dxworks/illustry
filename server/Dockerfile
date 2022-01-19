@@ -16,4 +16,4 @@ LABEL name="Illustry"
 LABEL description="A hub for visualizing data about software systems"
 LABEL stable="false"
 
-CMD ["node", "dist/app.js"]
+CMD ["node", "app.js"]
