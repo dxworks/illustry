@@ -9,8 +9,8 @@ RUN npm ci --only=production
 
 COPY dist ./
 
-COPY ../README.md .
-COPY ../LICENSE .
+COPY README.md ./
+COPY LICENSE ./
 
 LABEL name="Illustry"
 LABEL description="A hub for visualizing data about software systems"

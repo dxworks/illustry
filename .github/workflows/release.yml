@@ -59,8 +59,11 @@ jobs:
         env:
           VERSION: ${{ steps.semver_parser.outputs.semver }}
 
-      - name: Prepare Release Notes
-        run: touch ${{ github.workspace }}/releaseNotes/v${{ steps.semver_parser.outputs.semver }}.md
+      - name: Prepare Release Notes and Copy Resources
+        run: |
+          touch ${{ github.workspace }}/releaseNotes/v${{ steps.semver_parser.outputs.semver }}.md
+          cp README.md server/README.md
+          cp LICENSE server/LICENSE
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
