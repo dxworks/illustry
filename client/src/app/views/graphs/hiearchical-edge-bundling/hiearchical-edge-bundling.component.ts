@@ -4,8 +4,8 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { IllustrationService } from "../../../services/illustration.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
 import * as d3 from 'd3';
-import {Link,Node} from "../../../entities/common-types";
-import {HebTypes} from "../../../entities/heb-types";
+import { Link, Node } from "../../../entities/common-types";
+import { HebTypes } from "../../../entities/heb-types";
 
 @Component({
   selector: 'app-hiearchical-edge-bundling',
@@ -14,24 +14,26 @@ import {HebTypes} from "../../../entities/heb-types";
 })
 
 export class HiearchicalEdgeBundlingComponent implements OnInit {
-  private links:Link[] = [];
-  private nodes:Node[] = [];
+  private links: Link[] = [];
+  private nodes: Node[] = [];
   private graph: HebTypes = { nodes: [], links: [] };
   private chartSvg: any;
   private diameter: any;
   private tooltipMaxWidth = 500;
   @Input()
-  data: HebTypes|undefined;
+  data: HebTypes | undefined;
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit(): void {
-    this.links = this.data.links;
-    // @ts-ignore
-    this.nodes = this.data.nodes;
-    //@ts-ignore
-    this.graph = { links: this.links, nodes: this.nodes }
-    this.createHedge()
+    if (this.data) {
+      this.links = this.data.links;
+      // @ts-ignore
+      this.nodes = this.data.nodes;
+      //@ts-ignore
+      this.graph = { links: this.links, nodes: this.nodes }
+      this.createHedge()
+    }
   }
 
 

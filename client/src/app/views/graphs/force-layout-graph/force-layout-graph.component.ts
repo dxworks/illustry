@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import * as d3 from 'd3';
-import {FlgTypes} from "../../../entities/flg-types";
-import {Link, Node} from "../../../entities/common-types";
+import { FlgTypes } from "../../../entities/flg-types";
+import { Link, Node } from "../../../entities/common-types";
 
 @Component({
   selector: 'app-d3-force-layout-graph',
@@ -17,9 +17,9 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   private tooltipMaxWidth = 500;
   private toolTip: any;
   private node: any;
-  private links:Link[] = [];
-  private nodes:Node[] = [];
-  private graph:FlgTypes = { nodes: [], links: [] };
+  private links: Link[] = [];
+  private nodes: Node[] = [];
+  private graph: FlgTypes = { nodes: [], links: [] };
   @Input()
   data: FlgTypes | undefined;
 
@@ -32,16 +32,16 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    console.log(this.data);
-    // @ts-ignore
-    this.links = this.data.links;
-    // @ts-ignore
-    this.nodes = this.data.nodes;
-    //@ts-ignore
-    this.graph = { links: this.links, nodes: this.nodes }
-    this.createForcedLayeredGraph()
-    this.DrawLegend(this.graph.nodes, 70, 20)
-
+    if (this.data) {
+      // @ts-ignore
+      this.links = this.data.links;
+      // @ts-ignore
+      this.nodes = this.data.nodes;
+      //@ts-ignore
+      this.graph = { links: this.links, nodes: this.nodes }
+      this.createForcedLayeredGraph()
+      this.DrawLegend(this.graph.nodes, 70, 20)
+    }
   }
 
   private createForcedLayeredGraph() {

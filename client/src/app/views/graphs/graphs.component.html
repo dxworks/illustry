@@ -25,7 +25,7 @@
   ></app-stacked-chart>
   <app-matrix
     *ngSwitchCase="'matrix'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.IllustrationData.Matrix"
   ></app-matrix>
   <app-calendarheatmap
     *ngSwitchCase="'calendarmatrix'"

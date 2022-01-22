@@ -8,8 +8,8 @@ export interface Illustration {
 }
 
 export interface AllIllustrations {
-    Dot?:DOT
-    CalendarMatrix?: any
+    Dot?: DOT
+    CalendarMatrix?: CalendarHeatmap
     Flg?: FLG
     Heb?: HEB
     Sankey?: Sankey
@@ -17,10 +17,19 @@ export interface AllIllustrations {
     VerticalChart?: VerticalChart
     HorizontalChart?: HorizontalChart
     Gantt?: Gantt
+    Matrix?: Matrix
 }
 
+interface CalendarHeatmap {
+    calendar: any
+    ranges: Range[]
+}
+interface Matrix {
+    nodes: NodesMatrix[]
+    links: LinksMatrix[]
+}
 interface Gantt {
-    name:string;
+    name: string;
     value?: string;
     children: Gantt[];
 }
@@ -82,13 +91,28 @@ interface CalendatDetailsData {
 //Details for FLG HEB Sankey And Dot
 interface Node {
     group: String;
-    id: String;
+    id?: String;
+    name?: String;
 }
-
+interface NodesMatrix extends Node {
+    properties?: [{
+        label: String,
+        value: Number,
+        style: any
+    }]
+}
+interface Range {
+    min: Number,
+    max: Number,
+    color: String
+}
 interface Link {
     source: String;
     target: String;
     value: number;
+}
+interface LinksMatrix extends Link {
+    style: any
 }
 
 //Details for Horizontal/Vertical Charts 

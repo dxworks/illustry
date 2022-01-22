@@ -4,7 +4,7 @@ import * as d3 from "d3";
 import { Chart, registerables } from "chart.js";
 import { Chart, registerables } from 'chart.js';
 import { OverviewType } from "../matrixcalendar/matrixcalendar.component";
-import {StackedChartsTypes} from "../../../entities/stackedchart-types";
+import { StackedChartsTypes } from "../../../entities/stackedchart-types";
 
 @Component({
   selector: 'app-stacked-chart',
@@ -15,7 +15,7 @@ import {StackedChartsTypes} from "../../../entities/stackedchart-types";
 
 export class StackedChartComponent implements OnInit {
   @Input()
-  data: StackedChartsTypes|undefined;
+  data: StackedChartsTypes | undefined;
   color: any;
   chart: StackedChartsTypes[];
 
@@ -24,8 +24,9 @@ export class StackedChartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    this.createStacked(this.data)
+    if (this.data) {
+      this.createStacked(this.data)
+    }
   }
   private createRandomColor() {
     const randomNumber = Math.floor(Math.random() * 122);
@@ -41,7 +42,8 @@ export class StackedChartComponent implements OnInit {
     this.color = d3.scaleOrdinal(d3.schemeCategory10)
     subgroups.forEach((subgroup) => { preFinalDatasets.push({ label: subgroup, color: this.color(subgroup) }); datasets[subgroup] = data.chart.map((d: any) => d[subgroup]) })
     preFinalDatasets.forEach((fd) => {
-    finalDataSets.push({ label:fd.label,borderColor:fd.color, backgroundColor:fd.color, data:datasets[fd.label] }) })
+      finalDataSets.push({ label: fd.label, borderColor: fd.color, backgroundColor: fd.color, data: datasets[fd.label] })
+    })
     //@ts-ignore
     var ctx = document.getElementById('myChart').getContext('2d');
     const graphdata = {

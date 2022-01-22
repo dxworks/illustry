@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 import { Chart, registerables } from 'chart.js';
-import {VerticalChartTypes} from "../../../entities/verticalchart-types";
+import { VerticalChartTypes } from "../../../entities/verticalchart-types";
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -13,7 +13,7 @@ export class ChartComponent implements OnInit {
   chart: any = [];
 
   @Input()
-  data: VerticalChartTypes|undefined;
+  data: VerticalChartTypes | undefined;
 
   constructor() {
 
@@ -22,10 +22,10 @@ export class ChartComponent implements OnInit {
 
 
   ngOnInit(): void {
-
-//@ts-ignore
-    this.createChart({ chart: this.data.chart, label: this.data.label }, this.verifyMaxDomainInterval(this.data.maxDomainInterval, this.data.chart), this.verifyMinDomainInterval(this.data.minDomainInterval, this.data.chart))
-
+    if (this.data) {
+      //@ts-ignore
+      this.createChart({ chart: this.data.chart, label: this.data.label }, this.verifyMaxDomainInterval(this.data.maxDomainInterval, this.data.chart), this.verifyMinDomainInterval(this.data.minDomainInterval, this.data.chart))
+    }
   }
 
   createChart(StatsBarChart: any, domainMax: number, domainMin: number) {

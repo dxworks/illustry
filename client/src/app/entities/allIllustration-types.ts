@@ -1,18 +1,17 @@
-import {DotTypes} from "./dot-types";
-import {CalendarMatrixTypes} from "./calendarMatrix-types";
-import {FlgTypes} from "./flg-types";
-import {HebTypes} from "./heb-types";
-import {SankeyTypes} from "./sankey-types";
-import {StackedChartsTypes} from "./stackedchart-types";
-import {VerticalChartTypes} from "./verticalchart-types";
-import {HorizontalChartTypes} from "./horizontalchart-types";
-import {CalendarHeatmap} from "angular2-calendar-heatmap";
-import {CalendarHeatmapData} from "../views/graphs/matrixcalendar/matrixcalendar.component";
+import { DotTypes } from "./dot-types";
+import { CalendarMatrixTypes } from "./calendarMatrix-types";
+import { FlgTypes } from "./flg-types";
+import { HebTypes } from "./heb-types";
+import { SankeyTypes } from "./sankey-types";
+import { StackedChartsTypes } from "./stackedchart-types";
+import { VerticalChartTypes } from "./verticalchart-types";
+import { HorizontalChartTypes } from "./horizontalchart-types";
 import { GanttChartTypes } from "./gantChart-types";
+import { MatrixTypes } from "./matrix-types";
 
 export interface AllIllustrations {
-  Dot?:DotTypes
-  CalendarMatrix?: CalendarHeatmapData[]
+  Dot?: DotTypes
+  CalendarMatrix?: CalendarMatrixTypes
   Flg?: FlgTypes
   Heb?: HebTypes
   Sankey?: SankeyTypes
@@ -20,4 +19,5 @@ export interface AllIllustrations {
   VerticalChart?: VerticalChartTypes
   HorizontalChart?: HorizontalChartTypes
   Gantt?: GanttChartTypes
+  Matrix?: MatrixTypes
 }

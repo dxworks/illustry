@@ -21,7 +21,7 @@ export class SankyDiagramComponent implements OnInit {
   nodeAlign: any;
 
   @Input()
-  data: any
+  data: SankeyTypes | undefined
 
   @Output()
   option!: EChartsOption;
@@ -29,17 +29,19 @@ export class SankyDiagramComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // @ts-ignore
-    this.nodes = this.data.nodes;
-    // // @ts-ignore
-    // this.nodes.map((node, i) => node['index'] = i)
-    // @ts-ignore
-    // this.links = this.modifyLinks(this.nodes, this.data.links);
-    //@ts-ignore
-    this.graph = { links: this.data.links, nodes: this.nodes, colorMapping: this.data.colorMapping };
-    // this.nodeAlign = pickNodeAlign("justify")
-    this.DrawChart(this.graph)
-    // this.DrawLegend(this.graph.nodes, 70, 20)
+    if (this.data) {
+      // @ts-ignore
+      this.nodes = this.data.nodes;
+      // // @ts-ignore
+      // this.nodes.map((node, i) => node['index'] = i)
+      // @ts-ignore
+      // this.links = this.modifyLinks(this.nodes, this.data.links);
+      //@ts-ignore
+      this.graph = { links: this.data.links, nodes: this.nodes, colorMapping: this.data.colorMapping };
+      // this.nodeAlign = pickNodeAlign("justify")
+      this.DrawChart(this.graph)
+      // this.DrawLegend(this.graph.nodes, 70, 20)
+    }
   }
 
 

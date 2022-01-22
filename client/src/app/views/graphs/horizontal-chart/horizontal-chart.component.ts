@@ -21,10 +21,10 @@ export class HorizontalChartComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    if(this.data){
     // @ts-ignore
     this.createChart({ chart: this.data.chart, label: this.data.label }, this.verifyMaxDomainInterval(this.data.maxDomainInterval, this.data.chart), this.verifyMinDomainInterval(this.data.minDomainInterval, this.data.chart))
-
+    }
   }
 
   createChart(StatsBarChart: any, domainMax: number, domainMin: number) {

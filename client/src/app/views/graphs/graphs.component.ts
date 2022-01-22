@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Illustration } from "../../../types/illustration.model";
 import { ActivatedRoute, Params, Router } from "@angular/router";
 import { IllustrationService } from "../../services/illustration.service";
-import {CalendarHeatmapData} from "./matrixcalendar/matrixcalendar.component";
-import {CalendarHeatmap} from "angular2-calendar-heatmap";
+
 
 @Component({
   selector: 'app-graphs',
@@ -20,7 +19,6 @@ export class GraphsComponent implements OnInit {
     IllustrationType: '',
     Tags: ''
   };
-  calendarHeatMap:CalendarHeatmapData[] = []
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -31,9 +29,8 @@ export class GraphsComponent implements OnInit {
           this.illustrationName = params['illustrationName'];
           this.illustrationService.getIllustration(this.projectName, this.illustrationName)
             .subscribe(illustration => {
-
               this.currentIllustration = illustration;
-              },
+            },
               error => {
                 throw Error(error)
               })

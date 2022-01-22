@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as _ from 'lodash';
+import { MatrixTypes } from 'src/app/entities/matrix-types';
 @Component({
   selector: 'app-matrix',
   templateUrl: './matrix.component.html',
@@ -7,7 +8,7 @@ import * as _ from 'lodash';
 })
 export class MatrixComponent implements OnInit {
   @Input()
-  data: any;
+  data: MatrixTypes | undefined;
 
   selectedGroup1: any[] = []
   selectedGroup2: any[] = []
@@ -21,12 +22,14 @@ export class MatrixComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.switching = -1;
-    this.groups = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { return d.group })))
-    this.selectedGroup1 = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { if (d.group === this.groups[0]) return d }))).filter((el: any) => { return el !== undefined });
-    this.selectedGroup2 = Array.from(new Set(this.data.Matrix.nodes.map((d: any) => { if (d.group === this.groups[1]) return d }))).filter((el: any) => { return el !== undefined });
-    this.links = Array.from(new Set(this.data.Matrix.links.map((d: any) => { return d }))).filter((el: any) => { return el !== undefined })
-    this.createMatrix()
+    if (this.data) {
+      this.switching = -1;
+      this.groups = Array.from(new Set(this.data.nodes.map((d: any) => { return d.group })))
+      this.selectedGroup1 = Array.from(new Set(this.data.nodes.map((d: any) => { if (d.group === this.groups[0]) return d }))).filter((el: any) => { return el !== undefined });
+      this.selectedGroup2 = Array.from(new Set(this.data.nodes.map((d: any) => { if (d.group === this.groups[1]) return d }))).filter((el: any) => { return el !== undefined });
+      this.links = Array.from(new Set(this.data.links.map((d: any) => { return d }))).filter((el: any) => { return el !== undefined })
+      this.createMatrix()
+    }
   }
 
   private createRightHeaderString(spacesForEmptyTd: number, headers: any[]) {

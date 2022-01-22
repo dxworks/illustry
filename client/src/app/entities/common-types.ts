@@ -9,20 +9,31 @@ export interface Link {
   value: number;
 }
 
+export interface NodesMatrix extends Node {
+  properties?: [{
+      label: String,
+      value: Number,
+      style: any
+  }]
+}
+export interface LinksMatrix extends Link {
+  style: any
+}
 export interface Chart {
   name: String,
   value: number
 }
 
-//Details for Calendar
-export interface CalendarData {
-  date: String;
-  total: number;
-  details: CalendatDetailsData[]
-}
+// //Details for Calendar
+// export interface CalendarData {
+//   date: String;
+//   total: number;
+//   details: CalendatDetailsData[]
+// }
 
-export interface CalendatDetailsData {
-  name: String;
-  date: String;
-  value: number;
-}
+ 
+// export interface CalendatDetailsData {
+//   name: String;
+//   date: String;
+//   value: number;
+// }

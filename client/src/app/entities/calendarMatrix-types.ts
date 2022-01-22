@@ -1,5 +1,11 @@
-import {CalendarData} from "./common-types";
 
 export interface CalendarMatrixTypes {
-  calendarData: CalendarData[]
+  calendar: any[]
+  ranges: Range[]
+}
+
+interface Range {
+  min: Number,
+  max: Number,
+  color: String
 }

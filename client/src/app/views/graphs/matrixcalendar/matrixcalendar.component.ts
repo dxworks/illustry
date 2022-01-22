@@ -106,7 +106,7 @@ export class MatrixcalendarComponent {
   }
   @ViewChild('root') element: ElementRef | undefined;
 
-  @Input() data: CalendarHeatmapData[] | undefined;
+  @Input() data: any
   @Input() color: string = '#ff4500';
   @Input() overview: OverviewType = OverviewType.global;
 

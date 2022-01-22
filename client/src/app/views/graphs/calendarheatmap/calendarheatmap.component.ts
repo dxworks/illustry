@@ -1,9 +1,8 @@
 import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import * as d3 from 'd3';
-import { color } from 'd3';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import * as _ from 'lodash';
+import { CalendarMatrixTypes } from 'src/app/entities/calendarMatrix-types';
 import 'zrender/lib/svg/svg';
 @Component({
   selector: 'app-calendarheatmap',
@@ -12,19 +11,20 @@ import 'zrender/lib/svg/svg';
 })
 export class CalendarheatmapComponent implements OnInit, OnDestroy {
   @Input()
-  data: any
+  data: CalendarMatrixTypes | undefined
   @Output()
   option!: EChartsOption;
   @Output()
   cpuLoadChartOptions: EChartsOption = {};
   ngOnInit(): void {
-    this.createCalendar(this.data)
+    if (this.data) {
+      this.createCalendar(this.data)
+    }
   }
   ngOnDestroy(): void {
-    console.log("aici")
     echarts.disconnect
   }
-  createCalendar(data: any) {
+  createCalendar(data: CalendarMatrixTypes) {
 
     var chartDom = document.getElementById('main')!;
 
@@ -37,9 +37,8 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
         // trigger: 'item',
         //@ts-ignore
         formatter: function (params) {
-          console.log(params)
           //@ts-ignore
-          return `<hr><div>12</div>`
+          return params.seriesName
         }
       },
       visualMap: {
@@ -62,7 +61,7 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
 
 
   }
-  createCalendarField(data: any[]) {
+  createCalendarField(data: CalendarMatrixTypes) {
     let top = 100
     let calendar: { range: string; cellSize: (string | number)[]; top: number; }[] = [];
     //@ts-ignore
@@ -72,20 +71,38 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
     });
     return calendar
   }
-  createSeries(data: any[]) {
+  createSeries(data: CalendarMatrixTypes) {
     let series: any[] = [];
     let calendarIndex = 0;
-    let values: any[][] = [];
-
+    let properties: string = ""
     //@ts-ignore
     _.each(data.calendar[0], function (val, key) {
       _.forEach(val, (v: any) => {
-        values.push([v.date, v.value])
+        if (typeof v.properties === 'object') {
+          _.each(v.properties, function (val, key) {
+            properties = properties + `<div style= "font-weight: bold" >${key}:${val}</div>`
+          })
+          properties = properties + `<div style = "font-weight: bold">value:${v.value}</div>`
+          series.push({
+            type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]], name: properties
+          })
+          properties = ""
+        }
+        else {
+          if (typeof v.properties === 'string') {
+
+            series.push({
+              type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]], name: v.properties
+            })
+          }
+          else {
+            let properties: string = `<div style = "font-weight: bold">value:${v.value}<div>`
+            series.push({
+              type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]], name: properties
+            })
+          }
+        }
       })
-      series.push({
-        type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: values
-      })
-      values = []
       calendarIndex = calendarIndex + 1
     });
 
@@ -94,7 +111,7 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
   plotCpuLoad(): void {
     this.cpuLoadChartOptions = { series: [{ data: [100] }] }
   }
-  createIntervals(data: any[]) {
+  createIntervals(data: CalendarMatrixTypes) {
     let pieces: any[] = []
     //@ts-ignore
     _.forEach(data.ranges, d => {
