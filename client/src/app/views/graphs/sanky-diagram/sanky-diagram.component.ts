@@ -1,9 +1,10 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { SankeyTypes } from "../../../entities/sankey-types";
-import { Link, Node } from "../../../entities/common-types";
+import { Link, Node, NodesMatrix, SankeyLinks, SankeyNodes } from "../../../entities/common-types";
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import * as _ from 'lodash';
+import * as d3 from 'd3';
 
 
 @Component({
@@ -11,13 +12,13 @@ import * as _ from 'lodash';
   templateUrl: './sanky-diagram.component.html',
   styleUrls: ['./sanky-diagram.component.css']
 })
-export class SankyDiagramComponent implements OnInit {
+export class SankyDiagramComponent implements OnInit, OnDestroy {
   width = 954;
   height = 600;
   links: Link[] = [];
   nodes: Node[] = [];
   color: any;
-  graph: SankeyTypes = { nodes: [], links: [] };
+  graph: SankeyTypes = { nodes: [], links: [], colorMapping: [] };
   nodeAlign: any;
 
   @Input()
@@ -27,7 +28,9 @@ export class SankyDiagramComponent implements OnInit {
   option!: EChartsOption;
   constructor() {
   }
-
+  ngOnDestroy(): void {
+    echarts.disconnect
+  }
   ngOnInit(): void {
     if (this.data) {
       // @ts-ignore
@@ -40,48 +43,48 @@ export class SankyDiagramComponent implements OnInit {
       this.graph = { links: this.data.links, nodes: this.nodes, colorMapping: this.data.colorMapping };
       // this.nodeAlign = pickNodeAlign("justify")
       this.DrawChart(this.graph)
-      // this.DrawLegend(this.graph.nodes, 70, 20)
+      this.DrawLegend(this.data.colorMapping, 70, 20)
     }
   }
 
 
-  // private DrawLegend(nodes: any, width: number, height: number) {
-  //   const groups: string[] = Array.from(new Set(nodes.map((d: any) => d.group)));
-  //   const color = d3.scaleOrdinal(d3.schemeCategory10)
+  private DrawLegend(colorMapping: any, width: number, height: number) {
+    if (colorMapping) {
+      const legend = d3.select('#legend')
+        .append('g')
+        .attr('transform', 'translate(' + (width) + ',' + (height) + ')')
+        .selectAll('g')
+        .data(colorMapping)
+        .enter()
+        .append('g');
+      legend.append('rect')
+        //@ts-ignore
+        .attr('fill', (d, i) => { return Object.values(d)[0] })
+        .attr('height', 15)
+        .attr('width', 15);
 
-  //   const legend = d3.select('#legend')
-  //     .append('g')
-  //     .attr('transform', 'translate(' + (width) + ',' + (height) + ')')
-  //     .selectAll('g')
-  //     .data(groups)
-  //     .enter()
-  //     .append('g');
-  //   legend.append('rect')
-  //     .attr('fill', (d, i) => color(d))
-  //     .attr('height', 15)
-  //     .attr('width', 15);
+      legend.append('text')
+        .attr('x', 18)
+        .attr('y', 10)
+        .attr('dy', '.15em')
+        .style("fill", function (d: any) { return Object.keys(d)[0] })
+        //@ts-ignore
+        .text((d, i) => { return `Group:${Object.keys(d)[0]}` })
+        .style('text-anchor', 'start')
+        .style('font-size', 12);
 
-  //   legend.append('text')
-  //     .attr('x', 18)
-  //     .attr('y', 10)
-  //     .attr('dy', '.15em')
-  //     .style("fill", function (d: any) { return color(d.group) })
-  //     .text((d, i) => { return `Group:${d}` })
-  //     .style('text-anchor', 'start')
-  //     .style('font-size', 12);
-
-  //   // Now space the groups out after they have been appended:
-  //   const padding = 10;
-  //   legend.attr('transform', function (d, i) {
-  //     return 'translate(' + (d3.sum(groups, function (e, j) {
-  //       if (j < i) { return legend.nodes()[j].getBBox().width; } else { return 0; }
-  //     }) + padding * i) + ',0)';
-  //   });
-  // }
+      // Now space the groups out after they have been appended:
+      const padding = 10;
+      legend.attr('transform', function (d, i) {
+        return 'translate(' + (d3.sum(colorMapping, function (e, j) {
+          if (j < i) { return legend.nodes()[j].getBBox().width; } else { return 0; }
+        }) + padding * i) + ',0)';
+      });
+    }
+  }
   private DrawChart(energy: any) {
     var chartDom = document.getElementById('main')!;
-    var myChart = echarts.init(chartDom, 'vintage');
-    console.log(energy)
+
     this.option = {
 
       tooltip: {
@@ -89,13 +92,11 @@ export class SankyDiagramComponent implements OnInit {
         triggerOn: 'mousemove',
         //@ts-ignore
         formatter: function (params) {
-          console.log(params)
           //@ts-ignore
-          return `<div>12</div>`
+          return params.data.prop
         }
       },
       legend: {
-        show: true
       },
       animation: false,
       series: [
@@ -106,7 +107,7 @@ export class SankyDiagramComponent implements OnInit {
           },
           nodeAlign: 'right',
           data: this.createNodes(energy.nodes, energy.colorMapping),
-          links: energy.links,
+          links: this.createLinks(energy.links),
           lineStyle: {
             color: 'source',
             curveness: 0.5
@@ -114,30 +115,69 @@ export class SankyDiagramComponent implements OnInit {
         }
       ]
     }
-    console.log(this.createNodes(energy.nodes, energy.colorMapping))
-    this.option && myChart.setOption(this.option);
+    var myChart = echarts.getInstanceByDom(chartDom)
+    if (myChart === null) {
+      myChart = echarts.init(chartDom);
+      this.option && myChart.setOption(this.option);
+    }
   }
 
-  createNodes(nodes: any[], colors: any[]) {
+  createNodes(nodes: SankeyNodes[], colors: any[]) {
     let finalNodes: any = []
     _.forEach(colors, color => {
-
-      _.each(color, function (cval: any, ckey: any) {
-        console.log(ckey)
+      _.each(color, (cval: any, ckey: any) => {
         _.forEach(nodes, node => {
           if (ckey === node.group) {
-
             finalNodes.push({
               name: node.id, itemStyle: {
                 color: cval,
                 borderColor: cval
-              }
+              },
+              prop: this.createPropertiesForToolTip(node.properties)
             })
           }
         })
       })
     })
     return finalNodes
+  }
+  createLinks(links: SankeyLinks) {
+    let finalLinks: any = []
+    _.forEach(links, link => {
+      finalLinks.push({ source: link.source, target: link.target, value: link.value, prop: this.createPropertiesForToolTip(link.properties, link.value) })
+    })
+    return finalLinks
+  }
+  createPropertiesForToolTip(properties: any | string, value?: number) {
+    let prop: string = ""
+    if (typeof properties === 'object') {
+      _.each(properties, (value, key) => {
+        prop = prop + `<div style = "font-weight: bold">${key}:${value}`;
+      })
+      if (value) {
+        prop = prop + `<div style = "font-weight: bold">value:${value}</div>`
+      }
+      return prop
+    }
+    else {
+      if (typeof properties === 'string') {
+        if (value) {
+          prop = prop + properties + `<div style = "font-weight: bold">value:${value}</div>`
+          return properties
+        }
+        else {
+          return properties
+        }
+      }
+      else {
+        if (value) {
+          return `<div style = "font-weight: bold">value:${value}</div>`
+        }
+        else {
+          return ""
+        }
+      }
+    }
   }
   //     var svg = d3.select('#sankey')
   //       .append('svg')

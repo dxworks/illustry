@@ -3,11 +3,21 @@
         "Sankey": {
             "nodes": [{
                     "id": "Captain America: The First Avenger (2011)",
-                    "group": "Movie"
+                    "group": "Movie",
+                    "properties": {
+                        "prop1": "prop1",
+                        "prop2": 2,
+                        "prop3": "peco"
+                    }
                 },
                 {
                     "id": "Captain Marvel (2019)",
-                    "group": "Movie"
+                    "group": "Movie",
+                    "properties": {
+                        "prop1": "prop1",
+                        "prop2": 2,
+                        "prop3": "peco"
+                    }
                 },
                 {
                     "id": "Captain Marvel",
@@ -19,7 +29,12 @@
                 },
                 {
                     "id": "Iron Man",
-                    "group": "SuperHero"
+                    "group": "SuperHero",
+                    "properties": {
+                        "prop1": "prop1",
+                        "prop2": 2,
+                        "prop3": "peco"
+                    }
                 },
                 {
                     "id": "Iron Man 2 (2010)",
@@ -689,7 +704,12 @@
                 {
                     "source": "Hulk",
                     "target": "Thanos",
-                    "value": 1
+                    "value": 1,
+                    "properties": {
+                        "prop1": "prop1",
+                        "prop2": 2,
+                        "prop3": "peco"
+                    }
                 }
 
             ],

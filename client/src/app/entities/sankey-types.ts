@@ -1,6 +1,8 @@
-import {Link,Node} from "./common-types";
+
+import { SankeyLinks, SankeyNodes } from "./common-types";
 
 export interface SankeyTypes {
-  nodes: Node[];
-  links: Link[];
+  nodes: SankeyNodes[];
+  links: SankeyLinks[];
+  colorMapping?: any[]
 }

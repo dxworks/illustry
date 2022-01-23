@@ -71,8 +71,9 @@ interface VerticalChart {
     minDomainInterval?: number;
 }
 interface Sankey {
-    nodes: Node[];
-    links: Link[];
+    nodes: NodesSankey[];
+    links: LinksSankey[];
+    colorMapping?: any[]
 }
 
 //Details for Calendar
@@ -111,8 +112,14 @@ interface Link {
     target: String;
     value: number;
 }
+interface NodesSankey extends Node {
+    properties?: any | string
+}
+interface LinksSankey extends Node {
+    properties?: any | string
+}
 interface LinksMatrix extends Link {
-    style: any
+    style?: any
 }
 
 //Details for Horizontal/Vertical Charts 

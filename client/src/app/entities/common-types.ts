@@ -14,10 +14,16 @@ export interface NodesMatrix extends Node {
       label: String,
       value: Number,
       style: any
-  }]
+  }] 
+}
+export interface SankeyNodes extends Node {
+  properties?:any|string
+}
+export interface SankeyLinks extends Link {
+  properties?:any|string
 }
 export interface LinksMatrix extends Link {
-  style: any
+  style?: any |string
 }
 export interface Chart {
   name: String,
