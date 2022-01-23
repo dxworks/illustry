@@ -26,7 +26,6 @@ export class GanttchartComponent implements OnInit {
 
   
   ngOnInit(): void {
-    console.log(this.data)
     //@ts-ignore
     this.createChart(this.data)}
 private createChart=(data:GanttChartTypes) =>{

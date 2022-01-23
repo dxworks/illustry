@@ -3,11 +3,12 @@ import { CalendarMatrixTypes } from "./calendarMatrix-types";
 import { FlgTypes } from "./flg-types";
 import { HebTypes } from "./heb-types";
 import { SankeyTypes } from "./sankey-types";
-import { StackedChartsTypes } from "./stackedchart-types";
+import { VerticalStackedChartsTypes } from "./vertical-stackedchart-types";
 import { VerticalChartTypes } from "./verticalchart-types";
 import { HorizontalChartTypes } from "./horizontalchart-types";
 import { GanttChartTypes } from "./gantChart-types";
 import { MatrixTypes } from "./matrix-types";
+import { HorizontalStackedChartsTypes } from "./horizontal-stackedchart-types";
 
 export interface AllIllustrations {
   Dot?: DotTypes
@@ -15,7 +16,8 @@ export interface AllIllustrations {
   Flg?: FlgTypes
   Heb?: HebTypes
   Sankey?: SankeyTypes
-  StackedCharts?: StackedChartsTypes
+  HorizontalStackedChart?: HorizontalStackedChartsTypes
+  VerticalStackedChart?: VerticalStackedChartsTypes
   VerticalChart?: VerticalChartTypes
   HorizontalChart?: HorizontalChartTypes
   Gantt?: GanttChartTypes

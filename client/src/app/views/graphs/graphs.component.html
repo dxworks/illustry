@@ -21,8 +21,12 @@
   ></app-horizontal-chart>
   <app-stacked-chart
     *ngSwitchCase="'verticalstackedcharts'"
-    [data]="currentIllustration.IllustrationData.StackedCharts"
+    [data]="currentIllustration.IllustrationData.VerticalStackedChart"
   ></app-stacked-chart>
+  <app-horizontal-stacked-chart
+  *ngSwitchCase="'horizontalstackedcharts'"
+  [data]="currentIllustration.IllustrationData.HorizontalStackedChart"
+></app-horizontal-stacked-chart>
   <app-matrix
     *ngSwitchCase="'matrix'"
     [data]="currentIllustration.IllustrationData.Matrix"

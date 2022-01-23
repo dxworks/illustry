@@ -13,7 +13,8 @@ export interface AllIllustrations {
     Flg?: FLG
     Heb?: HEB
     Sankey?: Sankey
-    StackedCharts?: StackedCharts
+    VerticalStackedCharts?: VerticalStackedCharts
+    HorizontalStackedCharts?: HorizontalStackedCharts
     VerticalChart?: VerticalChart
     HorizontalChart?: HorizontalChart
     Gantt?: Gantt
@@ -52,11 +53,20 @@ interface HEB {
     links: Link[];
 }
 
-interface StackedCharts {
+interface VerticalStackedCharts {
     chart: any[];
-    subgroups: String[]
+    maxDomainInterval?: number;
+    minDomainInterval?: number;
+    step?: number;
+    colorMapping: any[]
 }
-
+interface HorizontalStackedCharts {
+    chart: any[];
+    maxDomainInterval?: number;
+    minDomainInterval?: number;
+    step?: number;
+    colorMapping: any[]
+}
 interface HorizontalChart {
     chart: Chart[];
     label: String;
@@ -128,5 +138,5 @@ interface LinksMatrix extends Link {
 interface Chart {
     name: String,
     value: number,
-    properties?:any|string
+    properties?: any | string
 }

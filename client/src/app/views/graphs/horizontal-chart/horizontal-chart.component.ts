@@ -158,7 +158,6 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
     _.forEach(chart, ch => {
       finalResult.push({ value: ch.value, prop: this.createPropertiesForToolTip(ch.properties, ch.value) })
     })
-    console.log(finalResult)
     return (finalResult)
   }
   createyAxis(chart: Chart[], max: number, min: number, interval: number) {

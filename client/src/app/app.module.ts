@@ -19,7 +19,7 @@ import { VerticalChartComponent } from './views/graphs/vertical-chart/chart.comp
 import { GraphsComponent } from './views/graphs/graphs.component';
 import { SankyDiagramComponent } from "./views/graphs/sanky-diagram/sanky-diagram.component";
 import { HeatmapComponent } from './views/graphs/heatmap/heatmap.component';
-import { StackedChartComponent } from './views/graphs/stacked-chart/stacked-chart.component';
+import { StackedChartComponent } from './views/graphs/vertical-stacked-chart/stacked-chart.component';
 import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizontal-chart.component';
 import { MatrixcalendarComponent } from './views/graphs/matrixcalendar/matrixcalendar.component';
 import { MatrixComponent } from './views/graphs/matrix/matrix.component';
@@ -46,6 +46,7 @@ import { DeleteIllustrationDialogComponent } from './dialogs/delete-illustration
 import { UpdateIllustrationDialogComponent } from './dialogs/update-illustration-dialog/update-illustration-dialog.component';
 import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialog/add-illustration-dialog.component';
 import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calendarheatmap.component';
+import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stacked-chart/horizontal-stacked-chart.component';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calenda
     UpdateIllustrationDialogComponent,
     AddIllustrationDialogComponent,
     CalendarheatmapComponent,
+    HorizontalStackedChartComponent,
 
   ],
   imports: [

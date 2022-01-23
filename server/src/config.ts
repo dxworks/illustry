@@ -3,7 +3,6 @@ import path from "path";
 
 let devEnv: any = {}
 let devEnvFilePath = path.resolve(__dirname, '..', 'config.dev.json')
-console.log(devEnvFilePath)
 if (fs.existsSync(devEnvFilePath)) {
     devEnv = JSON.parse(fs.readFileSync(devEnvFilePath).toString())
 }
