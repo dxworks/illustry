@@ -69,6 +69,7 @@ interface VerticalChart {
     label: String;
     maxDomainInterval?: number;
     minDomainInterval?: number;
+    step?: number;
 }
 interface Sankey {
     nodes: NodesSankey[];
@@ -126,5 +127,6 @@ interface LinksMatrix extends Link {
 
 interface Chart {
     name: String,
-    value: number
+    value: number,
+    properties?:any|string
 }

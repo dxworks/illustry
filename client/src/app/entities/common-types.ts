@@ -10,11 +10,14 @@ export interface Link {
 }
 
 export interface NodesMatrix extends Node {
-  properties?: [{
-      label: String,
-      value: Number,
-      style: any
-  }] 
+  properties?: NodeMatrixElements[] 
+}
+interface NodeMatrixElements {
+ 
+    label: String,
+    value: Number,
+    style: any
+ 
 }
 export interface SankeyNodes extends Node {
   properties?:any|string
@@ -27,7 +30,8 @@ export interface LinksMatrix extends Link {
 }
 export interface Chart {
   name: String,
-  value: number
+  value: number,
+  properties?:any|string
 }
 
 // //Details for Calendar

@@ -15,7 +15,7 @@ import { IllustrationsComponent } from './views/illustrations/illustrations.comp
 import { IllustrationListComponent } from './views/illustrations/illustration-list/illustration-list.component';
 import { ForceLayoutGraphComponent } from './views/graphs/force-layout-graph/force-layout-graph.component';
 import { HiearchicalEdgeBundlingComponent } from './views/graphs/hiearchical-edge-bundling/hiearchical-edge-bundling.component';
-import { ChartComponent } from './views/graphs/chart/chart.component';
+import { VerticalChartComponent } from './views/graphs/vertical-chart/chart.component';
 import { GraphsComponent } from './views/graphs/graphs.component';
 import { SankyDiagramComponent } from "./views/graphs/sanky-diagram/sanky-diagram.component";
 import { HeatmapComponent } from './views/graphs/heatmap/heatmap.component';
@@ -59,7 +59,7 @@ import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calenda
     IllustrationListComponent,
     ForceLayoutGraphComponent,
     HiearchicalEdgeBundlingComponent,
-    ChartComponent,
+    VerticalChartComponent,
     GraphsComponent,
     SankyDiagramComponent,
     HeatmapComponent,

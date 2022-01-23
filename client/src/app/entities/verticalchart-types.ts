@@ -5,4 +5,5 @@ export interface VerticalChartTypes {
   label: String;
   maxDomainInterval?: number;
   minDomainInterval?: number;
+  step?:number;
 }

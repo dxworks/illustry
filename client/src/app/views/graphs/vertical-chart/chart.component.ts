@@ -1,20 +1,20 @@
 import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { HorizontalChartTypes } from "../../../entities/horizontalchart-types";
+import * as echarts from 'echarts';
 import * as _ from 'lodash';
 import { Chart } from 'src/app/entities/common-types';
-import * as echarts from 'echarts';
-
+import { VerticalChartTypes } from '../../../entities/verticalchart-types';
 @Component({
-  selector: 'app-horizontal-chart',
-  templateUrl: './horizontal-chart.component.html',
-  styleUrls: ['./horizontal-chart.component.css']
+  selector: 'app-chart',
+  templateUrl: './chart.component.html',
+  styleUrls: ['./chart.component.css']
 })
-export class HorizontalChartComponent implements OnInit, OnDestroy {
+export class VerticalChartComponent implements OnInit, OnDestroy {
+
 
   chart: any = [];
 
   @Input()
-  data: HorizontalChartTypes | undefined;
+  data: VerticalChartTypes | undefined;
   @Output()
   option!: echarts.EChartsOption;
   constructor() {
@@ -26,13 +26,13 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     if (this.data) {
       //@ts-ignore
-      this.createChart(this.data, this.data.maxDomainInterval, this.data.minDomainInterval, this.data.step)
+      this.createChart(this.data, this.data.maxDomainInterval, this.data.minDomainInterval,this.data.step)
     }
   }
   ngOnDestroy(): void {
     echarts.disconnect
   }
-  createChart(statsBarChart: HorizontalChartTypes, domainMax: number, domainMin: number, step: number) {
+  createChart(statsBarChart: VerticalChartTypes, domainMax: number, domainMin: number,step:number) {
     var chartDom = document.getElementById('main')!;
     this.option = {
       tooltip: {
@@ -62,7 +62,7 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
         // delay for later data is larger
         return idx * 100;
       },
-      yAxis: [
+      xAxis: [
         {
           type: 'category',
           data: Array.from(statsBarChart.chart.map((d: any) => { return d.name })),
@@ -71,7 +71,7 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
           }
         }
       ],
-      xAxis: [this.createyAxis(statsBarChart.chart, domainMax, domainMin, step)],
+      yAxis: [this.createyAxis(statsBarChart.chart,domainMax, domainMin,step)],
       series: [
         {
           //@ts-ignore
@@ -89,6 +89,8 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
       myChart = echarts.init(chartDom);
       this.option && myChart.setOption(this.option);
     }
+
+
     // const labels: string[] = Array.from(new Set(StatsBarChart.chart.map((d: any) => d.name)));
     // const values: string[] = Array.from(new Set(StatsBarChart.chart.map((d: any) => d.value)));
     // let delayed: boolean = false;
@@ -107,19 +109,13 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
     //     }]
     //   },
     //   options: {
-    //     indexAxis: 'y',
-    //     elements: {
-    //       bar: {
-    //         borderWidth: 2,
-    //       }
-    //     },
-    //     responsive: true,
     //     scales: {
-    //       x: {
+    //       y: {
     //         suggestedMin: domainMin,
     //         suggestedMax: domainMax
     //       }
     //     },
+    //     responsive: true,
     //     animation: {
     //       onComplete: () => {
     //         delayed = true;
@@ -135,24 +131,8 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
     //     }
     //   }
     // })
-  }
 
-  // verifyMaxDomainInterval(maxDomain: number, StatsBarChart: any) {
-  //   if (maxDomain === undefined || maxDomain === null) {
-  //     const newMaxDomain = StatsBarChart.sort((a: any, b: any) => b.value - a.value)[0].value;
-  //     return newMaxDomain;
-  //   }
-  //   else
-  //     return maxDomain;
-  // }
-  // verifyMinDomainInterval(minDomain: number, StatsBarChart: any) {
-  //   if (minDomain === undefined || minDomain === null) {
-  //     const newMinDomain = StatsBarChart.sort((a: any, b: any) => a.value - b.value)[0].value;
-  //     return newMinDomain;
-  //   }
-  //   else
-  //     return minDomain;
-  // }
+  }
   createData(chart: Chart[]) {
     let finalResult: any[] = []
     _.forEach(chart, ch => {
@@ -161,7 +141,7 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
     console.log(finalResult)
     return (finalResult)
   }
-  createyAxis(chart: Chart[], max: number, min: number, interval: number) {
+  createyAxis(chart:Chart[],max: number, min: number,interval:number) {
     let finalResult: any = {
       type: 'value'
     }
@@ -181,7 +161,7 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
         }
       }
     }
-    if (interval) {
+    if(interval) {
       finalResult.interval = interval;
     }
     return finalResult
@@ -218,3 +198,20 @@ export class HorizontalChartComponent implements OnInit, OnDestroy {
     }
   }
 }
+//   verifyMaxDomainInterval(maxDomain: number, statsBarChart: any) {
+//     if (maxDomain === undefined || maxDomain === null) {
+      // const newMaxDomain = statsBarChart.sort((a: any, b: any) => b.value - a.value)[0].value;
+      // return newMaxDomain;
+//     }
+//     else
+//       return maxDomain;
+//   }
+//   verifyMinDomainInterval(minDomain: number, statsBarChart: any) {
+//     if (minDomain === undefined || minDomain === null) {
+//       const newMinDomain = statsBarChart.sort((a: any, b: any) => a.value - b.value)[0].value;
+//       return newMinDomain;
+//     }
+//     else
+//       return minDomain;
+//   }
+// }

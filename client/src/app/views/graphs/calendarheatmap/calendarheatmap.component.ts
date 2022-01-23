@@ -25,10 +25,7 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
     echarts.disconnect
   }
   createCalendar(data: CalendarMatrixTypes) {
-
     var chartDom = document.getElementById('main')!;
-
-
     this.option = {
       darkMode: "auto",
       height: window.innerHeight,

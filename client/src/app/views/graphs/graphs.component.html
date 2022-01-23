@@ -1,6 +1,6 @@
 <div [ngSwitch]="currentIllustration.IllustrationType">
   <app-chart
-    *ngSwitchCase="'charts'"
+    *ngSwitchCase="'verticalcharts'"
     [data]="currentIllustration.IllustrationData.VerticalChart"
   ></app-chart>
   <app-d3-force-layout-graph
@@ -16,11 +16,11 @@
     [data]="currentIllustration.IllustrationData.Sankey"
   ></app-sanky-diagram>
   <app-horizontal-chart
-    *ngSwitchCase="'horizontal charts'"
+    *ngSwitchCase="'horizontalcharts'"
     [data]="currentIllustration.IllustrationData.HorizontalChart"
   ></app-horizontal-chart>
   <app-stacked-chart
-    *ngSwitchCase="'stackedcharts'"
+    *ngSwitchCase="'verticalstackedcharts'"
     [data]="currentIllustration.IllustrationData.StackedCharts"
   ></app-stacked-chart>
   <app-matrix

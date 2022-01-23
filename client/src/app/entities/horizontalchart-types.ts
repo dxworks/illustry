@@ -5,4 +5,5 @@ export interface HorizontalChartTypes {
   label: String;
   maxDomainInterval?: number;
   minDomainInterval?: number;
+  step?:number
 }
