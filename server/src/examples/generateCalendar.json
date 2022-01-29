@@ -2,146 +2,129 @@
     "illustrationData": {
         "CalendarMatrix": {
             "calendar": [{
-                "2019": [{
-                        "date": "2019-02-01",
-                        "value": 15,
-                        "properties": {
-                            "prop1": "prop1",
-                            "prop2": 2,
-                            "prop3": "peco"
-                        }
-                    },
-                    {
-                        "date": "2019-02-18",
-                        "value": 27,
-                        "properties": {
-                            "prop1": "prop1",
-                            "prop2": 2,
-                            "prop3": "peco"
-                        }
-                    },
-                    {
-                        "date": "2019-03-01",
-                        "value": 39,
-                        "properties": {
-                            "prop1": "prop1",
-                            "prop2": 2,
-                            "prop3": "peco"
-                        }
-                    },
-                    {
-                        "date": "2019-04-01",
-                        "value": 50,
-                        "properties": {
-                            "prop1": "prop1",
-                            "prop2": 2,
-                            "prop3": "peco"
-                        }
-                    },
-                    {
-                        "date": "2019-12-12",
-                        "value": 15,
-                        "properties": {
-                            "prop1": "prop1",
-                            "prop2": 2,
-                            "prop3": "peco"
-                        }
-                    },
-                    {
-                        "date": "2019-02-11",
-                        "value": 15
-                    }
-                ],
-                "2020": [{
-                        "date": "2020-02-01",
-                        "value": 15
-                    },
-                    {
-                        "date": "2020-02-18",
-                        "value": 27
-                    },
-                    {
-                        "date": "2020-03-01",
-                        "value": 39
-                    },
-                    {
-                        "date": "2020-04-01",
-                        "value": 50
-                    },
-                    {
-                        "date": "2020-12-12",
-                        "value": 15
-                    },
-                    {
-                        "date": "2020-02-11",
-                        "value": 15
-                    }
-                ],
-                "2021": [{
-                        "date": "2021-02-01",
-                        "value": 15
-                    },
-                    {
-                        "date": "2021-02-18",
-                        "value": 27
-                    },
-                    {
-                        "date": "2021-03-01",
-                        "value": 39
-                    },
-                    {
-                        "date": "2021-04-01",
-                        "value": 50
-                    },
-                    {
-                        "date": "2021-12-12",
-                        "value": 15
-                    },
-                    {
-                        "date": "2021-02-11",
-                        "value": 15
-                    }
-                ],
-                "2022": [{
-                        "date": "2022-02-01",
-                        "value": 15
-                    },
-                    {
-                        "date": "2022-02-18",
-                        "value": 27
-                    },
-                    {
-                        "date": "2022-03-01",
-                        "value": 39
-                    },
-                    {
-                        "date": "2022-04-01",
-                        "value": 50
-                    },
-                    {
-                        "date": "2022-12-12",
-                        "value": 15
-                    },
-                    {
-                        "date": "2022-02-11",
-                        "value": 15,
-                        "properties": "<div>prop1:propfromstring</div>"
-                    }
-                ]
-            }],
-            "ranges": [{
-                "min": 1,
-                "max": 15,
-                "color": "red"
-            }, {
-                "min": 16,
-                "max": 30,
-                "color": "green"
-            }, {
-                "min": 31,
-                "max": 50,
-                "color": "blue"
-            }]
+                    "date": "2019-02-01",
+                    "value": 15,
+                    "year": 2019,
+                    "category": "cat1"
+                },
+                {
+                    "date": "2019-02-18",
+                    "value": 27,
+                    "year": 2019,
+                    "category": "cat1"
+                },
+                {
+                    "date": "2019-03-01",
+                    "value": 39,
+                    "year": 2019,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2019-04-01",
+                    "value": 50,
+                    "year": 2019,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2019-12-12",
+                    "value": 15,
+
+                    "year": 2019,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2019-02-11",
+                    "value": 15,
+                    "year": 2019,
+                    "category": "cat3"
+                },
+                {
+                    "date": "2020-02-01",
+                    "value": 15,
+                    "year": 2020,
+                    "category": "cat1"
+                },
+                {
+                    "date": "2020-02-18",
+                    "value": 27,
+                    "year": 2020,
+                    "category": "cat1"
+                },
+                {
+                    "date": "2020-03-01",
+                    "value": 39,
+                    "year": 2020,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2020-04-01",
+                    "value": 50,
+                    "year": 2020,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2020-12-12",
+                    "value": 15,
+                    "year": 2020,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2020-02-11",
+                    "value": 15,
+                    "year": 2020,
+                    "category": "cat3"
+                },
+                {
+                    "date": "2021-02-01",
+                    "value": 15,
+                    "year": 2021,
+                    "category": "cat1"
+                },
+                {
+                    "date": "2021-02-18",
+                    "value": 27,
+                    "year": 2021,
+                    "category": "cat1"
+                },
+                {
+                    "date": "2021-03-01",
+                    "value": 39,
+                    "year": 2021,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2021-04-01",
+                    "value": 50,
+                    "year": 2021,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2021-12-12",
+                    "value": 15,
+                    "year": 2021,
+                    "category": "cat2"
+                },
+                {
+                    "date": "2021-02-11",
+                    "value": 15,
+                    "year": 2021,
+                    "category": "cat3"
+                }
+            ],
+
+            "categories": {
+                "cat1": "red",
+                "cat2": "green",
+                "cat3": "yellow"
+            },
+
+            "tooltip": {
+                "2021-02-11": "<div>12</div>",
+                "2021-12-12":{
+                "Prop":1,
+                "prop2":"@3332"
+                }
+            }
         }
     }
 }

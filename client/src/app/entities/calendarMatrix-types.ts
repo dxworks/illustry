@@ -1,11 +1,13 @@
 
 export interface CalendarMatrixTypes {
-  calendar: any[]
-  ranges: Range[]
+  calendar: CalendarData[]
+  categories:any,
+  tooltip:any
 }
 
-interface Range {
-  min: Number,
-  max: Number,
-  color: String
+export interface CalendarData {
+  date:String,
+  value:number,
+  year:number,
+  category:String
 }

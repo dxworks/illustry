@@ -2,7 +2,7 @@ import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import * as _ from 'lodash';
-import { CalendarMatrixTypes } from 'src/app/entities/calendarMatrix-types';
+import { CalendarData, CalendarMatrixTypes } from 'src/app/entities/calendarMatrix-types';
 import 'zrender/lib/svg/svg';
 @Component({
   selector: 'app-calendarheatmap',
@@ -33,87 +33,121 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
         position: 'top',
         // trigger: 'item',
         //@ts-ignore
-        formatter: function (params) {
+        formatter: (params) => {
           //@ts-ignore
-          return params.seriesName
+          return this.createToolTip(data.tooltip, params.data[0], params.data[1])
         }
       },
+
       visualMap: {
         orient: 'horizontal',
         left: 'center',
         top: 30,
-        pieces: this.createIntervals(data)
+        type: 'piecewise',
+        categories: Object.keys(data.categories),
+        inRange: { color: Object.values(data.categories) }
       },
+      calendar: this.createCalendarField(data.calendar) as echarts.CalendarComponentOption[] | undefined,
 
-      calendar: this.createCalendarField(data) as echarts.CalendarComponentOption[] | undefined,
-
-      series: this.createSeries(data) as echarts.SeriesOption[] | undefined
+      series: this.createSeries(data.calendar) as echarts.SeriesOption[] | undefined
     };
-
     var myChart = echarts.getInstanceByDom(chartDom)
     if (myChart === null) {
       myChart = echarts.init(chartDom);
       this.option && myChart.setOption(this.option);
     }
 
-
   }
-  createCalendarField(data: CalendarMatrixTypes) {
+  createCalendarField(data: CalendarData[]) {
     let top = 100
-    let calendar: { range: string; cellSize: (string | number)[]; top: number; }[] = [];
+    let calendar: any = []
+    let years: number[] = Array.from(new Set(data.map((d: any) => { return d.year })))
     //@ts-ignore
-    _.each(data.calendar[0], function (val, key) {
-      calendar.push({ range: key, cellSize: ['auto', 20], top: top })
+    _.each(years, y => {
+      calendar.push({ range: y, cellSize: ['auto', 20], top: top })
       top = top + 200
     });
     return calendar
   }
-  createSeries(data: CalendarMatrixTypes) {
-    let series: any[] = [];
-    let calendarIndex = 0;
-    let properties: string = ""
-    //@ts-ignore
-    _.each(data.calendar[0], function (val, key) {
-      _.forEach(val, (v: any) => {
-        if (typeof v.properties === 'object') {
-          _.each(v.properties, function (val, key) {
-            properties = properties + `<div style= "font-weight: bold" >${key}:${val}</div>`
-          })
-          properties = properties + `<div style = "font-weight: bold">value:${v.value}</div>`
-          series.push({
-            type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]], name: properties
-          })
-          properties = ""
-        }
-        else {
-          if (typeof v.properties === 'string') {
-
-            series.push({
-              type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]], name: v.properties
-            })
-          }
-          else {
-            let properties: string = `<div style = "font-weight: bold">value:${v.value}<div>`
-            series.push({
-              type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]], name: properties
-            })
-          }
-        }
-      })
-      calendarIndex = calendarIndex + 1
-    });
-
-    return series
-  }
   plotCpuLoad(): void {
     this.cpuLoadChartOptions = { series: [{ data: [100] }] }
   }
-  createIntervals(data: CalendarMatrixTypes) {
-    let pieces: any[] = []
-    //@ts-ignore
-    _.forEach(data.ranges, d => {
-      pieces.push({ min: d.min, max: d.max, color: d.color })
+  createToolTip(data: any, name: string, value: number) {
+    let properties = ""
+    if (typeof data[name] === 'string') {
+      properties = properties + data[name] + `<div style = "font-weight: bold">value:${value}</div>`
+    }
+    else {
+      if (typeof data[name] === 'object') {
+        _.forEach(Object.keys(data[name]), n => {
+          _.forEach(Object.values(data[name]), v => {
+            if (data[name][n] === v) {
+              properties = properties + `<div style = "font-weight: bold">${n}:${v}</div>`
+            }
+          })
+        })
+        properties = properties + `<div style = "font-weight: bold">value:${value}</div>`
+      }
+      else {
+        properties = `<div style = "font-weight: bold">value:${value}</div>`
+      }
+    }
+    return properties
+  }
+
+  createSeries(data: CalendarData[]) {
+    let series: any[] = [];
+    let index = 0;
+    const indexMap: any = [];
+    let years: number[] = Array.from(new Set(data.map((d: any) => { return d.year })))
+    _.forEach(years, y => {
+      indexMap.push({ year: y, calendarIndex: index })
+      index = index + 1;
     })
-    return pieces
+    _.forEach(data, d => {
+      _.forEach(indexMap, iM => {
+        if (d.year === iM.year) {
+          series.push({ type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: iM.calendarIndex, data: [[d.date, d.value, d.category]] })
+        }
+      })
+    })
+    return series
   }
 }
+  // createSeries(data: CalendarMatrixTypes) {
+    // let series: any[] = [];
+    // let calendarIndex = 0;
+  //   let properties: string = ""
+  //   //@ts-ignore
+  //   _.each(data.calendar[0], function (val, key) {
+  //     _.forEach(val, (v: any) => {
+  //       if (typeof v.properties === 'object') {
+  //         _.each(v.properties, function (val, key) {
+  //           properties = properties + `<div style= "font-weight: bold" >${key}:${val}</div>`
+  //         })
+  //         properties = properties + `<div style = "font-weight: bold">value:${v.value}</div>`
+  //         series.push({
+  //           type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]]
+  //         })
+  //         properties = ""
+  //       }
+  //       else {
+  //         if (typeof v.properties === 'string') {
+
+  //           series.push({
+  //             type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]]
+  //           })
+  //         }
+  //         else {
+  //           let properties: string = `<div style = "font-weight: bold">value:${v.value}<div>`
+  //           series.push({
+  //             type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]]
+  //           })
+  //         }
+  //       }
+  //     })
+  //     calendarIndex = calendarIndex + 1
+  //   });
+
+  //   return series
+  // }

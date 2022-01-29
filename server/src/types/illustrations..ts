@@ -22,8 +22,9 @@ export interface AllIllustrations {
 }
 
 interface CalendarHeatmap {
-    calendar: any
-    ranges: Range[]
+    calendar: CalendarData[]
+    categories: any
+    tooltip?:any
 }
 interface Matrix {
     nodes: NodesMatrix[]
@@ -113,11 +114,7 @@ interface NodesMatrix extends Node {
         style: any
     }]
 }
-interface Range {
-    min: Number,
-    max: Number,
-    color: String
-}
+
 interface Link {
     source: String;
     target: String;
@@ -133,6 +130,12 @@ interface LinksMatrix extends Link {
     style?: any
 }
 
+interface CalendarData {
+    date:String,
+    value:number,
+    year:number,
+    category:String
+}
 //Details for Horizontal/Vertical Charts 
 
 interface Chart {
