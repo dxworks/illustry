@@ -19,6 +19,7 @@ export interface AllIllustrations {
     HorizontalChart?: HorizontalChart
     Gantt?: Gantt
     Matrix?: Matrix
+    Timeliner?:any
 }
 
 interface CalendarHeatmap {

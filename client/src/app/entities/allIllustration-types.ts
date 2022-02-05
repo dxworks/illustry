@@ -22,4 +22,5 @@ export interface AllIllustrations {
   HorizontalChart?: HorizontalChartTypes
   Gantt?: GanttChartTypes
   Matrix?: MatrixTypes
+  Timeliner?: any
 }

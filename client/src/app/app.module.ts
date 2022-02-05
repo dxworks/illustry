@@ -47,6 +47,7 @@ import { UpdateIllustrationDialogComponent } from './dialogs/update-illustration
 import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialog/add-illustration-dialog.component';
 import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calendarheatmap.component';
 import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stacked-chart/horizontal-stacked-chart.component';
+import { TimelinerComponent } from './views/graphs/timeliner/timeliner.component';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stack
     AddIllustrationDialogComponent,
     CalendarheatmapComponent,
     HorizontalStackedChartComponent,
+    TimelinerComponent,
 
   ],
   imports: [

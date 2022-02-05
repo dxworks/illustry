@@ -24,9 +24,9 @@
     [data]="currentIllustration.IllustrationData.VerticalStackedChart"
   ></app-stacked-chart>
   <app-horizontal-stacked-chart
-  *ngSwitchCase="'horizontalstackedcharts'"
-  [data]="currentIllustration.IllustrationData.HorizontalStackedChart"
-></app-horizontal-stacked-chart>
+    *ngSwitchCase="'horizontalstackedcharts'"
+    [data]="currentIllustration.IllustrationData.HorizontalStackedChart"
+  ></app-horizontal-stacked-chart>
   <app-matrix
     *ngSwitchCase="'matrix'"
     [data]="currentIllustration.IllustrationData.Matrix"
@@ -39,6 +39,10 @@
     *ngSwitchCase="'graphiz'"
     [content]="currentIllustration.IllustrationData.Dot"
   ></app-dot-graph>
+  <app-timeliner
+    *ngSwitchCase="'timeliner'"
+    [data]="currentIllustration.IllustrationData.Timeliner"
+  ></app-timeliner>
   <app-ganttchart
     *ngSwitchCase="'ganttchart'"
     [data]="currentIllustration.IllustrationData.Gantt"
