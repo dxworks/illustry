@@ -17,17 +17,19 @@ export const checkSearch = (projectName: string, illustrationName: string, searc
                     const commits: any[] = _.get(doc, 'IllustrationData.Timeliner.commits');
                     if (doc && searchedTerm != null && searchedTerm != "" && !fromDate && !toDate) {
                         commits.filter(word => {
-                            if (_.toString(moment(word.date).format('YYYY-MM-DD')) === _.toString(moment(searchedTerm).format('YYYY-MM-DD')) ||
+                            if (
                                 _.toString(searchedTerm) === word.username ||
                                 _.toString(searchedTerm) === word.commitMessage ||
-                                _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY-MM-DD'))) ||
-                                _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY'))) ||
-                                _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('MM'))) ||
-                                _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('DD'))) ||
-                                _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('M'))) ||
-                                _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('D'))) ||
                                 _.includes(word.username, _.toString(searchedTerm)) ||
                                 _.includes(word.commitMessage, _.toString(searchedTerm))
+                                // _.toString(moment(word.date).format('YYYY-MM-DD')) === _.toString(moment(searchedTerm).format('YYYY-MM-DD')) ||
+                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY-MM-DD'))) ||
+                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY'))) ||
+                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('MM'))) ||
+                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('DD'))) ||
+                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('M'))) ||
+                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('D')))
+
                             ) {
                                 filteredCommits.push({ date: word.date, commitMessage: word.commitMessage, username: word.username })
                             }
@@ -84,19 +86,18 @@ export const checkSearch = (projectName: string, illustrationName: string, searc
                                                 ((moment(moment(word.date).format('YYYY-MM-DD')).diff(moment(moment(toDate).format('YYYY-MM-DD')), "days")) <= 0 ||
                                                     (moment(moment(word.date).format('YYYY-MM-D')).diff(moment(moment(toDate).format('YYYY-MM-D')), "days")) <= 0 ||
                                                     (moment(moment(word.date).format('YYYY-M-D')).diff(moment(moment(toDate).format('YYYY-M-D')), "days")) <= 0) &&
-                                                (_.toString(moment(word.date).format('YYYY-MM-DD')) === _.toString(moment(searchedTerm).format('YYYY-MM-DD')) ||
-                                                    _.toString(searchedTerm) === word.username ||
+                                                (_.toString(searchedTerm) === word.username ||
                                                     _.toString(searchedTerm) === word.commitMessage ||
-                                                    _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY-MM-DD'))) ||
-                                                    _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY'))) ||
-                                                    _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('MM'))) ||
-                                                    _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('DD'))) ||
-                                                    _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('M'))) ||
-                                                    _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('D'))) ||
                                                     _.includes(word.username, _.toString(searchedTerm)) ||
                                                     _.includes(word.commitMessage, _.toString(searchedTerm))
-                                                )
-                                            ) {
+                                                    // _.toString(moment(word.date).format('YYYY-MM-DD')) === _.toString(moment(searchedTerm).format('YYYY-MM-DD')) ||
+                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY-MM-DD'))) ||
+                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY'))) ||
+                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('MM'))) ||
+                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('DD'))) ||
+                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('M'))) ||
+                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('D'))))
+                                                )) {
                                                 filteredCommits.push({ date: word.date, commitMessage: word.commitMessage, username: word.username })
                                             }
                                         })
