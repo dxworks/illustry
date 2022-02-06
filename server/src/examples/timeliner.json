@@ -2,6 +2,15 @@
     "illustrationData": {
         "Timeliner": {
             "commits": [{
+                    "date": "2022-02-01 10:40",
+                    "commitMessage": "fratele lui gicu da mare commit",
+                    "username": "fratele"
+                }, {
+                    "date": "2022-02-02 10:40",
+                    "commitMessage": "gicu da mare commit",
+                    "username": "gicu"
+                },
+                {
                     "date": "2022-02-03 12:49",
                     "commitMessage": "A VERY COOL COMMIT MESSAGE1",
                     "username": "vladimirNitu"
@@ -25,11 +34,12 @@
                     "date": "2022-02-04 11:40",
                     "commitMessage": "A VERY COOL COMMIT MESSAGE4",
                     "username": "vladimirNitu"
-                } ,{
+                }, {
                     "date": "2022-02-05 10:40",
                     "commitMessage": "A VERY COOL COMMIT MESSAGE5",
                     "username": "vladimirNitu"
                 }
+
             ]
         }
     }

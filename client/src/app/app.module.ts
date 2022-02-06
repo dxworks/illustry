@@ -48,6 +48,8 @@ import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialo
 import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calendarheatmap.component';
 import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stacked-chart/horizontal-stacked-chart.component';
 import { TimelinerComponent } from './views/graphs/timeliner/timeliner.component';
+import { TimelinerSortComponent } from './views/graphs/timeliner/timeliner-sort/timeliner-sort.component';
+import { TimelinerViewComponent } from './views/graphs/timeliner/timeliner-view/timeliner-view.component';
 
 
 @NgModule({
@@ -80,6 +82,8 @@ import { TimelinerComponent } from './views/graphs/timeliner/timeliner.component
     CalendarheatmapComponent,
     HorizontalStackedChartComponent,
     TimelinerComponent,
+    TimelinerSortComponent,
+    TimelinerViewComponent,
 
   ],
   imports: [

@@ -10,7 +10,7 @@ export const createProjectfromExtern = (req: any, res: any, next: any) => {
 }
 
 export const deleteProjectfromExtern = (req: any, res: any, next: any) => {
-    let projectName = _.get(req,'body.ProjectName')
+    let projectName = _.get(req, 'body.ProjectName')
     projectApi.deleteProject(projectName, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)

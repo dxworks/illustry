@@ -8,7 +8,5 @@ export const IllustrationSchema = new mongoose.Schema({
     Tags: { type: String, required: false },
     IllustrationData: { type: Schema.Types.Mixed, required: true }
 })
-
 const IllustrationTable = mongoose.model('Illustration', IllustrationSchema);
-
 export default IllustrationTable;
