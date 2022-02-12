@@ -9,6 +9,7 @@ import { HorizontalChartTypes } from "./horizontalchart-types";
 import { GanttChartTypes } from "./gantChart-types";
 import { MatrixTypes } from "./matrix-types";
 import { HorizontalStackedChartsTypes } from "./horizontal-stackedchart-types";
+import {Timeline} from "./timeline";
 
 export interface AllIllustrations {
   Dot?: DotTypes
@@ -23,4 +24,5 @@ export interface AllIllustrations {
   Gantt?: GanttChartTypes
   Matrix?: MatrixTypes
   Timeliner?: any
+  Timeline?: Timeline
 }

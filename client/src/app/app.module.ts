@@ -50,7 +50,7 @@ import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stack
 import { TimelinerComponent } from './views/graphs/timeliner/timeliner.component';
 import { TimelinerSortComponent } from './views/graphs/timeliner/timeliner-sort/timeliner-sort.component';
 import { TimelinerViewComponent } from './views/graphs/timeliner/timeliner-view/timeliner-view.component';
-
+import { TimelineComponent } from './views/graphs/timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +84,7 @@ import { TimelinerViewComponent } from './views/graphs/timeliner/timeliner-view/
     TimelinerComponent,
     TimelinerSortComponent,
     TimelinerViewComponent,
-
+    TimelineComponent,
   ],
   imports: [
     BrowserModule,

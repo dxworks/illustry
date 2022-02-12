@@ -111,3 +111,8 @@ export const checkSearch = (projectName: string, illustrationName: string, searc
         })
         .catch((err: any) => next(err, null))
 }
+
+// filteredEvents = allEvents
+// if( am dates)  -> filteredEvents = filteredEvents.filter (...cu dates)
+// if( am search term) -> filteredEvents = filteredEvents.filter(...dupa search).
+// group by date and send to fe.
