@@ -218,7 +218,7 @@ export class TimelinerViewComponent implements OnInit {
     let commitMessage = new Set()
     let commit = new Set()
     for (let i = 0; i < data.length - 1; i++) {
-      if (moment(moment(data[i].date).format('YYYY-MM-DD')).diff(moment(moment(data[i + 1].date).format('YYYY-MM-DD')), 'year') === 0 && (moment(moment(data[i].date).format('YYYY-MM-DD')).diff(moment(moment(data[i + 1].date).format('YYYY-MM-DD')), 'months')) === 0 && (moment(moment(data[i].date).format('YYYY-MM-DD')).diff(moment(moment(data[i + 1].date).format('YYYY-MM-DD')), 'days')) === 0 && data[i + 1].date != data[i].date) {
+      if (moment(moment(data[i].date).format('YYYY-MM-DD')) != (moment(moment(data[i + 1].date).format('YYYY-MM-DD')))) {
         commitMessage.add(`${moment(data[i].date).format('DD')} ${moment(data[i].date).format('MMMM').slice(0, 3)} ${moment(data[i].date).format('Y')}`)
         commit.add(data[i])
         commit.add(data[i + 1])
@@ -283,7 +283,6 @@ export class TimelinerViewComponent implements OnInit {
     });
     modals.forEach((m, index) => {
       m.addEventListener('click', (event: any) => {
-        console.log(data[index])
       })
     })
   }
@@ -291,57 +290,57 @@ export class TimelinerViewComponent implements OnInit {
     let date1 = moment(d1)
     let date2 = moment()
 
-    if (date2.diff(date1, 'minutes') < 60) {
-      return `${date2.diff(date1, 'minutes')} minutes ago`
+    if (date2.diff(date1, 'months') < 12 && date2.diff(date1, 'months') != 0) {
+      return `${date2.diff(date1, 'months')} months ago`
     }
     else {
-      if (date2.diff(date1, 'hours') < 24) {
-        return `${date2.diff(date1, 'hours')} hours ago`
-      }
-      else {
-        if (_.toNumber(date2.format('YYYY')) % 4 === 0 && _.toNumber(date2.format('YYYY')) % 100 != 0) {
-          switch (moment().format("MMMM")) {
-            case "January": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "February": if (date2.diff(date1, 'days') < 29) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "March": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "April": if (date2.diff(date1, 'days') < 30) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "May": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "June": if (date2.diff(date1, 'days') < 30) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "July": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "August": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "September": if (date2.diff(date1, 'days') < 30) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "Octomber": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "November": if (date2.diff(date1, 'days') < 30) { return `${date2.diff(date1, 'days')} days ago` } break;
-            case "December": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-          }
+      if (date2.diff(date1, 'minutes') < 60 && date2.diff(date1, 'minutes') != 0) {
+        return `${date2.diff(date1, 'minutes')} minutes ago`
+      } else {
+        if (date2.diff(date1, 'hours') < 24 && date2.diff(date1, 'hours') != 0) {
+          return `${date2.diff(date1, 'hours')} hours ago`
         }
         else {
-          if ((_.toNumber(date2.format('YYYY')) % 4 === 0 && _.toNumber(date2.format('YYYY')) % 100 === 0) || _.toNumber(date2.format('YYYY')) % 4 != 0) {
+          if (_.toNumber(date2.format('YYYY')) % 4 === 0 && _.toNumber(date2.format('YYYY')) % 100 != 0) {
             switch (moment().format("MMMM")) {
-              case "January": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "February": if (date2.diff(date1, 'days') < 29) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "March": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "April": if (date2.diff(date1, 'days') < 30) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "May": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "June": if (date2.diff(date1, 'days') < 30) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "July": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "August": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "September": if (date2.diff(date1, 'days') < 30) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "Octomber": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "November": if (date2.diff(date1, 'days') < 30) { return `${date2.diff(date1, 'days')} days ago` } break;
-              case "December": if (date2.diff(date1, 'days') < 31) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "January": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "February": if (date2.diff(date1, 'days') < 29 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "March": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "April": if (date2.diff(date1, 'days') < 30 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "May": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "June": if (date2.diff(date1, 'days') < 30 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "July": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "August": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "September": if (date2.diff(date1, 'days') < 30 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "Octomber": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "November": if (date2.diff(date1, 'days') < 30 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              case "December": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
             }
           }
           else {
-            if (date2.diff(date1, 'months') < 12) {
-              return `${date2.diff(date1, 'months')} months ago`
+            if ((_.toNumber(date2.format('YYYY')) % 4 === 0 && _.toNumber(date2.format('YYYY')) % 100 === 0) || _.toNumber(date2.format('YYYY')) % 4 != 0) {
+              switch (moment().format("MMMM")) {
+                case "January": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "February": if (date2.diff(date1, 'days') < 29 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "March": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "April": if (date2.diff(date1, 'days') < 30 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "May": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "June": if (date2.diff(date1, 'days') < 30 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "July": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "August": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "September": if (date2.diff(date1, 'days') < 30 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "Octomber": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "November": if (date2.diff(date1, 'days') < 30 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+                case "December": if (date2.diff(date1, 'days') < 31 && date2.diff(date1, 'days') != 0) { return `${date2.diff(date1, 'days')} days ago` } break;
+              }
             }
           }
         }
-        return `${date2.diff(date1, 'year')} years ago `
       }
     }
+    return `${date2.diff(date1, 'year')} years ago `
   }
 }
+
 
 
