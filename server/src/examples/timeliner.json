@@ -1,50 +1,48 @@
 {
     "illustrationData": {
-        "Timeliner": {
-            "commits": [{
-                    "date": "2021-12-31 6:25",
-                    "commitMessage": "fratele lui marin da mare commit 743",
-                    "username": "marin 52"
-                }, {
-                    "date": "2022-02-01 10:40",
-                    "commitMessage": "fratele lui gicu da mare commit",
-                    "username": "fratele"
-                }, {
-                    "date": "2022-02-02 10:40",
-                    "commitMessage": "gicu da mare commit",
-                    "username": "gicu"
-                },
-                {
-                    "date": "2022-02-03 12:49",
-                    "commitMessage": "A VERY COOL COMMIT MESSAGE1",
-                    "username": "vladimirNitu"
-                },
-                {
-                    "date": "2022-02-03 14:49",
-                    "commitMessage": "A VERY COOL COMMIT MESSAGE2",
-                    "username": "vladimirNitu"
-                },
-                {
-                    "date": "2022-02-03 11:49",
-                    "commitMessage": "A VERY COOL COMMIT MESSAGE3",
-                    "username": "vladimirNitu"
-                },
-                {
-                    "date": "2022-02-04 10:40",
-                    "commitMessage": "A VERY COOL COMMIT MESSAGE4",
-                    "username": "vladimirNitu"
-                },
-                {
-                    "date": "2022-02-04 11:40",
-                    "commitMessage": "A VERY COOL COMMIT MESSAGE4",
-                    "username": "vladimirNitu"
-                }, {
-                    "date": "2022-02-05 10:40",
-                    "commitMessage": "A VERY COOL COMMIT MESSAGE5",
-                    "username": "vladimirNitu"
-                }
+        "commits": [{
+                "date": "2021-12-31 6:25",
+                "commitMessage": "fratele lui marin da mare commit 743",
+                "username": "marin 52"
+            }, {
+                "date": "2022-02-01 10:40",
+                "commitMessage": "fratele lui gicu da mare commit",
+                "username": "fratele"
+            }, {
+                "date": "2022-02-02 10:40",
+                "commitMessage": "gicu da mare commit",
+                "username": "gicu"
+            },
+            {
+                "date": "2022-02-03 12:49",
+                "commitMessage": "A VERY COOL COMMIT MESSAGE1",
+                "username": "vladimirNitu"
+            },
+            {
+                "date": "2022-02-03 14:49",
+                "commitMessage": "A VERY COOL COMMIT MESSAGE2",
+                "username": "vladimirNitu"
+            },
+            {
+                "date": "2022-02-03 11:49",
+                "commitMessage": "A VERY COOL COMMIT MESSAGE3",
+                "username": "vladimirNitu"
+            },
+            {
+                "date": "2022-02-04 10:40",
+                "commitMessage": "A VERY COOL COMMIT MESSAGE4",
+                "username": "vladimirNitu"
+            },
+            {
+                "date": "2022-02-04 11:40",
+                "commitMessage": "A VERY COOL COMMIT MESSAGE4",
+                "username": "vladimirNitu"
+            }, {
+                "date": "2022-02-05 10:40",
+                "commitMessage": "A VERY COOL COMMIT MESSAGE5",
+                "username": "vladimirNitu"
+            }
 
-            ]
-        }
+        ]
     }
 }

@@ -1,74 +1,72 @@
 {
     "illustrationData": {
-        "VerticalChart": {
-            "chart": [{
-                    "name": "Smoke",
-                    "value": 30,
-                    "properties": {
-                        "prop1": "p1"
-                    }
-                },
-                {
-                    "name": "Unit",
-                    "value": 500
-                },
-                {
-                    "name": "Component",
-                    "value": 123
-                },
-                {
-                    "name": "Sanity",
-                    "value": 32
-                },
-                {
-                    "name": "Regression",
-                    "value": 20
-                },
-                {
-                    "name": "Integration",
-                    "value": 100
-                },
-                {
-                    "name": "API",
-                    "value": 41
-                },
-                {
-                    "name": "UI",
-                    "value": 20
-                },
-                {
-                    "name": "System",
-                    "value": 3
-                },
-                {
-                    "name": "White-box",
-                    "value": 214
-                },
-                {
-                    "name": "Black-box",
-                    "value": 312
-                },
-                {
-                    "name": "Acceptance",
-                    "value": 56
-                },
-                {
-                    "name": "Alpha",
-                    "value": 391
-                },
-                {
-                    "name": "Beta",
-                    "value": 153
-                },
-                {
-                    "name": "Production",
-                    "value": 420
+        "chart": [{
+                "name": "Smoke",
+                "value": 30,
+                "properties": {
+                    "prop1": "p1"
                 }
-            ],
-            "label": "Tests Distribution",
-            "color": "red",
-            "maxDomainInterval": 550,
-            "step":100
-        }
+            },
+            {
+                "name": "Unit",
+                "value": 500
+            },
+            {
+                "name": "Component",
+                "value": 123
+            },
+            {
+                "name": "Sanity",
+                "value": 32
+            },
+            {
+                "name": "Regression",
+                "value": 20
+            },
+            {
+                "name": "Integration",
+                "value": 100
+            },
+            {
+                "name": "API",
+                "value": 41
+            },
+            {
+                "name": "UI",
+                "value": 20
+            },
+            {
+                "name": "System",
+                "value": 3
+            },
+            {
+                "name": "White-box",
+                "value": 214
+            },
+            {
+                "name": "Black-box",
+                "value": 312
+            },
+            {
+                "name": "Acceptance",
+                "value": 56
+            },
+            {
+                "name": "Alpha",
+                "value": 391
+            },
+            {
+                "name": "Beta",
+                "value": 153
+            },
+            {
+                "name": "Production",
+                "value": 420
+            }
+        ],
+        "label": "Tests Distribution",
+        "color": "red",
+        "maxDomainInterval": 550,
+        "step": 100
     }
 }

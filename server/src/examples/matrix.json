@@ -1,262 +1,253 @@
 {
   "illustrationData": {
-    "Matrix": {
-      "nodes": [
-        {
-          "name": "clients",
-          "group": 1,
-          "properties": [
-            {
-              "label": "Size(%)",
-              "value": 27.3,
-              "style": {
-                "font-weight": "bold",
-                "color": "green"
-              }
-            },
-            {
-              "label": "Devs",
-              "value": 240,
-              "style": {
-                "font-weight": "bold"
-              }
-            },
-            {
-              "label": "Active Devs",
-              "value": 36,
-              "style": {
-                "font-weight": "bold"
-              }
-            },
-            {
-              "label": "APKS(%)",
-              "value": 85,
-              "style": {
-                "font-weight": "bold"
-              }
+
+    "nodes": [{
+        "name": "clients",
+        "group": 1,
+        "properties": [{
+            "label": "Size(%)",
+            "value": 27.3,
+            "style": {
+              "font-weight": "bold",
+              "color": "green"
             }
-          ],
-          "style": {
-            "font-weight": "bold",
-            "color": "green"
-          }
-        },
-        {
-          "name": "core",
-          "group": 1,
-          "properties": [
-            {
-              "label": "Size(%)",
-              "value": 26.2,
-              "style": {
-                "font-weight": "bold",
-                "color": "green"
-              }
-            },
-            {
-              "label": "Devs",
-              "value": 272,
-              "style": {
-                "font-weight": "bold"
-              }
-            },
-            {
-              "label": "Active Devs",
-              "value": 31,
-              "style": {
-                "font-weight": "bold"
-              }
-            },
-            {
-              "label": "APKS(%)",
-              "value": 72,
-              "style": {
-                "font-weight": "bold"
-              }
+          },
+          {
+            "label": "Devs",
+            "value": 240,
+            "style": {
+              "font-weight": "bold"
             }
-          ],
-          "style": {
-            "font-weight": "bold",
-            "color": "green"
-          }
-        },
-        {
-          "name": "Jason Gustafson",
-          "group": 2,
-          "properties": [
-            {
-              "label": "Knowledge(%)",
-              "value": 19.6,
-              "style": {
-                "font-weight": "bold",
-                "color": "black",
-                "background-color": "green"
-              }
-            },
-            {
-              "label": "Components",
-              "value": 5,
-              "style": {
-                "font-weight": "bold"
-              }
+          },
+          {
+            "label": "Active Devs",
+            "value": 36,
+            "style": {
+              "font-weight": "bold"
             }
-          ],
-          "style": {
-            "font-weight": "bold",
-            "color": "black",
-            "background-color": "green"
-          }
-        },
-        {
-          "name": "Gouzhan...",
-          "group": 2,
-          "properties": [
-            {
-              "label": "Knowledge(%)",
-              "value": 10.2,
-              "style": {
-                "font-weight": "bold",
-                "color": "black",
-                "background-color": "green"
-              }
-            },
-            {
-              "label": "Components",
-              "value": 4,
-              "style": {
-                "font-weight": "bold"
-              }
+          },
+          {
+            "label": "APKS(%)",
+            "value": 85,
+            "style": {
+              "font-weight": "bold"
             }
-          ],
-          "style": {
-            "font-weight": "bold",
-            "color": "black",
-            "background-color": "green"
           }
-        },
-        {
-          "name": "GIGI",
-          "group": 2,
-          "properties": [
-            {
-              "label": "Knowledge(%)",
-              "value": 13,
-              "style": {
-                "font-weight": "bold",
-                "color": "black",
-                "background-color": "green"
-              }
-            },
-            {
-              "label": "Components",
-              "value": 5,
-              "style": {
-                "font-weight": "bold"
-              }
-            }
-          ],
-          "style": {
-            "font-weight": "bold",
-            "color": "black",
-            "background-color": "green"
-          }
-        },
-        {
-          "name": "GIGI2",
-          "group": 2,
-          "properties": [
-            {
-              "label": "Knowledge(%)",
-              "value": 1,
-              "style": {
-                "font-weight": "bold",
-                "color": "black",
-                "background-color": "green"
-              }
-            },
-            {
-              "label": "Components",
-              "value": 13,
-              "style": {
-                "font-weight": "bold"
-              }
-            }
-          ],
-          "style": {
-            "font-weight": "bold",
-            "color": "black",
-            "background-color": "green"
-          }
+        ],
+        "style": {
+          "font-weight": "bold",
+          "color": "green"
         }
-      ],
-      "links": [
-        {
-          "source": "clients",
-          "target": "Jason Gustafson",
-          "value": 40,
-          "style": {
-            "font-weight": "bold",
-            "color": "white",
-            "background-color": "dark green"
+      },
+      {
+        "name": "core",
+        "group": 1,
+        "properties": [{
+            "label": "Size(%)",
+            "value": 26.2,
+            "style": {
+              "font-weight": "bold",
+              "color": "green"
+            }
+          },
+          {
+            "label": "Devs",
+            "value": 272,
+            "style": {
+              "font-weight": "bold"
+            }
+          },
+          {
+            "label": "Active Devs",
+            "value": 31,
+            "style": {
+              "font-weight": "bold"
+            }
+          },
+          {
+            "label": "APKS(%)",
+            "value": 72,
+            "style": {
+              "font-weight": "bold"
+            }
           }
-        },
-        {
-          "source": "core",
-          "target": "Jason Gustafson",
-          "value": 5,
-          "style": {
-            "background-color": "green"
-          }
-        },
-        {
-          "source": "clients",
-          "target": "Gouzhan...",
-          "value": 5,
-          "style": {
-            "background-color": "green"
-          }
-        },
-        {
-          "source": "core",
-          "target": "Gouzhan...",
-          "value": 9,
-          "style": {
-            "background-color": "green"
-          }
-        },
-        {
-          "source": "core",
-          "target": "GIGI2",
-          "value": 1,
-          "style": {
-            "background-color": "green"
-          }
-        },
-        {
-          "source": "clients",
-          "target": "GIGI2",
-          "value": 0,
-          "style": {
-            "background-color": "green"
-          }
-        },
-        {
-          "source": "core",
-          "target": "GIGI",
-          "value": 0,
-          "style": {
-            "background-color": "green"
-          }
-        },
-        {
-          "source": "clients",
-          "target": "GIGI",
-          "value": 0,
-          "style": {
-            "background-color": "green"
-          }
+        ],
+        "style": {
+          "font-weight": "bold",
+          "color": "green"
         }
-      ]
-    }
+      },
+      {
+        "name": "Jason Gustafson",
+        "group": 2,
+        "properties": [{
+            "label": "Knowledge(%)",
+            "value": 19.6,
+            "style": {
+              "font-weight": "bold",
+              "color": "black",
+              "background-color": "green"
+            }
+          },
+          {
+            "label": "Components",
+            "value": 5,
+            "style": {
+              "font-weight": "bold"
+            }
+          }
+        ],
+        "style": {
+          "font-weight": "bold",
+          "color": "black",
+          "background-color": "green"
+        }
+      },
+      {
+        "name": "Gouzhan...",
+        "group": 2,
+        "properties": [{
+            "label": "Knowledge(%)",
+            "value": 10.2,
+            "style": {
+              "font-weight": "bold",
+              "color": "black",
+              "background-color": "green"
+            }
+          },
+          {
+            "label": "Components",
+            "value": 4,
+            "style": {
+              "font-weight": "bold"
+            }
+          }
+        ],
+        "style": {
+          "font-weight": "bold",
+          "color": "black",
+          "background-color": "green"
+        }
+      },
+      {
+        "name": "GIGI",
+        "group": 2,
+        "properties": [{
+            "label": "Knowledge(%)",
+            "value": 13,
+            "style": {
+              "font-weight": "bold",
+              "color": "black",
+              "background-color": "green"
+            }
+          },
+          {
+            "label": "Components",
+            "value": 5,
+            "style": {
+              "font-weight": "bold"
+            }
+          }
+        ],
+        "style": {
+          "font-weight": "bold",
+          "color": "black",
+          "background-color": "green"
+        }
+      },
+      {
+        "name": "GIGI2",
+        "group": 2,
+        "properties": [{
+            "label": "Knowledge(%)",
+            "value": 1,
+            "style": {
+              "font-weight": "bold",
+              "color": "black",
+              "background-color": "green"
+            }
+          },
+          {
+            "label": "Components",
+            "value": 13,
+            "style": {
+              "font-weight": "bold"
+            }
+          }
+        ],
+        "style": {
+          "font-weight": "bold",
+          "color": "black",
+          "background-color": "green"
+        }
+      }
+    ],
+    "links": [{
+        "source": "clients",
+        "target": "Jason Gustafson",
+        "value": 40,
+        "style": {
+          "font-weight": "bold",
+          "color": "white",
+          "background-color": "dark green"
+        }
+      },
+      {
+        "source": "core",
+        "target": "Jason Gustafson",
+        "value": 5,
+        "style": {
+          "background-color": "green"
+        }
+      },
+      {
+        "source": "clients",
+        "target": "Gouzhan...",
+        "value": 5,
+        "style": {
+          "background-color": "green"
+        }
+      },
+      {
+        "source": "core",
+        "target": "Gouzhan...",
+        "value": 9,
+        "style": {
+          "background-color": "green"
+        }
+      },
+      {
+        "source": "core",
+        "target": "GIGI2",
+        "value": 1,
+        "style": {
+          "background-color": "green"
+        }
+      },
+      {
+        "source": "clients",
+        "target": "GIGI2",
+        "value": 0,
+        "style": {
+          "background-color": "green"
+        }
+      },
+      {
+        "source": "core",
+        "target": "GIGI",
+        "value": 0,
+        "style": {
+          "background-color": "green"
+        }
+      },
+      {
+        "source": "clients",
+        "target": "GIGI",
+        "value": 0,
+        "style": {
+          "background-color": "green"
+        }
+      }
+    ]
   }
 }

@@ -1,49 +1,47 @@
 {
     "illustrationData": {
-        "Timeline": {
-            "2022-02-01": {
-                "events": [{
-                        "date": "2022-02-01 10:40",
-                        "summary": "fratele lui gicu da mare commit",
-                        "type": "commit",
-                        "author": "fratele"
-                    },
-                    {
-                        "date": "2022-02-01 13:43",
-                        "summary": "gicu da mare commit",
-                        "type": "commit",
-                        "author": "gicu"
-                    },
-                    {
-                        "date": "2022-02-01 14:40",
-                        "summary": "gicu inchide tasku'",
-                        "type": "issue",
-                        "author": "gicu"
-                    }
-                ]
-            },
-            "2022-01-01": {
-                "events": [{
-                        "date": "2022-01-01 10:40",
-                        "summary": "fratele lui gicu da mare commit",
-                        "type": "commit",
-                        "author": "fratele"
-                    },
-                    {
-                        "date": "2022-01-01 11:40",
-                        "summary": "gicu da mare commit",
-                        "type": "commit",
-                        "author": "gicu"
-                    },
-                    {
-                        "date": "2022-01-01 14:40",
-                        "summary": "gicu inchide tasku",
-                        "type": "issue",
-                        "author": "gicu",
-                        "description": "<div style='color: red'>Stuff inside a div</div>"
-                    }
-                ]
-            }
+        "2022-02-01": {
+            "events": [{
+                    "date": "2022-02-01 10:40",
+                    "summary": "fratele lui gicu da mare commit",
+                    "type": "commit",
+                    "author": "fratele"
+                },
+                {
+                    "date": "2022-02-01 13:43",
+                    "summary": "gicu da mare commit",
+                    "type": "commit",
+                    "author": "gicu"
+                },
+                {
+                    "date": "2022-02-01 14:40",
+                    "summary": "gicu inchide tasku'",
+                    "type": "issue",
+                    "author": "gicu"
+                }
+            ]
+        },
+        "2022-01-01": {
+            "events": [{
+                    "date": "2022-01-01 10:40",
+                    "summary": "fratele lui gicu da mare commit",
+                    "type": "commit",
+                    "author": "fratele"
+                },
+                {
+                    "date": "2022-01-01 11:40",
+                    "summary": "gicu da mare commit",
+                    "type": "commit",
+                    "author": "gicu"
+                },
+                {
+                    "date": "2022-01-01 14:40",
+                    "summary": "gicu inchide tasku",
+                    "type": "issue",
+                    "author": "gicu",
+                    "description": "<div style='color: red'>Stuff inside a div</div>"
+                }
+            ]
         }
     }
 }

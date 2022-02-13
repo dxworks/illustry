@@ -1,51 +1,49 @@
 {
-    "illustrationData": {
-      "HorizontalStackedChart": {
-        "chart": [{
-            "group": "frontend",
-            
-            "API": {
-              "value": 43,
-              "properties": {
-                "prop1": "1"
-              }
-            },
-            "BZL": 32
-          },
-          {
-            "group": "backend",
-            "API": 43,
-            "BZL": 34
-  
-          },
-          {
-            "group": "database",
-            "Documents": 100
-          },
-          {
-            "group": "tests",
-            "Integration": 31,
-            "Unit": 320
-  
-  
+  "illustrationData": {
+    "chart": [{
+        "group": "frontend",
+
+        "API": {
+          "value": 43,
+          "properties": {
+            "prop1": "1"
           }
-        ],
-        "maxDomainInterval": 550,
-        "step": 100,
-        "colorMapping": [{
-            "Integration": "blue"
-          }, {
-            "Unit": "red"
-          }, {
-            "Documents": "green"
-          },
-          {
-            "BZL": "purple"
-          },
-          {
-            "API": "pink"
-          }
-        ]
+        },
+        "BZL": 32
+      },
+      {
+        "group": "backend",
+        "API": 43,
+        "BZL": 34
+
+      },
+      {
+        "group": "database",
+        "Documents": 100
+      },
+      {
+        "group": "tests",
+        "Integration": 31,
+        "Unit": 320
+
+
       }
-    }
+    ],
+    "maxDomainInterval": 550,
+    "step": 100,
+    "colorMapping": [{
+        "Integration": "blue"
+      }, {
+        "Unit": "red"
+      }, {
+        "Documents": "green"
+      },
+      {
+        "BZL": "purple"
+      },
+      {
+        "API": "pink"
+      }
+    ]
   }
+}

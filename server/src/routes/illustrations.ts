@@ -4,11 +4,11 @@ import * as illustrationMiddleware from '../middleware/illustrations';
 const router = Router();
 
 const multer = require('multer')
-const storage = multer.diskStorage({destination: null})
-var upload = multer({storage: storage, limits: { fileSize: 10* 1024 * 1024 } })
-router.post('/api/project/:projectName/illustration',upload.single('File'), illustrationMiddleware.addIllustration)
+const storage = multer.diskStorage({ destination: null })
+var upload = multer({ storage: storage, limits: { fileSize: 10 * 1024 * 1024 } })
+router.post('/api/project/:projectName/illustration', upload.array('File', 10), illustrationMiddleware.addIllustration)
 
-router.put('/api/project/:projectName/illustration/:illustrationName', upload.single('File'), illustrationMiddleware.updateIllustration)
+router.put('/api/project/:projectName/illustration/:illustrationName', upload.array('File', 10), illustrationMiddleware.updateIllustration)
 
 router.get('/api/project/:projectName/illustration', illustrationMiddleware.findAllIllustration)
 
@@ -16,13 +16,13 @@ router.get('/api/project/:projectName/illustration/:illustrationName', illustrat
 
 router.delete('/api/project/:projectName/illustration/:illustrationName', illustrationMiddleware.deteleIllustration)
 
-router.get('/api/project/:projectName/illustration/type/:illustrationType',illustrationMiddleware.getAllIllustriesOfTheSameType)
+router.get('/api/project/:projectName/illustration/type/:illustrationType', illustrationMiddleware.getAllIllustriesOfTheSameType)
 
-router.post('/api/add/external/illustration',illustrationMiddleware.addIllustrationFromOtherSource)
+router.post('/api/add/external/illustration', illustrationMiddleware.addIllustrationFromOtherSource)
 
 router.put('/api/update/external/illustration', illustrationMiddleware.updateIllustrationFromOtherSource)
 
-router.delete('/api/delete/external/illustration',illustrationMiddleware.deleteIllustrationFromExternalSource)
+router.delete('/api/delete/external/illustration', illustrationMiddleware.deleteIllustrationFromExternalSource)
 
 router.get('/api/all/external/illustration', illustrationMiddleware.findAllIllustrationFromOtherSource)
 

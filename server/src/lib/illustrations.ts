@@ -5,13 +5,12 @@ import { promisify } from 'bluebird';
 import IllustrationTable from "../models/Illustrations"
 import { readFile } from "../utils/reader";
 import { FileProperties } from "../types/fileproperties";
-import { AllIllustrations, Illustration } from "../types/illustrations.";
 
 export const addIllustration = (projectName: string, file: FileProperties, illustrationName: string, illustrationType: string, tags: string, next: any) => {
 
     let query = { ProjectName: { $eq: projectName } };
 
-    return promisify(readFile)(file, {ProjectDescription:"", ProjectName:""})
+    return promisify(readFile)(file, { ProjectDescription: "", ProjectName: "" })
         .then((projectJson) => {
             return ProjectTable.find(query)
                 .cursor()
@@ -26,7 +25,7 @@ export const addIllustration = (projectName: string, file: FileProperties, illus
                         ProjectId: doc._id,
                         Tags: tags
                     }
-                  
+
 
                     return Promise.resolve(illustrationModel)
                         .then((res) => {
@@ -41,7 +40,7 @@ export const addIllustration = (projectName: string, file: FileProperties, illus
         })
 }
 
-export const addIllustrationFromOtherSource = (projectName: string, illustrationName: string, illustrationType: string, tags: string, illustrationData: AllIllustrations, next: any) => {
+export const addIllustrationFromOtherSource = (projectName: string, illustrationName: string, illustrationType: string, tags: string, illustrationData: any, next: any) => {
     let query = { ProjectName: { $eq: projectName } };
 
     return ProjectTable.find(query)
@@ -70,14 +69,14 @@ export const addIllustrationFromOtherSource = (projectName: string, illustration
         })
 }
 
-export const updateIllustration = (projectName: string, illustrationNameFromReq: string, file: FileProperties, illustrationName: string, tags:string, next: any) => {
+export const updateIllustration = (projectName: string, illustrationNameFromReq: string, file: FileProperties, illustrationName: string, tags: string, next: any) => {
 
     let query = {
         ProjectName: { $eq: projectName },
         IllustrationName: { $eq: illustrationNameFromReq }
     };
     let update = { IllustrationName: illustrationName, Tags: tags }
-    return promisify(readFile)(file, {ProjectDescription:"",ProjectName:""})
+    return promisify(readFile)(file, { ProjectDescription: "", ProjectName: "" })
         .then((projectJson) => {
             _.assign(update, { IllustrationData: _.get(projectJson, 'IllustrationData') })
             return IllustrationTable
@@ -92,20 +91,20 @@ export const updateIllustration = (projectName: string, illustrationNameFromReq:
 }
 
 
-export const updateIllustrationFromOtherSource =(projectName:string,illustrationName:string,illustrationType:string,tags:string[],illustrationData:AllIllustrations,next:any) => {
+export const updateIllustrationFromOtherSource = (projectName: string, illustrationName: string, illustrationType: string, tags: string[], illustrationData: any, next: any) => {
     let query = {
         ProjectName: { $eq: projectName },
         IllustrationName: { $eq: illustrationName }
     };
-    let update = { IllustrationName: illustrationName, Tags: tags, IllustrationData: illustrationData, IllustrationType:illustrationType }
+    let update = { IllustrationName: illustrationName, Tags: tags, IllustrationData: illustrationData, IllustrationType: illustrationType }
     return IllustrationTable
-                .findOneAndUpdate(query, update, { new: true })
-                .select('-_id')
-                .then((doc: any) => {
-                    return Promise.resolve(doc)
-                        .then((doc) => { next(null, doc) })
-                })
-                .catch((err: any) => next(err, null))
+        .findOneAndUpdate(query, update, { new: true })
+        .select('-_id')
+        .then((doc: any) => {
+            return Promise.resolve(doc)
+                .then((doc) => { next(null, doc) })
+        })
+        .catch((err: any) => next(err, null))
 }
 
 export const findAllIllustration = (projectName: string, next: any) => {
@@ -146,8 +145,8 @@ export const deleteIllustration = (projectName: string, illustrationNameFromReq:
         .catch((err: any) => next(err, null))
 }
 
- 
-export const getAllIllustriesOfTheSameType = (projectName: string, illustrationType: string, next: any ) => {
+
+export const getAllIllustriesOfTheSameType = (projectName: string, illustrationType: string, next: any) => {
     let query = {
         ProjectName: { $eq: projectName },
         IllustrationType: { $eq: illustrationType }

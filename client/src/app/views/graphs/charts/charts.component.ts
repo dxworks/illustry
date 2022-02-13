@@ -28,7 +28,7 @@ export class ChartsComponent implements OnInit {
   private createChart(data: any) {
 
     var chartDom = document.getElementById('main')!;
-    this.option = data
+    this.option = this.data
     var myChart = echarts.getInstanceByDom(chartDom)
     if (myChart === null) {
       myChart = echarts.init(chartDom);
