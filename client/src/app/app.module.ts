@@ -49,6 +49,7 @@ import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calenda
 import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stacked-chart/horizontal-stacked-chart.component';
 
 import { TimelineComponent } from './views/graphs/timeline/timeline.component';
+import { ChartsComponent } from './views/graphs/charts/charts.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { TimelineComponent } from './views/graphs/timeline/timeline.component';
     CalendarheatmapComponent,
     HorizontalStackedChartComponent,
     TimelineComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,

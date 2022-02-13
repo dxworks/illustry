@@ -24,7 +24,6 @@ export const checkSearch = (projectName: string, illustrationName: string, searc
                         })
                     }
                     if (toDate) {
-                        console.log(toDate)
                         events = events.filter(ev => {
                             if ((moment(moment(ev.date).format('YYYY-MM-DD')).diff(moment(moment(fromDate).format('YYYY-MM-DD')), "days")) <= 0 ||
                                 (moment(moment(ev.date).format('YYYY-MM-D')).diff(moment(moment(fromDate).format('YYYY-MM-D')), "days")) <= 0 ||
@@ -33,7 +32,6 @@ export const checkSearch = (projectName: string, illustrationName: string, searc
                         })
                     }
                     if (searchedTerm) {
-                        console.log(searchedTerm)
                         events = events.filter(ev => {
                             if (_.includes(_.toString(ev.summary), searchedTerm) ||
                                 _.includes(_.toString(ev.type), searchedTerm) ||

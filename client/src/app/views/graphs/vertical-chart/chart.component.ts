@@ -90,48 +90,6 @@ export class VerticalChartComponent implements OnInit, OnDestroy {
       this.option && myChart.setOption(this.option);
     }
 
-
-    // const labels: string[] = Array.from(new Set(StatsBarChart.chart.map((d: any) => d.name)));
-    // const values: string[] = Array.from(new Set(StatsBarChart.chart.map((d: any) => d.value)));
-    // let delayed: boolean = false;
-    // //@ts-ignore
-    // var ctx = document.getElementById('myChart').getContext('2d');
-    // this.chart = new Chart(ctx, {
-    //   type: 'bar',
-    //   data: {
-    //     labels: labels,
-    //     datasets: [{
-    //       label: StatsBarChart.label,
-    //       data: values,
-    //       borderColor: 'rgba(255, 99, 132, 0.2)',
-    //       backgroundColor: 'rgba(255, 99, 132, 1)',
-
-    //     }]
-    //   },
-    //   options: {
-    //     scales: {
-    //       y: {
-    //         suggestedMin: domainMin,
-    //         suggestedMax: domainMax
-    //       }
-    //     },
-    //     responsive: true,
-    //     animation: {
-    //       onComplete: () => {
-    //         delayed = true;
-    //       },
-    //       delay: (context) => {
-    //         let delay = 0;
-    //         //@ts-ignore
-    //         if (context.type === 'data' && context.mode === 'default' && !delayed) {
-    //           delay = context.dataIndex * 300 + context.datasetIndex * 100;
-    //         }
-    //         return delay;
-    //       },
-    //     }
-    //   }
-    // })
-
   }
   createData(chart: Chart[]) {
     let finalResult: any[] = []
@@ -197,20 +155,3 @@ export class VerticalChartComponent implements OnInit, OnDestroy {
     }
   }
 }
-//   verifyMaxDomainInterval(maxDomain: number, statsBarChart: any) {
-//     if (maxDomain === undefined || maxDomain === null) {
-      // const newMaxDomain = statsBarChart.sort((a: any, b: any) => b.value - a.value)[0].value;
-      // return newMaxDomain;
-//     }
-//     else
-//       return maxDomain;
-//   }
-//   verifyMinDomainInterval(minDomain: number, statsBarChart: any) {
-//     if (minDomain === undefined || minDomain === null) {
-//       const newMinDomain = statsBarChart.sort((a: any, b: any) => a.value - b.value)[0].value;
-//       return newMinDomain;
-//     }
-//     else
-//       return minDomain;
-//   }
-// }

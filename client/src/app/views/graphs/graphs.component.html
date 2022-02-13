@@ -1,50 +1,55 @@
 <div [ngSwitch]="currentIllustration.IllustrationType">
-  <app-chart
+  <!-- <app-chart
     *ngSwitchCase="'verticalcharts'"
     [data]="currentIllustration.IllustrationData.VerticalChart"
-  ></app-chart>
+  ></app-chart> -->
   <app-d3-force-layout-graph
     *ngSwitchCase="'flg'"
-    [data]="currentIllustration.IllustrationData.Flg"
+    [data]="currentIllustration.IllustrationData"
   ></app-d3-force-layout-graph>
   <app-hiearchical-edge-bundling
     *ngSwitchCase="'heb'"
-    [data]="currentIllustration.IllustrationData.Heb"
+    [data]="currentIllustration.IllustrationData"
   ></app-hiearchical-edge-bundling>
   <app-sanky-diagram
     *ngSwitchCase="'sankeydiagram'"
-    [data]="currentIllustration.IllustrationData.Sankey"
+    [data]="currentIllustration.IllustrationData"
   ></app-sanky-diagram>
-  <app-horizontal-chart
+  <!-- <app-horizontal-chart
     *ngSwitchCase="'horizontalcharts'"
     [data]="currentIllustration.IllustrationData.HorizontalChart"
-  ></app-horizontal-chart>
-  <app-stacked-chart
+  ></app-horizontal-chart> -->
+  <!-- <app-stacked-chart
     *ngSwitchCase="'verticalstackedcharts'"
     [data]="currentIllustration.IllustrationData.VerticalStackedChart"
-  ></app-stacked-chart>
-  <app-horizontal-stacked-chart
+  ></app-stacked-chart> -->
+  <!-- <app-horizontal-stacked-chart
     *ngSwitchCase="'horizontalstackedcharts'"
     [data]="currentIllustration.IllustrationData.HorizontalStackedChart"
-  ></app-horizontal-stacked-chart>
+  ></app-horizontal-stacked-chart> -->
+  <app-charts
+    *ngSwitchCase="'chart'"
+    [data]="currentIllustration.IllustrationData"
+  >
+  </app-charts>
   <app-matrix
     *ngSwitchCase="'matrix'"
-    [data]="currentIllustration.IllustrationData.Matrix"
+    [data]="currentIllustration.IllustrationData"
   ></app-matrix>
   <app-calendarheatmap
     *ngSwitchCase="'calendarmatrix'"
-    [data]="currentIllustration.IllustrationData.CalendarMatrix"
+    [data]="currentIllustration.IllustrationData"
   ></app-calendarheatmap>
   <app-dot-graph
     *ngSwitchCase="'graphiz'"
-    [content]="currentIllustration.IllustrationData.Dot"
+    [content]="currentIllustration.IllustrationData"
   ></app-dot-graph>
   <app-timeline
     *ngSwitchCase="'timeliner'"
-    [data]="currentIllustration.IllustrationData.Timeline"
+    [data]="currentIllustration.IllustrationData"
   ></app-timeline>
   <app-ganttchart
     *ngSwitchCase="'ganttchart'"
-    [data]="currentIllustration.IllustrationData.Gantt"
+    [data]="currentIllustration.IllustrationData"
   ></app-ganttchart>
 </div>

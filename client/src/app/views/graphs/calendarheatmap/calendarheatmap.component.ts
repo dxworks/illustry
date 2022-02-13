@@ -18,6 +18,7 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
   cpuLoadChartOptions: EChartsOption = {};
   ngOnInit(): void {
     if (this.data) {
+      console.log(this.data)
       this.createCalendar(this.data)
     }
   }
@@ -114,40 +115,3 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
     return series
   }
 }
-  // createSeries(data: CalendarMatrixTypes) {
-    // let series: any[] = [];
-    // let calendarIndex = 0;
-  //   let properties: string = ""
-  //   //@ts-ignore
-  //   _.each(data.calendar[0], function (val, key) {
-  //     _.forEach(val, (v: any) => {
-  //       if (typeof v.properties === 'object') {
-  //         _.each(v.properties, function (val, key) {
-  //           properties = properties + `<div style= "font-weight: bold" >${key}:${val}</div>`
-  //         })
-  //         properties = properties + `<div style = "font-weight: bold">value:${v.value}</div>`
-  //         series.push({
-  //           type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]]
-  //         })
-  //         properties = ""
-  //       }
-  //       else {
-  //         if (typeof v.properties === 'string') {
-
-  //           series.push({
-  //             type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]]
-  //           })
-  //         }
-  //         else {
-  //           let properties: string = `<div style = "font-weight: bold">value:${v.value}<div>`
-  //           series.push({
-  //             type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: calendarIndex, data: [[v.date, v.value]]
-  //           })
-  //         }
-  //       }
-  //     })
-  //     calendarIndex = calendarIndex + 1
-  //   });
-
-  //   return series
-  // }

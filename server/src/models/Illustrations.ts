@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-let graphsType = 'verticalcharts,verticalstackedcharts,timeliner,horizontalstackedcharts,horizontalcharts,flg,heb,treemap,layeredgraph,sankeydiagram,matrix,ganttchart,calendarmatrix,graphiz'.split(',')
+let graphsType = 'verticalcharts,verticalstackedcharts,chart,timeliner,horizontalstackedcharts,horizontalcharts,flg,heb,treemap,layeredgraph,sankeydiagram,matrix,ganttchart,calendarmatrix,graphiz'.split(',')
 export const IllustrationSchema = new mongoose.Schema({
     ProjectId: { type: Schema.Types.ObjectId, ref: 'Project' },
     ProjectName: { type: String, required: true },

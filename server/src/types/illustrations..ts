@@ -4,86 +4,96 @@ export interface Illustration {
     IllustrationType: String;
     IllustrationName: String;
     Tags: String[];
-    // IllustrationData: AllIllustrations;
 }
 
-export interface AllIllustrations {
-    Dot?: DOT
-    CalendarMatrix?: CalendarHeatmap
-    Flg?: FLG
-    Heb?: HEB
-    Sankey?: Sankey
-    VerticalStackedCharts?: VerticalStackedCharts
-    HorizontalStackedCharts?: HorizontalStackedCharts
-    VerticalChart?: VerticalChart
-    HorizontalChart?: HorizontalChart
-    Gantt?: Gantt
-    Matrix?: Matrix
-    Timeliner?:any
+
+interface TimelineEventTag {
+    name: string
+    style: any
 }
 
-interface CalendarHeatmap {
+export interface TimelineEvent {
+    summary: string
+    date: string
+    type: string
+    author: string
+    tags?: TimelineEventTag[]
+    description?: string
+    style: any
+}
+
+export interface Timeline {
+    [date: string]: {
+        summary?: {
+            title?: string,
+            style?: any
+        },
+        events: TimelineEvent[],
+    }
+}
+
+export interface CalendarHeatmap {
     calendar: CalendarData[]
     categories: any
-    tooltip?:any
+    tooltip?: any
 }
-interface Matrix {
+export interface Matrix {
     nodes: NodesMatrix[]
     links: LinksMatrix[]
 }
-interface Gantt {
+export interface Gantt {
     name: string;
     value?: string;
     children: Gantt[];
 }
-interface DOT {
+export interface DOT {
     nodes: Node[];
     links: Link[];
 }
 
-interface CalendarMatrix {
+export interface CalendarMatrix {
     calendarData: CalendarData[]
 }
 
-interface FLG {
+export interface FLG {
     nodes: Node[];
     links: Link[];
 }
 
-interface HEB {
+export interface HEB {
     nodes: Node[];
     links: Link[];
 }
 
-interface VerticalStackedCharts {
+export interface VerticalStackedCharts {
     chart: any[];
     maxDomainInterval?: number;
     minDomainInterval?: number;
     step?: number;
     colorMapping: any[]
 }
-interface HorizontalStackedCharts {
+export interface HorizontalStackedCharts {
     chart: any[];
     maxDomainInterval?: number;
     minDomainInterval?: number;
     step?: number;
     colorMapping: any[]
 }
-interface HorizontalChart {
+export interface HorizontalChart {
     chart: Chart[];
     label: String;
     maxDomainInterval?: number;
     minDomainInterval?: number;
 }
 
-interface VerticalChart {
+export interface VerticalChart {
     chart: Chart[];
     label: String;
     maxDomainInterval?: number;
     minDomainInterval?: number;
     step?: number;
 }
-interface Sankey {
+export interface Sankey {
     nodes: NodesSankey[];
     links: LinksSankey[];
     colorMapping?: any[]
@@ -132,10 +142,10 @@ interface LinksMatrix extends Link {
 }
 
 interface CalendarData {
-    date:String,
-    value:number,
-    year:number,
-    category:String
+    date: String,
+    value: number,
+    year: number,
+    category: String
 }
 //Details for Horizontal/Vertical Charts 
 
