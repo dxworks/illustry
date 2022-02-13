@@ -39,10 +39,10 @@
     *ngSwitchCase="'graphiz'"
     [content]="currentIllustration.IllustrationData.Dot"
   ></app-dot-graph>
-  <app-timeliner
+  <app-timeline
     *ngSwitchCase="'timeliner'"
-    [data]="currentIllustration.IllustrationData.Timeliner"
-  ></app-timeliner>
+    [data]="currentIllustration.IllustrationData.Timeline"
+  ></app-timeline>
   <app-ganttchart
     *ngSwitchCase="'ganttchart'"
     [data]="currentIllustration.IllustrationData.Gantt"

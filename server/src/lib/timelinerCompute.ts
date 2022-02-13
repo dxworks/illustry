@@ -13,106 +13,41 @@ export const checkSearch = (projectName: string, illustrationName: string, searc
         .then((doc: any) => {
             return Promise.resolve(doc)
                 .then((doc) => {
-                    const filteredCommits: any[] = []
-                    const commits: any[] = _.get(doc, 'IllustrationData.Timeliner.commits');
-                    if (doc && searchedTerm != null && searchedTerm != "" && !fromDate && !toDate) {
-                        commits.filter(word => {
-                            if (
-                                _.toString(searchedTerm) === word.username ||
-                                _.toString(searchedTerm) === word.commitMessage ||
-                                _.includes(word.username, _.toString(searchedTerm)) ||
-                                _.includes(word.commitMessage, _.toString(searchedTerm))
-                                // _.toString(moment(word.date).format('YYYY-MM-DD')) === _.toString(moment(searchedTerm).format('YYYY-MM-DD')) ||
-                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY-MM-DD'))) ||
-                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY'))) ||
-                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('MM'))) ||
-                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('DD'))) ||
-                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('M'))) ||
-                                // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('D')))
+                    let events: any[] = _.flattenDeep(Object.values(_.get(doc, 'IllustrationData.Timeline')).map((obj: any) => { return obj.events }));
 
-                            ) {
-                                filteredCommits.push({ date: word.date, commitMessage: word.commitMessage, username: word.username })
+                    if (fromDate) {
+                        events = events.filter(ev => {
+                            if ((moment(moment(ev.date).format('YYYY-MM-DD')).diff(moment(moment(fromDate).format('YYYY-MM-DD')), "days")) >= 0 ||
+                                (moment(moment(ev.date).format('YYYY-MM-D')).diff(moment(moment(fromDate).format('YYYY-MM-D')), "days")) >= 0 ||
+                                (moment(moment(ev.date).format('YYYY-M-D')).diff(moment(moment(fromDate).format('YYYY-M-D')), "days")) >= 0)
+                                return ev
+                        })
+                    }
+                    if (toDate) {
+                        console.log(toDate)
+                        events = events.filter(ev => {
+                            if ((moment(moment(ev.date).format('YYYY-MM-DD')).diff(moment(moment(fromDate).format('YYYY-MM-DD')), "days")) <= 0 ||
+                                (moment(moment(ev.date).format('YYYY-MM-D')).diff(moment(moment(fromDate).format('YYYY-MM-D')), "days")) <= 0 ||
+                                (moment(moment(ev.date).format('YYYY-M-D')).diff(moment(moment(fromDate).format('YYYY-M-D')), "days")) <= 0)
+                                return ev
+                        })
+                    }
+                    if (searchedTerm) {
+                        console.log(searchedTerm)
+                        events = events.filter(ev => {
+                            if (_.includes(_.toString(ev.summary), searchedTerm) ||
+                                _.includes(_.toString(ev.type), searchedTerm) ||
+                                _.includes(_.toString(ev.author), searchedTerm)) {
+                                return ev
                             }
                         })
-                        next(null, filteredCommits)
                     }
-                    else {
-                        if (doc && !searchedTerm && fromDate != null && fromDate != "" && !toDate) {
-                            commits.filter(word => {
-                                if ((moment(moment(word.date).format('YYYY-MM-DD')).diff(moment(moment(fromDate).format('YYYY-MM-DD')), "days")) >= 0 ||
-                                    (moment(moment(word.date).format('YYYY-MM-D')).diff(moment(moment(fromDate).format('YYYY-MM-D')), "days")) >= 0 ||
-                                    (moment(moment(word.date).format('YYYY-M-D')).diff(moment(moment(fromDate).format('YYYY-M-D')), "days")) >= 0
-                                ) {
-                                    filteredCommits.push({ date: word.date, commitMessage: word.commitMessage, username: word.username })
-                                }
-                            })
-                            next(null, filteredCommits)
-                        }
-                        else {
-                            if (doc && !searchedTerm && fromDate != null && toDate != "" && !fromDate) {
-                                commits.filter(word => {
-                                    if ((moment(moment(word.date).format('YYYY-MM-DD')).diff(moment(moment(toDate).format('YYYY-MM-DD')), "days")) <= 0 ||
-                                        (moment(moment(word.date).format('YYYY-MM-D')).diff(moment(moment(toDate).format('YYYY-MM-D')), "days")) <= 0 ||
-                                        (moment(moment(word.date).format('YYYY-M-D')).diff(moment(moment(toDate).format('YYYY-M-D')), "days")) <= 0
-                                    ) {
-                                        filteredCommits.push({ date: word.date, commitMessage: word.commitMessage, username: word.username })
-                                    }
-                                })
-                                next(null, filteredCommits)
-                            }
-                            else {
-                                if (doc && !searchedTerm && fromDate != null && toDate != "" && fromDate != "" && toDate != null && fromDate != null) {
-                                    commits.filter(word => {
-                                        if (
-                                            ((moment(moment(word.date).format('YYYY-MM-DD')).diff(moment(moment(fromDate).format('YYYY-MM-DD')), "days")) >= 0 ||
-                                                (moment(moment(word.date).format('YYYY-MM-D')).diff(moment(moment(fromDate).format('YYYY-MM-D')), "days")) >= 0 ||
-                                                (moment(moment(word.date).format('YYYY-M-D')).diff(moment(moment(fromDate).format('YYYY-M-D')), "days")) >= 0) &&
-                                            ((moment(moment(word.date).format('YYYY-MM-DD')).diff(moment(moment(toDate).format('YYYY-MM-DD')), "days")) <= 0 ||
-                                                (moment(moment(word.date).format('YYYY-MM-D')).diff(moment(moment(toDate).format('YYYY-MM-D')), "days")) <= 0 ||
-                                                (moment(moment(word.date).format('YYYY-M-D')).diff(moment(moment(toDate).format('YYYY-M-D')), "days")) <= 0)
-                                        ) {
-                                            filteredCommits.push({ date: word.date, commitMessage: word.commitMessage, username: word.username })
-                                        }
-                                    })
-                                    next(null, filteredCommits)
-                                }
-                                else {
-                                    if (doc && searchedTerm != "" && searchedTerm != null && fromDate != null && toDate != "" && fromDate != "" && toDate != null && fromDate != null) {
-                                        commits.filter(word => {
-                                            if (
-                                                ((moment(moment(word.date).format('YYYY-MM-DD')).diff(moment(moment(fromDate).format('YYYY-MM-DD')), "days")) >= 0 ||
-                                                    (moment(moment(word.date).format('YYYY-MM-D')).diff(moment(moment(fromDate).format('YYYY-MM-D')), "days")) >= 0 ||
-                                                    (moment(moment(word.date).format('YYYY-M-D')).diff(moment(moment(fromDate).format('YYYY-M-D')), "days")) >= 0) &&
-                                                ((moment(moment(word.date).format('YYYY-MM-DD')).diff(moment(moment(toDate).format('YYYY-MM-DD')), "days")) <= 0 ||
-                                                    (moment(moment(word.date).format('YYYY-MM-D')).diff(moment(moment(toDate).format('YYYY-MM-D')), "days")) <= 0 ||
-                                                    (moment(moment(word.date).format('YYYY-M-D')).diff(moment(moment(toDate).format('YYYY-M-D')), "days")) <= 0) &&
-                                                (_.toString(searchedTerm) === word.username ||
-                                                    _.toString(searchedTerm) === word.commitMessage ||
-                                                    _.includes(word.username, _.toString(searchedTerm)) ||
-                                                    _.includes(word.commitMessage, _.toString(searchedTerm))
-                                                    // _.toString(moment(word.date).format('YYYY-MM-DD')) === _.toString(moment(searchedTerm).format('YYYY-MM-DD')) ||
-                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY-MM-DD'))) ||
-                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('YYYY'))) ||
-                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('MM'))) ||
-                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('DD'))) ||
-                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('M'))) ||
-                                                    // _.includes(_.toString(moment(word.date).format('YYYY-MM-DD')), _.toString(moment(searchedTerm).format('D'))))
-                                                )) {
-                                                filteredCommits.push({ date: word.date, commitMessage: word.commitMessage, username: word.username })
-                                            }
-                                        })
-                                        next(null, filteredCommits)
-                                    }
-                                }
-                            }
-                        }
+                    const transformDate = (ev: any) => {
+                        return (moment(ev.date).format('YYYY-MM-DD'))
                     }
+                    const finalEvents = _.chain(events).groupBy(transformDate).mapValues(value => { return { events: value } }).value();
+                    next(null, finalEvents)
                 })
         })
-        .catch((err: any) => next(err, null))
+        .catch((err: any) => { console.log(err); next(err, null) })
 }
-
-// filteredEvents = allEvents
-// if( am dates)  -> filteredEvents = filteredEvents.filter (...cu dates)
-// if( am search term) -> filteredEvents = filteredEvents.filter(...dupa search).
-// group by date and send to fe.

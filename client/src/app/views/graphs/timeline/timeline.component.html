@@ -1,9 +1,9 @@
-// 1 search box
-// 2 calendar
-
+// 1 search box // 2 calendar
 <div class="timeline-container">
-
-  <div *ngFor="let day of Object.keys(data)" class="timeline-day-container">
+  <div
+    *ngFor="let day of Object.keys(actualData)"
+    class="timeline-day-container"
+  >
     <div class="timeline-day">
       <div class="time-line"></div>
       <div class="timeline-icon">
@@ -11,13 +11,18 @@
       </div>
     </div>
     <div class="timeline-events">
-      <div class="events-day-summary">Events on {{day | date}}</div>
-      <div  class="timeline-event-container">
-        <ng-container *ngFor="let event of (data[day].events || [])">
+      <div class="events-day-summary">Events on {{ day | date }}</div>
+      <div class="timeline-event-container">
+        <ng-container *ngFor="let event of actualData[day].events || []">
           <div class="timeline-event">
             <div class="timeline-event-details">
-              <span class="highlight">{{event.summary}}</span>
-              <span><span class="highlight">{{event.author}}</span> <span class="timeline-event-date"> on {{event.date | date:'MMM d, y, HH:mm'}}</span></span>
+              <span class="highlight">{{ event.summary }}</span>
+              <span
+                ><span class="highlight">{{ event.author }}</span>
+                <span class="timeline-event-date">
+                  on {{ event.date | date: "MMM d, y, HH:mm" }}</span
+                ></span
+              >
             </div>
             <div class="timeline-event-actions">
               <button mat-button mat-raised-button>action</button>
@@ -27,7 +32,4 @@
       </div>
     </div>
   </div>
-
 </div>
-
-// paginator
