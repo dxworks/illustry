@@ -92,6 +92,6 @@ export class IllustrationListComponent implements OnInit {
 
 
   showGraphic(illustrationName: string) {
-    this.router.navigate([`projects/${this.projectName}/illustrations/${illustrationName}/illustration`]);
+    this.router.navigate([`projects/${this.projectName}/illustrations/${illustrationName}`]);
   }
 }

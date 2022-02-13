@@ -19,7 +19,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'projects/:projectName/illustrations/:illustrationName/illustration',
+    path: 'projects/:projectName/illustrations/:illustrationName',
     component: GraphsComponent
   },
 
