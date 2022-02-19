@@ -14,9 +14,9 @@ import { IllustrationService } from "../../services/illustration.service";
 export class AddIllustrationDialogComponent implements OnInit {
   form: FormGroup = new FormGroup({
     File: new FormControl('', [Validators.required]),
-    IllustrationName: new FormControl('', [Validators.required]),
-    IllustrationType: new FormControl('', [Validators.required]),
-    Tags: new FormControl('', [])
+    // IllustrationName: new FormControl('', [Validators.required]),
+    // IllustrationType: new FormControl('', [Validators.required]),
+    // Tags: new FormControl('', [])
   });
   files: File[] = [];
 
@@ -27,7 +27,7 @@ export class AddIllustrationDialogComponent implements OnInit {
 
   onSelect(event: any) {
     this.files.push(...event.addedFiles);
-    const file = this.files[0];
+    const file = this.files;
     this.form.patchValue({
       File: file
     });
@@ -40,11 +40,12 @@ export class AddIllustrationDialogComponent implements OnInit {
   uploadIllustration() {
 
     const formData: FormData = new FormData()
-
-    formData.append('File', this.form.value.File);
-    formData.append('IllustrationName', this.form.value.IllustrationName)
-    formData.append('IllustrationType', this.form.value.IllustrationType)
-    formData.append('Tags', this.form.value.Tags)
+    this.form.value.File.forEach((file: string | Blob) => {
+      formData.append('File', file);
+    })
+    // formData.append('IllustrationName', this.form.value.IllustrationName)
+    // formData.append('IllustrationType', this.form.value.IllustrationType)
+    // formData.append('Tags', this.form.value.Tags)
     this.illustrationService.createIllustration(this.data.projectName, formData)
       .subscribe(response => {
       }, error => {

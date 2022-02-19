@@ -5,7 +5,7 @@ export const IllustrationSchema = new mongoose.Schema({
     ProjectName: { type: String, required: true },
     IllustrationType: { type: String, required: true, enum: graphsType },
     IllustrationName: { type: String, required: true },
-    Tags: { type: String, required: false },
+    Tags: [{ type: String, required: false }],
     IllustrationData: { type: Schema.Types.Mixed, required: true }
 })
 const IllustrationTable = mongoose.model('Illustration', IllustrationSchema);

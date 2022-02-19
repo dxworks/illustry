@@ -18,7 +18,6 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
   cpuLoadChartOptions: EChartsOption = {};
   ngOnInit(): void {
     if (this.data) {
-      console.log(this.data)
       this.createCalendar(this.data)
     }
   }

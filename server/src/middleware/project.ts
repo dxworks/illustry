@@ -34,26 +34,22 @@ export const getOneProjectfromEtern = (req: any, res: any, next: any) => {
 
 export const createIllustryProject = (req: any, res: any, next: any) => {
     let projectName = _.get(req, 'body.ProjectName')
-    let filePath = _.get(req, 'file.path')
-    let fileType = _.get(req, 'file.mimetype')
     let projectDescription = _.get(req, 'body.ProjectDescription')
-    let illustrationName = _.get(req, 'body.IllustrationName')
-    let illustrationType = _.get(req, 'body.IllustrationType')
-    let tags = _.get(req, 'body.Tags')
+    let files = _.get(req, 'files');
     // Validate file path
-    if (_.isNil(filePath)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
-    let file = {
-        filePath: filePath,
-        type: fileType
-    }
+    if (_.isNil(files)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
+    let computedFiles = _.map(files, f => {
+        return {
+            filePath: _.get(f, 'path'),
+            type: _.get(f, 'mimetype')
+        }
+    })
     let fields = {
         ProjectName: projectName,
         ProjectDescription: projectDescription,
-        IllustrationName: illustrationName,
-        IllustrationType: illustrationType,
-        Tags: tags
+
     }
-    projectApi.createIllustryProject(file, fields, (errGPC: any, data: any) => {
+    projectApi.createIllustryProject(computedFiles, fields, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)
     })

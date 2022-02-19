@@ -6,9 +6,12 @@ const router = Router();
 const multer = require('multer')
 const storage = multer.diskStorage({ destination: null })
 var upload = multer({ storage: storage, limits: { fileSize: 10 * 1024 * 1024 } })
-router.post('/api/project/:projectName/illustration', upload.array('File', 10), illustrationMiddleware.addIllustration)
+var finalupload = upload.fields([{ name: "File", maxCount: 10 }])
+router.post('/api/project/:projectName/illustration', finalupload, illustrationMiddleware.addOrUpdateIllustrations)
 
-router.put('/api/project/:projectName/illustration/:illustrationName', upload.array('File', 10), illustrationMiddleware.updateIllustration)
+// router.put('/api/project/:projectName/illustration/:illustrationName', upload.single('File'), illustrationMiddleware.updateIllustration)
+
+// router.put('/api/project/:projectName/illustration/multiple', upload.array('File', 10), illustrationMiddleware.updateManyIllustration)
 
 router.get('/api/project/:projectName/illustration', illustrationMiddleware.findAllIllustration)
 

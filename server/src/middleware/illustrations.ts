@@ -2,20 +2,17 @@ import * as illustrationApi from '../api/illustrations'
 import _ from 'lodash'
 import * as helper from '../utils/helper'
 
-export const addIllustration = (req: any, res: any, next: any) => {
+export const addOrUpdateIllustrations = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
-    let illustrationName = _.get(req, 'body.IllustrationName')
-    console.log(req)
-    let filePath = _.get(req, 'file.path')
-    let fileType = _.get(req, 'file.mimetype')
-    let illustrationType = _.get(req, 'body.IllustrationType')
-    let tags = _.get(req, 'body.Tags')
-    if (_.isNil(filePath)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
-    let file = {
-        filePath: filePath,
-        type: fileType
-    }
-    illustrationApi.addIllustration(projectName, file, illustrationName, illustrationType, tags, (err: any, data: any) => {
+    let files = _.get(req, 'files.File');
+    if (_.isNil(files)) return helper.returnResponse(res, { name: 'invalidParam', message: "No files uploaded" }, null, next)
+    let computedFiles = _.map(files, f => {
+        return {
+            filePath: _.get(f, 'path'),
+            type: _.get(f, 'mimetype')
+        }
+    })
+    illustrationApi.addOrUpdateIllustrations(projectName, computedFiles, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
 }
@@ -43,22 +40,37 @@ export const updateIllustrationFromOtherSource = (req: any, res: any, next: any)
 }
 
 
-export const updateIllustration = (req: any, res: any, next: any) => {
-    let projectName = req.params.projectName
-    let illustrationNameFromReq = req.params.illustrationName
-    let illustrationName = _.get(req, 'body.IllustrationName')
-    let filePath = _.get(req, 'file.path')
-    let fileType = _.get(req, 'file.mimetype');
-    let tags = _.get(req, 'body.Tags')
-    if (_.isNil(filePath)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
-    let file = {
-        filePath: filePath,
-        type: fileType
-    }
-    illustrationApi.updateIllustration(projectName, illustrationNameFromReq, file, illustrationName, tags, (err: any, data: any) => {
-        helper.returnResponse(res, err, data, next)
-    })
-}
+// export const updateIllustration = (req: any, res: any, next: any) => {
+//     let projectName = req.params.projectName
+//     let illustrationNameFromReq = req.params.illustrationName
+//     let illustrationName = _.get(req, 'body.IllustrationName')
+//     let filePath = _.get(req, 'file.path')
+//     let fileType = _.get(req, 'file.mimetype');
+//     let tags = _.get(req, 'body.Tags')
+//     if (_.isNil(filePath)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
+//     let file = {
+//         filePath: filePath,
+//         type: fileType
+//     }
+//     illustrationApi.updateIllustration(projectName, illustrationNameFromReq, file, illustrationName, tags, (err: any, data: any) => {
+//         helper.returnResponse(res, err, data, next)
+//     })
+// }
+// export const updateManyIllustration = (req: any, res: any, next: any) => {
+//     let projectName = req.params.projectName
+//     console.log(req)
+//     let files = _.get(req, 'files');
+//     if (_.isNil(files)) return helper.returnResponse(res, { name: 'invalidParam', message: "No files uploaded" }, null, next)
+//     let computedFiles = _.map(files, f => {
+//         return {
+//             filePath: _.get(f, 'path'),
+//             type: _.get(f, 'mimetype')
+//         }
+//     })
+//     illustrationApi.updateManyIllustration(projectName, computedFiles, (err: any, data: any) => {
+//         helper.returnResponse(res, err, data, next)
+//     })
+// }
 export const findAllIllustration = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
     illustrationApi.findAllIllustration(projectName, (err: any, data: any) => {

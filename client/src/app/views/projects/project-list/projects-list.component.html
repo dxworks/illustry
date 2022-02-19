@@ -10,64 +10,79 @@
           mdbInput
           placeholder="Search"
         />
+        <div class-="buttonus">
+          <mat-icon class="clickable" (click)="onPress()"
+            >add_circle_outline</mat-icon
+          >
+        </div>
       </div>
     </div>
-  </div>
-  <table id="tableSortExample" mdbTable #tableEl="mdbTable" class="z-depth-1">
-    <thead>
-      <tr>
-        <th
-          class="clickable"
-          *ngFor="let head of headElements; let i = index"
-          aria-controls="tableSortExample"
-          scope="col"
-          [mdbTableSort]="projects"
-          [sortBy]="headElements[i]"
-        >
-          {{ head | titlecase }}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let el of projects; let i = index">
-        <th
-          class="clickable"
-          (click)="showIllustrations(el.ProjectName)"
-          *ngIf="
-            i + 1 >= mdbTablePagination.firstItemIndex &&
-            i < mdbTablePagination.lastItemIndex
-          "
-          scope="row"
-        >
-          {{ el.index }}
-        </th>
-        <td
-          class="clickable"
-          (click)="showIllustrations(el.ProjectName)"
-          *ngIf="
-            i + 1 >= mdbTablePagination.firstItemIndex &&
-            i < mdbTablePagination.lastItemIndex
-          "
-        >
-          {{ el.ProjectName }}
-        </td>
-        <td
-          class="clickable"
-          (click)="showIllustrations(el.ProjectName)"
-          *ngIf="
-            i + 1 >= mdbTablePagination.firstItemIndex &&
-            i < mdbTablePagination.lastItemIndex
-          "
-        >
-          {{ el.ProjectDescription }}
-        </td>
-        <td
-          *ngIf="
-            i + 1 >= mdbTablePagination.firstItemIndex &&
-            i < mdbTablePagination.lastItemIndex
-          "
-        >
-          <button
+
+    <!-- <input type="text" class="form-control" id="advanced-search-input" placeholder="phrase in:field1,field2">
+    <button class="btn btn-primary" id="advanced-search-button" type="button">
+       
+    </button>
+  </div> -->
+    <table id="tableSortExample" mdbTable #tableEl="mdbTable" class="z-depth-1">
+      <thead>
+        <tr>
+          <th
+            class="clickable"
+            *ngFor="let head of headElements; let i = index"
+            aria-controls="tableSortExample"
+            scope="col"
+            [mdbTableSort]="projects"
+            [sortBy]="headElements[i]"
+          >
+            {{ head | titlecase }}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let el of projects; let i = index">
+          <th
+            class="clickable"
+            (click)="showIllustrations(el.ProjectName)"
+            *ngIf="
+              i + 1 >= mdbTablePagination.firstItemIndex &&
+              i < mdbTablePagination.lastItemIndex
+            "
+            scope="row"
+          >
+            {{ el.index }}
+          </th>
+          <td
+            class="clickable"
+            (click)="showIllustrations(el.ProjectName)"
+            *ngIf="
+              i + 1 >= mdbTablePagination.firstItemIndex &&
+              i < mdbTablePagination.lastItemIndex
+            "
+          >
+            {{ el.ProjectName }}
+          </td>
+          <td
+            class="clickable"
+            (click)="showIllustrations(el.ProjectName)"
+            *ngIf="
+              i + 1 >= mdbTablePagination.firstItemIndex &&
+              i < mdbTablePagination.lastItemIndex
+            "
+          >
+            {{ el.ProjectDescription }}
+          </td>
+          <td
+            *ngIf="
+              i + 1 >= mdbTablePagination.firstItemIndex &&
+              i < mdbTablePagination.lastItemIndex
+            "
+          >
+            <mat-icon
+              class="clickable"
+              (click)="openDialogForDeletingProjects(el.ProjectName)"
+              >delete</mat-icon
+            >
+            <!-- <button
             mat-icon-button
             [matMenuTriggerFor]="menu"
             aria-label="Example icon-button with a menu"
@@ -96,20 +111,21 @@
             >
               <mat-icon>delete_outline</mat-icon><span>Delete Project</span>
             </button>
-          </mat-menu>
-        </td>
-      </tr>
-    </tbody>
-    <tfoot class="grey lighten-5 w-100">
-      <tr>
-        <td colspan="10">
-          <mdb-table-pagination
-            paginationAlign="end"
-            [tableEl]="tableEl"
-            [searchDataSource]="projects"
-          ></mdb-table-pagination>
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+          </mat-menu> -->
+          </td>
+        </tr>
+      </tbody>
+      <tfoot class="grey lighten-5 w-100">
+        <tr>
+          <td colspan="10">
+            <mdb-table-pagination
+              paginationAlign="end"
+              [tableEl]="tableEl"
+              [searchDataSource]="projects"
+            ></mdb-table-pagination>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
 </div>

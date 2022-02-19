@@ -1,4 +1,7 @@
 {
+  "illustrationName": "dotus1",
+  "illustrationType": "graphiz",
+  "tags": ["sucre21", "kaledodd"],
   "illustrationData": {
     "nodes": [{
         "group": "Test",

@@ -1,5 +1,5 @@
 <form [formGroup]="form" (ngSubmit)="uploadIllustration()">
-  <div align="center">
+  <!-- <div align="center">
     <mat-form-field appearance="fill">
       <mat-label>Illustration Name</mat-label>
       <input
@@ -19,14 +19,14 @@
         id="IllustrationType"
         required
       >
-        <!-- <mat-option value="verticalcharts">Vertical Charts</mat-option>
+        <mat-option value="verticalcharts">Vertical Charts</mat-option>
         <mat-option value="verticalstackedcharts"
           >Vertical StackedCharts</mat-option
         >
         <mat-option value="horizontalcharts">Horizontal Charts</mat-option>
         <mat-option value="horizontalstackedcharts"
           >Horizontal StackedCharts</mat-option
-        > -->
+        >
         <mat-option value="timeliner">Timeliner</mat-option>
         <mat-option value="flg">Force Layout Graphs</mat-option>
         <mat-option value="heb">Hierarchical Edge Bundling</mat-option>
@@ -50,15 +50,10 @@
         type="text"
       ></textarea>
     </mat-form-field>
-  </div>
+  </div> -->
   <div class="centerDrop">
     <div class="form-group">
-      <ngx-dropzone
-        name="file"
-        id="file"
-        [multiple]="false"
-        (change)="onSelect($event)"
-      >
+      <ngx-dropzone name="file" id="file" (change)="onSelect($event)">
         <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
         <ngx-dropzone-preview
           *ngFor="let f of files"

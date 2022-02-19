@@ -10,6 +10,13 @@
           mdbInput
           placeholder="Search"
         />
+        <div class-="buttonus">
+          <mat-icon
+            class="clickable"
+            (click)="openDialogForUpdateIllustration()"
+            >add_circle_outline</mat-icon
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -77,7 +84,7 @@
             i < mdbTablePagination.lastItemIndex
           "
         >
-          <button
+          <!-- <button
             mat-icon-button
             [matMenuTriggerFor]="menu"
             aria-label="Example icon-button with a menu"
@@ -87,7 +94,7 @@
           <mat-menu #menu="matMenu">
             <button
               mat-menu-item
-              (click)="openDialogForUpdateIllustration(el.IllustrationName)"
+              (click)="openDialogForUpdateIllustration()"
             >
               <mat-icon>update</mat-icon>
               <span>Update Illustration</span>
@@ -100,8 +107,13 @@
             >
               <mat-icon>delete_outline</mat-icon>
               <span>Delete Illustration</span>
-            </button>
-          </mat-menu>
+            </button> -->
+          <mat-icon
+            class="clickable"
+            (click)="openDialogForDeletingIllustration(el.IllustrationName)"
+            >delete</mat-icon
+          >
+          <!-- </mat-menu> -->
         </td>
       </tr>
     </tbody>

@@ -20,9 +20,9 @@ export function getOneProjectfromEtern(projectName: string, next: any) {
     .then(() => { return projectLib.getOneProjectfromEtern(projectName, next) })
 }
  
-export function createIllustryProject(file: FileProperties, project: Project, next: any) {
+export function createIllustryProject(files: FileProperties[], project: Project, next: any) {
     return Promise.resolve()
-        .then(() => { return projectLib.createIllustryProject(file, project, next) })
+        .then(() => { return projectLib.createIllustryProject(files, project, next) })
 }
 
 

@@ -22,7 +22,7 @@ export class ProjectsListComponent implements OnInit, AfterViewInit {
   //@ts-ignore
   @ViewChild(MdbTableDirective, { static: true }) mdbTable: MdbTableDirective
   previous: any = [];
-  headElements: string[] = ['Id', 'ProjectName', 'ProjectDescription', 'actions'];
+  headElements: string[] = ['Id', 'ProjectName', 'ProjectDescription', ' '];
   constructor(private projectService: ProjectsService, private cdRef: ChangeDetectorRef, private router: Router, private dialog: MatDialog) { }
   searchText: string = '';
   @HostListener('input') oninput() {
@@ -38,7 +38,9 @@ export class ProjectsListComponent implements OnInit, AfterViewInit {
       this.previous = this.mdbTable.getDataSource();
     });
   }
-
+  onPress() {
+    this.router.navigate(['/add']);
+  }
   ngAfterViewInit() {
     this.mdbTablePagination.hideDescription = true;
     this.mdbTablePagination.setMaxVisibleItemsNumberTo(100);

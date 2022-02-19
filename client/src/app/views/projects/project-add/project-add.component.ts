@@ -37,10 +37,10 @@ export class ProjectAddComponent implements OnInit {
   form: FormGroup = new FormGroup({
     ProjectName: new FormControl('', [Validators.required]),
     ProjectDescription: new FormControl('', []),
-    File: new FormControl('', [Validators.required]),
-    IllustrationName: new FormControl('', [Validators.required]),
-    IllustrationType: new FormControl('', [Validators.required]),
-    Tags: new FormControl('', [])
+    File: new FormControl('', []),
+    // IllustrationName: new FormControl('', [Validators.required]),
+    // IllustrationType: new FormControl('', [Validators.required]),
+    // Tags: new FormControl('', [])
   });
 
   constructor(private projectService: ProjectsService, public dialog: MatDialog) {
@@ -62,7 +62,7 @@ export class ProjectAddComponent implements OnInit {
 
   onSelect(event: any) {
     this.files.push(...event.addedFiles);
-    const file = this.files[0];
+    const file = this.files;
     this.form.patchValue({
       File: file
     });
@@ -77,10 +77,12 @@ export class ProjectAddComponent implements OnInit {
 
     formData.append('ProjectName', this.form.value.ProjectName);
     formData.append("ProjectDescription", this.form.value.ProjectDescription);
-    formData.append('File', this.form.value.File);
-    formData.append('IllustrationName', this.form.value.IllustrationName);
-    formData.append('IllustrationType', this.form.value.IllustrationType);
-    formData.append('Tags', this.form.value.Tags)
+    if (this.form.value.File) {
+      this.form.value.File.forEach((file: string | Blob) => {
+        formData.append('File', file);
+      })
+    }
+
     this.projectService.createProject(formData)
       .subscribe(response => {
         this.submitted = true;

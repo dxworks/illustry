@@ -31,3 +31,8 @@
   margin-top: 5%;
 
 }
+
+.mat-icon-button {
+  float: right;
+  clear: both
+}

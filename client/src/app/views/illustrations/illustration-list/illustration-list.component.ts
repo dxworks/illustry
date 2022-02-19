@@ -10,6 +10,7 @@ import { DeleteProjectDialogComponent } from "../../../dialogs/delete-project-di
 import { UpdateProjectDialogComponent } from "../../../dialogs/update-project-dialog/update-project-dialog.component";
 import { DeleteIllustrationDialogComponent } from "../../../dialogs/delete-illustration-dialog/delete-illustration-dialog.component";
 import { UpdateIllustrationDialogComponent } from "../../../dialogs/update-illustration-dialog/update-illustration-dialog.component";
+import { AddIllustrationDialogComponent } from 'src/app/dialogs/add-illustration-dialog/add-illustration-dialog.component';
 
 @Component({
   selector: 'app-illustration-list',
@@ -60,7 +61,7 @@ export class IllustrationListComponent implements OnInit {
       this.illustrations = this.mdbTable.getDataSource();
     }
     if (this.searchText) {
-      this.illustrations = this.mdbTable.searchLocalDataByMultipleFields(this.searchText, ['IllustrationName', 'IllustrationType', 'Tags']);
+      this.illustrations = this.mdbTable.searchLocalDataByMultipleFields(this.searchText, ['IllustrationName', 'IllustrationType']); //here tags also need to be put
       this.mdbTable.setDataSource(prev);
     }
   }
@@ -77,13 +78,10 @@ export class IllustrationListComponent implements OnInit {
     })
   }
 
-  openDialogForUpdateIllustration(illustrationName: string) {
-    this.dialog.open(UpdateIllustrationDialogComponent, {
-      data: {
-        illustrationName: illustrationName,
-        projectName: this.projectName
-      },
-      maxWidth: "700px",
+  openDialogForUpdateIllustration() {
+    this.dialog.open(AddIllustrationDialogComponent, {
+      data: { projectName: this.projectName },
+      maxWidth: "750px",
       minWidth: "700px",
       maxHeight: "600px",
       minHeight: "550px"

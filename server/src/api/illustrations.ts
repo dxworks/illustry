@@ -1,15 +1,19 @@
 import * as illustrationLib from '../lib/illustrations'
 import { FileProperties } from '../types/fileproperties'
 
-export function addIllustration(projectName: string, file: FileProperties, illustrationName: string, illustrationType: string, tags: string, next: any) {
+export function addOrUpdateIllustrations(projectName: string, files: FileProperties[], next: any) {
     return Promise.resolve()
-        .then(() => { return illustrationLib.addIllustration(projectName, file, illustrationName, illustrationType, tags, next) })
+        .then(() => { return illustrationLib.addOrUpdateIllustrations(projectName, files, next) })
 }
+// export function updateManyIllustration(projectName: string, files: FileProperties[], next: any) {
+//     return Promise.resolve()
+//         .then(() => { return illustrationLib.updateManyIllustration(projectName, files, next) })
+// }
 
-export function updateIllustration(projectName: string, illustrationNameFromReq: string, file: FileProperties, illustrationName: string, tags: string, next: any) {
-    return Promise.resolve()
-        .then(() => { return illustrationLib.updateIllustration(projectName, illustrationNameFromReq, file, illustrationName, tags, next) })
-}
+// export function updateIllustration(projectName: string, illustrationNameFromReq: string, file: FileProperties, illustrationName: string, tags: string, next: any) {
+//     return Promise.resolve()
+//         .then(() => { return illustrationLib.updateIllustration(projectName, illustrationNameFromReq, file, illustrationName, tags, next) })
+// }
 
 export function findAllIllustration(projectName: string, next: any) {
     return Promise.resolve()
