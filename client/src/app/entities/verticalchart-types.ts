@@ -7,3 +7,4 @@ export interface VerticalChartTypes {
   minDomainInterval?: number;
   step?:number;
 }
+

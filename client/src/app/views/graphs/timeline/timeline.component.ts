@@ -1,19 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute, Params } from '@angular/router';
-import { TimelineService } from 'src/app/services/timeliner.service';
-import { TimelineQuery } from 'src/types/timelineQuery';
-import { Timeline } from "../../../entities/timeline";
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {ActivatedRoute, Params} from '@angular/router';
+import {TimelineService} from 'src/app/services/timeliner.service';
+import {TimelineQuery} from 'src/types/timelineQuery';
+import {Timeline} from "../../../entities/timeline";
 
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.scss']
 })
-export class TimelineComponent implements OnInit {
+export class TimelineComponent implements OnInit, OnChanges {
 
   @Input()
-  data?: Timeline = {}
+  data: Timeline = {}
   Object = Object
   projectName = "";
   illustrationName = "";
@@ -28,14 +28,13 @@ export class TimelineComponent implements OnInit {
     fromDate: new FormControl('', []),
     toDate: new FormControl('', [])
   });
+  expanded: any = {};
+
   constructor(private timelineService: TimelineService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    if (this.data != undefined) {
-      this.actualData = this.data
-      this.searchTermListener()
-    }
+    console.log("initializing timeline")
   }
 
   searchTermListener() {
@@ -56,6 +55,15 @@ export class TimelineComponent implements OnInit {
           //@ts-ignore
           this.timelineService.getAppliedTimelineQuery(formData).subscribe(d => this.actualData = d)
         })
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.data?.firstChange) {
+      Object.keys(this.data)?.forEach(key => {
+        this.expanded[key] = {};
+      })
+
+    }
   }
 
 }

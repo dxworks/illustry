@@ -1,4 +1,7 @@
 {
+    "illustrationName": "test-timeline",
+    "illustrationType": "timeline",
+    "tags": ["test"],
     "illustrationData": {
         "2022-02-01": {
             "events": [{

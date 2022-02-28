@@ -22,5 +22,4 @@ router.put('/api/project/:projectName', uploadEmpty.none(), projectMiddleware.up
 router.delete('/api/project/:projectName', projectMiddleware.deleteProject)
 
 
-
 export default router

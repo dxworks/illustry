@@ -10,7 +10,7 @@ export interface TimelineEvent {
   author: string
   tags?: TimelineEventTag[]
   description?: string
-  style: any
+  style?: any
 }
 
 export interface Timeline {

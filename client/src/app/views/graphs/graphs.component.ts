@@ -27,9 +27,11 @@ export class GraphsComponent implements OnInit {
         (params: Params) => {
           this.projectName = params['projectName'];
           this.illustrationName = params['illustrationName'];
+          console.log(this.projectName)
           this.illustrationService.getIllustration(this.projectName, this.illustrationName)
             .subscribe(illustration => {
               this.currentIllustration = illustration;
+              console.log(this.currentIllustration);
             },
               error => {
                 throw Error(error)
