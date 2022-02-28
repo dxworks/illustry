@@ -10,7 +10,7 @@ import { MatCardModule } from "@angular/material/card";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
 import { ProjectAddComponent } from "./views/projects/project-add/project-add.component";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IllustrationsComponent } from './views/illustrations/illustrations.component';
 import { IllustrationListComponent } from './views/illustrations/illustration-list/illustration-list.component';
 import { ForceLayoutGraphComponent } from './views/graphs/force-layout-graph/force-layout-graph.component';
@@ -26,7 +26,7 @@ import { MatrixComponent } from './views/graphs/matrix/matrix.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatExpansionModule } from "@angular/material/expansion";
-import { MatSelectModule } from "@angular/material/select";
+import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from "@angular/material/icon";
 import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-project-dialog.component';
 import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from "@angular/material/dialog";
@@ -50,6 +50,7 @@ import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stack
 
 import { TimelineComponent } from './views/graphs/timeline/timeline.component';
 import { ChartsComponent } from './views/graphs/charts/charts.component';
+import {MatMomentDateModule} from "@angular/material-moment-adapter";
 
 @NgModule({
   declarations: [
@@ -98,6 +99,7 @@ import { ChartsComponent } from './views/graphs/charts/charts.component';
     MatSelectModule,
     MatIconModule,
     MatDialogModule,
+    MatMomentDateModule,
     NgxDropzoneModule,
     MatTableModule,
     MatSortModule,
