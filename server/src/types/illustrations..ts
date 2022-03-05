@@ -41,11 +41,7 @@ export interface Matrix {
     nodes: NodesMatrix[]
     links: LinksMatrix[]
 }
-export interface Gantt {
-    name: string;
-    value?: string;
-    children: Gantt[];
-}
+
 export interface DOT {
     nodes: Node[];
     links: Link[];
@@ -65,58 +61,46 @@ export interface HEB {
     links: Link[];
 }
 
-export interface VerticalStackedCharts {
-    chart: any[];
-    maxDomainInterval?: number;
-    minDomainInterval?: number;
-    step?: number;
-    colorMapping: any[]
-}
-export interface HorizontalStackedCharts {
-    chart: any[];
-    maxDomainInterval?: number;
-    minDomainInterval?: number;
-    step?: number;
-    colorMapping: any[]
-}
-export interface HorizontalChart {
-    chart: Chart[];
-    label: String;
-    maxDomainInterval?: number;
-    minDomainInterval?: number;
-}
+// export interface VerticalStackedCharts {
+//     chart: any[];
+//     maxDomainInterval?: number;
+//     minDomainInterval?: number;
+//     step?: number;
+//     colorMapping: any[]
+// }
+// export interface HorizontalStackedCharts {
+//     chart: any[];
+//     maxDomainInterval?: number;
+//     minDomainInterval?: number;
+//     step?: number;
+//     colorMapping: any[]
+// }
+// export interface HorizontalChart {
+//     chart: Chart[];
+//     label: String;
+//     maxDomainInterval?: number;
+//     minDomainInterval?: number;
+// }
 
-export interface VerticalChart {
-    chart: Chart[];
-    label: String;
-    maxDomainInterval?: number;
-    minDomainInterval?: number;
-    step?: number;
-}
+// export interface VerticalChart {
+//     chart: Chart[];
+//     label: String;
+//     maxDomainInterval?: number;
+//     minDomainInterval?: number;
+//     step?: number;
+// }
 export interface Sankey {
     nodes: NodesSankey[];
     links: LinksSankey[];
     colorMapping?: any[]
 }
 
-//Details for Calendar
-interface CalendarData {
-    date: String;
-    total: number;
-    details: CalendatDetailsData[]
-}
 
-interface CalendatDetailsData {
-    name: String;
-    date: String;
-    value: number;
-}
 
 //Details for FLG HEB Sankey And Dot
 interface Node {
     group: String;
     id?: String;
-    name?: String;
 }
 interface NodesMatrix extends Node {
     properties?: [{
@@ -134,7 +118,7 @@ interface Link {
 interface NodesSankey extends Node {
     properties?: any | string
 }
-interface LinksSankey extends Node {
+interface LinksSankey extends Link {
     properties?: any | string
 }
 interface LinksMatrix extends Link {
@@ -149,8 +133,8 @@ interface CalendarData {
 }
 //Details for Horizontal/Vertical Charts 
 
-interface Chart {
-    name: String,
-    value: number,
-    properties?: any | string
-}
+// interface Chart {
+//     name: String,
+//     value: number,
+//     properties?: any | string
+// }

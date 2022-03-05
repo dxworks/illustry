@@ -7,6 +7,16 @@ router.post('/api/add/external/project', projectMiddleware.createProjectfromExte
 router.delete('/api/delete/external/project', projectMiddleware.deleteProjectfromExtern)
 router.put('/api/update/external/project', projectMiddleware.updateProjectfromEtern)
 router.get('/api/get/external/project', projectMiddleware.getOneProjectfromEtern)
+/** 
+ * @swagger 
+ * /api/v1/listallstaff/{email}:
+ *   get: 
+ *     description: Get all Employee by Email
+ *     responses:  
+ *       200: 
+ *         description: Success  
+ *   
+ */
 router.get('/api/projects', projectMiddleware.query)
 router.get('/api/project/:projectName', projectMiddleware.findOne)
 

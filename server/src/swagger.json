@@ -1,0 +1,417 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "version": "1.0.0",
+        "title": "Illustry Api",
+        "description": "Illustry Api"
+    },
+    "components": {
+        "schemas": {
+            "summary": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "title": "string"
+                    },
+
+                    "style": {
+                        "type": "object",
+                        "description": "{cssProp1:value1,cssProp2:value2 ...} "
+                    }
+                }
+            },
+            "properties": {
+                "type": "object",
+                "required": ["label", "value", "style"],
+                "properties": {
+                    "label": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "number"
+                    },
+                    "style": {
+                        "type": "object",
+                        "description": "{cssProp1:value1,cssProp2:value2 ...} "
+                    }
+                }
+            },
+            "TimelineEventTag": {
+                "type": "object",
+                "required": ["name", "style"],
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "style": {
+                        "type": "object",
+                        "description": "{cssProp1:value1,cssProp2:value2 ...} "
+                    }
+                }
+            },
+            "TimelineEvent": {
+                "type": "object",
+                "required": ["summary", "date", "type", "author", "style"],
+                "properties": {
+                    "summary": {
+                        "type": "string"
+                    },
+                    "date": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    },
+                    "author": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TimelineEventTag"
+                        }
+                    },
+                    "style": {
+                        "type": "object",
+                        "description": "{cssProp1:value1,cssProp2:value2 ...} "
+                    }
+                }
+            },
+            "Node": {
+                "type": "object",
+                "required": ["group", "id"],
+                "properties": {
+                    "group": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            },
+            "NodesSankey": {
+                "allOf": [{
+                        "$ref": "#/components/schemas/Node"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ],
+                "properties": {
+
+                    "properties": {
+                        "oneOf": [{
+                                "type": "string"
+                            },
+                            {
+                                "type": "object",
+                                "description": "{prop1:value1,prop2:value2 ...} "
+                            }
+                        ]
+                    }
+                }
+            },
+            "NodesMatrix": {
+                "allOf": [{
+                        "$ref": "#/components/schemas/Node"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ],
+                "properties": {
+
+                    "properties": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/properties"
+                        }
+                    }
+                }
+            },
+            "Link": {
+                "type": "object",
+                "required": ["source", "target", "value"],
+                "properties": {
+                    "source": {
+                        "type": "string"
+                    },
+                    "target": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "number"
+                    }
+                }
+            },
+            "LinksSankey": {
+                "allOf": [{
+                        "$ref": "#/components/schemas/Link"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ],
+                "properties": {
+                    "properties": {
+                        "oneOf": [{
+                                "type": "string"
+                            },
+                            {
+                                "type": "object",
+                                "description": "{prop1:value1,prop2:value2 ...} "
+                            }
+                        ]
+                    }
+                }
+            },
+            "LinksMatrix": {
+                "allOf": [{
+                        "$ref": "#/components/schemas/Link"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ],
+                "properties": {
+                    "style": {
+                        "type": "object",
+                        "description": "{ cssProp1:value1, cssProp2:value2}"
+                    }
+                }
+            },
+            "CalendarData": {
+                "type": "object",
+                "required": ["date", "value", "year", "category"],
+                "properties": {
+                    "date": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "number"
+                    },
+                    "year": {
+                        "type": "number"
+                    },
+                    "category": {
+                        "type": "string"
+                    }
+                }
+            },
+            "FLG": {
+                "type": "object",
+                "required": ["nodes", "links"],
+                "properties": {
+                    "nodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Node"
+                        }
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Link"
+                        }
+                    }
+                }
+            },
+            "HEB": {
+                "type": "object",
+                "required": ["nodes", "links"],
+                "properties": {
+                    "nodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Node"
+                        }
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Link"
+                        }
+                    }
+                }
+            },
+            "Matrix": {
+                "type": "object",
+                "required": ["nodes", "links"],
+                "properties": {
+                    "nodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/NodesMatrix"
+                        }
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LinksMatrix"
+                        }
+                    }
+                }
+            },
+            "DOT": {
+                "type": "object",
+                "required": ["nodes", "links"],
+                "properties": {
+                    "nodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Node"
+                        }
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Link"
+                        }
+                    }
+                }
+            },
+            "Sankey": {
+                "type": "object",
+                "required": ["nodes", "links"],
+                "properties": {
+                    "nodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/NodesSankey"
+                        }
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LinksSankey"
+                        }
+                    },
+                    "colorMapping": {
+                        "type": "array",
+                        "description": "[{groupName: color}]"
+                    }
+                }
+            },
+            "CalendarHeatmap": {
+                "type": "object",
+                "required": ["calendar", "categories"],
+                "properties": {
+                    "calendar": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CalendarData"
+                        }
+                    },
+                    "categories": {
+                        "type": "object",
+                        "description": "{cat1:valueForCat1,cat2:valueForCat2... } format"
+                    },
+                    "tooltip": {
+                        "type": "object",
+                        "description": "{date_from_calendarData:cssString, date_from_calendarData: { cssProp1:value1, cssProp2:value2}}"
+                    }
+                }
+
+            },
+            "Timeline": {
+                "type": "object",
+                "required": ["events"],
+                "properties": {
+                    "summary": {
+                        "$ref": "#/components/schemas/summary"
+                    },
+                    "events": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TimelineEvent"
+                        }
+                    }
+                }
+            },
+            "AnyValue": {
+                "type": "object",
+                "description": "Search echarts options for examples"
+            },
+            "Project": {
+                "type": "object",
+                "required": ["ProjectName", "ProjectDescription"],
+                "properties": {
+                    "ProjectName": {
+                        "type": "string"
+                    },
+                    "ProjectDescription": {
+                        "type": "string"
+
+                    },
+                    "IllustrationName": {
+                        "type": "string"
+                    },
+                    "IllustrationData": {
+                        "oneOf": [{
+                                "$ref": "#/components/schemas/DOT"
+                            },
+                            {
+                                "$ref": "#/components/schemas/CalendarHeatmap"
+
+                            },
+                            {
+                                "$ref": "#/components/schemas/FLG"
+
+                            },
+                            {
+                                "$ref": "#/components/schemas/HEB"
+                            },
+                            {
+                                "$ref": "#/components/schemas/Sankey"
+                            },
+                            {
+                                "$ref": "#/components/schemas/Matrix"
+                            },
+                            {
+                                "$ref": "#/components/schemas/Timeline"
+                            },
+                            {
+                                "$ref": "#/components/schemas/AnyValue"
+
+                            }
+                        ]
+                    },
+                    "Tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "Illustration": {
+                "type": "object",
+                "required": ["ProjectId", "ProjectName", "IllustrationName", "IllustrationType"],
+                "properties": {
+                    "ProjectId": {
+                        "type": "string"
+                    },
+                    "ProjectName": {
+                        "type": "string"
+
+                    },
+                    "IllustrationName": {
+                        "type": "string"
+                    },
+                    "IllustrationType": {
+                        "type": "string"
+                    },
+                    "Tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
