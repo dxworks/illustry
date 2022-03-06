@@ -5,21 +5,34 @@
         "title": "Illustry Api",
         "description": "Illustry Api"
     },
+    "servers": [{
+        "url": "http://localhost:7000"
+    }],
+    "tags": [{
+            "name": "Projects",
+            "description": "API for Projects"
+        },
+        {
+            "name": "Illustrations",
+            "description": "API for Illustrations"
+        }
+    ],
     "components": {
         "schemas": {
             "summary": {
                 "type": "object",
                 "properties": {
+
                     "label": {
                         "title": "string"
                     },
-
                     "style": {
                         "type": "object",
                         "description": "{cssProp1:value1,cssProp2:value2 ...} "
                     }
                 }
             },
+
             "properties": {
                 "type": "object",
                 "required": ["label", "value", "style"],
@@ -409,6 +422,259 @@
                         "items": {
                             "type": "string"
                         }
+                    }
+                }
+            }
+        }
+    },
+    "paths": {
+
+        "/api/projects": {
+            "get": {
+                "summary": "Get projects",
+                "tags": ["Projects"],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/project/{projectName}": {
+            "get": {
+                "summary": "Get a project based on his name",
+                "tags": ["Projects"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a project based on his name",
+                "tags": ["Projects"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "required": ["ProjectDescription"],
+                                "properties": {
+                                    "ProjectDescription": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a project based on his name",
+                "tags": ["Projects"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/project": {
+            "post": {
+                "summary": "Post a project with or without an illustration",
+                "tags": ["Projects"],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "required": ["ProjectName", "ProjectDescription"],
+                                "properties": {
+                                    "ProjectName": {
+                                        "type": "string"
+                                    },
+                                    "ProjectDescription": {
+                                        "type": "string"
+                                    },
+                                    "File": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "binary"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    },
+                    "500": {
+                        "description": "Duplication of project"
+                    }
+                }
+            }
+        },
+        "/api/project/{projectName}/illustration": {
+            "post": {
+                "summary": "Update an Existing Illustration or add a new one based on the json",
+                "tags": ["Illustrations"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "required": ["File"],
+                                "properties": {
+                                    "File": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "binary"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get all illustrations of a specific project",
+                "tags": ["Illustrations"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/project/{projectName}/illustration/{illustrationName}": {
+            "get": {
+                "summary": "Get a specific illustration from a specific project based their names",
+                "tags": ["Illustrations"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }, {
+                    "in": "path",
+                    "name": "illustrationName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a specific illustration from a specific project based their names",
+                "tags": ["Illustrations"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }, {
+                    "in": "path",
+                    "name": "illustrationName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
                     }
                 }
             }

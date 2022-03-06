@@ -22,8 +22,9 @@ export const createProjectfromExtern = (project: Project, next: any) => {
     }
     let projectTable = new ProjectTable(projectModel)
     projectTable.save((err: any) => {
-        if (err)
-            next(err, null)
+        if (err) {
+            next("Duplicated name of project", null)
+        }
         _.assign(illustrationModel, { ProjectId: projectTable._id })
         let illustrationTable = new IllustrationTable(illustrationModel)
         illustrationTable.save((err: any) => {
@@ -46,32 +47,39 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
         })
         .then((projectModel) => {
             let projectTable = new ProjectTable(projectModel)
-            next(null, "Project created")
             projectTable.save((err: any) => {
-                return readFile(files)
-                    .then((projectsJson: any) => {
+                if (err) {
 
-                        return Promise.map(projectsJson, projectJson => {
-                            let illustrationModel = {
-                                IllustrationData: _.get(projectJson, 'IllustrationData'),
-                                ProjectName: projectModel.ProjectName,
-                                IllustrationName: _.get(projectJson, 'IllustrationName'),
-                                IllustrationType: _.get(projectJson, 'IllustrationType'),
-                                ProjectId: projectTable._id,
-                                Tags: _.get(projectJson, 'Tags')
-                            }
-                            return Promise.resolve(illustrationModel)
-                                .then((res) => {
-                                    let illustrationTable = new IllustrationTable(res)
-                                    illustrationTable.save((err: any) => {
-                                        if (err)
-                                            next(err, null)
+                    next("Duplicated name of project", null)
+                }
+                else {
+                    next(null, "Project created")
+                    return readFile(files)
+                        .then((projectsJson: any) => {
+                            return Promise.map(projectsJson, projectJson => {
+                                let illustrationModel = {
+                                    IllustrationData: _.get(projectJson, 'IllustrationData'),
+                                    ProjectName: projectModel.ProjectName,
+                                    IllustrationName: _.get(projectJson, 'IllustrationName'),
+                                    IllustrationType: _.get(projectJson, 'IllustrationType'),
+                                    ProjectId: projectTable._id,
+                                    Tags: _.get(projectJson, 'Tags')
+                                }
+                                return Promise.resolve(illustrationModel)
+                                    .then((res) => {
+                                        let illustrationTable = new IllustrationTable(res)
+                                        illustrationTable.save((err: any) => {
+                                            if (err)
+                                                next(err, null)
+                                        })
+
                                     })
-                                })
-                                .catch((err: any) => next(err, null))
+                                    .catch((err: any) => next(err, null))
+                            })
                         })
-                    })
+                }
             })
+
 
         })
 }

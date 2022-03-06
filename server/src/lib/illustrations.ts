@@ -15,6 +15,8 @@ export const addOrUpdateIllustrations = (projectName: string, files: FilePropert
             return ProjectTable.find(query)
                 .cursor()
                 .eachAsync((doc: any) => {
+                    console.log(doc)
+                    console.log(projectsJson)
                     if (doc)
                         next(null, { result: 'Illustrations created' })
                     return Promise.map(projectsJson, projectJson => {

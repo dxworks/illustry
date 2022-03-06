@@ -1,4 +1,7 @@
 {
+    "illustrationName": "sankeyus",
+    "illustrationType": "sankeydiagram",
+    "tags": ["sucre", "kaledo"],
     "illustrationData": {
 
         "nodes": [{

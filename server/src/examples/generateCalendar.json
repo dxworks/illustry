@@ -1,4 +1,7 @@
 {
+    "illustrationName": "calendarmatrixus",
+    "illustrationType": "calendarmatrix",
+    "tags": ["sucre", "kaledo"],
     "illustrationData": {
         "calendar": [{
                 "date": "2019-02-01",

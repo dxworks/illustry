@@ -33,8 +33,10 @@ export const getOneProjectfromEtern = (req: any, res: any, next: any) => {
 }
 
 export const createIllustryProject = (req: any, res: any, next: any) => {
+    console.log(req)
     let projectName = _.get(req, 'body.ProjectName')
     let projectDescription = _.get(req, 'body.ProjectDescription')
+
     let files = _.get(req, 'files');
     // Validate file path
     if (_.isNil(files)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)

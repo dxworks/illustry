@@ -1,4 +1,6 @@
-{
+{  "illustrationName": "hebus",
+  "illustrationType": "heb",
+  "tags": ["sucre", "kaledo"],
   "illustrationData": {
     "nodes": [{
         "group": "Test",
