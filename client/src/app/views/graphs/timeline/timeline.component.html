@@ -1,5 +1,22 @@
-// 1 search box
-// 2 calendar
+<div class="timeline-filters">
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Clearable input</mat-label>
+    <input matInput type="text" [(ngModel)]="filter" (change)="onFilterSubmit()">
+    <button *ngIf="filter" matSuffix mat-icon-button aria-label="Clear" (click)="filter=''; onFilterSubmit()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="Start date" (dateChange)="onStartDateChange($event)">
+      <input matEndDate placeholder="End date" (dateChange)="onEndDateChange($event)">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker [startView]="'multi-year'" (closed)="onDatePickerClosed()"></mat-date-range-picker>
+  </mat-form-field>
+</div>
 
 <div class="timeline-container">
 
@@ -12,19 +29,21 @@
     </div>
     <div class="timeline-events">
       <div class="events-day-summary">Events on {{day | date}}</div>
-      <div  class="timeline-event-container">
+      <div class="timeline-event-container">
         <ng-container *ngFor="let event of (data[day].events || []); let i = index">
           <div class="timeline-event" [class.expanded]="expanded[day][i]">
             <div class="timeline-event-main-container">
               <div class="timeline-event-details">
                 <span class="highlight">{{event.summary}}</span>
-                <span><span class="highlight">{{event.author}}</span> <span class="timeline-event-date"> on {{event.date | date:'MMM d, y, HH:mm'}}</span></span>
+                <span><span class="highlight">{{event.author}}</span> <span
+                  class="timeline-event-date"> on {{event.date | date:'MMM d, y, HH:mm'}}</span></span>
               </div>
               <div class="timeline-event-actions" *ngIf="event.description">
-                <mat-icon class="expand-icon" (click)="expanded[day][i] = !expanded[day][i]">keyboard_arrow_down</mat-icon>
+                <mat-icon class="expand-icon" (click)="expanded[day][i] = !expanded[day][i]">keyboard_arrow_down
+                </mat-icon>
               </div>
             </div>
-<!--            TODO create a sanitizer here for html injection-->
+            <!--            TODO create a sanitizer here for html injection-->
             <div class="timeline-event-description" [innerHTML]="event.description"></div>
           </div>
         </ng-container>

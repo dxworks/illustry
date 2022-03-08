@@ -1,9 +1,9 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
 import {ActivatedRoute, Params} from '@angular/router';
 import {TimelineService} from 'src/app/services/timeliner.service';
-import {TimelineQuery} from 'src/types/timelineQuery';
 import {Timeline} from "../../../entities/timeline";
+import {MatDatepickerInputEvent} from "@angular/material/datepicker";
+import {Moment} from "moment";
 
 @Component({
   selector: 'app-timeline',
@@ -17,44 +17,56 @@ export class TimelineComponent implements OnInit, OnChanges {
   Object = Object
   projectName = "";
   illustrationName = "";
-  actualData: Timeline = {}
-  timeLineQuery: TimelineQuery = {
-    searchedText: "",
-    fromDate: "",
-    toDate: ""
-  }
-  form: FormGroup = new FormGroup({
-    searchedText: new FormControl('', []),
-    fromDate: new FormControl('', []),
-    toDate: new FormControl('', [])
-  });
   expanded: any = {};
+
+  startDate: Moment | null = null;
+  endDate: Moment | null = null;
+  filter: string = '';
 
   constructor(private timelineService: TimelineService, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     console.log("initializing timeline")
-  }
-
-  searchTermListener() {
-    const formData: FormData = new FormData()
     this.route.params
       .subscribe(
         (params: Params) => {
           this.projectName = params['projectName'];
           this.illustrationName = params['illustrationName'];
-          // formData.append('searchedText', this.form.value.searchedText);
-          // formData.append("fromDate", this.form.value.fromDate);
-          // formData.append('toDate', this.form.value.toDate);
-          formData.append('searchedText', 'com');
-          formData.append("fromDate", '2022/2/01');
-          // formData.append('toDate', '2022/2/01');
-          formData.append('ProjectName', this.projectName);
-          formData.append('IllustrationName', this.illustrationName);
-          //@ts-ignore
-          this.timelineService.getAppliedTimelineQuery(formData).subscribe(d => this.actualData = d)
+
+          this.timelineService.getAppliedTimelineQuery(
+            {
+              illustrationName: this.illustrationName,
+              projectName: this.projectName
+            })
+            .subscribe(d => this.data = d)
         })
+  }
+
+
+  onStartDateChange(e: MatDatepickerInputEvent<Moment>) {
+    this.startDate = e.value;
+  }
+
+  onEndDateChange(e: MatDatepickerInputEvent<Moment>) {
+    this.endDate = e.value;
+  }
+
+  onDatePickerClosed() {
+    console.log('Range picker closed')
+    this.requestNewData();
+  }
+
+  private requestNewData() {
+    let timelineQuery = {
+      illustrationName: this.illustrationName,
+      projectName: this.projectName,
+      fromDate: this.startDate?.format("YYYY-MM-DD") ?? "",
+      toDate: this.endDate?.format("YYYY-MM-DD") ?? "",
+      searchedText: this.filter
+    };
+    console.log(timelineQuery)
+    this.timelineService.getAppliedTimelineQuery(timelineQuery).subscribe(d => this.data = d)
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -62,8 +74,11 @@ export class TimelineComponent implements OnInit, OnChanges {
       Object.keys(this.data)?.forEach(key => {
         this.expanded[key] = {};
       })
-
     }
   }
 
+  onFilterSubmit() {
+    console.log('filtering');
+    this.requestNewData();
+  }
 }

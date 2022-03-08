@@ -3,8 +3,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Project } from "../../types/projects.model";
 import { environment } from "../../environments/environment";
+import {Timeline} from "../entities/timeline";
+import {TimelineQuery} from "../../types/timelineQuery";
 
-const url = `${environment.backendUrl}/timeliner`;
+const url = `${environment.backendUrl}/timeline`;
 
 
 @Injectable({ providedIn: 'root' })
@@ -13,7 +15,7 @@ export class TimelineService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getAppliedTimelineQuery(form: FormData) {
-    return this.httpClient.post(url, form)
+  getAppliedTimelineQuery(timelineQuery: TimelineQuery) {
+    return this.httpClient.post<Timeline>(url, timelineQuery)
   }
 }

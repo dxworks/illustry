@@ -26,7 +26,8 @@ import { MatrixComponent } from './views/graphs/matrix/matrix.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatExpansionModule } from "@angular/material/expansion";
-import { MatSelectModule } from '@angular/material/select';
+import { MatSelectModule } from "@angular/material/select";
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatIconModule } from "@angular/material/icon";
 import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-project-dialog.component';
 import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from "@angular/material/dialog";
@@ -97,6 +98,7 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
     MatInputModule,
     MatExpansionModule,
     MatSelectModule,
+    MatDatepickerModule,
     MatIconModule,
     MatDialogModule,
     MatMomentDateModule,
