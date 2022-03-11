@@ -21,7 +21,6 @@ npm run generate:json-schema "./src/types/*.ts" "CalendarHeatmap" -- --out "./js
 npm run generate:json-schema "./src/types/*.ts" "Matrix" -- --out "./jsonSchemas/Matrix.json" --required  
 
  
-
 npm run generate:json-schema "./src/types/*.ts" "DOT" -- --out "./jsonSchemas/DOT.json" --required  
 npm run generate:json-schema "./src/types/*.ts" "FLG" -- --out "./jsonSchemas/FLG.json" --required  
 npm run generate:json-schema "./src/types/*.ts" "HEB" -- --out "./jsonSchemas/HEB.json" --required  

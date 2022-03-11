@@ -8,6 +8,7 @@ import { connectMongoose } from './utils/dbconnection';
 import { config } from "./config";
 import swaggerUi from 'swagger-ui-express';
 import * as swaggerDocument from './swagger.json';
+const mongoSanitize = require('express-mongo-sanitize');
 const app = express();
 
 
@@ -22,7 +23,7 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
 });
-
+app.use(mongoSanitize());
 app.use(express.static(path.resolve(__dirname, 'static')))
 
 app.use(IllustrationRoutes);
