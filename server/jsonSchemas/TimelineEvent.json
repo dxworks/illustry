@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "TimelineEventTag": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "style": {}
+            },
+            "required": [
+                "name",
+                "style"
+            ],
+            "type": "object"
+        }
+    },
+    "properties": {
+        "author": {
+            "type": "string"
+        },
+        "date": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "style": {},
+        "summary": {
+            "type": "string"
+        },
+        "tags": {
+            "items": {
+                "$ref": "#/definitions/TimelineEventTag"
+            },
+            "type": "array"
+        },
+        "type": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "author",
+        "date",
+        "style",
+        "summary",
+        "type"
+    ],
+    "type": "object"
+}
+

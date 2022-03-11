@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "Number": {
+            "type": "object"
+        }
+    },
+    "properties": {
+        "group": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "properties": {
+            "items": [
+                {
+                    "properties": {
+                        "label": {
+                            "type": "string"
+                        },
+                        "style": {},
+                        "value": {
+                            "$ref": "#/definitions/Number"
+                        }
+                    },
+                    "required": [
+                        "label",
+                        "style",
+                        "value"
+                    ],
+                    "type": "object"
+                }
+            ],
+            "maxItems": 1,
+            "minItems": 1,
+            "type": "array"
+        }
+    },
+    "required": [
+        "group"
+    ],
+    "type": "object"
+}
+

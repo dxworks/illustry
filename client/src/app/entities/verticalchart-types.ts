@@ -1,10 +1,10 @@
-import {Chart} from "./common-types";
+import { Chart } from "./common-types";
 
 export interface VerticalChartTypes {
   chart: Chart[];
-  label: String;
+  label: string;
   maxDomainInterval?: number;
   minDomainInterval?: number;
-  step?:number;
+  step?: number;
 }
 

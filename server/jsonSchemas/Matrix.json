@@ -1,0 +1,86 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "LinksMatrix": {
+            "properties": {
+                "source": {
+                    "type": "string"
+                },
+                "style": {},
+                "target": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "source",
+                "target",
+                "value"
+            ],
+            "type": "object"
+        },
+        "NodesMatrix": {
+            "properties": {
+                "group": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "properties": {
+                    "items": [
+                        {
+                            "properties": {
+                                "label": {
+                                    "type": "string"
+                                },
+                                "style": {},
+                                "value": {
+                                    "$ref": "#/definitions/Number"
+                                }
+                            },
+                            "required": [
+                                "label",
+                                "style",
+                                "value"
+                            ],
+                            "type": "object"
+                        }
+                    ],
+                    "maxItems": 1,
+                    "minItems": 1,
+                    "type": "array"
+                }
+            },
+            "required": [
+                "group"
+            ],
+            "type": "object"
+        },
+        "Number": {
+            "type": "object"
+        }
+    },
+    "properties": {
+        "links": {
+            "items": {
+                "$ref": "#/definitions/LinksMatrix"
+            },
+            "type": "array"
+        },
+        "nodes": {
+            "items": {
+                "$ref": "#/definitions/NodesMatrix"
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "links",
+        "nodes"
+    ],
+    "type": "object"
+}
+

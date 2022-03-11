@@ -1,9 +1,9 @@
-import {Chart} from "./common-types";
+import { Chart } from "./common-types";
 
 export interface HorizontalChartTypes {
   chart: Chart[];
-  label: String;
+  label: string;
   maxDomainInterval?: number;
   minDomainInterval?: number;
-  step?:number
+  step?: number
 }

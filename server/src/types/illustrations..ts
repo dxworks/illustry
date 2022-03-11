@@ -1,9 +1,9 @@
 export interface Illustration {
-    ProjectId: String;
-    ProjectName: String;
-    IllustrationType: String;
-    IllustrationName: String;
-    Tags: String[];
+    ProjectId: string;
+    ProjectName: string;
+    IllustrationType: string;
+    IllustrationName: string;
+    Tags: string[];
 }
 
 
@@ -77,14 +77,14 @@ export interface HEB {
 // }
 // export interface HorizontalChart {
 //     chart: Chart[];
-//     label: String;
+//     label: string;
 //     maxDomainInterval?: number;
 //     minDomainInterval?: number;
 // }
 
 // export interface VerticalChart {
 //     chart: Chart[];
-//     label: String;
+//     label: string;
 //     maxDomainInterval?: number;
 //     minDomainInterval?: number;
 //     step?: number;
@@ -98,21 +98,21 @@ export interface Sankey {
 
 
 //Details for FLG HEB Sankey And Dot
-interface Node {
-    group: String;
-    id?: String;
+  interface Node {
+    group: string;
+    id?: string;
 }
 interface NodesMatrix extends Node {
     properties?: [{
-        label: String,
+        label: string,
         value: Number,
         style: any
     }]
 }
 
 interface Link {
-    source: String;
-    target: String;
+    source: string;
+    target: string;
     value: number;
 }
 interface NodesSankey extends Node {
@@ -126,15 +126,15 @@ interface LinksMatrix extends Link {
 }
 
 interface CalendarData {
-    date: String,
+    date: string,
     value: number,
     year: number,
-    category: String
+    category: string
 }
 //Details for Horizontal/Vertical Charts 
 
 // interface Chart {
-//     name: String,
+//     name: string,
 //     value: number,
 //     properties?: any | string
 // }

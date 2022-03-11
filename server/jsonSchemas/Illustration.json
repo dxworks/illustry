@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "properties": {
+        "IllustrationData": {},
+        "IllustrationName": {
+            "type": "string"
+        },
+        "ProjectDescription": {
+            "type": "string"
+        },
+        "ProjectName": {
+            "type": "string"
+        },
+        "Tags": {
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "ProjectDescription",
+        "ProjectName"
+    ],
+    "type": "object"
+}
+
