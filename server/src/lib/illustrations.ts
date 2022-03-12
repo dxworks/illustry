@@ -129,11 +129,13 @@ export const updateIllustrationFromOtherSource = (projectName: string, illustrat
         ProjectName: { $eq: projectName },
         IllustrationName: { $eq: illustrationName }
     };
+    console.log(query)
     let update = { IllustrationName: illustrationName, Tags: tags, IllustrationData: illustrationData, IllustrationType: illustrationType }
     return IllustrationTable
         .findOneAndUpdate(query, update, { new: true })
         .select('-_id')
         .then((doc: any) => {
+            console.log(doc)
             return Promise.resolve(doc)
                 .then((doc) => { next(null, doc) })
         })

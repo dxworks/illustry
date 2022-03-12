@@ -6,7 +6,6 @@ const router = Router();
 router.post('/api/external/project', projectMiddleware.createProjectfromExtern)
 router.delete('/api/external/project', projectMiddleware.deleteProjectfromExtern)
 router.put('/api/external/project', projectMiddleware.updateProjectfromEtern)
-router.get('/api/external/project', projectMiddleware.getOneProjectfromEtern)
 
 router.get('/api/projects', projectMiddleware.query)
 router.get('/api/project/:projectName', projectMiddleware.findOne)

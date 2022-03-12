@@ -8,6 +8,7 @@ import { readFile } from "../utils/reader";
 import { FileProperties } from "../types/fileproperties";
 
 export const createProjectfromExtern = (project: Project, next: any) => {
+    
     let projectModel = {
         ProjectName: _.get(project, 'ProjectName', ''),
         ProjectDescription: _.get(project, 'ProjectDescription', '')
@@ -20,6 +21,7 @@ export const createProjectfromExtern = (project: Project, next: any) => {
         IllustrationType: _.get(project, 'IllustrationType', ''),
         Tags: _.get(project, 'Tags')
     }
+
     let projectTable = new ProjectTable(projectModel)
     projectTable.save((err: any) => {
         if (err) {
