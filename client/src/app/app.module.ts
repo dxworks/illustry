@@ -50,6 +50,7 @@ import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stack
 
 import { TimelineComponent } from './views/graphs/timeline/timeline.component';
 import { ChartsComponent } from './views/graphs/charts/charts.component';
+import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { ChartsComponent } from './views/graphs/charts/charts.component';
     HorizontalStackedChartComponent,
     TimelineComponent,
     ChartsComponent,
+    ErrorDialogComponent,
   ],
   imports: [
     BrowserModule,
