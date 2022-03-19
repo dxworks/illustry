@@ -27,12 +27,18 @@ export const createProjectfromExtern = (projectName: string, projectDescription:
         .then(() => { return validateProject(projectModel, illustrationModel) })
         .then((valid: boolean) => {
             if (valid) {
+                _.assign(projectModel, { CreatedAt: new Date() })
+                _.assign(projectModel, { LastModified: new Date() })
+                console.log(projectModel)
                 let projectTable = new ProjectTable(projectModel)
                 projectTable.save((err: any) => {
                     if (err) {
                         next("Duplicated name of project", null)
                     }
                     _.assign(illustrationModel, { ProjectId: projectTable._id })
+                    _.assign(illustrationModel, { CreatedAt: new Date() })
+                    _.assign(illustrationModel, { LastModified: new Date() })
+                    console.log(illustrationModel)
                     let illustrationTable = new IllustrationTable(illustrationModel)
                     illustrationTable.save((err: any) => {
                         if (err)
@@ -42,6 +48,7 @@ export const createProjectfromExtern = (projectName: string, projectDescription:
                 })
             }
         })
+
         .catch((err: any) => next(err, null))
 }
 
@@ -62,6 +69,8 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
                 })
                 .then((valid: boolean) => {
                     if (valid) {
+                        _.assign(projectModel, { CreatedAt: new Date() })
+                        _.assign(projectModel, { LastModified: new Date() })
                         let projectTable = new ProjectTable(projectModel)
                         projectTable.save((err: any) => {
                             if (err) {
@@ -88,6 +97,8 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
                                                         return Promise.resolve(illustrationModel)
 
                                                             .then((res) => {
+                                                                _.assign(res, { CreatedAt: new Date() })
+                                                                _.assign(res, { LastModified: new Date() })
                                                                 let illustrationTable = new IllustrationTable(res)
                                                                 illustrationTable.save((err: any) => {
                                                                     if (err)
@@ -159,7 +170,7 @@ export const getOneProjectfromEtern = (projectName: string, next: any) => {
 }
 
 export const updateProject = (projectName: string, projectDescription: string, next: any) => {
-    let update = { ProjectDescription: projectDescription }
+    let update = { ProjectDescription: projectDescription, LastModified: new Date() }
     let query = { ProjectName: { $eq: projectName } }
     return Promise.resolve()
         .then(() => {

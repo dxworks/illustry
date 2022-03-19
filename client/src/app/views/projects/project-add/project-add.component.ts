@@ -99,7 +99,9 @@ export class ProjectAddComponent implements OnInit {
 
         this.clearForm()
       }, error => {
-        this.openDialogForError(error.error)
+        if (error !== {}) {
+          this.openDialogForError(error.error)
+        }
         throwError(error)
       });
 

@@ -13,7 +13,7 @@ export class ErrorDialogComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: { error: any }, private router: Router) { }
 
   ngOnInit(): void {
-
+    console.log(JSON.stringify(this.data))
     this.divShowData = document.getElementById('showData');
     this.divShowData.innerHTML = `${JSON.parse(JSON.stringify(this.data.error))}`
 

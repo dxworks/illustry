@@ -26,6 +26,7 @@ export const addOrUpdateIllustrations = (projectName: string, files: FilePropert
                                 IllustrationName: _.get(projectJson, 'IllustrationName'),
                                 IllustrationType: _.get(projectJson, 'IllustrationType'),
                                 ProjectId: doc._id,
+
                                 Tags: _.get(projectJson, 'Tags')
                             }
                             if (illustrationValidator(illustrationModel)) {
@@ -34,16 +35,28 @@ export const addOrUpdateIllustrations = (projectName: string, files: FilePropert
                                         return IllustrationTable.findOneAndUpdate({
                                             ProjectId: illustrationModel.ProjectId,
                                             ProjectName: illustrationModel.ProjectName,
-                                            IllustrationName: illustrationModel.IllustrationName
+                                            IllustrationName: illustrationModel.IllustrationName,
                                         }, illustrationModel, { upsert: true, new: true })
                                             .then((res: any) => {
-                                                next(null, { result: 'Illustrations created' })
+                                                if (!res.CreatedAt) {
+                                                    _.assign(res, { CreatedAt: new Date() })
+                                                    _.assign(res, { LastModified: new Date() })
+                                                }
+                                                else {
+                                                    _.assign(res, { LastModified: new Date() })
+                                                }
+                                                return IllustrationTable.findOneAndUpdate({
+                                                    ProjectId: res.ProjectId,
+                                                    ProjectName: res.ProjectName,
+                                                    IllustrationName: res.IllustrationName
+                                                }, res)
+                                                    .then(() => {
+                                                        next(null, { result: 'Illustrations created' })
+                                                    })
                                             })
-
                                     })
                                     .catch((err: any) => next(err, null))
                             }
-
                         }).catch((err: any) => next(err, null))
                 })
         })
@@ -70,6 +83,8 @@ export const addIllustrationFromOtherSource = (projectName: string, illustration
                         if (valid) {
                             return Promise.resolve(illustrationModel)
                                 .then((res) => {
+                                    _.assign(res, { CreatedAt: new Date() })
+                                    _.assign(res, { LastModified: new Date() })
                                     let illustrationTable = new IllustrationTable(res)
                                     illustrationTable.save((err: any) => {
                                         if (err)
@@ -105,6 +120,7 @@ export const updateIllustrationFromOtherSource = (projectName: string, illustrat
         .then(() => { return illustrationValidator(ill) })
         .then((valid: boolean) => {
             if (valid) {
+                _.assign(update, { LastModified: new Date() })
                 return IllustrationTable
                     .findOneAndUpdate(query, update, { new: true })
                     .select('-_id')

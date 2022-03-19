@@ -94,17 +94,7 @@ export const validateProject = (project: Project, illustration?: IllustrationUpd
                     }
                     break
                 }
-                case "heb": {
-                    illustrationTypeValid = true
-                    const validate = ajv.compile(TimelineSchema)
-                    if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
-                        illustrationDataValid = true;
-                    }
-                    else {
-                        throw new TypeError("illustrationType heb does not correspond to illustrationData")
-                    }
-                    break
-                }
+
                 case "treemap": {
                     illustrationTypeValid = true
                     break

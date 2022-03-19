@@ -6,7 +6,9 @@ export const IllustrationSchema = new mongoose.Schema({
     IllustrationType: { type: String, required: true, enum: graphsType },
     IllustrationName: { type: String, required: true },
     Tags: [{ type: String, required: false }],
-    IllustrationData: { type: Schema.Types.Mixed, required: true }
+    IllustrationData: { type: Schema.Types.Mixed, required: true },
+    CreatedAt: { type: Date, required: false },
+    LastModified: { type: Date, required: false }
 })
 const IllustrationTable = mongoose.model('Illustration', IllustrationSchema);
 export default IllustrationTable;
