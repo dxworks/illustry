@@ -34,7 +34,7 @@
             }
         },
         "/api/all/external/illustration": {
-            "get": {
+            "post": {
                 "summary": "Get all illustrations of a project",
                 "tags": ["Illustrations"],
                 "requestBody": {
@@ -61,7 +61,37 @@
                 }
             }
         },
+        "/api/external/oneillustration": {
+            "post": {
+                "summary": "Get an illustration from request body",
+                "tags": ["Illustrations"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project",
+                                "IllustrationName": "test for dot"
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
         "/api/external/illustration": {
+
             "post": {
                 "summary": "Post an illustration from request body",
                 "tags": ["Illustrations"],
@@ -74,8 +104,8 @@
                             },
                             "example": {
                                 "ProjectName": "New test project",
-                                "IllustrationName": "test for Heb",
-                                "IllustrationType": "heb",
+                                "IllustrationName": "test for dot",
+                                "IllustrationType": "graphiz",
                                 "Tags": ["sucre", "kaledo"],
                                 "IllustrationData": {
                                     "nodes": [{
@@ -119,23 +149,23 @@
                             },
                             "example": {
                                 "ProjectName": "New test project",
-                                "IllustrationName": "test for Heb",
-                                "IllustrationType": "heb",
+                                "IllustrationName": "test for dot",
+                                "IllustrationType": "graphiz",
                                 "Tags": ["new sucre", "new kaledo"],
                                 "IllustrationData": {
                                     "nodes": [{
                                             "group": "Test",
-                                            "id": "newMetricsTest.scala"
+                                            "id": "MetricsTest1.scala"
                                         },
                                         {
                                             "group": "Test",
-                                            "id": "newStreamsUpgradeTest.java"
+                                            "id": "StreamsUpgradeTest1.java"
                                         }
                                     ],
                                     "links": [{
-                                        "source": "newMetricsText.scala",
-                                        "target": "newStreamsUpgradeTest.java",
-                                        "value": 105
+                                        "source": "MetricsText1.scala",
+                                        "target": "StreamsUpgradeTest1.java",
+                                        "value": 100
                                     }]
                                 }
                             }
@@ -164,7 +194,7 @@
                             },
                             "example": {
                                 "ProjectName": "New test project",
-                                "IllustrationName": "new test for Heb"
+                                "IllustrationName": "test for dot"
                             }
 
                         }
@@ -223,22 +253,22 @@
                             "example": {
                                 "ProjectName": "New test project",
                                 "ProjectDescription": "new test project description",
-                                "IllustrationName": "test Heb",
-                                "IllustrationType": "heb",
+                                "IllustrationName": "test DOTUS",
+                                "IllustrationType": "graphiz",
                                 "Tags": ["sucre", "kaledo"],
                                 "IllustrationData": {
                                     "nodes": [{
                                             "group": "Test",
-                                            "id": "MetricsTest.scala"
+                                            "id": "MetricsTest1.scala"
                                         },
                                         {
                                             "group": "Test",
-                                            "id": "StreamsUpgradeTest.java"
+                                            "id": "StreamsUpgradeTest1.java"
                                         }
                                     ],
                                     "links": [{
-                                        "source": "MetricsText.scala",
-                                        "target": "StreamsUpgradeTest.java",
+                                        "source": "MetricsText1.scala",
+                                        "target": "StreamsUpgradeTest1.java",
                                         "value": 100
                                     }]
                                 }

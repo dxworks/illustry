@@ -3,9 +3,18 @@ export interface Illustration {
     ProjectName: string;
     IllustrationType: string;
     IllustrationName: string;
-    Tags: string[];
+    Tags?: string[];
+    IllustrationData: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
 }
 
+export interface IllustrationUpdate {
+    ProjectName: string;
+    IllustrationType: string;
+    IllustrationName: string;
+    Tags?: string[];
+    IllustrationData: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
+    
+}
 
 interface TimelineEventTag {
     name: string

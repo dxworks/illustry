@@ -29,7 +29,7 @@ Illustration is a resource that represent one of the following visualizations:
 - Timeline
 - [Echarts visualizations](https://echarts.apache.org/en/api.html#echarts)
 
-## HEB
+## Hierarchical Edge Bundling
 
 Adjacency links between elements structured in a hierarchy can be seen using Hierarchical Edge Bundling.
 It lowers visual clutter while also seeing implicit adjacency edges between parent nodes that come from explicit adjacency edges between their corresponding child nodes.
@@ -74,7 +74,7 @@ Model:
 Result:
 ![Test image 2](./assets/HEB.png)
 
-## FLG
+## Force Layout Graph
 
 It's a clustered visualization, where the entites are presented as dots of different colors, the entities
 The color of the dots is for the representation of a specific cluster.

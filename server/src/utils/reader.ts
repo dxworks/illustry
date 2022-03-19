@@ -6,7 +6,6 @@ import { FileError } from "../errors/fileError";
 var fs = require('fs')
 
 const read = (file: FileProperties) => {
-    console.log(file)
     return new Promise((resolve, reject) => {
         fs.readFile(_.get(file, 'filePath'), (error: any, data: any) => {
             if (error) {

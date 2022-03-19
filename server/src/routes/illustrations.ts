@@ -22,12 +22,12 @@ router.delete('/api/project/:projectName/illustration/:illustrationName', illust
 router.get('/api/project/:projectName/illustration/type/:illustrationType', illustrationMiddleware.getAllIllustriesOfTheSameType)
 
 router.post('/api/external/illustration', illustrationMiddleware.addIllustrationFromOtherSource)
-
+router.post('/api/external/oneillustration', illustrationMiddleware.findOneIllustrationFromOtherSource)
 router.put('/api/external/illustration', illustrationMiddleware.updateIllustrationFromOtherSource)
 
 router.delete('/api/external/illustration', illustrationMiddleware.deleteIllustrationFromExternalSource)
 
-router.get('/api/all/external/illustration', illustrationMiddleware.findAllIllustrationFromOtherSource)
+router.post('/api/all/external/illustration', illustrationMiddleware.findAllIllustrationFromOtherSource)
 
 router.post('/api/illustrationofsametype/external/illustration', illustrationMiddleware.getAllIllustriesOfTheSameTypeFromOtherSource)
 export default router

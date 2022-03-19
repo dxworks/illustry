@@ -6,35 +6,43 @@ import IllustrationTable from "../models/Illustrations"
 import { Project } from "../types/project";
 import { readFile } from "../utils/reader";
 import { FileProperties } from "../types/fileproperties";
+import { validateProject, validateProjectNameAsString, validateProjectNameAsStringAndProjectDescriptionAsString } from '../validator/projectValidator';
+import { Illustration, IllustrationUpdate } from "../types/illustrations.";
+import { illustrationValidator } from "../validator/illustrationValidator";
+export const createProjectfromExtern = (projectName: string, projectDescription: string, illustrationName: string, illustrationType: string, tags: string[], illustrationData: any, next: any) => {
 
-export const createProjectfromExtern = (project: Project, next: any) => {
-    
-    let projectModel = {
-        ProjectName: _.get(project, 'ProjectName', ''),
-        ProjectDescription: _.get(project, 'ProjectDescription', '')
+    let projectModel: Project = {
+        ProjectName: projectName,
+        ProjectDescription: projectDescription
     }
 
-    let illustrationModel = {
-        ProjectName: _.get(project, 'ProjectName', ''),
-        IllustrationName: _.get(project, 'IllustrationName', ''),
-        IllustrationData: _.get(project, 'IllustrationData', ''),
-        IllustrationType: _.get(project, 'IllustrationType', ''),
-        Tags: _.get(project, 'Tags')
+    let illustrationModel: IllustrationUpdate = {
+        ProjectName: projectName,
+        IllustrationName: illustrationName,
+        IllustrationData: illustrationData,
+        IllustrationType: illustrationType,
+        Tags: tags
     }
-
-    let projectTable = new ProjectTable(projectModel)
-    projectTable.save((err: any) => {
-        if (err) {
-            next("Duplicated name of project", null)
-        }
-        _.assign(illustrationModel, { ProjectId: projectTable._id })
-        let illustrationTable = new IllustrationTable(illustrationModel)
-        illustrationTable.save((err: any) => {
-            if (err)
-                next(err, null)
-            next(null, { result: "Project created" })
+    return Promise.resolve()
+        .then(() => { return validateProject(projectModel, illustrationModel) })
+        .then((valid: boolean) => {
+            if (valid) {
+                let projectTable = new ProjectTable(projectModel)
+                projectTable.save((err: any) => {
+                    if (err) {
+                        next("Duplicated name of project", null)
+                    }
+                    _.assign(illustrationModel, { ProjectId: projectTable._id })
+                    let illustrationTable = new IllustrationTable(illustrationModel)
+                    illustrationTable.save((err: any) => {
+                        if (err)
+                            next(err, null)
+                        next(null, { result: "Project created" })
+                    })
+                })
+            }
         })
-    })
+        .catch((err: any) => next(err, null))
 }
 
 
@@ -42,59 +50,84 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
     return Promise.resolve()
         .then(() => {
             let projectModel = {
-                ProjectName: _.get(project, 'ProjectName', ''),
-                ProjectDescription: _.get(project, 'ProjectDescription', '')
+                ProjectName: project.ProjectName,
+                ProjectDescription: project.ProjectDescription
             }
             return projectModel;
         })
         .then((projectModel) => {
-            let projectTable = new ProjectTable(projectModel)
-            projectTable.save((err: any) => {
-                if (err) {
+            return Promise.resolve()
+                .then(() => {
+                    return validateProject(projectModel)
+                })
+                .then((valid: boolean) => {
+                    if (valid) {
+                        let projectTable = new ProjectTable(projectModel)
+                        projectTable.save((err: any) => {
+                            if (err) {
 
-                    next("Duplicated name of project", null)
-                }
-                else {
-                    next(null, "Project created")
-                    return readFile(files)
-                        .then((projectsJson: any) => {
-                            return Promise.map(projectsJson, projectJson => {
-                                let illustrationModel = {
-                                    IllustrationData: _.get(projectJson, 'IllustrationData'),
-                                    ProjectName: projectModel.ProjectName,
-                                    IllustrationName: _.get(projectJson, 'IllustrationName'),
-                                    IllustrationType: _.get(projectJson, 'IllustrationType'),
-                                    ProjectId: projectTable._id,
-                                    Tags: _.get(projectJson, 'Tags')
-                                }
-                                return Promise.resolve(illustrationModel)
-                                    .then((res) => {
-                                        let illustrationTable = new IllustrationTable(res)
-                                        illustrationTable.save((err: any) => {
-                                            if (err)
-                                                next(err, null)
+                                next("Duplicated name of project", null)
+                            }
+                            else {
+                                return readFile(files)
+                                    .then((projectsJson: any) => {
+                                        return Promise.map(projectsJson, projectJson => {
+
+                                            let illustrationModel: Illustration = {
+                                                IllustrationData: _.get(projectJson, 'IllustrationData'),
+                                                ProjectName: projectModel.ProjectName,
+                                                IllustrationName: _.get(projectJson, 'IllustrationName'),
+                                                IllustrationType: _.get(projectJson, 'IllustrationType'),
+                                                ProjectId: projectTable._id,
+                                                Tags: _.get(projectJson, 'Tags')
+                                            }
+                                            return Promise.resolve()
+                                                .then(() => { return illustrationValidator(illustrationModel) })
+                                                .then((valid: boolean) => {
+                                                    if (valid) {
+                                                        return Promise.resolve(illustrationModel)
+
+                                                            .then((res) => {
+                                                                let illustrationTable = new IllustrationTable(res)
+                                                                illustrationTable.save((err: any) => {
+                                                                    if (err)
+                                                                        next(err, null)
+                                                                })
+
+                                                            })
+                                                            .then((res: any) => {
+                                                                next(null, "Project created")
+                                                            })
+                                                            .catch((err: any) => next(err, null))
+                                                    }
+                                                }).catch((err: any) => next(err, null))
+
                                         })
-
                                     })
-                                    .catch((err: any) => next(err, null))
-                            })
+                            }
                         })
-                }
-            })
-
-
+                    }
+                })
+                .catch(err => next(err, null))
         })
 }
 
 
-export const updateProjectfromEtern = (project: Project, next: any) => {
+export const updateProjectfromEtern = (projectName: string, projectDescription: string, next: any) => {
     const projectToBeUpdated = {
-        ProjectName: _.get(project, "ProjectName"),
-        ProjectDescription: _.get(project, 'ProjectDescription')
+        ProjectName: projectName,
+        ProjectDescription: projectDescription
     }
     return Promise.resolve()
-        .then(() => { return updateProject(projectToBeUpdated.ProjectName, projectToBeUpdated.ProjectDescription, next) })
-
+        .then(() => {
+            return validateProjectNameAsStringAndProjectDescriptionAsString(projectToBeUpdated.ProjectName, projectToBeUpdated.ProjectDescription)
+        })
+        .then((valid: boolean) => {
+            if (valid) {
+                return updateProject(projectToBeUpdated.ProjectName, projectToBeUpdated.ProjectDescription, next)
+            }
+        })
+        .catch(err => next(err, null))
 }
 export const queryAllProjects = (next: any) => {
     return ProjectTable.find({}).select('-__v')
@@ -103,11 +136,20 @@ export const queryAllProjects = (next: any) => {
 
 export const findOneProject = (projectName: string, next: any) => {
     let query = { ProjectName: { $eq: projectName } }
-    return ProjectTable
-        .find(query)
-        .select(' -_id ProjectName ProjectDescription')
-        .cursor()
-        .eachAsync((doc: any) => { next(null, doc); return doc })
+    return Promise.resolve()
+        .then(() => {
+            return validateProjectNameAsString(projectName)
+        })
+        .then((valid: boolean) => {
+            if (valid) {
+                return ProjectTable
+                    .find(query)
+                    .select(' -_id ProjectName ProjectDescription')
+                    .cursor()
+                    .eachAsync((doc: any) => { next(null, doc); return doc })
+            }
+        })
+        .catch(err => next(err, null))
 }
 
 export const getOneProjectfromEtern = (projectName: string, next: any) => {
@@ -119,15 +161,23 @@ export const getOneProjectfromEtern = (projectName: string, next: any) => {
 export const updateProject = (projectName: string, projectDescription: string, next: any) => {
     let update = { ProjectDescription: projectDescription }
     let query = { ProjectName: { $eq: projectName } }
-    return ProjectTable
-        .findOneAndUpdate(query, update, { new: true })
-        .select(' -_id ProjectName ProjectDescription')
-        .then((doc: any) => {
-            return Promise.resolve(doc)
-                .then((doc) => { next(null, doc) })
-                .catch((err: any) => { next(err, null) })
+    return Promise.resolve()
+        .then(() => {
+            return validateProjectNameAsStringAndProjectDescriptionAsString(projectName, projectDescription)
         })
-
+        .then((valid: boolean) => {
+            if (valid) {
+                return ProjectTable
+                    .findOneAndUpdate(query, update, { new: true })
+                    .select(' -_id ProjectName ProjectDescription')
+                    .then((doc: any) => {
+                        return Promise.resolve(doc)
+                            .then((doc) => { next(null, doc) })
+                            .catch((err: any) => { next(err, null) })
+                    })
+                    .catch((err: any) => { next(err, null) })
+            }
+        })
         .catch((err: any) => { next(err, null) })
 }
 
@@ -135,16 +185,27 @@ export const updateProject = (projectName: string, projectDescription: string, n
 export const deleteProject = (projectName: string, next: any) => {
     let queryProject = { ProjectName: { $eq: projectName } }
     let queryIllustration = { ProjectName: { $eq: projectName } }
-    return IllustrationTable
-        .deleteMany(queryIllustration)
-        .then((doc: any) => {
-            return ProjectTable
-                .deleteOne(queryProject)
-                .then((doc: any) => {
-                    return Promise.resolve(doc)
-                        .then((doc) => { next(null, { ProjectName: projectName }) })
-                })
-                .catch((err: any) => next(err, null))
+    return Promise.resolve()
+        .then(() => {
+            return validateProjectNameAsString(projectName)
         })
-        .catch((err: any) => { next(err, null) })
+        .then((valid: boolean) => {
+            if (valid) {
+                return IllustrationTable
+                    .deleteMany(queryIllustration)
+                    .then((doc: any) => {
+                        return ProjectTable
+                            .deleteOne(queryProject)
+                            .then((doc: any) => {
+                                return Promise.resolve(doc)
+                                    .then((doc) => { next(null, { ProjectName: projectName }) })
+                            })
+                            .catch((err: any) => next(err, null))
+                    })
+                    .catch((err: any) => { next(err, null) })
+            }
+        })
 }
+
+
+
