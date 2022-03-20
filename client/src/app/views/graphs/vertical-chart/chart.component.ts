@@ -26,13 +26,13 @@ export class VerticalChartComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     if (this.data) {
       //@ts-ignore
-      this.createChart(this.data, this.data.maxDomainInterval, this.data.minDomainInterval,this.data.step)
+      this.createChart(this.data, this.data.maxDomainInterval, this.data.minDomainInterval, this.data.step)
     }
   }
   ngOnDestroy(): void {
     echarts.disconnect
   }
-  createChart(statsBarChart: VerticalChartTypes, domainMax: number, domainMin: number,step:number) {
+  createChart(statsBarChart: VerticalChartTypes, domainMax: number, domainMin: number, step: number) {
     var chartDom = document.getElementById('main')!;
     this.option = {
       tooltip: {
@@ -71,7 +71,7 @@ export class VerticalChartComponent implements OnInit, OnDestroy {
           }
         }
       ],
-      yAxis: [this.createyAxis(statsBarChart.chart,domainMax, domainMin,step)],
+      yAxis: [this.createyAxis(statsBarChart.chart, domainMax, domainMin, step)],
       series: [
         {
           //@ts-ignore
@@ -98,7 +98,7 @@ export class VerticalChartComponent implements OnInit, OnDestroy {
     })
     return (finalResult)
   }
-  createyAxis(chart:Chart[],max: number, min: number,interval:number) {
+  createyAxis(chart: Chart[], max: number, min: number, interval: number) {
     let finalResult: any = {
       type: 'value'
     }
@@ -118,7 +118,7 @@ export class VerticalChartComponent implements OnInit, OnDestroy {
         }
       }
     }
-    if(interval) {
+    if (interval) {
       finalResult.interval = interval;
     }
     return finalResult

@@ -27,9 +27,19 @@ export class ChartsComponent implements OnInit {
   }
 
   private createChart(data: any) {
+    data.series?.forEach((s: any) => {
+      if (s.type === 'wordCloud') {
 
+        if (s.maskImage) {
+          console.log("converting")
+          var image = new Image()
+          image.src = s.maskImage
+          s.maskImage = image
+        }
+      }
+    })
     var chartDom = document.getElementById('main')!;
-    this.option = this.data
+    this.option = data
     var myChart = echarts.getInstanceByDom(chartDom)
     if (myChart === null) {
       myChart = echarts.init(chartDom);
