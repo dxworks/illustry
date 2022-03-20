@@ -47,10 +47,13 @@ import { UpdateIllustrationDialogComponent } from './dialogs/update-illustration
 import { AddIllustrationDialogComponent } from './dialogs/add-illustration-dialog/add-illustration-dialog.component';
 import { CalendarheatmapComponent } from './views/graphs/calendarheatmap/calendarheatmap.component';
 import { HorizontalStackedChartComponent } from './views/graphs/horizontal-stacked-chart/horizontal-stacked-chart.component';
-
+import * as PlotlyJS from 'plotly.js-dist-min';
+import { PlotlyModule } from 'angular-plotly.js';
+PlotlyModule.plotlyjs = PlotlyJS;
 import { TimelineComponent } from './views/graphs/timeline/timeline.component';
 import { ChartsComponent } from './views/graphs/charts/charts.component';
 import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.component';
+import { PlotyComponent } from './views/graphs/ploty/ploty.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,7 @@ import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.compon
     TimelineComponent,
     ChartsComponent,
     ErrorDialogComponent,
+    PlotyComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,7 +112,9 @@ import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.compon
     MatMenuModule,
     NgxEchartsModule.forRoot({
       echarts,
+
     }),
+    PlotlyModule
 
   ],
   providers: [{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }],

@@ -54,7 +54,27 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
                     illustrationDataValid = true;
                 }
                 else {
-                    throw new TypeError("illustrationType does not correspond to illustrationData")
+                    throw new TypeError("illustrationType charts does not correspond to illustrationData")
+                }
+                break
+            }
+            case "wordcloud": {
+                illustrationTypeValid = true;
+                if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+                    illustrationDataValid = true;
+                }
+                else {
+                    throw new TypeError("illustrationType wordcloud does not correspond to illustrationData")
+                }
+                break
+            }
+            case "ploty": {
+                illustrationTypeValid = true;
+                if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+                    illustrationDataValid = true;
+                }
+                else {
+                    throw new TypeError("illustrationType ploty does not correspond to illustrationData")
                 }
                 break
             }

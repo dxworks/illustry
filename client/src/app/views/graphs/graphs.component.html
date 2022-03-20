@@ -52,4 +52,10 @@
     *ngSwitchCase="'ganttchart'"
     [data]="currentIllustration.IllustrationData"
   ></app-ganttchart>
+  <app-ploty
+    *ngSwitchCase="'ploty'"
+    [data]="currentIllustration.IllustrationData.data"
+    [layout]="currentIllustration.IllustrationData.layout"
+    [config]="currentIllustration.IllustrationData.config"
+  ></app-ploty>
 </div>

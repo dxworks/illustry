@@ -72,6 +72,26 @@ export const validateProject = (project: Project, illustration?: IllustrationUpd
                     }
                     break
                 }
+                case "wordcloud": {
+                    illustrationTypeValid = true;
+                    if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+                        illustrationDataValid = true;
+                    }
+                    else {
+                        throw new TypeError("illustrationType wordcloud does not correspond to illustrationData")
+                    }
+                    break
+                }
+                case "ploty": {
+                    illustrationTypeValid = true;
+                    if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+                        illustrationDataValid = true;
+                    }
+                    else {
+                        throw new TypeError("illustrationType ploty does not correspond to illustrationData")
+                    }
+                    break
+                }
                 case "timeline": {
                     illustrationTypeValid = true
                     // const validate = ajv.compile(TimelineSchema)

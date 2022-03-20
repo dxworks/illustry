@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import * as echarts from 'echarts';
+import 'echarts-wordcloud';
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',

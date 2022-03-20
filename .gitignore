@@ -1,3 +1,8 @@
 .idea
 *.iml
 data
+client/src/app/views/graphs/charts/charts.component.ts
+client/src/app/views/graphs/charts/charts.component.html
+client/src/app/app.module.ts
+client/package.json
+client/package-lock.json
