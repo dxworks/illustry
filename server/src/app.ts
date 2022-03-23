@@ -6,6 +6,9 @@ import IllustrationRoutes from './routes/illustrations'
 import TimelineRoutes from './routes/timelineCompute'
 import { connectMongoose } from './utils/dbconnection';
 import { config } from "./config";
+import swaggerUi from 'swagger-ui-express';
+import * as swaggerDocument from './swagger.json';
+const mongoSanitize = require('express-mongo-sanitize');
 const app = express();
 
 app.use(bodyParser.json());
@@ -19,12 +22,13 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
 });
-
+app.use(mongoSanitize());
 app.use(express.static(path.resolve(__dirname, 'static')))
 
 app.use(IllustrationRoutes);
 app.use(ProjectRoutes);
 app.use(TimelineRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get('/', function (req, res) {
   res.sendFile(path.resolve(__dirname, 'static', 'index.html'));
 });

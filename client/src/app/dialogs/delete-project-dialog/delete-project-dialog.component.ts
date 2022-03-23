@@ -20,10 +20,12 @@ export class DeleteProjectDialogComponent implements OnInit {
     this.projectService.deleteProject(projectName)
       .subscribe(
         response => {
+          
           this.router.navigate(['/projects']);
         },
         error => {
           console.log(error);
         });
+   
   }
 }

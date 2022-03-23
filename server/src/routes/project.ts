@@ -3,10 +3,10 @@ import * as projectMiddleware from '../middleware/project';
 
 const router = Router();
 
-router.post('/api/add/external/project', projectMiddleware.createProjectfromExtern)
-router.delete('/api/delete/external/project', projectMiddleware.deleteProjectfromExtern)
-router.put('/api/update/external/project', projectMiddleware.updateProjectfromEtern)
-router.get('/api/get/external/project', projectMiddleware.getOneProjectfromEtern)
+router.post('/api/external/project', projectMiddleware.createProjectfromExtern)
+router.delete('/api/external/project', projectMiddleware.deleteProjectfromExtern)
+router.put('/api/external/project', projectMiddleware.updateProjectfromEtern)
+
 router.get('/api/projects', projectMiddleware.query)
 router.get('/api/project/:projectName', projectMiddleware.findOne)
 

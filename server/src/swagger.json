@@ -1,0 +1,582 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "version": "1.0.0",
+        "title": "Illustry Api",
+        "description": "Illustry Api"
+    },
+    "servers": [{
+        "url": "http://localhost:7000"
+    }],
+    "tags": [{
+            "name": "Projects",
+            "description": "API for Projects"
+        },
+        {
+            "name": "Illustrations",
+            "description": "API for Illustrations"
+        }
+    ],
+
+    "paths": {
+        "/api/projects": {
+            "get": {
+                "summary": "Get projects",
+                "tags": ["Projects"],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/all/external/illustration": {
+            "post": {
+                "summary": "Get all illustrations of a project",
+                "tags": ["Illustrations"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project"
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/external/oneillustration": {
+            "post": {
+                "summary": "Get an illustration from request body",
+                "tags": ["Illustrations"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project",
+                                "IllustrationName": "test for dot"
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/external/illustration": {
+
+            "post": {
+                "summary": "Post an illustration from request body",
+                "tags": ["Illustrations"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project",
+                                "IllustrationName": "test for dot",
+                                "IllustrationType": "graphiz",
+                                "Tags": ["sucre", "kaledo"],
+                                "IllustrationData": {
+                                    "nodes": [{
+                                            "group": "Test",
+                                            "id": "MetricsTest.scala"
+                                        },
+                                        {
+                                            "group": "Test",
+                                            "id": "StreamsUpgradeTest.java"
+                                        }
+                                    ],
+                                    "links": [{
+                                        "source": "MetricsText.scala",
+                                        "target": "StreamsUpgradeTest.java",
+                                        "value": 100
+                                    }]
+                                }
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update an illustration from request body",
+                "tags": ["Illustrations"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project",
+                                "IllustrationName": "test for dot",
+                                "IllustrationType": "graphiz",
+                                "Tags": ["new sucre", "new kaledo"],
+                                "IllustrationData": {
+                                    "nodes": [{
+                                            "group": "Test",
+                                            "id": "MetricsTest1.scala"
+                                        },
+                                        {
+                                            "group": "Test",
+                                            "id": "StreamsUpgradeTest1.java"
+                                        }
+                                    ],
+                                    "links": [{
+                                        "source": "MetricsText1.scala",
+                                        "target": "StreamsUpgradeTest1.java",
+                                        "value": 100
+                                    }]
+                                }
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete an illustration from request body",
+                "tags": ["Illustrations"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project",
+                                "IllustrationName": "test for dot"
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/illustrationofsametype/external/illustration": {
+            "post": {
+                "summary": "Get all illustrations of a specific type from a project",
+                "tags": ["Illustrations"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project",
+                                "IllustrationType": "heb"
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/external/project": {
+            "post": {
+                "summary": "Post a project",
+                "tags": ["Projects"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project",
+                                "ProjectDescription": "new test project description",
+                                "IllustrationName": "test DOTUS",
+                                "IllustrationType": "graphiz",
+                                "Tags": ["sucre", "kaledo"],
+                                "IllustrationData": {
+                                    "nodes": [{
+                                            "group": "Test",
+                                            "id": "MetricsTest1.scala"
+                                        },
+                                        {
+                                            "group": "Test",
+                                            "id": "StreamsUpgradeTest1.java"
+                                        }
+                                    ],
+                                    "links": [{
+                                        "source": "MetricsText1.scala",
+                                        "target": "StreamsUpgradeTest1.java",
+                                        "value": 100
+                                    }]
+                                }
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a project based on the request body",
+                "tags": ["Projects"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project"
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a projectDescription",
+                "tags": ["Projects"],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+
+                            },
+                            "example": {
+                                "ProjectName": "New test project",
+                                "ProjectDescription": " Very New test project"
+                            }
+
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+
+        "/api/project/{projectName}": {
+            "get": {
+                "summary": "Get a project based on his name",
+                "tags": ["Projects"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update a project based on his name",
+                "tags": ["Projects"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "required": ["ProjectDescription"],
+                                "properties": {
+                                    "ProjectDescription": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a project based on his name",
+                "tags": ["Projects"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/project": {
+            "post": {
+                "summary": "Post a project with or without an illustration",
+                "tags": ["Projects"],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "required": ["ProjectName", "ProjectDescription"],
+                                "properties": {
+                                    "ProjectName": {
+                                        "type": "string"
+                                    },
+                                    "ProjectDescription": {
+                                        "type": "string"
+                                    },
+                                    "File": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "binary"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    },
+                    "500": {
+                        "description": "Duplication of project"
+                    }
+                }
+            }
+        },
+        "/api/project/{projectName}/illustration": {
+            "post": {
+                "summary": "Update an Existing Illustration or add a new one based on the json",
+                "tags": ["Illustrations"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "required": ["File"],
+                                "properties": {
+                                    "File": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "binary"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get all illustrations of a specific project",
+                "tags": ["Illustrations"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        },
+        "/api/project/{projectName}/illustration/{illustrationName}": {
+            "get": {
+                "summary": "Get a specific illustration from a specific project based their names",
+                "tags": ["Illustrations"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }, {
+                    "in": "path",
+                    "name": "illustrationName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a specific illustration from a specific project based their names",
+                "tags": ["Illustrations"],
+                "parameters": [{
+                    "in": "path",
+                    "name": "projectName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }, {
+                    "in": "path",
+                    "name": "illustrationName",
+                    "schema": {
+                        "type": "string"
+                    },
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "The request was successfull"
+                    },
+                    "400": {
+                        "description": "No conection to mongo"
+                    }
+                }
+            }
+        }
+    }
+}

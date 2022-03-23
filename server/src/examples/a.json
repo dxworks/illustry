@@ -1,0 +1,44 @@
+{
+    "illustrationName": "dotus",
+    "illustrationType": "ploty",
+    "tags": ["sucre", "kaledo"],
+    "illustrationData": {
+        "data": [{
+            "type": "bar",
+            "x": [1, 2, 3, 4],
+            "y": [5, 10, 2, 8],
+            "marker": {
+                "color": "#C8A2C8",
+                "line": {
+                    "width": 2.5
+                }
+            }
+        }, {
+            "type": "bar",
+            "xaxis": "x2",
+            "yaxis": "y2",
+            "x": [1, 2, 3, 4],
+            "y": [5, 10, 2, 8],
+            "marker": {
+                "color": "#C8A2C8",
+                "line": {
+                    "width": 2.5
+                }
+            }
+        }],
+        "layout": {
+            "title": "Responsive to window size!",
+            "font": {
+                "size": 18
+            },
+            "grid": {
+                "pattern": "independent",
+                "rows": 2,
+                "columns": 1
+            }
+        },
+        "config": {
+            "responsive": true
+        }
+    }
+}

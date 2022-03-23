@@ -3,14 +3,20 @@ import _ from 'lodash'
 import * as helper from '../utils/helper'
 
 export const createProjectfromExtern = (req: any, res: any, next: any) => {
-    projectApi.createProjectfromExtern(req.body, (errGPC: any, data: any) => {
+    let projectName = req.body.ProjectName as string;
+    let projectDescription = req.body.ProjectDescription as string;
+    let illustrationName = req.body.IllustrationName as string;
+    let illustrationType = req.body.IllustrationType as string;
+    let tags = req.body.Tags as string[];
+    let illustrationData = req.body.IllustrationData as any;
+    projectApi.createProjectfromExtern(projectName, projectDescription, illustrationName, illustrationType, tags, illustrationData, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)
     })
 }
 
 export const deleteProjectfromExtern = (req: any, res: any, next: any) => {
-    let projectName = _.get(req, 'body.ProjectName')
+    let projectName = req.body.ProjectName as string;
     projectApi.deleteProject(projectName, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)
@@ -18,14 +24,16 @@ export const deleteProjectfromExtern = (req: any, res: any, next: any) => {
 }
 
 export const updateProjectfromEtern = (req: any, res: any, next: any) => {
-    projectApi.updateProjectfromEtern(req.body, (errGPC: any, data: any) => {
+    let projectName = req.body.ProjectName as string;
+    let projectDescription = req.body.ProjectDescription as string;
+    projectApi.updateProjectfromEtern(projectName, projectDescription, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)
     })
 }
 
 export const getOneProjectfromEtern = (req: any, res: any, next: any) => {
-    const projectName = _.get(req, 'body.ProjectName');
+    let projectName = req.body.ProjectName as string;
     projectApi.getOneProjectfromEtern(projectName, (errGPC: any, data: any) => {
 
         helper.returnResponse(res, errGPC, data, next)
@@ -33,8 +41,8 @@ export const getOneProjectfromEtern = (req: any, res: any, next: any) => {
 }
 
 export const createIllustryProject = (req: any, res: any, next: any) => {
-    let projectName = _.get(req, 'body.ProjectName')
-    let projectDescription = _.get(req, 'body.ProjectDescription')
+    let projectName = req.body.ProjectName as string;
+    let projectDescription = req.body.ProjectDescription as string;
     let files = _.get(req, 'files');
     // Validate file path
     if (_.isNil(files)) return helper.returnResponse(res, { name: 'invalidParam', message: "uploaded filepath is missing" }, null, next)
@@ -72,8 +80,7 @@ export const findOne = (req: any, res: any, next: any) => {
 
 export const updateProject = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
-    let projectDescription = _.get(req, 'body.ProjectDescription')
-
+    let projectDescription = req.body.ProjectDescription as string;
     {
         projectApi.updateProject(projectName, projectDescription, (err: any, data: any) => {
             helper.returnResponse(res, err, data, next)

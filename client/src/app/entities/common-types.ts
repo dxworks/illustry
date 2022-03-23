@@ -1,11 +1,11 @@
 export interface Node {
-  group: String;
-  id: String;
+  group: string;
+  id: string;
 }
 
 export interface Link {
-  source: String;
-  target: String;
+  source: string;
+  target: string;
   value: number;
 }
 
@@ -14,7 +14,7 @@ export interface NodesMatrix extends Node {
 }
 interface NodeMatrixElements {
  
-    label: String,
+    label: string,
     value: Number,
     style: any
  
@@ -29,21 +29,21 @@ export interface LinksMatrix extends Link {
   style?: any |string
 }
 export interface Chart {
-  name: String,
+  name: string,
   value: number,
   properties?:any|string
 }
 
 // //Details for Calendar
 // export interface CalendarData {
-//   date: String;
+//   date: string;
 //   total: number;
 //   details: CalendatDetailsData[]
 // }
 
  
 // export interface CalendatDetailsData {
-//   name: String;
-//   date: String;
+//   name: string;
+//   date: string;
 //   value: number;
 // }

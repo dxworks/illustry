@@ -1,0 +1,30 @@
+site_name: Illustry documentation
+theme:
+  name: material
+  logo: \assets\Illustry-favicon.png
+  favicon: \assets\Illustry-favicon.ico
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/git-alt 
+ 
+  plugins:
+  # - privacy 
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - toc.integrate
+edit_uri: ""  
+repo_url: https://github.com/dxworks/illustry
+repo_name: dxworks/illustry
+nav:
+  - Home: home.md
+  - Setup : setup.md
+  - Getting started: getStart.md

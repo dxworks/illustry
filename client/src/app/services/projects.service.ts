@@ -22,7 +22,7 @@ export class ProjectsService {
   }
 
   createProject(data: FormData) {
-    console.log(data)
+     
     return this.httpClient.post(projectUrl, data)
   }
 

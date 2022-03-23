@@ -8,6 +8,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms"
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialog } from "@angular/material/dialog";
 import { AddProjectDialogComponent } from "../../../dialogs/add-project-dialog/add-project-dialog.component";
+import { ErrorDialogComponent } from 'src/app/dialogs/error-dialog/error-dialog.component';
 @Component({
   selector: 'app-project-add',
   templateUrl: './project-add.component.html',
@@ -58,6 +59,16 @@ export class ProjectAddComponent implements OnInit {
     });
   }
 
+  openDialogForError(error: any) {
+    this.dialog.open(ErrorDialogComponent, {
+      data: { error: error },
+      maxWidth: "1000px",
+      minWidth: "600px",
+      maxHeight: "500px",
+      minHeight: "300px"
+    });
+  }
+
 
 
   onSelect(event: any) {
@@ -72,7 +83,6 @@ export class ProjectAddComponent implements OnInit {
     this.files.splice(this.files.indexOf(event), 1);
   }
   uploadProject() {
-    this.openDialogForAddingProjects()
     const formData: FormData = new FormData()
 
     formData.append('ProjectName', this.form.value.ProjectName);
@@ -82,12 +92,16 @@ export class ProjectAddComponent implements OnInit {
         formData.append('File', file);
       })
     }
-
+    this.openDialogForAddingProjects()
     this.projectService.createProject(formData)
       .subscribe(response => {
         this.submitted = true;
+
         this.clearForm()
       }, error => {
+        if (error !== {}) {
+          this.openDialogForError(error.error)
+        }
         throwError(error)
       });
 
