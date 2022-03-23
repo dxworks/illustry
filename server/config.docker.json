@@ -1,0 +1,6 @@
+{
+  "mongoUrl": "mongodb://localhost:27017",
+  "mongoUser": "root",
+  "mongoPass": "rootPass",
+  "mongoDbName": "illustry-database"
+}

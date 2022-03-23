@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit} from '@angular/core';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import * as _ from 'lodash';
@@ -7,15 +7,15 @@ import 'zrender/lib/svg/svg';
 @Component({
   selector: 'app-calendarheatmap',
   templateUrl: './calendarheatmap.component.html',
-  styleUrls: ['./calendarheatmap.component.css']
+  styleUrls: ['./calendarheatmap.component.scss']
 })
 export class CalendarheatmapComponent implements OnInit, OnDestroy {
   @Input()
   data: CalendarMatrixTypes | undefined
-  @Output()
   option!: EChartsOption;
-  @Output()
   cpuLoadChartOptions: EChartsOption = {};
+
+  public height = 1000
   ngOnInit(): void {
     if (this.data) {
       this.createCalendar(this.data)
@@ -27,8 +27,10 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
   createCalendar(data: CalendarMatrixTypes) {
     var chartDom = document.getElementById('main')!;
     this.option = {
+      toolbox: {
+        show: true
+      },
       darkMode: "auto",
-      height: window.innerHeight,
       tooltip: {
         position: 'top',
         // trigger: 'item',
@@ -53,7 +55,7 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
     };
     var myChart = echarts.getInstanceByDom(chartDom)
     if (myChart === null) {
-      myChart = echarts.init(chartDom);
+      myChart = echarts.init(chartDom, undefined, {height: 200});
       this.option && myChart.setOption(this.option);
     }
 
@@ -61,12 +63,13 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
   createCalendarField(data: CalendarData[]) {
     let top = 100
     let calendar: any = []
-    let years: number[] = Array.from(new Set(data.map((d: any) => { return d.year })))
+    let years: number[] = Array.from(new Set(data.map((d: any) => { return d.year }))).sort((a,b) => b-a)
     //@ts-ignore
     _.each(years, y => {
       calendar.push({ range: y, cellSize: ['auto', 20], top: top })
       top = top + 200
     });
+    this.height = top
     return calendar
   }
   plotCpuLoad(): void {
@@ -96,21 +99,35 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
   }
 
   createSeries(data: CalendarData[]) {
-    let series: any[] = [];
     let index = 0;
-    const indexMap: any = [];
-    let years: number[] = Array.from(new Set(data.map((d: any) => { return d.year })))
+    const indexMap = new Map<string, number>();
+    let years: number[] = Array.from(new Set(data.map((d: any) => { return d.year }))).sort((a,b) => b-a)
+    console.log(years)
     _.forEach(years, y => {
-      indexMap.push({ year: y, calendarIndex: index })
+      indexMap.set(y + '',index)
       index = index + 1;
     })
-    _.forEach(data, d => {
-      _.forEach(indexMap, iM => {
-        if (d.year === iM.year) {
-          series.push({ type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: iM.calendarIndex, data: [[d.date, d.value, d.category]] })
-        }
+
+    const dataByYears = _.groupBy(data, d => d.year)
+
+    const series = Object.keys(dataByYears).map(year =>
+      ({
+        type: 'heatmap',
+        coordinateSystem: 'calendar',
+        calendarIndex: indexMap.get(year),
+        data: dataByYears[year].map(d => [d.date, d.value, d.category])
       })
-    })
+    )
+
+
+    // _.forEach(data, d => {
+    //   _.forEach(indexMap, iM => {
+    //     if (d.year === iM.year) {
+    //       series.push({ type: 'heatmap', coordinateSystem: 'calendar', calendarIndex: iM.calendarIndex, data: [[d.date, d.value, d.category]] })
+    //     }
+    //   })
+    // })
+    console.log(series)
     return series
   }
 }

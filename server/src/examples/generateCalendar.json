@@ -3,7 +3,8 @@
     "illustrationType": "calendarmatrix",
     "tags": ["sucre", "kaledo"],
     "illustrationData": {
-        "calendar": [{
+        "calendar": [
+            {
                 "date": "2019-02-01",
                 "value": 15,
                 "year": 2019,

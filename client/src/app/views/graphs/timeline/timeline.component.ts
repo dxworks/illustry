@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {TimelineService} from 'src/app/services/timeliner.service';
+import {TimelineService} from 'src/app/services/timeline.service';
 import {Timeline} from "../../../entities/timeline";
 import {MatDatepickerInputEvent} from "@angular/material/datepicker";
 import {Moment} from "moment";

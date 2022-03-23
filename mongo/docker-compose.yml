@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  illustry_mongo:
+    image: mongo:latest
+    restart: "no"
+    ports:
+      - "27017:27017"
+    volumes:
+      - dev_illustry_mongo:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootPass
+      MONGO_INITDB_DATABASE: illustry-database
+
+volumes:
+  dev_illustry_mongo:

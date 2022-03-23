@@ -1,0 +1,17 @@
+#main {
+  height: 100% !important;
+
+  > div {
+    height: 100% !important;
+
+    > canvas {
+      height: auto !important;
+    }
+  }
+}
+
+.echart-wrap {
+  display: inline-block;
+  width: 100%;
+  overflow: scroll;
+}
