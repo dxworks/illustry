@@ -24,11 +24,13 @@ app.use((req, res, next) => {
 });
 app.use(mongoSanitize());
 app.use(express.static(path.resolve(__dirname, 'static')))
+app.use('/docs', express.static(path.resolve(__dirname, 'docs')))
 
 app.use(IllustrationRoutes);
 app.use(ProjectRoutes);
 app.use(TimelineRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 app.get('/', function (req, res) {
   res.sendFile(path.resolve(__dirname, 'static', 'index.html'));
 });

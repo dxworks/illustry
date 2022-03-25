@@ -4,8 +4,6 @@ services:
   illustry_mongo:
     image: mongo:latest
     restart: unless-stopped
-    ports:
-      - "27017:27017"
     volumes:
       - illustry_mongo:/data/db
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
@@ -17,7 +15,7 @@ services:
       - illustry-network
 
   illustry:
-    image: dxworks/illustry
+    image: illustry:local
     restart: always
     ports:
       - "7001:7000"

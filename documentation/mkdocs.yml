@@ -1,8 +1,8 @@
 site_name: Illustry documentation
 theme:
   name: material
-  logo: \assets\Illustry-favicon.png
-  favicon: \assets\Illustry-favicon.ico
+  logo: assets/Illustry-favicon.png
+  favicon: assets/Illustry-favicon.ico
   palette:
     - scheme: default
       toggle:
@@ -24,7 +24,11 @@ theme:
 edit_uri: ""  
 repo_url: https://github.com/dxworks/illustry
 repo_name: dxworks/illustry
+
+use_directory_urls: true
+
 nav:
+  - index.md
   - Home: home.md
   - Setup : setup.md
   - Getting started: getStart.md

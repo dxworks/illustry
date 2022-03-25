@@ -14,7 +14,7 @@
   "scripts": {
     "build": "npm run clean && tsc && npm run copy-files",
     "clean": "rimraf dist/ *.tsbuildinfo",
-    "copy-files": "copyfiles -a -u 2 src/static/* src/static/*/* dist/static",
+    "copy-files": "copyfiles -a -u 2 src/static/* src/static/*/* dist/static && copyfiles -a -u 2 src/docs/* src/docs/*/* dist/docs",
     "dev": "nodemon src/app.ts",
     "start": "tsc && node dist/app.js",
     "generate:json-schema": "typescript-json-schema",
