@@ -18,8 +18,8 @@ import { ErrorDialogComponent } from 'src/app/dialogs/error-dialog/error-dialog.
 export class ProjectAddComponent implements OnInit {
   project: Project = {
     _id: '',
-    Name: '',
-    Description: ''
+    name: '',
+    description: ''
   };
 
   illustration: Illustration = {

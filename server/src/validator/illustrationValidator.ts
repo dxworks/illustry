@@ -1,4 +1,4 @@
-import { Illustration, IllustrationUpdate } from "../types/illustrations.";
+import { Illustration, IllustrationTypes, IllustrationUpdate } from "../types/illustrations.";
 import * as FLGSchema from '../../jsonSchemas/FLG.json';
 import * as DotSchema from '../../jsonSchemas/DOT.json';
 import * as HEBSchema from '../../jsonSchemas/HEB.json';
@@ -15,12 +15,12 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     // let illustrationNameValid = false;
     // let illustrationTypeValid = false;
     // let illustrationDataValid = false;
-    // if (illustration.Tags) {
-    //     let tagsChecker = illustration.Tags.every(function (e) {
+    // if (illustration.tags) {
+    //     let tagsChecker = illustration.tags.every(function (e) {
     //         return typeof e === "string"
     //     })
 
-    //     if (Array.isArray(illustration.Tags) && tagsChecker) {
+    //     if (Array.isArray(illustration.tags) && tagsChecker) {
     //         tagsValid = true;
     //     }
     //     else {
@@ -32,25 +32,25 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //     tagsValid = true;
     // }
 
-    // if (illustration.ProjectName && typeof illustration.ProjectName === "string") {
+    // if (illustration.projectName && typeof illustration.projectName === "string") {
     //     projectNameValid = true;
     // }
     // else {
     //     throw new TypeError("ProjectName doesn't exist or is not string")
     // }
 
-    // if (illustration.IllustrationName && typeof illustration.IllustrationName === "string") {
+    // if (illustration.name && typeof illustration.name === "string") {
     //     illustrationNameValid = true;
     // }
     // else {
     //     throw new TypeError("IllustrationName doesn't exist or is not string")
     // }
 
-    // if (illustration.IllustrationType && typeof illustration.IllustrationType === "string") {
-    //     switch (illustration.IllustrationType) {
-    //         case "chart": {
+    // if (illustration.type && typeof illustration.type === "string") {
+    //     switch (illustration.type) {
+    //         case IllustrationTypes.CHART: {
     //             illustrationTypeValid = true;
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+    //             if (illustration.type && typeof illustration.data === "object") {
     //                 illustrationDataValid = true;
     //             }
     //             else {
@@ -58,9 +58,9 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //             }
     //             break
     //         }
-    //         case "wordcloud": {
+    //         case IllustrationTypes.WORLD_CLOUD: {
     //             illustrationTypeValid = true;
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+    //             if (illustration.data && typeof illustration.data === "object") {
     //                 illustrationDataValid = true;
     //             }
     //             else {
@@ -68,9 +68,9 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //             }
     //             break
     //         }
-    //         case "ploty": {
+    //         case IllustrationTypes.PLOTLY: {
     //             illustrationTypeValid = true;
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+    //             if (illustration.data && typeof illustration.data === "object") {
     //                 illustrationDataValid = true;
     //             }
     //             else {
@@ -78,10 +78,10 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //             }
     //             break
     //         }
-    //         case "timeline": {
+    //         case IllustrationTypes.TIMELINE: {
     //             illustrationTypeValid = true
     //             // const validate = ajv.compile(TimelineSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+    //             if (illustration.data && typeof illustration.data === "object") {
     //                 illustrationDataValid = true;
     //             }
     //             else {
@@ -89,10 +89,10 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //             }
     //             break
     //         }
-    //         case "flg": {
+    //         case IllustrationTypes.FORCE_DIRECTED_GRAPH: {
     //             illustrationTypeValid = true
     //             const validate = ajv.compile(FLGSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
+    //             if (illustration.data && typeof illustration.data === "object" && validate(illustration.data)) {
     //                 illustrationDataValid = true;
     //             }
     //             else {
@@ -101,14 +101,14 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //             break
     //         }
 
-    //         case "treemap": {
+    //         case IllustrationTypes.TREEMAP: {
     //             illustrationTypeValid = true
     //             break
     //         }
-    //         case "sankeydiagram": {
+    //         case IllustrationTypes.SANKEY: {
     //             illustrationTypeValid = true
     //             const validate = ajv.compile(SankeySchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
+    //             if (illustration.data && typeof illustration.data === "object" && validate(illustration.data)) {
     //                 illustrationDataValid = true;
     //             }
     //             else {
@@ -116,21 +116,21 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //             }
     //             break
     //         }
-    //         case "calendarmatrix": {
+    //         case IllustrationTypes.CALENDAR: {
     //             illustrationTypeValid = true
     //             const validate = ajv.compile(CalendarMatrixSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
+    //             if (illustration.data && typeof illustration.data === "object" && validate(illustration.data)) {
     //                 illustrationDataValid = true;
     //             }
     //             else {
-    //                 throw new TypeError("illustrationType calendarmatrix does not correspond to illustrationData")
+    //                 throw new TypeError("illustrationType calendar does not correspond to illustrationData")
     //             }
     //             break
     //         }
-    //         case "matrix": {
+    //         case IllustrationTypes.MATRIX: {
     //             illustrationTypeValid = true
     //             const validate = ajv.compile(MatrixSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
+    //             if (illustration.data && typeof illustration.data === "object" && validate(illustration.data)) {
     //                 illustrationDataValid = true;
     //             }
     //             else {
@@ -138,21 +138,21 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //             }
     //             break
     //         }
-    //         case "graphiz": {
+    //         case IllustrationTypes.GRAPHVIZ: {
     //             illustrationTypeValid = true
     //             const validate = ajv.compile(DotSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
+    //             if (illustration.data && typeof illustration.data === "object" && validate(illustration.data)) {
     //                 illustrationDataValid = true;
     //             }
     //             else {
-    //                 throw new TypeError("illustrationType graphiz does not correspond to illustrationData")
+    //                 throw new TypeError("illustrationType graphviz does not correspond to illustrationData")
     //             }
     //             break
     //         }
-    //         case "heb": {
+    //         case IllustrationTypes.HIERARCHICAL_EDGE_BUNDLING: {
     //             illustrationTypeValid = true
     //             const validate = ajv.compile(HEBSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
+    //             if (illustration.data && typeof illustration.data === "object" && validate(illustration.data)) {
     //                 illustrationDataValid = true;
     //             }
     //             else {
@@ -163,10 +163,12 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
     //         default: throw new TypeError("IllustrationType is not one of the known types")
     //     }
     // } else {
-    //     throw new TypeError("IllustrationType doesn't exist or is not string")
+    //     // if (illustration.type && typeof illustration.type === "object" && typeof illustration.type.length === 'number') {
+    //     //     for (let i = 0; i <)
+    //     // }
     // }
 
-    // if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+    // if (illustration.data && typeof illustration.data === "object") {
 
     //     illustrationDataValid = true;
     // }
@@ -178,40 +180,38 @@ export const illustrationValidator = (illustration: Illustration | IllustrationU
 }
 
 export const validateProjectNameAndIllustrationNameAsString = (projectName: string, illustrationName: string) => {
-    //     let validProject = false;
-    //     let validIllustration = false;
-    //     if (projectName && typeof projectName === 'string') {
-    //         validProject = true;
-    //     }
-    //     else {
-    //         throw new TypeError("ProjectName must be string")
-    //     }
-    //     if (illustrationName && typeof illustrationName === 'string') {
-    //         validIllustration = true;
-    //     }
-    //     else {
-    //         throw new TypeError("IllustrationName must be string")
-    //     }
-    //     return validProject && validIllustration
-    return true
+    let validProject = false;
+    let validIllustration = false;
+    if (projectName && typeof projectName === 'string') {
+        validProject = true;
+    }
+    else {
+        throw new TypeError("ProjectName must be string")
+    }
+    if (illustrationName && typeof illustrationName === 'string') {
+        validIllustration = true;
+    }
+    else {
+        throw new TypeError("IllustrationName must be string")
+    }
+    return validProject && validIllustration
 }
 
 
 export const validateProjectNameAndIllustrationTypeAsString = (projectName: string, illustrationType: string) => {
-    //     let validProject = false;
-    //     let validIllustration = false;
-    //     if (projectName && typeof projectName === 'string') {
-    //         validProject = true;
-    //     }
-    //     else {
-    //         throw new TypeError("ProjectName must be string")
-    //     }
-    //     if (illustrationType && typeof illustrationType === 'string') {
-    //         validIllustration = true;
-    //     }
-    //     else {
-    //         throw new TypeError("IllustrationType must be string")
-    //     }
-    //     return validProject && validIllustration
-    return true
+    let validProject = false;
+    let validIllustration = false;
+    if (projectName && typeof projectName === 'string') {
+        validProject = true;
+    }
+    else {
+        throw new TypeError("ProjectName must be string")
+    }
+    if (illustrationType && typeof illustrationType === 'string') {
+        validIllustration = true;
+    }
+    else {
+        throw new TypeError("IllustrationType must be string")
+    }
+    return validProject && validIllustration
 }

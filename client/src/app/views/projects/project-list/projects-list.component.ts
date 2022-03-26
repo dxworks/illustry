@@ -31,7 +31,7 @@ export class ProjectsListComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.projectService.getProjects().subscribe((projects: Project[]) => {
       projects.forEach((project, index) => {
-        this.projects.push({ index: index + 1, ProjectDescription: project.Description, ProjectName: project.Name })
+        this.projects.push({ index: index + 1, ProjectDescription: project.description, ProjectName: project.name })
       });
       this.mdbTable.setDataSource(this.projects);
       this.projects = this.mdbTable.getDataSource();

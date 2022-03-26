@@ -27,33 +27,19 @@ export const createProjectfromExtern = (projectName: string, projectDescription:
         .then(() => { return validateProject(projectModel, illustrationModel) })
         .then((valid: boolean) => {
             if (valid) {
-                _.assign(projectModel, { CreatedAt: new Date() })
-                _.assign(projectModel, { LastModified: new Date() })
-                let fprj = {
-                    Name: projectModel.name,
-                    Description: projectModel.description,
-                    CreatedAt: _.get(projectModel, 'CreatedAt'),
-                    LastModified: _.get(projectModel, 'LastModified')
-                }
-                let projectTable = new ProjectTable(fprj)
+                _.assign(projectModel, { createdAt: new Date() })
+                _.assign(projectModel, { lastModified: new Date() })
+
+                let projectTable = new ProjectTable(projectModel)
                 projectTable.save((err: any) => {
                     if (err) {
                         next("Duplicated name of project", null)
                     }
-                    _.assign(illustrationModel, { ProjectId: projectTable._id })
-                    _.assign(illustrationModel, { CreatedAt: new Date() })
-                    _.assign(illustrationModel, { LastModified: new Date() })
-                    let finalIllustration = {
-                        Data: illustrationModel.data,
-                        ProjectName: illustrationModel.projectName,
-                        Name: illustrationModel.name,
-                        Type: illustrationModel.type,
-                        ProjectId: _.get(illustrationModel, 'projectId'),
-                        Tags: illustrationModel.tags,
-                        CreatedAt: _.get(illustrationModel, 'CreatedAt'),
-                        LastModified: _.get(illustrationModel, 'LastModified')
-                    }
-                    let illustrationTable = new IllustrationTable(finalIllustration)
+                    _.assign(illustrationModel, { projectId: projectTable._id })
+                    _.assign(illustrationModel, { createdAt: new Date() })
+                    _.assign(illustrationModel, { lastModified: new Date() })
+
+                    let illustrationTable = new IllustrationTable(illustrationModel)
                     illustrationTable.save((err: any) => {
                         if (err)
                             next(err, null)
@@ -84,15 +70,10 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
                 .then((valid: boolean) => {
                     if (valid) {
 
-                        _.assign(projectModel, { CreatedAt: new Date() })
-                        _.assign(projectModel, { LastModified: new Date() })
-                        let fprj = {
-                            Name: projectModel.name,
-                            Description: projectModel.description,
-                            CreatedAt: _.get(projectModel, 'CreatedAt'),
-                            LastModified: _.get(projectModel, 'LastModified')
-                        }
-                        let projectTable = new ProjectTable(fprj)
+                        _.assign(projectModel, { createdAt: new Date() })
+                        _.assign(projectModel, { lastModified: new Date() })
+
+                        let projectTable = new ProjectTable(projectModel)
                         projectTable.save((err: any) => {
                             if (err) {
 
@@ -108,7 +89,6 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
                                                 projectName: projectModel.name,
                                                 name: _.get(projectJson, 'IllustrationName'),
                                                 type: _.get(projectJson, 'IllustrationType'),
-                                                projectId: projectTable._id,
                                                 tags: _.get(projectJson, 'Tags')
                                             }
                                             return Promise.resolve()
@@ -119,19 +99,10 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
 
                                                             .then((res) => {
 
-                                                                _.assign(res, { CreatedAt: new Date() })
-                                                                _.assign(res, { LastModified: new Date() })
-                                                                let finalRes = {
-                                                                    Data: res.data,
-                                                                    ProjectName: res.projectName,
-                                                                    Name: res.name,
-                                                                    Type: res.type,
-                                                                    ProjectId: res.projectId,
-                                                                    Tags: res.tags,
-                                                                    CreatedAt: _.get(res, 'CreatedAt'),
-                                                                    LastModified: _.get(res, 'LastModified')
-                                                                }
-                                                                let illustrationTable = new IllustrationTable(finalRes)
+                                                                _.assign(res, { createdAt: new Date() })
+                                                                _.assign(res, { lastModified: new Date() })
+
+                                                                let illustrationTable = new IllustrationTable(illustrationModel)
                                                                 illustrationTable.save((err: any) => {
                                                                     if (err)
                                                                         next(err, null)
@@ -158,16 +129,16 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
 
 export const updateProjectfromEtern = (projectName: string, projectDescription: string, next: any) => {
     const projectToBeUpdated = {
-        Name: projectName,
-        Description: projectDescription
+        name: projectName,
+        description: projectDescription
     }
     return Promise.resolve()
         .then(() => {
-            return validateProjectNameAsStringAndProjectDescriptionAsString(projectToBeUpdated.Name, projectToBeUpdated.Description)
+            return validateProjectNameAsStringAndProjectDescriptionAsString(projectToBeUpdated.name, projectToBeUpdated.description)
         })
         .then((valid: boolean) => {
             if (valid) {
-                return updateProject(projectToBeUpdated.Name, projectToBeUpdated.Description, next)
+                return updateProject(projectToBeUpdated.name, projectToBeUpdated.description, next)
             }
         })
         .catch(err => next(err, null))
@@ -178,7 +149,7 @@ export const queryAllProjects = (next: any) => {
 }
 
 export const findOneProject = (projectName: string, next: any) => {
-    let query = { ProjectName: { $eq: projectName } }
+    let query = { projectName: { $eq: projectName } }
     return Promise.resolve()
         .then(() => {
             return validateProjectNameAsString(projectName)
@@ -202,8 +173,8 @@ export const getOneProjectfromEtern = (projectName: string, next: any) => {
 }
 
 export const updateProject = (projectName: string, projectDescription: string, next: any) => {
-    let update = { Description: projectDescription, LastModified: new Date() }
-    let query = { Name: { $eq: projectName } }
+    let update = { description: projectDescription, lastModified: new Date() }
+    let query = { name: { $eq: projectName } }
     return Promise.resolve()
         .then(() => {
             return validateProjectNameAsStringAndProjectDescriptionAsString(projectName, projectDescription)
@@ -212,7 +183,7 @@ export const updateProject = (projectName: string, projectDescription: string, n
             if (valid) {
                 return ProjectTable
                     .findOneAndUpdate(query, update, { new: true })
-                    .select(' -_id ProjectName ProjectDescription')
+                    .select(' -_id name description')
                     .then((doc: any) => {
                         return Promise.resolve(doc)
                             .then((doc) => { next(null, doc) })
@@ -226,8 +197,8 @@ export const updateProject = (projectName: string, projectDescription: string, n
 
 
 export const deleteProject = (projectName: string, next: any) => {
-    let queryProject = { Name: { $eq: projectName } }
-    let queryIllustration = { ProjectName: { $eq: projectName } }
+    let queryProject = { name: { $eq: projectName } }
+    let queryIllustration = { projectName: { $eq: projectName } }
     return Promise.resolve()
         .then(() => {
             return validateProjectNameAsString(projectName)
@@ -241,7 +212,7 @@ export const deleteProject = (projectName: string, next: any) => {
                             .deleteOne(queryProject)
                             .then((doc: any) => {
                                 return Promise.resolve(doc)
-                                    .then((doc) => { next(null, { ProjectName: projectName }) })
+                                    .then((doc) => { next(null, { name: projectName }) })
                             })
                             .catch((err: any) => next(err, null))
                     })

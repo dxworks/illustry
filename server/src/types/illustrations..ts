@@ -1,7 +1,7 @@
 export enum IllustrationTypes{
     CHART = 'chart',
     WORLD_CLOUD= 'word-cloud',
-    PLOTY = 'ploty',
+    PLOTLY = 'plotly',
     TIMELINE= 'timeline',
     FORCE_DIRECTED_GRAPH = 'force-directed-graph',
     TREEMAP = 'treemap',
@@ -12,12 +12,13 @@ export enum IllustrationTypes{
     HIERARCHICAL_EDGE_BUNDLING= 'hierarchical-edge-bundling'
 }
 export interface Illustration {
-    projectId: string;
     projectName: string;
     type: string | string[];
     name: string;
     tags?: string[];
     data: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
+    createdAt?:Date
+    lastModified?:Date
 }
 
 export interface IllustrationUpdate {
@@ -26,7 +27,8 @@ export interface IllustrationUpdate {
     name: string;
     tags?: string[];
     data: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
-    
+    createdAt?:Date
+    lastModified?:Date
 }
 
 interface TimelineEventTag {

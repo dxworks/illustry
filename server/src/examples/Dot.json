@@ -1,6 +1,6 @@
 {
   "name": "flgu2s",
-  "type": ["graphviz"],
+  "type": "graphviz",
   "tags": ["sucre", "kaledo"],
   "data": {
     "nodes": [{

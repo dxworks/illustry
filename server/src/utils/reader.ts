@@ -12,12 +12,12 @@ const read = (file: FileProperties) => {
                 reject(new FileError("Problems while uploading the files"))
             }
             if (file.type === 'application/json') {
-                let illustration = data.toString();
+                let illustration = JSON.parse(data.toString());
                 let finalJson: any = {
-                    IllustrationData: _.get(JSON.parse(illustration), 'data'),
-                    IllustrationName: _.get(JSON.parse(illustration), 'name'),
-                    IllustrationType: _.get(JSON.parse(illustration), 'type'),
-                    Tags: _.get(JSON.parse(illustration), 'tags')
+                    data: illustration?.data,
+                    name: illustration?.name,
+                    type: illustration?.type,
+                    tags: illustration?.tags
                 }
 
                 resolve(finalJson)
