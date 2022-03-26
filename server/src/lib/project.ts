@@ -1,7 +1,7 @@
 
 import ProjectTable from "../models/Project"
 import _ from "lodash"
-import { Promise } from 'bluebird';
+import { any, Promise } from 'bluebird';
 import IllustrationTable from "../models/Illustrations"
 import { Project } from "../types/project";
 import { readFile } from "../utils/reader";
@@ -72,47 +72,86 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
 
                         _.assign(projectModel, { createdAt: new Date() })
                         _.assign(projectModel, { lastModified: new Date() })
-
+                        console.log(projectModel)
                         let projectTable = new ProjectTable(projectModel)
                         projectTable.save((err: any) => {
                             if (err) {
-
+                                console.log(err)
                                 next("Duplicated name of project", null)
                             }
                             else {
                                 return readFile(files)
                                     .then((projectsJson: any) => {
-                                        return Promise.map(projectsJson, projectJson => {
+                                        return Promise.map(projectsJson, (projectJson: any) => {
 
                                             let illustrationModel: Illustration = {
-                                                data: _.get(projectJson, 'IllustrationData'),
+                                                data: projectJson.data,
                                                 projectName: projectModel.name,
-                                                name: _.get(projectJson, 'IllustrationName'),
-                                                type: _.get(projectJson, 'IllustrationType'),
-                                                tags: _.get(projectJson, 'Tags')
+                                                name: projectJson.name,
+                                                type: projectJson.type,
+                                                tags: projectJson.tags
                                             }
                                             return Promise.resolve()
                                                 .then(() => { return illustrationValidator(illustrationModel) })
                                                 .then((valid: boolean) => {
                                                     if (valid) {
-                                                        return Promise.resolve(illustrationModel)
-
-                                                            .then((res) => {
-
-                                                                _.assign(res, { createdAt: new Date() })
-                                                                _.assign(res, { lastModified: new Date() })
-
-                                                                let illustrationTable = new IllustrationTable(illustrationModel)
-                                                                illustrationTable.save((err: any) => {
-                                                                    if (err)
-                                                                        next(err, null)
+                                                        if (typeof illustrationModel.type === 'string') {
+                                                            return IllustrationTable.findOneAndUpdate({
+                                                                projectName: illustrationModel.projectName,
+                                                                name: illustrationModel.name,
+                                                            }, illustrationModel, { upsert: true, new: true })
+                                                                .then((res: Illustration) => {
+                                                                    if (!res.createdAt) {
+                                                                        _.assign(res, { createdAt: new Date() })
+                                                                        _.assign(res, { lastModified: new Date() })
+                                                                    }
+                                                                    else {
+                                                                        _.assign(res, { lastModified: new Date() })
+                                                                    }
+                                                                    return IllustrationTable.findOneAndUpdate({
+                                                                        projectName: res.projectName,
+                                                                        illustrationName: res.name
+                                                                    }, res)
+                                                                        .then(() => {
+                                                                            next(null, { result: 'Illustrations created' })
+                                                                        })
                                                                 })
+                                                        }
+                                                        else {
 
+                                                            return Promise.each(illustrationModel.type, t => {
+                                                                let newIllustrationModel: Illustration = {
+                                                                    data: illustrationModel.data,
+                                                                    projectName: illustrationModel.projectName,
+                                                                    name: illustrationModel.name,
+                                                                    type: t,
+                                                                    tags: illustrationModel.tags
+                                                                }
+                                                                console.log(newIllustrationModel)
+                                                                return IllustrationTable.findOneAndUpdate({
+                                                                    projectName: newIllustrationModel.projectName,
+                                                                    name: newIllustrationModel.name,
+                                                                    type: newIllustrationModel.type
+                                                                }, newIllustrationModel, { upsert: true, new: true })
+                                                                    .then((res: any) => {
+
+                                                                        if (!res.createdAt) {
+                                                                            _.assign(res, { createdAt: new Date() })
+                                                                            _.assign(res, { lastModified: new Date() })
+                                                                        }
+                                                                        else {
+                                                                            _.assign(res, { lastModified: new Date() })
+                                                                        }
+                                                                        return IllustrationTable.findOneAndUpdate({
+                                                                            _id: res._id
+                                                                        }, res)
+
+                                                                    })
                                                             })
-                                                            .then((res: any) => {
-                                                                next(null, "Project created")
-                                                            })
-                                                            .catch((err: any) => next(err, null))
+                                                                .then(() => {
+                                                                    next(null, { result: 'Illustrations created' })
+                                                                })
+                                                        }
                                                     }
                                                 }).catch((err: any) => next(err, null))
 

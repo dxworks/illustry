@@ -1,8 +1,8 @@
 {
-    "illustrationName": "dadsa",
-    "illustrationType": "chart",
+    "name": "dadsa",
+    "type": ["gugu"],
     "tags": ["sucre", "kaledo"],
-    "illustrationData": {
+    "data": {
         "series": [{
             "type": "wordCloud",
             "sizeRange": [4, 150],
