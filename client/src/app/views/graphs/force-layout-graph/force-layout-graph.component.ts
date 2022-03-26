@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, Renderer2, ViewChild, HostListener } from '@angular/core';
 import * as d3 from 'd3';
 import { FlgTypes } from "../../../entities/flg-types";
 import { Link, Node } from "../../../entities/common-types";
@@ -9,7 +9,8 @@ import { Link, Node } from "../../../entities/common-types";
   styleUrls: ['./force-layout-graph.component.css'],
 
 })
-export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
+export class ForceLayoutGraphComponent implements OnInit {
+
   //@ts-ignore
   @ViewChild('chart', { static: false }) private chartContainer: Renderer2;
   private chartSvg: any;
@@ -20,6 +21,7 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   private links: Link[] = [];
   private nodes: Node[] = [];
   private graph: FlgTypes = { nodes: [], links: [] };
+  @HostListener('unloaded')
   @Input()
   data: FlgTypes | undefined;
 
@@ -27,11 +29,12 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-
+    console.log("destroyed FLG")
     this.removeGraph();
   }
 
   ngOnInit(): void {
+    console.log(this.data)
     if (this.data) {
       // @ts-ignore
       this.links = this.data.links;
@@ -281,3 +284,5 @@ export class ForceLayoutGraphComponent implements OnInit, OnDestroy {
     });
   }
 }
+
+

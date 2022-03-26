@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, HostListener } from '@angular/core';
 
 import { IllustrationService } from "../../../services/illustration.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
@@ -14,6 +14,7 @@ import { HebTypes } from "../../../entities/heb-types";
 })
 
 export class HiearchicalEdgeBundlingComponent implements OnInit {
+
   private links: Link[] = [];
   private nodes: Node[] = [];
   private graph: HebTypes = { nodes: [], links: [] };
@@ -25,6 +26,10 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
   }
 
+  // ngOnDestroy(): void {
+  //   this.removeGraph()
+  //   console.log("HEB destroyed")
+  // }
   ngOnInit(): void {
     if (this.data) {
       this.links = this.data.links;
@@ -34,9 +39,12 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
       this.graph = { links: this.links, nodes: this.nodes }
       this.createHedge()
     }
+    console.log(this.data)
   }
 
-
+  private removeGraph() {
+    d3.select('#hedgeBundleSvg').remove();
+  }
   private createHedge() {
     const colorin = '#00f';
     const colorout = '#f00';

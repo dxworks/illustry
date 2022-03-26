@@ -12,16 +12,16 @@ import { illustrationValidator } from "../validator/illustrationValidator";
 export const createProjectfromExtern = (projectName: string, projectDescription: string, illustrationName: string, illustrationType: string, tags: string[], illustrationData: any, next: any) => {
 
     let projectModel: Project = {
-        ProjectName: projectName,
-        ProjectDescription: projectDescription
+        name: projectName,
+        description: projectDescription
     }
 
     let illustrationModel: IllustrationUpdate = {
-        ProjectName: projectName,
-        IllustrationName: illustrationName,
-        IllustrationData: illustrationData,
-        IllustrationType: illustrationType,
-        Tags: tags
+        projectName: projectName,
+        name: illustrationName,
+        data: illustrationData,
+        type: illustrationType,
+        tags: tags
     }
     return Promise.resolve()
         .then(() => { return validateProject(projectModel, illustrationModel) })
@@ -29,8 +29,13 @@ export const createProjectfromExtern = (projectName: string, projectDescription:
             if (valid) {
                 _.assign(projectModel, { CreatedAt: new Date() })
                 _.assign(projectModel, { LastModified: new Date() })
-                console.log(projectModel)
-                let projectTable = new ProjectTable(projectModel)
+                let fprj = {
+                    Name: projectModel.name,
+                    Description: projectModel.description,
+                    CreatedAt: _.get(projectModel, 'CreatedAt'),
+                    LastModified: _.get(projectModel, 'LastModified')
+                }
+                let projectTable = new ProjectTable(fprj)
                 projectTable.save((err: any) => {
                     if (err) {
                         next("Duplicated name of project", null)
@@ -38,8 +43,17 @@ export const createProjectfromExtern = (projectName: string, projectDescription:
                     _.assign(illustrationModel, { ProjectId: projectTable._id })
                     _.assign(illustrationModel, { CreatedAt: new Date() })
                     _.assign(illustrationModel, { LastModified: new Date() })
-                    console.log(illustrationModel)
-                    let illustrationTable = new IllustrationTable(illustrationModel)
+                    let finalIllustration = {
+                        Data: illustrationModel.data,
+                        ProjectName: illustrationModel.projectName,
+                        Name: illustrationModel.name,
+                        Type: illustrationModel.type,
+                        ProjectId: _.get(illustrationModel, 'projectId'),
+                        Tags: illustrationModel.tags,
+                        CreatedAt: _.get(illustrationModel, 'CreatedAt'),
+                        LastModified: _.get(illustrationModel, 'LastModified')
+                    }
+                    let illustrationTable = new IllustrationTable(finalIllustration)
                     illustrationTable.save((err: any) => {
                         if (err)
                             next(err, null)
@@ -56,9 +70,9 @@ export const createProjectfromExtern = (projectName: string, projectDescription:
 export const createIllustryProject = (files: FileProperties[], project: Project, next: any) => {
     return Promise.resolve()
         .then(() => {
-            let projectModel = {
-                ProjectName: project.ProjectName,
-                ProjectDescription: project.ProjectDescription
+            let projectModel: Project = {
+                name: project.name,
+                description: project.description
             }
             return projectModel;
         })
@@ -69,9 +83,16 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
                 })
                 .then((valid: boolean) => {
                     if (valid) {
+
                         _.assign(projectModel, { CreatedAt: new Date() })
                         _.assign(projectModel, { LastModified: new Date() })
-                        let projectTable = new ProjectTable(projectModel)
+                        let fprj = {
+                            Name: projectModel.name,
+                            Description: projectModel.description,
+                            CreatedAt: _.get(projectModel, 'CreatedAt'),
+                            LastModified: _.get(projectModel, 'LastModified')
+                        }
+                        let projectTable = new ProjectTable(fprj)
                         projectTable.save((err: any) => {
                             if (err) {
 
@@ -83,12 +104,12 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
                                         return Promise.map(projectsJson, projectJson => {
 
                                             let illustrationModel: Illustration = {
-                                                IllustrationData: _.get(projectJson, 'IllustrationData'),
-                                                ProjectName: projectModel.ProjectName,
-                                                IllustrationName: _.get(projectJson, 'IllustrationName'),
-                                                IllustrationType: _.get(projectJson, 'IllustrationType'),
-                                                ProjectId: projectTable._id,
-                                                Tags: _.get(projectJson, 'Tags')
+                                                data: _.get(projectJson, 'IllustrationData'),
+                                                projectName: projectModel.name,
+                                                name: _.get(projectJson, 'IllustrationName'),
+                                                type: _.get(projectJson, 'IllustrationType'),
+                                                projectId: projectTable._id,
+                                                tags: _.get(projectJson, 'Tags')
                                             }
                                             return Promise.resolve()
                                                 .then(() => { return illustrationValidator(illustrationModel) })
@@ -97,9 +118,20 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
                                                         return Promise.resolve(illustrationModel)
 
                                                             .then((res) => {
+
                                                                 _.assign(res, { CreatedAt: new Date() })
                                                                 _.assign(res, { LastModified: new Date() })
-                                                                let illustrationTable = new IllustrationTable(res)
+                                                                let finalRes = {
+                                                                    Data: res.data,
+                                                                    ProjectName: res.projectName,
+                                                                    Name: res.name,
+                                                                    Type: res.type,
+                                                                    ProjectId: res.projectId,
+                                                                    Tags: res.tags,
+                                                                    CreatedAt: _.get(res, 'CreatedAt'),
+                                                                    LastModified: _.get(res, 'LastModified')
+                                                                }
+                                                                let illustrationTable = new IllustrationTable(finalRes)
                                                                 illustrationTable.save((err: any) => {
                                                                     if (err)
                                                                         next(err, null)
@@ -126,16 +158,16 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
 
 export const updateProjectfromEtern = (projectName: string, projectDescription: string, next: any) => {
     const projectToBeUpdated = {
-        ProjectName: projectName,
-        ProjectDescription: projectDescription
+        Name: projectName,
+        Description: projectDescription
     }
     return Promise.resolve()
         .then(() => {
-            return validateProjectNameAsStringAndProjectDescriptionAsString(projectToBeUpdated.ProjectName, projectToBeUpdated.ProjectDescription)
+            return validateProjectNameAsStringAndProjectDescriptionAsString(projectToBeUpdated.Name, projectToBeUpdated.Description)
         })
         .then((valid: boolean) => {
             if (valid) {
-                return updateProject(projectToBeUpdated.ProjectName, projectToBeUpdated.ProjectDescription, next)
+                return updateProject(projectToBeUpdated.Name, projectToBeUpdated.Description, next)
             }
         })
         .catch(err => next(err, null))
@@ -170,8 +202,8 @@ export const getOneProjectfromEtern = (projectName: string, next: any) => {
 }
 
 export const updateProject = (projectName: string, projectDescription: string, next: any) => {
-    let update = { ProjectDescription: projectDescription, LastModified: new Date() }
-    let query = { ProjectName: { $eq: projectName } }
+    let update = { Description: projectDescription, LastModified: new Date() }
+    let query = { Name: { $eq: projectName } }
     return Promise.resolve()
         .then(() => {
             return validateProjectNameAsStringAndProjectDescriptionAsString(projectName, projectDescription)
@@ -194,7 +226,7 @@ export const updateProject = (projectName: string, projectDescription: string, n
 
 
 export const deleteProject = (projectName: string, next: any) => {
-    let queryProject = { ProjectName: { $eq: projectName } }
+    let queryProject = { Name: { $eq: projectName } }
     let queryIllustration = { ProjectName: { $eq: projectName } }
     return Promise.resolve()
         .then(() => {

@@ -1,18 +1,31 @@
+export enum IllustrationTypes{
+    CHART = 'chart',
+    WORLD_CLOUD= 'word-cloud',
+    PLOTY = 'ploty',
+    TIMELINE= 'timeline',
+    FORCE_DIRECTED_GRAPH = 'force-directed-graph',
+    TREEMAP = 'treemap',
+    SANKEY = 'sankey',
+    CALENDAR = 'calendar',
+    MATRIX = 'matrix',
+    GRAPHVIZ = 'graphviz',
+    HIERARCHICAL_EDGE_BUNDLING= 'hierarchical-edge-bundling'
+}
 export interface Illustration {
-    ProjectId: string;
-    ProjectName: string;
-    IllustrationType: string;
-    IllustrationName: string;
-    Tags?: string[];
-    IllustrationData: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
+    projectId: string;
+    projectName: string;
+    type: string | string[];
+    name: string;
+    tags?: string[];
+    data: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
 }
 
 export interface IllustrationUpdate {
-    ProjectName: string;
-    IllustrationType: string;
-    IllustrationName: string;
-    Tags?: string[];
-    IllustrationData: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
+    projectName: string;
+    type: string | string[];
+    name: string;
+    tags?: string[];
+    data: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
     
 }
 

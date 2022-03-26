@@ -53,8 +53,8 @@ export const createIllustryProject = (req: any, res: any, next: any) => {
         }
     })
     let fields = {
-        ProjectName: projectName,
-        ProjectDescription: projectDescription,
+        name: projectName,
+        description: projectDescription,
 
     }
     projectApi.createIllustryProject(computedFiles, fields, (errGPC: any, data: any) => {

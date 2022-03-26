@@ -1,7 +1,8 @@
-{  "illustrationName": "hebus",
-  "illustrationType": "heb",
+{
+  "name": "hebus",
+  "type": "hierarchical-edge-bundling",
   "tags": ["sucre", "kaledo"],
-  "illustrationData": {
+  "data": {
     "nodes": [{
         "group": "Test",
         "id": "MetricsTest.scala"

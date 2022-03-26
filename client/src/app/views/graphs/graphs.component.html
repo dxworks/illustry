@@ -1,61 +1,98 @@
-<div [ngSwitch]="currentIllustration.IllustrationType">
-  <!-- <app-chart
+<!-- <div [ngSwitch]="currentIllustration.type"> -->
+<!-- <app-chart
     *ngSwitchCase="'verticalcharts'"
-    [data]="currentIllustration.IllustrationData.VerticalChart"
+    [data]="currentIllustration.data.VerticalChart"
   ></app-chart> -->
-  <app-d3-force-layout-graph
-    *ngSwitchCase="'flg'"
-    [data]="currentIllustration.IllustrationData"
+<!-- <app-d3-force-layout-graph
+    *ngSwitchCase="'force-directed-graph'"
+    [data]="currentIllustration.data"
   ></app-d3-force-layout-graph>
   <app-hiearchical-edge-bundling
-    *ngSwitchCase="'heb'"
-    [data]="currentIllustration.IllustrationData"
+    *ngSwitchCase="'hierarchical-edge-bundling'"
+    [data]="currentIllustration.data"
   ></app-hiearchical-edge-bundling>
   <app-sanky-diagram
-    *ngSwitchCase="'sankeydiagram'"
-    [data]="currentIllustration.IllustrationData"
-  ></app-sanky-diagram>
-  <!-- <app-horizontal-chart
+    *ngSwitchCase="'sankey'"
+    [data]="currentIllustration.data"
+  ></app-sanky-diagram> -->
+<!-- <app-horizontal-chart
     *ngSwitchCase="'horizontalcharts'"
-    [data]="currentIllustration.IllustrationData.HorizontalChart"
+    [data]="currentIllustration.data.HorizontalChart"
   ></app-horizontal-chart> -->
-  <!-- <app-stacked-chart
+<!-- <app-stacked-chart
     *ngSwitchCase="'verticalstackedcharts'"
-    [data]="currentIllustration.IllustrationData.VerticalStackedChart"
+    [data]="currentIllustration.data.VerticalStackedChart"
   ></app-stacked-chart> -->
-  <!-- <app-horizontal-stacked-chart
+<!-- <app-horizontal-stacked-chart
     *ngSwitchCase="'horizontalstackedcharts'"
-    [data]="currentIllustration.IllustrationData.HorizontalStackedChart"
+    [data]="currentIllustration.data.HorizontalStackedChart"
   ></app-horizontal-stacked-chart> -->
-  <app-charts
-    *ngSwitchCase="'chart'"
-    [data]="currentIllustration.IllustrationData"
-  >
+<!-- <app-charts *ngSwitchCase="'chart'" [data]="currentIllustration.data">
   </app-charts>
   <app-matrix
     *ngSwitchCase="'matrix'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.data"
   ></app-matrix>
   <app-calendarheatmap
-    *ngSwitchCase="'calendarmatrix'"
-    [data]="currentIllustration.IllustrationData"
+    *ngSwitchCase="'calendar'"
+    [data]="currentIllustration.data"
   ></app-calendarheatmap>
   <app-dot-graph
-    *ngSwitchCase="'graphiz'"
-    [content]="currentIllustration.IllustrationData"
+    *ngSwitchCase="'graphviz'"
+    [content]="currentIllustration.data"
   ></app-dot-graph>
   <app-timeline
     *ngSwitchCase="'timeline'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.data"
   ></app-timeline>
   <app-ganttchart
     *ngSwitchCase="'ganttchart'"
-    [data]="currentIllustration.IllustrationData"
+    [data]="currentIllustration.data"
   ></app-ganttchart>
   <app-ploty
     *ngSwitchCase="'ploty'"
-    [data]="currentIllustration.IllustrationData.data"
-    [layout]="currentIllustration.IllustrationData.layout"
-    [config]="currentIllustration.IllustrationData.config"
+    [data]="currentIllustration.data.data"
+    [layout]="currentIllustration.data.layout"
+    [config]="currentIllustration.data.config"
   ></app-ploty>
-</div>
+</div> -->
+<mat-tab-group>
+  <mat-tab [label]="ill.Type" *ngFor="let ill of currentIllustration">
+    <ng-template matTabContent>
+      <div [ngSwitch]="ill.Type">
+        <app-d3-force-layout-graph
+          *ngSwitchCase="'force-directed-graph'"
+          [data]="ill.Data"
+        ></app-d3-force-layout-graph>
+        <app-hiearchical-edge-bundling
+          *ngSwitchCase="'hierarchical-edge-bundling'"
+          [data]="ill.Data"
+        ></app-hiearchical-edge-bundling>
+        <app-sanky-diagram
+          *ngSwitchCase="'sankey'"
+          [data]="ill.Data"
+        ></app-sanky-diagram>
+        <app-charts *ngSwitchCase="'chart'" [data]="ill.Data"> </app-charts>
+        <app-matrix *ngSwitchCase="'matrix'" [data]="ill.Data"></app-matrix>
+        <app-calendarheatmap
+          *ngSwitchCase="'calendar'"
+          [data]="ill.Data"
+        ></app-calendarheatmap>
+        <app-dot-graph
+          *ngSwitchCase="'graphviz'"
+          [content]="ill.Data"
+        ></app-dot-graph>
+        <app-timeline
+          *ngSwitchCase="'timeline'"
+          [data]="ill.Data"
+        ></app-timeline>
+        <app-ploty
+          *ngSwitchCase="'ploty'"
+          [data]="ill.Data.data"
+          [layout]="ill.Data.layout"
+          [config]="ill.Data.config"
+        ></app-ploty>
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

@@ -1,8 +1,8 @@
 {
-  "illustrationName": "flgus",
-  "illustrationType": "flg",
+  "name": "flgus",
+  "type": ["hierarchical-edge-bundling", "graphviz", "force-directed-graph", "matrix"],
   "tags": ["sucre", "kaledo"],
-  "illustrationData": {
+  "data": {
     "nodes": [{
         "group": "Test",
         "id": "MetricsTest.scala"

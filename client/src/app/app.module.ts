@@ -36,6 +36,7 @@ import { GanttchartComponent } from './views/graphs/ganttchart/ganttchart.compon
 import { MatTableModule } from "@angular/material/table";
 import { MatSortModule } from "@angular/material/sort";
 import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatTabsModule } from '@angular/material/tabs';
 import { MDBBootstrapModule } from "angular-bootstrap-md";
 import { NgxEchartsModule } from 'ngx-echarts';
 import * as echarts from 'echarts';
@@ -96,6 +97,7 @@ import { PlotyComponent } from './views/graphs/ploty/ploty.component';
     MatCardModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatTabsModule,
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,

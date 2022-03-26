@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, HostListener, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import * as d3 from 'd3';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import * as _ from 'lodash';
@@ -10,6 +11,7 @@ import 'zrender/lib/svg/svg';
   styleUrls: ['./calendarheatmap.component.css']
 })
 export class CalendarheatmapComponent implements OnInit, OnDestroy {
+  myChart: any
   @Input()
   data: CalendarMatrixTypes | undefined
   @Output()
@@ -23,6 +25,8 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     echarts.disconnect
+    this.myChart.dispose()
+    console.log("calendar destroyed")
   }
   createCalendar(data: CalendarMatrixTypes) {
     var chartDom = document.getElementById('main')!;
@@ -51,10 +55,10 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
 
       series: this.createSeries(data.calendar) as echarts.SeriesOption[] | undefined
     };
-    var myChart = echarts.getInstanceByDom(chartDom)
-    if (myChart === null) {
-      myChart = echarts.init(chartDom);
-      this.option && myChart.setOption(this.option);
+    this.myChart = echarts.getInstanceByDom(chartDom)
+    if (this.myChart === null) {
+      this.myChart = echarts.init(chartDom);
+      this.option && this.myChart.setOption(this.option);
     }
 
   }

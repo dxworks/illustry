@@ -1,8 +1,8 @@
 {
-  "illustrationName": "dotus",
-  "illustrationType": "graphiz",
+  "name": "flgu2s",
+  "type": ["graphviz"],
   "tags": ["sucre", "kaledo"],
-  "illustrationData": {
+  "data": {
     "nodes": [{
         "group": "Test",
         "id": "MetricsTest.scala"

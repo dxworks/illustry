@@ -13,6 +13,7 @@ import * as d3 from 'd3';
   styleUrls: ['./sanky-diagram.component.css']
 })
 export class SankyDiagramComponent implements OnInit, OnDestroy {
+  myChart: any
   width = 954;
   height = 600;
   links: Link[] = [];
@@ -115,10 +116,10 @@ export class SankyDiagramComponent implements OnInit, OnDestroy {
         }
       ]
     }
-    var myChart = echarts.getInstanceByDom(chartDom)
-    if (myChart === null) {
-      myChart = echarts.init(chartDom);
-      this.option && myChart.setOption(this.option);
+    this.myChart = echarts.getInstanceByDom(chartDom)
+    if (this.myChart === null) {
+      this.myChart = echarts.init(chartDom);
+      this.option && this.myChart.setOption(this.option);
     }
   }
 
