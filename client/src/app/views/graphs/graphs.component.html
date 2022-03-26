@@ -57,40 +57,40 @@
   ></app-ploty>
 </div> -->
 <mat-tab-group>
-  <mat-tab [label]="ill.Type" *ngFor="let ill of currentIllustration">
+  <mat-tab [label]="ill.type" *ngFor="let ill of currentIllustration">
     <ng-template matTabContent>
-      <div [ngSwitch]="ill.Type">
+      <div [ngSwitch]="ill.type">
         <app-d3-force-layout-graph
           *ngSwitchCase="'force-directed-graph'"
-          [data]="ill.Data"
+          [data]="ill.data"
         ></app-d3-force-layout-graph>
         <app-hiearchical-edge-bundling
           *ngSwitchCase="'hierarchical-edge-bundling'"
-          [data]="ill.Data"
+          [data]="ill.data"
         ></app-hiearchical-edge-bundling>
         <app-sanky-diagram
           *ngSwitchCase="'sankey'"
-          [data]="ill.Data"
+          [data]="ill.data"
         ></app-sanky-diagram>
-        <app-charts *ngSwitchCase="'chart'" [data]="ill.Data"> </app-charts>
-        <app-matrix *ngSwitchCase="'matrix'" [data]="ill.Data"></app-matrix>
+        <app-charts *ngSwitchCase="'chart'" [data]="ill.data"> </app-charts>
+        <app-matrix *ngSwitchCase="'matrix'" [data]="ill.data"></app-matrix>
         <app-calendarheatmap
           *ngSwitchCase="'calendar'"
-          [data]="ill.Data"
+          [data]="ill.data"
         ></app-calendarheatmap>
         <app-dot-graph
           *ngSwitchCase="'graphviz'"
-          [content]="ill.Data"
+          [content]="ill.data"
         ></app-dot-graph>
         <app-timeline
           *ngSwitchCase="'timeline'"
-          [data]="ill.Data"
+          [data]="ill.data"
         ></app-timeline>
         <app-ploty
           *ngSwitchCase="'ploty'"
-          [data]="ill.Data.data"
-          [layout]="ill.Data.layout"
-          [config]="ill.Data.config"
+          [data]="ill.data.data"
+          [layout]="ill.data.layout"
+          [config]="ill.data.config"
         ></app-ploty>
       </div>
     </ng-template>

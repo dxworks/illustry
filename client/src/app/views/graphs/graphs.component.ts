@@ -12,7 +12,7 @@ import { IllustrationService } from "../../services/illustration.service";
 export class GraphsComponent implements OnInit {
   projectName = "";
   illustrationName = "";
-  currentIllustration: any[] = []
+  currentIllustration: Illustration[] = []
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

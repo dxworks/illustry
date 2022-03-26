@@ -33,11 +33,7 @@ export const validateProject = (project: Project, illustration?: IllustrationUpd
         illustrationValid = illustrationValidator(illustration)
     }
     else {
-        tagsValid = true;
-        projectNameValid = true;
-        illustrationNameValid = true;
-        illustrationTypeValid = true;
-        illustrationDataValid = true;
+
         illustrationValid = true;
     }
     if (project.name && typeof project.name === 'string') {
@@ -59,7 +55,7 @@ export const validateProject = (project: Project, illustration?: IllustrationUpd
         validProjectDescription = true;
     }
 
-    return validProjectName && validProjectDescription && tagsValid && projectNameValid && illustrationNameValid && illustrationTypeValid && illustrationDataValid;
+    return validProjectName && validProjectDescription && illustrationValid
 }
 
 export const validateProjectNameAsStringAndProjectDescriptionAsString = (projectName: string, projectDescription: string) => {

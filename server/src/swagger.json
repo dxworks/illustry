@@ -45,7 +45,7 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project"
+                                "name": "New test project"
                             }
 
                         }
@@ -73,8 +73,8 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project",
-                                "IllustrationName": "test for dot"
+                                "projectName": "New test project",
+                                "name": "test DOTUS"
                             }
 
                         }
@@ -103,11 +103,11 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project",
-                                "IllustrationName": "test for dot",
-                                "IllustrationType": "graphiz",
-                                "Tags": ["sucre", "kaledo"],
-                                "IllustrationData": {
+                                "projectName": "New test project",
+                                "name": "test for dot",
+                                "type": "graphviz",
+                                "tags": ["sucre", "kaledo"],
+                                "data": {
                                     "nodes": [{
                                             "group": "Test",
                                             "id": "MetricsTest.scala"
@@ -148,11 +148,11 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project",
-                                "IllustrationName": "test for dot",
-                                "IllustrationType": "graphiz",
-                                "Tags": ["new sucre", "new kaledo"],
-                                "IllustrationData": {
+                                "projectName": "New test project",
+                                "name": "test for dot",
+                                "type": "graphviz",
+                                "tags": ["new sucre", "new kaledo"],
+                                "data": {
                                     "nodes": [{
                                             "group": "Test",
                                             "id": "MetricsTest1.scala"
@@ -193,8 +193,8 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project",
-                                "IllustrationName": "test for dot"
+                                "projectName": "New test project",
+                                "name": "test for dot"
                             }
 
                         }
@@ -222,8 +222,8 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project",
-                                "IllustrationType": "heb"
+                                "projectName": "New test project",
+                                "type": "graphviz"
                             }
 
                         }
@@ -241,7 +241,7 @@
         },
         "/api/external/project": {
             "post": {
-                "summary": "Post a project",
+                "summary": "Post a project, it could be with or without projects",
                 "tags": ["Projects"],
                 "requestBody": {
                     "required": true,
@@ -251,12 +251,12 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project",
-                                "ProjectDescription": "new test project description",
-                                "IllustrationName": "test DOTUS",
-                                "IllustrationType": "graphiz",
-                                "Tags": ["sucre", "kaledo"],
-                                "IllustrationData": {
+                                "projectName": "New test project",
+                                "description": "new test project description",
+                                "name": "test DOTUS",
+                                "type": "graphviz",
+                                "tags": ["sucre", "kaledo"],
+                                "data": {
                                     "nodes": [{
                                             "group": "Test",
                                             "id": "MetricsTest1.scala"
@@ -297,7 +297,7 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project"
+                                "projectName": "New test project"
                             }
 
                         }
@@ -323,8 +323,8 @@
 
                             },
                             "example": {
-                                "ProjectName": "New test project",
-                                "ProjectDescription": " Very New test project"
+                                "projectName": "New test project",
+                                "description": " Very New test project"
                             }
 
                         }
@@ -379,9 +379,9 @@
                         "multipart/form-data": {
                             "schema": {
                                 "type": "object",
-                                "required": ["ProjectDescription"],
+                                "required": ["description"],
                                 "properties": {
-                                    "ProjectDescription": {
+                                    "description": {
                                         "type": "string"
                                     }
                                 }
@@ -428,12 +428,12 @@
                         "multipart/form-data": {
                             "schema": {
                                 "type": "object",
-                                "required": ["ProjectName", "ProjectDescription"],
+                                "required": ["name", "description"],
                                 "properties": {
-                                    "ProjectName": {
+                                    "name": {
                                         "type": "string"
                                     },
-                                    "ProjectDescription": {
+                                    "description": {
                                         "type": "string"
                                     },
                                     "File": {

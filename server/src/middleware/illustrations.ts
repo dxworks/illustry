@@ -46,14 +46,13 @@ export const updateIllustrationFromOtherSource = (req: any, res: any, next: any)
 
 export const findAllIllustration = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
-    console.log(projectName)
     illustrationApi.findAllIllustration(projectName, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
 }
 
 export const findAllIllustrationFromOtherSource = (req: any, res: any, next: any) => {
-    let projectName = req.body.projectName as string
+    let projectName = req.body.name as string
 
     illustrationApi.findAllIllustration(projectName, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
@@ -65,16 +64,15 @@ export const findAllIllustrationFromOtherSource = (req: any, res: any, next: any
 export const findOneIllustration = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
     let illustrationNameFromReq = req.params.illustrationName
-    console.log(projectName)
-    console.log(illustrationNameFromReq)
+
     illustrationApi.findOneIllustration(projectName, illustrationNameFromReq, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
 }
 
 export const findOneIllustrationFromOtherSource = (req: any, res: any, next: any) => {
-    let projectName = req.body.ProjectName as string
-    let illustrationNameFromReq = req.body.IllustrationName as string
+    let projectName = req.body.projectName as string
+    let illustrationNameFromReq = req.body.name as string
     illustrationApi.findOneIllustration(projectName, illustrationNameFromReq, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
@@ -89,23 +87,23 @@ export const deteleIllustration = (req: any, res: any, next: any) => {
 }
 
 export const deleteIllustrationFromExternalSource = (req: any, res: any, next: any) => {
-    let projectName = req.body.ProjectName as string
-    let illustrationName = req.body.IllustrationName as string
+    let projectName = req.body.projectName as string
+    let illustrationName = req.body.name as string
     illustrationApi.deteleIllustration(projectName, illustrationName, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
 }
 export const getAllIllustriesOfTheSameType = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
-    let illustrationType = req.params.illustrationType
+    let illustrationType = req.params.type
     illustrationApi.getAllIllustriesOfTheSameType(projectName, illustrationType, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
 }
 
 export const getAllIllustriesOfTheSameTypeFromOtherSource = (req: any, res: any, next: any) => {
-    let projectName = req.body.ProjectName as string
-    let illustrationType = req.body.IllustrationType as string
+    let projectName = req.body.projectName as string
+    let illustrationType = req.body.type as string
     illustrationApi.getAllIllustriesOfTheSameType(projectName, illustrationType, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })

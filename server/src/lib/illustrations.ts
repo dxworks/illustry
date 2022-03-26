@@ -60,7 +60,7 @@ export const addOrUpdateIllustrations = (projectName: string, files: FilePropert
                                                     type: t,
                                                     tags: illustrationModel.tags
                                                 }
-                                                console.log(newIllustrationModel)
+                                               
                                                 return IllustrationTable.findOneAndUpdate({
                                                     projectName: newIllustrationModel.projectName,
                                                     name: newIllustrationModel.name,
@@ -94,7 +94,7 @@ export const addOrUpdateIllustrations = (projectName: string, files: FilePropert
 }
 
 export const addIllustrationFromOtherSource = (projectName: string, illustrationName: string, illustrationType: string, tags: string[], illustrationData: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any, next: any) => {
-    let query = { Name: { $eq: projectName } };
+    let query = { name: { $eq: projectName } };
 
     return ProjectTable.find(query)
         .cursor()
@@ -102,7 +102,7 @@ export const addIllustrationFromOtherSource = (projectName: string, illustration
             if (doc) {
                 const illustrationModel: Illustration = {
                     data: illustrationData,
-                    projectName: doc.ProjectName,
+                    projectName: doc.name,
                     name: illustrationName,
                     type: illustrationType,
                     tags: tags
@@ -191,10 +191,9 @@ export const findOneIllustration = (projectName: string, illustrationNameFromReq
         .then(() => { return validateProjectNameAsString(projectName) })
         .then((valid: boolean) => {
             if (valid) {
-                console.log(query)
                 return IllustrationTable
                     .find(query)
-                    .then((doc: any) => { console.log(doc); next(null, doc); return doc })
+                    .then((doc: any) => {  next(null, doc); return doc })
                     .catch((err: any) => next(err, null))
             }
         })

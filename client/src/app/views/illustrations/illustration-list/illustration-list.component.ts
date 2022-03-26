@@ -36,7 +36,6 @@ export class IllustrationListComponent implements OnInit {
     this.searchItems();
   }
   ngOnInit(): void {
-    console.log(this.projectName)
     this.illustrationService.getAllIllustrations(this.projectName).subscribe((illustrations: Illustration[]) => {
       illustrations.forEach((illustrations, index) => {
         // @ts-ignore

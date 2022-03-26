@@ -29,12 +29,12 @@ export const createProjectfromExtern = (projectName: string, projectDescription:
             if (valid) {
                 _.assign(projectModel, { createdAt: new Date() })
                 _.assign(projectModel, { lastModified: new Date() })
-
                 let projectTable = new ProjectTable(projectModel)
                 projectTable.save((err: any) => {
                     if (err) {
                         next("Duplicated name of project", null)
                     }
+
                     _.assign(illustrationModel, { projectId: projectTable._id })
                     _.assign(illustrationModel, { createdAt: new Date() })
                     _.assign(illustrationModel, { lastModified: new Date() })
@@ -48,8 +48,7 @@ export const createProjectfromExtern = (projectName: string, projectDescription:
                 })
             }
         })
-
-        .catch((err: any) => next(err, null))
+        .catch((err: any) => { console.log(err); next(err, null) })
 }
 
 
@@ -72,11 +71,10 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
 
                         _.assign(projectModel, { createdAt: new Date() })
                         _.assign(projectModel, { lastModified: new Date() })
-                        console.log(projectModel)
                         let projectTable = new ProjectTable(projectModel)
                         projectTable.save((err: any) => {
                             if (err) {
-                                console.log(err)
+
                                 next("Duplicated name of project", null)
                             }
                             else {
@@ -127,7 +125,6 @@ export const createIllustryProject = (files: FileProperties[], project: Project,
                                                                     type: t,
                                                                     tags: illustrationModel.tags
                                                                 }
-                                                                console.log(newIllustrationModel)
                                                                 return IllustrationTable.findOneAndUpdate({
                                                                     projectName: newIllustrationModel.projectName,
                                                                     name: newIllustrationModel.name,
@@ -188,7 +185,7 @@ export const queryAllProjects = (next: any) => {
 }
 
 export const findOneProject = (projectName: string, next: any) => {
-    let query = { projectName: { $eq: projectName } }
+    let query = { name: { $eq: projectName } }
     return Promise.resolve()
         .then(() => {
             return validateProjectNameAsString(projectName)
@@ -197,9 +194,16 @@ export const findOneProject = (projectName: string, next: any) => {
             if (valid) {
                 return ProjectTable
                     .find(query)
-                    .select(' -_id ProjectName ProjectDescription')
+                    .select(' -_id name description')
                     .cursor()
-                    .eachAsync((doc: any) => { next(null, doc); return doc })
+                    .eachAsync((doc: any) => {
+                    
+                        if (doc) {
+                            next(null, doc);
+                        } else {
+                            next(null, `No Project with name ${projectName} is found`)
+                        }
+                    })
             }
         })
         .catch(err => next(err, null))

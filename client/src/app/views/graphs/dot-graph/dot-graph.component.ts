@@ -43,7 +43,6 @@ export class DotGraphComponent implements OnInit, OnDestroy {
     s.type = "javascript/worker";
     s.src = "https://unpkg.com/@hpcc-js/wasm/dist/index.min.js";
     this.elementRef.nativeElement.appendChild(s);
-    console.log("aici")
   }
   ngOnDestroy(): void {
     console.log("graphviz destroyed")
