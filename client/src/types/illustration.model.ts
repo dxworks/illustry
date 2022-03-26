@@ -14,16 +14,16 @@ import { VerticalChartTypes } from "src/app/entities/verticalchart-types";
 
 export class Illustration {
   public _id: string;
-  public IllustrationData: DotTypes | CalendarMatrixTypes | FlgTypes | HebTypes | SankeyTypes | HorizontalStackedChartsTypes | VerticalStackedChartsTypes | VerticalChartTypes | HorizontalChartTypes | GanttChartTypes | MatrixTypes | Timeline | any
-  public IllustrationName: string;
-  public IllustrationType: string;
-  public Tags?: string;
-  constructor(id: string, illustrationData: DotTypes | CalendarMatrixTypes | FlgTypes | HebTypes | SankeyTypes | HorizontalStackedChartsTypes | VerticalStackedChartsTypes | VerticalChartTypes | HorizontalChartTypes | GanttChartTypes | MatrixTypes | Timeline | any, illustrationName: string, illustrationType: string, tags: string) {
+  public data: DotTypes | CalendarMatrixTypes | FlgTypes | HebTypes | SankeyTypes | HorizontalStackedChartsTypes | VerticalStackedChartsTypes | VerticalChartTypes | HorizontalChartTypes | GanttChartTypes | MatrixTypes | Timeline | any
+  public name: string;
+  public type: string
+  public tags?: string;
+  constructor(id: string, data: DotTypes | CalendarMatrixTypes | FlgTypes | HebTypes | SankeyTypes | HorizontalStackedChartsTypes | VerticalStackedChartsTypes | VerticalChartTypes | HorizontalChartTypes | GanttChartTypes | MatrixTypes | Timeline | any, name: string, type: string, tags: string) {
     this._id = id;
-    this.IllustrationData = illustrationData;
-    this.IllustrationName = illustrationName;
-    this.IllustrationType = illustrationType;
-    this.Tags = tags
+    this.data = data;
+    this.name = name;
+    this.type = type;
+    this.tags = tags
 
   }
 }

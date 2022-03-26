@@ -10,8 +10,7 @@ import { DOT, CalendarHeatmap, FLG, HEB, Sankey, Matrix, Timeline, Illustration,
 import { validateProjectNameAsString } from '../validator/projectValidator';
 export const addOrUpdateIllustrations = (projectName: string, files: FileProperties[], next: any) => {
 
-    let query = { ProjectName: { $eq: projectName } };
-
+    let query = { Name: { $eq: projectName } };
     return readFile(files)
         .then((projectsJson: any) => {
             return ProjectTable.find(query)
@@ -19,41 +18,98 @@ export const addOrUpdateIllustrations = (projectName: string, files: FilePropert
                 .eachAsync((doc: any) => {
 
                     if (doc)
+
                         return Promise.map(projectsJson, projectJson => {
                             let illustrationModel: Illustration = {
-                                IllustrationData: _.get(projectJson, 'IllustrationData'),
-                                ProjectName: doc.ProjectName,
-                                IllustrationName: _.get(projectJson, 'IllustrationName'),
-                                IllustrationType: _.get(projectJson, 'IllustrationType'),
-                                ProjectId: doc._id,
-
-                                Tags: _.get(projectJson, 'Tags')
+                                data: _.get(projectJson, 'IllustrationData'),
+                                projectName: doc.Name,
+                                name: _.get(projectJson, 'IllustrationName'),
+                                type: _.get(projectJson, 'IllustrationType'),
+                                projectId: doc._id,
+                                tags: _.get(projectJson, 'Tags')
                             }
                             if (illustrationValidator(illustrationModel)) {
                                 return Promise.resolve(illustrationModel)
                                     .then((illustrationModel) => {
-                                        return IllustrationTable.findOneAndUpdate({
-                                            ProjectId: illustrationModel.ProjectId,
-                                            ProjectName: illustrationModel.ProjectName,
-                                            IllustrationName: illustrationModel.IllustrationName,
-                                        }, illustrationModel, { upsert: true, new: true })
-                                            .then((res: any) => {
-                                                if (!res.CreatedAt) {
-                                                    _.assign(res, { CreatedAt: new Date() })
-                                                    _.assign(res, { LastModified: new Date() })
+                                        let finalIllustration = {
+                                            Data: illustrationModel.data,
+                                            ProjectName: illustrationModel.projectName,
+                                            Name: illustrationModel.name,
+                                            Type: illustrationModel.type,
+                                            ProjectId: _.get(illustrationModel, 'projectId'),
+                                            Tags: illustrationModel.tags,
+
+                                        }
+                                        console.log(finalIllustration)
+                                        if (typeof illustrationModel.type === 'string') {
+                                            return IllustrationTable.findOneAndUpdate({
+                                                ProjectId: illustrationModel.projectId,
+                                                ProjectName: illustrationModel.projectName,
+                                                Name: illustrationModel.name,
+                                            }, finalIllustration, { upsert: true, new: true })
+                                                .then((res: any) => {
+                                                    if (!res.CreatedAt) {
+                                                        _.assign(res, { CreatedAt: new Date() })
+                                                        _.assign(res, { LastModified: new Date() })
+                                                    }
+                                                    else {
+                                                        _.assign(res, { LastModified: new Date() })
+                                                    }
+                                                    return IllustrationTable.findOneAndUpdate({
+                                                        ProjectId: res.ProjectId,
+                                                        ProjectName: res.ProjectName,
+                                                        IllustrationName: res.IllustrationName
+                                                    }, res)
+                                                        .then(() => {
+                                                            next(null, { result: 'Illustrations created' })
+                                                        })
+                                                })
+                                        }
+                                        else {
+
+                                            return Promise.each(illustrationModel.type, t => {
+                                                let newIllustrationModel: Illustration = {
+                                                    data: illustrationModel.data,
+                                                    projectName: illustrationModel.projectName,
+                                                    name: illustrationModel.name,
+                                                    type: t,
+                                                    projectId: illustrationModel.projectId,
+                                                    tags: illustrationModel.tags
                                                 }
-                                                else {
-                                                    _.assign(res, { LastModified: new Date() })
+                                                let finalIllustration = {
+                                                    Data: newIllustrationModel.data,
+                                                    ProjectName: newIllustrationModel.projectName,
+                                                    Name: newIllustrationModel.name,
+                                                    Type: newIllustrationModel.type,
+                                                    ProjectId: _.get(newIllustrationModel, 'projectId'),
+                                                    Tags: newIllustrationModel.tags,
+
                                                 }
                                                 return IllustrationTable.findOneAndUpdate({
-                                                    ProjectId: res.ProjectId,
-                                                    ProjectName: res.ProjectName,
-                                                    IllustrationName: res.IllustrationName
-                                                }, res)
-                                                    .then(() => {
-                                                        next(null, { result: 'Illustrations created' })
+                                                    ProjectId: newIllustrationModel.projectId,
+                                                    ProjectName: newIllustrationModel.projectName,
+                                                    Name: newIllustrationModel.name,
+                                                    Type: newIllustrationModel.type
+                                                }, finalIllustration, { upsert: true, new: true })
+                                                    .then((res: any) => {
+
+                                                        if (!res.CreatedAt) {
+                                                            _.assign(res, { CreatedAt: new Date() })
+                                                            _.assign(res, { LastModified: new Date() })
+                                                        }
+                                                        else {
+                                                            _.assign(res, { LastModified: new Date() })
+                                                        }
+                                                        return IllustrationTable.findOneAndUpdate({
+                                                            _id: res._id
+                                                        }, res)
+
                                                     })
                                             })
+                                                .then(() => {
+                                                    next(null, { result: 'Illustrations created' })
+                                                })
+                                        }
                                     })
                                     .catch((err: any) => next(err, null))
                             }
@@ -63,29 +119,41 @@ export const addOrUpdateIllustrations = (projectName: string, files: FilePropert
 }
 
 export const addIllustrationFromOtherSource = (projectName: string, illustrationName: string, illustrationType: string, tags: string[], illustrationData: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any, next: any) => {
-    let query = { ProjectName: { $eq: projectName } };
+    let query = { Name: { $eq: projectName } };
 
     return ProjectTable.find(query)
         .cursor()
         .eachAsync((doc: any) => {
             if (doc) {
                 const illustrationModel: Illustration = {
-                    IllustrationData: illustrationData,
-                    ProjectName: doc.ProjectName,
-                    IllustrationName: illustrationName,
-                    IllustrationType: illustrationType,
-                    ProjectId: doc._id,
-                    Tags: tags
+                    data: illustrationData,
+                    projectName: doc.ProjectName,
+                    name: illustrationName,
+                    type: illustrationType,
+                    projectId: doc._id,
+                    tags: tags
                 }
                 return Promise.resolve()
                     .then(() => { return illustrationValidator(illustrationModel) })
                     .then((valid: boolean) => {
                         if (valid) {
+
                             return Promise.resolve(illustrationModel)
                                 .then((res) => {
                                     _.assign(res, { CreatedAt: new Date() })
                                     _.assign(res, { LastModified: new Date() })
-                                    let illustrationTable = new IllustrationTable(res)
+                                    let finalIllustration = {
+                                        Data: res.data,
+                                        ProjectName: res.projectName,
+                                        Name: res.name,
+                                        Type: res.type,
+                                        ProjectId: res.projectId,
+                                        Tags: res.tags,
+                                        CreatedAt: _.get(res, 'CreatedAt'),
+                                        LastModified: _.get(res, 'LastModified')
+
+                                    }
+                                    let illustrationTable = new IllustrationTable(finalIllustration)
                                     illustrationTable.save((err: any) => {
                                         if (err)
                                             next(err, null)
@@ -105,16 +173,16 @@ export const addIllustrationFromOtherSource = (projectName: string, illustration
 export const updateIllustrationFromOtherSource = (projectName: string, illustrationName: string, illustrationType: string, tags: string[], illustrationData: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any, next: any) => {
     let query = {
         ProjectName: { $eq: projectName },
-        IllustrationName: { $eq: illustrationName }
+        Name: { $eq: illustrationName }
     };
 
-    let update = { IllustrationName: illustrationName, Tags: tags, IllustrationData: illustrationData, IllustrationType: illustrationType }
+    let update = { Name: illustrationName, Tags: tags, Data: illustrationData, Type: illustrationType }
     let ill: IllustrationUpdate = {
-        ProjectName: projectName,
-        IllustrationName: illustrationName,
-        Tags: tags,
-        IllustrationData: illustrationData,
-        IllustrationType: illustrationType
+        projectName: projectName,
+        name: illustrationName,
+        tags: tags,
+        data: illustrationData,
+        type: illustrationType
     }
     return Promise.resolve()
         .then(() => { return illustrationValidator(ill) })
@@ -153,16 +221,16 @@ export const findAllIllustration = (projectName: string, next: any) => {
 export const findOneIllustration = (projectName: string, illustrationNameFromReq: string, next: any) => {
     let query = {
         ProjectName: { $eq: projectName },
-        IllustrationName: { $eq: illustrationNameFromReq }
+        Name: { $eq: illustrationNameFromReq }
     };
     return Promise.resolve()
         .then(() => { return validateProjectNameAsString(projectName) })
         .then((valid: boolean) => {
             if (valid) {
+                console.log(query)
                 return IllustrationTable
                     .find(query)
-                    .cursor()
-                    .eachAsync((doc: any) => { next(null, doc); return doc })
+                    .then((doc: any) => { console.log(doc); next(null, doc); return doc })
                     .catch((err: any) => next(err, null))
             }
         })
@@ -173,7 +241,7 @@ export const findOneIllustration = (projectName: string, illustrationNameFromReq
 export const deleteIllustration = (projectName: string, illustrationNameFromReq: string, next: any) => {
     let query = {
         ProjectName: { $eq: projectName },
-        IllustrationName: { $eq: illustrationNameFromReq }
+        Name: { $eq: illustrationNameFromReq }
     };
     return Promise.resolve()
         .then(() => { return validateProjectNameAndIllustrationNameAsString(projectName, illustrationNameFromReq) })
@@ -195,7 +263,7 @@ export const deleteIllustration = (projectName: string, illustrationNameFromReq:
 export const getAllIllustriesOfTheSameType = (projectName: string, illustrationType: string, next: any) => {
     let query = {
         ProjectName: { $eq: projectName },
-        IllustrationType: { $eq: illustrationType }
+        Type: { $eq: illustrationType }
     };
     return Promise.resolve()
         .then(() => { return validateProjectNameAndIllustrationTypeAsString(projectName, illustrationType) })

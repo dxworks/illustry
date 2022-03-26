@@ -14,9 +14,9 @@ const read = (file: FileProperties) => {
             if (file.type === 'application/json') {
                 let illustration = data.toString();
                 let finalJson: any = {
-                    IllustrationData: _.get(JSON.parse(illustration), 'illustrationData'),
-                    IllustrationName: _.get(JSON.parse(illustration), 'illustrationName'),
-                    IllustrationType: _.get(JSON.parse(illustration), 'illustrationType'),
+                    IllustrationData: _.get(JSON.parse(illustration), 'data'),
+                    IllustrationName: _.get(JSON.parse(illustration), 'name'),
+                    IllustrationType: _.get(JSON.parse(illustration), 'type'),
                     Tags: _.get(JSON.parse(illustration), 'tags')
                 }
 

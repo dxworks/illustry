@@ -1,14 +1,16 @@
 import mongoose, { Schema } from 'mongoose';
-let graphsType = 'chart,timeline,flg,heb,treemap,sankeydiagram,matrix,calendarmatrix,graphiz,ploty'.split(',')
+import { IllustrationTypes } from '../types/illustrations.';
+
 export const IllustrationSchema = new mongoose.Schema({
     ProjectId: { type: Schema.Types.ObjectId, ref: 'Project' },
     ProjectName: { type: String, required: true },
-    IllustrationType: { type: String, required: true, enum: graphsType },
-    IllustrationName: { type: String, required: true },
+    Type: { type: String, required: true, enum: IllustrationTypes },
+    Name: { type: String, required: true },
     Tags: [{ type: String, required: false }],
-    IllustrationData: { type: Schema.Types.Mixed, required: true },
+    Data: { type: Schema.Types.Mixed, required: true },
     CreatedAt: { type: Date, required: false },
     LastModified: { type: Date, required: false }
 })
 const IllustrationTable = mongoose.model('Illustration', IllustrationSchema);
+IllustrationSchema.index({ ProjectName: 1, Type: 1, Name: 1 }, { unique: true })
 export default IllustrationTable;

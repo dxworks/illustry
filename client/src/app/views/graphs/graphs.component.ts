@@ -12,13 +12,7 @@ import { IllustrationService } from "../../services/illustration.service";
 export class GraphsComponent implements OnInit {
   projectName = "";
   illustrationName = "";
-  currentIllustration: Illustration = {
-    _id: '',
-    IllustrationName: '',
-    IllustrationData: {},
-    IllustrationType: '',
-    Tags: ''
-  };
+  currentIllustration: any[] = []
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
@@ -31,7 +25,6 @@ export class GraphsComponent implements OnInit {
           this.illustrationService.getIllustration(this.projectName, this.illustrationName)
             .subscribe(illustration => {
               this.currentIllustration = illustration;
-              console.log(this.currentIllustration);
             },
               error => {
                 throw Error(error)

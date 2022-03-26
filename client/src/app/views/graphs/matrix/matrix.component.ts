@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as d3 from 'd3';
 import * as _ from 'lodash';
 import { MatrixTypes } from 'src/app/entities/matrix-types';
 @Component({
@@ -31,7 +32,10 @@ export class MatrixComponent implements OnInit {
       this.createMatrix()
     }
   }
-
+  ngOnDestroy(): void {
+    console.log("matrix destroyed")
+    d3.select('showData').remove()
+  }
   private createRightHeaderString(spacesForEmptyTd: number, headers: any[]) {
     var thead = "<thead>"
     let firstRow = thead + `<tr id="header" >`

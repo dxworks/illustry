@@ -18,17 +18,17 @@ import { ErrorDialogComponent } from 'src/app/dialogs/error-dialog/error-dialog.
 export class ProjectAddComponent implements OnInit {
   project: Project = {
     _id: '',
-    ProjectName: '',
-    ProjectDescription: ''
+    Name: '',
+    Description: ''
   };
 
   illustration: Illustration = {
     _id: '',
-    IllustrationName: '',
+    name: '',
     // @ts-ignore
-    IllustrationData: [],
-    IllustrationType: '',
-    Tags: ''
+    data: [],
+    type: '',
+    tags: ''
   };
 
   submitted: boolean = false;

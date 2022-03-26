@@ -4,6 +4,7 @@ import * as helper from '../utils/helper'
 
 export const addOrUpdateIllustrations = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
+
     let files = _.get(req, 'files.File');
     if (_.isNil(files)) return helper.returnResponse(res, { name: 'invalidParam', message: "No files uploaded" }, null, next)
     let computedFiles = _.map(files, f => {
@@ -18,22 +19,24 @@ export const addOrUpdateIllustrations = (req: any, res: any, next: any) => {
 }
 
 export const addIllustrationFromOtherSource = (req: any, res: any, next: any) => {
-    let projectName = req.body.ProjectName as string
-    let illustrationName = req.body.IllustrationName as string
-    let illustrationType = req.body.IllustrationType as string
-    let tags = req.body.Tags as string[]
-    let illustrationData = req.body.IllustrationData as any
+    let projectName = req.body.projectName as string
+    let illustrationName = req.body.name as string
+    let illustrationType = req.body.type as string
+    let tags = req.body.tags as string[]
+    let illustrationData = req.body.data as any
     illustrationApi.addIllustrationFromOtherSource(projectName, illustrationName, illustrationType, tags, illustrationData, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
 }
 
 export const updateIllustrationFromOtherSource = (req: any, res: any, next: any) => {
-    let projectName = req.body.ProjectName as string
-    let illustrationName = req.body.IllustrationName as string
-    let illustrationType = req.body.IllustrationType as string
-    let tags = req.body.Tags as string[]
-    let illustrationData = req.body.IllustrationData as any
+
+    let projectName = req.body.projectName as string
+
+    let illustrationName = req.body.name as string
+    let illustrationType = req.body.type as string
+    let tags = req.body.tags as string[]
+    let illustrationData = req.body.data as any
     illustrationApi.updateIllustrationFromOtherSource(projectName, illustrationName, illustrationType, tags, illustrationData, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
@@ -43,13 +46,14 @@ export const updateIllustrationFromOtherSource = (req: any, res: any, next: any)
 
 export const findAllIllustration = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
+    console.log(projectName)
     illustrationApi.findAllIllustration(projectName, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })
 }
 
 export const findAllIllustrationFromOtherSource = (req: any, res: any, next: any) => {
-    let projectName = req.body.ProjectName as string
+    let projectName = req.body.projectName as string
 
     illustrationApi.findAllIllustration(projectName, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
@@ -61,6 +65,8 @@ export const findAllIllustrationFromOtherSource = (req: any, res: any, next: any
 export const findOneIllustration = (req: any, res: any, next: any) => {
     let projectName = req.params.projectName
     let illustrationNameFromReq = req.params.illustrationName
+    console.log(projectName)
+    console.log(illustrationNameFromReq)
     illustrationApi.findOneIllustration(projectName, illustrationNameFromReq, (err: any, data: any) => {
         helper.returnResponse(res, err, data, next)
     })

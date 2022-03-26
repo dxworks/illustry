@@ -21,7 +21,7 @@ export class AddIllustrationDialogComponent implements OnInit {
   files: File[] = [];
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: { projectName: string }, private illustrationService: IllustrationService, private router: Router) { }
-
+ 
   ngOnInit(): void {
   }
 
@@ -46,6 +46,7 @@ export class AddIllustrationDialogComponent implements OnInit {
     // formData.append('IllustrationName', this.form.value.IllustrationName)
     // formData.append('IllustrationType', this.form.value.IllustrationType)
     // formData.append('Tags', this.form.value.Tags)
+    console.log(this.data)
     this.illustrationService.createIllustration(this.data.projectName, formData)
       .subscribe(response => {
       }, error => {
