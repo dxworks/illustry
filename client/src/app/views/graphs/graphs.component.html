@@ -1,63 +1,5 @@
-<!-- <div [ngSwitch]="currentIllustration.type"> -->
-<!-- <app-chart
-    *ngSwitchCase="'verticalcharts'"
-    [data]="currentIllustration.data.VerticalChart"
-  ></app-chart> -->
-<!-- <app-d3-force-layout-graph
-    *ngSwitchCase="'force-directed-graph'"
-    [data]="currentIllustration.data"
-  ></app-d3-force-layout-graph>
-  <app-hiearchical-edge-bundling
-    *ngSwitchCase="'hierarchical-edge-bundling'"
-    [data]="currentIllustration.data"
-  ></app-hiearchical-edge-bundling>
-  <app-sanky-diagram
-    *ngSwitchCase="'sankey'"
-    [data]="currentIllustration.data"
-  ></app-sanky-diagram> -->
-<!-- <app-horizontal-chart
-    *ngSwitchCase="'horizontalcharts'"
-    [data]="currentIllustration.data.HorizontalChart"
-  ></app-horizontal-chart> -->
-<!-- <app-stacked-chart
-    *ngSwitchCase="'verticalstackedcharts'"
-    [data]="currentIllustration.data.VerticalStackedChart"
-  ></app-stacked-chart> -->
-<!-- <app-horizontal-stacked-chart
-    *ngSwitchCase="'horizontalstackedcharts'"
-    [data]="currentIllustration.data.HorizontalStackedChart"
-  ></app-horizontal-stacked-chart> -->
-<!-- <app-charts *ngSwitchCase="'chart'" [data]="currentIllustration.data">
-  </app-charts>
-  <app-matrix
-    *ngSwitchCase="'matrix'"
-    [data]="currentIllustration.data"
-  ></app-matrix>
-  <app-calendarheatmap
-    *ngSwitchCase="'calendar'"
-    [data]="currentIllustration.data"
-  ></app-calendarheatmap>
-  <app-dot-graph
-    *ngSwitchCase="'graphviz'"
-    [content]="currentIllustration.data"
-  ></app-dot-graph>
-  <app-timeline
-    *ngSwitchCase="'timeline'"
-    [data]="currentIllustration.data"
-  ></app-timeline>
-  <app-ganttchart
-    *ngSwitchCase="'ganttchart'"
-    [data]="currentIllustration.data"
-  ></app-ganttchart>
-  <app-ploty
-    *ngSwitchCase="'ploty'"
-    [data]="currentIllustration.data.data"
-    [layout]="currentIllustration.data.layout"
-    [config]="currentIllustration.data.config"
-  ></app-ploty>
-</div> -->
-<mat-tab-group>
-  <mat-tab [label]="ill.Type" *ngFor="let ill of currentIllustration">
+<mat-tab-group animationDuration="0ms" class="graph-tab" [selectedIndex]="selectedIndex" (selectedIndexChange)="selectTab($event)">
+  <mat-tab [label]="ill.Type" *ngFor="let ill of currentIllustrations">
     <ng-template matTabContent>
       <div [ngSwitch]="ill.Type">
         <app-d3-force-layout-graph
@@ -72,16 +14,17 @@
           *ngSwitchCase="'sankey'"
           [data]="ill.Data"
         ></app-sanky-diagram>
-        <app-charts *ngSwitchCase="'chart'" [data]="ill.Data"> </app-charts>
+        <app-charts *ngSwitchCase="'chart'" [data]="ill.Data"></app-charts>
         <app-matrix *ngSwitchCase="'matrix'" [data]="ill.Data"></app-matrix>
         <app-calendarheatmap
           *ngSwitchCase="'calendar'"
           [data]="ill.Data"
         ></app-calendarheatmap>
-        <app-dot-graph
-          *ngSwitchCase="'graphviz'"
-          [content]="ill.Data"
-        ></app-dot-graph>
+        <ng-container *ngSwitchCase="'graphviz'">
+          <app-dot-graph
+            [content]="ill.Data"
+          ></app-dot-graph>
+        </ng-container>
         <app-timeline
           *ngSwitchCase="'timeline'"
           [data]="ill.Data"

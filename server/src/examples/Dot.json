@@ -1,6 +1,6 @@
 {
   "name": "flgu2s",
-  "type": ["graphviz"],
+  "type": ["graphviz", "hierarchical-edge-bundling"],
   "tags": ["sucre", "kaledo"],
   "data": {
     "nodes": [{

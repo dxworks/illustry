@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
 import { graphviz } from 'd3-graphviz';
 
 import { PluginOutputConverterService } from '../../../services/plugin-output-converter.service';
@@ -31,20 +31,22 @@ export class DotGraphComponent implements OnInit, OnDestroy {
       // @ts-ignore
       this._content = newContent;
       // @ts-ignore
-      graphviz('#highLevelDiagram').renderDot(this._content);
+      graphviz('#highLevelDiagram', {engine: 'circo'}).renderDot(this._content);
+
       this.container = document.getElementById('highLevelDiagram');
     }
   }
 
   ngOnInit() {
   }
-  ngAfterViewInit() {
-    var s = document.createElement("script");
-    s.type = "javascript/worker";
-    s.src = "https://unpkg.com/@hpcc-js/wasm/dist/index.min.js";
-    this.elementRef.nativeElement.appendChild(s);
-    console.log("aici")
-  }
+  // ngAfterViewInit() {
+  //   var s = document.createElement("script");
+  //   s.type = "javascript/worker";
+  //   s.src = "https://unpkg.com/@hpcc-js/wasm/dist/index.min.js";
+  //   this.elementRef.nativeElement.appendChild(s);
+  //   console.log("aici")
+  // }
+
   ngOnDestroy(): void {
     console.log("graphviz destroyed")
     d3.select('#highLevelDiagram').remove()

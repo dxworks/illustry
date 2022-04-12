@@ -1,0 +1,10 @@
+.graph-tab {
+  height: 100%;
+
+  .mat-tab-header {
+    height: 60px;
+  }
+  .mat-tab-body-wrapper {
+    height: calc(100% - 60px);
+  }
+}

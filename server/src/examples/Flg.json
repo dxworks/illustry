@@ -1,6 +1,6 @@
 {
   "name": "flgus",
-  "type": ["hierarchical-edge-bundling", "graphviz", "force-directed-graph", "matrix"],
+  "type": [ "force-directed-graph"],
   "tags": ["sucre", "kaledo"],
   "data": {
     "nodes": [{

@@ -1,0 +1,34 @@
+<div [ngSwitch]="illustration.Type">
+  <app-d3-force-layout-graph
+    *ngSwitchCase="'force-directed-graph'"
+    [data]="illustration.Data"
+  ></app-d3-force-layout-graph>
+  <app-hiearchical-edge-bundling
+    *ngSwitchCase="'hierarchical-edge-bundling'"
+    [data]="illustration.Data"
+  ></app-hiearchical-edge-bundling>
+  <app-sanky-diagram
+    *ngSwitchCase="'sankey'"
+    [data]="illustration.Data"
+  ></app-sanky-diagram>
+  <app-charts *ngSwitchCase="'chart'" [data]="illustration.Data"> </app-charts>
+  <app-matrix *ngSwitchCase="'matrix'" [data]="illustration.Data"></app-matrix>
+  <app-calendarheatmap
+    *ngSwitchCase="'calendar'"
+    [data]="illustration.Data"
+  ></app-calendarheatmap>
+  <app-dot-graph
+    *ngSwitchCase="'graphviz'"
+    [content]="illustration.Data"
+  ></app-dot-graph>
+  <app-timeline
+    *ngSwitchCase="'timeline'"
+    [data]="illustration.Data"
+  ></app-timeline>
+  <app-ploty
+    *ngSwitchCase="'ploty'"
+    [data]="illustration.Data.data"
+    [layout]="illustration.Data.layout"
+    [config]="illustration.Data.config"
+  ></app-ploty>
+</div>

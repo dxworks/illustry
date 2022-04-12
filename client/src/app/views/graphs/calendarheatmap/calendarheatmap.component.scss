@@ -1,13 +1,5 @@
 #main {
-  height: 100% !important;
-
-  > div {
-    height: 100% !important;
-
-    > canvas {
-      height: auto !important;
-    }
-  }
+  padding: 0 2rem;
 }
 
 .echart-wrap {

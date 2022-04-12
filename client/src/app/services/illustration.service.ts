@@ -15,7 +15,7 @@ export class IllustrationService {
     return this.httpClient.get<Illustration[]>(`${projectUrl}/${projectName}/illustration`)
   }
 
-  getIllustration(projectName: string, illustrationName: string) {
+  getIllustrations(projectName: string, illustrationName: string) {
     return this.httpClient.get<Illustration[]>(`${projectUrl}/${projectName}/illustration/${illustrationName}`)
   }
 
