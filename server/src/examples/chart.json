@@ -1,6 +1,7 @@
 {
-    "name": "dadsa",
-    "type": ["gugu"],
+    "name": "dadsas",
+    "type": ["chart"],
+    "description": "very t2are description",
     "tags": ["sucre", "kaledo"],
     "data": {
         "series": [{

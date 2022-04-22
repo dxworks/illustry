@@ -106,21 +106,14 @@ export interface CalendarMatrix {
 interface Node {
   group: string;
   id?: string;
-  properties?:
-    | any
-    | string
-    | {
-        label: string;
-        value: Number;
-        style: any;
-      }[];
+  properties?:any| any[]
 }
 
 interface Link {
   source: string;
   target: string;
   value: number;
-  properties?: any | string;
+  properties?: any| any[];
   style?: any;
 }
 

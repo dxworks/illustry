@@ -1,13 +1,7 @@
 import { Project } from "../types/project";
 import { illustrationValidator } from "./illustrationValidator";
 import { Illustration, IllustrationUpdate } from "../types/illustrations.";
-import * as FLGSchema from '../../jsonSchemas/FLG.json';
-import * as DotSchema from '../../jsonSchemas/DOT.json';
-import * as HEBSchema from '../../jsonSchemas/HEB.json';
-import * as CalendarMatrixSchema from '../../jsonSchemas/CalendarHeatmap.json';
-import * as MatrixSchema from '../../jsonSchemas/Matrix.json';
-import * as SankeySchema from '../../jsonSchemas/Sankey.json';
-import * as TimelineSchema from '../../jsonSchemas/Timeline.json';
+
 import Ajv from 'ajv'
 const ajv = new Ajv()
 export const validateProjectNameAsString = (name: string) => {
@@ -23,11 +17,6 @@ export const validateProjectNameAsString = (name: string) => {
 export const validateProject = (project: Project, illustration?: IllustrationUpdate | Illustration) => {
     let validProjectName = false;
     let validProjectDescription = false;
-    let tagsValid = false;
-    let projectNameValid = false;
-    let illustrationNameValid = false;
-    let illustrationTypeValid = false;
-    let illustrationDataValid = false;
     let illustrationValid = false;
     if (illustration) {
         illustrationValid = illustrationValidator(illustration)

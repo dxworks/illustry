@@ -1,8 +1,9 @@
 {
-    "illustrationName": "calendarmatrixus",
-    "illustrationType": "calendarmatrix",
+    "name": "calendarmatrixus",
+    "type": "calendar",
+    "description": "seee",
     "tags": ["sucre", "kaledo"],
-    "illustrationData": {
+    "data": {
         "calendar": [{
                 "date": "2019-02-01",
                 "value": 15,

@@ -1,0 +1,57 @@
+{
+    "name": "ss",
+    "type": ["matrix"],
+    "description": "very t2are description",
+    "tags": ["sucre", "kaledo"],
+    "data": {
+        "nodes": [{
+                "group": "Test",
+                "id": "MetricsTest.scala",
+                "properties": [{
+                    "label": "Size(%)",
+                    "value": 29,
+                    "style": {
+                        "font-weight": "bold",
+                        "color": "green"
+                    }
+                }, {
+                    "label": "Devs",
+                    "value": 17,
+                    "style": {
+                        "font-weight": "bold"
+                    }
+                }, {
+                    "label": "Active Devs",
+                    "value": 29,
+                    "style": {
+                        "font-weight": "bold"
+                    }
+                }, {
+                    "label": "APKS(%)",
+                    "value": 10,
+                    "style": {
+                        "font-weight": "bold"
+                    }
+                }],
+                "style": {
+                    "font-weight": "bold",
+                    "color": "green"
+                }
+            },
+            {
+                "group": "Test",
+                "id": "StreamsUpgradeTest.java"
+            }
+        ],
+        "links": [{
+            "source": "nameG1$185",
+            "target": "nameG2$13",
+            "value": 33,
+            "style": {
+                "background-color": "green"
+            }
+        }]
+
+    }
+
+}

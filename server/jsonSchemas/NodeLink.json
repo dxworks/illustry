@@ -15,11 +15,6 @@
                     "type": "number"
                 }
             },
-            "required": [
-                "source",
-                "target",
-                "value"
-            ],
             "type": "object"
         },
         "Node": {
@@ -32,9 +27,6 @@
                 },
                 "properties": {}
             },
-            "required": [
-                "group"
-            ],
             "type": "object"
         }
     },
@@ -56,10 +48,5 @@
             "type": "array"
         }
     },
-    "required": [
-        "links",
-        "nodes"
-    ],
     "type": "object"
 }
-

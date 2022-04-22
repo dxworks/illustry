@@ -1,6 +1,7 @@
 {
     "name": "dadsa",
-    "type": "plotly",
+    "type": ["plotly"],
+    "description": "very t2are description",
     "tags": ["11111", "kaledo"],
     "data": {
         "data": [{
