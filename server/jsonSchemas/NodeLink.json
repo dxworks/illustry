@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "Link": {
+            "properties": {
+                "properties": {},
+                "source": {
+                    "type": "string"
+                },
+                "style": {},
+                "target": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "source",
+                "target",
+                "value"
+            ],
+            "type": "object"
+        },
+        "Node": {
+            "properties": {
+                "group": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "properties": {}
+            },
+            "required": [
+                "group"
+            ],
+            "type": "object"
+        }
+    },
+    "properties": {
+        "colorMapping": {
+            "items": {},
+            "type": "array"
+        },
+        "links": {
+            "items": {
+                "$ref": "#/definitions/Link"
+            },
+            "type": "array"
+        },
+        "nodes": {
+            "items": {
+                "$ref": "#/definitions/Node"
+            },
+            "type": "array"
+        }
+    },
+    "required": [
+        "links",
+        "nodes"
+    ],
+    "type": "object"
+}
+
