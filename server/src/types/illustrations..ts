@@ -1,88 +1,76 @@
-export enum IllustrationTypes{
-    CHART = 'chart',
-    WORLD_CLOUD= 'word-cloud',
-    PLOTLY = 'plotly',
-    TIMELINE= 'timeline',
-    FORCE_DIRECTED_GRAPH = 'force-directed-graph',
-    TREEMAP = 'treemap',
-    SANKEY = 'sankey',
-    CALENDAR = 'calendar',
-    MATRIX = 'matrix',
-    GRAPHVIZ = 'graphviz',
-    HIERARCHICAL_EDGE_BUNDLING= 'hierarchical-edge-bundling'
+export enum IllustrationTypes {
+  CHART = "chart",
+  WORLD_CLOUD = "word-cloud",
+  PLOTLY = "plotly",
+  TIMELINE = "timeline",
+  FORCE_DIRECTED_GRAPH = "force-directed-graph",
+  TREEMAP = "treemap",
+  SANKEY = "sankey",
+  CALENDAR = "calendar",
+  MATRIX = "matrix",
+  GRAPHVIZ = "graphviz",
+  HIERARCHICAL_EDGE_BUNDLING = "hierarchical-edge-bundling",
 }
 export interface Illustration {
-    projectName: string;
-    type: string | string[];
-    name: string;
-    tags?: string[];
-    data: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
-    createdAt?:Date
-    lastModified?:Date
+  projectName: string;
+  type: IllustrationTypes | IllustrationTypes[];
+  description?: string;
+  name: string;
+  tags?: string[];
+  data: NodeLink | CalendarHeatmap | Timeline | any;
+  createdAt?: Date;
+  lastModified?: Date;
 }
 
 export interface IllustrationUpdate {
-    projectName: string;
-    type: string | string[];
-    name: string;
-    tags?: string[];
-    data: DOT | CalendarHeatmap | FLG | HEB | Sankey | Matrix | Timeline | any;
-    createdAt?:Date
-    lastModified?:Date
+  projectName: string;
+  type: IllustrationTypes | IllustrationTypes[];
+  description?: string;
+  name: string;
+  tags?: string[];
+  data: NodeLink | CalendarHeatmap | Timeline | any;
+  createdAt?: Date;
+  lastModified?: Date;
 }
 
 interface TimelineEventTag {
-    name: string
-    style: any
+  name: string;
+  style: any;
 }
 
 export interface TimelineEvent {
-    summary: string
-    date: string
-    type: string
-    author: string
-    tags?: TimelineEventTag[]
-    description?: string
-    style: any
+  summary: string;
+  date: string;
+  type: string;
+  author: string;
+  tags?: TimelineEventTag[];
+  description?: string;
+  style: any;
 }
 
 export interface Timeline {
-    [date: string]: {
-        summary?: {
-            title?: string,
-            style?: any
-        },
-        events: TimelineEvent[],
-    }
+  [date: string]: {
+    summary?: {
+      title?: string;
+      style?: any;
+    };
+    events: TimelineEvent[];
+  };
 }
 
 export interface CalendarHeatmap {
-    calendar: CalendarData[]
-    categories: any
-    tooltip?: any
+  calendar: CalendarData[];
+  categories: any;
+  tooltip?: any;
 }
-export interface Matrix {
-    nodes: NodesMatrix[]
-    links: LinksMatrix[]
-}
-
-export interface DOT {
-    nodes: Node[];
-    links: Link[];
+export interface NodeLink {
+  nodes: Node[];
+  links: Link[];
+  colorMapping?: any[];
 }
 
 export interface CalendarMatrix {
-    calendarData: CalendarData[]
-}
-
-export interface FLG {
-    nodes: Node[];
-    links: Link[];
-}
-
-export interface HEB {
-    nodes: Node[];
-    links: Link[];
+  calendarData: CalendarData[];
 }
 
 // export interface VerticalStackedCharts {
@@ -113,49 +101,36 @@ export interface HEB {
 //     minDomainInterval?: number;
 //     step?: number;
 // }
-export interface Sankey {
-    nodes: NodesSankey[];
-    links: LinksSankey[];
-    colorMapping?: any[]
-}
-
-
 
 //Details for FLG HEB Sankey And Dot
-  interface Node {
-    group: string;
-    id?: string;
-}
-interface NodesMatrix extends Node {
-    properties?: [{
-        label: string,
-        value: Number,
-        style: any
-    }]
+interface Node {
+  group: string;
+  id?: string;
+  properties?:
+    | any
+    | string
+    | {
+        label: string;
+        value: Number;
+        style: any;
+      }[];
 }
 
 interface Link {
-    source: string;
-    target: string;
-    value: number;
-}
-interface NodesSankey extends Node {
-    properties?: any | string
-}
-interface LinksSankey extends Link {
-    properties?: any | string
-}
-interface LinksMatrix extends Link {
-    style?: any
+  source: string;
+  target: string;
+  value: number;
+  properties?: any | string;
+  style?: any;
 }
 
 interface CalendarData {
-    date: string,
-    value: number,
-    year: number,
-    category: string
+  date: string;
+  value: number;
+  year: number;
+  category: string;
 }
-//Details for Horizontal/Vertical Charts 
+//Details for Horizontal/Vertical Charts
 
 // interface Chart {
 //     name: string,

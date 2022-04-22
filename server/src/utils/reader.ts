@@ -16,6 +16,7 @@ const read = (file: FileProperties) => {
                 let finalJson: any = {
                     data: illustration?.data,
                     name: illustration?.name,
+                    description:illustration?.description,
                     type: illustration?.type,
                     tags: illustration?.tags
                 }
@@ -35,23 +36,4 @@ export const readFile = (files: FileProperties[]) => {
 
 
 }
-// else
-// if (file.type === 'text/csv'|| file.type ==='application/vnd.ms-excel') {
-//     let illustration = data.toString();
-
-//     converter.csv2json(illustration, function (err: any, json: any) {
-//         if (err) throw err;
-//         let finalJson = {
-//             IllustrationData:json
-//         }
-//         next(null, { ...project, ...finalJson })
-//     })
-
-
-function csvToJson(csv: any) {
-    const content = csv.split('\n');
-    const header = content[0].split(',');
-    return _.tail(content).map((row: any) => {
-        return _.zipObject(header, row.split(','));
-    });
-}
+ 
