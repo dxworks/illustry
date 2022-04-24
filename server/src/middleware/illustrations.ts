@@ -1,5 +1,6 @@
-import * as illustrationApi from "../api/illustrations";
+import { Factory } from "../bzl/factory";
 import _ from "lodash";
+
 import * as helper from "../utils/helper";
 import { IllustrationTypes } from "../types/illustrations.";
 
@@ -20,13 +21,11 @@ export const addOrUpdateIllustrations = (req: any, res: any, next: any) => {
       type: _.get(f, "mimetype"),
     };
   });
-  illustrationApi.addOrUpdateIllustrations(
-    projectName,
-    computedFiles,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.addOrUpdateIllustrations(projectName, computedFiles)
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };
 
 export const addIllustrationFromOtherSource = (
@@ -42,17 +41,18 @@ export const addIllustrationFromOtherSource = (
   let illustrationDescription = req.body.description as string;
   let tags = req.body.tags as string[];
   let illustrationData = req.body.data as any;
-  illustrationApi.addIllustrationFromOtherSource(
-    projectName,
-    illustrationName,
-    illustrationDescription,
-    illustrationType,
-    tags,
-    illustrationData,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.addIllustrationFromOtherSource(
+      projectName,
+      illustrationName,
+      illustrationDescription,
+      illustrationType,
+      tags,
+      illustrationData
+    )
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };
 
 export const updateIllustrationFromOtherSource = (
@@ -68,24 +68,27 @@ export const updateIllustrationFromOtherSource = (
   let illustrationDescription = req.body.description as string;
   let tags = req.body.tags as string[];
   let illustrationData = req.body.data as any;
-  illustrationApi.updateIllustrationFromOtherSource(
-    projectName,
-    illustrationName,
-    illustrationDescription,
-    illustrationType,
-    tags,
-    illustrationData,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.updateIllustrationFromOtherSource(
+      projectName,
+      illustrationName,
+      illustrationDescription,
+      illustrationType,
+      tags,
+      illustrationData
+    )
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };
 
 export const findAllIllustration = (req: any, res: any, next: any) => {
   let projectName = req.params.projectName;
-  illustrationApi.findAllIllustration(projectName, (err: any, data: any) => {
-    helper.returnResponse(res, err, data, next);
-  });
+  Factory.getInstance()
+    .api.illustrationApi.findAllIllustration(projectName)
+    .asCallback((err: any, data: any) => {
+      helper.returnResponse(res, err, data, next);
+    });
 };
 
 export const findAllIllustrationFromOtherSource = (
@@ -95,22 +98,25 @@ export const findAllIllustrationFromOtherSource = (
 ) => {
   let projectName = req.body.name as string;
 
-  illustrationApi.findAllIllustration(projectName, (err: any, data: any) => {
-    helper.returnResponse(res, err, data, next);
-  });
+  Factory.getInstance()
+    .api.illustrationApi.findAllIllustration(projectName)
+    .asCallback((err: any, data: any) => {
+      helper.returnResponse(res, err, data, next);
+    });
 };
 
 export const findOneIllustration = (req: any, res: any, next: any) => {
   let projectName = req.params.projectName;
   let illustrationNameFromReq = req.params.illustrationName;
 
-  illustrationApi.findOneIllustration(
-    projectName,
-    illustrationNameFromReq,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.findOneIllustration(
+      projectName,
+      illustrationNameFromReq
+    )
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };
 
 export const findOneIllustrationFromOtherSource = (
@@ -120,25 +126,27 @@ export const findOneIllustrationFromOtherSource = (
 ) => {
   let projectName = req.body.projectName as string;
   let illustrationNameFromReq = req.body.name as string;
-  illustrationApi.findOneIllustration(
-    projectName,
-    illustrationNameFromReq,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.findOneIllustration(
+      projectName,
+      illustrationNameFromReq
+    )
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };
 
 export const deteleIllustration = (req: any, res: any, next: any) => {
   let projectName = req.params.projectName;
   let illustrationNameFromReq = req.params.illustrationName;
-  illustrationApi.deteleIllustration(
-    projectName,
-    illustrationNameFromReq,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.deteleIllustration(
+      projectName,
+      illustrationNameFromReq
+    )
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };
 
 export const deleteIllustrationFromExternalSource = (
@@ -148,13 +156,11 @@ export const deleteIllustrationFromExternalSource = (
 ) => {
   let projectName = req.body.projectName as string;
   let illustrationName = req.body.name as string;
-  illustrationApi.deteleIllustration(
-    projectName,
-    illustrationName,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.deteleIllustration(projectName, illustrationName)
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };
 export const getAllIllustriesOfTheSameType = (
   req: any,
@@ -163,13 +169,14 @@ export const getAllIllustriesOfTheSameType = (
 ) => {
   let projectName = req.params.projectName;
   let illustrationType = req.params.type;
-  illustrationApi.getAllIllustriesOfTheSameType(
-    projectName,
-    illustrationType,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.getAllIllustriesOfTheSameType(
+      projectName,
+      illustrationType
+    )
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };
 
 export const getAllIllustriesOfTheSameTypeFromOtherSource = (
@@ -179,11 +186,12 @@ export const getAllIllustriesOfTheSameTypeFromOtherSource = (
 ) => {
   let projectName = req.body.projectName as string;
   let illustrationType = req.body.type as string;
-  illustrationApi.getAllIllustriesOfTheSameType(
-    projectName,
-    illustrationType,
-    (err: any, data: any) => {
+  Factory.getInstance()
+    .api.illustrationApi.getAllIllustriesOfTheSameType(
+      projectName,
+      illustrationType
+    )
+    .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
-    }
-  );
+    });
 };

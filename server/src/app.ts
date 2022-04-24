@@ -12,7 +12,8 @@ const mongoSanitize = require('express-mongo-sanitize');
 const app = express();
 
 
-app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 connectMongoose();
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');

@@ -1,4 +1,5 @@
-import * as illustrationLib from "../lib/illustrations";
+import {Promise} from 'bluebird';
+import { Factory } from "../bzl/factory";
 import { FileProperties } from "../types/fileproperties";
 import {
   NodeLink,
@@ -7,103 +8,87 @@ import {
   IllustrationTypes,
 } from "../types/illustrations.";
 
-export function addOrUpdateIllustrations(
-  projectName: string,
-  files: FileProperties[],
-  next: any
-) {
-  return Promise.resolve().then(() => {
-    return illustrationLib.addOrUpdateIllustrations(projectName, files, next);
-  });
-}
+export const illustrationApi = {
+  addOrUpdateIllustrations(projectName: string, files: FileProperties[]) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().illustrationBzl.addOrUpdateIllustrations(
+        projectName,
+        files
+      );
+    });
+  },
 
-export function findAllIllustration(projectName: string, next: any) {
-  return Promise.resolve().then(() => {
-    return illustrationLib.findAllIllustration(projectName, next);
-  });
-}
+  findAllIllustration(projectName: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().illustrationBzl.findAllIllustration(
+        projectName
+      );
+    });
+  },
 
-export function findOneIllustration(
-  projectName: string,
-  illustrationNameFromReq: string,
-  next: any
-) {
-  return Promise.resolve().then(() => {
-    return illustrationLib.findOneIllustration(
-      projectName,
-      illustrationNameFromReq,
-      next
-    );
-  });
-}
+  findOneIllustration(projectName: string, illustrationNameFromReq: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().illustrationBzl.findOneIllustration(
+        projectName,
+        illustrationNameFromReq
+      );
+    });
+  },
 
-export function deteleIllustration(
-  projectName: string,
-  illustrationNameFromReq: string,
-  next: any
-) {
-  return Promise.resolve().then(() => {
-    return illustrationLib.deleteIllustration(
-      projectName,
-      illustrationNameFromReq,
-      next
-    );
-  });
-}
+  deteleIllustration(projectName: string, illustrationNameFromReq: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().illustrationBzl.deleteIllustration(
+        projectName,
+        illustrationNameFromReq
+      );
+    });
+  },
 
-export function updateIllustrationFromOtherSource(
-  projectName: string,
-  illustrationName: string,
-  illustrationDescription: string,
-  illustrationType: IllustrationTypes | IllustrationTypes[],
-  tags: string[],
-  illustrationData: NodeLink | CalendarHeatmap | Timeline | any,
-  next: any
-) {
-  return Promise.resolve().then(() => {
-    return illustrationLib.updateIllustrationFromOtherSource(
-      projectName,
-      illustrationName,
-      illustrationDescription,
-      illustrationType,
-      tags,
-      illustrationData,
-      next
-    );
-  });
-}
-export function addIllustrationFromOtherSource(
-  projectName: string,
-  illustrationName: string,
-  illustrationDescription: string,
-  illustrationType: IllustrationTypes | IllustrationTypes[],
-  tags: string[],
-  illustrationData: NodeLink | CalendarHeatmap | Timeline | any,
-  next: any
-) {
-  return Promise.resolve().then(() => {
-    return illustrationLib.addIllustrationFromOtherSource(
-      projectName,
-      illustrationName,
-      illustrationDescription,
-      illustrationType,
-      tags,
-      illustrationData,
-      next
-    );
-  });
-}
+  updateIllustrationFromOtherSource(
+    projectName: string,
+    illustrationName: string,
+    illustrationDescription: string,
+    illustrationType: IllustrationTypes | IllustrationTypes[],
+    tags: string[],
+    illustrationData: NodeLink | CalendarHeatmap | Timeline | any
+  ) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().illustrationBzl.updateIllustrationFromOtherSource(
+        projectName,
+        illustrationName,
+        illustrationDescription,
+        illustrationType,
+        tags,
+        illustrationData
+      );
+    });
+  },
+  addIllustrationFromOtherSource(
+    projectName: string,
+    illustrationName: string,
+    illustrationDescription: string,
+    illustrationType: IllustrationTypes | IllustrationTypes[],
+    tags: string[],
+    illustrationData: NodeLink | CalendarHeatmap | Timeline | any
+  ) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().illustrationBzl.addIllustrationFromOtherSource(
+        projectName,
+        illustrationName,
+        illustrationDescription,
+        illustrationType,
+        tags,
+        illustrationData
+      );
+    });
+  },
 
-export function getAllIllustriesOfTheSameType(
-  projectName: string,
-  illustrationType: string,
-  next: any
-) {
-  return Promise.resolve().then(() => {
-    return illustrationLib.getAllIllustriesOfTheSameType(
-      projectName,
-      illustrationType,
-      next
-    );
-  });
-}
+  getAllIllustriesOfTheSameType(projectName: string, illustrationType: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().illustrationBzl.getAllIllustriesOfTheSameType(
+        projectName,
+        illustrationType
+      );
+    });
+  },
+};

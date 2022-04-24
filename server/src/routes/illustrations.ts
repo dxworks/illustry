@@ -16,10 +16,6 @@ router.post(
   illustrationMiddleware.addOrUpdateIllustrations
 );
 
-// router.put('/api/project/:projectName/illustration/:illustrationName', upload.single('File'), illustrationMiddleware.updateIllustration)
-
-// router.put('/api/project/:projectName/illustration/multiple', upload.array('File', 10), illustrationMiddleware.updateManyIllustration)
-
 router.get(
   "/api/project/:projectName/illustration",
   illustrationMiddleware.findAllIllustration

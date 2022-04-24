@@ -1,11 +1,11 @@
-import * as projectApi from "../api/project";
+import { Factory } from "../bzl/factory";
 import _ from "lodash";
 import * as helper from "../utils/helper";
 import { IllustrationTypes } from "../types/illustrations.";
 
 export const createProjectfromExtern = (req: any, res: any, next: any) => {
   let projectName = req.body.projectName as string;
-  let projectDescription = req.body.description as string;
+  let projectDescription = req.body.projectDescription as string;
   let illustrationName = req.body.name as string;
   let illustrationType = req.body.type as
     | IllustrationTypes
@@ -13,23 +13,24 @@ export const createProjectfromExtern = (req: any, res: any, next: any) => {
   let illustrationDescription = req.body.description as string;
   let tags = req.body.tags as string[];
   let illustrationData = req.body.data as any;
-  projectApi.createProjectfromExtern(
+  return Factory.getInstance().api.projectApi.createProjectfromExtern(
     projectName,
     projectDescription,
     illustrationName,
     illustrationType,
     illustrationDescription,
     tags,
-    illustrationData,
-    (errGPC: any, data: any) => {
-      helper.returnResponse(res, errGPC, data, next);
-    }
-  );
+    illustrationData)
+    .asCallback((errGPC:any, data:any) => {
+    
+      return helper.returnResponse(res, errGPC, data, next);
+    })
 };
 
 export const deleteProjectfromExtern = (req: any, res: any, next: any) => {
   let projectName = req.body.projectName as string;
-  projectApi.deleteProject(projectName, (errGPC: any, data: any) => {
+  Factory.getInstance().api.projectApi.deleteProject(projectName)
+  .asCallback((errGPC:any, data:any) => {
     helper.returnResponse(res, errGPC, data, next);
   });
 };
@@ -37,10 +38,10 @@ export const deleteProjectfromExtern = (req: any, res: any, next: any) => {
 export const updateProjectfromEtern = (req: any, res: any, next: any) => {
   let projectName = req.body.projectName as string;
   let projectDescription = req.body.description as string;
-  projectApi.updateProjectfromEtern(
+  Factory.getInstance().api.projectApi.updateProjectfromEtern(
     projectName,
-    projectDescription,
-    (errGPC: any, data: any) => {
+    projectDescription)
+    .asCallback((errGPC:any, data:any) => {
       helper.returnResponse(res, errGPC, data, next);
     }
   );
@@ -48,7 +49,8 @@ export const updateProjectfromEtern = (req: any, res: any, next: any) => {
 
 export const getOneProjectfromEtern = (req: any, res: any, next: any) => {
   let projectName = req.body.projectName as string;
-  projectApi.getOneProjectfromEtern(projectName, (errGPC: any, data: any) => {
+  Factory.getInstance().api.projectApi.getOneProjectfromEtern(projectName)
+  .asCallback((errGPC:any, data:any) => {
     helper.returnResponse(res, errGPC, data, next);
   });
 };
@@ -75,25 +77,27 @@ export const createIllustryProject = (req: any, res: any, next: any) => {
     name: projectName,
     description: projectDescription,
   };
-  projectApi.createIllustryProject(
+  Factory.getInstance().api.projectApi.createIllustryProject(
     computedFiles,
-    fields,
-    (errGPC: any, data: any) => {
+    fields)
+    .asCallback((errGPC:any, data:any) => {
       helper.returnResponse(res, errGPC, data, next);
     }
   );
 };
 
 export const query = (req: any, res: any, next: any) => {
-  projectApi.queryAllProjects((err: any, data: any) => {
+ return Factory.getInstance().api.projectApi.queryAllProjects()
+  .asCallback((err, data) => {
     helper.returnResponse(res, err, data, next);
-  });
+  })
 };
 
 export const findOne = (req: any, res: any, next: any) => {
   let projectName = req.params.projectName;
   {
-    projectApi.findOneProject(projectName, (err: any, data: any) => {
+  return  Factory.getInstance().api.projectApi.findOneProject(projectName)
+  .asCallback((err:any, data:any) => {
       helper.returnResponse(res, err, data, next);
     });
   }
@@ -103,10 +107,10 @@ export const updateProject = (req: any, res: any, next: any) => {
   let projectName = req.params.projectName;
   let projectDescription = req.body.description as string;
   {
-    projectApi.updateProject(
+    Factory.getInstance().api.projectApi.updateProject(
       projectName,
-      projectDescription,
-      (err: any, data: any) => {
+      projectDescription)
+      .asCallback((err:any, data:any) => {
         helper.returnResponse(res, err, data, next);
       }
     );
@@ -116,7 +120,8 @@ export const updateProject = (req: any, res: any, next: any) => {
 export const deleteProject = (req: any, res: any, next: any) => {
   let projectName = req.params.projectName;
   {
-    projectApi.deleteProject(projectName, (err: any, data: any) => {
+    Factory.getInstance().api.projectApi.deleteProject(projectName)
+    .asCallback((err:any, data:any) => {
       helper.returnResponse(res, err, data, next);
     });
   }

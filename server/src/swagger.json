@@ -105,6 +105,7 @@
                             "example": {
                                 "projectName": "New test project",
                                 "name": "test for dot",
+                                "description": "test description",
                                 "type": "graphviz",
                                 "tags": ["sucre", "kaledo"],
                                 "data": {
@@ -150,6 +151,7 @@
                             "example": {
                                 "projectName": "New test project",
                                 "name": "test for dot",
+                                "description": "very very cool description",
                                 "type": "graphviz",
                                 "tags": ["new sucre", "new kaledo"],
                                 "data": {
@@ -252,8 +254,9 @@
                             },
                             "example": {
                                 "projectName": "New test project",
-                                "description": "new test project description",
+                                "projectDescription": "new test project description",
                                 "name": "test DOTUS",
+                                "description": "test DOTUS description",
                                 "type": "graphviz",
                                 "tags": ["sucre", "kaledo"],
                                 "data": {
