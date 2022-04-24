@@ -1,5 +1,5 @@
 <mat-tab-group animationDuration="0ms" class="graph-tab" [selectedIndex]="selectedIndex" (selectedIndexChange)="selectTab($event)">
-    <mat-tab [label]="ill.Type" *ngFor="let ill of currentIllustrations">
+    <mat-tab [label]="ill.type" *ngFor="let ill of currentIllustrations">
         <ng-template matTabContent>
             <div [ngSwitch]="ill.type">
                 <app-d3-force-layout-graph *ngSwitchCase="'force-directed-graph'" [data]="ill.data"></app-d3-force-layout-graph>

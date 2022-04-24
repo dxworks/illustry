@@ -18,6 +18,7 @@ export class ChartsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    console.log(this.data)
     if (this.data) {
       //@ts-ignore
       this.createChart(this.data)
@@ -25,7 +26,7 @@ export class ChartsComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     echarts.disconnect
-    this.myChart.dispose()
+    // this.myChart.dispose()
     console.log("chart destroyed")
   }
 

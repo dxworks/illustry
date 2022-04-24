@@ -49,7 +49,8 @@ export class GraphsComponent implements OnInit {
 
   selectTab(index: number) {
     this.selectedIndex = index
-    this.graphType = this.currentIllustrations[index].Type
+    console.log(this.currentIllustrations)
+    this.graphType = this.currentIllustrations[index].type
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: {type: this.graphType},
