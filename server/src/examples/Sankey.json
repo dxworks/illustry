@@ -1,13 +1,14 @@
 {
-    "illustrationName": "sankeyus",
-    "illustrationType": "sankeydiagram",
+    "name": "sankeyus",
+    "type": ["sankey"],
+    "description": "dsa",
     "tags": ["sucre", "kaledo"],
-    "illustrationData": {
+    "data": {
 
         "nodes": [{
-                "id": "Captain America: The First Avenger (2011)",    
-                "group": "Movie", 
-                "properties": {         
+                "id": "Captain America: The First Avenger (2011)",
+                "group": "Movie",
+                "properties": {
                     "duration": "120 min",
                     "worth": "100 mil"
                 }

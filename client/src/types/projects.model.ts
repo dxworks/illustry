@@ -2,12 +2,12 @@
 
 export class Project {
   public _id: string;
-  public Name: string;
-  public Description: string;
+  public name: string;
+  public description: string;
   constructor( id: string,  projectName: string,  projectDescription: string) {
     this._id = id;
-    this.Name= projectName;
-    this.Description = projectDescription;
+    this.name= projectName;
+    this.description = projectDescription;
 
   }
 }

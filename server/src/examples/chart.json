@@ -1,8 +1,9 @@
 {
-    "illustrationName": "dadsa",
-    "illustrationType": "chart",
+    "name": "dadsas",
+    "type": ["chart"],
+    "description": "very t2are description",
     "tags": ["sucre", "kaledo"],
-    "illustrationData": {
+    "data": {
         "series": [{
             "type": "wordCloud",
             "sizeRange": [4, 150],

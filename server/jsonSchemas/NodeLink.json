@@ -1,12 +1,13 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
-        "LinksSankey": {
+        "Link": {
             "properties": {
                 "properties": {},
                 "source": {
                     "type": "string"
                 },
+                "style": {},
                 "target": {
                     "type": "string"
                 },
@@ -14,14 +15,9 @@
                     "type": "number"
                 }
             },
-            "required": [
-                "source",
-                "target",
-                "value"
-            ],
             "type": "object"
         },
-        "NodesSankey": {
+        "Node": {
             "properties": {
                 "group": {
                     "type": "string"
@@ -31,9 +27,6 @@
                 },
                 "properties": {}
             },
-            "required": [
-                "group"
-            ],
             "type": "object"
         }
     },
@@ -44,21 +37,16 @@
         },
         "links": {
             "items": {
-                "$ref": "#/definitions/LinksSankey"
+                "$ref": "#/definitions/Link"
             },
             "type": "array"
         },
         "nodes": {
             "items": {
-                "$ref": "#/definitions/NodesSankey"
+                "$ref": "#/definitions/Node"
             },
             "type": "array"
         }
     },
-    "required": [
-        "links",
-        "nodes"
-    ],
     "type": "object"
 }
-

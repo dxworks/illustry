@@ -2,7 +2,7 @@ import * as fs from "fs";
 import path from "path";
 
 let devEnv: any = {}
-let devEnvFilePath = path.resolve(__dirname, '..', 'config.docker.json')
+let devEnvFilePath = path.resolve(__dirname, '../..', 'config.dev.json')
 if (fs.existsSync(devEnvFilePath)) {
     devEnv = JSON.parse(fs.readFileSync(devEnvFilePath).toString())
 }

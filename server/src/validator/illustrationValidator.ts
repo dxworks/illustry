@@ -1,217 +1,403 @@
-import { Illustration, IllustrationUpdate } from "../types/illustrations.";
-import * as FLGSchema from '../../jsonSchemas/FLG.json';
-import * as DotSchema from '../../jsonSchemas/DOT.json';
-import * as HEBSchema from '../../jsonSchemas/HEB.json';
-import * as CalendarMatrixSchema from '../../jsonSchemas/CalendarHeatmap.json';
-import * as MatrixSchema from '../../jsonSchemas/Matrix.json';
-import * as SankeySchema from '../../jsonSchemas/Sankey.json';
-import * as TimelineSchema from '../../jsonSchemas/Timeline.json';
+import {
+  Illustration,
+  IllustrationTypes,
+  IllustrationUpdate,
+} from "../types/illustrations.";
 
-import Ajv from 'ajv'
-const ajv = new Ajv()
-export const illustrationValidator = (illustration: Illustration | IllustrationUpdate) => {
-    // let tagsValid = false;
-    // let projectNameValid = false;
-    // let illustrationNameValid = false;
-    // let illustrationTypeValid = false;
-    // let illustrationDataValid = false;
-    // if (illustration.Tags) {
-    //     let tagsChecker = illustration.Tags.every(function (e) {
-    //         return typeof e === "string"
-    //     })
+import * as CalendarMatrixSchema from "../../jsonSchemas/CalendarHeatmap.json";
+import * as NodeLinkSchema from "../../jsonSchemas/NodeLink.json";
+import * as TimelineSchema from "../../jsonSchemas/Timeline.json";
 
-    //     if (Array.isArray(illustration.Tags) && tagsChecker) {
-    //         tagsValid = true;
-    //     }
-    //     else {
-    //         throw new TypeError("Tags does not exist or are not array or not all elements are string")
-    //     }
+import Ajv from "ajv";
+const ajv = new Ajv();
+export const illustrationValidator = (
+  illustration: Illustration | IllustrationUpdate
+) => {
+  let tagsValid = false;
+  let projectNameValid = false;
+  let illustrationNameValid = false;
+  let illustrationTypeValid = false;
+  let illustrationDataValid = false;
+  let illustrationDescription = false;
+  if (illustration.description) {
+    if (
+      typeof illustration.description === "string" &&
+      illustration.description.length <= 250
+    ) {
+      illustrationDescription = true;
+    }
+  } else {
+    illustrationDescription = true;
+  }
+  if (illustration.tags) {
+    let tagsChecker = illustration.tags.every(function (e) {
+      return typeof e === "string";
+    });
 
-    // }
-    // else {
-    //     tagsValid = true;
-    // }
+    if (Array.isArray(illustration.tags) && tagsChecker) {
+      tagsValid = true;
+    } else {
+      throw new TypeError(
+        "Tags does not exist or are not array or not all elements are string"
+      );
+    }
+  } else {
+    tagsValid = true;
+  }
 
-    // if (illustration.ProjectName && typeof illustration.ProjectName === "string") {
-    //     projectNameValid = true;
-    // }
-    // else {
-    //     throw new TypeError("ProjectName doesn't exist or is not string")
-    // }
+  if (
+    illustration.projectName &&
+    typeof illustration.projectName === "string"
+  ) {
+    projectNameValid = true;
+  } else {
+    throw new TypeError("Project name doesn't exist or is not string");
+  }
 
-    // if (illustration.IllustrationName && typeof illustration.IllustrationName === "string") {
-    //     illustrationNameValid = true;
-    // }
-    // else {
-    //     throw new TypeError("IllustrationName doesn't exist or is not string")
-    // }
+  if (illustration.name && typeof illustration.name === "string") {
+    illustrationNameValid = true;
+  } else {
+    throw new TypeError("Illustration name doesn't exist or is not string");
+  }
 
-    // if (illustration.IllustrationType && typeof illustration.IllustrationType === "string") {
-    //     switch (illustration.IllustrationType) {
-    //         case "chart": {
-    //             illustrationTypeValid = true;
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType charts does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         case "wordcloud": {
-    //             illustrationTypeValid = true;
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType wordcloud does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         case "ploty": {
-    //             illustrationTypeValid = true;
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType ploty does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         case "timeline": {
-    //             illustrationTypeValid = true
-    //             // const validate = ajv.compile(TimelineSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType timeline does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         case "flg": {
-    //             illustrationTypeValid = true
-    //             const validate = ajv.compile(FLGSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType flg does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
+  if (illustration.type && typeof illustration.type === "string") {
+    switch (illustration.type) {
+      case IllustrationTypes.CHART: {
+        illustrationTypeValid = true;
+        if (illustration.type && typeof illustration.data === "object") {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError("type charts does not correspond to data");
+        }
+        break;
+      }
+      case IllustrationTypes.WORLD_CLOUD: {
+        illustrationTypeValid = true;
+        if (illustration.data && typeof illustration.data === "object") {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError("type word-cloud does not correspond to data");
+        }
+        break;
+      }
+      case IllustrationTypes.PLOTLY: {
+        illustrationTypeValid = true;
+        if (illustration.data && typeof illustration.data === "object") {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError("type plotly does not correspond to data");
+        }
+        break;
+      }
+      case IllustrationTypes.TIMELINE: {
+        illustrationTypeValid = true;
+        // const validate = ajv.compile(TimelineSchema)
+        if (illustration.data && typeof illustration.data === "object") {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError("type timeline does not correspond to data");
+        }
+        break;
+      }
+      case IllustrationTypes.FORCE_DIRECTED_GRAPH: {
+        illustrationTypeValid = true;
+        const validate = ajv.compile(NodeLinkSchema);
+        if (
+          illustration.data &&
+          typeof illustration.data === "object" &&
+          validate(illustration.data)
+        ) {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError(
+            "type force-directed-graph does not correspond to data"
+          );
+        }
+        break;
+      }
 
-    //         case "treemap": {
-    //             illustrationTypeValid = true
-    //             break
-    //         }
-    //         case "sankeydiagram": {
-    //             illustrationTypeValid = true
-    //             const validate = ajv.compile(SankeySchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType sankey does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         case "calendarmatrix": {
-    //             illustrationTypeValid = true
-    //             const validate = ajv.compile(CalendarMatrixSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType calendarmatrix does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         case "matrix": {
-    //             illustrationTypeValid = true
-    //             const validate = ajv.compile(MatrixSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType matrix does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         case "graphiz": {
-    //             illustrationTypeValid = true
-    //             const validate = ajv.compile(DotSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType graphiz does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         case "heb": {
-    //             illustrationTypeValid = true
-    //             const validate = ajv.compile(HEBSchema)
-    //             if (illustration.IllustrationData && typeof illustration.IllustrationData === "object" && validate(illustration.IllustrationData)) {
-    //                 illustrationDataValid = true;
-    //             }
-    //             else {
-    //                 throw new TypeError("illustrationType heb does not correspond to illustrationData")
-    //             }
-    //             break
-    //         }
-    //         default: throw new TypeError("IllustrationType is not one of the known types")
-    //     }
-    // } else {
-    //     throw new TypeError("IllustrationType doesn't exist or is not string")
-    // }
+      case IllustrationTypes.TREEMAP: {
+        illustrationTypeValid = true;
+        break;
+      }
+      case IllustrationTypes.SANKEY: {
+        illustrationTypeValid = true;
+        const validate = ajv.compile(NodeLinkSchema);
+        if (
+          illustration.data &&
+          typeof illustration.data === "object" &&
+          validate(illustration.data)
+        ) {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError("type sankey does not correspond to data");
+        }
+        break;
+      }
+      case IllustrationTypes.CALENDAR: {
+        illustrationTypeValid = true;
+        const validate = ajv.compile(CalendarMatrixSchema);
+        if (
+          illustration.data &&
+          typeof illustration.data === "object" &&
+          validate(illustration.data)
+        ) {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError("type calendar does not correspond to data");
+        }
+        break;
+      }
+      case IllustrationTypes.MATRIX: {
+        illustrationTypeValid = true;
+        const validate = ajv.compile(NodeLinkSchema);
+        console.log(validate(illustration.data));
+        if (
+          illustration.data &&
+          typeof illustration.data === "object" &&
+          validate(illustration.data)
+        ) {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError("type matrix does not correspond to data");
+        }
+        break;
+      }
+      case IllustrationTypes.GRAPHVIZ: {
+        illustrationTypeValid = true;
+        const validate = ajv.compile(NodeLinkSchema);
+        if (
+          illustration.data &&
+          typeof illustration.data === "object" &&
+          validate(illustration.data)
+        ) {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError("type graphviz does not correspond to data");
+        }
+        break;
+      }
+      case IllustrationTypes.HIERARCHICAL_EDGE_BUNDLING: {
+        illustrationTypeValid = true;
+        const validate = ajv.compile(NodeLinkSchema);
+        if (
+          illustration.data &&
+          typeof illustration.data === "object" &&
+          validate(illustration.data)
+        ) {
+          illustrationDataValid = true;
+        } else {
+          throw new TypeError(
+            "type hierarchical-edge-bundling does not correspond to data"
+          );
+        }
+        break;
+      }
+      default:
+        throw new TypeError(
+          `type ${illustration.type} is not one of the known types`
+        );
+    }
+  } else {
+    if (
+      illustration.type &&
+      typeof illustration.type === "object" &&
+      typeof illustration.type.length === "number"
+    ) {
+      for (let i = 0; i < illustration.type.length; i++) {
+        switch (illustration.type[i]) {
+          case IllustrationTypes.CHART: {
+            illustrationTypeValid = true;
+            if (illustration.type && typeof illustration.data === "object") {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError("type charts does not correspond to data");
+            }
+            break;
+          }
+          case IllustrationTypes.WORLD_CLOUD: {
+            illustrationTypeValid = true;
+            if (illustration.data && typeof illustration.data === "object") {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError(
+                "type word-cloud does not correspond to data"
+              );
+            }
+            break;
+          }
+          case IllustrationTypes.PLOTLY: {
+            illustrationTypeValid = true;
+            if (illustration.data && typeof illustration.data === "object") {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError("type plotly does not correspond to data");
+            }
+            break;
+          }
+          case IllustrationTypes.TIMELINE: {
+            illustrationTypeValid = true;
+            // const validate = ajv.compile(TimelineSchema)
+            if (illustration.data && typeof illustration.data === "object") {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError("type timeline does not correspond to data");
+            }
+            break;
+          }
+          case IllustrationTypes.FORCE_DIRECTED_GRAPH: {
+            illustrationTypeValid = true;
+            const validate = ajv.compile(NodeLinkSchema);
+            if (
+              illustration.data &&
+              typeof illustration.data === "object" &&
+              validate(illustration.data)
+            ) {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError(
+                "type force-directed-graph does not correspond to data"
+              );
+            }
+            break;
+          }
 
-    // if (illustration.IllustrationData && typeof illustration.IllustrationData === "object") {
+          case IllustrationTypes.TREEMAP: {
+            illustrationTypeValid = true;
+            break;
+          }
+          case IllustrationTypes.SANKEY: {
+            illustrationTypeValid = true;
+            const validate = ajv.compile(NodeLinkSchema);
+            if (
+              illustration.data &&
+              typeof illustration.data === "object" &&
+              validate(illustration.data)
+            ) {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError("type sankey does not correspond to data");
+            }
+            break;
+          }
+          case IllustrationTypes.CALENDAR: {
+            illustrationTypeValid = true;
+            const validate = ajv.compile(CalendarMatrixSchema);
+            if (
+              illustration.data &&
+              typeof illustration.data === "object" &&
+              validate(illustration.data)
+            ) {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError("type calendar does not correspond to data");
+            }
+            break;
+          }
+          case IllustrationTypes.MATRIX: {
+            illustrationTypeValid = true;
+            const validate = ajv.compile(NodeLinkSchema);
+            if (
+              illustration.data &&
+              typeof illustration.data === "object" &&
+              validate(illustration.data)
+            ) {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError("type matrix does not correspond to data");
+            }
+            break;
+          }
+          case IllustrationTypes.GRAPHVIZ: {
+            illustrationTypeValid = true;
+            const validate = ajv.compile(NodeLinkSchema);
+            if (
+              illustration.data &&
+              typeof illustration.data === "object" &&
+              validate(illustration.data)
+            ) {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError("type graphviz does not correspond to data");
+            }
+            break;
+          }
+          case IllustrationTypes.HIERARCHICAL_EDGE_BUNDLING: {
+            illustrationTypeValid = true;
+            const validate = ajv.compile(NodeLinkSchema);
+            if (
+              illustration.data &&
+              typeof illustration.data === "object" &&
+              validate(illustration.data)
+            ) {
+              illustrationDataValid = true;
+            } else {
+              throw new TypeError(
+                "type hierarchical-edge-bundling does not correspond to data"
+              );
+            }
+            break;
+          }
+          default:
+            throw new TypeError(
+              `type ${illustration.type[i]} is not one of the known types`
+            );
+        }
+      }
+    } else {
+      throw new TypeError("Illustration Type is not string or string[]");
+    }
+  }
 
-    //     illustrationDataValid = true;
-    // }
-    // else {
-    //     throw new TypeError("IllustrationData doesn't exist or is not object")
-    // }
-    // return tagsValid && projectNameValid && illustrationNameValid && illustrationTypeValid && illustrationDataValid;
-    return true
-}
+  if (illustration.data && typeof illustration.data === "object") {
+    illustrationDataValid = true;
+  } else {
+    throw new TypeError("data doesn't exist or is not object");
+  }
+  return (
+    tagsValid &&
+    projectNameValid &&
+    illustrationNameValid &&
+    illustrationTypeValid &&
+    illustrationDataValid &&
+    illustrationDescription
+  );
+};
 
-export const validateProjectNameAndIllustrationNameAsString = (projectName: string, illustrationName: string) => {
-    //     let validProject = false;
-    //     let validIllustration = false;
-    //     if (projectName && typeof projectName === 'string') {
-    //         validProject = true;
-    //     }
-    //     else {
-    //         throw new TypeError("ProjectName must be string")
-    //     }
-    //     if (illustrationName && typeof illustrationName === 'string') {
-    //         validIllustration = true;
-    //     }
-    //     else {
-    //         throw new TypeError("IllustrationName must be string")
-    //     }
-    //     return validProject && validIllustration
-    return true
-}
+export const validateProjectNameAndIllustrationNameAsString = (
+  projectName: string,
+  illustrationName: string
+) => {
+  let validProject = false;
+  let validIllustration = false;
+  if (projectName && typeof projectName === "string") {
+    validProject = true;
+  } else {
+    throw new TypeError("Project name must be string");
+  }
+  if (illustrationName && typeof illustrationName === "string") {
+    validIllustration = true;
+  } else {
+    throw new TypeError("Illustration name must be string");
+  }
+  return validProject && validIllustration;
+};
 
-
-export const validateProjectNameAndIllustrationTypeAsString = (projectName: string, illustrationType: string) => {
-    //     let validProject = false;
-    //     let validIllustration = false;
-    //     if (projectName && typeof projectName === 'string') {
-    //         validProject = true;
-    //     }
-    //     else {
-    //         throw new TypeError("ProjectName must be string")
-    //     }
-    //     if (illustrationType && typeof illustrationType === 'string') {
-    //         validIllustration = true;
-    //     }
-    //     else {
-    //         throw new TypeError("IllustrationType must be string")
-    //     }
-    //     return validProject && validIllustration
-    return true
-}
+export const validateProjectNameAndIllustrationTypeAsString = (
+  projectName: string,
+  illustrationType: string
+) => {
+  let validProject = false;
+  let validIllustration = false;
+  if (projectName && typeof projectName === "string") {
+    validProject = true;
+  } else {
+    throw new TypeError("Project name must be string");
+  }
+  if (illustrationType && typeof illustrationType === "string") {
+    validIllustration = true;
+  } else {
+    throw new TypeError("Illustration type must be string");
+  }
+  return validProject && validIllustration;
+};

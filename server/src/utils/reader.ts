@@ -12,12 +12,13 @@ const read = (file: FileProperties) => {
                 reject(new FileError("Problems while uploading the files"))
             }
             if (file.type === 'application/json') {
-                let illustration = data.toString();
+                let illustration = JSON.parse(data.toString());
                 let finalJson: any = {
-                    IllustrationData: _.get(JSON.parse(illustration), 'data'),
-                    IllustrationName: _.get(JSON.parse(illustration), 'name'),
-                    IllustrationType: _.get(JSON.parse(illustration), 'type'),
-                    Tags: _.get(JSON.parse(illustration), 'tags')
+                    data: illustration?.data,
+                    name: illustration?.name,
+                    description:illustration?.description,
+                    type: illustration?.type,
+                    tags: illustration?.tags
                 }
 
                 resolve(finalJson)
@@ -35,23 +36,4 @@ export const readFile = (files: FileProperties[]) => {
 
 
 }
-// else
-// if (file.type === 'text/csv'|| file.type ==='application/vnd.ms-excel') {
-//     let illustration = data.toString();
-
-//     converter.csv2json(illustration, function (err: any, json: any) {
-//         if (err) throw err;
-//         let finalJson = {
-//             IllustrationData:json
-//         }
-//         next(null, { ...project, ...finalJson })
-//     })
-
-
-function csvToJson(csv: any) {
-    const content = csv.split('\n');
-    const header = content[0].split(',');
-    return _.tail(content).map((row: any) => {
-        return _.zipObject(header, row.split(','));
-    });
-}
+ 

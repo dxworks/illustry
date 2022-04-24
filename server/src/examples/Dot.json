@@ -1,38 +1,38 @@
 {
-  "name": "flgu2s",
-  "type": ["graphviz", "hierarchical-edge-bundling"],
-  "tags": ["sucre", "kaledo"],
-  "data": {
-    "nodes": [{
-        "group": "Test",
-        "id": "MetricsTest.scala"
-      },
-      {
-        "group": "Test",
-        "id": "StreamsUpgradeTest.java"
-      },
-      {
-        "group": "Test",
-        "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
-      }
-    ],
+    "name": "flgu2s",
+    "type": "graphviz",
+    "tags": ["sucre", "kaledo"],
+    "data": {
+        "nodes": [{
+                "group": "Test",
+                "id": "MetricsTest.scala"
+            },
+            {
+                "group": "Test",
+                "id": "StreamsUpgradeTest.java"
+            },
+            {
+                "group": "Test",
+                "id": "StreamsUpgradeToCooperativeRebalanceTest.java"
+            }
+        ],
 
 
-    "links": [{
-        "source": "MetricsTest.java",
-        "target": "StreamsUpgradeTest.java",
-        "value": 10
-      },
-      {
-        "source": "StreamsUpgradeTest.java",
-        "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
-        "value": 10
-      },
-      {
-        "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
-        "target": "MetricsTest.java",
-        "value": 10
-      }
-    ]
-  }
+        "links": [{
+                "source": "MetricsTest.java",
+                "target": "StreamsUpgradeTest.java",
+                "value": 10
+            },
+            {
+                "source": "StreamsUpgradeTest.java",
+                "target": "StreamsUpgradeToCooperativeRebalanceTest.java",
+                "value": 10
+            },
+            {
+                "source": "StreamsUpgradeToCooperativeRebalanceTest.java",
+                "target": "MetricsTest.java",
+                "value": 10
+            }
+        ]
+    }
 }

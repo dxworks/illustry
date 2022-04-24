@@ -18,8 +18,8 @@ import { ErrorDialogComponent } from 'src/app/dialogs/error-dialog/error-dialog.
 export class ProjectAddComponent implements OnInit {
   project: Project = {
     _id: '',
-    Name: '',
-    Description: ''
+    name: '',
+    description: ''
   };
 
   illustration: Illustration = {
@@ -85,8 +85,8 @@ export class ProjectAddComponent implements OnInit {
   uploadProject() {
     const formData: FormData = new FormData()
 
-    formData.append('ProjectName', this.form.value.ProjectName);
-    formData.append("ProjectDescription", this.form.value.ProjectDescription);
+    formData.append('name', this.form.value.ProjectName);
+    formData.append("description", this.form.value.ProjectDescription);
     if (this.form.value.File) {
       this.form.value.File.forEach((file: string | Blob) => {
         formData.append('File', file);

@@ -1,8 +1,9 @@
 {
-    "illustrationName": "dotus",
-    "illustrationType": "ploty",
-    "tags": ["sucre", "kaledo"],
-    "illustrationData": {
+    "name": "dadsa",
+    "type": ["plotly"],
+    "description": "very t2are description",
+    "tags": ["11111", "kaledo"],
+    "data": {
         "data": [{
             "type": "bar",
             "x": [1, 2, 3, 4],

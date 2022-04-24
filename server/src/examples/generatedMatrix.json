@@ -1,7 +1,8 @@
-{   "illustrationName": "matrixus",
-    "illustrationType": "matrix",
+{
+    "name": "matrixus",
+    "type": "matrix",
     "tags": ["sucre", "kaledo"],
-    "illustrationData": {
+    "data": {
         "nodes": [{
             "name": "nameG1$1",
             "group": 1,

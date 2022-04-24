@@ -6,7 +6,8 @@
         },
         "id": {
             "type": "string"
-        }
+        },
+        "properties": {}
     },
     "required": [
         "group"

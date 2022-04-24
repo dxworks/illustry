@@ -1,48 +1,85 @@
-import * as projectLib from '../lib/project'
-import { FileProperties } from '../types/fileproperties'
-import { Project } from '../types/project'
+import { Factory } from "../bzl/factory";
+import { Promise } from "bluebird";
+import { FileProperties } from "../types/fileproperties";
+import { Project } from "../types/project";
+import {
+ 
+  IllustrationTypes,
+} from "../types/illustrations.";
 
+export const projectApi = {
+  createProjectfromExtern(
+    projectName: string,
+    projectDescription: string,
+    illustrationName: string,
+    illustrationType: IllustrationTypes | IllustrationTypes[],
+    illustrationDescription: string,
+    tags: string[],
+    illustrationData: any
+  ) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().projectBzl.createProjectfromExtern(
+        projectName,
+        projectDescription,
+        illustrationName,
+        illustrationType,
+        illustrationDescription,
+        tags,
+        illustrationData
+      );
+    });
+  },
 
-export function createProjectfromExtern(projectName: string, projectDescription: string, illustrationName: string, illustrationType: string, tags: string[], illustrationData: any, next: any) {
-    return Promise.resolve()
-        .then(() => { return projectLib.createProjectfromExtern(projectName, projectDescription, illustrationName, illustrationType, tags, illustrationData, next) })
-}
+  updateProjectfromEtern(projectName: string, projectDescription: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().projectBzl.updateProjectfromEtern(
+        projectName,
+        projectDescription
+      );
+    });
+  },
 
+  getOneProjectfromEtern(projectName: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().projectBzl.getOneProjectfromEtern(
+        projectName
+      );
+    });
+  },
 
+  createIllustryProject(files: FileProperties[], project: Project) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().projectBzl.createIllustryProject(
+        files,
+        project
+      );
+    });
+  },
 
-export function updateProjectfromEtern(projectName: string, projectDescription: string, next: any) {
-    return Promise.resolve()
-        .then(() => { return projectLib.updateProjectfromEtern(projectName, projectDescription, next) })
-}
+  findOneProject(projectName: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().projectBzl.findOneProject(projectName);
+    });
+  },
 
-export function getOneProjectfromEtern(projectName: string, next: any) {
-    return Promise.resolve()
-        .then(() => { return projectLib.getOneProjectfromEtern(projectName, next) })
-}
+  queryAllProjects() {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().projectBzl.queryAllProjects();
+    });
+  },
 
-export function createIllustryProject(files: FileProperties[], project: Project, next: any) {
-    return Promise.resolve()
-        .then(() => { return projectLib.createIllustryProject(files, project, next) })
-}
+  updateProject(projectName: string, projectDescription: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().projectBzl.updateProject(
+        projectName,
+        projectDescription
+      );
+    });
+  },
 
-
-export function findOneProject(projectName: string, next: any) {
-    return Promise.resolve()
-        .then(() => { return projectLib.findOneProject(projectName, next) })
-}
-
-export function queryAllProjects(next: any) {
-    return Promise.resolve()
-        .then(() => { return projectLib.queryAllProjects(next) })
-}
-
-
-export function updateProject(projectName: string, projectDescription: string, next: any) {
-    return Promise.resolve()
-        .then(() => { return projectLib.updateProject(projectName, projectDescription, next) })
-}
-
-export function deleteProject(projectName: string, next: any) {
-    return Promise.resolve()
-        .then(() => { return projectLib.deleteProject(projectName, next) })
-}
+  deleteProject(projectName: string) {
+    return Promise.resolve().then(() => {
+      return Factory.getInstance().projectBzl.deleteProject(projectName);
+    });
+  },
+};

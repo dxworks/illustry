@@ -1,11 +1,10 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 export const ProjectSchema = new mongoose.Schema({
-    Name: { type: String, required: true, index: true, unique: true },
-    Description: { type: String, required: false },
-    CreatedAt: { type: Date, required: false },
-    LastModified: { type: Date, required: false },
-})
+  name: { type: String, required: true, unique: true },
+  description: { type: String, required: false, maxLength: 250 },
+  createdAt: { type: Date, required: false },
+  lastModified: { type: Date, required: false },
+});
 
-const ProjectTable = mongoose.model('Project', ProjectSchema);
-
+const ProjectTable = mongoose.model("Project", ProjectSchema);
 export default ProjectTable;

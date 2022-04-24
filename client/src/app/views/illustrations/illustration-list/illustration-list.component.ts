@@ -36,12 +36,11 @@ export class IllustrationListComponent implements OnInit {
     this.searchItems();
   }
   ngOnInit(): void {
-    console.log(this.projectName)
     this.illustrationService.getAllIllustrations(this.projectName).subscribe((illustrations: Illustration[]) => {
       illustrations.forEach((illustrations, index) => {
         // @ts-ignore
 
-        this.illustrations.push({ index: index + 1, IllustrationName: illustrations.Name, IllustrationType: illustrations.Type, Tags: illustrations.Tags, IllustrationData: illustrations.Data })
+        this.illustrations.push({ index: index + 1, IllustrationName: illustrations.name, IllustrationType: illustrations.type, Tags: illustrations.tags, IllustrationData: illustrations.data })
       });
       this.mdbTable.setDataSource(this.illustrations);
       this.illustrations = this.mdbTable.getDataSource();
