@@ -10,7 +10,7 @@
                 <app-calendarheatmap *ngSwitchCase="'calendar'" [data]="ill.data"></app-calendarheatmap>
                 <app-dot-graph *ngSwitchCase="'graphviz'" [content]="ill.data"></app-dot-graph>
                 <app-timeline *ngSwitchCase="'timeline'" [data]="ill.data"></app-timeline>
-                <app-ploty *ngSwitchCase="'ploty'" [data]="ill.data.data" [layout]="ill.data.layout" [config]="ill.data.config"></app-ploty>
+                <app-ploty *ngSwitchCase="'plotly'" [data]="ill.data" [layout]="ill.data.layout" [config]="ill.data.config"></app-ploty>
             </div>
         </ng-template>
     </mat-tab>

@@ -1,10 +1,10 @@
 {
     "name": "matrixus",
-    "type": "matrix",
+    "type": ["matrix"],
     "tags": ["sucre", "kaledo"],
     "data": {
         "nodes": [{
-            "name": "nameG1$1",
+            "id": "nameG1$1",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -37,7 +37,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$2",
+            "id": "nameG1$2",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -70,7 +70,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$3",
+            "id": "nameG1$3",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -103,7 +103,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$4",
+            "id": "nameG1$4",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -136,7 +136,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$5",
+            "id": "nameG1$5",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -169,7 +169,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$6",
+            "id": "nameG1$6",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -202,7 +202,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$7",
+            "id": "nameG1$7",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -235,7 +235,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$8",
+            "id": "nameG1$8",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -268,7 +268,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$9",
+            "id": "nameG1$9",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -301,7 +301,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$10",
+            "id": "nameG1$10",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -334,7 +334,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$11",
+            "id": "nameG1$11",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -367,7 +367,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$12",
+            "id": "nameG1$12",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -400,7 +400,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$13",
+            "id": "nameG1$13",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -433,7 +433,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$14",
+            "id": "nameG1$14",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -466,7 +466,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$15",
+            "id": "nameG1$15",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -499,7 +499,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$16",
+            "id": "nameG1$16",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -532,7 +532,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$17",
+            "id": "nameG1$17",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -565,7 +565,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$18",
+            "id": "nameG1$18",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -598,7 +598,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$19",
+            "id": "nameG1$19",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -631,7 +631,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$20",
+            "id": "nameG1$20",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -664,7 +664,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$21",
+            "id": "nameG1$21",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -697,7 +697,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$22",
+            "id": "nameG1$22",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -730,7 +730,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$23",
+            "id": "nameG1$23",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -763,7 +763,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$24",
+            "id": "nameG1$24",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -796,7 +796,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$25",
+            "id": "nameG1$25",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -829,7 +829,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$26",
+            "id": "nameG1$26",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -862,7 +862,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$27",
+            "id": "nameG1$27",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -895,7 +895,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$28",
+            "id": "nameG1$28",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -928,7 +928,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$29",
+            "id": "nameG1$29",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -961,7 +961,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$30",
+            "id": "nameG1$30",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -994,7 +994,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$31",
+            "id": "nameG1$31",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1027,7 +1027,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$32",
+            "id": "nameG1$32",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1060,7 +1060,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$33",
+            "id": "nameG1$33",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1093,7 +1093,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$34",
+            "id": "nameG1$34",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1126,7 +1126,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$35",
+            "id": "nameG1$35",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1159,7 +1159,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$36",
+            "id": "nameG1$36",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1192,7 +1192,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$37",
+            "id": "nameG1$37",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1225,7 +1225,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$38",
+            "id": "nameG1$38",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1258,7 +1258,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$39",
+            "id": "nameG1$39",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1291,7 +1291,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$40",
+            "id": "nameG1$40",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1324,7 +1324,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$41",
+            "id": "nameG1$41",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1357,7 +1357,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$42",
+            "id": "nameG1$42",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1390,7 +1390,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$43",
+            "id": "nameG1$43",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1423,7 +1423,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$44",
+            "id": "nameG1$44",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1456,7 +1456,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$45",
+            "id": "nameG1$45",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1489,7 +1489,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$46",
+            "id": "nameG1$46",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1522,7 +1522,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$47",
+            "id": "nameG1$47",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1555,7 +1555,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$48",
+            "id": "nameG1$48",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1588,7 +1588,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$49",
+            "id": "nameG1$49",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1621,7 +1621,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$50",
+            "id": "nameG1$50",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1654,7 +1654,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$51",
+            "id": "nameG1$51",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1687,7 +1687,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$52",
+            "id": "nameG1$52",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1720,7 +1720,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$53",
+            "id": "nameG1$53",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1753,7 +1753,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$54",
+            "id": "nameG1$54",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1786,7 +1786,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$55",
+            "id": "nameG1$55",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1819,7 +1819,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$56",
+            "id": "nameG1$56",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1852,7 +1852,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$57",
+            "id": "nameG1$57",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1885,7 +1885,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$58",
+            "id": "nameG1$58",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1918,7 +1918,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$59",
+            "id": "nameG1$59",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1951,7 +1951,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$60",
+            "id": "nameG1$60",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -1984,7 +1984,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$61",
+            "id": "nameG1$61",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2017,7 +2017,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$62",
+            "id": "nameG1$62",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2050,7 +2050,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$63",
+            "id": "nameG1$63",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2083,7 +2083,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$64",
+            "id": "nameG1$64",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2116,7 +2116,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$65",
+            "id": "nameG1$65",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2149,7 +2149,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$66",
+            "id": "nameG1$66",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2182,7 +2182,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$67",
+            "id": "nameG1$67",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2215,7 +2215,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$68",
+            "id": "nameG1$68",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2248,7 +2248,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$69",
+            "id": "nameG1$69",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2281,7 +2281,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$70",
+            "id": "nameG1$70",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2314,7 +2314,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$71",
+            "id": "nameG1$71",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2347,7 +2347,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$72",
+            "id": "nameG1$72",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2380,7 +2380,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$73",
+            "id": "nameG1$73",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2413,7 +2413,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$74",
+            "id": "nameG1$74",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2446,7 +2446,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$75",
+            "id": "nameG1$75",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2479,7 +2479,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$76",
+            "id": "nameG1$76",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2512,7 +2512,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$77",
+            "id": "nameG1$77",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2545,7 +2545,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$78",
+            "id": "nameG1$78",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2578,7 +2578,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$79",
+            "id": "nameG1$79",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2611,7 +2611,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$80",
+            "id": "nameG1$80",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2644,7 +2644,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$81",
+            "id": "nameG1$81",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2677,7 +2677,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$82",
+            "id": "nameG1$82",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2710,7 +2710,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$83",
+            "id": "nameG1$83",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2743,7 +2743,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$84",
+            "id": "nameG1$84",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2776,7 +2776,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$85",
+            "id": "nameG1$85",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2809,7 +2809,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$86",
+            "id": "nameG1$86",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2842,7 +2842,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$87",
+            "id": "nameG1$87",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2875,7 +2875,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$88",
+            "id": "nameG1$88",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2908,7 +2908,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$89",
+            "id": "nameG1$89",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2941,7 +2941,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$90",
+            "id": "nameG1$90",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -2974,7 +2974,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$91",
+            "id": "nameG1$91",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3007,7 +3007,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$92",
+            "id": "nameG1$92",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3040,7 +3040,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$93",
+            "id": "nameG1$93",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3073,7 +3073,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$94",
+            "id": "nameG1$94",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3106,7 +3106,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$95",
+            "id": "nameG1$95",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3139,7 +3139,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$96",
+            "id": "nameG1$96",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3172,7 +3172,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$97",
+            "id": "nameG1$97",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3205,7 +3205,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$98",
+            "id": "nameG1$98",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3238,7 +3238,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$99",
+            "id": "nameG1$99",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3271,7 +3271,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$100",
+            "id": "nameG1$100",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3304,7 +3304,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$101",
+            "id": "nameG1$101",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3337,7 +3337,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$102",
+            "id": "nameG1$102",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3370,7 +3370,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$103",
+            "id": "nameG1$103",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3403,7 +3403,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$104",
+            "id": "nameG1$104",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3436,7 +3436,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$105",
+            "id": "nameG1$105",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3469,7 +3469,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$106",
+            "id": "nameG1$106",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3502,7 +3502,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$107",
+            "id": "nameG1$107",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3535,7 +3535,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$108",
+            "id": "nameG1$108",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3568,7 +3568,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$109",
+            "id": "nameG1$109",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3601,7 +3601,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$110",
+            "id": "nameG1$110",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3634,7 +3634,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$111",
+            "id": "nameG1$111",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3667,7 +3667,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$112",
+            "id": "nameG1$112",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3700,7 +3700,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$113",
+            "id": "nameG1$113",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3733,7 +3733,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$114",
+            "id": "nameG1$114",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3766,7 +3766,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$115",
+            "id": "nameG1$115",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3799,7 +3799,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$116",
+            "id": "nameG1$116",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3832,7 +3832,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$117",
+            "id": "nameG1$117",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3865,7 +3865,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$118",
+            "id": "nameG1$118",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3898,7 +3898,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$119",
+            "id": "nameG1$119",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3931,7 +3931,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$120",
+            "id": "nameG1$120",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3964,7 +3964,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$121",
+            "id": "nameG1$121",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -3997,7 +3997,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$122",
+            "id": "nameG1$122",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4030,7 +4030,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$123",
+            "id": "nameG1$123",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4063,7 +4063,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$124",
+            "id": "nameG1$124",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4096,7 +4096,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$125",
+            "id": "nameG1$125",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4129,7 +4129,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$126",
+            "id": "nameG1$126",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4162,7 +4162,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$127",
+            "id": "nameG1$127",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4195,7 +4195,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$128",
+            "id": "nameG1$128",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4228,7 +4228,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$129",
+            "id": "nameG1$129",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4261,7 +4261,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$130",
+            "id": "nameG1$130",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4294,7 +4294,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$131",
+            "id": "nameG1$131",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4327,7 +4327,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$132",
+            "id": "nameG1$132",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4360,7 +4360,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$133",
+            "id": "nameG1$133",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4393,7 +4393,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$134",
+            "id": "nameG1$134",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4426,7 +4426,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$135",
+            "id": "nameG1$135",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4459,7 +4459,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$136",
+            "id": "nameG1$136",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4492,7 +4492,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$137",
+            "id": "nameG1$137",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4525,7 +4525,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$138",
+            "id": "nameG1$138",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4558,7 +4558,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$139",
+            "id": "nameG1$139",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4591,7 +4591,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$140",
+            "id": "nameG1$140",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4624,7 +4624,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$141",
+            "id": "nameG1$141",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4657,7 +4657,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$142",
+            "id": "nameG1$142",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4690,7 +4690,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$143",
+            "id": "nameG1$143",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4723,7 +4723,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$144",
+            "id": "nameG1$144",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4756,7 +4756,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$145",
+            "id": "nameG1$145",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4789,7 +4789,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$146",
+            "id": "nameG1$146",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4822,7 +4822,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$147",
+            "id": "nameG1$147",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4855,7 +4855,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$148",
+            "id": "nameG1$148",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4888,7 +4888,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$149",
+            "id": "nameG1$149",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4921,7 +4921,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$150",
+            "id": "nameG1$150",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4954,7 +4954,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$151",
+            "id": "nameG1$151",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -4987,7 +4987,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$152",
+            "id": "nameG1$152",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5020,7 +5020,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$153",
+            "id": "nameG1$153",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5053,7 +5053,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$154",
+            "id": "nameG1$154",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5086,7 +5086,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$155",
+            "id": "nameG1$155",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5119,7 +5119,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$156",
+            "id": "nameG1$156",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5152,7 +5152,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$157",
+            "id": "nameG1$157",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5185,7 +5185,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$158",
+            "id": "nameG1$158",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5218,7 +5218,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$159",
+            "id": "nameG1$159",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5251,7 +5251,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$160",
+            "id": "nameG1$160",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5284,7 +5284,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$161",
+            "id": "nameG1$161",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5317,7 +5317,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$162",
+            "id": "nameG1$162",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5350,7 +5350,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$163",
+            "id": "nameG1$163",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5383,7 +5383,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$164",
+            "id": "nameG1$164",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5416,7 +5416,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$165",
+            "id": "nameG1$165",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5449,7 +5449,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$166",
+            "id": "nameG1$166",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5482,7 +5482,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$167",
+            "id": "nameG1$167",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5515,7 +5515,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$168",
+            "id": "nameG1$168",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5548,7 +5548,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$169",
+            "id": "nameG1$169",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5581,7 +5581,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$170",
+            "id": "nameG1$170",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5614,7 +5614,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$171",
+            "id": "nameG1$171",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5647,7 +5647,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$172",
+            "id": "nameG1$172",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5680,7 +5680,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$173",
+            "id": "nameG1$173",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5713,7 +5713,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$174",
+            "id": "nameG1$174",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5746,7 +5746,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$175",
+            "id": "nameG1$175",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5779,7 +5779,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$176",
+            "id": "nameG1$176",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5812,7 +5812,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$177",
+            "id": "nameG1$177",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5845,7 +5845,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$178",
+            "id": "nameG1$178",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5878,7 +5878,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$179",
+            "id": "nameG1$179",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5911,7 +5911,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$180",
+            "id": "nameG1$180",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5944,7 +5944,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$181",
+            "id": "nameG1$181",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -5977,7 +5977,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$182",
+            "id": "nameG1$182",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6010,7 +6010,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$183",
+            "id": "nameG1$183",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6043,7 +6043,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$184",
+            "id": "nameG1$184",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6076,7 +6076,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$185",
+            "id": "nameG1$185",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6109,7 +6109,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$186",
+            "id": "nameG1$186",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6142,7 +6142,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$187",
+            "id": "nameG1$187",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6175,7 +6175,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$188",
+            "id": "nameG1$188",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6208,7 +6208,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$189",
+            "id": "nameG1$189",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6241,7 +6241,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$190",
+            "id": "nameG1$190",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6274,7 +6274,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$191",
+            "id": "nameG1$191",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6307,7 +6307,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$192",
+            "id": "nameG1$192",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6340,7 +6340,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$193",
+            "id": "nameG1$193",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6373,7 +6373,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$194",
+            "id": "nameG1$194",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6406,7 +6406,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$195",
+            "id": "nameG1$195",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6439,7 +6439,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$196",
+            "id": "nameG1$196",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6472,7 +6472,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$197",
+            "id": "nameG1$197",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6505,7 +6505,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$198",
+            "id": "nameG1$198",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6538,7 +6538,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG1$199",
+            "id": "nameG1$199",
             "group": 1,
             "properties": [{
                 "label": "Size(%)",
@@ -6571,7 +6571,7 @@
                 "color": "green"
             }
         }, {
-            "name": "nameG2$1",
+            "id": "nameG2$1",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6594,7 +6594,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$2",
+            "id": "nameG2$2",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6617,7 +6617,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$3",
+            "id": "nameG2$3",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6640,7 +6640,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$4",
+            "id": "nameG2$4",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6663,7 +6663,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$5",
+            "id": "nameG2$5",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6686,7 +6686,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$6",
+            "id": "nameG2$6",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6709,7 +6709,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$7",
+            "id": "nameG2$7",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6732,7 +6732,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$8",
+            "id": "nameG2$8",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6755,7 +6755,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$9",
+            "id": "nameG2$9",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6778,7 +6778,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$10",
+            "id": "nameG2$10",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6801,7 +6801,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$11",
+            "id": "nameG2$11",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6824,7 +6824,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$12",
+            "id": "nameG2$12",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6847,7 +6847,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$13",
+            "id": "nameG2$13",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6870,7 +6870,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$14",
+            "id": "nameG2$14",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6893,7 +6893,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$15",
+            "id": "nameG2$15",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6916,7 +6916,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$16",
+            "id": "nameG2$16",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6939,7 +6939,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$17",
+            "id": "nameG2$17",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6962,7 +6962,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$18",
+            "id": "nameG2$18",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -6985,7 +6985,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$19",
+            "id": "nameG2$19",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7008,7 +7008,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$20",
+            "id": "nameG2$20",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7031,7 +7031,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$21",
+            "id": "nameG2$21",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7054,7 +7054,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$22",
+            "id": "nameG2$22",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7077,7 +7077,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$23",
+            "id": "nameG2$23",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7100,7 +7100,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$24",
+            "id": "nameG2$24",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7123,7 +7123,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$25",
+            "id": "nameG2$25",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7146,7 +7146,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$26",
+            "id": "nameG2$26",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7169,7 +7169,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$27",
+            "id": "nameG2$27",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7192,7 +7192,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$28",
+            "id": "nameG2$28",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",
@@ -7215,7 +7215,7 @@
                 "background-color": "green"
             }
         }, {
-            "name": "nameG2$29",
+            "id": "nameG2$29",
             "group": 2,
             "properties": [{
                 "label": "Knowledge(%)",

@@ -27,7 +27,7 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     echarts.disconnect
-    this.myChart.dispose()
+    // this.myChart.dispose()
     console.log("calendar destroyed")
   }
 

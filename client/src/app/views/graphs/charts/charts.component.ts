@@ -1,51 +1,55 @@
-import { Component, HostListener, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 import * as d3 from 'd3';
 import * as echarts from 'echarts';
 import 'echarts-wordcloud';
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
-  styleUrls: ['./charts.component.css']
+  styleUrls: ['./charts.component.css'],
 })
 export class ChartsComponent implements OnInit, OnDestroy {
-  myChart:any
+  myChart: any;
   @Input()
-  data: any
+  data: any;
   color: any;
   @Output()
   option!: echarts.EChartsOption;
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    console.log(this.data)
+    console.log(this.data);
     if (this.data) {
       //@ts-ignore
-      this.createChart(this.data)
+      this.createChart(this.data);
     }
   }
   ngOnDestroy(): void {
-    echarts.disconnect
+    echarts.disconnect;
     // this.myChart.dispose()
-    console.log("chart destroyed")
+    console.log('chart destroyed');
   }
 
   private createChart(data: any) {
     data.series?.forEach((s: any) => {
       if (s.type === 'wordCloud') {
         if (s.maskImage) {
-          var image = new Image()
-          image.src = s.maskImage
-          s.maskImage = image
+          var image = new Image();
+          image.src = s.maskImage;
+          s.maskImage = image;
         }
       }
-    })
+    });
     var chartDom = document.getElementById('main')!;
-    this.option = data
-    this.myChart = echarts.getInstanceByDom(chartDom)
-    if (this.myChart === null) {
-      this.myChart = echarts.init(chartDom);
-      this.option && this.myChart.setOption(this.option);
-    }
+    this.option = data;
+    this.myChart = echarts.getInstanceByDom(chartDom);
+    this.myChart = echarts.init(chartDom);
+    this.option && this.myChart.setOption(this.option);
   }
 }

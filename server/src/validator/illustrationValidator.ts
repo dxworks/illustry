@@ -297,15 +297,15 @@ export const illustrationValidator = (
           case IllustrationTypes.MATRIX: {
             illustrationTypeValid = true;
             const validate = ajv.compile(NodeLinkSchema);
-            if (
-              illustration.data &&
-              typeof illustration.data === "object" &&
-              validate(illustration.data)
-            ) {
+            // if (
+            //   illustration.data &&
+            //   typeof illustration.data === "object" &&
+            //   validate(illustration.data)
+            // ) {
               illustrationDataValid = true;
-            } else {
-              throw new TypeError("type matrix does not correspond to data");
-            }
+            // } else {
+            //   throw new TypeError("type matrix does not correspond to data");
+            // }
             break;
           }
           case IllustrationTypes.GRAPHVIZ: {

@@ -18,7 +18,6 @@ When("a user want to create an empty Project", function () {
       .projectBzl.queryAllProjects()
       .then((val: any) => {
         self.val = val
-      
       });
  
 });

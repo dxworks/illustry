@@ -6,15 +6,20 @@ PlotlyModule.plotlyjs = PlotlyJS;
 @Component({
   selector: 'app-ploty',
   templateUrl: './ploty.component.html',
-  styleUrls: ['./ploty.component.css']
+  styleUrls: ['./ploty.component.css'],
 })
 export class PlotyComponent implements OnInit {
   @Input()
-  data: any
+  data: any;
   @Input()
-  layout: any
+  layout: any;
   @Input()
-  config?: any
+  config?: any;
+
   ngOnInit() {
+    console.log("aici")
+    console.log(this.data);
+    console.log(this.layout);
+    console.log(this.config);
   }
 }
