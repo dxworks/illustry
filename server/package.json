@@ -19,7 +19,8 @@
         "start": "tsc && node dist/src/app.js",
         "test:unit": "cucumber-js -p default --exit",
         "generate:json-schema": "typescript-json-schema",
-        "generate:json-schemas": "generateSchemas.sh"
+        "generate:json-schemas": "generateSchemas.sh",
+        "test:smoke": "npx cypress run"
     },
     "dependencies": {
         "@types/axios": "^0.14.0",
@@ -66,6 +67,8 @@
         "cucumber": "^6.0.5",
         "cucumber-junit-formatter": "^0.2.2",
         "cucumber-pretty": "^6.0.1",
+        "cypress": "^9.6.0",
+        "cypress-file-upload": "^5.0.8",
         "json": "^11.0.0",
         "nodemon": "^2.0.15",
         "rimraf": "^3.0.2",

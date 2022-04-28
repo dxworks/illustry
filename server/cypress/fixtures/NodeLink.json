@@ -1,5 +1,5 @@
 {
-    "name": "flgus",
+    "name": "node-link",
     "type": ["hierarchical-edge-bundling", "graphviz", "force-directed-graph", "matrix"],
     "description": "very t2are description",
     "tags": ["sucre", "kaledo"],

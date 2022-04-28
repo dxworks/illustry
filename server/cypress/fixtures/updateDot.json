@@ -1,7 +1,7 @@
 {
     "name": "dot demo",
     "type": "graphviz",
-    "tags": ["sucre", "kaledo"],
+    "tags": ["new", "very new"],
     "data": {
         "nodes": [{
                 "group": "Test",

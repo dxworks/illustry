@@ -1,8 +1,8 @@
 {
-    "illustrationName": "test-timeline",
-    "illustrationType": "timeline",
+    "name": "test-timeline",
+    "type": "timeline",
     "tags": ["test"],
-    "illustrationData": {
+    "data": {
         "2022-02-01": {
             "events": [{
                     "date": "2022-02-01 10:40",

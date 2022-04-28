@@ -18,7 +18,6 @@ import { HiearchicalEdgeBundlingComponent } from './views/graphs/hiearchical-edg
 import { VerticalChartComponent } from './views/graphs/vertical-chart/chart.component';
 import { GraphsComponent } from './views/graphs/graphs.component';
 import { SankyDiagramComponent } from "./views/graphs/sanky-diagram/sanky-diagram.component";
-import { HeatmapComponent } from './views/graphs/heatmap/heatmap.component';
 import { StackedChartComponent } from './views/graphs/vertical-stacked-chart/stacked-chart.component';
 import { HorizontalChartComponent } from './views/graphs/horizontal-chart/horizontal-chart.component';
 import { MatrixcalendarComponent } from './views/graphs/matrixcalendar/matrixcalendar.component';
@@ -33,7 +32,6 @@ import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-proj
 import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from "@angular/material/dialog";
 import { DotGraphComponent } from './views/graphs/dot-graph/dot-graph.component'
 import { NgxDropzoneModule } from "ngx-dropzone";
-import { GanttchartComponent } from './views/graphs/ganttchart/ganttchart.component';
 import { MatTableModule } from "@angular/material/table";
 import { MatSortModule } from "@angular/material/sort";
 import { MatPaginatorModule } from "@angular/material/paginator";
@@ -73,14 +71,12 @@ import { IllustrationComponent } from './views/graphs/illustration/illustration.
     VerticalChartComponent,
     GraphsComponent,
     SankyDiagramComponent,
-    HeatmapComponent,
     StackedChartComponent,
     HorizontalChartComponent,
     MatrixcalendarComponent,
     MatrixComponent,
     AddProjectDialogComponent,
     DotGraphComponent,
-    GanttchartComponent,
     DeleteProjectDialogComponent,
     UpdateProjectDialogComponent,
     DeleteIllustrationDialogComponent,
