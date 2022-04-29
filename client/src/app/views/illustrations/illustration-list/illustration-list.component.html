@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 mx-auto">
-      <div class="md-form">
+      <div class="md-form illustration-list-form">
         <input
           type="text"
           [(ngModel)]="searchText"
@@ -10,7 +10,7 @@
           mdbInput
           placeholder="Search"
         />
-        <div class-="buttonus">
+        <div class="button plus">
           <mat-icon
             class="clickable"
             (click)="openDialogForUpdateIllustration()"
@@ -20,7 +20,7 @@
       </div>
     </div>
   </div>
-  <table id="tableSortExample" mdbTable #tableEl="mdbTable" class="z-depth-1">
+  <table id="tableSortExample" mdbTable #tableEl="mdbTable" class="z-depth-1 illustration-list-table">
     <thead>
       <tr>
         <th
@@ -37,17 +37,6 @@
     </thead>
     <tbody>
       <tr *ngFor="let el of illustrations; let i = index">
-        <th
-          class="clickable"
-          (click)="showGraphic(el.IllustrationName)"
-          *ngIf="
-            i + 1 >= mdbTablePagination.firstItemIndex &&
-            i < mdbTablePagination.lastItemIndex
-          "
-          scope="row"
-        >
-          {{ el.index }}
-        </th>
         <td
           class="clickable"
           (click)="showGraphic(el.IllustrationName)"
@@ -70,15 +59,36 @@
         </td>
         <td
           class="clickable"
-          (click)="showGraphic(el.IllustrationName)"
           *ngIf="
             i + 1 >= mdbTablePagination.firstItemIndex &&
             i < mdbTablePagination.lastItemIndex
           "
         >
-          {{ el.Tags }}
+          <mat-form-field class="tags-chips">
+            <mat-chip-list #chipList>
+<!--              TODO inject real tags for autocomplete & filter to be different than current ones-->
+              <mat-chip *ngFor="let tag of el.Tags" (removed)="removeTagForIllustration(tag, el)">
+                {{tag}}
+                <button matChipRemove>
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip>
+              <input [matChipInputFor]="chipList"
+                     [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                     [matChipInputAddOnBlur]="true"
+                     [matAutocomplete]="auto"
+                     (matChipInputTokenEnd)="addTagForIllustration($event, el)">
+            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectedChip($event, el)">
+              <mat-option *ngFor="let chip of allTags" [value]="chip">
+                {{chip}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
         </td>
         <td
+          [style.width]="'70px'"
+          [style.text-align]="'center'"
           *ngIf="
             i + 1 >= mdbTablePagination.firstItemIndex &&
             i < mdbTablePagination.lastItemIndex
@@ -109,7 +119,7 @@
               <span>Delete Illustration</span>
             </button> -->
           <mat-icon
-            class="clickable"
+            class="clickable action"
             (click)="openDialogForDeletingIllustration(el.IllustrationName)"
             >delete</mat-icon
           >

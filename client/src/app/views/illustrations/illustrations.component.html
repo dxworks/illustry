@@ -1,3 +1,10 @@
+<div class="title-container">
+  <mat-icon class="clickable"
+            (click)="returnToProjectPage()"
+  >arrow_back
+  </mat-icon>
+  {{projectName}}
+</div>
 <div class="row">
   <app-illustration-list [projectName]="projectName"></app-illustration-list>
 </div>

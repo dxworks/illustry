@@ -3,5 +3,5 @@ export interface IllustrationForTableModel {
   IllustrationData: any[];
   IllustrationName: string;
   IllustrationType: string;
-  Tags?: string;
+  Tags?: string[];
 }

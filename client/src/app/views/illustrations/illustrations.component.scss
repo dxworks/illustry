@@ -1,0 +1,18 @@
+@import 'variables';
+
+.title-container {
+  width: 100%;
+  color: $tealDark;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 25px;
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+
+  .clickable {
+    margin-right: 10px;
+  }
+}

@@ -3,19 +3,17 @@ import { Illustration } from "../../../../types/illustration.model";
 import { IllustrationService } from "../../../services/illustration.service";
 import { IllustrationForTableModel } from "../../../../types/illustrationForTable.model";
 import { MdbTableDirective, MdbTablePaginationComponent } from "angular-bootstrap-md";
-import { Project } from "../../../../types/projects.model";
 import { Router } from "@angular/router";
 import { MatDialog } from "@angular/material/dialog";
-import { DeleteProjectDialogComponent } from "../../../dialogs/delete-project-dialog/delete-project-dialog.component";
-import { UpdateProjectDialogComponent } from "../../../dialogs/update-project-dialog/update-project-dialog.component";
 import { DeleteIllustrationDialogComponent } from "../../../dialogs/delete-illustration-dialog/delete-illustration-dialog.component";
-import { UpdateIllustrationDialogComponent } from "../../../dialogs/update-illustration-dialog/update-illustration-dialog.component";
 import { AddIllustrationDialogComponent } from 'src/app/dialogs/add-illustration-dialog/add-illustration-dialog.component';
+import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import {MatAutocompleteSelectedEvent} from "@angular/material/autocomplete";
 
 @Component({
   selector: 'app-illustration-list',
   templateUrl: './illustration-list.component.html',
-  styleUrls: ['./illustration-list.component.css']
+  styleUrls: ['./illustration-list.component.scss']
 })
 export class IllustrationListComponent implements OnInit {
   @Input()
@@ -27,11 +25,13 @@ export class IllustrationListComponent implements OnInit {
   //@ts-ignore
   @ViewChild(MdbTableDirective, { static: true }) mdbTable: MdbTableDirective
   previous: any = [];
-  headElements: string[] = ['Id', 'IllustrationName', 'IllustrationType', 'Tags', 'actions'];
+  readonly separatorKeysCodes = [ENTER, COMMA] as const;
+  headElements: string[] = ['IllustrationName', 'IllustrationType', 'Tags', 'actions'];
   constructor(private illustrationService: IllustrationService, private cdRef: ChangeDetectorRef, private router: Router, private dialog: MatDialog) { }
 
 
   searchText: string = '';
+  allTags: string[] = [];
   @HostListener('input') oninput() {
     this.searchItems();
   }
@@ -92,5 +92,42 @@ export class IllustrationListComponent implements OnInit {
 
   showGraphic(illustrationName: string) {
     this.router.navigate([`projects/${this.projectName}/illustrations/${illustrationName}`]);
+  }
+
+  removeTagForIllustration(tag: string, el: IllustrationForTableModel) {
+
+    if (!el.Tags || !el.Tags.length) {
+      el.Tags = [];
+    }
+    const index = el.Tags.indexOf(tag);
+
+    if (index >= 0) {
+      el.Tags.splice(index, 1);
+
+      //TODO maybe save illustration?
+    }
+  }
+
+  addTagForIllustration(event: any, el: IllustrationForTableModel) {
+    const value = (event.value || '').trim();
+
+    if (!el.Tags || !el.Tags.length) {
+      el.Tags = [];
+    }
+    if (value) {
+      el.Tags.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+
+    //TODO maybe save illustration?
+  }
+
+  selectedChip(event: MatAutocompleteSelectedEvent, el: IllustrationForTableModel) {
+    if (!el.Tags || !el.Tags.length) {
+      el.Tags = [];
+    }
+    el.Tags.push(event.option.viewValue);
   }
 }

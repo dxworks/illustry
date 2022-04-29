@@ -1,0 +1,83 @@
+@import 'variables';
+
+.center {
+  width: 400%;
+  margin-left: 175%;
+}
+
+.illustration-list-form {
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0 !important;
+
+> .form-control {
+  display: flex;
+  flex: 1 1 0;
+  overflow: hidden;
+}
+
+> .button.plus {
+  padding-left: 10px;
+  color: $magenta;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  font-weight: bold;
+
+.mat-icon {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
+}
+}
+
+::ng-deep .illustration-list-table {
+
+  .tags-chips {
+    width: 100%;
+
+    .mat-form-field-infix {
+      border: 0;
+      padding: 0 !important;
+    }
+    .mat-chip {
+      padding: 4px;
+      font-size: 12px;
+      color: $tealDark;
+      background-color: #F0F0F0;
+    }
+  }
+
+  .action:hover {
+    color: $magenta;
+  }
+
+  &.table {
+    width: 100%;
+  }
+
+  td {
+    word-wrap: break-word;
+    padding: 10px !important;
+    max-width: 150px;
+  }
+
+  th {
+    word-wrap: break-word;
+    max-width: 150px;
+  }
+
+  .container {
+    margin-top: 5%;
+  }
+}
+.clickable {
+  cursor: pointer;
+  word-wrap: break-word;
+}
+

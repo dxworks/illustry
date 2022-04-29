@@ -56,6 +56,8 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
 import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.component';
 import { PlotyComponent } from './views/graphs/ploty/ploty.component';
 import { IllustrationComponent } from './views/graphs/illustration/illustration.component';
+import {MatChipsModule} from "@angular/material/chips";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
 
 @NgModule({
   declarations: [
@@ -118,7 +120,9 @@ import { IllustrationComponent } from './views/graphs/illustration/illustration.
       echarts,
 
     }),
-    PlotlyModule
+    PlotlyModule,
+    MatChipsModule,
+    MatAutocompleteModule
 
   ],
   providers: [{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }],

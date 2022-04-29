@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container project-list">
   <div class="row">
-    <div class="col-md-12 mx-auto">
-      <div class="md-form">
+    <div class="col-md-12 mx-auto project-list-form-container">
+      <div class="md-form project-list-form">
         <input
           type="text"
           [(ngModel)]="searchText"
@@ -10,7 +10,7 @@
           mdbInput
           placeholder="Search"
         />
-        <div class-="buttonus">
+        <div class="button plus">
           <mat-icon class="clickable" (click)="onPress()"
             >add_circle_outline</mat-icon
           >
@@ -20,112 +20,30 @@
 
     <!-- <input type="text" class="form-control" id="advanced-search-input" placeholder="phrase in:field1,field2">
     <button class="btn btn-primary" id="advanced-search-button" type="button">
-       
+
     </button>
   </div> -->
-    <table id="tableSortExample" mdbTable #tableEl="mdbTable" class="z-depth-1">
-      <thead>
-        <tr>
-          <th
-            class="clickable"
-            *ngFor="let head of headElements; let i = index"
-            aria-controls="tableSortExample"
-            scope="col"
-            [mdbTableSort]="projects"
-            [sortBy]="headElements[i]"
-          >
-            {{ head | titlecase }}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let el of projects; let i = index">
-          <th
-            class="clickable"
-            (click)="showIllustrations(el.ProjectName)"
-            *ngIf="
-              i + 1 >= mdbTablePagination.firstItemIndex &&
-              i < mdbTablePagination.lastItemIndex
-            "
-            scope="row"
-          >
-            {{ el.index }}
-          </th>
-          <td
-            class="clickable"
-            (click)="showIllustrations(el.ProjectName)"
-            *ngIf="
-              i + 1 >= mdbTablePagination.firstItemIndex &&
-              i < mdbTablePagination.lastItemIndex
-            "
-          >
-            {{ el.ProjectName }}
-          </td>
-          <td
-            class="clickable"
-            (click)="showIllustrations(el.ProjectName)"
-            *ngIf="
-              i + 1 >= mdbTablePagination.firstItemIndex &&
-              i < mdbTablePagination.lastItemIndex
-            "
-          >
-            {{ el.ProjectDescription }}
-          </td>
-          <td
-            *ngIf="
-              i + 1 >= mdbTablePagination.firstItemIndex &&
-              i < mdbTablePagination.lastItemIndex
-            "
-          >
+    <div class="project-list-container">
+      <ng-container *ngFor="let el of projects; let i = index">
+        <div class="project-list-item"
+             (click)="showIllustrations(el.ProjectName)">
+          <div class="project-data">
+            <div class="project-title">
+              {{el.ProjectName}}
+            </div>
+            <div class="project-description">
+              {{el.ProjectDescription}}
+            </div>
+          </div>
+          <div class="project-actions">
             <mat-icon
               class="clickable"
               (click)="openDialogForDeletingProjects(el.ProjectName)"
-              >delete</mat-icon
+            >delete</mat-icon
             >
-            <!-- <button
-            mat-icon-button
-            [matMenuTriggerFor]="menu"
-            aria-label="Example icon-button with a menu"
-          >
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button
-              mat-menu-item
-              (click)="openDialogForUpdateProjects(el.ProjectName)"
-            >
-              <mat-icon>update</mat-icon>
-              <span>Update Project</span>
-            </button>
-            <button
-              mat-menu-item
-              (click)="openDialogForAddingIllustrations(el.ProjectName)"
-            >
-              <mat-icon>add</mat-icon>
-              <span>Add Illustration</span>
-            </button>
-            <button
-              mat-menu-item
-              color="warn"
-              (click)="openDialogForDeletingProjects(el.ProjectName)"
-            >
-              <mat-icon>delete_outline</mat-icon><span>Delete Project</span>
-            </button>
-          </mat-menu> -->
-          </td>
-        </tr>
-      </tbody>
-      <tfoot class="grey lighten-5 w-100">
-        <tr>
-          <td colspan="10">
-            <mdb-table-pagination
-              paginationAlign="end"
-              [tableEl]="tableEl"
-              [searchDataSource]="projects"
-            ></mdb-table-pagination>
-          </td>
-        </tr>
-      </tfoot>
-    </table>
+          </div>
+        </div>
+      </ng-container>
+    </div>
   </div>
 </div>

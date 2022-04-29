@@ -8,21 +8,17 @@ import { MatDialog } from "@angular/material/dialog";
 import { DeleteProjectDialogComponent } from "../../../dialogs/delete-project-dialog/delete-project-dialog.component";
 import { UpdateProjectDialogComponent } from "../../../dialogs/update-project-dialog/update-project-dialog.component";
 import { AddIllustrationDialogComponent } from "../../../dialogs/add-illustration-dialog/add-illustration-dialog.component";
+import {cloneDeep} from "lodash";
 
 @Component({
   selector: 'app-projects-list',
   templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.css']
+  styleUrls: ['./projects-list.component.scss']
 })
-export class ProjectsListComponent implements OnInit, AfterViewInit {
+export class ProjectsListComponent implements OnInit {
   projects: ProjectForTableModel[] = [];
-
-  //@ts-ignore
-  @ViewChild(MdbTablePaginationComponent, { static: true }) mdbTablePagination: MdbTablePaginationComponent;
-  //@ts-ignore
-  @ViewChild(MdbTableDirective, { static: true }) mdbTable: MdbTableDirective
+  initialProjects: ProjectForTableModel[] = [];
   previous: any = [];
-  headElements: string[] = ['Id', 'ProjectName', 'ProjectDescription', ' '];
   constructor(private projectService: ProjectsService, private cdRef: ChangeDetectorRef, private router: Router, private dialog: MatDialog) { }
   searchText: string = '';
   @HostListener('input') oninput() {
@@ -33,31 +29,19 @@ export class ProjectsListComponent implements OnInit, AfterViewInit {
       projects.forEach((project, index) => {
         this.projects.push({ index: index + 1, ProjectDescription: project.description, ProjectName: project.name })
       });
-      this.mdbTable.setDataSource(this.projects);
-      this.projects = this.mdbTable.getDataSource();
-      this.previous = this.mdbTable.getDataSource();
+      this.initialProjects = cloneDeep(this.projects);
     });
   }
   onPress() {
     this.router.navigate(['/add']);
   }
-  ngAfterViewInit() {
-    this.mdbTablePagination.hideDescription = true;
-    this.mdbTablePagination.setMaxVisibleItemsNumberTo(100);
-    this.mdbTablePagination.calculateFirstItemIndex();
-    this.mdbTablePagination.calculateLastItemIndex();
-    this.cdRef.detectChanges();
-  }
   searchItems() {
-    const prev = this.mdbTable.getDataSource();
     if (!this.searchText) {
-      this.mdbTable.setDataSource(this.previous);
-      this.projects = this.mdbTable.getDataSource();
+      this.projects = this.initialProjects;
     }
     if (this.searchText) {
-      this.projects = this.mdbTable.searchLocalDataByMultipleFields(this.searchText, ['ProjectDescription', "ProjectName"]);
-      this.mdbTable.setDataSource(prev);
-    }
+      this.projects = this.initialProjects.filter(p => p.ProjectName.toLowerCase().includes(this.searchText.toLowerCase()) ||
+        p.ProjectDescription.toLowerCase().includes(this.searchText.toLowerCase()));    }
   }
 
   openDialogForDeletingProjects(projectName: string) {
