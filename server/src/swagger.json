@@ -196,7 +196,8 @@
                             },
                             "example": {
                                 "projectName": "New test project",
-                                "name": "test for dot"
+                                "name": "test for dot",
+                                "type": "graphviz"
                             }
 
                         }
@@ -557,20 +558,29 @@
                 "summary": "Delete a specific illustration from a specific project based their names",
                 "tags": ["Illustrations"],
                 "parameters": [{
-                    "in": "path",
-                    "name": "projectName",
-                    "schema": {
-                        "type": "string"
+                        "in": "path",
+                        "name": "projectName",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }, {
+                        "in": "path",
+                        "name": "illustrationName",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
                     },
-                    "required": true
-                }, {
-                    "in": "path",
-                    "name": "illustrationName",
-                    "schema": {
-                        "type": "string"
-                    },
-                    "required": true
-                }],
+                    {
+                        "in": "path",
+                        "name": "type",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "The request was successfull"

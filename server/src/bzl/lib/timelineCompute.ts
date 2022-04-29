@@ -21,7 +21,7 @@ export class TimelineComputeBZL {
       .then((doc: any) => {
         return Promise.resolve(doc).then((doc) => {
           let events: any[] = _.flattenDeep(
-            Object.values(_.get(doc, "IllustrationData.Timeline")).map(
+            Object.values(_.get(doc, "data.timeline")).map(
               (obj: any) => {
                 return obj.events;
               }

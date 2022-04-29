@@ -7,7 +7,7 @@ describe("Create project from Interface with one visualization", function() {
     })
     it("Verify that the add section opends up and add an illustrations", function() {
         cy.visit(`http://localhost:4200/projects`)
-        cy.get("div > .mat-icon").click()
+        cy.get(".custom-button > .mat-icon").click()
         cy.location(`pathname`).should('eq', '/add')
         cy.get(':nth-child(1) > .mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-infix').type("project with cypress")
         cy.get('#projectDescription').type("Generated description with cypress")
@@ -19,6 +19,8 @@ describe("Create project from Interface with one visualization", function() {
     it("Move to the projects to see the actual visualization", function() {
         cy.visit(`http://localhost:4200/projects`)
         cy.location('pathname').should('eq', '/projects')
+        cy.get(".mat-select-arrow-wrapper").click()
+        cy.contains("20").click()
         cy.contains('project with cypress').click()
         cy.location('pathname').should('eq', '/projects/project%20with%20cypress/illustrations')
         cy.wait(1000)
@@ -41,7 +43,7 @@ describe("Create project from Interface with no description", function() {
     })
     it("Verify that the add section opends up and add an illustrations", function() {
         cy.visit(`http://localhost:4200/projects`)
-        cy.get("div > .mat-icon").click()
+        cy.get(".custom-button > .mat-icon").click()
         cy.location(`pathname`).should('eq', '/add')
         cy.get(':nth-child(1) > .mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-infix').type("project with cypress")
         cy.get('#projectDescription').type("Generated description with cypress")
@@ -53,6 +55,8 @@ describe("Create project from Interface with no description", function() {
     it("Move to the projects to check the project creation", function() {
         cy.visit(`http://localhost:4200/projects`)
         cy.location('pathname').should('eq', '/projects')
+        cy.get(".mat-select-arrow-wrapper").click()
+        cy.contains("20").click()
         cy.contains('project with cypress')
         cy.contains('project with cypress').click()
         cy.wait(1000)
@@ -75,7 +79,7 @@ describe("Create project from Interface with no visualization", function() {
     })
     it("Verify that the add section opends up and add an illustrations", function() {
         cy.visit(`http://localhost:4200/projects`)
-        cy.get("div > .mat-icon").click()
+        cy.get(".custom-button > .mat-icon").click()
         cy.location(`pathname`).should('eq', '/add')
         cy.get(':nth-child(1) > .mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-infix').type("project with cypress")
         cy.get('#projectDescription').type("Generated description with cypress")
@@ -86,6 +90,8 @@ describe("Create project from Interface with no visualization", function() {
     it("Move to the projects to see the actual visualization", function() {
         cy.visit(`http://localhost:4200/projects`)
         cy.location('pathname').should('eq', '/projects')
+        cy.get(".mat-select-arrow-wrapper").click()
+        cy.contains("20").click()
         cy.contains('project with cypress').click()
         cy.location('pathname').should('eq', '/projects/project%20with%20cypress/illustrations')
         cy.wait(1000)

@@ -1,9 +1,6 @@
-import { ChangeDetectorRef, Component, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { Illustration } from "../../../../types/illustration.model";
 import { IllustrationService } from "../../../services/illustration.service";
-import { IllustrationForTableModel } from "../../../../types/illustrationForTable.model";
-import { MdbTableDirective, MdbTablePaginationComponent } from "angular-bootstrap-md";
-import { Project } from "../../../../types/projects.model";
 import { Router } from "@angular/router";
 import { MatDialog } from "@angular/material/dialog";
 import { DeleteProjectDialogComponent } from "../../../dialogs/delete-project-dialog/delete-project-dialog.component";
@@ -11,66 +8,61 @@ import { UpdateProjectDialogComponent } from "../../../dialogs/update-project-di
 import { DeleteIllustrationDialogComponent } from "../../../dialogs/delete-illustration-dialog/delete-illustration-dialog.component";
 import { UpdateIllustrationDialogComponent } from "../../../dialogs/update-illustration-dialog/update-illustration-dialog.component";
 import { AddIllustrationDialogComponent } from 'src/app/dialogs/add-illustration-dialog/add-illustration-dialog.component';
+import { MatTableDataSource } from '@angular/material/table';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
+import { MatSort, Sort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-illustration-list',
   templateUrl: './illustration-list.component.html',
   styleUrls: ['./illustration-list.component.css']
 })
-export class IllustrationListComponent implements OnInit {
+export class IllustrationListComponent implements OnInit,AfterViewInit {
   @Input()
   projectName: string = '';
 
-  illustrations: IllustrationForTableModel[] = [];
-  //@ts-ignore
-  @ViewChild(MdbTablePaginationComponent, { static: true }) mdbTablePagination: MdbTablePaginationComponent;
-  //@ts-ignore
-  @ViewChild(MdbTableDirective, { static: true }) mdbTable: MdbTableDirective
-  previous: any = [];
-  headElements: string[] = ['Id', 'IllustrationName', 'IllustrationType', 'Tags', 'actions'];
-  constructor(private illustrationService: IllustrationService, private cdRef: ChangeDetectorRef, private router: Router, private dialog: MatDialog) { }
+  illustrations: Illustration[] = [];
+  displayedColumns: string[] = ['position', 'name','description', 'type', 'tags', 'actions'];
+  dataSource = new MatTableDataSource<Illustration>(this.illustrations)
 
-
-  searchText: string = '';
-  @HostListener('input') oninput() {
-    this.searchItems();
+  @ViewChild(MatSort,{static:true}) sort!: MatSort ;
+  @ViewChild(MatPaginator,{static:true}) paginator!: MatPaginator;
+  constructor(private illustrationService: IllustrationService, private router: Router, private dialog: MatDialog,private _liveAnnouncer: LiveAnnouncer) { }
+  ngAfterViewInit(): void {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
-  ngOnInit(): void {
+
+  ngOnInit() {
+    this.illustrationService.RefreshNeeded$.subscribe(() => {
+      this.getAllIllustrations()
+    })
+     this.getAllIllustrations()
+  }
+  public getAllIllustrations(){
     this.illustrationService.getAllIllustrations(this.projectName).subscribe((illustrations: Illustration[]) => {
-      illustrations.forEach((illustrations, index) => {
-        // @ts-ignore
-
-        this.illustrations.push({ index: index + 1, IllustrationName: illustrations.name, IllustrationType: illustrations.type, Tags: illustrations.tags, IllustrationData: illustrations.data })
-      });
-      this.mdbTable.setDataSource(this.illustrations);
-      this.illustrations = this.mdbTable.getDataSource();
-      this.previous = this.mdbTable.getDataSource();
+      this.dataSource.data = illustrations
     });
-  }
 
-  ngAfterViewInit() {
-    this.mdbTablePagination.hideDescription = true;
-    this.mdbTablePagination.setMaxVisibleItemsNumberTo(10);
-    this.mdbTablePagination.calculateFirstItemIndex();
-    this.mdbTablePagination.calculateLastItemIndex();
-    this.cdRef.detectChanges();
   }
-  searchItems() {
-    const prev = this.mdbTable.getDataSource();
-    if (!this.searchText) {
-      this.mdbTable.setDataSource(this.previous);
-      this.illustrations = this.mdbTable.getDataSource();
-    }
-    if (this.searchText) {
-      this.illustrations = this.mdbTable.searchLocalDataByMultipleFields(this.searchText, ['IllustrationName', 'IllustrationType']); //here tags also need to be put
-      this.mdbTable.setDataSource(prev);
-    }
+  applyFilter(event:any) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLocaleLowerCase()
   }
-  openDialogForDeletingIllustration(illustrationName: string) {
+ announceSortChange(sortState: Sort) {
+  if (sortState.direction) {
+    this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+  } else {
+    this._liveAnnouncer.announce('Sorting cleared');
+  }
+}
+  openDialogForDeletingIllustration(illustrationName: string,type:string) {
     this.dialog.open(DeleteIllustrationDialogComponent, {
       data: {
         illustrationName: illustrationName,
-        projectName: this.projectName
+        projectName: this.projectName,
+        type: type
       },
       maxWidth: "500px",
       minWidth: "400px",
@@ -88,7 +80,6 @@ export class IllustrationListComponent implements OnInit {
       minHeight: "550px"
     })
   }
-
 
   showGraphic(illustrationName: string) {
     this.router.navigate([`projects/${this.projectName}/illustrations/${illustrationName}`]);

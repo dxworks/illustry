@@ -10,11 +10,11 @@ import { Router } from "@angular/router";
 })
 export class DeleteIllustrationDialogComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { illustrationName: string, projectName: string }, private illustrationService: IllustrationService, private router: Router) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { illustrationName: string, projectName: string,type:string }, private illustrationService: IllustrationService, private router: Router) { }
 
   ngOnInit(): void {
   }
   deleteIllustration() {
-    this.illustrationService.deleteIllustration(this.data.projectName, this.data.illustrationName).subscribe()
+    this.illustrationService.deleteIllustration(this.data.projectName, this.data.illustrationName,this.data.type).subscribe()
   }
 }

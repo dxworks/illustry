@@ -89,6 +89,7 @@ import { IllustrationComponent } from './views/graphs/illustration/illustration.
     ErrorDialogComponent,
     PlotyComponent,
     IllustrationComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -114,6 +115,8 @@ import { IllustrationComponent } from './views/graphs/illustration/illustration.
     MatPaginatorModule,
     MDBBootstrapModule,
     MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
     NgxEchartsModule.forRoot({
       echarts,
 

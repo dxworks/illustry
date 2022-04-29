@@ -20,7 +20,7 @@ export class UpdateProjectDialogComponent implements OnInit {
 
   updateProject(projectName: string) {
     const formData: FormData = new FormData();
-    formData.append("ProjectDescription", this.form.value.ProjectDescription);
+    formData.append("description", this.form.value.ProjectDescription);
 
     this.projectService.updateProject(projectName, formData)
       .subscribe(response => {

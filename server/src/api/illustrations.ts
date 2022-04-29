@@ -1,4 +1,4 @@
-import {Promise} from 'bluebird';
+import { Promise } from "bluebird";
 import { Factory } from "../bzl/factory";
 import { FileProperties } from "../types/fileproperties";
 import {
@@ -35,11 +35,16 @@ export const illustrationApi = {
     });
   },
 
-  deteleIllustration(projectName: string, illustrationNameFromReq: string) {
+  deteleIllustration(
+    projectName: string,
+    illustrationNameFromReq: string,
+    type: IllustrationTypes
+  ) {
     return Promise.resolve().then(() => {
       return Factory.getInstance().illustrationBzl.deleteIllustration(
         projectName,
-        illustrationNameFromReq
+        illustrationNameFromReq,
+        type
       );
     });
   },

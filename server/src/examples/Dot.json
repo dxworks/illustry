@@ -1,6 +1,7 @@
 {
-    "name": "dot demo",
+    "name": "dot3 demo",
     "type": "graphviz",
+    "description": "mai",
     "tags": ["sucre", "kaledo"],
     "data": {
         "nodes": [{

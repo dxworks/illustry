@@ -27,7 +27,7 @@ router.get(
 );
 
 router.delete(
-  "/api/project/:projectName/illustration/:illustrationName",
+  "/api/project/:projectName/illustration/:illustrationName/:type",
   illustrationMiddleware.deteleIllustration
 );
 

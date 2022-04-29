@@ -284,11 +284,13 @@ export class IllustrationBZL {
 
   deleteIllustration = (
     projectName: string,
-    illustrationNameFromReq: string
+    illustrationNameFromReq: string,
+    type: IllustrationTypes
   ) => {
     let query = {
       projectName: { $eq: projectName },
       name: { $eq: illustrationNameFromReq },
+      type: {$eq: type}
     };
     return Promise.resolve()
       .then(() => {
@@ -302,7 +304,7 @@ export class IllustrationBZL {
           return IllustrationTable.deleteOne(query).then((doc: any) => {
             return Promise.resolve(doc)
               .then((doc) => {
-                return { name: illustrationNameFromReq };
+                return { name: illustrationNameFromReq, type: type };
               })
               .catch((err: any) => {
                 throw err;

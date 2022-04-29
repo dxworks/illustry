@@ -139,10 +139,12 @@ export const findOneIllustrationFromOtherSource = (
 export const deteleIllustration = (req: any, res: any, next: any) => {
   let projectName = req.params.projectName;
   let illustrationNameFromReq = req.params.illustrationName;
+  let type = req.params.type
   Factory.getInstance()
     .api.illustrationApi.deteleIllustration(
       projectName,
-      illustrationNameFromReq
+      illustrationNameFromReq,
+      type
     )
     .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
@@ -156,8 +158,9 @@ export const deleteIllustrationFromExternalSource = (
 ) => {
   let projectName = req.body.projectName as string;
   let illustrationName = req.body.name as string;
+  let type = req.body.type
   Factory.getInstance()
-    .api.illustrationApi.deteleIllustration(projectName, illustrationName)
+    .api.illustrationApi.deteleIllustration(projectName, illustrationName,type)
     .asCallback((err: any, data: any) => {
       helper.returnResponse(res, err, data, next);
     });
