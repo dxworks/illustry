@@ -1,0 +1,103 @@
+{
+    "name": "HuckFin",
+    "type": ["chart"],
+    "description": "A wordcloud generated based on the book Hucklebary Finn",
+    "tags": ["wordcloud", "huck"],
+    "data": {
+        "series": [{
+            "type": "wordCloud",
+            "sizeRange": [4, 150],
+            "rotationRange": [0, 0],
+            "gridSize": 0,
+            "data": [{
+                    "name": "jim",
+                    "value": 331,
+                    "textStyle": {
+                        "color": "black"
+                    },
+                    "emphasis": {
+                        "textStyle": {
+                            "color": "red"
+                        }
+                    }
+                },
+                {
+                    "name": "finn",
+                    "value": 275
+                },
+                {
+                    "name": "huckleberry",
+                    "value": 247
+                },
+                {
+                    "name": "nigger",
+                    "value": 157
+                },
+                {
+                    "name": "king",
+                    "value": 148
+                },
+                {
+                    "name": "told",
+                    "value": 146
+                },
+                {
+                    "name": "river",
+                    "value": 141
+                },
+                {
+                    "name": "set",
+                    "value": 140
+                },
+                {
+                    "name": "duke",
+                    "value": 138
+                },
+                {
+                    "name": "night",
+                    "value": 130
+                },
+                {
+                    "name": "head",
+                    "value": 123
+                },
+                {
+                    "name": "reckon",
+                    "value": 122
+                },
+                {
+                    "name": "people",
+                    "value": 121
+                },
+                {
+                    "name": "place",
+                    "value": 114
+                },
+                {
+                    "name": "town",
+                    "value": 112
+                },
+                {
+                    "name": "raft",
+                    "value": 111
+                },
+                {
+                    "name": "wanted",
+                    "value": 96
+                },
+                {
+                    "name": "minute",
+                    "value": 95
+                },
+                {
+                    "name": "knowed",
+                    "value": 94
+                },
+                {
+                    "name": "hear",
+                    "value": 91
+                }
+            ]
+        }]
+    }
+}

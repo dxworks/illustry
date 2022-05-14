@@ -7,7 +7,7 @@ const multer = require("multer");
 const storage = multer.diskStorage({ destination: null });
 var upload = multer({
   storage: storage,
-  limits: { fileSize: 10 * 1024 * 1024 },
+  limits: { fileSize: 100 * 1024 * 1024 },
 });
 var finalupload = upload.fields([{ name: "File", maxCount: 10 }]);
 router.post(
