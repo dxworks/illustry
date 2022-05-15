@@ -76,7 +76,7 @@ export class MatrixComponent implements OnInit {
     let headerCell = empty;
 
     headers.forEach((header) => {
-     
+
       let postHeaderCell = `<th `;
       let savedName = `>${header.id}</th>`;
       if (header.style) {
@@ -184,12 +184,12 @@ export class MatrixComponent implements OnInit {
         `<td style = "font-weight:bold;width: 10%;text-align:center;">${g1.id}</td>`;
       finalProduct = finalProduct + firstCol;
       g1.properties?.forEach((g1P: any) => {
+
         propertiesLeftArray.forEach((p: any) => {
           if (g1P.label === p && g1P.style) {
             if (g1P.tooltip) {
-              let col = `<td class="tooltipLeft" style = "${Object.entries(
-                g1P.style
-              )
+
+              let col = `<td class="tooltipLeft" style = "${Object.entries(g1P.style)
                 .map(([k, v]) => `${k}:${v}`)
                 .join(';')} width:10%;text-align:center;" >${
                 g1P.value

@@ -1,0 +1,5557 @@
+{
+    "name": "Politehnica Timisoara statistics",
+    "description": "Description for Politehnica Timisoara for the year 2022",
+    "tags": ["football"],
+    "type": ["matrix"],
+    "data": {
+        "nodes": [{
+                "id": "Devenish-Meares Harrison",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            }, {
+                "id": "Murariu Rares Mihai",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 23,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 23,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#541690",
+                    "background-color1": "541690"
+                }
+            },
+            {
+                "id": "Paduraru George",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 30,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 27,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+
+
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 16,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Bocsan Cristian",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 27,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Huminic Cosmin",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Mera Ioan",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 14,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 35,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 21,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Pamfile Claudiu",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 18,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Oanea Catalin",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 23,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 23,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 19,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Scutaru Cristian",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 13,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 35,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 18,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Andrei Doru",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 11,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 19,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 19,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Bakos Ervin-Raul",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 28,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Birnoi Cosmin",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 24,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 22,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Ignea Alin",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 24,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 33,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 24,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2",
+                    "border-width": "1px"
+                }
+            }, {
+                "id": "Lazar Rares",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 21,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 23,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 24,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Olariu Daniel",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 16,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            }, {
+                "id": "Ursu Octavian",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 27,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 24,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            }, {
+                "id": "Vukoje Stefan",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 19,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 20,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            }, {
+                "id": "Zaluschi Adrian",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 8,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 32,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 16,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            }, {
+                "id": "Gerbi Erik",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 9,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 21,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 19,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            }, {
+                "id": "Rogosic Balsa",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 6,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            }, {
+                "id": "Sintean Andrei",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 20,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 100,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Rogosic Balsa",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 6,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            }, {
+                "id": "Politehnica Timisoara",
+                "group": 1,
+                "properties": [{
+                        "label": "Jersey Number",
+                        "value": 100,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Goals",
+                        "value": 24,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Yellow Cards",
+                        "value": 39,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Red Cards",
+                        "value": 0,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    },
+                    {
+                        "label": "Age",
+                        "value": 22,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#541690",
+                            "background-color1": "541690"
+                        }
+                    },
+                    {
+                        "label": "Appearances",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold",
+                            "background-color": "#F7F5F2",
+                            "background-color1": "F7F5F2"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#AB46D2"
+                }
+            },
+            {
+                "id": "Astra Giurgiu",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 16,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 24,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 55,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 20,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "C74B50"
+                }
+            },
+
+            {
+                "id": "Dunărea Călărași",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 20,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 14,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 70,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 18,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 6,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "C74B50"
+                }
+            },
+            {
+                "id": "Dacia Unirea Brăila",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 22,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 11,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 73,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 19,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "C74B50"
+                }
+            },
+            {
+                "id": "Unirea Constanța",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 27,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 68,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 6,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "C74B50"
+                }
+            },
+
+            {
+                "id": "FC Brasov",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 13,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 32,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 40,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 16,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "C74B50"
+                }
+            },
+            {
+                "id": "CSC 1599 Șelimbăr",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 8,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 35,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 30,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 14,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "ACS Viitorul Tg. Jiu",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 9,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 9,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 31,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 28,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 13,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "Ripensia Timișoara",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 8,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 30,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 12,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "Poli Iași",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 6,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 9,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 32,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 26,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 11,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "Metaloglobus București",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 8,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 33,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 30,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "Unirea Dej",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 13,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 9,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 30,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 20,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 9,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "FC Buzău",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 13,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 57,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 24,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 8,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "Csikszereda M. Ciuc",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 15,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 54,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 29,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "Unirea Slobozia",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 10,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 8,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 39,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 6,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 6,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "Concordia Chiajna",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 11,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 8,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 9,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 27,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#36AE7C"
+                }
+            },
+            {
+                "id": "CSA Steaua București",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 14,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 41,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 25,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold"
+                }
+            },
+            {
+                "id": "FC Hermannstadt",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 17,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 9,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 55,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 20,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#36AE7C"
+                }
+            },
+            {
+                "id": "'U' Cluj",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 18,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 7,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 37,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 22,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 2,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 3,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#36AE7C"
+                }
+            },
+            {
+                "id": "Petrolul Ploiești",
+                "group": 2,
+                "properties": [{
+                        "label": "Victory",
+                        "value": 19,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Draw",
+                        "value": 5,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Defeats",
+                        "value": 4,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Scored",
+                        "value": 50,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Goals Received",
+                        "value": 16,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+                    {
+                        "label": "Position before split",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    },
+
+                    {
+                        "label": "Position after split",
+                        "value": 1,
+                        "style": {
+                            "font-weight": "bold"
+                        }
+                    }
+                ],
+                "style": {
+                    "font-weight": "bold",
+                    "background-color": "#36AE7C"
+                }
+            }
+        ],
+        "links": [{
+            "source": "Devenish-Meares Harrison",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Devenish-Meares Harrison",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Murariu Rares Mihai",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Paduraru George",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Dacia Unirea Brăila",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Bocsan Cristian",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Huminic Cosmin",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "CSA Steaua București",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#83BD75"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Mera Ioan",
+            "target": "Astra Giurgiu",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#83BD75"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Pamfile Claudiu",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Scutaru Cristian",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Bakos Ervin-Raul",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Olariu Daniel",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Vukoje Stefan",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Zaluschi Adrian",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Rogosic Balsa",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Sintean Andrei",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "FC Brasov",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Dacia Unirea Brăila",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Gerbi Erik",
+            "target": "Astra Giurgiu",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "FC Brasov",
+
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Dacia Unirea Brăila",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Ursu Octavian",
+            "target": "Astra Giurgiu",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Dunărea Călărași",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Lazar Rares",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 1,
+            "style": {
+                "background-color": "#4E944F",
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Dunărea Călărași",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Dacia Unirea Brăila",
+            "value": 1,
+            "style": {
+                "background-color": "#4E944F",
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Ignea Alin",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Csikszereda M. Ciuc",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Metaloglobus București",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Poli Iași",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Unirea Constanța",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Dacia Unirea Brăila",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Birnoi Cosmin",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "FC Brasov",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Dunărea Călărași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Andrei Doru",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Petrolul Ploiești",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "'U' Cluj",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "FC Hermannstadt",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "CSA Steaua București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Unirea Slobozia",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Csikszereda M. Ciuc",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Unirea Dej",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Metaloglobus București",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Poli Iași",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Ripensia Timișoara",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "CSC 1599 Șelimbăr",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "FC Brasov",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Unirea Constanța",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Dunărea Călărași",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Dacia Unirea Brăila",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Oanea Catalin",
+            "target": "Astra Giurgiu",
+            "value": 0,
+            "style": {
+                "font-weight": "bold"
+            }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Petrolul Ploiești",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "La multi ani": "Pentru 100 de ani de Politehnica Timisoara" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "'U' Cluj",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Lupta pentru noi Hey": "Lupta pentru noi" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "FC Hermannstadt",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Poli Poli": "Lupta pentru noi Hey" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "CSA Steaua București",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            },
+            "tooltip": { "Lupta pentru noi Hey": "Lupta pentru noi" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Concordia Chiajna",
+            "value": 0,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#FFCD38"
+            },
+            "tooltip": { "Poli Poli": "Lupta pentru noi Hey" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Unirea Slobozia",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Csikszereda M. Ciuc",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Lupta pentru noi Hey": "Lupta pentru noi" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "FC Buzău",
+            "value": 0,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#FFCD38"
+            },
+            "tooltip": { "Poli Poli": "Lupta pentru noi Hey" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Unirea Dej",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Caci Polistii sunt ai nostrii": "Si de aceea noi cantam" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Metaloglobus București",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Cand dai gol sarim in sus": "Si cu toti ne bucuram" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Poli Iași",
+            "value": -2,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Lupta pentru noi Hey": "Lupta pentru noi" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Ripensia Timișoara",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Poli Poli": "Lupta pentru noi Hey" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "ACS Viitorul Tg. Jiu",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Lupta pentru noi Hey": "Lupta pentru noi" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "CSC 1599 Șelimbăr",
+            "value": -1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#D82148"
+            },
+            "tooltip": { "Poli Poli": "Lupta pentru noi Hey" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "FC Brasov",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            },
+            "tooltip": { "Vocile": "Sa le unim" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Unirea Constanța",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            },
+            "tooltip": { "Sa vedem": "Meciul cel mare" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Dunărea Călărași",
+            "value": 2,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            },
+            "tooltip": { "Fara": "Soare" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Dacia Unirea Brăila",
+            "value": 2,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            },
+            "tooltip": { "Noi la Poli": "Toti venim" }
+        }, {
+            "source": "Politehnica Timisoara",
+            "target": "Astra Giurgiu",
+            "value": 1,
+            "style": {
+                "font-weight": "bold",
+                "background-color": "#4E944F"
+            },
+            "tooltip": { "Zi cu": "Soare" }
+        }]
+    }
+}
