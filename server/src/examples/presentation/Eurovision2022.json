@@ -1,0 +1,2722 @@
+{
+    "name": "Eurovision 2022",
+    "description": "The voting of Eurovision 2022",
+    "tags": ["Eurovision"],
+    "type": ["force-directed-graph", "hierarchical-edge-bundling", "matrix", "graphviz"],
+    "data": {
+        "nodes": [{
+                "group": "Participants",
+                "id": "Switzerland"
+            }, {
+                "group": "Participants",
+                "id": "Portugal"
+            }, {
+                "group": "Participants",
+                "id": "Australia"
+            }, {
+                "group": "Participants",
+                "id": "Belgium"
+            }, {
+                "group": "Participants",
+                "id": "Spain"
+            }, {
+                "group": "Participants",
+                "id": "UK"
+            }, {
+                "group": "Participants",
+                "id": "Norway"
+            }, {
+                "group": "Participants",
+                "id": "Moldova"
+            }, {
+                "group": "Participants",
+                "id": "Sweden"
+            }, {
+                "group": "Participants",
+                "id": "Czech Republic"
+            }, {
+                "group": "Participants",
+                "id": "Romania"
+            }, {
+                "group": "Participants",
+                "id": "Finland"
+            }, {
+                "group": "Participants",
+                "id": "France"
+            }, {
+                "group": "Participants",
+                "id": "Armenia"
+            }, {
+                "group": "Participants",
+                "id": "Italy"
+            }, {
+                "group": "Participants",
+                "id": "Netherlands"
+            }, {
+                "group": "Participants",
+                "id": "Ukraine"
+            }, {
+                "group": "Participants",
+                "id": "Germany"
+            }, {
+                "group": "Participants",
+                "id": "Lithuania"
+            }, {
+                "group": "Participants",
+                "id": "Azerbaijan"
+            }, {
+                "group": "Participants",
+                "id": "Greece"
+            }, {
+                "group": "Participants",
+                "id": "Iceland"
+            }, {
+                "group": "Participants",
+                "id": "Poland"
+            }, {
+                "group": "Participants",
+                "id": "Serbia"
+            },
+            {
+                "group": "Participants",
+                "id": "Estonia"
+            }, {
+                "group": "Voters",
+                "id": "Cyprus"
+            }, {
+                "group": "Voters",
+                "id": "Austria"
+            },
+            {
+                "group": "Voters",
+                "id": "San Marino"
+            }, {
+                "group": "Voters",
+                "id": "North Macedonia"
+            }, {
+                "group": "Voters",
+                "id": "Malta"
+            }, {
+                "group": "Voters",
+                "id": "Albania"
+            }, {
+                "group": "Voters",
+                "id": "Israel"
+            }, {
+                "group": "Voters",
+                "id": "Bulgaria"
+            }, {
+                "group": "Voters",
+                "id": "Latvia"
+            }, {
+                "group": "Voters",
+                "id": "Denmark"
+            }, {
+                "group": "Voters",
+                "id": "Montenegro"
+            }, {
+                "group": "Voters",
+                "id": "Ireland"
+            }, {
+                "group": "Voters",
+                "id": "Slovenia"
+            }, {
+                "group": "Voters",
+                "id": "Georgia"
+            }, {
+                "group": "Voters",
+                "id": "Croatia"
+            },
+            {
+                "group": "People Voters",
+                "id": "Televoting"
+            }
+        ],
+        "links": [{
+
+
+                "source": "Albania",
+                "target": "UK",
+                "value": 10
+            }, {
+
+
+                "source": "Albania",
+                "target": "Sweden",
+                "value": 8
+            }, {
+
+
+                "source": "Albania",
+                "target": "Ukraine",
+                "value": 10
+            },
+            {
+
+
+                "source": "Albania",
+                "target": "Netherlands",
+                "value": 6
+            }, {
+
+
+                "source": "Albania",
+                "target": "Spain",
+                "value": 5
+            },
+            {
+
+
+                "source": "Albania",
+                "target": "Armenia",
+                "value": 4
+            }, {
+
+
+                "source": "Albania",
+                "target": "Azerbaijan",
+                "value": 3
+            }, {
+
+
+                "source": "Albania",
+                "target": "Belgium",
+                "value": 2
+            },
+            {
+
+
+                "source": "Albania",
+                "target": "Portugal",
+                "value": 1
+            },
+            {
+
+
+                "source": "Albania",
+                "target": "Italy",
+                "value": 12
+            },
+            {
+
+
+                "source": "Estonia",
+                "target": "Italy",
+                "value": 10
+            }, {
+
+
+                "source": "Estonia",
+                "target": "Australia",
+                "value": 8
+            }, {
+
+
+                "source": "Estonia",
+                "target": "Portugal",
+                "value": 7
+            },
+            {
+
+
+                "source": "Estonia",
+                "target": "Greece",
+                "value": 6
+            }, {
+
+
+                "source": "Estonia",
+                "target": "Finland",
+                "value": 5
+            },
+            {
+
+
+                "source": "Estonia",
+                "target": "UK",
+                "value": 4
+            }, {
+
+
+                "source": "Estonia",
+                "target": "Azerbaijan",
+                "value": 3
+            }, {
+
+
+                "source": "Estonia",
+                "target": "Lithuania",
+                "value": 2
+            }, {
+
+
+                "source": "Estonia",
+                "target": "Netherlands",
+                "value": 1
+            },
+            {
+
+
+                "source": "Estonia",
+                "target": "Sweden",
+                "value": 12
+            }, {
+
+
+                "source": "Azerbaijan",
+                "target": "Italy",
+                "value": 10
+            }, {
+
+
+                "source": "Azerbaijan",
+                "target": "Sweden",
+                "value": 8
+            }, {
+
+
+                "source": "Azerbaijan",
+                "target": "Portugal",
+                "value": 7
+            },
+            {
+
+
+                "source": "Azerbaijan",
+                "target": "Ukraine",
+                "value": 6
+            }, {
+
+
+                "source": "Azerbaijan",
+                "target": "Spain",
+                "value": 5
+            }, {
+
+
+                "source": "Azerbaijan",
+                "target": "Netherlands",
+                "value": 4
+            },
+            {
+
+
+                "source": "Azerbaijan",
+                "target": "Greece",
+                "value": 3
+            },
+            {
+
+
+                "source": "Azerbaijan",
+                "target": "Poland",
+                "value": 2
+            }, {
+
+
+                "source": "Azerbaijan",
+                "target": "France",
+                "value": 1
+            },
+            {
+
+
+                "source": "Azerbaijan",
+                "target": "UK",
+                "value": 12
+            }, {
+
+
+                "source": "Portugal",
+                "target": "UK",
+                "value": 10
+            }, {
+
+
+                "source": "Portugal",
+                "target": "Ukraine",
+                "value": 8
+            }, {
+
+
+                "source": "Portugal",
+                "target": "Netherlands",
+                "value": 7
+            }, {
+
+
+                "source": "Portugal",
+                "target": "Iceland",
+                "value": 6
+            }, {
+
+
+                "source": "Portugal",
+                "target": "Lithuania",
+                "value": 5
+            }, {
+
+
+                "source": "Portugal",
+                "target": "Greece",
+                "value": 4
+            }, {
+
+
+                "source": "Portugal",
+                "target": "Serbia",
+                "value": 3
+            },
+            {
+
+
+                "source": "Portugal",
+                "target": "Switzerland",
+                "value": 2
+            }, {
+
+
+                "source": "Portugal",
+                "target": "Armenia",
+                "value": 1
+            },
+            {
+
+
+                "source": "Portugal",
+                "target": "Spain",
+                "value": 12
+            },
+            {
+
+
+                "source": "Germany",
+                "target": "Spain",
+                "value": 8
+            }, {
+
+
+                "source": "Germany",
+                "target": "Ukraine",
+                "value": 10
+            },
+            {
+
+
+                "source": "Germany",
+                "target": "Sweden",
+                "value": 7
+            }, {
+
+
+                "source": "Germany",
+                "target": "Azerbaijan",
+                "value": 6
+            },
+            {
+
+
+                "source": "Germany",
+                "target": "Australia",
+                "value": 5
+            }, {
+
+
+                "source": "Germany",
+                "target": "Netherlands",
+                "value": 4
+            }, {
+
+
+                "source": "Germany",
+                "target": "Norway",
+                "value": 3
+            },
+            {
+
+
+                "source": "Germany",
+                "target": "Switzerland",
+                "value": 2
+            }, {
+
+
+                "source": "Germany",
+                "target": "Romania",
+                "value": 1
+            },
+            {
+
+
+                "source": "Germany",
+                "target": "UK",
+                "value": 8
+            },
+            {
+
+
+                "source": "Ukraine",
+                "target": "Portugal",
+                "value": 10
+            }, {
+
+
+                "source": "Ukraine",
+                "target": "Netherlands",
+                "value": 8
+            },
+            {
+
+
+                "source": "Ukraine",
+                "target": "Greece",
+                "value": 7
+            },
+            {
+
+
+                "source": "Ukraine",
+                "target": "Switzerland",
+                "value": 6
+            }, {
+
+
+                "source": "Ukraine",
+                "target": "Azerbaijan",
+                "value": 5
+            },
+            {
+
+
+                "source": "Ukraine",
+                "target": "Sweden",
+                "value": 4
+            }, {
+
+
+                "source": "Ukraine",
+                "target": "Australia",
+                "value": 3
+            },
+            {
+
+
+                "source": "Ukraine",
+                "target": "Armenia",
+                "value": 2
+            },
+            {
+
+
+                "source": "Ukraine",
+                "target": "Czech Republic",
+                "value": 1
+            },
+            {
+
+
+                "source": "Ukraine",
+                "target": "UK",
+                "value": 12
+            },
+            {
+
+
+                "source": "Malta",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "Malta",
+                "target": "UK",
+                "value": 8
+            }, {
+
+
+                "source": "Malta",
+                "target": "Italy",
+                "value": 7
+            }, {
+
+
+                "source": "Malta",
+                "target": "Australia",
+                "value": 6
+            }, {
+
+
+                "source": "Malta",
+                "target": "Poland",
+                "value": 4
+            }, {
+
+
+                "source": "Malta",
+                "target": "Czech Republic",
+                "value": 3
+            }, {
+
+
+                "source": "Malta",
+                "target": "Azerbaijan",
+                "value": 2
+            }, {
+
+
+                "source": "Malta",
+                "target": "Greece",
+                "value": 1
+            },
+            {
+
+
+                "source": "Malta",
+                "target": "Spain",
+                "value": 12
+            }, {
+
+
+                "source": "Malta",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "North Macedonia",
+                "target": "Serbia",
+                "value": 10
+            }, {
+
+
+                "source": "North Macedonia",
+                "target": "UK",
+                "value": 8
+            }, {
+
+
+                "source": "North Macedonia",
+                "target": "Italy",
+                "value": 7
+            }, {
+
+
+                "source": "North Macedonia",
+                "target": "Sweden",
+                "value": 6
+            }, {
+
+
+                "source": "North Macedonia",
+                "target": "Australia",
+                "value": 6
+            }, {
+
+
+                "source": "North Macedonia",
+                "target": "Azerbaijan",
+                "value": 4
+            }, {
+
+
+                "source": "North Macedonia",
+                "target": "Belgium",
+                "value": 3
+            },
+            {
+
+
+                "source": "North Macedonia",
+                "target": "Poland",
+                "value": 2
+            },
+            {
+
+
+                "source": "North Macedonia",
+                "target": "Switzerland",
+                "value": 1
+            }, {
+
+
+                "source": "North Macedonia",
+                "target": "Spain",
+                "value": 12
+            },
+            {
+
+
+                "source": "San Marino",
+                "target": "Greece",
+                "value": 10
+            }, {
+
+
+                "source": "San Marino",
+                "target": "Australia",
+                "value": 6
+            },
+            {
+
+
+                "source": "San Marino",
+                "target": "UK",
+                "value": 8
+            }, {
+
+
+                "source": "San Marino",
+                "target": "Switzerland",
+                "value": 1
+            }, {
+
+
+                "source": "San Marino",
+                "target": "Azerbaijan",
+                "value": 7
+            }, {
+
+
+                "source": "San Marino",
+                "target": "Sweden",
+                "value": 5
+            }, {
+
+
+                "source": "San Marino",
+                "target": "Poland",
+                "value": 4
+            }, {
+
+
+                "source": "San Marino",
+                "target": "Italy",
+                "value": 3
+            }, {
+
+
+                "source": "San Marino",
+                "target": "Ukraine",
+                "value": 2
+            },
+            {
+
+
+                "source": "San Marino",
+                "target": "Spain",
+                "value": 12
+            },
+            {
+
+
+                "source": "Netherlands",
+                "target": "Switzerland",
+                "value": 10
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "Portugal",
+                "value": 8
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "Australia",
+                "value": 7
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "Belgium",
+                "value": 6
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "Spain",
+                "value": 6
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "UK",
+                "value": 6
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "Norway",
+                "value": 3
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "Moldova",
+                "value": 3
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "Sweden",
+                "value": 1
+            }, {
+
+
+                "source": "Netherlands",
+                "target": "Greece",
+                "value": 12
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Spain",
+                "value": 10
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Italy",
+                "value": 8
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Sweden",
+                "value": 7
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Ukraine",
+                "value": 6
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Portugal",
+                "value": 5
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Serbia",
+                "value": 4
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Azerbaijan",
+                "value": 3
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Czech Republic",
+                "value": 2
+            }, {
+
+
+                "source": "Belgium",
+                "target": "Australia",
+                "value": 1
+            }, {
+
+
+                "source": "Belgium",
+                "target": "UK",
+                "value": 12
+            }, {
+
+
+                "source": "Norway",
+                "target": "Portugal",
+                "value": 10
+            }, {
+
+
+                "source": "Norway",
+                "target": "Sweden",
+                "value": 8
+            }, {
+
+
+                "source": "Norway",
+                "target": "Spain",
+                "value": 7
+            }, {
+
+
+                "source": "Norway",
+                "target": "UK",
+                "value": 6
+            }, {
+
+
+                "source": "Norway",
+                "target": "Netherlands",
+                "value": 5
+            }, {
+
+
+                "source": "Norway",
+                "target": "Armenia",
+                "value": 4
+            }, {
+
+
+                "source": "Norway",
+                "target": "Ukraine",
+                "value": 3
+            }, {
+
+
+                "source": "Norway",
+                "target": "Lithuania",
+                "value": 2
+            }, {
+
+
+                "source": "Norway",
+                "target": "Switzerland",
+                "value": 1
+            }, {
+
+
+                "source": "Norway",
+                "target": "Greece",
+                "value": 12
+            }, {
+
+
+                "source": "Israel",
+                "target": "UK",
+                "value": 10
+            }, {
+
+
+                "source": "Israel",
+                "target": "Italy",
+                "value": 8
+            }, {
+
+
+                "source": "Israel",
+                "target": "Ukraine",
+                "value": 7
+            }, {
+
+
+                "source": "Israel",
+                "target": "Poland",
+                "value": 7
+            }, {
+
+
+                "source": "Israel",
+                "target": "Australia",
+                "value": 5
+            }, {
+
+
+                "source": "Israel",
+                "target": "Belgium",
+                "value": 4
+            }, {
+
+
+                "source": "Israel",
+                "target": "Spain",
+                "value": 3
+            }, {
+
+
+                "source": "Israel",
+                "target": "Czech Republic",
+                "value": 2
+            }, {
+
+
+                "source": "Israel",
+                "target": "Netherlands",
+                "value": 1
+            }, {
+
+
+                "source": "Israel",
+                "target": "Sweden",
+                "value": 12
+            }, {
+
+
+                "source": "Poland",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "Poland",
+                "target": "UK",
+                "value": 8
+            }, {
+
+
+                "source": "Poland",
+                "target": "Portugal",
+                "value": 7
+            }, {
+
+
+                "source": "Poland",
+                "target": "Australia",
+                "value": 6
+            }, {
+
+
+                "source": "Poland",
+                "target": "Switzerland",
+                "value": 5
+            }, {
+
+
+                "source": "Poland",
+                "target": "Italy",
+                "value": 4
+            }, {
+
+
+                "source": "Poland",
+                "target": "Netherlands",
+                "value": 3
+            }, {
+
+
+                "source": "Poland",
+                "target": "Greece",
+                "value": 2
+            }, {
+
+
+                "source": "Poland",
+                "target": "Spain",
+                "value": 1
+            }, {
+
+
+                "source": "Poland",
+                "target": "Ukraine",
+                "value": 12
+            }, {
+
+
+                "source": "Greece",
+                "target": "Poland",
+                "value": 10
+            }, {
+
+
+                "source": "Greece",
+                "target": "Australia",
+                "value": 8
+            }, {
+
+
+                "source": "Greece",
+                "target": "Romania",
+                "value": 7
+            }, {
+
+
+                "source": "Greece",
+                "target": "Moldova",
+                "value": 6
+            }, {
+
+
+                "source": "Greece",
+                "target": "Spain",
+                "value": 5
+            }, {
+
+
+                "source": "Greece",
+                "target": "Netherlands",
+                "value": 4
+            }, {
+
+
+                "source": "Greece",
+                "target": "Portugal",
+                "value": 3
+            }, {
+
+
+                "source": "Greece",
+                "target": "Czech Republic",
+                "value": 2
+            }, {
+
+
+                "source": "Greece",
+                "target": "Italy",
+                "value": 1
+            }, {
+
+
+                "source": "Greece",
+                "target": "Azerbaijan",
+                "value": 12
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Ukraine",
+                "value": 12
+            }, {
+
+
+                "source": "Moldova",
+                "target": "UK",
+                "value": 10
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Sweden",
+                "value": 8
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Switzerland",
+                "value": 7
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Australia",
+                "value": 6
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Estonia",
+                "value": 5
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Belgium",
+                "value": 4
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Spain",
+                "value": 3
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Portugal",
+                "value": 2
+            }, {
+
+
+                "source": "Moldova",
+                "target": "Azerbaijan",
+                "value": 1
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Azerbaijan",
+                "value": 3
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "UK",
+                "value": 10
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Spain",
+                "value": 8
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Switzerland",
+                "value": 7
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Belgium",
+                "value": 6
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Armenia",
+                "value": 5
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Portugal",
+                "value": 4
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Norway",
+                "value": 2
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Italy",
+                "value": 1
+            }, {
+
+
+                "source": "Bulgaria",
+                "target": "Greece",
+                "value": 12
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Estonia",
+                "value": 10
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Belgium",
+                "value": 8
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Portugal",
+                "value": 7
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Finland",
+                "value": 6
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Sweden",
+                "value": 5
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Spain",
+                "value": 4
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Czech Republic",
+                "value": 3
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Lithuania",
+                "value": 2
+            }, {
+
+
+                "source": "Serbia",
+                "target": "UK",
+                "value": 1
+            }, {
+
+
+                "source": "Serbia",
+                "target": "Azerbaijan",
+                "value": 12
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Ukraine",
+                "value": 10
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Norway",
+                "value": 8
+            }, {
+
+
+                "source": "Iceland",
+                "target": "UK",
+                "value": 7
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Italy",
+                "value": 6
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Portugal",
+                "value": 5
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Netherlands",
+                "value": 4
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Spain",
+                "value": 3
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Czech Republic",
+                "value": 2
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Lithuania",
+                "value": 1
+            }, {
+
+
+                "source": "Iceland",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Azerbaijan",
+                "value": 10
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Australia",
+                "value": 8
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Ukraine",
+                "value": 7
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Spain",
+                "value": 6
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Sweden",
+                "value": 5
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Serbia",
+                "value": 4
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "UK",
+                "value": 3
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Belgium",
+                "value": 2
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Italy",
+                "value": 1
+            }, {
+
+
+                "source": "Cyprus",
+                "target": "Greece",
+                "value": 12
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "Latvia",
+                "target": "UK",
+                "value": 8
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Greece",
+                "value": 7
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Portugal",
+                "value": 6
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Norway",
+                "value": 5
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Netherlands",
+                "value": 4
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Switzerland",
+                "value": 3
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Australia",
+                "value": 2
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Lithuania",
+                "value": 1
+            }, {
+
+
+                "source": "Latvia",
+                "target": "Ukraine",
+                "value": 12
+            }, {
+
+
+                "source": "Spain",
+                "target": "Italy",
+                "value": 10
+            }, {
+
+
+                "source": "Spain",
+                "target": "Australia",
+                "value": 8
+            }, {
+
+
+                "source": "Spain",
+                "target": "Sweden",
+                "value": 7
+            }, {
+
+
+                "source": "Spain",
+                "target": "Serbia",
+                "value": 6
+            }, {
+
+
+                "source": "Spain",
+                "target": "Belgium",
+                "value": 5
+            }, {
+
+
+                "source": "Spain",
+                "target": "Romania",
+                "value": 4
+            }, {
+
+
+                "source": "Spain",
+                "target": "UK",
+                "value": 3
+            }, {
+
+
+                "source": "Spain",
+                "target": "Greece",
+                "value": 2
+            }, {
+
+
+                "source": "Spain",
+                "target": "Switzerland",
+                "value": 1
+            }, {
+
+
+                "source": "Spain",
+                "target": "Azerbaijan",
+                "value": 12
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Netherlands",
+                "value": 10
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Spain",
+                "value": 8
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Sweden",
+                "value": 7
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "UK",
+                "value": 6
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Portugal",
+                "value": 5
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Australia",
+                "value": 4
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Ukraine",
+                "value": 3
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Italy",
+                "value": 2
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Norway",
+                "value": 1
+            }, {
+
+
+                "source": "Switzerland",
+                "target": "Greece",
+                "value": 12
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Netherlands",
+                "value": 10
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Portugal",
+                "value": 8
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Sweden",
+                "value": 7
+            }, {
+
+
+                "source": "Denmark",
+                "target": "UK",
+                "value": 6
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Ukraine",
+                "value": 5
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Spain",
+                "value": 4
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Lithuania",
+                "value": 3
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Switzerland",
+                "value": 2
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Iceland",
+                "value": 1
+            }, {
+
+
+                "source": "Denmark",
+                "target": "Greece",
+                "value": 12
+            }, {
+
+
+                "source": "France",
+                "target": "Greece",
+                "value": 3
+            }, {
+
+
+                "source": "France",
+                "target": "Ukraine",
+                "value": 10
+            }, {
+
+
+                "source": "France",
+                "target": "Poland",
+                "value": 8
+            }, {
+
+
+                "source": "France",
+                "target": "Armenia",
+                "value": 7
+            }, {
+
+
+                "source": "France",
+                "target": "Belgium",
+                "value": 6
+            }, {
+
+
+                "source": "France",
+                "target": "Spain",
+                "value": 5
+            }, {
+
+
+                "source": "France",
+                "target": "Netherlands",
+                "value": 4
+            }, {
+
+
+                "source": "France",
+                "target": "Czech Republic",
+                "value": 2
+            }, {
+
+
+                "source": "France",
+                "target": "Portugal",
+                "value": 1
+            }, {
+
+
+                "source": "France",
+                "target": "UK",
+                "value": 12
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Greece",
+                "value": 2
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Italy",
+                "value": 10
+            }, {
+
+
+                "source": "Armenia",
+                "target": "France",
+                "value": 7
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Portugal",
+                "value": 8
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Ukraine",
+                "value": 6
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Sweden",
+                "value": 5
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Netherlands",
+                "value": 4
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Estonia",
+                "value": 3
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Moldova",
+                "value": 1
+            }, {
+
+
+                "source": "Armenia",
+                "target": "Spain",
+                "value": 12
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Spain",
+                "value": 8
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Italy",
+                "value": 10
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Sweden",
+                "value": 7
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Ukraine",
+                "value": 6
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "UK",
+                "value": 5
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Portugal",
+                "value": 4
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Netherlands",
+                "value": 3
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Lithuania",
+                "value": 2
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Azerbaijan",
+                "value": 1
+            }, {
+
+
+                "source": "Montenegro",
+                "target": "Serbia",
+                "value": 12
+            }, {
+
+
+                "source": "Romania",
+                "target": "Spain",
+                "value": 1
+            }, {
+
+
+                "source": "Romania",
+                "target": "Ukraine",
+                "value": 12
+            }, {
+
+
+                "source": "Romania",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "Romania",
+                "target": "UK",
+                "value": 8
+            }, {
+
+
+                "source": "Romania",
+                "target": "Portugal",
+                "value": 7
+            }, {
+
+
+                "source": "Romania",
+                "target": "Australia",
+                "value": 6
+            }, {
+
+
+                "source": "Romania",
+                "target": "Switzerland",
+                "value": 5
+            }, {
+
+
+                "source": "Romania",
+                "target": "Italy",
+                "value": 4
+            }, {
+
+
+                "source": "Romania",
+                "target": "Netherlands",
+                "value": 3
+            }, {
+
+
+                "source": "Romania",
+                "target": "Greece",
+                "value": 2
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "Ireland",
+                "target": "UK",
+                "value": 8
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Czech Republic",
+                "value": 7
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Italy",
+                "value": 6
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Serbia",
+                "value": 5
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Portugal",
+                "value": 4
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Ukraine",
+                "value": 3
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Australia",
+                "value": 2
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Iceland",
+                "value": 1
+            }, {
+
+
+                "source": "Ireland",
+                "target": "Spain",
+                "value": 12
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Spain",
+                "value": 1
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "UK",
+                "value": 2
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Portugal",
+                "value": 3
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Greece",
+                "value": 4
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Switzerland",
+                "value": 5
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Serbia",
+                "value": 6
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Netherlands",
+                "value": 7
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Ukraine",
+                "value": 8
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Lithuania",
+                "value": 10
+            }, {
+
+
+                "source": "Slovenia",
+                "target": "Italy",
+                "value": 12
+            }, {
+
+
+                "source": "Georgia",
+                "target": "Italy",
+                "value": 10
+            }, {
+
+
+                "source": "Georgia",
+                "target": "Sweden",
+                "value": 8
+            }, {
+
+
+                "source": "Georgia",
+                "target": "Portugal",
+                "value": 7
+            }, {
+
+
+                "source": "Georgia",
+                "target": "Ukraine",
+                "value": 6
+            }, {
+
+
+                "source": "Georgia",
+                "target": "Spain",
+                "value": 5
+            }, {
+
+
+                "source": "Georgia",
+                "target": "Netherlands",
+                "value": 4
+            }, {
+
+
+                "source": "Georgia",
+                "target": "Greece",
+                "value": 3
+            }, {
+
+
+                "source": "Georgia",
+                "target": "Poland",
+                "value": 2
+            }, {
+
+
+                "source": "Georgia",
+                "target": "France",
+                "value": 1
+            }, {
+
+
+                "source": "Georgia",
+                "target": "UK",
+                "value": 12
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Portugal",
+                "value": 10
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Ukraine",
+                "value": 8
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Lithuania",
+                "value": 7
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Spain",
+                "value": 6
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Sweden",
+                "value": 5
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Italy",
+                "value": 4
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Greece",
+                "value": 3
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Netherlands",
+                "value": 2
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Switzerland",
+                "value": 1
+            }, {
+
+
+                "source": "Croatia",
+                "target": "Serbia",
+                "value": 12
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "UK",
+                "value": 10
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Portugal",
+                "value": 8
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Switzerland",
+                "value": 7
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Netherlands",
+                "value": 6
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Spain",
+                "value": 5
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Italy",
+                "value": 4
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Sweden",
+                "value": 3
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Iceland",
+                "value": 2
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Serbia",
+                "value": 1
+            }, {
+
+
+                "source": "Lithuania",
+                "target": "Ukraine",
+                "value": 12
+            }, {
+
+
+                "source": "Austria",
+                "target": "Portugal",
+                "value": 10
+            }, {
+
+
+                "source": "Austria",
+                "target": "Netherlands",
+                "value": 8
+            }, {
+
+
+                "source": "Austria",
+                "target": "Sweden",
+                "value": 7
+            }, {
+
+
+                "source": "Austria",
+                "target": "Greece",
+                "value": 3
+            }, {
+
+
+                "source": "Austria",
+                "target": "Armenia",
+                "value": 5
+            }, {
+
+
+                "source": "Austria",
+                "target": "Norway",
+                "value": 4
+            }, {
+
+
+                "source": "Austria",
+                "target": "Italy",
+                "value": 3
+            }, {
+
+
+                "source": "Austria",
+                "target": "Spain",
+                "value": 2
+            }, {
+
+
+                "source": "Austria",
+                "target": "Switzerland",
+                "value": 1
+            }, {
+
+
+                "source": "Austria",
+                "target": "UK",
+                "value": 12
+            }, {
+
+
+                "source": "Finland",
+                "target": "UK",
+                "value": 10
+            }, {
+
+
+                "source": "Finland",
+                "target": "Italy",
+                "value": 2
+            }, {
+
+
+                "source": "Finland",
+                "target": "Greece",
+                "value": 6
+            }, {
+
+
+                "source": "Finland",
+                "target": "Netherlands",
+                "value": 5
+            }, {
+
+
+                "source": "Finland",
+                "target": "Australia",
+                "value": 8
+            }, {
+
+
+                "source": "Finland",
+                "target": "Azerbaijan",
+                "value": 3
+            }, {
+
+
+                "source": "Finland",
+                "target": "Serbia",
+                "value": 7
+            }, {
+
+
+                "source": "Finland",
+                "target": "Norway",
+                "value": 4
+            }, {
+
+
+                "source": "Finland",
+                "target": "Armenia",
+                "value": 1
+            }, {
+
+
+                "source": "Finland",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "UK",
+                "target": "Spain",
+                "value": 10
+            }, {
+
+
+                "source": "UK",
+                "target": "Portugal",
+                "value": 3
+            }, {
+
+
+                "source": "UK",
+                "target": "Greece",
+                "value": 4
+            }, {
+
+
+                "source": "UK",
+                "target": "Australia",
+                "value": 6
+            }, {
+
+
+                "source": "UK",
+                "target": "Azerbaijan",
+                "value": 7
+            }, {
+
+
+                "source": "UK",
+                "target": "Serbia",
+                "value": 1
+            }, {
+
+
+                "source": "UK",
+                "target": "Switzerland",
+                "value": 2
+            }, {
+
+
+                "source": "UK",
+                "target": "Poland",
+                "value": 8
+            }, {
+
+
+                "source": "UK",
+                "target": "Estonia",
+                "value": 5
+            }, {
+
+
+                "source": "UK",
+                "target": "Sweden",
+                "value": 12
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Australia",
+                "value": 10
+            }, {
+
+
+                "source": "Sweden",
+                "target": "UK",
+                "value": 8
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Azerbaijan",
+                "value": 7
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Estonia",
+                "value": 6
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Czech Republic",
+                "value": 5
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Serbia",
+                "value": 4
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Norway",
+                "value": 3
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Armenia",
+                "value": 2
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Belgium",
+                "value": 1
+            }, {
+
+
+                "source": "Sweden",
+                "target": "Spain",
+                "value": 12
+            }, {
+
+
+                "source": "Australia",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "Australia",
+                "target": "Ukraine",
+                "value": 7
+            }, {
+
+
+                "source": "Australia",
+                "target": "Portugal",
+                "value": 6
+            }, {
+
+
+                "source": "Australia",
+                "target": "Italy",
+                "value": 3
+            }, {
+
+
+                "source": "Australia",
+                "target": "Azerbaijan",
+                "value": 2
+            }, {
+
+
+                "source": "Australia",
+                "target": "Serbia",
+                "value": 8
+            }, {
+
+
+                "source": "Australia",
+                "target": "Belgium",
+                "value": 5
+            }, {
+
+
+                "source": "Australia",
+                "target": "Estonia",
+                "value": 1
+            }, {
+
+
+                "source": "Australia",
+                "target": "Czech Republic",
+                "value": 4
+            }, {
+
+
+                "source": "Australia",
+                "target": "Spain",
+                "value": 12
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Sweden",
+                "value": 10
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Estonia",
+                "value": 8
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Spain",
+                "value": 7
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Switzerland",
+                "value": 6
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Portugal",
+                "value": 5
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Ukraine",
+                "value": 4
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Greece",
+                "value": 3
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Norway",
+                "value": 2
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "Australia",
+                "value": 1
+            }, {
+
+
+                "source": "Czech Republic",
+                "target": "UK",
+                "value": 12
+            }, {
+
+
+                "source": "Italy",
+                "target": "Greece",
+                "value": 10
+            }, {
+
+
+                "source": "Italy",
+                "target": "Armenia",
+                "value": 8
+            }, {
+
+
+                "source": "Italy",
+                "target": "Belgium",
+                "value": 7
+            }, {
+
+
+                "source": "Italy",
+                "target": "UK",
+                "value": 6
+            }, {
+
+
+                "source": "Italy",
+                "target": "Moldova",
+                "value": 5
+            }, {
+
+
+                "source": "Italy",
+                "target": "Serbia",
+                "value": 4
+            }, {
+
+
+                "source": "Italy",
+                "target": "Switzerland",
+                "value": 3
+            }, {
+
+
+                "source": "Italy",
+                "target": "Australia",
+                "value": 2
+            }, {
+
+
+                "source": "Italy",
+                "target": "Finland",
+                "value": 1
+            }, {
+
+
+                "source": "Italy",
+                "target": "Netherlands",
+                "value": 12
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Germany",
+                "value": 6
+            }, {
+
+
+                "source": "Televoting",
+                "target": "France",
+                "value": 8
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Iceland",
+                "value": 10
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Finland",
+                "value": 26
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Romania",
+                "value": 53
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Moldova",
+                "value": 239
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Czech Republic",
+                "value": 5
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Lithuania",
+                "value": 93
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Norway",
+                "value": 146
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Armenia",
+                "value": 21
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Estonia",
+                "value": 98
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Poland",
+                "value": 105
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Belgium",
+                "value": 5
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Switzerland",
+                "value": 0
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Serbia",
+                "value": 225
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Azerbaijan",
+                "value": 3
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Australia",
+                "value": 2
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Netherlands",
+                "value": 42
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Italy",
+                "value": 110
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Greece",
+                "value": 57
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Portugal",
+                "value": 36
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Ukraine",
+                "value": 439
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Spain",
+                "value": 228
+            }, {
+
+
+                "source": "Televoting",
+                "target": "Sweden",
+                "value": 180
+            }, {
+
+
+                "source": "Televoting",
+                "target": "UK",
+                "value": 183
+            }
+        ]
+    }
+}

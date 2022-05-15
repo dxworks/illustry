@@ -1303,7 +1303,7 @@
                     },
                     {
                         "label": "Age",
-                        "value": 100,
+                        "value": 22,
                         "style": {
                             "font-weight": "bold",
                             "background-color": "#541690",
@@ -1428,7 +1428,7 @@
                     },
                     {
                         "label": "Age",
-                        "value": 22,
+                        "value": 100,
                         "style": {
                             "font-weight": "bold",
                             "background-color": "#541690",
