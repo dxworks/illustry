@@ -1,0 +1,2057 @@
+{
+    "name": "WW2 calendar",
+    "description": "Events of WW2",
+    "type": "calendar",
+    "tags": ["WW2"],
+    "data": {
+        "calendar": [{
+                "date": "1939-09-02",
+                "value": 1,
+                "year": 1939,
+                "category": "Axis"
+            }, {
+                "date": "1939-09-07",
+                "value": 1,
+                "year": 1939,
+                "category": "Allies"
+            }, {
+                "date": "1939-09-17",
+                "value": 1,
+                "year": 1939,
+                "category": "URSS"
+            }, {
+                "date": "1939-10-06",
+                "value": 1,
+                "year": 1939,
+                "category": "Axis"
+            }, {
+                "date": "1939-10-07",
+                "value": 1,
+                "year": 1939,
+                "category": "Axis"
+            }, {
+                "date": "1939-10-14",
+                "value": 1,
+                "year": 1939,
+                "category": "URSS"
+            }, {
+                "date": "1939-10-17",
+                "value": 1,
+                "year": 1939,
+                "category": "Axis"
+            }, {
+                "date": "1939-10-22",
+                "value": 1,
+                "year": 1939,
+                "category": "Allies"
+            }, {
+                "date": "1939-10-28",
+                "value": 1,
+                "year": 1939,
+                "category": "Axis"
+            }, {
+                "date": "1939-11-04",
+                "value": 1,
+                "year": 1939,
+                "category": "Allies"
+            }, {
+                "date": "1939-11-28",
+                "value": 1,
+                "year": 1939,
+                "category": "URSS"
+            }, {
+                "date": "1939-12-05",
+                "value": 1,
+                "year": 1939,
+                "category": "URSS"
+            }, {
+                "date": "1939-12-11",
+                "value": 1,
+                "year": 1939,
+                "category": "Allies"
+            }, {
+                "date": "1939-12-16",
+                "value": 1,
+                "year": 1939,
+                "category": "Allies"
+            }, {
+                "date": "1939-12-23",
+                "value": 1,
+                "year": 1939,
+                "category": "Axis"
+            }, {
+                "date": "1940-01-04",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-01-09",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-01-13",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-01-18",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-01-28",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-02-07",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-02-12",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-02-19",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-03-01",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-03-07",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-03-14",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-03-19",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-03-25",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-03-31",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-04-12",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-04-18",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-04-29",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-05-08",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-05-16",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-05-22",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-06-02",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-06-06",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-06-11",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-06-21",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-06-24",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-07-01",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-07-06",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-07-11",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-07-19",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-07-29",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-08-09",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-08-15",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-08-24",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-09-01",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-09-06",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-09-15",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-09-18",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-09-23",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-09-30",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-10-07",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-10-14",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-10-20",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-11-04",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-11-09",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-11-16",
+                "value": 1,
+                "year": 1940,
+                "category": "URSS"
+            }, {
+                "date": "1940-11-23",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-11-30",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-12-07",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-12-15",
+                "value": 1,
+                "year": 1940,
+                "category": "Allies"
+            }, {
+                "date": "1940-12-20",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1940-12-28",
+                "value": 1,
+                "year": 1940,
+                "category": "Axis"
+            }, {
+                "date": "1941-01-10",
+                "value": 1,
+                "year": 1941,
+                "category": "Allies"
+            }, {
+                "date": "1941-01-16",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-01-26",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-02-08",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-02-20",
+                "value": 1,
+                "year": 1941,
+                "category": "Allies"
+            }, {
+                "date": "1941-03-02",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-03-04",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-04-07",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-04-16",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-04-23",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-04-29",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-05-08",
+                "value": 1,
+                "year": 1941,
+                "category": "Allies"
+            }, {
+                "date": "1941-05-11",
+                "value": 1,
+                "year": 1941,
+                "category": "Allies"
+            }, {
+                "date": "1941-05-27",
+                "value": 1,
+                "year": 1941,
+                "category": "Allies"
+            }, {
+                "date": "1941-06-02",
+                "value": 1,
+                "year": 1941,
+                "category": "Allies"
+            }, {
+                "date": "1941-06-11",
+                "value": 1,
+                "year": 1941,
+                "category": "Allies"
+            }, {
+                "date": "1941-06-21",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-06-29",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-07-06",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-07-11",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-07-26",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-08-05",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-08-11",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-08-31",
+                "value": 1,
+                "year": 1941,
+                "category": "Allies"
+            }, {
+                "date": "1941-09-08",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-09-17",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-09-22",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-10-01",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-10-08",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-10-16",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-10-23",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-11-02",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-11-10",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-11-17",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-11-28",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-12-07",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-12-14",
+                "value": 1,
+                "year": 1941,
+                "category": "URSS"
+            }, {
+                "date": "1941-12-23",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1941-12-30",
+                "value": 1,
+                "year": 1941,
+                "category": "Axis"
+            }, {
+                "date": "1942-01-13",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-01-15",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-01-27",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-02-03",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-02-11",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-02-13",
+                "value": 1,
+                "year": 1942,
+                "category": "Allies"
+            }, {
+                "date": "1942-02-21",
+                "value": 1,
+                "year": 1942,
+                "category": "Allies"
+            }, {
+                "date": "1942-03-01",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-03-15",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-03-20",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-03-30",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            },
+            {
+                "date": "1942-04-11",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            },
+            {
+                "date": "1942-04-20",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-05-01",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-05-08",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-05-15",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-05-20",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-05-26",
+                "value": 1,
+                "year": 1942,
+                "category": "Allies"
+            }, {
+                "date": "1942-06-02",
+                "value": 1,
+                "year": 1942,
+                "category": "Allies"
+            }, {
+                "date": "1942-06-11",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-06-17",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-06-28",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-07-06",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-07-13",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-07-19",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-07-30",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-08-08",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-08-17",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-09-11",
+                "value": 1,
+                "year": 1942,
+                "category": "Allies"
+            }, {
+                "date": "1942-09-16",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-10-05",
+                "value": 1,
+                "year": 1942,
+                "category": "Allies"
+            }, {
+                "date": "1942-11-20",
+                "value": 1,
+                "year": 1942,
+                "category": "URSS"
+            }, {
+                "date": "1942-12-11",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-12-18",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1942-12-25",
+                "value": 1,
+                "year": 1942,
+                "category": "Axis"
+            }, {
+                "date": "1943-01-03",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-01-14",
+                "value": 1,
+                "year": 1943,
+                "category": "URSS"
+            }, {
+                "date": "1943-01-23",
+                "value": 1,
+                "year": 1943,
+                "category": "URSS"
+            }, {
+                "date": "1943-01-29",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-02-05",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-02-15",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-02-23",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-02-27",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-03-08",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-03-21",
+                "value": 1,
+                "year": 1943,
+                "category": "Allies"
+            }, {
+                "date": "1943-03-31",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-04-07",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-04-25",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-05-05",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-05-15",
+                "value": 1,
+                "year": 1943,
+                "category": "Allies"
+            }, {
+                "date": "1943-05-19",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-05-30",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-06-05",
+                "value": 1,
+                "year": 1943,
+                "category": "URSS"
+            }, {
+                "date": "1943-06-20",
+                "value": 1,
+                "year": 1943,
+                "category": "Allied"
+            }, {
+                "date": "1943-07-06",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-07-11",
+                "value": 1,
+                "year": 1943,
+                "category": "Allies"
+            }, {
+                "date": "1943-07-19",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-07-27",
+                "value": 1,
+                "year": 1943,
+                "category": "URSS"
+            }, {
+                "date": "1943-07-31",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-08-07",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-08-13",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-08-21",
+                "value": 1,
+                "year": 1943,
+                "category": "Allies"
+            }, {
+                "date": "1943-08-28",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-09-06",
+                "value": 1,
+                "year": 1943,
+                "category": "Allies"
+            }, {
+                "date": "1943-09-13",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-09-19",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-10-04",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-10-19",
+                "value": 1,
+                "year": 1943,
+                "category": "Allies"
+            }, {
+                "date": "1943-11-03",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-11-09",
+                "value": 1,
+                "year": 1943,
+                "category": "URSS"
+            }, {
+                "date": "1943-11-24",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-11-30",
+                "value": 1,
+                "year": 1943,
+                "category": "Axis"
+            }, {
+                "date": "1943-12-21",
+                "value": 1,
+                "year": 1943,
+                "category": "URSS"
+            }, {
+                "date": "1943-12-28",
+                "value": 1,
+                "year": 1943,
+                "category": "Allies"
+            }, {
+                "date": "1944-01-13",
+                "value": 1,
+                "year": 1944,
+                "category": "URSS"
+            }, {
+                "date": "1944-01-28",
+                "value": 1,
+                "year": 1944,
+                "category": "URSS"
+            }, {
+                "date": "1944-02-01",
+                "value": 1,
+                "year": 1944,
+                "category": "URSS"
+            }, {
+                "date": "1944-02-18",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-02-20",
+                "value": 1,
+                "year": 1944,
+                "category": "URSS"
+            }, {
+                "date": "1944-03-06",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-03-17",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-04-04",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-04-22",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-04-29",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-05-10",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-05-16",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-05-25",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-06-07",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-06-29",
+                "value": 1,
+                "year": 1944,
+                "category": "URSS"
+            }, {
+                "date": "1944-07-09",
+                "value": 1,
+                "year": 1944,
+                "category": "URSS"
+            }, {
+                "date": "1944-07-20",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-08-06",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-08-11",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-08-19",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-08-26",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-09-05",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-09-11",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-09-23",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-10-05",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-10-09",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-10-16",
+                "value": 1,
+                "year": 1944,
+                "category": "URSS"
+            }, {
+                "date": "1944-10-22",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-11-06",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-11-13",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-11-20",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1944-11-29",
+                "value": 1,
+                "year": 1944,
+                "category": "Allies"
+            }, {
+                "date": "1944-12-16",
+                "value": 1,
+                "year": 1944,
+                "category": "Axis"
+            }, {
+                "date": "1945-01-04",
+                "value": 1,
+                "year": 1945,
+                "category": "Axis"
+            }, {
+                "date": "1945-01-06",
+                "value": 1,
+                "year": 1945,
+                "category": "Allies"
+            }, {
+                "date": "1945-01-13",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-01-19",
+                "value": 1,
+                "year": 1945,
+                "category": "Axis"
+            }, {
+                "date": "1945-01-25",
+                "value": 1,
+                "year": 1945,
+                "category": "Axis"
+            }, {
+                "date": "1945-02-01",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-02-08",
+                "value": 1,
+                "year": 1945,
+                "category": "Allies"
+            }, {
+                "date": "1945-02-17",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-02-23",
+                "value": 1,
+                "year": 1945,
+                "category": "Axis"
+            }, {
+                "date": "1945-03-03",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-03-03",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-03-14",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-03-23",
+                "value": 1,
+                "year": 1945,
+                "category": "Allies"
+            }, {
+                "date": "1945-03-31",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-04-08",
+                "value": 1,
+                "year": 1945,
+                "category": "Axis"
+            }, {
+                "date": "1945-04-12",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-04-17",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-04-23",
+                "value": 1,
+                "year": 1945,
+                "category": "Axis"
+            }, {
+                "date": "1945-04-27",
+                "value": 1,
+                "year": 1945,
+                "category": "URSS"
+            }, {
+                "date": "1945-05-02",
+                "value": 1,
+                "year": 1945,
+                "category": "Axis"
+            }
+        ],
+
+        "categories": {
+            "Axis": "#F8DE73",
+            "Allies": "#0583D2",
+            "URSS": "#FF3333"
+
+
+        },
+        "tooltip": {
+            "1939-09-02": {
+                "Event1": "Germany Declare war on Poland",
+                "Event2": "1.8kk german soldiers attack Poland"
+
+            },
+            "1939-09-07": {
+                "Event1": "UK and France declare war on Germany"
+            },
+            "1939-09-12": {
+                "Event1": "Poland army is destroyed and the remaining ones try to flee towards Romania"
+            },
+            "1939-09-17": {
+                "Event1": "Soviet Union invades Poland from the East"
+            },
+            "1939-10-06": {
+                "Event1": "Polish resistence comes to an end",
+                "Event2": "Hitler declaring a desire for peace with UK and France"
+            },
+            "1939-10-07": {
+                "Event1": "British Prime Minister Chamberlain declines Hitler peace"
+
+            },
+            "1939-10-14": {
+                "Event1": "Stalin begins demanding Finish territory"
+            },
+            "1939-10-17": {
+                "Event1": "Portions of Poland are formally inducted into Germany"
+            },
+            "1939-10-22": {
+                "Event1": "Registration begins in UK to conscript all able-bodied males between 18-23"
+            },
+            "1939-10-28": {
+                "Event1": "More annexes of Germany from Poland territory"
+            },
+            "1939-11-04": {
+                "Event1": "Finland rejects giving land to URSS"
+            },
+            "1939-11-28": {
+                "Event1": "URSS attacks Finald and the Winter War begins"
+            },
+            "1939-12-05": {
+                "Event1": "URSS begin heavy attacks on the Mannerheim line"
+            },
+            "1939-12-11": {
+                "Event1": "Big defeats for the URSS in the Finland campaign"
+            },
+            "1939-12-16": {
+                "Event1": "URSS is expelled from the League of Nations in response to the invasion"
+            },
+            "1939-12-23": {
+                "Event1": "German Propaganda Minister Joseph Goebbels makes radio address reviewing the Nazi version of event in the 1939",
+                "Event2": "1940 is presented in the Nazi media as 'will be a hard year,and we must be ready for it'"
+            },
+            "1940-01-04": {
+                "Event1": "Finland victories halt the soviet offensive"
+            },
+            "1940-01-09": {
+                "Event1": "German plane carrying plans for Fall Gelb crashes in neutral Belgium"
+            },
+            "1940-01-13": {
+                "Event1": "Captured documents reveal Hitlar's plans for invading Scandinavia and France untill spring"
+            },
+            "1940-01-18": {
+                "Event1": "The soviets are driven back in Finland and retailiate with heavy air attacks"
+            },
+            "1940-01-29": {
+                "Event1": "Germany makes final plans for the invasion of Denmark and Norway"
+            },
+            "1940-02-07": {
+                "Event1": "URSS agrees to suplly grain and raw material to Germany in a new trade treaty"
+            },
+            "1940-02-12": {
+                "Event1": "URSS army breaks through the Mannerheim Line"
+            },
+            "1940-02-19": {
+                "Event1": "Manstein presents to Hitler his plans for invading France via the Ardennes forest"
+            },
+            "1940-03-01": {
+                "Event1": "Soviets start attacks on Viipuri, Finland's second largest city"
+            },
+            "1940-03-07": {
+                "Event1": "Finland agrres to end the war under soviets terms"
+            },
+            "1940-03-14": {
+                "Event1": "Finland loses large territory that is anexed to the soviets"
+            },
+            "1940-03-19": {
+                "Event1": "Hitler and Mussolini meets",
+                "Event2": "Mussolini agrees to enter with the italian army the war 'at an opportune moment'"
+            },
+            "1940-03-25": {
+                "Event1": "UK and France makes formal agreement that neither country will seek a separate peace with Germany"
+            },
+            "1940-03-31": {
+                "Event1": "URSS want's new territories",
+                "Event2": "Molotov speaks about the Romanian Bassarabia"
+            },
+            "1940-04-12": {
+                "Event1": "Germany invades Denmark and Norway"
+
+            },
+            "1940-04-18": {
+                "Event1": "British and French troups support Norway"
+
+            },
+            "1940-04-29": {
+                "Event1": "Alies begin evacuating Norwegian ports"
+
+            },
+            "1940-05-08": {
+                "Event1": "Nazi invades France and The Benelux",
+                "Event2": "Winston Churchill becomes Prime Minister of UK"
+
+            },
+            "1940-05-16": {
+                "Event1": "Duch army capitulates"
+
+            },
+            "1940-05-22": {
+                "Event1": "At Dunkirk",
+                "Event2": "400k encircled Allied troops",
+                "Event3": "61.774 will be captured",
+                "Event4": "338.226 will be evacuated"
+
+            },
+            "1940-06-02": {
+                "Event1": "Belgium surrenders to Germany"
+
+            },
+            "1940-06-06": {
+                "Event1": "Winston Churchill delivers the speech about 'We will never surrender'"
+
+            },
+            "1940-06-11": {
+                "Event1": "Italy declar war on France and UK"
+
+            },
+            "1940-06-21": {
+                "Event1": "General De Gaulle forms a French government in exile"
+
+            },
+            "1940-06-24": {
+                "Event1": "France surrenders to Nazi"
+
+            },
+            "1940-07-01": {
+                "Event1": "URSS takes Bassarabia"
+
+            },
+            "1940-07-06": {
+                "Event1": "Hitler begin plan to invade UK"
+
+            },
+            "1940-07-11": {
+                "Event1": "Battle of Britain begins with Luftwaffe raids on channel shipping"
+
+            },
+            "1940-07-19": {
+                "Event1": "15 September is set for the UK invasion"
+
+            },
+            "1940-07-29": {
+                "Event1": "Failure to achieve air superiority results in a postpone of the invasion"
+
+            },
+            "1940-08-09": {
+                "Event1": "Luftwaffe attacks UK airfields"
+
+            },
+            "1940-08-15": {
+                "Event1": "Luftwaffe suffers losses on UK airfields"
+
+            },
+            "1940-08-24": {
+                "Event1": "Churchill speech 'Never was so much owed by so many to so few'"
+
+            },
+            "1940-09-01": {
+                "Event1": "Luftwaffe halts attacks on Airfields and begins the attacking of London"
+
+            },
+            "1940-09-06": {
+                "Event1": "Hitler postpone the invasion of Britain"
+
+            },
+            "1940-09-15": {
+                "Event1": "Italy army invade Egypt"
+
+            },
+            "1940-09-18": {
+                "Event1": "England claim Victory over Germany with the failure to invasion of the Nazis"
+
+            },
+            "1940-09-23": {
+                "Event1": "Nazi postpone UK invasion indefinitely"
+
+            },
+            "1940-09-30": {
+                "Event1": "The Tripartite Pact is signed by Germany Italy and Japan, their new name being AXIS"
+
+            },
+            "1940-10-07": {
+                "Event1": "Romania joins itself to fight alongside Germany"
+
+            },
+            "1940-10-14": {
+                "Event1": "UK invasion is postponed untill spring 1941"
+
+            },
+            "1940-10-20": {
+                "Event1": "Having stalled his advance in Egypt Mussolini invades Greece instead",
+                "Event2": "Hitler is furious about Mussolini decision"
+
+            },
+            "1940-11-04": {
+                "Event1": "Greece invasion is halted"
+
+            },
+            "1940-11-09": {
+                "Event1": "Greece makes a counteroffensive over Italy"
+
+            },
+            "1940-11-16": {
+                "Event1": "Talks between the Axis and URSS to make the Axis power bigger"
+
+            },
+            "1940-11-23": {
+                "Event1": "Italian army retreats in Albania"
+
+            },
+            "1940-11-30": {
+                "Event1": "UK and Germany performing bombing Raids between their cities"
+
+            },
+            "1940-12-07": {
+                "Event1": "British offensive against Italian troops over Egypt"
+
+            },
+            "1940-12-15": {
+                "Event1": "Francisco Franco rules out Spanish entry into the war"
+
+            },
+            "1940-12-20": {
+                "Event1": "Hitler begin planning Operation Barbarossa, the invasion of URSS"
+
+            },
+            "1940-12-28": {
+                "Event1": "Italy loses even more battles against the Greece army"
+
+            },
+            "1941-01-10": {
+                "Event1": "Lend-Lease introduces into the U.S. Congress"
+
+            },
+            "1941-01-16": {
+                "Event1": "URSS want's 1 more time to join the Axis but Hitler ignores them"
+
+            },
+            "1941-01-26": {
+                "Event1": "Germany agrees to send Reinforcements to Afrika"
+
+            },
+            "1941-02-08": {
+                "Event1": "Italy suffer terrible defeat in Africa",
+                "Event2": "133k Captured and 15k killed"
+
+            },
+            "1941-02-20": {
+                "Event1": "German and British troups confront for the first time in Africa"
+
+            },
+            "1941-03-02": {
+                "Event1": "Bulgaria joins Axis"
+
+            },
+            "1941-03-04": {
+                "Event1": "German U-boats are succesful in the Atlantic"
+
+            },
+            "1941-04-07": {
+                "Event1": "Pro Axis government is installed in Iraq"
+
+            },
+            "1941-04-16": {
+                "Event1": "Yugoslavia Surrenders to Axis"
+
+            },
+            "1941-04-23": {
+                "Event1": "Greece Prime Minister Alexandros Koryzis commits suicide"
+
+            },
+            "1941-04-29": {
+                "Event1": "Greece Surrenders to Axis"
+
+            },
+            "1941-05-08": {
+                "Event1": "Allies invade Iraq to limit German oil import"
+
+            },
+            "1941-05-11": {
+                "Event1": "UK bombs the german cities"
+
+            },
+            "1941-05-17": {
+                "Event1": "Operation Barbarossa nears completion"
+
+            },
+            "1941-05-27": {
+                "Event1": "The biggest german battleship Bismarck is sunk in the North Atlantic by the UK navy"
+
+            },
+            "1941-06-02": {
+                "Event1": "Iraq Capitulates to the Allies"
+
+            },
+            "1941-06-11": {
+                "Event1": "Vichy French-controlled Syria and Lebanon are invaded by the Allies"
+
+            },
+            "1941-06-21": {
+                "Event1": "Romania, Germany and Finland invades the URSS"
+
+            },
+            "1941-06-29": {
+                "Event1": "Hungary and Slovakia declar war on the URSS"
+
+            },
+            "1941-07-06": {
+                "Event1": "Stalin announces a 'scorched earth policy'"
+
+            },
+            "1941-07-11": {
+                "Event1": "Assistance Pact signed between UK and URSS"
+
+            },
+            "1941-07-26": {
+                "Event1": "German Field Marshall Halder; 'The war against Russia has already been won'"
+
+            },
+            "1941-08-05": {
+                "Event1": "Smolensk is captured"
+
+            },
+            "1941-08-11": {
+                "Event1": "Hitler shifts some forces from the Moscow offensive"
+
+            },
+            "1941-08-31": {
+                "Event1": "British and Soviets troops invade Iran to save the Abadan oilfields"
+
+            },
+            "1941-09-08": {
+                "Event1": "German troops cross Dniepr River"
+
+            },
+            "1941-09-17": {
+                "Event1": "Kiev is surrounded"
+
+            },
+            "1941-09-22": {
+                "Event1": "Iran surrenders"
+
+            },
+            "1941-10-01": {
+                "Event1": "German forces cross onto Crimea"
+
+            },
+            "1941-10-08": {
+                "Event1": "All-out German offensive towards Moscow in Operation Typhoon"
+
+            },
+            "1941-10-16": {
+                "Event1": "Moscow citizens flee the city, however Stalin stays and demand a stubborn defense"
+
+            },
+            "1941-10-23": {
+                "Event1": "Red Army reinforcemens arrive in Moscow"
+
+            },
+            "1941-11-02": {
+                "Event1": "Stalin claimes that 4,5 mil. Germans have already died in Russia with a great exaggeration"
+
+            },
+            "1941-11-10": {
+                "Event1": "Temperatures aground Moscow drops to -12 degrees Celsius as both sides freeze"
+
+            },
+            "1941-11-17": {
+                "Event1": "The Germans attempt a pincher movement to encirle Moscow"
+
+            },
+            "1941-11-28": {
+                "Event1": "The German Troops reports spotting the Kremlin spires"
+
+            },
+            "1941-12-07": {
+                "Event1": "Japan attacks Pearl Harbor and thus brings USA into conflict"
+
+            },
+            "1941-12-14": {
+                "Event1": "Red Army launches a large counter attack against the Axis"
+
+            },
+            "1941-12-23": {
+                "Event1": "Rommel in retreat in North Africa as he awaits Reinforcements"
+
+            },
+            "1941-12-30": {
+                "Event1": "Hitler takes Supreme control of German Military matters"
+
+            },
+            "1942-01-13": {
+                "Event1": "Soviets launces a large Offensive to destroy the German forward elements"
+
+            },
+            "1942-01-15": {
+                "Event1": "Multiple units from Germany continue to retreat"
+
+            },
+            "1942-01-27": {
+                "Event1": "German Africa Corps renews offensive in North Africa"
+
+            },
+            "1942-02-03": {
+                "Event1": "Aggresive offensive of the URSS over the Germans"
+
+            },
+            "1942-02-11": {
+                "Event1": "Stiff German resistance halts the Red Army advance"
+
+            },
+            "1942-02-13": {
+                "Event1": "British manage to halt German advance in North Africa"
+
+            },
+            "1942-02-21": {
+                "Event1": "UK and USA are checked by vast Japanese Expansion in Asia"
+
+            },
+            "1942-03-01": {
+                "Event1": "Battle for Rzhew costs the Red Army more than 1 mil. soldiers"
+
+            },
+            "1942-03-15": {
+                "Event1": "The germans begin building up for a 1942 Summer offensive in the east"
+
+            },
+            "1942-03-20": {
+                "Event1": "Hitlers plan outlines a Capture of Russian Caucasus to reize the Soviet Oil Fields"
+
+            },
+            "1942-03-30": {
+                "Event1": "Stalin believes a German Attack towards Moscow will leave the south front undermanned"
+
+            },
+            "1942-04-11": {
+                "Event1": "Hitler wants more Italians in the est front"
+
+            },
+            "1942-04-20": {
+                "Event1": "Mussolini complies sending 7 divisions to the russian front"
+
+            },
+            "1942-05-01": {
+                "Event1": "Germany prepares a new Offensive in North Africa"
+
+            },
+            "1942-05-08": {
+                "Event1": "Soviet Forces on Crimea Routed"
+
+            },
+            "1942-05-15": {
+                "Event1": "Major Soviet offensive for Kharkov"
+
+            },
+            "1942-05-20": {
+                "Event1": "German counter offensive neutralises The Red Army Spearhead"
+
+            },
+            "1942-05-26": {
+                "Event1": "British and URSS agrees that no separate peace will be signed with Germany"
+
+            },
+            "1942-06-02": {
+                "Event1": "Allies bombardament hard the German cities"
+
+            },
+            "1942-06-11": {
+                "Event1": "Multiple German attacks destroys several Red Army units"
+
+            },
+            "1942-06-17": {
+                "Event1": "German Africa Corps attacks towards Egypt"
+
+            },
+            "1942-06-28": {
+                "Event1": "German offsensive in Russia begins"
+
+            },
+            "1942-07-06": {
+                "Event1": "Stalin allows the Red Army to retreat avoiding large Enciclements"
+
+            },
+            "1942-07-13": {
+                "Event1": "Rommel attacks El Alemein"
+
+            },
+            "1942-07-19": {
+                "Event1": "German Army rushes to Stalingrad and Volga to cut off the URSS caucasian Supplies"
+
+            },
+            "1942-07-30": {
+                "Event1": "Stalin orders Directive nr 221; NOT A STEP BACK!"
+
+            },
+            "1942-08-08": {
+                "Event1": "German Offensive seems highly Effective as URSS disperse"
+
+            },
+            "1942-08-17": {
+                "Event1": "Lack of Munitions forces Rommel into a standstill"
+
+            },
+            "1942-08-11": {
+                "Event1": "Allies attacks back the germans troops"
+
+            },
+            "1942-08-16": {
+                "Event1": "Soviets Begin the implementation of the operation Uranus a setlement of Stalingrad"
+
+            },
+            "1942-10-05": {
+                "Event1": "British and ally forces trying to recover the Vichy France seized by the Germans "
+
+            },
+            "1942-11-29": {
+                "Event1": "Red Army launches Operation Uranus"
+
+            },
+            "1942-12-11": {
+                "Event1": "Hitler allows withdrawal of forces from the Caucasus"
+
+            },
+            "1942-12-18": {
+                "Event1": "Germany fail to breaking the Soviet lines in Stalingrad"
+
+            },
+            "1942-12-25": {
+                "Event1": "The Luftwaffe attempts to supply the 6th Army in Stalingrad over air"
+
+            },
+            "1943-01-03": {
+                "Event1": "Fails to bring all the supplies"
+
+            },
+            "1943-01-14": {
+                "Event1": "The red army launches further offesnive against army group south"
+
+            },
+            "1943-01-23": {
+                "Event1": "New arrived Italian forces are overrun by Red Army"
+
+            },
+            "1943-01-29": {
+                "Event1": "New law in Germany, Man between 16-65 and woman between 17-50 open to mobilize for war"
+
+            },
+            "1943-02-05": {
+                "Event1": "6th Army in Stalingrad surrenders"
+
+            },
+            "1943-02-15": {
+                "Event1": "Germans are fighting almost alone vs the Russians"
+
+            },
+            "1943-02-23": {
+                "Event1": "German propaganda minister Joseph Goebbels declares 'Total War'"
+
+            },
+            "1943-02-27": {
+                "Event1": "Brilliant counter attacks from Manstein destroys several Soviets Corps and stabilzez the front in the south"
+
+            },
+            "1943-03-08": {
+                "Event1": "Germany abandos the Rhzew salient to shorten their overextended frontline"
+
+            },
+            "1943-03-21": {
+                "Event1": "Allied attacks against the Axis in Tunisia"
+
+            },
+            "1943-03-31": {
+                "Event1": "Germany Army ordered to plan an Assault on the Kursk Salient"
+
+            },
+            "1943-04-07": {
+                "Event1": "Hitler and Mussolini meet at Salzburg"
+
+            },
+            "1943-04-25": {
+                "Event1": "Germany attempt to evacuate the forces in Tunisia but it fails"
+
+            },
+            "1943-05-05": {
+                "Event1": "Axis Forces in Africa begin to collapse"
+
+            },
+            "1943-05-15": {
+                "Event1": "Allied forces begins planning for an invasion of Italy"
+
+            },
+            "1943-05-19": {
+                "Event1": "Operation Citadel: Germany attack on the Soviet Kursk Salient is set for an early summer begin"
+
+            },
+            "1943-05-30": {
+                "Event1": "Operation is postponed for the arrivel of a new assault tank"
+
+            },
+            "1943-06-05": {
+                "Event1": "Hearing the postponed the Soviets have now plenty time to prepare"
+
+            },
+            "1943-06-20": {
+                "Event1": "Sicily bombed in preparation of Allied Landings"
+
+            },
+            "1943-07-06": {
+                "Event1": "Operation Citadel commences. Both sides suffer heavy casualties"
+
+            },
+            "1943-07-11": {
+                "Event1": "Allied forces land in Sicily"
+
+            },
+            "1943-07-19": {
+                "Event1": "Hitler calls off Operation Citadel to send troops to Italy"
+
+            },
+            "1943-07-27": {
+                "Event1": "URSS send strong attacks on the exhaused German troops"
+
+            },
+            "1943-07-31": {
+                "Event1": "Mussloini is arrested and disposed as Dictator of Italy"
+
+            },
+            "1943-08-07": {
+                "Event1": "Sweden stops exports to Reich"
+
+            },
+            "1943-08-13": {
+                "Event1": "Axis forces evacuate Sicilly"
+
+            },
+            "1943-08-21": {
+                "Event1": "The tide war has shifted to Allies"
+
+            },
+            "1943-08-28": {
+                "Event1": "Italy seeks peace with the Allies",
+                "Event2": "German troups prepare to invade Italy"
+
+            },
+            "1943-09-06": {
+                "Event1": "Allies land in mainland Italy"
+
+            },
+            "1943-09-13": {
+                "Event1": "Italy surrenders, German troops ocupy the country"
+
+            },
+            "1943-09-19": {
+                "Event1": "Mussolini is rescued by Germany and reinstalled as dictator in North Italy"
+
+            },
+            "1943-10-04": {
+                "Event1": "German army takes position behind the Dniepr River"
+
+            },
+            "1943-10-19": {
+                "Event1": "Allies forces in Italy come to a halt by the heavily defended Gustav Line"
+
+            },
+            "1943-11-03": {
+                "Event1": "Germany counter attacks fails to push the soviet back"
+
+            },
+            "1943-11-09": {
+                "Event1": "Kiev is liberated by the Red Army"
+
+            },
+            "1943-11-24": {
+                "Event1": "German counterattacks against Soviet Dniepr crossing unsucessfully"
+
+            },
+            "1943-11-30": {
+                "Event1": "Heavy bombing in Berlin"
+
+            },
+            "1943-12-21": {
+                "Event1": "Soviet offensive west of Kiev drives germans into a retreat"
+
+            },
+            "1943-12-28": {
+                "Event1": "Allied planners believe that Normandy, only lightly defended by Germans would be a target for landing"
+
+            },
+            "1944-01-13": {
+                "Event1": "The large Soviet Salient west of Kiev has split Army Group South from the remaining fonrt"
+
+            },
+            "1944-01-28": {
+                "Event1": "Red Army troops push the Germans away from Leningrad lifting the 873 day long siege"
+
+            },
+            "1944-02-01": {
+                "Event1": "The Soviets begin planning a large scale offesnive against German Army Group Center"
+
+            },
+            "1944-02-18": {
+                "Event1": "Invasion of France, Operation Overlord is confirmed"
+
+            },
+            "1944-02-20": {
+                "Event1": "Finish diplomats arrive in Moscow to negotiate peace terms"
+
+            },
+            "1944-03-06": {
+                "Event1": "Hitler anticipating an Allied invasion in France, reinforces the west flank"
+
+            },
+            "1944-03-17": {
+                "Event1": "With soviets offensive towards Romania he shifted troops from Army to south"
+
+            },
+            "1944-04-04": {
+                "Event1": "Stalin proposes harsh demands to Finish delegation. They refuse his terms"
+
+            },
+            "1944-04-22": {
+                "Event1": "Vast Allied building in Britain in preparation for Operation Overlord"
+
+            },
+            "1944-04-29": {
+                "Event1": "Despite heavy bombing German armament production sees new heights"
+
+            },
+            "1944-05-10": {
+                "Event1": "Allies start bombing logistical centers to soften up German battle preparednes in the West"
+            },
+            "1944-05-16": {
+                "Event1": "More than 130 Allied political leaders and military officers meet for Briefings on D-Day the coming month"
+            },
+            "1944-05-25": {
+                "Event1": "The battle for Monte Casione ends in Allied victory",
+                "Event2": "Germany retreats in Italy"
+            },
+            "1944-06-07": {
+                "Event1": "D-Day, the Allies land in Normandy France"
+            },
+            "1944-06-29": {
+                "Event1": "Soviet Operation Bagration begins. Army Group Center is taken off balance"
+            },
+            "1944-07-09": {
+                "Event1": "The Soviet advance completely destroys Army Group Center, leaving the Eastern Front wide open"
+            },
+            "1944-07-20": {
+                "Event1": "Col. Claus von Stauffenberg fails to assasinate Hitler"
+            },
+            "1944-08-06": {
+                "Event1": "Allies capture Normandy"
+            },
+            "1944-08-11": {
+                "Event1": "Germany Army Group North scrambles to escape from the Baltics before it's destroyed"
+            },
+            "1944-08-19": {
+                "Event1": "Allies break through the German frontline, entering the French heartland"
+            },
+            "1944-08-26": {
+                "Event1": "Allies landings in Southern France. Romania Capitulates"
+            },
+            "1944-09-05": {
+                "Event1": "Hitler demands all French habors to be held at any cost for logistical problems"
+            },
+            "1944-09-11": {
+                "Event1": "Bulgary capitulates"
+            },
+            "1944-09-23": {
+                "Event1": "Finland signs a peace treaty with Moscow at the cost of more territorial losses"
+            },
+            "1944-10-05": {
+                "Event1": "Allies meet stiffening German resistance on the western front"
+            },
+            "1944-10-09": {
+                "Event1": "Germany initiates an orderly retreat from Greece, to deploy their forces elsewhere"
+            },
+            "1944-10-17": {
+                "Event1": "Soviet forces cut off Army Group North in the Courland Cauldron"
+            },
+            "1944-10-22": {
+                "Event1": "Volkssturm; Hitler orders all remaining mailes aged 16-60 to immediately enter military service"
+            },
+            "1944-11-07": {
+                "Event1": "The Battle of Hurtgen forrest see both the Allies and Germans taking heavy losses for little gain"
+            },
+            "1944-11-13": {
+                "Event1": "Hitler demands planning of a new Offensive against the western allies"
+            },
+            "1944-11-20": {
+                "Event1": "Hitler leaves his war headquarters in East Prussia for Berlin"
+            },
+            "1944-11-29": {
+                "Event1": "Antwerp is now a major supply port for the onward moving Allies"
+            },
+            "1944-12-16": {
+                "Event1": "Germans attack in the Ardennes thus starting the Battle of the Bulge"
+            },
+            "1945-01-04": {
+                "Event1": "Budapest is surrounded, a longs and stubborn siege will begin"
+            },
+            "1945-01-06": {
+                "Event1": "Allies counter attack the German Ardennes positions"
+            },
+            "1945-01-13": {
+                "Event1": "Red Army resumes its offensive into Poland and East Prussia"
+            },
+            "1945-01-19": {
+                "Event1": "Hitler is now hiding in the Fuhrerbunker in Berlin with his companion Eva Braun"
+            },
+            "1945-01-25": {
+                "Event1": "Hitler orders cities to hold out as Fortress"
+            },
+            "1945-02-01": {
+                "Event1": "Red army Crosses the Oder river and nears Berlin"
+            },
+            "1945-02-08": {
+                "Event1": "The Yalta Conference of Roosevelt Churchill and Stalin begins to discuss how the influence of the word will be splitted"
+            },
+            "1945-02-17": {
+                "Event1": "Battle of the Budapest ends with Soviet victory"
+            },
+            "1945-02-23": {
+                "Event1": "German Effort shifts towards protecting Berlin against the Soviet threat"
+            },
+            "1945-03-03": {
+                "Event1": "Red Army attacks north and South to protect its flanks"
+            },
+            "1945-03-14": {
+                "Event1": "A small German offensive in Hungary ends with another Soviet victory"
+            },
+            "1945-03-23": {
+                "Event1": "The Allies move to encicle the industrial German Ruhr region"
+            },
+            "1945-03-31": {
+                "Event1": "The Allies slow down to let the Red Army to take Berlin"
+            },
+            "1945-04-08": {
+                "Event1": "German western front collapsed"
+            },
+            "1945-04-12": {
+                "Event1": "URSS captures Vienna"
+            },
+            "1945-04-17": {
+                "Event1": "Red Army finalizes plans to envelop and assault Berlin. Hitler promises a new Stalingrad"
+            },
+            "1945-04-23": {
+                "Event1": "Mussolini and his Mistress are killed in Milan"
+            },
+            "1945-04-27": {
+                "Event1": "Berlin is surrounded by the Red army"
+            },
+            "1945-05-02": {
+                "Event1": "Hitler commits suicide"
+            }
+        }
+    }
+}

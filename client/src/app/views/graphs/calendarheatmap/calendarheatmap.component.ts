@@ -57,10 +57,10 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
         min: 0,
         max: 50,
         maxOpen: true,
-        // categories: Object.keys(data.categories),
-        inRange : {
-          color: ['#c4f2d0', '#00691c' ] //From smaller to bigger value ->
-        }
+        categories: Object.keys(data.categories),
+        // inRange : {
+        //   color: ['#c4f2d0', '#00691c' ] //From smaller to bigger value ->
+        // }
       },
       calendar: this.createCalendarField(data.calendar) as echarts.CalendarComponentOption[] | undefined,
 
@@ -130,8 +130,8 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
         type: 'heatmap',
         coordinateSystem: 'calendar',
         calendarIndex: indexMap.get(year),
-        // data: dataByYears[year].map(d => [d.date, d.value, d.category])
-        data: dataByYears[year].map(d => [d.date, d.value])
+         data: dataByYears[year].map(d =>{  return [d.date, d.value, d.category]})
+        // data: dataByYears[year].map(d => [d.date, d.value])
       })
     )
 

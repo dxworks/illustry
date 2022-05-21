@@ -1,0 +1,711 @@
+{
+    "name": "Royal Family",
+    "description": "The royal family arbor tree",
+    "tags": ["Royal"],
+    "type": ["sankey"],
+    "data": {
+        "nodes": [{
+                "id": "Queen Elizabeth",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1900,
+                    "death": 2002,
+                    "royalty": "UK"
+                }
+            },
+            {
+                "id": "King George VI",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1895,
+                    "death": 1952,
+                    "royalty": "UK"
+                }
+            }, {
+                "id": "Queen Elizabeth II",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1926,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+            },
+            {
+                "id": "Princess Margaret",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1930,
+                    "death": 2002,
+                    "royalty": "UK"
+                }
+            },
+            {
+                "id": "Prince Philip of Greece and Denmark Duke of Edinburgh",
+                "group": "royalty outside UK",
+                "properties": {
+                    "birth": 1921,
+                    "death": "-",
+                    "royalty": "outside UK"
+                }
+            },
+            {
+                "id": "Antony Armstrong- Jones Earl of Snowdon",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1930,
+                    "death": 2017,
+                    "royalty": "no"
+                }
+            },
+            {
+                "id": "Prince Andrew Duke of York",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1960,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            },
+            {
+                "id": "Lady Louise Windsor",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2003,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "James Viscount Severn",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2007,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Mia Tindall",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2014,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Lena Tindall",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2018,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Savannah Phillips",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2010,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Isla Elizabeth Phillips",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2012,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Prince George of Cambridge",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2013,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Prince Louis of Cambridge",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2018,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Princess Charlotte of Cambridge",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2015,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            },
+            {
+                "id": "Princess Beatrice of York",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1988,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Princess Eugenie of York",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1990,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Jack Brooksbank",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1986,
+                    "death": "-",
+                    "royalty": "no"
+                }
+
+            }, {
+                "id": "Zara Phillips",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1981,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Michael Tindall",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1978,
+                    "death": "-",
+                    "royalty": "no"
+                }
+
+            }, {
+                "id": "Autumn Kelly",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1978,
+                    "death": "-",
+                    "royalty": "no"
+                }
+
+            },
+            {
+                "id": "Peter Phillips",
+                "group": "royality UK",
+                "properties": {
+                    "birth": 1977,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            },
+            {
+                "id": "Sophie Rhys-Jones Countess of Wessex",
+                "group": "royalty outside UK",
+                "properties": {
+                    "birth": 1965,
+                    "death": "-",
+                    "royalty": "outside UK"
+                }
+
+            }, {
+                "id": "Prince Edward Earl of Wessex",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1964,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Sarah Ferguson Duchess of York",
+                "group": "royalty outside UK",
+                "properties": {
+                    "birth": 1959,
+                    "death": "-",
+                    "royalty": "outside UK"
+                }
+
+            }, {
+                "id": "Anne the Princess Royal",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1950,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Capt. Mark Philips",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1948,
+                    "death": "-",
+                    "royalty": "no"
+                }
+
+            }, {
+                "id": "Capt. Timothy Laurance",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1955,
+                    "death": "-",
+                    "royalty": "no"
+                }
+
+            },
+            {
+                "id": "Lady Diana Spencer",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1961,
+                    "death": 1997,
+                    "royalty": "no"
+                }
+
+            }, {
+                "id": "Camilla Duchess of Cornwall",
+                "group": "royalty outside UK",
+                "properties": {
+                    "birth": 1947,
+                    "death": "-",
+                    "royalty": "outside UK"
+                }
+            },
+            {
+                "id": "Serena Stanhope",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1970,
+                    "death": "-",
+                    "royalty": "no"
+                }
+            }, {
+                "id": "Lady Sarah Armstrong-Jones",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1964,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+            },
+            {
+                "id": "Prince Harry of Wales",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1984,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+            },
+            {
+                "id": "Daniel Chatto",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1957,
+                    "death": "-",
+                    "royalty": "no"
+                }
+            }, {
+                "id": "Meghan Markle",
+                "group": "no royalty",
+                "properties": {
+                    "birth": 1981,
+                    "death": "-",
+                    "royalty": "no"
+                }
+            }, {
+                "id": "Catherine Duchess of Cambridge",
+                "group": "royalty outside UK",
+                "properties": {
+                    "birth": 1982,
+                    "death": "-",
+                    "royalty": "outside UK"
+                }
+            }, {
+                "id": "David Armstrong-Jones 2nd Earl of Snowdon",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1961,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Prince William Duke of Cambridge",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1982,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            },
+            {
+                "id": "Hon. Charles Armstrong-Jones",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1999,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            },
+            {
+                "id": "Hon. Margarita Armstrong-Jones",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 2002,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Samuel Chatto",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1996,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            }, {
+                "id": "Arthur Chatto",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1999,
+                    "death": "-",
+                    "royalty": "UK"
+                }
+
+            },
+            {
+                "id": "Charles Prince of Wales",
+                "group": "royalty UK",
+                "properties": {
+                    "birth": 1948,
+                    "death": "-",
+                    "royalty": "UK"
+
+                }
+            }
+        ],
+        "links": [{
+                "source": "King George VI",
+                "target": "Queen Elizabeth II",
+                "value": 1,
+                "properties": { "generation": 1 }
+            },
+            {
+                "source": "Queen Elizabeth",
+                "target": "Queen Elizabeth II",
+                "value": 1,
+                "properties": { "generation": 1 }
+            }, {
+                "source": "King George VI",
+                "target": "Princess Margaret",
+                "value": 1,
+                "properties": { "generation": 1 }
+            },
+            {
+                "source": "Queen Elizabeth",
+                "target": "Princess Margaret",
+                "value": 1,
+                "properties": { "generation": 1 }
+            },
+            {
+                "source": "Queen Elizabeth II",
+                "target": "Prince Edward Earl of Wessex",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Prince Philip of Greece and Denmark Duke of Edinburgh",
+                "target": "Prince Edward Earl of Wessex",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Queen Elizabeth II",
+                "target": "Prince Andrew Duke of York",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Prince Philip of Greece and Denmark Duke of Edinburgh",
+                "target": "Prince Andrew Duke of York",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Queen Elizabeth II",
+                "target": "Anne the Princess Royal",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Prince Philip of Greece and Denmark Duke of Edinburgh",
+                "target": "Anne the Princess Royal",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Queen Elizabeth II",
+                "target": "Charles Prince of Wales",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Prince Philip of Greece and Denmark Duke of Edinburgh",
+                "target": "Charles Prince of Wales",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Princess Margaret",
+                "target": "David Armstrong-Jones 2nd Earl of Snowdon",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Antony Armstrong- Jones Earl of Snowdon",
+                "target": "David Armstrong-Jones 2nd Earl of Snowdon",
+                "value": 1,
+                "properties": { "generation": 2 }
+            }, {
+                "source": "Princess Margaret",
+                "target": "Lady Sarah Armstrong-Jones",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Antony Armstrong- Jones Earl of Snowdon",
+                "target": "Lady Sarah Armstrong-Jones",
+                "value": 1,
+                "properties": { "generation": 2 }
+            },
+            {
+                "source": "Prince Edward Earl of Wessex",
+                "target": "Lady Louise Windsor",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Sophie Rhys-Jones Countess of Wessex",
+                "target": "Lady Louise Windsor",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Prince Edward Earl of Wessex",
+                "target": "James Viscount Severn",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Sophie Rhys-Jones Countess of Wessex",
+                "target": "James Viscount Severn",
+                "value": 1,
+                "properties": { "generation": 3 }
+            },
+            {
+                "source": "Prince Andrew Duke of York",
+                "target": "Princess Beatrice of York",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Sarah Ferguson Duchess of York",
+                "target": "Princess Beatrice of York",
+                "value": 1,
+                "properties": { "generation": 3 }
+            },
+            {
+                "source": "Prince Andrew Duke of York",
+                "target": "Princess Eugenie of York",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Sarah Ferguson Duchess of York",
+                "target": "Princess Eugenie of York",
+                "value": 1,
+                "properties": { "generation": 3 }
+            },
+            {
+                "source": "Anne the Princess Royal",
+                "target": "Zara Philips",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Capt. Mark Philips",
+                "target": "Zara Philips",
+                "value": 1,
+                "properties": { "generation": 3 }
+            },
+            {
+                "source": "Anne the Princess Royal",
+                "target": "Peter Philips",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Capt. Mark Philips",
+                "target": "Peter Philips",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Charles Prince of Wales",
+                "target": "Prince Harry of Wales",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Lady Diana Spencer",
+                "target": "Prince Harry of Wales",
+                "value": 1,
+                "properties": { "generation": 3 }
+            },
+            {
+                "source": "Charles Prince of Wales",
+                "target": "Prince William Duke of Cambridge",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Lady Diana Spencer",
+                "target": "Prince William Duke of Cambridge",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "David Armstrong-Jones 2nd Earl of Snowdon",
+                "target": "Hon. Charles Armstrong-Jones",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Serena Stanhope",
+                "target": "Hon. Charles Armstrong-Jones",
+                "value": 1,
+                "properties": { "generation": 3 }
+            },
+            {
+                "source": "David Armstrong-Jones 2nd Earl of Snowdon",
+                "target": "Hon. Margarita Armstrong-Jones",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Serena Stanhope",
+                "target": "Hon. Margarita Armstrong-Jones",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Lady Sarah Armstrong-Jones",
+                "target": "Samuel Chatto",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Daniel Chatto",
+                "target": "Samuel Chatto",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Lady Sarah Armstrong-Jones",
+                "target": "Arthur Chatto",
+                "value": 1,
+                "properties": { "generation": 3 }
+            }, {
+                "source": "Daniel Chatto",
+                "target": "Arthur Chatto",
+                "value": 1,
+                "properties": { "generation": 3 }
+            },
+            {
+                "source": "Zara Phillips",
+                "target": "Mia Tindall",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Michael Tindall",
+                "target": "Mia Tindall",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Zara Phillips",
+                "target": "Lena Tindall",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Michael Tindall",
+                "target": "Lena Tindall",
+                "value": 1,
+                "properties": { "generation": 4 }
+            },
+            {
+                "source": "Peter Phillips",
+                "target": "Savannah Phillips",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Autumn Kelly",
+                "target": "Savannah Phillips",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Peter Phillips",
+                "target": "Isla Elizabeth Phillips",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Autumn Kelly",
+                "target": "Isla Elizabeth Phillips",
+                "value": 1,
+                "properties": { "generation": 4 }
+            },
+            {
+                "source": "Prince William Duke of Cambridge",
+                "target": "Prince George of Cambridge",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Catherine Duchess of Cambridge",
+                "target": "Prince George of Cambridge",
+                "value": 1,
+                "properties": { "generation": 4 }
+            },
+            {
+                "source": "Prince William Duke of Cambridge",
+                "target": "Princess Charlotte of Cambridge",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Catherine Duchess of Cambridge",
+                "target": "Princess Charlotte of Cambridge",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Prince William Duke of Cambridge",
+                "target": "Prince Louis of Cambridge",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }, {
+                "source": "Catherine Duchess of Cambridge",
+                "target": "Prince Louis of Cambridge",
+                "value": 1,
+                "properties": { "generation": 4 }
+            }
+
+        ],
+        "colorMapping": [{
+            "royalty UK": "#74006F",
+            "royalty outside UK": "#1B7979",
+            "no royalty": "#F2C75B"
+        }]
+    }
+}
