@@ -1,0 +1,49 @@
+{
+    "name": "IllustryPlotly",
+    "type": ["plotly"],
+    "description": "Many plotly visualizations for Illustry programming Languages",
+    "tags": ["programming languages"],
+    "data": {
+        "data": [{
+            "values": [83, 7.3, 3.4, 3.2, 1.2, 1.2, 0.7],
+            "labels": ["TypeScript", "HTML", "Javascript", "CSS", "Python", "SCSS", "Others"],
+            "marker": {
+                "colors": ["#2b7489", "#e34c26", "#f1e05a", "#563d7c", "#3572A5", "#c6538c", "#ededed"]
+            },
+            "domain": {
+                "row": 3,
+                "column": 0
+            },
+            "automargin": true,
+            "type": "pie"
+        }, {
+            "y": [83, 7.3, 3.4, 3.2, 1.2, 1.2, 0.7],
+            "x": ["TypeScript", "HTML", "Javascript", "CSS", "Python", "SCSS", "Others"],
+            "marker": {
+                "color": ["#2b7489", "#e34c26", "#f1e05a", "#563d7c", "#3572A5", "#c6538c", "#ededed"]
+            },
+            "domain": {
+                "row": 0,
+                "column": 0
+            },
+            "name": "vertical line chart",
+            "type": "bar"
+        }],
+        "layout": {
+            "title": "Illustry programming languages statistics",
+            "font": {
+                "size": 18
+            },
+            "grid": {
+                "pattern": "independent",
+                "rows": 4,
+                "columns": 1
+            },
+            "height": 900,
+            "width": 700
+        },
+        "config": {
+            "responsive": true
+        }
+    }
+}

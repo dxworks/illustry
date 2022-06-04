@@ -1,0 +1,181 @@
+{
+    "name": "Illustry Factory",
+    "description": "The Illustry implementation of Factory",
+    "tags": ["bzl"],
+    "type": ["graphviz"],
+    "data": {
+        "nodes": [{
+                "group": "Factory",
+                "id": "class Factory"
+            },
+            {
+                "group": "Factory",
+                "id": "method getInstance"
+            },
+            {
+                "group": "IllustrationBZL",
+                "id": "class IllustrationBZL"
+            }, {
+                "group": "IllustrationBZL",
+                "id": "method addOrUpdateIllustrations"
+            }, {
+                "group": "IllustrationBZL",
+                "id": "method addIllustrationFromOtherSource"
+
+            }, {
+                "group": "IllustrationBZL",
+                "id": "method updateIllustrationFromOtherSource"
+
+            }, {
+                "group": "IllustrationBZL",
+                "id": "method findAllIllustration"
+
+            }, {
+                "group": "IllustrationBZL",
+                "id": "method findOneIllustration"
+
+            }, {
+                "group": "IllustrationBZL",
+                "id": "method deleteIllustration"
+
+            }, {
+                "group": "IllustrationBZL",
+                "id": "method getAllIllustriesOfTheSameType"
+
+            },
+            {
+                "group": "TimelineComputeBZL",
+                "id": "class TimelineComputeBZL"
+            }, {
+                "group": "TimelineComputeBZL",
+                "id": "method checkSearch"
+            },
+            {
+                "group": "ProjectBZL",
+                "id": "class ProjectBZL"
+            }, {
+                "group": "ProjectBZL",
+                "id": "method createProjectfromExtern"
+            }, {
+                "group": "ProjectBZL",
+                "id": "method createIllustryProject"
+            }, {
+                "group": "ProjectBZL",
+                "id": "method updateProjectfromEtern"
+            }, {
+                "group": "ProjectBZL",
+                "id": "method queryAllProjects"
+            }, {
+                "group": "ProjectBZL",
+                "id": "method findOneProject"
+            }, {
+                "group": "ProjectBZL",
+                "id": "method getOneProjectfromEtern"
+            }, {
+                "group": "ProjectBZL",
+                "id": "method updateProject"
+            }, {
+                "group": "ProjectBZL",
+                "id": "method deleteProject"
+            },
+            {
+                "group": "apiType",
+                "id": "type apiType"
+            }
+
+        ],
+        "links": [{
+            "source": "class Factory",
+            "target": "method getInstance",
+            "value": 1
+        }, {
+            "source": "method getInstance",
+            "target": "method getInstance",
+            "value": 1
+        }, {
+            "source": "method getInstance",
+            "target": "class IllustrationBZL",
+            "value": 1
+        }, {
+            "source": "method getInstance",
+            "target": "class ProjectBZL",
+            "value": 1
+        }, {
+            "source": "method getInstance",
+            "target": "class TimelineComputeBZL",
+            "value": 1
+        }, {
+            "source": "method getInstance",
+            "target": "type apiType",
+            "value": 1
+        }, {
+            "source": "class IllustrationBZL",
+            "target": "method addOrUpdateIllustrations",
+            "value": 1
+        }, {
+            "source": "class IllustrationBZL",
+            "target": "method addIllustrationFromOtherSource",
+            "value": 1
+        }, {
+            "source": "class IllustrationBZL",
+            "target": "method updateIllustrationFromOtherSource",
+            "value": 1
+        }, {
+            "source": "class IllustrationBZL",
+            "target": "method findAllIllustration",
+            "value": 1
+        }, {
+            "source": "class IllustrationBZL",
+            "target": "method findOneIllustration",
+            "value": 1
+        }, {
+            "source": "class IllustrationBZL",
+            "target": "method deleteIllustration",
+            "value": 1
+        }, {
+            "source": "class IllustrationBZL",
+            "target": "method getAllIllustriesOfTheSameType",
+            "value": 1
+        }, {
+            "source": "class TimelineComputeBZL",
+            "target": "method TimelineComputeBZL",
+            "value": 1
+        }, {
+            "source": "class TimelineComputeBZL",
+            "target": "method checkSearch",
+            "value": 1
+        }, {
+            "source": "class ProjectBZL",
+            "target": "method createProjectfromExtern",
+            "value": 1
+        }, {
+            "source": "class ProjectBZL",
+            "target": "method createIllustryProject",
+            "value": 1
+        }, {
+            "source": "class ProjectBZL",
+            "target": "method updateProjectfromEtern",
+            "value": 1
+        }, {
+            "source": "class ProjectBZL",
+            "target": "method queryAllProjects",
+            "value": 1
+        }, {
+            "source": "class ProjectBZL",
+            "target": "method findOneProject",
+            "value": 1
+        }, {
+            "source": "class ProjectBZL",
+            "target": "method getOneProjectfromEtern",
+            "value": 1
+        }, {
+            "source": "class ProjectBZL",
+            "target": "method updateProject",
+            "value": 1
+        }, {
+            "source": "class ProjectBZL",
+            "target": "method  deleteProject",
+            "value": 1
+        }]
+    }
+}
