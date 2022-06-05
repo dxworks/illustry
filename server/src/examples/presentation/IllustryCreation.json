@@ -5,6 +5,47 @@
     "tags": ["Illustry"],
     "data": {
         "calendar": [{
+                "date": "2021-07-10",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            }, {
+                "date": "2021-07-19",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            }, {
+                "date": "2021-07-20",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            }, {
+                "date": "2021-07-24",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            }, {
+                "date": "2021-07-25",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            }, {
+                "date": "2021-07-25",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            }, {
+                "date": "2021-08-01",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            }, {
+                "date": "2021-08-31",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
                 "date": "2021-09-04",
                 "value": 3,
                 "year": 2021,
@@ -376,9 +417,14 @@
                 "value": 2,
                 "year": 2022,
                 "category": "Commits"
+            }, {
+                "date": "2022-05-04",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
             },
             {
-                "date": "2022-05-06",
+                "date": "2022-05-05",
                 "value": 1,
                 "year": 2022,
                 "category": "Commits"
@@ -391,6 +437,30 @@
 
         },
         "tooltip": {
+            "2021-07-10": {
+                "Commit1": "Initial commit - 32130 addition 0 deletion"
+            },
+            "2021-07-19": {
+                "Commit1": "First endpoint - 3130 addition 201 deletion"
+            },
+            "2021-07-20": {
+                "Commit1": "first endpoint done - 920 addition 103 deletion"
+            },
+            "2021-07-24": {
+                "Commit1": "Finish second endpoint - 321 addition 30 deletion"
+            },
+            "2021-07-25": {
+                "Commit1": "finishing second endpoint + routes for project - 322 addition 50 deletion"
+            },
+            "2021-07-30": {
+                "Commit1": "updating the project delete to delete also the illustrations references - 1090 addition 32 deletion"
+            },
+            "2021-08-01": {
+                "Commit1": "intermediate version of the server - 120 addition 27 deletion"
+            },
+            "2021-08-31": {
+                "Commit1": "adding 2 graphs - 9321 addition 820 deletion"
+            },
             "2021-09-04": {
                 "Commit1": "added all - 19332 additions 0 deletion",
                 "Commit2": "me- 151 additions 572 deletion",
@@ -633,6 +703,9 @@
             "2022-05-15": {
                 "Commit1": "Poli timisoara statistics presentation - 23002 addition 0 deletion",
                 "Commit2": "Added eurovision statistics - 3211 addition 0 deletion"
+            },
+            "2022-06-04": {
+                "Commit1": "adding more examples for presentation - 3012 addition 0 deletion"
             },
             "2022-06-05": {
                 "Commit1": "Adding Illustry statistics for presentation - 32110 addition 0 deletion"
