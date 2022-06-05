@@ -1,0 +1,642 @@
+{
+    "name": "Illustry Commits",
+    "description": "Illustry Commits",
+    "type": "calendar",
+    "tags": ["Illustry"],
+    "data": {
+        "calendar": [{
+                "date": "2021-09-04",
+                "value": 3,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-09-05",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-09-11",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-09-12",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-10-2",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-10-9",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-10-10",
+                "value": 2,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-10-12",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-10-16",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-10-30",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-10-31",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-11-02",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-11-13",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-11-14",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-11-20",
+                "value": 2,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-11-21",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-11-22",
+                "value": 2,
+                "year": 2021,
+                "category": "Commits"
+            },
+
+            {
+                "date": "2021-11-23",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-12-12",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-12-18",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-12-19",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-12-25",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2021-12-27",
+                "value": 1,
+                "year": 2021,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-02",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-04",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-05",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-10",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-15",
+                "value": 2,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-16",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-19",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-20",
+                "value": 6,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-22",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-23",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-23",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-01-29",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-02-05",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-02-06",
+                "value": 2,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-02-11",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-02-12",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-02-13",
+                "value": 4,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-02-19",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-02-28",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-05",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-06",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-08",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-11",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-12",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-13",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-19",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-20",
+                "value": 2,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-23",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-24",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-25",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-26",
+                "value": 5,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-12",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-22",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-24",
+                "value": 3,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-27",
+                "value": 2,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-28",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-03-29",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-04-14",
+                "value": 2,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-04-15",
+                "value": 2,
+                "year": 2022,
+                "category": "Commits"
+            },
+            {
+                "date": "2022-05-06",
+                "value": 1,
+                "year": 2022,
+                "category": "Commits"
+            }
+        ],
+
+        "categories": {
+
+            "Commits": "#3CB043"
+
+        },
+        "tooltip": {
+            "2021-09-04": {
+                "Commit1": "added all - 19332 additions 0 deletion",
+                "Commit2": "me- 151 additions 572 deletion",
+                "Commit3": "added more routes- 25 additions 0 deletion"
+            },
+            "2021-09-05": {
+                "Commit1": "modify the routes - 144 additions 103 deletion"
+            },
+            "2021-09-11": {
+                "Commit1": "added horizontal barcharts - 233 additions 87 deletion"
+            },
+            "2021-09-12": {
+                "Commit1": "modify the intervals of domains for charts - 57 additions 12 deletion"
+            },
+            "2021-10-2": {
+                "Commit1": "added stack and heatmap - 258 additions 79 deletion"
+            },
+            "2021-10-9": {
+                "Commit1": "updated calendarmatrix and charts - 2906 additions 268 deletion"
+            },
+            "2021-10-10": {
+                "Commit1": "modify stack diagram - 18 additions 28 deletion",
+                "Commit2": "adding matrix viz and modify the routes - 256 additions 11 deletion"
+            },
+            "2021-10-12": {
+                "Commit1": "finalizing the api - 135 additions 28 deletion"
+            },
+            "2021-10-16": {
+                "Commit1": "designing the add project page - 26 additions 66 deletion"
+            },
+            "2021-10-30": {
+                "Commit1": "added the dot graph - 2162 additions 110 deletion"
+            },
+            "2021-10-31": {
+                "Commit1": "added colors to sankey - 21 additions 8 deletion"
+            },
+            "2021-11-02": {
+                "Commit1": "fixing the dropzone for add project - 62 additions 32 deletion"
+            },
+            "2021-11-13": {
+                "Commit1": "update for gantt and styling the project - 1024 additions 20 deletion"
+            },
+            "2021-11-14": {
+                "Commit1": "adding dialogs + more styling - 415 additions 48 deletion"
+            },
+            "2021-11-20": {
+                "Commit1": "updating the design for Illustrations - 677 additions 705 deletion",
+                "Commit2": "design the graph - 56 additions 82 deletion"
+            },
+            "2021-11-21": {
+                "Commit1": "updating stacked charts - 4 additions 5 deletion"
+            },
+            "2021-11-22": {
+                "Commit1": "updating the legend for graphviz and deleting console.logs - 1160 additions 1102 deletion",
+                "Commit2": "addid csvtoJson - 12 additions 4 deletion"
+            },
+            "2021-11-23": {
+                "Commit1": "Edit example + modify the stacked charts - 10644 addition 114 deletion"
+            },
+            "2021-12-12": {
+                "Commit1": "Edit types + still needed to be added - 1023 addition 203 deletion"
+            },
+            "2021-12-18": {
+                "Commit1": "refactor the types for all the elements - 10250 addition 1020 deletion"
+            },
+            "2021-12-19": {
+                "Commit1": "added docker for the application - 102 addition 0 deletion"
+            },
+            "2021-12-25": {
+                "Commit1": "name correction - 150 addition 200 deletion"
+            },
+            "2021-12-27": {
+                "Commit1": "edit gant chart- 210 addition 500 deletion"
+            },
+            "2022-01-02": {
+                "Commit1": "added matrix- 1200 addition 23 deletion"
+            },
+            "2022-01-04": {
+                "Commit1": "added full matrix sort + tooltip- 1121 addition 233 deletion"
+            },
+            "2022-01-05": {
+                "Commit1": "added hidden numbers property - 11 addition 2 deletion",
+                "Commit2": "added the computed group  - 21 addition 3 deletion",
+                "Commit3": "update the hide values - 113 addition 5 deletion"
+            },
+            "2022-01-10": {
+                "Commit1": "integrated client into frontend - 131 addition 22 deletion",
+                "Commit2": "merge pull request - 232 addition 3 deletion",
+                "Commit3": "CREATE LICENCE - 126 addition 10 deletion"
+            },
+            "2022-01-15": {
+                "Commit1": "added labels to docker file, updated read.me - 12 addition 22 deletion",
+                "Commit2": "merge remote - trucking branch origin/main into main - 1231 addition 200 deletion"
+            },
+            "2022-01-16": {
+                "Commit1": "added calendar map viz - 1112 addition 0 deletion"
+            },
+            "2022-01-19": {
+                "Commit1": "externalize mongo credentials and added favicon fro browser windows - 11 addition 450 deletion",
+                "Commit2": "edit calendar heatmap + refactor sankey - 11065 addition 350 deletion",
+                "Commit3": "merge branch main  - 11123 addition 300 deletion"
+            },
+            "2022-01-20": {
+                "Commit1": "added github action to deploy docker image on tag push - 114 addition 21 deletion",
+                "Commit2": "update dockerfile to copy correct readme and license - 135 addition 121 deletion",
+                "Commit3": "fixed npm vulnerabilty - 21 addition 1 deletion",
+                "Commit4": "create codeql analyzis - 50 addition 3 deletion",
+                "Commit5": "fixed dockerfile - 123 addition 10 deletion",
+                "Commit6": "merge remote-tracking branch origin/main into main   - 100 addition 19 deletion"
+            },
+            "2022-01-22": {
+                "Commit1": "added tooltip for calendar + missing types  -1213 addition 23 deleteds"
+
+            },
+            "2022-01-23": {
+                "Commit1": "added sankey tooltip + little modification of the types - 123 addition 133 deleted",
+                "Commit2": "update some types + horizontal + vertical chart with Echarts instead of charts.js - 1231 addition 21 deleted",
+                "Commit3": "modified vertical stacked chart with Echarts + added tooltip + added new viz horizontal stacked charts + get rid of chart.js module from project - 2104 addition 5210 deleted"
+            },
+            "2022-01-29": {
+                "Commit1": "refactor calendar heatmap + types - 312 addition 133 deleted"
+            },
+            "2022-02-05": {
+                "Commit1": "edit timeliner - 213 addition 300 deleted"
+            },
+            "2022-02-06": {
+                "Commit1": "edit api for timeliner - 21 addition 3 deleted",
+                "Commit2": "update the calculation - 210 addition 3 deleted"
+            },
+            "2022-02-11": {
+                "Commit1": "fixed docker-compose and ignore data folder - 121 addition 3 deleted"
+            },
+            "2022-02-12": {
+                "Commit1": "refactor the algorithm for timestamps - 300 addition 30 deleted",
+                "Commit2": "merge branch main - 1211 addition 190 deletion",
+                "Commit3": "added new timeline model - 120 addition 23 deletion"
+            },
+            "2022-02-13": {
+                "Commit1": "updating the filtering for timeline api - 20 addition 30 deleted",
+                "Commit2": "little fix up with the routes - 12 addition 4 deletion",
+                "Commit3": "revised the types + added the chart component - 30 addition 4 deletion",
+                "Commit4": "partially resolving the data - 123 addition 3 deletion"
+            },
+            "2022-02-19": {
+                "Commit1": "refactor of the api - 203 addition 37 deleted"
+
+            },
+            "2022-02-28": {
+                "Commit1": "added new timeline - 210 addition 60 deleted",
+                "Commit2": "migrating to angular 13- 121 addition 19 deletion",
+                "Commit3": "updating angular material 13 and moment.js - 300 addition 30 deletion"
+
+            },
+            "2022-03-05": {
+                "Commit1": "adding swagger + adding the types to swagger - 534 addition 0 deleted"
+
+            },
+            "2022-03-06": {
+                "Commit1": "finalizing all the routes for swagger - 321 addition 2 deleted"
+
+            },
+            "2022-03-08": {
+                "Commit1": "continued work on timeline(filtering now for by date and searched term) - 3321 addition 53 deleted"
+
+            },
+            "2022-03-11": {
+                "Commit1": "adding json-schemas and example for quicktype - 210 addition 63 deleted",
+                "Commit2": "merge branch main  - 1243 addition 50 deletion",
+                "Commit3": "add sanitize - 3 addition 2 deletion"
+
+            },
+            "2022-03-12": {
+                "Commit1": "update the swagger + added the first pages of the mkdocs - 3321 addition 53 deleted"
+
+            },
+            "2022-03-13": {
+                "Commit1": "adding some more views for text - 232 addition 67 deleted",
+                "Commit2": "edit the static presentation site  - 12 addition 5 deletion",
+                "Commit3": "fake commit - 5 addition 12 deletion"
+
+            },
+            "2022-03-19": {
+                "Commit1": "adding validators for every type + rewrite the types - 2323 addition 674 deleted",
+                "Commit2": "adding the dialog for error  - 123 addition 31 deletion",
+                "Commit3": "adding createdAt and lastmodified in mongo - 32 addition 1 deletion"
+
+            },
+            "2022-03-20": {
+                "Commit1": "adding image to save at workcloud - 2323 addition 674 deleted",
+                "Commit2": "adding ploty and workcloud  - 123 addition 31 deletion"
+
+            },
+            "2022-03-23": {
+                "Commit1": "merge branch main into angular 13 - 3131 addition 53 deletion"
+
+            },
+            "2022-03-24": {
+                "Commit1": "adding developtment mongo - 3 addition 2 deletion"
+
+            },
+            "2022-03-25": {
+                "Commit1": "moved documentation out of server - 5 addition 3 deletion"
+
+            },
+            "2022-03-26": {
+                "Commit1": "modify a lot - 531 addition 33 deletion",
+                "Commit2": "merge branch main into angular 13 - 132 addition 32 deletion",
+                "Commit3": "modify the model - 123 addition 2 deletions",
+                "Commit4": "adding the validation - 132 addition 34 deletion",
+                "Coomit5": "finalizing the swagger and the middleware - 321 addition 91 deletion"
+            },
+            "2022-04-12": {
+                "Commit1": "changed tabs on illustration with same name - 53 addition 34 deletion"
+
+            },
+            "2022-04-22": {
+                "Commit1": "edit the description to Illustrations - 3 addition 3 deletion",
+                "Commit2": "edit the new Json-schemas for validations with node-link type - 132 addition 32 deletion",
+                "Commit3": "finalize the validator part - 12 addition 22 deletions"
+            },
+            "2022-04-24": {
+                "Commit1": "very big refactor in the backend + update the swagger with the new api - 2130 addition 510 deletion",
+                "Commit2": "merge branch main into angular 13 - 132 addition 32 deletion",
+                "Commit3": "fixing some minor issues with the merge - 12 addition 22 deletions"
+            },
+            "2022-04-27": {
+                "Commit1": "repair the matrix + the echarts - 213 addition 10 deletion",
+                "Commit2": "adding release documentation flow - 123 adding 34 deletion"
+            },
+            "2022-04-28": {
+                "Commit1": "added smoke test - 94 addition 0 deletion"
+            },
+            "2022-04-29": {
+                "Commit1": "added the new Illustry design + modify the delete api for Illustration + update swagger + update smoke - 1004 addition 412 deletion"
+            },
+            "2022-05-14": {
+                "Commit1": "added Illustration for presentation - 231 addition 0 deletion",
+                "Commit2": "little fix - 10 addition 41 deletion"
+            },
+            "2022-05-15": {
+                "Commit1": "Poli timisoara statistics presentation - 23002 addition 0 deletion",
+                "Commit2": "Added eurovision statistics - 3211 addition 0 deletion"
+            },
+            "2022-06-05": {
+                "Commit1": "Adding Illustry statistics for presentation - 32110 addition 0 deletion"
+            }
+        }
+    }
+}
