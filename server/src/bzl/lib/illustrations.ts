@@ -1,23 +1,18 @@
+
 import ProjectTable from "../../models/Project";
 import _ from "lodash";
 import IllustrationTable from "../../models/Illustrations";
 import { readFile } from "../../utils/reader";
-import { FileProperties } from "../../types/fileproperties";
 import { Promise } from "bluebird";
 import {
   illustrationValidator,
   validateProjectNameAndIllustrationNameAsString,
   validateProjectNameAndIllustrationTypeAsString,
 } from "../../validator/illustrationValidator";
-import {
-  NodeLink,
-  CalendarHeatmap,
-  Timeline,
-  Illustration,
-  IllustrationUpdate,
-  IllustrationTypes,
-} from "../../types/illustrations.";
+ 
 import { validateProjectNameAsString } from "../../validator/projectValidator";
+import { FileProperties } from "types/fileproperties";
+import { CalendarHeatmap, Illustration, IllustrationTypes, IllustrationUpdate, NodeLink, Timeline } from "types/illustrations";
 
 export class IllustrationBZL {
   constructor() {}

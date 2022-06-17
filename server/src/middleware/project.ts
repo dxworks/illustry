@@ -1,7 +1,8 @@
+
 import { Factory } from "../bzl/factory";
 import _ from "lodash";
 import * as helper from "../utils/helper";
-import { IllustrationTypes } from "../types/illustrations.";
+import { IllustrationTypes } from "types/illustrations";
 
 export const createProjectfromExtern = (req: any, res: any, next: any) => {
   let projectName = req.body.projectName as string;
@@ -88,7 +89,7 @@ export const createIllustryProject = (req: any, res: any, next: any) => {
 
 export const query = (req: any, res: any, next: any) => {
  return Factory.getInstance().api.projectApi.queryAllProjects()
-  .asCallback((err, data) => {
+  .asCallback((err: any, data: any) => {
     helper.returnResponse(res, err, data, next);
   })
 };

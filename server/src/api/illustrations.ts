@@ -1,12 +1,9 @@
+
 import { Promise } from "bluebird";
+import { IllustrationTypes, NodeLink, CalendarHeatmap, Timeline } from "types/illustrations";
+import { FileProperties } from "types/fileproperties";
 import { Factory } from "../bzl/factory";
-import { FileProperties } from "../types/fileproperties";
-import {
-  NodeLink,
-  CalendarHeatmap,
-  Timeline,
-  IllustrationTypes,
-} from "../types/illustrations.";
+ 
 
 export const illustrationApi = {
   addOrUpdateIllustrations(projectName: string, files: FileProperties[]) {

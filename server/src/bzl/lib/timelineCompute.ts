@@ -1,7 +1,7 @@
+
 import _ from "lodash";
 import IllustrationTable from "../../models/Illustrations";
 import moment from "moment";
-import { Timeline } from "../../types/illustrations.";
 
 export class TimelineComputeBZL {
   constructor() {}

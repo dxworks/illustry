@@ -1,21 +1,19 @@
+
 import ProjectTable from "../../models/Project";
 import _ from "lodash";
 import { Promise } from "bluebird";
 import IllustrationTable from "../../models/Illustrations";
-import { Project } from "../../types/project";
 import { readFile } from "../../utils/reader";
-import { FileProperties } from "../../types/fileproperties";
 import {
   validateProject,
   validateProjectNameAsString,
   validateProjectNameAsStringAndProjectDescriptionAsString,
 } from "../../validator/projectValidator";
-import {
-  Illustration,
-  IllustrationTypes,
-  IllustrationUpdate,
-} from "../../types/illustrations.";
+ 
 import { illustrationValidator } from "../../validator/illustrationValidator";
+import { FileProperties } from "types/fileproperties";
+import { Project } from "types/project";
+import { Illustration, IllustrationTypes, IllustrationUpdate } from "types/illustrations";
 export class ProjectBZL {
   constructor() {}
   createProjectfromExtern = (

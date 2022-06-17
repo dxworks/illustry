@@ -1,8 +1,19 @@
+import { IllustrationTypes } from "types/illustrations";
 import mongoose, { Schema } from "mongoose";
-import { IllustrationTypes } from "../types/illustrations.";
+const illustrationTypes = [IllustrationTypes.CALENDAR,
+  IllustrationTypes.CHART,
+  IllustrationTypes.FORCE_DIRECTED_GRAPH,
+  IllustrationTypes.GRAPHVIZ,IllustrationTypes.HIERARCHICAL_EDGE_BUNDLING,
+  IllustrationTypes.MATRIX,
+  IllustrationTypes.PLOTLY,
+  IllustrationTypes.SANKEY,
+  IllustrationTypes.TIMELINE,
+  IllustrationTypes.TREEMAP,
+  IllustrationTypes.WORLD_CLOUD]
 export var IllustrationSchema = new mongoose.Schema({
   projectName: { type: String, required: true },
-  type: { type: String, required: true, enum: IllustrationTypes },
+  //@ts-ignore
+  type: { type: String, required: true, enum: illustrationTypes },
   description: { type: String, required: false, maxLength: 250 },
   name: { type: String, required: true },
   tags: [{ type: String, required: false }],

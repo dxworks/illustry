@@ -1,8 +1,9 @@
+
 import { Factory } from "../bzl/factory";
 import _ from "lodash";
 
 import * as helper from "../utils/helper";
-import { IllustrationTypes } from "../types/illustrations.";
+import { IllustrationTypes } from "types/illustrations";
 
 export const addOrUpdateIllustrations = (req: any, res: any, next: any) => {
   let projectName = req.params.projectName;

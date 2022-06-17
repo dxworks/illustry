@@ -1,7 +1,7 @@
 import _ from "lodash";
-import { FileProperties } from "../types/fileproperties";
 import { Promise } from "bluebird";
 import { FileError } from "../errors/fileError";
+import { FileProperties } from "types/fileproperties";
 // const converter = require('json-2-csv')
 var fs = require('fs')
 

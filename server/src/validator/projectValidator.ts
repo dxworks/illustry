@@ -1,8 +1,9 @@
-import { Project } from "../types/project";
-import { illustrationValidator } from "./illustrationValidator";
-import { Illustration, IllustrationUpdate } from "../types/illustrations.";
 
 import Ajv from 'ajv'
+import { illustrationValidator } from "./illustrationValidator";
+import { Project } from "types/project";
+import { Illustration, IllustrationUpdate } from 'types/illustrations';
+ 
 const ajv = new Ajv()
 export const validateProjectNameAsString = (name: string) => {
 

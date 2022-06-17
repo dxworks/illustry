@@ -1,14 +1,10 @@
-import {
-  Illustration,
-  IllustrationTypes,
-  IllustrationUpdate,
-} from "../types/illustrations.";
-
+ 
 import * as CalendarMatrixSchema from "../../jsonSchemas/CalendarHeatmap.json";
 import * as NodeLinkSchema from "../../jsonSchemas/NodeLink.json";
 import * as TimelineSchema from "../../jsonSchemas/Timeline.json";
 
 import Ajv from "ajv";
+import { Illustration, IllustrationTypes, IllustrationUpdate } from "types/illustrations";
 const ajv = new Ajv();
 export const illustrationValidator = (
   illustration: Illustration | IllustrationUpdate

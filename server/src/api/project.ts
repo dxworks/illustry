@@ -1,11 +1,10 @@
+
 import { Factory } from "../bzl/factory";
 import { Promise } from "bluebird";
-import { FileProperties } from "../types/fileproperties";
-import { Project } from "../types/project";
-import {
  
-  IllustrationTypes,
-} from "../types/illustrations.";
+import { FileProperties } from "types/fileproperties";
+import { Project } from "types/project";
+import { IllustrationTypes } from "types/illustrations";
 
 export const projectApi = {
   createProjectfromExtern(
