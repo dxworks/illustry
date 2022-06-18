@@ -1,18 +1,11 @@
 import {
   AfterViewInit,
-  ChangeDetectorRef,
   Component,
-  HostListener,
   OnInit,
   ViewChild,
 } from '@angular/core';
 import { ProjectsService } from '../../../services/projects.service';
-import { Project } from '../../../../types/projects.model';
-import { ProjectForTableModel } from '../../../../types/projectForTable.model';
-import {
-  MdbTableDirective,
-  MdbTablePaginationComponent,
-} from 'angular-bootstrap-md';
+
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteProjectDialogComponent } from '../../../dialogs/delete-project-dialog/delete-project-dialog.component';
@@ -22,6 +15,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
+import { Project } from 'types/project';
 
 @Component({
   selector: 'app-projects-list',

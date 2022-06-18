@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit, Renderer2, ViewChild, HostListener } from '@angular/core';
 import * as d3 from 'd3';
-import { FlgTypes } from "../../../entities/flg-types";
-import { Link, Node } from "../../../entities/common-types";
+import { NodeLink } from 'index';
+import { Link,Node } from 'types/illustrations';
 
 @Component({
   selector: 'app-d3-force-layout-graph',
@@ -20,10 +20,10 @@ export class ForceLayoutGraphComponent implements OnInit {
   private node: any;
   private links: Link[] = [];
   private nodes: Node[] = [];
-  private graph: FlgTypes = { nodes: [], links: [] };
+  private graph: NodeLink = { nodes: [], links: [] };
   @HostListener('unloaded')
   @Input()
-  data: FlgTypes | undefined;
+  data: NodeLink | undefined;
 
   constructor() {
   }

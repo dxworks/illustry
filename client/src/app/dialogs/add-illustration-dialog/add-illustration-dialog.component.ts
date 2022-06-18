@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { ProjectsService } from "../../services/projects.service";
 import { Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { throwError } from "rxjs";
@@ -21,7 +20,7 @@ export class AddIllustrationDialogComponent implements OnInit {
   files: File[] = [];
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: { projectName: string }, private illustrationService: IllustrationService, private router: Router) { }
- 
+
   ngOnInit(): void {
   }
 

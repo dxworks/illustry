@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { Project } from "../../types/projects.model";
 import { environment } from "../../environments/environment";
 import { Subject } from 'rxjs';
 import {tap} from 'rxjs/operators'
+import { Project } from 'types/project';
 const baseUrl = `${environment.backendUrl}/projects`;
 const projectUrl = `${environment.backendUrl}/project`;
 

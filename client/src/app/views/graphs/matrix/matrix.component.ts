@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import { NodeLink } from "types/illustrations"
 import * as _ from 'lodash';
-import { MatrixTypes } from 'src/app/entities/matrix-types';
 @Component({
   selector: 'app-matrix',
   templateUrl: './matrix.component.html',
@@ -9,7 +9,7 @@ import { MatrixTypes } from 'src/app/entities/matrix-types';
 })
 export class MatrixComponent implements OnInit {
   @Input()
-  data: MatrixTypes | undefined;
+  data: NodeLink | undefined;
 
   selectedGroup1: any[] = [];
   selectedGroup2: any[] = [];

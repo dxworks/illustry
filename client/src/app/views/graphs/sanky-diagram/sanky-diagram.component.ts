@@ -1,10 +1,9 @@
 import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { SankeyTypes } from "../../../entities/sankey-types";
-import { Link, Node, NodesMatrix, SankeyLinks, SankeyNodes } from "../../../entities/common-types";
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import * as _ from 'lodash';
 import * as d3 from 'd3';
+import { Link,Node, NodeLink } from 'types/illustrations';
 
 
 @Component({
@@ -19,11 +18,11 @@ export class SankyDiagramComponent implements OnInit, OnDestroy {
   links: Link[] = [];
   nodes: Node[] = [];
   color: any;
-  graph: SankeyTypes = { nodes: [], links: [], colorMapping: [] };
+  graph: NodeLink = { nodes: [], links: [], colorMapping: [] };
   nodeAlign: any;
 
   @Input()
-  data: SankeyTypes | undefined
+  data: NodeLink | undefined
 
   @Output()
   option!: EChartsOption;
@@ -123,7 +122,7 @@ export class SankyDiagramComponent implements OnInit, OnDestroy {
     }
   }
 
-  createNodes(nodes: SankeyNodes[], colors: any[]) {
+  createNodes(nodes: Node[], colors: any[]) {
     let finalNodes: any = []
     _.forEach(colors, color => {
       _.each(color, (cval: any, ckey: any) => {
@@ -142,7 +141,7 @@ export class SankyDiagramComponent implements OnInit, OnDestroy {
     })
     return finalNodes
   }
-  createLinks(links: SankeyLinks) {
+  createLinks(links: Link) {
     let finalLinks: any = []
     _.forEach(links, link => {
       finalLinks.push({ source: link.source, target: link.target, value: link.value, prop: this.createPropertiesForToolTip(link.properties, link.value) })

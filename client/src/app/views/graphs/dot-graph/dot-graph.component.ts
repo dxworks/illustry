@@ -4,8 +4,9 @@ import { graphviz } from 'd3-graphviz';
 import { PluginOutputConverterService } from '../../../services/plugin-output-converter.service';
 
 import { isNullOrUndefined } from "@qntm-code/utils";
-import { DotTypes } from "../../../entities/dot-types";
+
 import * as d3 from 'd3';
+import { NodeLink } from 'index';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class DotGraphComponent implements OnInit, OnDestroy {
 
   @Input()
   set content(content: any) {
-    const copy: DotTypes | undefined = JSON.parse(JSON.stringify(content));
+    const copy: NodeLink | undefined = JSON.parse(JSON.stringify(content));
     const newContent = this.pluginOutputConverter.convertToGraph(copy);
 
     if (!isNullOrUndefined(copy) && newContent !== this._content) {

@@ -55,7 +55,6 @@ import { ChartsComponent } from './views/graphs/charts/charts.component';
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
 import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.component';
 import { PlotyComponent } from './views/graphs/ploty/ploty.component';
-import { IllustrationComponent } from './views/graphs/illustration/illustration.component';
 
 @NgModule({
   declarations: [
@@ -87,8 +86,7 @@ import { IllustrationComponent } from './views/graphs/illustration/illustration.
     TimelineComponent,
     ChartsComponent,
     ErrorDialogComponent,
-    PlotyComponent,
-    IllustrationComponent,
+    PlotyComponent
 
   ],
   imports: [

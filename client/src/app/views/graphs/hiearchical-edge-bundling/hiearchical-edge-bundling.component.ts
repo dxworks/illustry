@@ -4,8 +4,7 @@ import { Component, Input, OnDestroy, OnInit, HostListener } from '@angular/core
 import { IllustrationService } from "../../../services/illustration.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
 import * as d3 from 'd3';
-import { Link, Node } from "../../../entities/common-types";
-import { HebTypes } from "../../../entities/heb-types";
+import { Link, Node, NodeLink } from "types/illustrations"
 
 @Component({
   selector: 'app-hiearchical-edge-bundling',
@@ -17,12 +16,12 @@ export class HiearchicalEdgeBundlingComponent implements OnInit {
 
   private links: Link[] = [];
   private nodes: Node[] = [];
-  private graph: HebTypes = { nodes: [], links: [] };
+  private graph: NodeLink = { nodes: [], links: [] };
   private chartSvg: any;
   private diameter: any;
   private tooltipMaxWidth = 500;
   @Input()
-  data: HebTypes | undefined;
+  data: NodeLink | undefined;
   constructor(private illustrationService: IllustrationService, private route: ActivatedRoute, private router: Router) {
   }
 

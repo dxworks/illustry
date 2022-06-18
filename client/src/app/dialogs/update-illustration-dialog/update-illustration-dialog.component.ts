@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { ProjectsService } from "../../services/projects.service";
-import { Params, Route, Router } from "@angular/router";
+import {  Router } from "@angular/router";
 import { IllustrationService } from "../../services/illustration.service";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { throwError } from "rxjs";

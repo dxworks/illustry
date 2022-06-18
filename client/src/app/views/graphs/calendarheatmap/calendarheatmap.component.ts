@@ -2,7 +2,7 @@ import { Component, Input, OnDestroy, OnInit} from '@angular/core';
 import * as echarts from 'echarts';
 import { EChartsOption } from 'echarts';
 import * as _ from 'lodash';
-import { CalendarData, CalendarMatrixTypes } from 'src/app/entities/calendarMatrix-types';
+import { CalendarHeatmap,CalendarData } from 'types/illustrations';
 import 'zrender/lib/svg/svg';
 
 @Component({
@@ -13,7 +13,7 @@ import 'zrender/lib/svg/svg';
 export class CalendarheatmapComponent implements OnInit, OnDestroy {
   myChart: any
   @Input()
-  data: CalendarMatrixTypes | undefined
+  data: CalendarHeatmap| undefined
   option!: EChartsOption;
   cpuLoadChartOptions: EChartsOption = {};
 
@@ -31,7 +31,7 @@ export class CalendarheatmapComponent implements OnInit, OnDestroy {
     console.log("calendar destroyed")
   }
 
-  createCalendar(data: CalendarMatrixTypes) {
+  createCalendar(data: CalendarHeatmap) {
     var chartDom = document.getElementById('main')!;
     this.option = {
       toolbox: {

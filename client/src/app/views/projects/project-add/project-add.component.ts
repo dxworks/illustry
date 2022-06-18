@@ -1,14 +1,12 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+/// <reference types= '@dxworks/illustrytypes' />
+import {   Component, OnInit } from '@angular/core';
 import { ProjectsService } from "../../../services/projects.service";
-import { Project } from "../../../../types/projects.model";
 import { throwError } from "rxjs";
-import { ActivatedRoute, Router } from "@angular/router";
-import { Illustration } from "../../../../types/illustration.model";
-import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
 import { AddProjectDialogComponent } from "../../../dialogs/add-project-dialog/add-project-dialog.component";
 import { ErrorDialogComponent } from 'src/app/dialogs/error-dialog/error-dialog.component';
+import { Project } from 'types/project';
 @Component({
   selector: 'app-project-add',
   templateUrl: './project-add.component.html',
@@ -17,18 +15,16 @@ import { ErrorDialogComponent } from 'src/app/dialogs/error-dialog/error-dialog.
 })
 export class ProjectAddComponent implements OnInit {
   project: Project = {
-    _id: '',
     name: '',
     description: ''
   };
 
-  illustration: Illustration = {
-    _id: '',
+  illustration: any = {
     name: '',
     // @ts-ignore
     data: [],
-    type: '',
-    tags: ''
+    type:'',
+    projectName:''
   };
 
   submitted: boolean = false;
@@ -99,6 +95,7 @@ export class ProjectAddComponent implements OnInit {
 
         this.clearForm()
       }, error => {
+        //@ts-ignore
         if (error !== {}) {
           this.openDialogForError(error.error)
         }

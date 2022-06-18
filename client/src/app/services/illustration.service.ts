@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Illustration } from "../../types/illustration.model";
 import { environment } from "../../environments/environment";
 import { Subject } from 'rxjs';
 import {tap} from 'rxjs/operators'
+import { Illustration } from 'types/illustrations';
 const projectUrl = `${environment.backendUrl}/project`;
 
 @Injectable({ providedIn: 'root' })
