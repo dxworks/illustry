@@ -40,12 +40,6 @@ export class DotGraphComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
   }
-  // ngAfterViewInit() {
-  //   var s = document.createElement("script");
-  //   s.type = "javascript/worker";
-  //   s.src = "https://unpkg.com/@hpcc-js/wasm/dist/index.min.js";
-  //   this.elementRef.nativeElement.appendChild(s);
-  // }
   ngOnDestroy(): void {
     console.log("graphviz destroyed")
     d3.select('#highLevelDiagram').remove()

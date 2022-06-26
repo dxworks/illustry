@@ -1,14 +1,11 @@
 import {
   Component,
-  HostListener,
   Input,
   OnDestroy,
   OnInit,
   Output,
 } from '@angular/core';
-import * as d3 from 'd3';
-import * as echarts from 'echarts';
-import 'echarts-wordcloud';
+import { EchartService } from 'src/app/services/echart.service';
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
@@ -19,37 +16,16 @@ export class ChartsComponent implements OnInit, OnDestroy {
   @Input()
   data: any;
   color: any;
-  @Output()
-  option!: echarts.EChartsOption;
-  constructor() {}
+
+  constructor(private echartService: EchartService) {}
 
   ngOnInit(): void {
-    console.log(this.data);
     if (this.data) {
-      //@ts-ignore
-      this.createChart(this.data);
+      this.echartService.createChart(this.data,this.myChart);
     }
   }
   ngOnDestroy(): void {
-    echarts.disconnect;
-    // this.myChart.dispose()
-    console.log('chart destroyed');
+    this.echartService.destroyChart()
   }
 
-  private createChart(data: any) {
-    data.series?.forEach((s: any) => {
-      if (s.type === 'wordCloud') {
-        if (s.maskImage) {
-          var image = new Image();
-          image.src = s.maskImage;
-          s.maskImage = image;
-        }
-      }
-    });
-    var chartDom = document.getElementById('main')!;
-    this.option = data;
-    this.myChart = echarts.getInstanceByDom(chartDom);
-    this.myChart = echarts.init(chartDom);
-    this.option && this.myChart.setOption(this.option);
-  }
 }
