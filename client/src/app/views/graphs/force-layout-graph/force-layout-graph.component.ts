@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NodeLink } from 'index';
 import { ForceLayoutGraphService } from 'src/app/services/force-layout-graph.service';
-import { Link, Node } from 'types/illustrations';
+
 
 @Component({
   selector: 'app-d3-force-layout-graph',
