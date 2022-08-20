@@ -1,25 +1,25 @@
 
 import _ from "lodash";
-import { Illustration, IllustrationUpdate } from "types/illustrations";
+import { Illustration, IllustrationUpdate, IllustrationFilter } from "types/illustrations";
 import IllustrationTable from "../../models/Illustrations";
 
 export class IllustrationDBACC {
   constructor() { }
   update(filter: any, illustration: IllustrationUpdate) { //IllustrationFilter
-    console.log(filter)
-    console.log(illustration)
+
     return IllustrationTable.findOneAndUpdate(filter, illustration, { upsert: true, new: true }).select('-_id')
   }
 
-  browse(filter?: any) {
-    return IllustrationTable.find(filter).select('-_id')
+  browse(filter?: IllustrationFilter) {
+    const browseFilter = filter ? filter : {}
+    return IllustrationTable.find(browseFilter).select('-_id')
   }
 
-  delete(filter?: any) {
+  delete(filter?: IllustrationFilter) {
     return IllustrationTable.deleteOne(filter)
   }
 
-  deleteMany(filter?: any) {
+  deleteMany(filter?: IllustrationFilter) {
     return IllustrationTable.deleteMany(filter)
   }
 
@@ -27,7 +27,7 @@ export class IllustrationDBACC {
     return IllustrationTable.create(illustration);
   }
 
-  findOne(filter: any) {
+  findOne(filter: IllustrationFilter) {
     return IllustrationTable.findOne(filter)
   }
 }

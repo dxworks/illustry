@@ -235,7 +235,7 @@ export const illustrationBZL = {
       })
   },
 
-  browseSameType(projectName: string, illustrationType: string) {
+  browseSameType(projectName: string, illustrationType: IllustrationTypes | IllustrationTypes[]) {
     return Promise.resolve(Factory.getInstance().IllustrationDBACC.browse(
       {
         projectName: projectName,
