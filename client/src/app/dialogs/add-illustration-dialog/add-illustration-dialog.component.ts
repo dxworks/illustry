@@ -11,11 +11,18 @@ import { IllustrationService } from "../../services/illustration.service";
   styleUrls: ['./add-illustration-dialog.component.css']
 })
 export class AddIllustrationDialogComponent implements OnInit {
+  selectedFileFormats: string[] = ['CSV', 'JSON', 'XML']
+  selectedFileFormat: string = this.selectedFileFormats[1];
+  selectedSeparators: string[] = [',', ';', '|']
+  selectedSeparator: string = this.selectedSeparators[0];
   form: FormGroup = new FormGroup({
     File: new FormControl('', [Validators.required]),
-    // IllustrationName: new FormControl('', [Validators.required]),
-    // IllustrationType: new FormControl('', [Validators.required]),
-    // Tags: new FormControl('', [])
+    SelectedFormat: new FormControl('JSON', [Validators.required]),
+    Separator: new FormControl(',', []),
+    IllustrationName: new FormControl('', []),
+    IllustrationDescription: new FormControl('', []),
+    IllustrationType: new FormControl('force-directed-graph', []),
+    Tags: new FormControl('', []),
   });
   files: File[] = [];
 
@@ -39,12 +46,30 @@ export class AddIllustrationDialogComponent implements OnInit {
   uploadIllustration() {
 
     const formData: FormData = new FormData()
-    this.form.value.File.forEach((file: string | Blob) => {
-      formData.append('File', file);
-    })
-    // formData.append('IllustrationName', this.form.value.IllustrationName)
-    // formData.append('IllustrationType', this.form.value.IllustrationType)
-    // formData.append('Tags', this.form.value.Tags)
+    if (this.form.value.SelectedFormat === 'CSV') {
+      formData.append('format', this.form.value.SelectedFormat);
+      formData.append('separator', this.form.value.Separator);
+      formData.append('illustrationName', this.form.value.IllustrationName)
+      formData.append('illustrationDescription', this.form.value.IllustrationDescription)
+      console.log(this.form.value.IllustrationType)
+      formData.append('illustrationType', this.form.value.IllustrationType)
+      formData.append('tags', this.form.value.Tags)
+      if (this.form.value.File) {
+        this.form.value.File.forEach((file: string | Blob) => {
+          formData.append('File', file);
+        })
+      }
+    }
+    else {
+      if (this.form.value.File) {
+        formData.append('format', this.form.value.SelectedFormat);
+        this.form.value.File.forEach((file: string | Blob) => {
+          formData.append('File', file);
+        })
+      }
+    }
+
+
     this.illustrationService.createIllustration(this.data.projectName, formData)
       .subscribe(response => {
       }, error => {

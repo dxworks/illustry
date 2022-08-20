@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as illustrationMiddleware from "../middleware/illustrations";
+import * as illustrationAPI from "../api/illustrations";
 
 const router = Router();
 
@@ -13,54 +13,54 @@ var finalupload = upload.fields([{ name: "File", maxCount: 10 }]);
 router.post(
   "/api/project/:projectName/illustration",
   finalupload,
-  illustrationMiddleware.addOrUpdateIllustrations
+  illustrationAPI.addOrUpdate
 );
 
 router.get(
   "/api/project/:projectName/illustration",
-  illustrationMiddleware.findAllIllustration
+  illustrationAPI.browse
 );
 
 router.get(
   "/api/project/:projectName/illustration/:illustrationName",
-  illustrationMiddleware.findOneIllustration
+  illustrationAPI.findOne
 );
 
 router.delete(
   "/api/project/:projectName/illustration/:illustrationName/:type",
-  illustrationMiddleware.deteleIllustration
+  illustrationAPI._delete
 );
 
 router.get(
   "/api/project/:projectName/illustration/type/:illustrationType",
-  illustrationMiddleware.getAllIllustriesOfTheSameType
+  illustrationAPI.browseSameType
 );
 
 router.post(
   "/api/external/illustration",
-  illustrationMiddleware.addIllustrationFromOtherSource
+  illustrationAPI.addExtern
 );
 router.post(
   "/api/external/oneillustration",
-  illustrationMiddleware.findOneIllustrationFromOtherSource
+  illustrationAPI.findOneExtern
 );
 router.put(
   "/api/external/illustration",
-  illustrationMiddleware.updateIllustrationFromOtherSource
+  illustrationAPI.updateExtern
 );
 
 router.delete(
   "/api/external/illustration",
-  illustrationMiddleware.deleteIllustrationFromExternalSource
+  illustrationAPI.deleteExtern
 );
 
 router.post(
   "/api/all/external/illustration",
-  illustrationMiddleware.findAllIllustrationFromOtherSource
+  illustrationAPI.browseExtern
 );
 
 router.post(
   "/api/illustrationofsametype/external/illustration",
-  illustrationMiddleware.getAllIllustriesOfTheSameTypeFromOtherSource
+  illustrationAPI.browseSameTypeExtern
 );
 export default router;

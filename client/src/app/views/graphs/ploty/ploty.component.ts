@@ -17,9 +17,5 @@ export class PlotyComponent implements OnInit {
   config?: any;
 
   ngOnInit() {
-    console.log("aici")
-    console.log(this.data);
-    console.log(this.layout);
-    console.log(this.config);
   }
 }

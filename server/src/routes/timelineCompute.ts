@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as timelinerMiddleware from "../middleware/timelinerCompute";
+import * as timelinerAPI from "../api/timelinerCompute";
 
 const router = Router();
 const multer = require("multer");
@@ -7,7 +7,7 @@ var uploadEmpty = multer();
 router.post(
   "/api/timeliner/",
   uploadEmpty.none(),
-  timelinerMiddleware.checkSearch
+  timelinerAPI.checkSearch
 );
 
 export default router;

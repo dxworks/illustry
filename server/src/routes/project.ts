@@ -1,17 +1,17 @@
 import { Router } from "express";
-import * as projectMiddleware from "../middleware/project";
+import * as projectAPI from "../api/project";
 
 const router = Router();
 
-router.post("/api/external/project", projectMiddleware.createProjectfromExtern);
+router.post("/api/external/project", projectAPI.createExtern);
 router.delete(
   "/api/external/project",
-  projectMiddleware.deleteProjectfromExtern
+  projectAPI.deleteExtern
 );
-router.put("/api/external/project", projectMiddleware.updateProjectfromEtern);
+router.put("/api/external/project", projectAPI.updateExtern);
 
-router.get("/api/projects", projectMiddleware.query);
-router.get("/api/project/:projectName", projectMiddleware.findOne);
+router.get("/api/projects", projectAPI.browse);
+router.get("/api/project/:projectName", projectAPI.findOne);
 
 const multer = require("multer");
 const storage = multer.diskStorage({ destination: null });
@@ -22,16 +22,16 @@ var upload = multer({
 router.post(
   "/api/project",
   upload.array("File", 10),
-  projectMiddleware.createIllustryProject
+  projectAPI.create
 );
 
 var uploadEmpty = multer();
 router.put(
   "/api/project/:projectName",
   uploadEmpty.none(),
-  projectMiddleware.updateProject
+  projectAPI.update
 );
 
-router.delete("/api/project/:projectName", projectMiddleware.deleteProject);
+router.delete("/api/project/:projectName", projectAPI._delete);
 
 export default router;

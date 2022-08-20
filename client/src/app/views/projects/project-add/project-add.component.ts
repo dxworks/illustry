@@ -1,5 +1,5 @@
 /// <reference types= '@dxworks/illustrytypes' />
-import {   Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProjectsService } from "../../../services/projects.service";
 import { throwError } from "rxjs";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
@@ -11,21 +11,16 @@ import { Project } from 'types/project';
   selector: 'app-project-add',
   templateUrl: './project-add.component.html',
   styleUrls: ['./project-add.component.css'],
-  providers: [ProjectsService]
+  providers: [ProjectsService],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectAddComponent implements OnInit {
+
   project: Project = {
     name: '',
     description: ''
   };
 
-  illustration: any = {
-    name: '',
-    // @ts-ignore
-    data: [],
-    type:'',
-    projectName:''
-  };
 
   submitted: boolean = false;
   files: File[] = [];
@@ -34,16 +29,14 @@ export class ProjectAddComponent implements OnInit {
   form: FormGroup = new FormGroup({
     ProjectName: new FormControl('', [Validators.required]),
     ProjectDescription: new FormControl('', []),
-    File: new FormControl('', []),
-    // IllustrationName: new FormControl('', [Validators.required]),
-    // IllustrationType: new FormControl('', [Validators.required]),
-    // Tags: new FormControl('', [])
+
   });
 
-  constructor(private projectService: ProjectsService, public dialog: MatDialog) {
+  constructor(private projectService: ProjectsService, public dialog: MatDialog, private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
+
   }
 
   openDialogForAddingProjects() {
@@ -79,15 +72,11 @@ export class ProjectAddComponent implements OnInit {
     this.files.splice(this.files.indexOf(event), 1);
   }
   uploadProject() {
-    const formData: FormData = new FormData()
 
+    const formData: FormData = new FormData()
     formData.append('name', this.form.value.ProjectName);
     formData.append("description", this.form.value.ProjectDescription);
-    if (this.form.value.File) {
-      this.form.value.File.forEach((file: string | Blob) => {
-        formData.append('File', file);
-      })
-    }
+
     this.openDialogForAddingProjects()
     this.projectService.createProject(formData)
       .subscribe(response => {

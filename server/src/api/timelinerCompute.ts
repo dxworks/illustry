@@ -1,14 +1,14 @@
 
 import * as helper from "../utils/helper";
-import { Factory } from "../bzl/factory";
+import { Factory } from "../lib/factory";
 export const checkSearch = (req: any, res: any, next: any) => {
-  let projectName = req.body.ProjectName;
-  let illustrationName = req.body.IllustrationName;
-  let searchedText = req.body.searchedText;
+  let projectName: string = req.body.ProjectName as string;
+  let illustrationName: string = req.body.IllustrationName as string;
+  let searchedText: string = req.body.searchedText as string;
   let fromDate = req.body.fromDate;
   let toDate = req.body.toDate;
   return Factory.getInstance()
-    .api.timelineComputeApi.checkSearch(
+    .BZL.timelineComputeApi.checkSearch(
       projectName,
       illustrationName,
       searchedText,

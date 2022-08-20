@@ -1,52 +1,18 @@
 <div class="arrange">
   <h2 align="center">Add an Illustry project</h2>
   <div class="mx-5">
-    <form
-      id="addProjectForm"
-      class="d-flex flex-column"
-      [formGroup]="form"
-      (ngSubmit)="uploadProject()"
-      align="center"
-    >
+    <form id="addProjectForm" class="d-flex flex-column" [formGroup]="form" (ngSubmit)="uploadProject()" align="center">
       <div align="center">
         <mat-form-field appearance="fill">
           <mat-label>Project Name</mat-label>
-          <input
-            matInput
-            formControlName="ProjectName"
-            id="projectName"
-            type="text"
-            required
-          />
+          <input matInput formControlName="ProjectName" id="projectName" type="text" required />
         </mat-form-field>
       </div>
       <div align="center">
         <mat-form-field appearance="fill">
           <mat-label>Project Description</mat-label>
-          <textarea
-            matInput
-            formControlName="ProjectDescription"
-            id="projectDescription"
-            type="text"
-          ></textarea>
+          <textarea matInput formControlName="ProjectDescription" id="projectDescription" type="text"></textarea>
         </mat-form-field>
-      </div>
-
-      <div class="centerDrop">
-        <div class="form-group">
-          <ngx-dropzone name="file" id="file" (change)="onSelect($event)">
-            <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
-            <ngx-dropzone-preview
-              *ngFor="let f of files"
-              [removable]="true"
-              (removed)="onRemove(f)"
-            >
-              <ngx-dropzone-label
-                >{{ f.name }} ({{ f.type }})</ngx-dropzone-label
-              >
-            </ngx-dropzone-preview>
-          </ngx-dropzone>
-        </div>
       </div>
 
       <div class="centerButton">

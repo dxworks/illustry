@@ -1,15 +1,15 @@
 import { IllustrationTypes } from "types/illustrations";
 import mongoose, { Schema } from "mongoose";
 const illustrationTypes = [IllustrationTypes.CALENDAR,
-  IllustrationTypes.CHART,
-  IllustrationTypes.FORCE_DIRECTED_GRAPH,
-  IllustrationTypes.GRAPHVIZ,IllustrationTypes.HIERARCHICAL_EDGE_BUNDLING,
-  IllustrationTypes.MATRIX,
-  IllustrationTypes.PLOTLY,
-  IllustrationTypes.SANKEY,
-  IllustrationTypes.TIMELINE,
-  IllustrationTypes.TREEMAP,
-  IllustrationTypes.WORLD_CLOUD]
+IllustrationTypes.CHART,
+IllustrationTypes.FORCE_DIRECTED_GRAPH,
+IllustrationTypes.GRAPHVIZ, IllustrationTypes.HIERARCHICAL_EDGE_BUNDLING,
+IllustrationTypes.MATRIX,
+IllustrationTypes.PLOTLY,
+IllustrationTypes.SANKEY,
+IllustrationTypes.TIMELINE,
+IllustrationTypes.TREEMAP,
+IllustrationTypes.WORLD_CLOUD]
 export var IllustrationSchema = new mongoose.Schema({
   projectName: { type: String, required: true },
   //@ts-ignore
@@ -23,7 +23,6 @@ export var IllustrationSchema = new mongoose.Schema({
 });
 IllustrationSchema.index(
   { projectName: 1, type: 1, name: 1 },
-  { unique: true, background: true }
 );
 IllustrationSchema.index({ projectName: 1, name: 1 });
 const IllustrationTable = mongoose.model("Illustration", IllustrationSchema);

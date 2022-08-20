@@ -25,17 +25,17 @@ import { Project } from 'types/project';
 export class ProjectsListComponent implements OnInit, AfterViewInit {
 
   projects: Project[] = [];
-  displayedColumns: string[] = ['position', 'name', 'description','actions'];
+  displayedColumns: string[] = ['position', 'name', 'description', 'actions'];
   dataSource = new MatTableDataSource<Project>(this.projects);
 
-  @ViewChild(MatSort,{static:true}) sort!: MatSort ;
-  @ViewChild(MatPaginator,{static:true}) paginator!: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort!: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   constructor(
     private projectService: ProjectsService,
     private router: Router,
     private dialog: MatDialog,
     private _liveAnnouncer: LiveAnnouncer
-  ) {}
+  ) { }
 
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
@@ -45,26 +45,25 @@ export class ProjectsListComponent implements OnInit, AfterViewInit {
     this.projectService.RefreshNeeded$.subscribe(() => {
       this.getAllProjects()
     })
-     this.getAllProjects()
+    this.getAllProjects()
   }
   public getAllProjects() {
     this.projectService.getProjects().subscribe((projects: Project[]) => {
-      console.log(projects)
       this.dataSource.data = projects
     })
   }
 
-  applyFilter(event:any) {
+  applyFilter(event: any) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLocaleLowerCase()
   }
- announceSortChange(sortState: Sort) {
-  if (sortState.direction) {
-    this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
-  } else {
-    this._liveAnnouncer.announce('Sorting cleared');
+  announceSortChange(sortState: Sort) {
+    if (sortState.direction) {
+      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+    } else {
+      this._liveAnnouncer.announce('Sorting cleared');
+    }
   }
-}
   openDialogForDeletingProjects(projectName: string) {
     this.dialog.open(DeleteProjectDialogComponent, {
       data: { projectName: projectName },

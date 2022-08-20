@@ -1,10 +1,11 @@
- 
+
 import * as CalendarMatrixSchema from "../../jsonSchemas/CalendarHeatmap.json";
 import * as NodeLinkSchema from "../../jsonSchemas/NodeLink.json";
-import * as TimelineSchema from "../../jsonSchemas/Timeline.json";
 
 import Ajv from "ajv";
 import { Illustration, IllustrationTypes, IllustrationUpdate } from "types/illustrations";
+import { FileProperties } from "types/fileproperties";
+import _ from "lodash";
 const ajv = new Ajv();
 export const illustrationValidator = (
   illustration: Illustration | IllustrationUpdate
@@ -147,7 +148,6 @@ export const illustrationValidator = (
       case IllustrationTypes.MATRIX: {
         illustrationTypeValid = true;
         const validate = ajv.compile(NodeLinkSchema);
-        console.log(validate(illustration.data));
         if (
           illustration.data &&
           typeof illustration.data === "object" &&
@@ -298,7 +298,7 @@ export const illustrationValidator = (
             //   typeof illustration.data === "object" &&
             //   validate(illustration.data)
             // ) {
-              illustrationDataValid = true;
+            illustrationDataValid = true;
             // } else {
             //   throw new TypeError("type matrix does not correspond to data");
             // }
@@ -397,3 +397,50 @@ export const validateProjectNameAndIllustrationTypeAsString = (
   }
   return validProject && validIllustration;
 };
+
+export const validateProjectNameAndIllustratioNameAndIllustrationTypeAsString = (
+  projectName: string,
+  illustratioName: string,
+  illustrationType: string
+) => {
+  let validProject = false;
+  let validIllustrationType = false;
+  let validIllustrationName = false
+
+  if (projectName && typeof projectName === "string") {
+    validProject = true;
+  } else {
+    throw new TypeError("Project name must be string");
+  }
+  if (illustratioName && typeof illustratioName === "string") {
+    validIllustrationName = true;
+  } else {
+    throw new TypeError("Illustration name must be string");
+  }
+  if (illustrationType && typeof illustrationType === "string") {
+    validIllustrationType = true;
+  } else {
+    throw new TypeError("Illustration type must be string");
+  }
+  return validProject && validIllustrationType && validIllustrationName;
+};
+
+export const validateFilesFormatWithSelectedType = (format: string, files: FileProperties[]) => {
+  let fileValidation = new Set<boolean>();
+  let wrongFormat = ""
+  _.forEach(files, file => {
+    if (format === 'CSV' && (file.type === 'text/csv' || file.type === "text/plain") || (format === 'JSON' && file.type === "application/json")) {
+      fileValidation.add(true)
+    }
+    else {
+      wrongFormat = file.type
+      fileValidation.add(false)
+    }
+  })
+  if (!fileValidation.has(false) && fileValidation.has(true)) {
+    return true;
+  }
+  else {
+    throw new TypeError(`The format ${format} you've selected does not correspond to the file format that is ${wrongFormat}`)
+  }
+}

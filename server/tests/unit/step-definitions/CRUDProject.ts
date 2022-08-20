@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@cucumber/cucumber";
-import { Factory } from "../../../src/bzl/factory";
+import { Factory } from "../../../src/lib/factory";
 import { config } from "../../../src/config";
 const axios = require("axios").default;
 
@@ -13,17 +13,16 @@ Given(
 );
 When("a user want to create an empty Project", function () {
   const self = this;
-   
-   return Factory.getInstance()
-      .projectBzl.queryAllProjects()
-      .then((val: any) => {
-        self.val = val
-      });
- 
+
+  //  return Factory.getInstance()
+  //     .projectBzl.queryAllProjects()
+  //     .then((val: any) => {
+  //       self.val = val
+  //     });
+
 });
 
-Then("the Project was created", function (done:Function) {
+Then("the Project was created", function (done: Function) {
   const self = this;
-  console.log(self.val);
   done()
 });
