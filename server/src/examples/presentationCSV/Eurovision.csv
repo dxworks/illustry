@@ -1,0 +1,426 @@
+group,id,source,target,value
+Participants,Switzerland,Albania,UK,10
+Participants,Portugal,Albania,Sweden,8
+Participants,Australia,Albania,Ukraine,10
+Participants,Belgium,Albania,Netherlands,6
+Participants,Spain,Albania,Spain,5
+Participants,UK,Albania,Armenia,4
+Participants,Norway,Albania,Azerbaijan,3
+Participants,Moldova,Albania,Belgium,2
+Participants,Sweden,Albania,Portugal,1
+Participants,Czech Republic,Albania,Italy,12
+Participants,Romania,Estonia,Italy,10
+Participants,Finland,Estonia,Australia,8
+Participants,France,Estonia,Portugal,7
+Participants,Armenia,Estonia,Greece,6
+Participants,Italy,Estonia,Finland,5
+Participants,Netherlands,Estonia,UK,4
+Participants,Ukraine,Estonia,Azerbaijan,3
+Participants,Germany,Estonia,Lithuania,2
+Participants,Lithuania,Estonia,Netherlands,1
+Participants,Azerbaijan,Estonia,Sweden,12
+Participants,Greece,Azerbaijan,Italy,10
+Participants,Iceland,Azerbaijan,Sweden,8
+Participants,Poland,Azerbaijan,Portugal,7
+Participants,Serbia,Azerbaijan,Ukraine,6
+Participants,Estonia,Azerbaijan,Spain,5
+Voters1,Cyprus,Azerbaijan,Netherlands,4
+Voters1,Austria,Azerbaijan,Greece,3
+Voters1,San Marino,Azerbaijan,Poland,2
+Voters1,North Macedonia,Azerbaijan,France,1
+Voters1,Malta,Azerbaijan,UK,12
+Voters1,Albania,Portugal,UK,10
+Voters1,Israel,Portugal,Ukraine,8
+Voters1,Bulgaria,Portugal,Netherlands,7
+Voters1,Latvia,Portugal,Iceland,6
+Voters1,Denmark,Portugal,Lithuania,5
+Voters1,Montenegro,Portugal,Greece,4
+Voters1,Ireland,Portugal,Serbia,3
+Voters1,Slovenia,Portugal,Switzerland,2
+Voters1,Georgia,Portugal,Armenia,1
+Voters1,Croatia,Portugal,Spain,12
+People Voters1,Televoting,Germany,Spain,8
+,,Germany,Ukraine,10
+,,Germany,Sweden,7
+,,Germany,Azerbaijan,6
+,,Germany,Australia,5
+,,Germany,Netherlands,4
+,,Germany,Norway,3
+,,Germany,Switzerland,2
+,,Germany,Romania,1
+,,Germany,UK,8
+,,Ukraine,Portugal,10
+,,Ukraine,Netherlands,8
+,,Ukraine,Greece,7
+,,Ukraine,Switzerland,6
+,,Ukraine,Azerbaijan,5
+,,Ukraine,Sweden,4
+,,Ukraine,Australia,3
+,,Ukraine,Armenia,2
+,,Ukraine,Czech Republic,1
+,,Ukraine,UK,12
+,,Malta,Sweden,10
+,,Malta,UK,8
+,,Malta,Italy,7
+,,Malta,Australia,6
+,,Malta,Poland,4
+,,Malta,Czech Republic,3
+,,Malta,Azerbaijan,2
+,,Malta,Greece,1
+,,Malta,Spain,12
+,,Malta,Sweden,10
+,,North Macedonia,Serbia,10
+,,North Macedonia,UK,8
+,,North Macedonia,Italy,7
+,,North Macedonia,Sweden,6
+,,North Macedonia,Australia,6
+,,North Macedonia,Azerbaijan,4
+,,North Macedonia,Belgium,3
+,,North Macedonia,Poland,2
+,,North Macedonia,Switzerland,1
+,,North Macedonia,Spain,12
+,,San Marino,Greece,10
+,,San Marino,Australia,6
+,,San Marino,UK,8
+,,San Marino,Switzerland,1
+,,San Marino,Azerbaijan,7
+,,San Marino,Sweden,5
+,,San Marino,Poland,4
+,,San Marino,Italy,3
+,,San Marino,Ukraine,2
+,,San Marino,Spain,12
+,,Netherlands,Switzerland,10
+,,Netherlands,Portugal,8
+,,Netherlands,Australia,7
+,,Netherlands,Belgium,6
+,,Netherlands,Spain,6
+,,Netherlands,UK,6
+,,Netherlands,Norway,3
+,,Netherlands,Moldova,3
+,,Netherlands,Sweden,1
+,,Netherlands,Greece,12
+,,Belgium,Spain,10
+,,Belgium,Italy,8
+,,Belgium,Sweden,7
+,,Belgium,Ukraine,6
+,,Belgium,Portugal,5
+,,Belgium,Serbia,4
+,,Belgium,Azerbaijan,3
+,,Belgium,Czech Republic,2
+,,Belgium,Australia,1
+,,Belgium,UK,12
+,,Norway,Portugal,10
+,,Norway,Sweden,8
+,,Norway,Spain,7
+,,Norway,UK,6
+,,Norway,Netherlands,5
+,,Norway,Armenia,4
+,,Norway,Ukraine,3
+,,Norway,Lithuania,2
+,,Norway,Switzerland,1
+,,Norway,Greece,12
+,,Israel,UK,10
+,,Israel,Italy,8
+,,Israel,Ukraine,7
+,,Israel,Poland,7
+,,Israel,Australia,5
+,,Israel,Belgium,4
+,,Israel,Spain,3
+,,Israel,Czech Republic,2
+,,Israel,Netherlands,1
+,,Israel,Sweden,12
+,,Poland,Sweden,10
+,,Poland,UK,8
+,,Poland,Portugal,7
+,,Poland,Australia,6
+,,Poland,Switzerland,5
+,,Poland,Italy,4
+,,Poland,Netherlands,3
+,,Poland,Greece,2
+,,Poland,Spain,1
+,,Poland,Ukraine,12
+,,Greece,Poland,10
+,,Greece,Australia,8
+,,Greece,Romania,7
+,,Greece,Moldova,6
+,,Greece,Spain,5
+,,Greece,Netherlands,4
+,,Greece,Portugal,3
+,,Greece,Czech Republic,2
+,,Greece,Italy,1
+,,Greece,Azerbaijan,12
+,,Moldova,Ukraine,12
+,,Moldova,UK,10
+,,Moldova,Sweden,8
+,,Moldova,Switzerland,7
+,,Moldova,Australia,6
+,,Moldova,Estonia,5
+,,Moldova,Belgium,4
+,,Moldova,Spain,3
+,,Moldova,Portugal,2
+,,Moldova,Azerbaijan,1
+,,Bulgaria,Azerbaijan,3
+,,Bulgaria,UK,10
+,,Bulgaria,Spain,8
+,,Bulgaria,Switzerland,7
+,,Bulgaria,Belgium,6
+,,Bulgaria,Armenia,5
+,,Bulgaria,Portugal,4
+,,Bulgaria,Norway,2
+,,Bulgaria,Italy,1
+,,Bulgaria,Greece,12
+,,Serbia,Estonia,10
+,,Serbia,Belgium,8
+,,Serbia,Portugal,7
+,,Serbia,Finland,6
+,,Serbia,Sweden,5
+,,Serbia,Spain,4
+,,Serbia,Czech Republic,3
+,,Serbia,Lithuania,2
+,,Serbia,UK,1
+,,Serbia,Azerbaijan,12
+,,Iceland,Ukraine,10
+,,Iceland,Norway,8
+,,Iceland,UK,7
+,,Iceland,Italy,6
+,,Iceland,Portugal,5
+,,Iceland,Netherlands,4
+,,Iceland,Spain,3
+,,Iceland,Czech Republic,2
+,,Iceland,Lithuania,1
+,,Iceland,Sweden,10
+,,Cyprus,Azerbaijan,10
+,,Cyprus,Australia,8
+,,Cyprus,Ukraine,7
+,,Cyprus,Spain,6
+,,Cyprus,Sweden,5
+,,Cyprus,Serbia,4
+,,Cyprus,UK,3
+,,Cyprus,Belgium,2
+,,Cyprus,Italy,1
+,,Cyprus,Greece,12
+,,Latvia,Sweden,10
+,,Latvia,UK,8
+,,Latvia,Greece,7
+,,Latvia,Portugal,6
+,,Latvia,Norway,5
+,,Latvia,Netherlands,4
+,,Latvia,Switzerland,3
+,,Latvia,Australia,2
+,,Latvia,Lithuania,1
+,,Latvia,Ukraine,12
+,,Spain,Italy,10
+,,Spain,Australia,8
+,,Spain,Sweden,7
+,,Spain,Serbia,6
+,,Spain,Belgium,5
+,,Spain,Romania,4
+,,Spain,UK,3
+,,Spain,Greece,2
+,,Spain,Switzerland,1
+,,Spain,Azerbaijan,12
+,,Switzerland,Netherlands,10
+,,Switzerland,Spain,8
+,,Switzerland,Sweden,7
+,,Switzerland,UK,6
+,,Switzerland,Portugal,5
+,,Switzerland,Australia,4
+,,Switzerland,Ukraine,3
+,,Switzerland,Italy,2
+,,Switzerland,Norway,1
+,,Switzerland,Greece,12
+,,Denmark,Netherlands,10
+,,Denmark,Portugal,8
+,,Denmark,Sweden,7
+,,Denmark,UK,6
+,,Denmark,Ukraine,5
+,,Denmark,Spain,4
+,,Denmark,Lithuania,3
+,,Denmark,Switzerland,2
+,,Denmark,Iceland,1
+,,Denmark,Greece,12
+,,France,Greece,3
+,,France,Ukraine,10
+,,France,Poland,8
+,,France,Armenia,7
+,,France,Belgium,6
+,,France,Spain,5
+,,France,Netherlands,4
+,,France,Czech Republic,2
+,,France,Portugal,1
+,,France,UK,12
+,,Armenia,Greece,2
+,,Armenia,Italy,10
+,,Armenia,France,7
+,,Armenia,Portugal,8
+,,Armenia,Ukraine,6
+,,Armenia,Sweden,5
+,,Armenia,Netherlands,4
+,,Armenia,Estonia,3
+,,Armenia,Moldova,1
+,,Armenia,Spain,12
+,,Montenegro,Spain,8
+,,Montenegro,Italy,10
+,,Montenegro,Sweden,7
+,,Montenegro,Ukraine,6
+,,Montenegro,UK,5
+,,Montenegro,Portugal,4
+,,Montenegro,Netherlands,3
+,,Montenegro,Lithuania,2
+,,Montenegro,Azerbaijan,1
+,,Montenegro,Serbia,12
+,,Romania,Spain,1
+,,Romania,Ukraine,12
+,,Romania,Sweden,10
+,,Romania,UK,8
+,,Romania,Portugal,7
+,,Romania,Australia,6
+,,Romania,Switzerland,5
+,,Romania,Italy,4
+,,Romania,Netherlands,3
+,,Romania,Greece,2
+,,Ireland,Sweden,10
+,,Ireland,UK,8
+,,Ireland,Czech Republic,7
+,,Ireland,Italy,6
+,,Ireland,Serbia,5
+,,Ireland,Portugal,4
+,,Ireland,Ukraine,3
+,,Ireland,Australia,2
+,,Ireland,Iceland,1
+,,Ireland,Spain,12
+,,Slovenia,Spain,1
+,,Slovenia,UK,2
+,,Slovenia,Portugal,3
+,,Slovenia,Greece,4
+,,Slovenia,Switzerland,5
+,,Slovenia,Serbia,6
+,,Slovenia,Netherlands,7
+,,Slovenia,Ukraine,8
+,,Slovenia,Lithuania,10
+,,Slovenia,Italy,12
+,,Georgia,Italy,10
+,,Georgia,Sweden,8
+,,Georgia,Portugal,7
+,,Georgia,Ukraine,6
+,,Georgia,Spain,5
+,,Georgia,Netherlands,4
+,,Georgia,Greece,3
+,,Georgia,Poland,2
+,,Georgia,France,1
+,,Georgia,UK,12
+,,Croatia,Portugal,10
+,,Croatia,Ukraine,8
+,,Croatia,Lithuania,7
+,,Croatia,Spain,6
+,,Croatia,Sweden,5
+,,Croatia,Italy,4
+,,Croatia,Greece,3
+,,Croatia,Netherlands,2
+,,Croatia,Switzerland,1
+,,Croatia,Serbia,12
+,,Lithuania,UK,10
+,,Lithuania,Portugal,8
+,,Lithuania,Switzerland,7
+,,Lithuania,Netherlands,6
+,,Lithuania,Spain,5
+,,Lithuania,Italy,4
+,,Lithuania,Sweden,3
+,,Lithuania,Iceland,2
+,,Lithuania,Serbia,1
+,,Lithuania,Ukraine,12
+,,Austria,Portugal,10
+,,Austria,Netherlands,8
+,,Austria,Sweden,7
+,,Austria,Greece,3
+,,Austria,Armenia,5
+,,Austria,Norway,4
+,,Austria,Italy,3
+,,Austria,Spain,2
+,,Austria,Switzerland,1
+,,Austria,UK,12
+,,Finland,UK,10
+,,Finland,Italy,2
+,,Finland,Greece,6
+,,Finland,Netherlands,5
+,,Finland,Australia,8
+,,Finland,Azerbaijan,3
+,,Finland,Serbia,7
+,,Finland,Norway,4
+,,Finland,Armenia,1
+,,Finland,Sweden,10
+,,UK,Spain,10
+,,UK,Portugal,3
+,,UK,Greece,4
+,,UK,Australia,6
+,,UK,Azerbaijan,7
+,,UK,Serbia,1
+,,UK,Switzerland,2
+,,UK,Poland,8
+,,UK,Estonia,5
+,,UK,Sweden,12
+,,Sweden,Australia,10
+,,Sweden,UK,8
+,,Sweden,Azerbaijan,7
+,,Sweden,Estonia,6
+,,Sweden,Czech Republic,5
+,,Sweden,Serbia,4
+,,Sweden,Norway,3
+,,Sweden,Armenia,2
+,,Sweden,Belgium,1
+,,Sweden,Spain,12
+,,Australia,Sweden,10
+,,Australia,Ukraine,7
+,,Australia,Portugal,6
+,,Australia,Italy,3
+,,Australia,Azerbaijan,2
+,,Australia,Serbia,8
+,,Australia,Belgium,5
+,,Australia,Estonia,1
+,,Australia,Czech Republic,4
+,,Australia,Spain,12
+,,Czech Republic,Sweden,10
+,,Czech Republic,Estonia,8
+,,Czech Republic,Spain,7
+,,Czech Republic,Switzerland,6
+,,Czech Republic,Portugal,5
+,,Czech Republic,Ukraine,4
+,,Czech Republic,Greece,3
+,,Czech Republic,Norway,2
+,,Czech Republic,Australia,1
+,,Czech Republic,UK,12
+,,Italy,Greece,10
+,,Italy,Armenia,8
+,,Italy,Belgium,7
+,,Italy,UK,6
+,,Italy,Moldova,5
+,,Italy,Serbia,4
+,,Italy,Switzerland,3
+,,Italy,Australia,2
+,,Italy,Finland,1
+,,Italy,Netherlands,12
+,,Televoting,Germany,6
+,,Televoting,France,8
+,,Televoting,Iceland,10
+,,Televoting,Finland,26
+,,Televoting,Romania,53
+,,Televoting,Moldova,239
+,,Televoting,Czech Republic,5
+,,Televoting,Lithuania,93
+,,Televoting,Norway,146
+,,Televoting,Armenia,21
+,,Televoting,Estonia,98
+,,Televoting,Poland,105
+,,Televoting,Belgium,5
+,,Televoting,Switzerland,0
+,,Televoting,Serbia,225
+,,Televoting,Azerbaijan,3
+,,Televoting,Australia,2
+,,Televoting,Netherlands,42
+,,Televoting,Italy,110
+,,Televoting,Greece,57
+,,Televoting,Portugal,36
+,,Televoting,Ukraine,439
+,,Televoting,Spain,228
+,,Televoting,Sweden,180
+,,Televoting,UK,183
