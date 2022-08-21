@@ -26,7 +26,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { MatSelectModule } from "@angular/material/select";
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from "@angular/material/icon";
 import { AddProjectDialogComponent } from './dialogs/add-project-dialog/add-project-dialog.component';
 import { MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule } from "@angular/material/dialog";
@@ -52,10 +52,10 @@ import { PlotlyModule } from 'angular-plotly.js';
 PlotlyModule.plotlyjs = PlotlyJS;
 import { TimelineComponent } from './views/graphs/timeline/timeline.component';
 import { ChartsComponent } from './views/graphs/charts/charts.component';
-import {MatMomentDateModule} from "@angular/material-moment-adapter";
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.component';
 import { PlotyComponent } from './views/graphs/ploty/ploty.component';
-
+import { MatChipsModule } from '@angular/material/chips';
 @NgModule({
   declarations: [
     AppComponent,
@@ -115,6 +115,7 @@ import { PlotyComponent } from './views/graphs/ploty/ploty.component';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
+    MatChipsModule,
     NgxEchartsModule.forRoot({
       echarts,
 

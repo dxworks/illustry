@@ -10,7 +10,7 @@ import { validateProjectNameAsString } from "../validator/projectValidator";
 export const addOrUpdate = (req: any, res: any, next: any) => {
   const projectName: string = req.params.projectName as string;
   const format: string = req.body.format as string;
-  console.log(req.body)
+
   const files = _.get(req, "files.File");
   if (_.isNil(files))
     return helper.returnResponse(
@@ -41,10 +41,16 @@ export const addOrUpdate = (req: any, res: any, next: any) => {
             const illustration: Illustration = {
               name: req.body.illustrationName as string,
               description: req.body.illustrationDescription as string,
-              type: req.body.illustrationType as IllustrationTypes | IllustrationTypes[],
-              tags: req.body.tags as string[],
+              type: req.body.illustrationType.split(',') as IllustrationTypes[],
               projectName: projectName,
               data: {}
+            }
+
+            if (typeof req.body.tags === "string") {
+              _.set(illustration, 'tags', req.body.tags.split(','))
+            }
+            else {
+              _.set(illustration, 'tags', req.body.tags)
             }
             const separator: string = req.body.separator
             return Factory.getInstance()

@@ -5,9 +5,9 @@ import IllustrationTable from "../../models/Illustrations";
 
 export class IllustrationDBACC {
   constructor() { }
-  update(filter: any, illustration: IllustrationUpdate) { //IllustrationFilter
+  update(filter: any, illustration: IllustrationUpdate, upsert?: boolean) {
 
-    return IllustrationTable.findOneAndUpdate(filter, illustration, { upsert: true, new: true }).select('-_id')
+    return IllustrationTable.findOneAndUpdate(filter, illustration, { upsert: upsert, new: true }).select('-_id')
   }
 
   browse(filter?: IllustrationFilter) {

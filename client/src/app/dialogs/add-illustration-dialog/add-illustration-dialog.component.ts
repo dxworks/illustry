@@ -4,6 +4,8 @@ import { Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { throwError } from "rxjs";
 import { IllustrationService } from "../../services/illustration.service";
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { MatChipInputEvent } from '@angular/material/chips';
 
 @Component({
   selector: 'app-add-illustration-dialog',
@@ -15,19 +17,54 @@ export class AddIllustrationDialogComponent implements OnInit {
   selectedFileFormat: string = this.selectedFileFormats[1];
   selectedSeparators: string[] = [',', ';', '|']
   selectedSeparator: string = this.selectedSeparators[0];
+  addOnBlur = true;
+  readonly separatorKeysCodes = [ENTER, COMMA] as const;
+  tags: string[] = []
+
+  allIllustrationTypes = [
+    { value: 'force-directed-graph', viewValue: 'Force-Layout-Graph' },
+    { value: 'chart', viewValue: 'Echarts' },
+    { value: 'word-cloud', viewValue: 'Wordcloud' },
+    { value: 'plotly', viewValue: 'Plotly' },
+    { value: 'timeline', viewValue: 'Timeline' },
+    { value: 'treemap', viewValue: 'Treemap ' },
+    { value: 'sankey', viewValue: 'Sankey' },
+    { value: 'calendar', viewValue: 'Calendar' },
+    { value: 'matrix', viewValue: 'Matrix' },
+    { value: 'graphviz', viewValue: 'Graphviz' },
+    { value: 'hierarchical-edge-bundling', viewValue: 'Hierarchical-Edge-Bundling' }
+  ]
   form: FormGroup = new FormGroup({
     File: new FormControl('', [Validators.required]),
     SelectedFormat: new FormControl('JSON', [Validators.required]),
     Separator: new FormControl(',', []),
     IllustrationName: new FormControl('', []),
     IllustrationDescription: new FormControl('', []),
-    IllustrationType: new FormControl('force-directed-graph', []),
-    Tags: new FormControl('', []),
+    IllustrationType: new FormControl(this.allIllustrationTypes[0], [Validators.required]),
   });
   files: File[] = [];
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: { projectName: string }, private illustrationService: IllustrationService, private router: Router) { }
 
+  add(event: MatChipInputEvent): void {
+    const value = (event.value || '').trim();
+
+    // Add our fruit
+    if (value) {
+      this.tags.push(value);
+    }
+
+    // Clear the input value
+    event.chipInput!.clear();
+  }
+
+  remove(tag: string): void {
+    const index = this.tags.indexOf(tag);
+
+    if (index >= 0) {
+      this.tags.splice(index, 1);
+    }
+  }
   ngOnInit(): void {
   }
 
@@ -53,7 +90,7 @@ export class AddIllustrationDialogComponent implements OnInit {
       formData.append('illustrationDescription', this.form.value.IllustrationDescription)
       console.log(this.form.value.IllustrationType)
       formData.append('illustrationType', this.form.value.IllustrationType)
-      formData.append('tags', this.form.value.Tags)
+      formData.append('tags', this.tags.toString())
       if (this.form.value.File) {
         this.form.value.File.forEach((file: string | Blob) => {
           formData.append('File', file);

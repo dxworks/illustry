@@ -10,6 +10,7 @@
       </mat-select>
     </mat-form-field>
   </div>
+
   <div *ngIf='form.value.SelectedFormat==="CSV"'>
     <div align="center">
       <mat-form-field appearance="fill">
@@ -20,9 +21,10 @@
     <div align="center">
       <mat-form-field appearance="fill">
         <mat-label>Illustration Type</mat-label>
-        <mat-select formControlName="IllustrationType" id="IllustrationType" required>
-
-          <mat-option value="force-directed-graph">Force Layout Graphs</mat-option>
+        <mat-select formControlName="IllustrationType" id="IllustrationType" required multiple>
+          <mat-option *ngFor="let type of allIllustrationTypes" [value]="type.value">
+            {{type.viewValue}}
+          </mat-option>
 
         </mat-select>
       </mat-form-field>
@@ -42,14 +44,22 @@
     <div align="center">
       <mat-form-field appearance="fill">
         <mat-label>Illustration Description</mat-label>
-        <input matInput formControlName="IllustrationDescription" id="illustrationDescription" type="text" required />
+        <input matInput formControlName="IllustrationDescription" id="illustrationDescription" type="text" />
       </mat-form-field>
     </div>
-
     <div align="center">
-      <mat-form-field appearance="fill">
+      <mat-form-field class="example-chip-list" appearance="fill">
         <mat-label>Tags</mat-label>
-        <input matInput formControlName="Tags" id="tags" type="text" />
+        <mat-chip-list #chipList aria-label="Tags Selection">
+          <mat-chip *ngFor="let tag of tags" (removed)="remove(tag)">
+            {{tag}}
+            <button matChipRemove>
+              <mat-icon>cancel</mat-icon>
+            </button>
+          </mat-chip>
+          <input type="text" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
       </mat-form-field>
     </div>
   </div>

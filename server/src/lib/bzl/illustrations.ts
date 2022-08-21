@@ -6,7 +6,7 @@ import { Factory } from "../factory";
 import { readFile } from "../../utils/reader";
 import _ from "lodash";
 import { illustrationValidator } from "../../validator/illustrationValidator";
-import { constructIllustrationCSV, getTypesFromCSV } from "./utils/illustrationsUtils";
+import { constructIllustrationCSV } from "./utils/illustrationsUtils";
 
 
 export const illustrationBZL = {
@@ -32,7 +32,7 @@ export const illustrationBZL = {
                       return Factory.getInstance().IllustrationDBACC.update({
                         projectName: illustrationModel.projectName,
                         name: illustrationModel.name,
-                      }, illustrationModel)
+                      }, illustrationModel, true)
                         .then((res: Illustration) => {
                           if (!res.createdAt) {
                             _.assign(res, { createdAt: new Date() });
@@ -45,7 +45,7 @@ export const illustrationBZL = {
                               projectName: res.projectName,
                               name: res.name,
                             },
-                            res
+                            res, false
                           ).then(() => {
                             return "Illustrations created";
                           });
@@ -67,7 +67,7 @@ export const illustrationBZL = {
                             name: newIllustrationModel.name,
                             type: newIllustrationModel.type,
                           },
-                          newIllustrationModel)
+                          newIllustrationModel, true)
                           .then((res: any) => {
                             if (!res.createdAt) {
                               _.assign(res, { createdAt: new Date() });
@@ -79,7 +79,7 @@ export const illustrationBZL = {
                               {
                                 _id: res._id,
                               },
-                              res)
+                              res, false)
                           }).then(() => {
                             return "Illustrations created";
                           });
@@ -103,17 +103,29 @@ export const illustrationBZL = {
               .then(doc => {
                 if (doc) {
                   return Promise.map(illustrationsCSV, (illustrationsCSV: any) => {
-                    const data = constructIllustrationCSV(illustration.type, illustrationsCSV)
-                    _.set(illustration, 'data', data)
-                    console.log("inainte de validare")
-                    console.log(JSON.stringify(illustration, null, 2))
+                    console.log(illustration)
                     if (illustrationValidator(illustration)) {
-                      if (typeof illustration.type === "string") {
-                        return Factory.getInstance().IllustrationDBACC.update({
+
+                      return Promise.each(illustration.type as IllustrationTypes[], (t) => {
+                        const data = constructIllustrationCSV(illustration.type, illustrationsCSV)
+                        console.log("in al 2-lea promise")
+                        console.log(t)
+                        let newIllustrationModel: Illustration = {
+                          data: data,
                           projectName: illustration.projectName,
+                          description: illustration.description,
                           name: illustration.name,
-                        }, illustration)
-                          .then((res: Illustration) => {
+                          type: t,
+                          tags: illustration.tags,
+                        };
+                        return Factory.getInstance().IllustrationDBACC.update(
+                          {
+                            projectName: newIllustrationModel.projectName,
+                            name: newIllustrationModel.name,
+                            type: newIllustrationModel.type,
+                          },
+                          newIllustrationModel, true)
+                          .then((res: any) => {
                             if (!res.createdAt) {
                               _.assign(res, { createdAt: new Date() });
                               _.assign(res, { lastModified: new Date() });
@@ -122,49 +134,13 @@ export const illustrationBZL = {
                             }
                             return Factory.getInstance().IllustrationDBACC.update(
                               {
-                                projectName: res.projectName,
-                                name: res.name,
+                                _id: res._id,
                               },
-                              res
-                            ).then(() => {
-                              return "Illustrations created";
-                            });
-                          })
-                      }
-                      else {
-                        return Promise.each(illustration.type, (t) => {
-                          let newIllustrationModel: Illustration = {
-                            data: data,
-                            projectName: illustration.projectName,
-                            description: illustration.description,
-                            name: illustration.name,
-                            type: t,
-                            tags: illustration.tags,
-                          };
-                          return Factory.getInstance().IllustrationDBACC.update(
-                            {
-                              projectName: newIllustrationModel.projectName,
-                              name: newIllustrationModel.name,
-                              type: newIllustrationModel.type,
-                            },
-                            newIllustrationModel)
-                            .then((res: any) => {
-                              if (!res.createdAt) {
-                                _.assign(res, { createdAt: new Date() });
-                                _.assign(res, { lastModified: new Date() });
-                              } else {
-                                _.assign(res, { lastModified: new Date() });
-                              }
-                              return Factory.getInstance().IllustrationDBACC.update(
-                                {
-                                  _id: res._id,
-                                },
-                                res)
-                            }).then(() => {
-                              return "Illustrations created";
-                            });
-                        })
-                      }
+                              res, false)
+                          }).then(() => {
+                            return "Illustrations created";
+                          });
+                      })
                     }
                   })
                 }
